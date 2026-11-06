@@ -103,16 +103,18 @@ The **primary** baseline is the engine only: `tools/aos_baseline.json`, v1.11 pr
 
 | Asset | n | E (R) | EF / M (pp) | MaxDD % at `f` | Fires / 90 d | Warn < 70 % | `FREQUENCY_STALL` < 50 % | `AOS-P3-REC` delta |
 | --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | --- |
-| EURUSD-NY | 146 | +0.263 | +9.3 / 8.0 | 5.4 | 28.2 | 19.7 | 14.1 | E +0.270, MaxDD 4.7 |
-| EURUSD-LON0700 | 191 | +0.134 | +5.3 / 7.0 | 5.7 | 36.9 | 25.8 | 18.5 | identical |
-| DE40 | 120 | +0.235 | +9.7 / 8.8 | 13.8 | 23.1 | 16.2 | 11.6 | MaxDD 11.2 |
-| JP225 | 102 | +0.203 | +14.5 / 9.5 | 3.9 | 19.2 | 13.4 | 9.6 | E +0.190 |
-| UK100 | 88 | +0.396 | +15.7 / 10.2 | 5.2 | 28.8 | 20.2 | 14.4 | identical |
+| EURUSD-NY | 146 | +0.263 | +9.3 / 8.0 | 5.4 | 27.7 | 19.4 | 13.8 | E +0.270, MaxDD 4.7 |
+| EURUSD-LON0700 | 191 | +0.134 | +5.3 / 7.0 | 5.7 | 36.3 | 25.4 | 18.2 | identical |
+| DE40 | 120 | +0.235 | +9.7 / 8.8 | 13.8 | 22.8 | 16.0 | 11.4 | MaxDD 11.2 |
+| JP225 | 102 | +0.203 | +14.5 / 9.5 | 3.9 | 18.9 | 13.2 | 9.5 | E +0.190 |
+| UK100 | 88 | +0.396 | +15.7 / 10.2 | 5.2 | 28.3 | 19.8 | 14.1 | identical |
 | US500 | 69 | +0.288 | +16.0 / 11.4 | 4.9 | 13.2 | 9.2 | 6.6 | identical |
-| **Pooled (six)** | **716** | recomputed in T03 | recomputed in T03 | recomputed in T03 | — | — | — | Portfolio replay MaxDD 14.2 %, MC-2 P95 DD 23.9 % |
+| **Pooled (six)** | **716** | **+0.234** | **+10.3 / 3.7 (Robust)**. W250 +11.9, W500 +10.6 | — | — | — | — | Portfolio replay MaxDD 14.2 %, MC-2 P95 DD 23.9 % |
 | Controls AAPL / MSFT / XOM | 81 / 31 / 52 | −0.084 / +0.020 / −0.175 | EF −11.5 / −2.0 / −53.2 | — | — | — | — | must stay `EF ≤ 0` |
 
 `FREQUENCY_STALL` follows CO-15: 90-day fires below 50 % **and** armed days below 50 % of their baseline.
+
+**Locked 2026-11-06 (INF-P0-T03)** in `infra/baseline_lock.json`. That file is the source for every number above, plus armed days per 90 days, W40 / W80 per asset, and the full secondary vectors. Fires per 90 days use the exact first-to-last-event span (`corb_bench`).
 
 ---
 
@@ -266,7 +268,9 @@ Experts/CycleORB/
     docker/             Dockerfiles (base, jobs, tester: MT5 portable + Wine + Xvfb)
     compose.yaml        profiles: core (postgres, minio), train, obs (grafana), tester
     policy_low_bar.yaml pre-registered skip thresholds (§8.2)
-    sources.yaml        evidence sources and their history limits (INF-P0-T04)
+    sources.json        evidence sources and their history limits (INF-P0-T04)
+    inventory.json      every evidence file with sha256, run records, duplicate groups (INF-P0-T02, generated)
+    baseline_lock.json  the numbers to protect (INF-P0-T03, generated)
     .env.example        no secrets in git
   tools/                existing scripts, unchanged entry points
     corb/               package: ingest, features, replica, train, score, evaluate, report, cli
@@ -293,7 +297,7 @@ On Windows, `make` is a convenience. `python -m corb <cmd>` is the real entry po
 
 - `var/scorecards/latest.json` (single current verdict) and `var/scorecards/index.json` (every recipe → file).
 - `var/log/<job>/` (JSONL, filter by `event_id` / `run_key` / `model_semver`).
-- `infra/sources.yaml`.
+- `infra/sources.json`.
 - A **read-only** Postgres role `agent_ro` (no writes to `core`, `train` or `score`).
 
 `tools/README.md` gets one "Infra" section listing these. No new docs beyond this file.
@@ -358,15 +362,46 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
 | INF-P0-T01 ✅ | P-ACCESS | L-01 | Own repo for `Experts/CycleORB/` → [Atlas00000/cycleorb](https://github.com/Atlas00000/cycleorb). `.gitignore` for `__pycache__/`, `var/`, `.env`, `*.ex5`. Run folders, tape and tester journals (≈ 8 MB) are committed as evidence; journals above 50 MB go to the artefact store by sha256. Tag `infra-p0` | `git ls-files` covers the EA, includes, presets, tools, tests, docs and run folders. The tag sha is recorded in the lock |
-| INF-P0-T02 | P-DATA | L-07, L-08 | `corb inventory`: sha256, kind, version, symbol, window, deposit and tag for every run folder, ledger, tape and journal → `infra/inventory.json` | Every file is listed. Duplicate groups are found (expect v1.10 ≡ v1.11 copies) |
-| INF-P0-T03 | P-TRAIN | baseline drift | Baseline lock `infra/baseline_lock.json`: §3 table recomputed from run folders (primary + secondary), pooled vector, pooled W250, fires / 90 d, armed days / 90 d, portfolio replay | Recomputed values equal `aos_baseline.json` within CO-FX tolerances (±0.005 on fractions, ±0.1 pp) |
-| INF-P0-T04 | P-DATA | L-05, L-26 | `infra/sources.yaml`: each evidence source (tester real ticks, Common ledgers, journals, broker history depth per symbol, calendar export, **Ouroboros**) with its valid window and known stamp issues. For Ouroboros: list the slices CycleORB needs (M1 mirrors of the nine symbols, the per-asset research cards cited in ROADMAP P1), their source path in that workspace and their commit | Every source has a path and a valid-from date. Every needed Ouroboros slice is listed with a source commit |
+| INF-P0-T02 ✅ | P-DATA | L-07, L-08 | `corb inventory`: sha256, kind, version, symbol, window, deposit and tag for every run folder, ledger, tape and journal → `infra/inventory.json` | Every file is listed. Duplicate groups are found (expect v1.10 ≡ v1.11 copies) |
+| INF-P0-T03 ✅ | P-TRAIN | baseline drift | Baseline lock `infra/baseline_lock.json`: §3 table recomputed from run folders (primary + secondary), pooled vector, pooled W250, fires / 90 d, armed days / 90 d, portfolio replay | Recomputed values equal `aos_baseline.json` within CO-FX tolerances (±0.005 on fractions, ±0.1 pp) |
+| INF-P0-T04 ⏸ | P-DATA | L-05, L-26 | `infra/sources.json`: each evidence source (tester real ticks, Common ledgers, journals, broker history depth per symbol, calendar export, **Ouroboros**) with its valid window and known stamp issues. For Ouroboros: list the slices CycleORB needs (M1 mirrors of the nine symbols, the per-asset research cards cited in ROADMAP P1), their source path in that workspace and their commit | Every source has a path and a valid-from date. Every needed Ouroboros slice is listed with a source commit |
 
 **Recipes:**
 
 - `INF-P0-T03_train_baselineLock_2025-07_2026-10` — in: the nine baseline run folders and `aos_baseline.json` · run: `python -m corb baseline lock` · out: `infra/baseline_lock.json`, `var/scorecards/INF-P0-T03….json` · accept: 0 field differences outside tolerance · reject: any difference (investigate data before going on).
 
+- `INF-P0-T02_data_inventory` — run: `python -m corb inventory` · out: `infra/inventory.json` · accept: every evidence file hashed, duplicate groups listed.
+- `INF-P0-T04_data_sourcesRegister` — in: `infra/sources.json` (+ `CORB_OUROBOROS_DIR` when known) · run: `python -m corb sources check` · out: scorecard with source statuses and measured broker depth · accept: every local source `ok` or `planned` and every Ouroboros slice located at a recorded commit · hold: Ouroboros not yet located.
+
 **Exit:** the lock exists, the limitation map is in `ops.limitation` (or this file), and every source is located or explicitly missing.
+
+**Status 2026-11-06:** T01–T03 met. T04 is on **HOLD**: every local source is located, and the Ouroboros slices are listed but not yet located.
+
+#### INF-P0 results (2026-11-06)
+
+**Built:** `tools/corb/` (`python -m corb …`, stdlib only): `inventory`, `baseline lock | check`, `sources check`. Each writes a scorecard to `var/scorecards/` (plus `latest.json` and `index.json`). `tools/tests/test_infra_p0.py` adds 9 tests (37 pass in total). Committed artefacts: `infra/inventory.json`, `infra/baseline_lock.json`, `infra/sources.json`.
+
+| Task | Result |
+| --- | --- |
+| T01 | Repo [Atlas00000/cycleorb](https://github.com/Atlas00000/cycleorb), tag `infra-p0` |
+| T02 | 648 evidence files (95 MB including the two external journals and the Common ledgers), 77 run folders. **105 groups of byte-identical files and 15 groups of runs with identical `events.csv`.** For example, DE40 v1.09 = v1.10 P1obs = v1.11 = v1.11 P1obs = v1.12 P3G = v1.13 P3G. This confirms the observe and guard layers leave those events untouched, and it means a store keyed by content hash will hold far fewer distinct runs than the folder count suggests |
+| T03 | **201 / 201 checks pass**: every field and every `events.csv` hash of the nine baseline rows equals `aos_baseline.json`, and every figure quoted in §3 is reproduced (per-asset MaxDD, `AOS-P3-REC` deltas, portfolio 14.2 % / 23.9 %). `baseline check` reproduces the 434 locked numbers exactly. New: **pooled 716 events, E +0.234R, EF +10.3 pp vs M 3.7 pp (Robust); W250 +11.9 pp, W500 +10.6 pp** |
+| T04 | 9 local sources `ok`, 1 `planned` (VPS ledgers). Broker depth is measured from the terminal's `bases/YWO-Trade` cache (below). 17 Ouroboros slices are listed; 11 have known paths (research cards) and 6 M1 mirrors have unknown paths |
+
+**Broker history depth (measured):**
+
+| Symbol | Real ticks | M1 bars | Consequence for the replica (INF-P3-T07) |
+| --- | --- | --- | --- |
+| EURUSD | 2025-06 → 2026-11 | 1971 → 2026 | Long M1 exists; pre-2025-06 stamps must be verified |
+| DE30 | 2025-06 → 2026-11 | **2025 → 2026 only** | **Longer history only via Ouroboros** |
+| JPN225 | 2025-06 → 2026-11 | 2023 → 2026 | +2 years from broker M1, after re-stamping |
+| UK100 | 2025-07 → 2026-11 | 2020–2022, 2025–2026 | Gap 2023–2024 |
+| SPX500 | 2025-06 → 2026-11 | 2020 → 2026 | Known UTC+2/+3 stamp and spread change before 2025-06-18 |
+| Apple / Microsoft / Exxon / Tesla | 2025-06/07 → 2026-11 | 2005–2017 → 2026 | Controls: long M1 available |
+| NVDA | 2026-01 → 2026-11 | 2026 only | Too short for a baseline |
+| USDJPY / GBPUSD (context) | 2025-06 / 2025-12 → 2026-11 | 2022 / 1993 → 2026 | Context features only |
+
+**Open (to close T04):** give the Ouroboros workspace path (`CORB_OUROBOROS_DIR`), its commit, and the paths of the six M1 mirrors (DE40 and US500 first), then re-run `python -m corb sources check`.
 
 ### INF-P1 — Contract and schema
 
@@ -399,7 +434,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | INF-P2-T05 | P-DATA | — | End-to-end replay of one historical dump: `Tester/logs/20261106.log` → DB → scorecard | Every baseline health vector equals the lock |
 | INF-P2-T06 | P-DATA | L-16 | Data-quality checks (`ops.dq_result`): monotone times, no event without 1R, no position across days unless flagged `CALENDAR_LEAK`, warm-up days flagged, funnel counters = `meta.json`, L6 lot-minimum share | 0 failures on the baselines. Known AAPL weekend holds detected as `CALENDAR_LEAK` |
 | INF-P2-T07 | P-DATA | IB-05 | `kind=live` ingest path for the **VPS** forward ledgers: a scheduled one-way push from the VPS `Common\Files\CycleORB\` to the landing zone (read-only; never a baseline; separate `run_key` per month) | Synthetic live ledger fixture ingested and excluded from baseline queries. The VPS has no inbound ports |
-| INF-P2-T08 | P-DATA | L-05, L-26 | `corb import ouroboros <slice>`: copy each slice listed in `sources.yaml` into the landing zone with its Ouroboros path, commit and sha256. Imported data is **kept here**; the run never reads Ouroboros directly | Every listed slice is landed with provenance. A re-import of the same commit is a no-op |
+| INF-P2-T08 | P-DATA | L-05, L-26 | `corb import ouroboros <slice>`: copy each slice listed in `sources.json` into the landing zone with its Ouroboros path, commit and sha256. Imported data is **kept here**; the run never reads Ouroboros directly | Every listed slice is landed with provenance. A re-import of the same commit is a no-op |
 
 **Recipes:**
 
@@ -420,7 +455,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | INF-P3-T04 | P-FEAT | PIT | Leakage tests: timestamp audit (generalised `aos_tape check`), a future-shift test (features recomputed with bars after `range_end` must change nothing), and no label columns in `features` | 0 violations |
 | INF-P3-T05 | P-FEAT | CO-09 | **Deterministic regime tagger** (generic roadmap #3) on **every evaluated day**, not only armed days: H1 vol tercile, ER50 trend / range, D1 side, range/ATR tercile, event-window and session-overlap tags → `features.regime_tape` | Reproduces the `edge_framework.md` §5.3 cell table from the DB |
 | INF-P3-T06 | P-FEAT | IB-03 | `score.cell_bm`: `BM_cell` with CIs for every qualifying cell, on actual and shadow streams. Cells with `BM_cell ≤ 0` flagged | Matches §5.3. Expected: **no** production cell ≤ 0 |
-| INF-P3-T07 | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.yaml`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
+| INF-P3-T07 | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.json`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
 
 **Recipes:**
 
@@ -521,7 +556,7 @@ Only after the infra is stable **and** an INF-P7 plan exists.
 | Order | Task | Why first |
 | --- | --- | --- |
 | 1 | INF-P0-T01 ✅ | Nothing is reproducible without version control (done 2026-11-06) |
-| 2 | INF-P0-T03, T04 | The numbers to protect, recomputed from files, and the Ouroboros slices we need |
+| 2 | INF-P0-T02, T03 ✅, T04 ⏸ | The numbers to protect, recomputed from files (done). T04 waits for the Ouroboros paths |
 | 3 | INF-P1-T01 … T04 | The contract and DB that every later task writes to |
 | 4 | INF-P2-T04 | Tester containers: parallel runs, independent of any live terminal |
 | 5 | INF-P4-T01 | The harness regression proves the new stack reproduces every past verdict |
