@@ -364,7 +364,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | INF-P0-T01 ✅ | P-ACCESS | L-01 | Own repo for `Experts/CycleORB/` → [Atlas00000/cycleorb](https://github.com/Atlas00000/cycleorb). `.gitignore` for `__pycache__/`, `var/`, `.env`, `*.ex5`. Run folders, tape and tester journals (≈ 8 MB) are committed as evidence; journals above 50 MB go to the artefact store by sha256. Tag `infra-p0` | `git ls-files` covers the EA, includes, presets, tools, tests, docs and run folders. The tag sha is recorded in the lock |
 | INF-P0-T02 ✅ | P-DATA | L-07, L-08 | `corb inventory`: sha256, kind, version, symbol, window, deposit and tag for every run folder, ledger, tape and journal → `infra/inventory.json` | Every file is listed. Duplicate groups are found (expect v1.10 ≡ v1.11 copies) |
 | INF-P0-T03 ✅ | P-TRAIN | baseline drift | Baseline lock `infra/baseline_lock.json`: §3 table recomputed from run folders (primary + secondary), pooled vector, pooled W250, fires / 90 d, armed days / 90 d, portfolio replay | Recomputed values equal `aos_baseline.json` within CO-FX tolerances (±0.005 on fractions, ±0.1 pp) |
-| INF-P0-T04 ⏸ | P-DATA | L-05, L-26 | `infra/sources.json`: each evidence source (tester real ticks, Common ledgers, journals, broker history depth per symbol, calendar export, **Ouroboros**) with its valid window and known stamp issues. For Ouroboros: list the slices CycleORB needs (M1 mirrors of the nine symbols, the per-asset research cards cited in ROADMAP P1), their source path in that workspace and their commit | Every source has a path and a valid-from date. Every needed Ouroboros slice is listed with a source commit |
+| INF-P0-T04 ✅ | P-DATA | L-05, L-26 | `infra/sources.json`: each evidence source (tester real ticks, Common ledgers, journals, broker history depth per symbol, calendar export, **Ouroboros**) with its valid window and known stamp issues. For Ouroboros: list the slices CycleORB needs (M1 mirrors of the nine symbols, the per-asset research cards cited in ROADMAP P1), their source path in that workspace and their commit | Every source has a path and a valid-from date. Every needed Ouroboros slice is listed with a source commit |
 
 **Recipes:**
 
@@ -375,25 +375,25 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Exit:** the lock exists, the limitation map is in `ops.limitation` (or this file), and every source is located or explicitly missing.
 
-**Status 2026-11-06:** T01–T03 met. T04 is on **HOLD**: every local source is located, and the Ouroboros slices are listed but not yet located.
+**Status 2026-11-06: INF-P0 closed.** T01–T04 met.
 
 #### INF-P0 results (2026-11-06)
 
-**Built:** `tools/corb/` (`python -m corb …`, stdlib only): `inventory`, `baseline lock | check`, `sources check`. Each writes a scorecard to `var/scorecards/` (plus `latest.json` and `index.json`). `tools/tests/test_infra_p0.py` adds 9 tests (37 pass in total). Committed artefacts: `infra/inventory.json`, `infra/baseline_lock.json`, `infra/sources.json`.
+**Built:** `tools/corb/` (`python -m corb …`, stdlib only): `inventory`, `baseline lock | check`, `sources check`. Each writes a scorecard to `var/scorecards/` (plus `latest.json` and `index.json`). `tools/tests/test_infra_p0.py` adds 10 tests (38 pass in total). Committed artefacts: `infra/inventory.json`, `infra/baseline_lock.json`, `infra/sources.json`.
 
 | Task | Result |
 | --- | --- |
 | T01 | Repo [Atlas00000/cycleorb](https://github.com/Atlas00000/cycleorb), tag `infra-p0` |
 | T02 | 648 evidence files (95 MB including the two external journals and the Common ledgers), 77 run folders. **105 groups of byte-identical files and 15 groups of runs with identical `events.csv`.** For example, DE40 v1.09 = v1.10 P1obs = v1.11 = v1.11 P1obs = v1.12 P3G = v1.13 P3G. This confirms the observe and guard layers leave those events untouched, and it means a store keyed by content hash will hold far fewer distinct runs than the folder count suggests |
 | T03 | **201 / 201 checks pass**: every field and every `events.csv` hash of the nine baseline rows equals `aos_baseline.json`, and every figure quoted in §3 is reproduced (per-asset MaxDD, `AOS-P3-REC` deltas, portfolio 14.2 % / 23.9 %). `baseline check` reproduces the 434 locked numbers exactly. New: **pooled 716 events, E +0.234R, EF +10.3 pp vs M 3.7 pp (Robust); W250 +11.9 pp, W500 +10.6 pp** |
-| T04 | 9 local sources `ok`, 1 `planned` (VPS ledgers). Broker depth is measured from the terminal's `bases/YWO-Trade` cache (below). 17 Ouroboros slices are listed; 11 have known paths (research cards) and 6 M1 mirrors have unknown paths |
+| T04 | **ACCEPT.** 9 local sources `ok`, 1 `planned` (VPS ledgers). Broker depth is measured from the terminal's `bases/YWO-Trade` cache (below). Ouroboros (`C:/Users/emili/OneDrive/Desktop/Ouroboros`, commit `6e0ef34`): 22 slices, 19 located and **frozen by sha256** (12 research cards and reviews, 7 M1 caches), 2 covered by the broker cache (JP225, AAPL / NVDA), 1 not available (DE40). The CycleORB files are untracked in Ouroboros, so the commit alone doesn't freeze them; `sources check` reports `changed` if a hash moves |
 
 **Broker history depth (measured):**
 
 | Symbol | Real ticks | M1 bars | Consequence for the replica (INF-P3-T07) |
 | --- | --- | --- | --- |
 | EURUSD | 2025-06 → 2026-11 | 1971 → 2026 | Long M1 exists; pre-2025-06 stamps must be verified |
-| DE30 | 2025-06 → 2026-11 | **2025 → 2026 only** | **Longer history only via Ouroboros** |
+| DE30 | 2025-06 → 2026-11 | **2025 → 2026 only** | **No longer history in either workspace** (Ouroboros pulls the same broker from 2025-06) |
 | JPN225 | 2025-06 → 2026-11 | 2023 → 2026 | +2 years from broker M1, after re-stamping |
 | UK100 | 2025-07 → 2026-11 | 2020–2022, 2025–2026 | Gap 2023–2024 |
 | SPX500 | 2025-06 → 2026-11 | 2020 → 2026 | Known UTC+2/+3 stamp and spread change before 2025-06-18 |
@@ -401,7 +401,18 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | NVDA | 2026-01 → 2026-11 | 2026 only | Too short for a baseline |
 | USDJPY / GBPUSD (context) | 2025-06 / 2025-12 → 2026-11 | 2022 / 1993 → 2026 | Context features only |
 
-**Open (to close T04):** give the Ouroboros workspace path (`CORB_OUROBOROS_DIR`), its commit, and the paths of the six M1 mirrors (DE40 and US500 first), then re-run `python -m corb sources check`.
+**What Ouroboros adds:** its M1 "mirrors" are caches of this **same YWO-Trade feed**, pulled through the MetaTrader5 Python API. They are not an independent data source. Usable extensions for the engine replica (INF-P3-T07):
+
+| Asset | Ouroboros cache | Beyond the 2025-06 real-tick start |
+| --- | --- | --- |
+| US500 | 2023-01-03 → 2026-11-03 | **+2.5 years** (pre-2025-06-18 bars carry another stamp and spread: re-stamp and parity first) |
+| EURUSD-NY / LON0700 | 2020-08-31 → 2026-10-30 | **+4.8 years** (same stamp caveat) |
+| TSLA / MSFT / XOM | 2024-01-02 → 2026-11-02 | +1.5 years (controls / research) |
+| UK100 | 2025-12-17 → 2026-11-03 | none |
+| DE40 | none | **none anywhere** |
+| JP225 | none (pulls the broker live) | broker M1 2023 → 2026: +2 years |
+
+**Consequence for IB-04 and INF-P4-T07:** the data-gain test can add history for US500, EURUSD and JP225 only. DE40, the asset with the clearest decay question, can't be extended, so its evidence grows only through the forward ledgers.
 
 ### INF-P1 — Contract and schema
 
@@ -556,7 +567,7 @@ Only after the infra is stable **and** an INF-P7 plan exists.
 | Order | Task | Why first |
 | --- | --- | --- |
 | 1 | INF-P0-T01 ✅ | Nothing is reproducible without version control (done 2026-11-06) |
-| 2 | INF-P0-T02, T03 ✅, T04 ⏸ | The numbers to protect, recomputed from files (done). T04 waits for the Ouroboros paths |
+| 2 | INF-P0-T02 … T04 ✅ | The numbers to protect and the frozen evidence sources (done 2026-11-06) |
 | 3 | INF-P1-T01 … T04 | The contract and DB that every later task writes to |
 | 4 | INF-P2-T04 | Tester containers: parallel runs, independent of any live terminal |
 | 5 | INF-P4-T01 | The harness regression proves the new stack reproduces every past verdict |

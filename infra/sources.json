@@ -3,7 +3,20 @@
  "broker": {
   "server": "YWO-Trade",
   "bases": "%TERMINAL%/bases/YWO-Trade",
-  "symbols": ["EURUSD", "DE30", "JPN225", "UK100", "SPX500", "Apple", "Microsoft", "Exxon", "NVDA", "Tesla", "USDJPY", "GBPUSD"]
+  "symbols": [
+   "EURUSD",
+   "DE30",
+   "JPN225",
+   "UK100",
+   "SPX500",
+   "Apple",
+   "Microsoft",
+   "Exxon",
+   "NVDA",
+   "Tesla",
+   "USDJPY",
+   "GBPUSD"
+  ]
  },
  "sources": [
   {
@@ -11,17 +24,35 @@
    "kind": "broker_ticks",
    "location": "%TERMINAL%/bases/YWO-Trade/ticks",
    "valid_from": "2025-06-18",
-   "valid_from_override": {"UK100": "2025-12-17", "NVDA": "2026-01-01", "GBPUSD": "2025-12-01"},
-   "issues": ["Real ticks start 2025-06 (System Profile §12); tester runs are valid from 2025-06-18 only", "UK100 tester history starts 2025-12-17 (ROADMAP ORB-P1-T13)", "Exxon / Microsoft: no bars 2026-05-12 -> 06-30 (ROADMAP ORB-P1-T10, T12)"],
-   "used_by": ["every tester run", "INF-P2-T04 tester containers (history cache volume)"]
+   "valid_from_override": {
+    "UK100": "2025-12-17",
+    "NVDA": "2026-01-01",
+    "GBPUSD": "2025-12-01"
+   },
+   "issues": [
+    "Real ticks start 2025-06 (System Profile §12); tester runs are valid from 2025-06-18 only",
+    "UK100 tester history starts 2025-12-17 (ROADMAP ORB-P1-T13)",
+    "Exxon / Microsoft: no bars 2026-05-12 -> 06-30 (ROADMAP ORB-P1-T10, T12)"
+   ],
+   "used_by": [
+    "every tester run",
+    "INF-P2-T04 tester containers (history cache volume)"
+   ]
   },
   {
    "id": "broker_m1_history",
    "kind": "broker_bars",
    "location": "%TERMINAL%/bases/YWO-Trade/history",
    "valid_from": "2025-06-18",
-   "issues": ["Bars before 2025-06-18 are stamped in another time zone with a different spread (SPX500 UTC+2/+3, Apple UTC+3; ROADMAP ORB-P1-T08, T11). Usable for the replica only after re-stamping and a parity check", "DE30 has M1 only for 2025-2026: DE40 history beyond that needs Ouroboros", "UK100 has no M1 for 2023-2024"],
-   "used_by": ["INF-P3-T02 bar export", "INF-P3-T07 engine replica"]
+   "issues": [
+    "Bars before 2025-06-18 are stamped in another time zone with a different spread (SPX500 UTC+2/+3, Apple UTC+3; ROADMAP ORB-P1-T08, T11). Usable for the replica only after re-stamping and a parity check",
+    "DE30 has M1 only for 2025-2026: DE40 history beyond that needs Ouroboros",
+    "UK100 has no M1 for 2023-2024"
+   ],
+   "used_by": [
+    "INF-P3-T02 bar export",
+    "INF-P3-T07 engine replica"
+   ]
   },
   {
    "id": "ea_ledgers",
@@ -29,8 +60,14 @@
    "location": "%COMMON%/CycleORB",
    "pattern": "CORB_*_*.csv",
    "valid_from": "2025-07-01",
-   "issues": ["CycleORB >= v1.10 only", "Tester tags are truncated on every re-run (L-07); the copies in tester/aos/runs are the kept evidence"],
-   "used_by": ["aos_tape.py collect", "INF-P2-T01 ingest"]
+   "issues": [
+    "CycleORB >= v1.10 only",
+    "Tester tags are truncated on every re-run (L-07); the copies in tester/aos/runs are the kept evidence"
+   ],
+   "used_by": [
+    "aos_tape.py collect",
+    "INF-P2-T01 ingest"
+   ]
   },
   {
    "id": "calendar_export",
@@ -38,8 +75,13 @@
    "location": "%COMMON%/CycleORB/events.csv",
    "valid_from": "2025-01-01",
    "valid_to": "2027-12-31",
-   "issues": ["Exported from the MT5 calendar by Scripts/CycleORB/CycleORB_ExportCalendar.mq5; overwritten in place, no snapshot version (L-13)"],
-   "used_by": ["Events.mqh (EA)", "INF-P3-T02 calendar snapshots"]
+   "issues": [
+    "Exported from the MT5 calendar by Scripts/CycleORB/CycleORB_ExportCalendar.mq5; overwritten in place, no snapshot version (L-13)"
+   ],
+   "used_by": [
+    "Events.mqh (EA)",
+    "INF-P3-T02 calendar snapshots"
+   ]
   },
   {
    "id": "tester_journals_terminal",
@@ -47,8 +89,13 @@
    "location": "%TERMINAL%/Tester/logs",
    "pattern": "*.log",
    "valid_from": "2026-11-05",
-   "issues": ["The terminal keeps only recent days; parse or land them before they rotate"],
-   "used_by": ["corb_parse.py", "INF-P2-T05 journal replay"]
+   "issues": [
+    "The terminal keeps only recent days; parse or land them before they rotate"
+   ],
+   "used_by": [
+    "corb_parse.py",
+    "INF-P2-T05 journal replay"
+   ]
   },
   {
    "id": "tester_journals_repo",
@@ -56,16 +103,26 @@
    "location": "%REPO%/tester",
    "pattern": "*.log",
    "valid_from": "2025-01-01",
-   "issues": ["v1.01-v1.03 runs used the wrong server clock (ROADMAP §2): not valid as evidence"],
-   "used_by": ["history only"]
+   "issues": [
+    "v1.01-v1.03 runs used the wrong server clock (ROADMAP §2): not valid as evidence"
+   ],
+   "used_by": [
+    "history only"
+   ]
   },
   {
    "id": "run_folders",
    "kind": "run_folder",
    "location": "%REPO%/tester/aos/runs",
    "valid_from": "2025-07-01",
-   "issues": ["v1.10 and v1.11 copies of the same events exist (see infra/inventory.json duplicates)"],
-   "used_by": ["corb_bench.py", "aos_compare.py", "INF-P0-T03 baseline lock"]
+   "issues": [
+    "v1.10 and v1.11 copies of the same events exist (see infra/inventory.json duplicates)"
+   ],
+   "used_by": [
+    "corb_bench.py",
+    "aos_compare.py",
+    "INF-P0-T03 baseline lock"
+   ]
   },
   {
    "id": "tape_P1obs",
@@ -73,8 +130,13 @@
    "location": "%REPO%/tester/aos/tape/tape_P1obs.csv",
    "valid_from": "2025-07-01",
    "valid_to": "2026-10-31",
-   "issues": ["1,431 armed setup-days x 72 columns; labels (actual_R, shadow_R) sit in the same file as features"],
-   "used_by": ["aos_gate_wf.py", "INF-P4 training"]
+   "issues": [
+    "1,431 armed setup-days x 72 columns; labels (actual_R, shadow_R) sit in the same file as features"
+   ],
+   "used_by": [
+    "aos_gate_wf.py",
+    "INF-P4 training"
+   ]
   },
   {
    "id": "skip_date_lists",
@@ -83,8 +145,13 @@
    "pattern": "*.set",
    "valid_from": "2025-07-01",
    "valid_to": "2027-12-31",
-   "issues": ["InpSkipDates must be extended each December; MT5 truncates string inputs at 255 characters (L-14)"],
-   "used_by": ["EA", "INF-P5-T07 preset lint"]
+   "issues": [
+    "InpSkipDates must be extended each December; MT5 truncates string inputs at 255 characters (L-14)"
+   ],
+   "used_by": [
+    "EA",
+    "INF-P5-T07 preset lint"
+   ]
   },
   {
    "id": "vps_live_ledgers",
@@ -92,32 +159,221 @@
    "location": null,
    "status": "planned",
    "valid_from": null,
-   "issues": ["Demo forward test on the VPS (AOS-P7). Pushed one way to the landing zone by INF-P2-T07; never a baseline"],
-   "used_by": ["INF-P2-T07"]
+   "issues": [
+    "Demo forward test on the VPS (AOS-P7). Pushed one way to the landing zone by INF-P2-T07; never a baseline"
+   ],
+   "used_by": [
+    "INF-P2-T07"
+   ]
   }
  ],
  "ouroboros": {
+  "root": "C:/Users/emili/OneDrive/Desktop/Ouroboros",
   "root_env": "CORB_OUROBOROS_DIR",
-  "source_commit": null,
-  "comment": "Separate project. Import the slices below into the landing zone with their commit and sha256 (INF-P2-T08); never read at run time. Paths marked null must be located in the Ouroboros workspace first.",
+  "source_commit": "6e0ef347c65ba29c18b472c95e9115833bb00b0a",
+  "comment": "Separate project, read only at import (INF-P2-T08). The CycleORB files are untracked in Ouroboros at source_commit, so each slice is frozen by sha256 (python -m corb sources check --freeze). A changed sha256 means Ouroboros moved: re-freeze on purpose. The M1 caches are YWO-Trade bars pulled through the MetaTrader5 API (M1 bid + per-bar spread, broker D1): the same broker feed, not an independent source.",
   "slices": [
-   {"id": "card_EURUSD", "path": "research/assets/EURUSD/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Preset provenance (ORB-P1-T04)"},
-   {"id": "card_DE40", "path": "research/assets/DE40/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Preset provenance (ORB-P1-T05)"},
-   {"id": "monthly_DE40", "path": "research/assets/DE40/cycleorb_monthly_202601_202610.json", "priority": "low", "needed_for": "Offline 500 USD model confirmed by the tester (System Profile §10)"},
-   {"id": "card_JP225", "path": "research/assets/JP225/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Preset provenance (ORB-P1-T07)"},
-   {"id": "card_UK100", "path": "research/assets/UK100/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Preset provenance (ORB-P1-T10)"},
-   {"id": "card_US500", "path": "research/assets/US500/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Preset provenance (ORB-P1-T11)"},
-   {"id": "card_TSLA", "path": "research/assets/TSLA/CycleORB_M5_chart_preset.md", "priority": "low", "needed_for": "Research preset (ORB-P1-T09)"},
-   {"id": "card_NVDA", "path": "research/assets/NVDA", "priority": "low", "needed_for": "Research preset (System Profile §10)"},
-   {"id": "review_AAPL", "path": "research/assets/AAPL/CycleORB_M5_review.md", "priority": "low", "needed_for": "Control provenance (ORB-P1-T08)"},
-   {"id": "review_MSFT", "path": "research/assets/MSFT/CycleORB_M5_review.md", "priority": "low", "needed_for": "Control provenance (ORB-P1-T10 MSFT)"},
-   {"id": "review_XOM", "path": "research/assets/XOM/CycleORB_M5_review.md", "priority": "low", "needed_for": "Control provenance (ORB-P1-T12)"},
-   {"id": "m1_mirror_DE40", "path": null, "priority": "high", "needed_for": "INF-P3-T07 replica beyond 2025: broker DE30 M1 starts 2025"},
-   {"id": "m1_mirror_US500", "path": null, "priority": "high", "needed_for": "INF-P3-T07: the re-stamped 2023-02 -> 2025-06 feed behind the US500 long check (ORB-P1-T11)"},
-   {"id": "m1_mirror_JP225", "path": null, "priority": "medium", "needed_for": "INF-P3-T07: broker JPN225 M1 starts 2023"},
-   {"id": "m1_mirror_UK100", "path": null, "priority": "medium", "needed_for": "INF-P3-T07: broker UK100 M1 has no 2023-2024"},
-   {"id": "m1_mirror_EURUSD", "path": null, "priority": "medium", "needed_for": "INF-P3-T07: the 6-year LON0700 replica (v1.07 review); broker M1 exists but pre-2025-06 stamps differ"},
-   {"id": "m1_mirror_controls", "path": null, "priority": "low", "needed_for": "Replica controls AAPL / MSFT / XOM / NVDA / TSLA (bid/ask mirrors used in ORB-P1-T08 ... T12)"}
+   {
+    "id": "card_EURUSD",
+    "path": "research/assets/EURUSD/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Preset provenance (ORB-P1-T04)",
+    "sha256": "d4f61cb75b24b2df84dc2ffa7aae68acb2e12007d3428bd71d56cc7853ad0428",
+    "bytes": 11403
+   },
+   {
+    "id": "review_EURUSD_LON0700",
+    "path": "research/assets/EURUSD/CycleORB_M5_LON0700_review.md",
+    "priority": "low",
+    "needed_for": "LON0700 preset provenance",
+    "sha256": "332d354ca71a0a09c9ef661c0989294440e4f73e6414142b3f5a8db2c7f946ff",
+    "bytes": 8408
+   },
+   {
+    "id": "card_DE40",
+    "path": "research/assets/DE40/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Preset provenance (ORB-P1-T05)",
+    "sha256": "82fe1b25f16d90614d182a3a80ca3b2b054c601b388ef0ed255af1413ca263ad",
+    "bytes": 13262
+   },
+   {
+    "id": "monthly_DE40",
+    "path": "research/assets/DE40/cycleorb_monthly_202601_202610.json",
+    "priority": "low",
+    "needed_for": "Offline 500 USD model confirmed by the tester (System Profile §10)",
+    "sha256": "558239c18ef3cae4ee555b54bebb6c91f689dbd8fe11ee1c5dd0d2539042b8a1",
+    "bytes": 2586
+   },
+   {
+    "id": "card_JP225",
+    "path": "research/assets/JP225/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Preset provenance (ORB-P1-T07)",
+    "sha256": "8e1f3611d941abd092ae3591a6c2884a55326d9b0c55265e516147bb8fb680aa",
+    "bytes": 14446
+   },
+   {
+    "id": "card_UK100",
+    "path": "research/assets/UK100/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Preset provenance (ORB-P1-T10)",
+    "sha256": "6beeb3f0c66ecfe5da7fc8fc99ad908beaf712783d9772ae57f2b91743d8798d",
+    "bytes": 11458
+   },
+   {
+    "id": "card_US500",
+    "path": "research/assets/US500/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Preset provenance (ORB-P1-T11)",
+    "sha256": "47af21e28364881f8ccfcd78451dd6c4149f3247aa0b98e40d9567a21582e586",
+    "bytes": 13868
+   },
+   {
+    "id": "card_TSLA",
+    "path": "research/assets/TSLA/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Research preset (ORB-P1-T09)",
+    "sha256": "277f369e967ff467347f93a39f904cf7ed40ee971a86dbfad9b66aa39e766210",
+    "bytes": 13351
+   },
+   {
+    "id": "card_NVDA",
+    "path": "research/assets/NVDA/CycleORB_M5_chart_preset.md",
+    "priority": "low",
+    "needed_for": "Research preset (System Profile §10)",
+    "sha256": "d34406896f4cbebfd1e4a65deb5b3167cf4ba7d02576a35692ad47cd43d43531",
+    "bytes": 16093
+   },
+   {
+    "id": "review_AAPL",
+    "path": "research/assets/AAPL/CycleORB_M5_review.md",
+    "priority": "low",
+    "needed_for": "Control provenance (ORB-P1-T08)",
+    "sha256": "40cc8f53a5c8a884587914e3a46239144cc9c18bb66aaceb3b151f919ece8175",
+    "bytes": 9179
+   },
+   {
+    "id": "review_MSFT",
+    "path": "research/assets/MSFT/CycleORB_M5_review.md",
+    "priority": "low",
+    "needed_for": "Control provenance (ORB-P1-T10 MSFT)",
+    "sha256": "75977d088cc5e99112f272e6d7b244ca397f7b2554c96f64906551fb2e7fdef5",
+    "bytes": 10660
+   },
+   {
+    "id": "review_XOM",
+    "path": "research/assets/XOM/CycleORB_M5_review.md",
+    "priority": "low",
+    "needed_for": "Control provenance (ORB-P1-T12)",
+    "sha256": "47f35ac0d88bc2b6cca88f5ab010373b9a17f06d6c711d505a5f32b04e772782",
+    "bytes": 9992
+   },
+   {
+    "id": "m1_US500",
+    "path": "research/assets/US500/_us500_m1d1.pkl",
+    "window": [
+     "2023-01-03",
+     "2026-11-03"
+    ],
+    "priority": "high",
+    "needed_for": "INF-P3-T07: 2023-01 -> 2025-06 adds about 2.5 years to US500. Bars before 2025-06-18 carry another time stamp and spread: re-stamp and pass parity before use",
+    "sha256": "cd62e9171f28dc6e4a703bf60bf90614b6403a44e82a41df4092ad9be4324a30",
+    "bytes": 63501885
+   },
+   {
+    "id": "m1_EURUSD_2020_2023",
+    "path": "data/cache/eurusd_m1_d1_2020_2023.pkl",
+    "window": [
+     "2020-08-31",
+     "2023-08-31"
+    ],
+    "priority": "medium",
+    "needed_for": "INF-P3-T07: EURUSD-NY / LON0700 replica history (arrays t/o/h/l/s + D1 ATR + regime)",
+    "sha256": "d03e897dbc77a113928f8aa8e924b53c68f738a238d3c06362ab104df2de8eb6",
+    "bytes": 44842080
+   },
+   {
+    "id": "m1_EURUSD_2023_2026",
+    "path": "data/cache/eurusd_m1_d1_2023_2026.pkl",
+    "window": [
+     "2023-08-31",
+     "2026-10-30"
+    ],
+    "priority": "medium",
+    "needed_for": "INF-P3-T07: EURUSD replica history and parity window",
+    "sha256": "41e72ecd6f5f3214ae2b1990f7d0374afbb066641ca4088d91423e9726df80c2",
+    "bytes": 47060164
+   },
+   {
+    "id": "m1_UK100",
+    "path": "research/assets/UK100/_uk100_m1d1.pkl",
+    "window": [
+     "2025-12-17",
+     "2026-11-03"
+    ],
+    "priority": "low",
+    "needed_for": "Replica parity only: no history beyond the broker window",
+    "sha256": "9d15c9dd2df50bc9039ea9e032cbe91df3d6a0edcdd9de7f584ba8b33db12c21",
+    "bytes": 14344235
+   },
+   {
+    "id": "m1_TSLA",
+    "path": "research/assets/TSLA/_tsla_m1d1.pkl",
+    "window": [
+     "2024-01-02",
+     "2026-11-02"
+    ],
+    "priority": "low",
+    "needed_for": "Research / replica control",
+    "sha256": "dc703aded093616cf111505bc9000ed92e9c163ae6cb828e63f1e1b7075e5f25",
+    "bytes": 13286899
+   },
+   {
+    "id": "m1_MSFT",
+    "path": "research/assets/MSFT/_msft_m1d1.pkl",
+    "window": [
+     "2024-01-02",
+     "2026-11-02"
+    ],
+    "priority": "low",
+    "needed_for": "Negative control replica",
+    "sha256": "bd7bc38604acc77a3fe1623954898673761a650f7250c187a96c5dc2fab861f0",
+    "bytes": 12605051
+   },
+   {
+    "id": "m1_XOM",
+    "path": "research/assets/XOM/_xom_m1d1.pkl",
+    "window": [
+     "2024-01-02",
+     "2026-11-02"
+    ],
+    "priority": "low",
+    "needed_for": "Negative control replica",
+    "sha256": "85538eec52c221344818aa1f1bff79c3a7386834a31de634af6edbe90216fd9a",
+    "bytes": 10261883
+   },
+   {
+    "id": "m1_DE40",
+    "path": null,
+    "available": false,
+    "priority": "high",
+    "reason": "Ouroboros pulls DE30 from the same broker through the MT5 API from 2025-06-01 and keeps no cache. No DE40 history before 2025-06 exists in either workspace"
+   },
+   {
+    "id": "m1_JP225",
+    "path": null,
+    "covered_by": "broker_m1_history",
+    "priority": "medium",
+    "reason": "Ouroboros pulls JPN225 live from the broker (from 2024-01-01); the broker cache holds 2023-2026"
+   },
+   {
+    "id": "m1_AAPL_NVDA",
+    "path": null,
+    "covered_by": "broker_m1_history",
+    "priority": "low",
+    "reason": "No Ouroboros cache; the scripts pull from the broker"
+   }
   ]
  }
 }

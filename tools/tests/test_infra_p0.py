@@ -66,6 +66,23 @@ class SourcesTests(unittest.TestCase):
         self.assertEqual(res["sources"][0]["status"], "missing")
         self.assertEqual(res["verdict"], "REJECT")
 
+    def test_freeze_then_detect_change(self):
+        with tempfile.TemporaryDirectory() as root:
+            with open(os.path.join(root, "m1.pkl"), "w") as f:
+                f.write("bars")
+            spec = self.spec("%REPO%/tools", ouroboros_path="m1.pkl")
+            spec["ouroboros"].update(root=root, source_commit="abc")
+            spec["ouroboros"]["slices"] += [dict(id="c", path=None, covered_by="broker", priority="low"),
+                                           dict(id="n", path=None, available=False, priority="low")]
+            self.assertEqual(sources.check(spec)["ouroboros"]["slices"][0]["status"], "unfrozen")
+            res = sources.check(spec, freeze=True)
+            self.assertEqual([s["status"] for s in res["ouroboros"]["slices"]], ["ok", "covered", "not_available"])
+            if not paths.OUROBOROS:
+                self.assertEqual(res["verdict"], "ACCEPT")
+            with open(os.path.join(root, "m1.pkl"), "w") as f:
+                f.write("bars moved")
+            self.assertEqual(sources.check(spec)["ouroboros"]["slices"][0]["status"], "changed")
+
     def test_unknown_ouroboros_path(self):
         res = sources.check(self.spec("%REPO%/tools", ouroboros_path=None))
         self.assertEqual(res["ouroboros"]["slices"][0]["status"], "path_unknown")

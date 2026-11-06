@@ -3,7 +3,8 @@
   inventory [--no-external]   INF-P0-T02  hash every evidence file -> infra/inventory.json
   baseline lock               INF-P0-T03  recompute + verify the baseline -> infra/baseline_lock.json
   baseline check              INF-P0-T03  recompute and diff against the committed lock (no write)
-  sources check               INF-P0-T04  check infra/sources.json, measure broker history depth
+  sources check [--freeze]    INF-P0-T04  check infra/sources.json, measure broker history depth;
+                                          --freeze records the sha256 of the located Ouroboros slices
 
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
@@ -78,7 +79,12 @@ def cmd_baseline(a):
 
 def cmd_sources(a):
     from corb import sources
-    res = sources.check()
+    with open(sources.SOURCES, encoding="utf-8") as f:
+        spec = json.load(f)
+    res = sources.check(spec, freeze=a.freeze)
+    if a.freeze:
+        sources.save(spec)
+        print("froze sha256 of the located Ouroboros slices in", portable(sources.SOURCES))
     for r in res["sources"]:
         print(f"  {r['id']:28} {r['status']:12} {r['files']:4} files {r['bytes'] / 1e6:7.1f} MB")
     print("broker history (real ticks first..last month | M1 years):")
@@ -104,6 +110,7 @@ def main():
     p.set_defaults(fn=cmd_baseline)
     p = sub.add_parser("sources")
     p.add_argument("action", choices=["check"])
+    p.add_argument("--freeze", action="store_true", help="record the sha256 of every located Ouroboros slice")
     p.set_defaults(fn=cmd_sources)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
