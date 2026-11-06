@@ -1,0 +1,91 @@
+; AOS-P1 observe-all preset for UK100 (AOS-P1-T01..T06: ledger, shadow, L1 features, events, context)
+; Base: CycleORB-M5-UK100-6M-LON.set (frozen production). Changed inputs: InpAosLedger=true, InpAosRunTag=P1obs, InpAosEventCcy=GBP,EUR,USD, InpAosCtxSymbols=JPN225,SPX500
+; Hypothesis: zero behaviour change. Expected skip/fire change: 0 %. Must equal the AOS-P0 baseline event by event (aos_compare: withheld 0, added 0, changed 0)
+; CycleORB v1.06 — UK100 M5 chart preset, London cash-open ORB (review 2026-05 -> 2026-11, back-check from 2025-12-17)
+; Research: Ouroboros research/assets/UK100/CycleORB_M5_chart_preset.md
+; Broker clock YWO-Trade = UTC+0 -> fixed offset 0. Symbol UK100, Digits=2, Point=0.01, cash spread ~120 points (1.20)
+; Session: London setup only. Range 08:15-09:15 London (skips the 08:00 auction print), orders cancelled 11:30, flat 16:25 (LSE cash close 16:30; spread widens after 17:00)
+; Geometry: stop = opposite range edge, TP = 2.5 x stop distance (never TP < SL; EA refuses TargetR < 1 and skips any side whose TP distance < SL distance)
+; Regime filters: range 10-50% of previous daily ATR(14) AND H1 ATR(20) percentile over 500 H1 bars >= 33 (not the low-vol tercile)
+; New York is off: the US-open breakout on UK100 does not stay positive in both windows
+;
+; === Server time ===
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup (London local time) = LSE cash open ===
+InpLonEnable=true
+InpLonRangeStart=08:15
+InpLonRangeMinutes=60
+InpLonEntryEnd=11:30
+InpLonExit=16:25
+; === New York setup — OFF ===
+InpNYEnable=false
+InpNYRangeStart=09:30
+InpNYRangeMinutes=30
+InpNYEntryEnd=11:00
+InpNYExit=11:20
+; === Tokyo setup — OFF ===
+InpTkyEnable=false
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=2.5
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=10.0
+InpMaxRangeATRPct=50.0
+InpMaxCostRangePct=10.0
+InpCommissionPoints=0
+InpMinVolPct=33.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=false
+InpTrendMAPeriod=20
+; === Calendar - LSE holidays + 12:30 half days 2025-07 -> 2027 ===
+InpSkipDates=250825,251224,251225,251226,251231,260101,260403,260406,260504,260525,260831,261224,261225,261228,261231,270101,270326,270329,270503,270531,270830,271224,271227,271228,271231
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=P1obs
+InpAosEventCcy=GBP,EUR,USD
+InpAosCtxSymbols=JPN225,SPX500
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=false
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110800
+InpSlippagePoints=150
+InpMaxLot=100.0

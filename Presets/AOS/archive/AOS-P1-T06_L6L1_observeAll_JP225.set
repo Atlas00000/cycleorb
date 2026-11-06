@@ -1,0 +1,91 @@
+; AOS-P1 observe-all preset for JP225 (AOS-P1-T01..T06: ledger, shadow, L1 features, events, context)
+; Base: CycleORB-M5-JP225-6M-TKY.set (frozen production). Changed inputs: InpAosLedger=true, InpAosRunTag=P1obs, InpAosEventCcy=JPY,USD, InpAosCtxSymbols=SPX500,USDJPY
+; Hypothesis: zero behaviour change. Expected skip/fire change: 0 %. Must equal the AOS-P0 baseline event by event (aos_compare: withheld 0, added 0, changed 0)
+; CycleORB v1.06 (needs v1.06+: Tokyo setup) — JP225 (YWO symbol JPN225) M5 chart preset, Tokyo first-hour ORB (6-month review 2026-05 -> 2026-10)
+; Research: Ouroboros research/assets/JP225/CycleORB_M5_chart_preset.md
+; Broker clock YWO-Trade = UTC+0 -> fixed offset 0. Tokyo clock = UTC+9 all year (no DST): 09:00 JST = 00:00 UTC
+; Session: Tokyo setup only. Range 09:00-10:00 JST (TSE first hour), orders cancelled 11:30 JST (TSE lunch), flat 15:25 JST (TSE close 15:30)
+; Geometry: stop = opposite range edge, TP = 1.75 x stop distance (never TP < SL; EA refuses TargetR < 1 and skips any side whose TP distance < SL distance)
+; Regime filters: range 25-60% of previous daily ATR(14) AND H1 ATR(20) percentile over 500 H1 bars >= 33 (not the low-vol tercile)
+; Lots: JPN225 1 lot = 1 JPY per index point, broker max 100 lots per order -> the cap binds above ~30k USD cycle capital at 1% risk
+;
+; === Server time ===
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup — OFF: no London variant is positive on JP225 in both tip and back-check ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup — OFF: no New York variant is positive on JP225 in both tip and back-check ===
+InpNYEnable=false
+InpNYRangeStart=08:00
+InpNYRangeMinutes=30
+InpNYEntryEnd=11:30
+InpNYExit=15:00
+; === Tokyo setup (Tokyo local time) = TSE cash open ===
+InpTkyEnable=true
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=1.75
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=25.0
+InpMaxRangeATRPct=60.0
+InpMaxCostRangePct=10.0
+InpCommissionPoints=0
+InpMinVolPct=33.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=false
+InpTrendMAPeriod=20
+; === Calendar - none: market trades through local holidays (no failed exits in the 2026 tester run) ===
+InpSkipDates=
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=P1obs
+InpAosEventCcy=JPY,USD
+InpAosCtxSymbols=SPX500,USDJPY
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=false
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110500
+InpSlippagePoints=3000
+InpMaxLot=100.0

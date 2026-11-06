@@ -1,0 +1,83 @@
+; AOS-P3 recommended guard set for JP225 (forward-test candidate, AOS-P7). Production strategy inputs unchanged.
+; L3 on: calendar kill, slippage abort 0.25R, lot guard 10 %, DD limit 10 % (x0.5 at 0.8 x), clock refuse (live).
+; L4 observer on (ledger + HEALTH log, baseline E +0.203R), auto-sizing off.
+; Live ledger: Common\Files\CycleORB\CORB_<magic>_<symbol>_live_*.csv. Clear a calendar-leak stop by deleting the global variable CORB_<magic>_<symbol>_calkill.
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup — OFF: no London variant is positive on JP225 in both tip and back-check ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup — OFF: no New York variant is positive on JP225 in both tip and back-check ===
+InpNYEnable=false
+InpNYRangeStart=08:00
+InpNYRangeMinutes=30
+InpNYEntryEnd=11:30
+InpNYExit=15:00
+; === Tokyo setup (Tokyo local time) = TSE cash open ===
+InpTkyEnable=true
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=1.75
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=25.0
+InpMaxRangeATRPct=60.0
+InpMaxCostRangePct=10.0
+InpCommissionPoints=0
+InpMinVolPct=33.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=false
+InpTrendMAPeriod=20
+; === Calendar - none: market trades through local holidays (no failed exits in the 2026 tester run) ===
+InpSkipDates=
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=
+InpAosEventCcy=JPY,USD
+InpAosCtxSymbols=SPX500,USDJPY
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=true
+InpAosSlipAbortR=0.25
+InpAosLotGuardPct=10
+InpAosDdLimitPct=10
+InpAosClockRefuse=true
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.203
+InpAosHealthLeakPP=0.8
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110500
+InpSlippagePoints=3000
+InpMaxLot=100.0

@@ -1,0 +1,1148 @@
+﻿CS	0	16:07:28.176	Startup	MetaTester 5 build 6230, 25 Sep 2026
+CS	0	16:07:28.179	Startup	Windows 11 build 26300, 12 x Intel Core i7-10750H  @ 2.60GHz, AVX2, 6 / 23 Gb memory, 149 / 952 Gb disk, UAC, GMT+1
+CS	0	16:07:28.182	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	16:07:28.185	Startup	cloud network mode is off
+CS	0	16:07:28.185	Startup	initialization finished
+CS	0	16:07:28.396	127.0.0.1	login (build 6230)
+CS	0	16:07:28.418	Network	17744 bytes of account info loaded
+CS	0	16:07:28.418	Network	1478 bytes of tester parameters loaded
+CS	0	16:07:28.418	Network	26308 bytes of input parameters loaded
+CS	0	16:07:28.420	Network	10030 bytes of symbols list loaded (1045 symbols)
+CS	0	16:07:28.421	Tester	expert file added: Experts\CycleORB\CycleORB.ex5. 71257 bytes loaded
+CS	0	16:07:28.426	Tester	7047 Mb available, 88 blocks set for ticks generating
+CS	0	16:07:28.426	Tester	initial deposit 10000.00 USD, leverage 1:500
+CS	0	16:07:28.426	Tester	successfully initialized
+CS	0	16:07:28.426	Network	83 Kb of total initialization data received
+CS	0	16:07:28.426	Tester	Intel Core i7-10750H  @ 2.60GHz, 24358 MB
+CS	0	16:07:28.436	Symbols	Apple: symbol to be synchronized
+CS	0	16:07:28.437	Symbols	Apple: symbol synchronized, 3720 bytes of symbol info received
+CS	0	16:07:28.443	History	Apple: load 25 bytes of history data to synchronize in 0:00:00.001
+CS	0	16:07:28.443	History	Apple: history synchronized from 2019.01.02 to 2026.10.30
+CS	0	16:07:28.444	Ticks	Apple: ticks synchronization started
+CS	0	16:07:28.445	Ticks	Apple: load 32 bytes of tick data to synchronize in 0:00:00.000
+CS	0	16:07:28.445	Ticks	Apple: history ticks synchronized from 2026.05.01 to 2026.10.30
+CS	0	16:07:28.471	History	Apple,M5: history cache allocated for 63373 bars and contains 25693 bars from 2025.01.01 17:30 to 2026.04.30 19:55
+CS	0	16:07:28.471	History	Apple,M5: history begins from 2025.01.01 17:30
+CS	0	16:07:28.477	Tester	Apple,M5 (YWO-Trade): generating based on real ticks
+CS	0	16:07:28.477	Tester	Apple,M5: testing of Experts\CycleORB\CycleORB.ex5 from 2026.05.01 00:00 to 2026.10.31 00:00 started with inputs:
+CS	0	16:07:28.477	Tester	  Server time=
+CS	0	16:07:28.477	Tester	  InpServerTZ=1
+CS	0	16:07:28.477	Tester	  InpServerFixedOffsetH=0
+CS	0	16:07:28.477	Tester	  London setup (London local time)=
+CS	0	16:07:28.477	Tester	  InpLonEnable=false
+CS	0	16:07:28.477	Tester	  InpLonRangeStart=08:00
+CS	0	16:07:28.477	Tester	  InpLonRangeMinutes=30
+CS	0	16:07:28.477	Tester	  InpLonEntryEnd=11:00
+CS	0	16:07:28.477	Tester	  InpLonExit=16:00
+CS	0	16:07:28.477	Tester	  New York setup (New York local time)=
+CS	0	16:07:28.477	Tester	  InpNYEnable=true
+CS	0	16:07:28.477	Tester	  InpNYRangeStart=09:30
+CS	0	16:07:28.477	Tester	  InpNYRangeMinutes=30
+CS	0	16:07:28.477	Tester	  InpNYEntryEnd=13:30
+CS	0	16:07:28.477	Tester	  InpNYExit=15:55
+CS	0	16:07:28.477	Tester	  Tokyo setup (Tokyo local time, JST = UTC+9, no DST)=
+CS	0	16:07:28.477	Tester	  InpTkyEnable=false
+CS	0	16:07:28.477	Tester	  InpTkyRangeStart=09:00
+CS	0	16:07:28.477	Tester	  InpTkyRangeMinutes=60
+CS	0	16:07:28.477	Tester	  InpTkyEntryEnd=11:30
+CS	0	16:07:28.477	Tester	  InpTkyExit=15:25
+CS	0	16:07:28.477	Tester	  Entry / exit=
+CS	0	16:07:28.477	Tester	  InpStopMode=0
+CS	0	16:07:28.477	Tester	  InpTargetR=1.1
+CS	0	16:07:28.477	Tester	  InpBufferSpreadMult=2.0
+CS	0	16:07:28.477	Tester	  InpBufferRangePct=5.0
+CS	0	16:07:28.477	Tester	  Filters=
+CS	0	16:07:28.477	Tester	  InpATRPeriod=14
+CS	0	16:07:28.477	Tester	  InpMinRangeATRPct=20.0
+CS	0	16:07:28.477	Tester	  InpMaxRangeATRPct=80.0
+CS	0	16:07:28.477	Tester	  InpMaxCostRangePct=100.0
+CS	0	16:07:28.477	Tester	  InpCommissionPoints=0
+CS	0	16:07:28.477	Tester	  InpMinVolPct=0.0
+CS	0	16:07:28.477	Tester	  InpVolATRPeriod=20
+CS	0	16:07:28.477	Tester	  InpVolLookback=500
+CS	0	16:07:28.477	Tester	  InpTrendSideOnly=true
+CS	0	16:07:28.477	Tester	  InpTrendMAPeriod=20
+CS	0	16:07:28.477	Tester	  Monthly cycle=
+CS	0	16:07:28.477	Tester	  InpCycleCapital=0.0
+CS	0	16:07:28.477	Tester	  InpSoftHaltPct=30.0
+CS	0	16:07:28.477	Tester	  InpHardFlattenPct=38.0
+CS	0	16:07:28.477	Tester	  InpRatchetArmPct=20.0
+CS	0	16:07:28.477	Tester	  InpRatchetFloorPct=10.0
+CS	0	16:07:28.477	Tester	  InpRatchetTrail=0.5
+CS	0	16:07:28.477	Tester	  InpRiskDivisor=8.0
+CS	0	16:07:28.477	Tester	  InpMaxRiskPct=0.5
+CS	0	16:07:28.477	Tester	  InpNoEntryLastDay=true
+CS	0	16:07:28.477	Tester	  Execution=
+CS	0	16:07:28.477	Tester	  InpMagicBase=26110600
+CS	0	16:07:28.477	Tester	  InpSlippagePoints=50
+CS	0	16:07:28.477	Tester	  InpMaxLot=100.0
+CS	0	16:07:28.495	CycleORB (Apple,M5)	2026.05.01 00:00:00   [CycleORB] WARNING built and defaulted for EURUSD, running on Apple
+CS	0	16:07:28.513	History	Apple,Daily: history cache allocated for 465 bars and contains 334 bars from 2025.01.01 00:00 to 2026.04.30 00:00
+CS	0	16:07:28.513	History	Apple,Daily: history begins from 2025.01.01 00:00
+CS	0	16:07:28.513	CycleORB (Apple,M5)	2026.05.01 00:00:00   [CycleORB] Clock 2026: UK DST 2026.03.29 -> 2026.10.25 | US DST 2026.03.08 -> 2026.11.01 | server offset now +0h
+CS	0	16:07:28.513	CycleORB (Apple,M5)	2026.05.01 00:00:00   [CycleORB] CYCLE_BEGIN 202605 capital=10000.00 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:28.513	CycleORB (Apple,M5)	2026.05.01 00:00:00   [CycleORB] Init OK Apple | magics LON=26110601 NY=26110602 TKY=26110603 | stop=CORB_STOP_OPPOSITE TP=1.10R | volpct>=0.0 | trendside=on(SMA20) | soft=30% hard=38% ratchet arm=20% floor=10% trail=0.50
+CS	0	16:07:29.473	Ticks	Apple : real ticks begin from 2026.05.01 00:00:00
+CS	0	16:07:29.479	CycleORB (Apple,M5)	2026.05.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.516	History	Apple,M1: history cache allocated for 316586 bars and contains 128186 bars from 2025.01.01 17:31 to 2026.04.30 19:59
+CS	0	16:07:29.522	History	Apple,M1: 61 bars from 2026.05.01 13:30 to 2026.05.01 14:30 added
+CS	0	16:07:29.522	History	Apple,M1: history begins from 2025.01.01 17:31
+CS	0	16:07:29.523	CycleORB (Apple,M5)	2026.05.01 14:30:00   [CycleORB] SKIP NY 2026.05.01 13:30 hi=284.58 lo=278.25 range=633pt atr%=107.6 spread=27.0pt (live 30pt) cost%=4.3 (range/ATR outside band)
+CS	0	16:07:29.568	CycleORB (Apple,M5)	2026.05.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.571	CycleORB (Apple,M5)	2026.05.04 14:30:00   [CycleORB] RANGE NY 2026.05.04 13:30 hi=280.39 lo=275.29 range=510pt atr%=75.5 spread=27.0pt (live 30pt) cost%=5.3 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.571	Trade	2026.05.04 14:30:00   buy stop 8.86 Apple at 280.93 sl: 275.29 tp: 287.13 (276.12 / 276.42)
+CS	0	16:07:29.571	CycleORB (Apple,M5)	2026.05.04 14:30:00   CTrade::OrderSend: buy stop 8.86 Apple at 280.93 sl: 275.29 tp: 287.13 [done]
+CS	0	16:07:29.571	CycleORB (Apple,M5)	2026.05.04 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.86 @280.93 sl=275.29 tp=287.13 magic=26110602 retcode=10009
+CS	0	16:07:29.595	Trade	2026.05.04 17:30:00   order canceled [#2 buy stop 8.86 Apple at 280.93]
+CS	0	16:07:29.595	CycleORB (Apple,M5)	2026.05.04 17:30:00   CTrade::OrderSend: cancel #2 [done]
+CS	0	16:07:29.595	CycleORB (Apple,M5)	2026.05.04 17:30:00   [CycleORB] DELETE order #2 magic=26110602 (NY entry window closed)
+CS	0	16:07:29.608	CycleORB (Apple,M5)	2026.05.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.611	CycleORB (Apple,M5)	2026.05.05 14:30:00   [CycleORB] RANGE NY 2026.05.05 13:30 hi=279.82 lo=276.41 range=341pt atr%=50.0 spread=27.0pt (live 28pt) cost%=7.9 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.611	CycleORB (Apple,M5)	2026.05.05 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:29.635	CycleORB (Apple,M5)	2026.05.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.638	CycleORB (Apple,M5)	2026.05.06 14:30:00   [CycleORB] RANGE NY 2026.05.06 13:30 hi=286.08 lo=280.93 range=515pt atr%=76.1 spread=27.1pt (live 31pt) cost%=5.3 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.638	Trade	2026.05.06 14:30:00   buy stop 8.78 Apple at 286.62 sl: 280.93 tp: 292.88 (285.96 / 286.27)
+CS	0	16:07:29.638	CycleORB (Apple,M5)	2026.05.06 14:30:00   CTrade::OrderSend: buy stop 8.78 Apple at 286.62 sl: 280.93 tp: 292.88 [done]
+CS	0	16:07:29.638	CycleORB (Apple,M5)	2026.05.06 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.78 @286.62 sl=280.93 tp=292.88 magic=26110602 retcode=10009
+CS	0	16:07:29.656	Trade	2026.05.06 16:43:24   order [#3 buy stop 8.78 Apple at 286.62] triggered
+CS	0	16:07:29.656	Trades	2026.05.06 16:43:24   deal #2 buy 8.78 Apple at 286.62 done (based on order #3)
+CS	0	16:07:29.656	Trade	2026.05.06 16:43:24   deal performed [#2 buy 8.78 Apple at 286.62]
+CS	0	16:07:29.656	Trade	2026.05.06 16:43:24   order performed buy 8.78 at 286.62 [#3 buy stop 8.78 Apple at 286.62]
+CS	0	16:07:29.679	Trade	2026.05.06 19:55:00   market sell 8.78 Apple, close #3 (287.67 / 287.95)
+CS	0	16:07:29.679	Trades	2026.05.06 19:55:00   deal #3 sell 8.78 Apple at 287.67 done (based on order #4)
+CS	0	16:07:29.679	Trade	2026.05.06 19:55:00   deal performed [#3 sell 8.78 Apple at 287.67]
+CS	0	16:07:29.679	Trade	2026.05.06 19:55:00   order performed sell 8.78 at 287.67 [#4 sell 8.78 Apple at 287.67]
+CS	0	16:07:29.679	CycleORB (Apple,M5)	2026.05.06 19:55:00   CTrade::OrderSend: market sell 8.78 position #3 Apple [done at 287.67]
+CS	0	16:07:29.679	CycleORB (Apple,M5)	2026.05.06 19:55:00   [CycleORB] CLOSE position #3 magic=26110602 (NY time exit)
+CS	0	16:07:29.683	CycleORB (Apple,M5)	2026.05.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.686	CycleORB (Apple,M5)	2026.05.07 14:30:00   [CycleORB] RANGE NY 2026.05.07 13:30 hi=290.91 lo=288.04 range=287pt atr%=42.0 spread=27.1pt (live 28pt) cost%=9.4 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.686	Trade	2026.05.07 14:30:00   buy stop 14.66 Apple at 291.45 sl: 288.04 tp: 295.20 (290.32 / 290.60)
+CS	0	16:07:29.686	CycleORB (Apple,M5)	2026.05.07 14:30:00   CTrade::OrderSend: buy stop 14.66 Apple at 291.45 sl: 288.04 tp: 295.20 [done]
+CS	0	16:07:29.686	CycleORB (Apple,M5)	2026.05.07 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.66 @291.45 sl=288.04 tp=295.20 magic=26110602 retcode=10009
+CS	0	16:07:29.691	Trade	2026.05.07 15:16:49   order [#5 buy stop 14.66 Apple at 291.45] triggered
+CS	0	16:07:29.691	Trades	2026.05.07 15:16:49   deal #4 buy 14.66 Apple at 291.47 done (based on order #5)
+CS	0	16:07:29.691	Trade	2026.05.07 15:16:49   deal performed [#4 buy 14.66 Apple at 291.47]
+CS	0	16:07:29.691	Trade	2026.05.07 15:16:49   order performed buy 14.66 at 291.47 [#5 buy stop 14.66 Apple at 291.45]
+CS	0	16:07:29.715	Trade	2026.05.07 17:48:27   stop loss triggered #5 buy 14.66 Apple 291.47 sl: 288.04 tp: 295.20 [#6 sell 14.66 Apple at 288.04]
+CS	0	16:07:29.715	Trades	2026.05.07 17:48:27   deal #5 sell 14.66 Apple at 287.94 done (based on order #6)
+CS	0	16:07:29.715	Trade	2026.05.07 17:48:27   deal performed [#5 sell 14.66 Apple at 287.94]
+CS	0	16:07:29.715	Trade	2026.05.07 17:48:27   order performed sell 14.66 at 287.94 [#6 sell 14.66 Apple at 288.04]
+CS	0	16:07:29.725	CycleORB (Apple,M5)	2026.05.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.727	CycleORB (Apple,M5)	2026.05.08 14:30:00   [CycleORB] RANGE NY 2026.05.08 13:30 hi=294.41 lo=289.98 range=443pt atr%=66.6 spread=27.0pt (live 29pt) cost%=6.1 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.727	Trade	2026.05.08 14:30:00   buy stop 10.06 Apple at 294.95 sl: 289.98 tp: 300.42 (293.64 / 293.93)
+CS	0	16:07:29.727	CycleORB (Apple,M5)	2026.05.08 14:30:00   CTrade::OrderSend: buy stop 10.06 Apple at 294.95 sl: 289.98 tp: 300.42 [done]
+CS	0	16:07:29.727	CycleORB (Apple,M5)	2026.05.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.06 @294.95 sl=289.98 tp=300.42 magic=26110602 retcode=10009
+CS	0	16:07:29.741	Trade	2026.05.08 17:30:00   order canceled [#7 buy stop 10.06 Apple at 294.95]
+CS	0	16:07:29.741	CycleORB (Apple,M5)	2026.05.08 17:30:00   CTrade::OrderSend: cancel #7 [done]
+CS	0	16:07:29.741	CycleORB (Apple,M5)	2026.05.08 17:30:00   [CycleORB] DELETE order #7 magic=26110602 (NY entry window closed)
+CS	0	16:07:29.756	CycleORB (Apple,M5)	2026.05.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.758	CycleORB (Apple,M5)	2026.05.11 14:30:00   [CycleORB] RANGE NY 2026.05.11 13:30 hi=292.63 lo=290.08 range=255pt atr%=37.1 spread=27.1pt (live 31pt) cost%=10.6 buffer=54pt risk=50.00 trend=1
+CS	0	16:07:29.758	Trade	2026.05.11 14:30:00   buy stop 16.18 Apple at 293.17 sl: 290.08 tp: 296.57 (291.89 / 292.20)
+CS	0	16:07:29.758	CycleORB (Apple,M5)	2026.05.11 14:30:00   CTrade::OrderSend: buy stop 16.18 Apple at 293.17 sl: 290.08 tp: 296.57 [done]
+CS	0	16:07:29.758	CycleORB (Apple,M5)	2026.05.11 14:30:00   [CycleORB] PLACE BUY_STOP lots=16.18 @293.17 sl=290.08 tp=296.57 magic=26110602 retcode=10009
+CS	0	16:07:29.760	Trade	2026.05.11 14:48:47   order [#8 buy stop 16.18 Apple at 293.17] triggered
+CS	0	16:07:29.760	Trades	2026.05.11 14:48:47   deal #6 buy 16.18 Apple at 293.17 done (based on order #8)
+CS	0	16:07:29.760	Trade	2026.05.11 14:48:47   deal performed [#6 buy 16.18 Apple at 293.17]
+CS	0	16:07:29.760	Trade	2026.05.11 14:48:47   order performed buy 16.18 at 293.17 [#8 buy stop 16.18 Apple at 293.17]
+CS	0	16:07:29.795	Trade	2026.05.11 19:55:00   market sell 16.18 Apple, close #8 (292.53 / 292.85)
+CS	0	16:07:29.795	Trades	2026.05.11 19:55:00   deal #7 sell 16.18 Apple at 292.53 done (based on order #9)
+CS	0	16:07:29.795	Trade	2026.05.11 19:55:00   deal performed [#7 sell 16.18 Apple at 292.53]
+CS	0	16:07:29.795	Trade	2026.05.11 19:55:00   order performed sell 16.18 at 292.53 [#9 sell 16.18 Apple at 292.53]
+CS	0	16:07:29.795	CycleORB (Apple,M5)	2026.05.11 19:55:00   CTrade::OrderSend: market sell 16.18 position #8 Apple [done at 292.53]
+CS	0	16:07:29.795	CycleORB (Apple,M5)	2026.05.11 19:55:00   [CycleORB] CLOSE position #8 magic=26110602 (NY time exit)
+CS	0	16:07:29.801	CycleORB (Apple,M5)	2026.05.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.807	CycleORB (Apple,M5)	2026.05.12 14:30:00   [CycleORB] RANGE NY 2026.05.12 13:30 hi=293.96 lo=292.45 range=151pt atr%=22.9 spread=30.8pt (live 29pt) cost%=20.4 buffer=62pt risk=50.00 trend=1
+CS	0	16:07:29.807	Trade	2026.05.12 14:30:00   buy stop 23.47 Apple at 294.58 sl: 292.45 tp: 296.92 (293.77 / 294.06)
+CS	0	16:07:29.807	CycleORB (Apple,M5)	2026.05.12 14:30:00   CTrade::OrderSend: buy stop 23.47 Apple at 294.58 sl: 292.45 tp: 296.92 [done]
+CS	0	16:07:29.807	CycleORB (Apple,M5)	2026.05.12 14:30:00   [CycleORB] PLACE BUY_STOP lots=23.47 @294.58 sl=292.45 tp=296.92 magic=26110602 retcode=10009
+CS	0	16:07:29.808	Trade	2026.05.12 14:40:12   order [#10 buy stop 23.47 Apple at 294.58] triggered
+CS	0	16:07:29.808	Trades	2026.05.12 14:40:12   deal #8 buy 23.47 Apple at 294.60 done (based on order #10)
+CS	0	16:07:29.808	Trade	2026.05.12 14:40:12   deal performed [#8 buy 23.47 Apple at 294.60]
+CS	0	16:07:29.808	Trade	2026.05.12 14:40:12   order performed buy 23.47 at 294.60 [#10 buy stop 23.47 Apple at 294.58]
+CS	0	16:07:29.841	Trade	2026.05.12 19:55:00   market sell 23.47 Apple, close #10 (294.63 / 295.03)
+CS	0	16:07:29.841	Trades	2026.05.12 19:55:00   deal #9 sell 23.47 Apple at 294.63 done (based on order #11)
+CS	0	16:07:29.841	Trade	2026.05.12 19:55:00   deal performed [#9 sell 23.47 Apple at 294.63]
+CS	0	16:07:29.841	Trade	2026.05.12 19:55:00   order performed sell 23.47 at 294.63 [#11 sell 23.47 Apple at 294.63]
+CS	0	16:07:29.841	CycleORB (Apple,M5)	2026.05.12 19:55:00   CTrade::OrderSend: market sell 23.47 position #10 Apple [done at 294.63]
+CS	0	16:07:29.841	CycleORB (Apple,M5)	2026.05.12 19:55:00   [CycleORB] CLOSE position #10 magic=26110602 (NY time exit)
+CS	0	16:07:29.846	CycleORB (Apple,M5)	2026.05.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.847	CycleORB (Apple,M5)	2026.05.13 14:30:00   [CycleORB] RANGE NY 2026.05.13 13:30 hi=297.35 lo=293.69 range=366pt atr%=58.7 spread=30.3pt (live 38pt) cost%=8.3 buffer=61pt risk=50.00 trend=1
+CS	0	16:07:29.847	Trade	2026.05.13 14:30:00   buy stop 11.7 Apple at 297.96 sl: 293.69 tp: 302.66 (294.99 / 295.37)
+CS	0	16:07:29.847	CycleORB (Apple,M5)	2026.05.13 14:30:00   CTrade::OrderSend: buy stop 11.70 Apple at 297.96 sl: 293.69 tp: 302.66 [done]
+CS	0	16:07:29.847	CycleORB (Apple,M5)	2026.05.13 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.70 @297.96 sl=293.69 tp=302.66 magic=26110602 retcode=10009
+CS	0	16:07:29.852	Trade	2026.05.13 15:32:03   order [#12 buy stop 11.7 Apple at 297.96] triggered
+CS	0	16:07:29.852	Trades	2026.05.13 15:32:03   deal #10 buy 11.7 Apple at 297.96 done (based on order #12)
+CS	0	16:07:29.852	Trade	2026.05.13 15:32:03   deal performed [#10 buy 11.7 Apple at 297.96]
+CS	0	16:07:29.852	Trade	2026.05.13 15:32:03   order performed buy 11.7 at 297.96 [#12 buy stop 11.7 Apple at 297.96]
+CS	0	16:07:29.879	Trade	2026.05.13 19:55:00   market sell 11.7 Apple, close #12 (299.20 / 299.57)
+CS	0	16:07:29.879	Trades	2026.05.13 19:55:00   deal #11 sell 11.7 Apple at 299.20 done (based on order #13)
+CS	0	16:07:29.879	Trade	2026.05.13 19:55:00   deal performed [#11 sell 11.7 Apple at 299.20]
+CS	0	16:07:29.879	Trade	2026.05.13 19:55:00   order performed sell 11.7 at 299.20 [#13 sell 11.7 Apple at 299.20]
+CS	0	16:07:29.879	CycleORB (Apple,M5)	2026.05.13 19:55:00   CTrade::OrderSend: market sell 11.70 position #12 Apple [done at 299.20]
+CS	0	16:07:29.879	CycleORB (Apple,M5)	2026.05.13 19:55:00   [CycleORB] CLOSE position #12 magic=26110602 (NY time exit)
+CS	0	16:07:29.883	CycleORB (Apple,M5)	2026.05.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.884	CycleORB (Apple,M5)	2026.05.14 14:30:00   [CycleORB] RANGE NY 2026.05.14 13:30 hi=299.70 lo=297.00 range=270pt atr%=41.9 spread=30.1pt (live 33pt) cost%=11.1 buffer=60pt risk=50.00 trend=1
+CS	0	16:07:29.884	Trade	2026.05.14 14:30:00   buy stop 15.15 Apple at 300.30 sl: 297.00 tp: 303.93 (297.76 / 298.09)
+CS	0	16:07:29.884	CycleORB (Apple,M5)	2026.05.14 14:30:00   CTrade::OrderSend: buy stop 15.15 Apple at 300.30 sl: 297.00 tp: 303.93 [done]
+CS	0	16:07:29.884	CycleORB (Apple,M5)	2026.05.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.15 @300.30 sl=297.00 tp=303.93 magic=26110602 retcode=10009
+CS	0	16:07:29.895	Trade	2026.05.14 17:30:02   order canceled [#14 buy stop 15.15 Apple at 300.30]
+CS	0	16:07:29.895	CycleORB (Apple,M5)	2026.05.14 17:30:02   CTrade::OrderSend: cancel #14 [done]
+CS	0	16:07:29.895	CycleORB (Apple,M5)	2026.05.14 17:30:02   [CycleORB] DELETE order #14 magic=26110602 (NY entry window closed)
+CS	0	16:07:29.904	CycleORB (Apple,M5)	2026.05.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.908	CycleORB (Apple,M5)	2026.05.15 14:30:00   [CycleORB] RANGE NY 2026.05.15 13:30 hi=298.49 lo=296.37 range=212pt atr%=32.6 spread=30.9pt (live 36pt) cost%=14.6 buffer=62pt risk=50.00 trend=1
+CS	0	16:07:29.908	CycleORB (Apple,M5)	2026.05.15 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:29.935	CycleORB (Apple,M5)	2026.05.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.939	CycleORB (Apple,M5)	2026.05.18 14:30:00   [CycleORB] RANGE NY 2026.05.18 13:30 hi=299.87 lo=297.19 range=268pt atr%=40.9 spread=30.9pt (live 39pt) cost%=11.5 buffer=62pt risk=50.00 trend=1
+CS	0	16:07:29.939	Trade	2026.05.18 14:30:00   buy stop 15.15 Apple at 300.49 sl: 297.19 tp: 304.12 (297.92 / 298.31)
+CS	0	16:07:29.939	CycleORB (Apple,M5)	2026.05.18 14:30:00   CTrade::OrderSend: buy stop 15.15 Apple at 300.49 sl: 297.19 tp: 304.12 [done]
+CS	0	16:07:29.939	CycleORB (Apple,M5)	2026.05.18 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.15 @300.49 sl=297.19 tp=304.12 magic=26110602 retcode=10009
+CS	0	16:07:29.966	Trade	2026.05.18 17:30:00   order canceled [#15 buy stop 15.15 Apple at 300.49]
+CS	0	16:07:29.966	CycleORB (Apple,M5)	2026.05.18 17:30:00   CTrade::OrderSend: cancel #15 [done]
+CS	0	16:07:29.966	CycleORB (Apple,M5)	2026.05.18 17:30:00   [CycleORB] DELETE order #15 magic=26110602 (NY entry window closed)
+CS	0	16:07:29.982	CycleORB (Apple,M5)	2026.05.19 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:29.985	CycleORB (Apple,M5)	2026.05.19 14:30:00   [CycleORB] RANGE NY 2026.05.19 13:30 hi=300.32 lo=297.01 range=331pt atr%=50.5 spread=30.5pt (live 37pt) cost%=9.2 buffer=61pt risk=50.00 trend=1
+CS	0	16:07:29.985	Trade	2026.05.19 14:30:00   buy stop 12.75 Apple at 300.93 sl: 297.01 tp: 305.24 (296.68 / 297.05)
+CS	0	16:07:29.985	CycleORB (Apple,M5)	2026.05.19 14:30:00   CTrade::OrderSend: buy stop 12.75 Apple at 300.93 sl: 297.01 tp: 305.24 [done]
+CS	0	16:07:29.985	CycleORB (Apple,M5)	2026.05.19 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.75 @300.93 sl=297.01 tp=305.24 magic=26110602 retcode=10009
+CS	0	16:07:30.002	Trade	2026.05.19 17:30:02   order canceled [#16 buy stop 12.75 Apple at 300.93]
+CS	0	16:07:30.002	CycleORB (Apple,M5)	2026.05.19 17:30:02   CTrade::OrderSend: cancel #16 [done]
+CS	0	16:07:30.002	CycleORB (Apple,M5)	2026.05.19 17:30:02   [CycleORB] DELETE order #16 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.015	CycleORB (Apple,M5)	2026.05.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.017	CycleORB (Apple,M5)	2026.05.20 14:30:00   [CycleORB] RANGE NY 2026.05.20 13:30 hi=302.15 lo=298.07 range=408pt atr%=62.2 spread=30.2pt (live 30pt) cost%=7.4 buffer=60pt risk=50.00 trend=1
+CS	0	16:07:30.017	Trade	2026.05.20 14:30:00   buy stop 10.68 Apple at 302.75 sl: 298.07 tp: 307.90 (299.38 / 299.68)
+CS	0	16:07:30.017	CycleORB (Apple,M5)	2026.05.20 14:30:00   CTrade::OrderSend: buy stop 10.68 Apple at 302.75 sl: 298.07 tp: 307.90 [done]
+CS	0	16:07:30.017	CycleORB (Apple,M5)	2026.05.20 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.68 @302.75 sl=298.07 tp=307.90 magic=26110602 retcode=10009
+CS	0	16:07:30.032	Trade	2026.05.20 17:30:00   order canceled [#17 buy stop 10.68 Apple at 302.75]
+CS	0	16:07:30.032	CycleORB (Apple,M5)	2026.05.20 17:30:00   CTrade::OrderSend: cancel #17 [done]
+CS	0	16:07:30.032	CycleORB (Apple,M5)	2026.05.20 17:30:00   [CycleORB] DELETE order #17 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.044	CycleORB (Apple,M5)	2026.05.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.046	CycleORB (Apple,M5)	2026.05.21 14:30:00   [CycleORB] RANGE NY 2026.05.21 13:30 hi=302.90 lo=300.88 range=202pt atr%=31.9 spread=30.3pt (live 40pt) cost%=15.0 buffer=61pt risk=50.00 trend=1
+CS	0	16:07:30.046	Trade	2026.05.21 14:30:00   buy stop 19.01 Apple at 303.51 sl: 300.88 tp: 306.40 (301.74 / 302.14)
+CS	0	16:07:30.046	CycleORB (Apple,M5)	2026.05.21 14:30:00   CTrade::OrderSend: buy stop 19.01 Apple at 303.51 sl: 300.88 tp: 306.40 [done]
+CS	0	16:07:30.046	CycleORB (Apple,M5)	2026.05.21 14:30:00   [CycleORB] PLACE BUY_STOP lots=19.01 @303.51 sl=300.88 tp=306.40 magic=26110602 retcode=10009
+CS	0	16:07:30.051	Trade	2026.05.21 15:17:26   order [#18 buy stop 19.01 Apple at 303.51] triggered
+CS	0	16:07:30.051	Trades	2026.05.21 15:17:26   deal #12 buy 19.01 Apple at 303.51 done (based on order #18)
+CS	0	16:07:30.051	Trade	2026.05.21 15:17:26   deal performed [#12 buy 19.01 Apple at 303.51]
+CS	0	16:07:30.051	Trade	2026.05.21 15:17:26   order performed buy 19.01 at 303.51 [#18 buy stop 19.01 Apple at 303.51]
+CS	0	16:07:30.079	Trade	2026.05.21 19:55:00   market sell 19.01 Apple, close #18 (304.71 / 305.06)
+CS	0	16:07:30.079	Trades	2026.05.21 19:55:00   deal #13 sell 19.01 Apple at 304.71 done (based on order #19)
+CS	0	16:07:30.079	Trade	2026.05.21 19:55:00   deal performed [#13 sell 19.01 Apple at 304.71]
+CS	0	16:07:30.079	Trade	2026.05.21 19:55:00   order performed sell 19.01 at 304.71 [#19 sell 19.01 Apple at 304.71]
+CS	0	16:07:30.079	CycleORB (Apple,M5)	2026.05.21 19:55:00   CTrade::OrderSend: market sell 19.01 position #18 Apple [done at 304.71]
+CS	0	16:07:30.079	CycleORB (Apple,M5)	2026.05.21 19:55:00   [CycleORB] CLOSE position #18 magic=26110602 (NY time exit)
+CS	0	16:07:30.088	CycleORB (Apple,M5)	2026.05.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.093	CycleORB (Apple,M5)	2026.05.22 14:30:00   [CycleORB] RANGE NY 2026.05.22 13:30 hi=308.79 lo=306.62 range=217pt atr%=39.4 spread=29.1pt (live 33pt) cost%=13.4 buffer=58pt risk=50.00 trend=1
+CS	0	16:07:30.093	Trade	2026.05.22 14:30:00   buy stop 18.18 Apple at 309.37 sl: 306.62 tp: 312.39 (308.47 / 308.80)
+CS	0	16:07:30.093	CycleORB (Apple,M5)	2026.05.22 14:30:00   CTrade::OrderSend: buy stop 18.18 Apple at 309.37 sl: 306.62 tp: 312.39 [done]
+CS	0	16:07:30.093	CycleORB (Apple,M5)	2026.05.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=18.18 @309.37 sl=306.62 tp=312.39 magic=26110602 retcode=10009
+CS	0	16:07:30.094	Trade	2026.05.22 14:33:45   order [#20 buy stop 18.18 Apple at 309.37] triggered
+CS	0	16:07:30.094	Trades	2026.05.22 14:33:45   deal #14 buy 18.18 Apple at 309.40 done (based on order #20)
+CS	0	16:07:30.094	Trade	2026.05.22 14:33:45   deal performed [#14 buy 18.18 Apple at 309.40]
+CS	0	16:07:30.094	Trade	2026.05.22 14:33:45   order performed buy 18.18 at 309.40 [#20 buy stop 18.18 Apple at 309.37]
+CS	0	16:07:30.140	Trade	2026.05.22 19:55:00   market sell 18.18 Apple, close #20 (308.38 / 308.71)
+CS	0	16:07:30.140	Trades	2026.05.22 19:55:00   deal #15 sell 18.18 Apple at 308.38 done (based on order #21)
+CS	0	16:07:30.140	Trade	2026.05.22 19:55:00   deal performed [#15 sell 18.18 Apple at 308.38]
+CS	0	16:07:30.140	Trade	2026.05.22 19:55:00   order performed sell 18.18 at 308.38 [#21 sell 18.18 Apple at 308.38]
+CS	0	16:07:30.140	CycleORB (Apple,M5)	2026.05.22 19:55:00   CTrade::OrderSend: market sell 18.18 position #20 Apple [done at 308.38]
+CS	0	16:07:30.140	CycleORB (Apple,M5)	2026.05.22 19:55:00   [CycleORB] CLOSE position #20 magic=26110602 (NY time exit)
+CS	0	16:07:30.144	CycleORB (Apple,M5)	2026.05.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.147	CycleORB (Apple,M5)	2026.05.26 14:30:00   [CycleORB] RANGE NY 2026.05.26 13:30 hi=311.33 lo=309.22 range=211pt atr%=37.9 spread=30.0pt (live 33pt) cost%=14.2 buffer=60pt risk=50.00 trend=1
+CS	0	16:07:30.147	Trade	2026.05.26 14:30:00   buy stop 18.45 Apple at 311.93 sl: 309.22 tp: 314.91 (311.57 / 311.90)
+CS	0	16:07:30.147	CycleORB (Apple,M5)	2026.05.26 14:30:00   CTrade::OrderSend: buy stop 18.45 Apple at 311.93 sl: 309.22 tp: 314.91 [done]
+CS	0	16:07:30.147	CycleORB (Apple,M5)	2026.05.26 14:30:00   [CycleORB] PLACE BUY_STOP lots=18.45 @311.93 sl=309.22 tp=314.91 magic=26110602 retcode=10009
+CS	0	16:07:30.147	Trade	2026.05.26 14:30:00   order [#22 buy stop 18.45 Apple at 311.93] triggered
+CS	0	16:07:30.147	Trades	2026.05.26 14:30:00   deal #16 buy 18.45 Apple at 311.93 done (based on order #22)
+CS	0	16:07:30.147	Trade	2026.05.26 14:30:00   deal performed [#16 buy 18.45 Apple at 311.93]
+CS	0	16:07:30.147	Trade	2026.05.26 14:30:00   order performed buy 18.45 at 311.93 [#22 buy stop 18.45 Apple at 311.93]
+CS	0	16:07:30.165	Trade	2026.05.26 17:17:03   stop loss triggered #22 buy 18.45 Apple 311.93 sl: 309.22 tp: 314.91 [#23 sell 18.45 Apple at 309.22]
+CS	0	16:07:30.165	Trades	2026.05.26 17:17:03   deal #17 sell 18.45 Apple at 309.21 done (based on order #23)
+CS	0	16:07:30.165	Trade	2026.05.26 17:17:03   deal performed [#17 sell 18.45 Apple at 309.21]
+CS	0	16:07:30.165	Trade	2026.05.26 17:17:03   order performed sell 18.45 at 309.21 [#23 sell 18.45 Apple at 309.22]
+CS	0	16:07:30.176	CycleORB (Apple,M5)	2026.05.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.180	CycleORB (Apple,M5)	2026.05.27 14:30:00   [CycleORB] RANGE NY 2026.05.27 13:30 hi=312.15 lo=309.00 range=315pt atr%=59.4 spread=29.5pt (live 35pt) cost%=9.4 buffer=59pt risk=50.00 trend=1
+CS	0	16:07:30.180	Trade	2026.05.27 14:30:00   buy stop 13.36 Apple at 312.74 sl: 309.00 tp: 316.85 (311.07 / 311.42)
+CS	0	16:07:30.180	CycleORB (Apple,M5)	2026.05.27 14:30:00   CTrade::OrderSend: buy stop 13.36 Apple at 312.74 sl: 309.00 tp: 316.85 [done]
+CS	0	16:07:30.180	CycleORB (Apple,M5)	2026.05.27 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.36 @312.74 sl=309.00 tp=316.85 magic=26110602 retcode=10009
+CS	0	16:07:30.181	Trade	2026.05.27 14:37:47   order [#24 buy stop 13.36 Apple at 312.74] triggered
+CS	0	16:07:30.181	Trades	2026.05.27 14:37:47   deal #18 buy 13.36 Apple at 312.75 done (based on order #24)
+CS	0	16:07:30.181	Trade	2026.05.27 14:37:47   deal performed [#18 buy 13.36 Apple at 312.75]
+CS	0	16:07:30.181	Trade	2026.05.27 14:37:47   order performed buy 13.36 at 312.75 [#24 buy stop 13.36 Apple at 312.74]
+CS	0	16:07:30.223	Trade	2026.05.27 19:55:00   market sell 13.36 Apple, close #24 (310.10 / 310.44)
+CS	0	16:07:30.223	Trades	2026.05.27 19:55:00   deal #19 sell 13.36 Apple at 310.10 done (based on order #25)
+CS	0	16:07:30.223	Trade	2026.05.27 19:55:00   deal performed [#19 sell 13.36 Apple at 310.10]
+CS	0	16:07:30.223	Trade	2026.05.27 19:55:00   order performed sell 13.36 at 310.10 [#25 sell 13.36 Apple at 310.10]
+CS	0	16:07:30.223	CycleORB (Apple,M5)	2026.05.27 19:55:00   CTrade::OrderSend: market sell 13.36 position #24 Apple [done at 310.10]
+CS	0	16:07:30.223	CycleORB (Apple,M5)	2026.05.27 19:55:00   [CycleORB] CLOSE position #24 magic=26110602 (NY time exit)
+CS	0	16:07:30.229	CycleORB (Apple,M5)	2026.05.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.231	CycleORB (Apple,M5)	2026.05.28 14:30:00   [CycleORB] RANGE NY 2026.05.28 13:30 hi=311.94 lo=309.38 range=256pt atr%=49.5 spread=30.5pt (live 30pt) cost%=11.9 buffer=61pt risk=50.00 trend=1
+CS	0	16:07:30.231	Trade	2026.05.28 14:30:00   buy stop 15.77 Apple at 312.55 sl: 309.38 tp: 316.04 (311.54 / 311.84)
+CS	0	16:07:30.231	CycleORB (Apple,M5)	2026.05.28 14:30:00   CTrade::OrderSend: buy stop 15.77 Apple at 312.55 sl: 309.38 tp: 316.04 [done]
+CS	0	16:07:30.231	CycleORB (Apple,M5)	2026.05.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.77 @312.55 sl=309.38 tp=316.04 magic=26110602 retcode=10009
+CS	0	16:07:30.247	Trade	2026.05.28 17:30:00   order canceled [#26 buy stop 15.77 Apple at 312.55]
+CS	0	16:07:30.247	CycleORB (Apple,M5)	2026.05.28 17:30:00   CTrade::OrderSend: cancel #26 [done]
+CS	0	16:07:30.247	CycleORB (Apple,M5)	2026.05.28 17:30:00   [CycleORB] DELETE order #26 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.260	CycleORB (Apple,M5)	2026.05.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.263	CycleORB (Apple,M5)	2026.05.29 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:30.291	CycleORB (Apple,M5)	2026.06.01 13:30:30   [CycleORB] CYCLE_END 202605 capital=10000.00 realized=-118.99 floating=0.00 pnl=-1.19% peak=0.19% state=ACTIVE 
+CS	0	16:07:30.291	CycleORB (Apple,M5)	2026.06.01 13:30:30   [CycleORB] CYCLE_BEGIN 202606 capital=9881.01 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:30.293	CycleORB (Apple,M5)	2026.06.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.296	CycleORB (Apple,M5)	2026.06.01 14:30:00   [CycleORB] RANGE NY 2026.06.01 13:30 hi=310.73 lo=308.59 range=214pt atr%=44.5 spread=30.7pt (live 36pt) cost%=14.3 buffer=61pt risk=49.41 trend=1
+CS	0	16:07:30.296	Trade	2026.06.01 14:30:00   buy stop 17.96 Apple at 311.34 sl: 308.59 tp: 314.36 (307.65 / 308.01)
+CS	0	16:07:30.296	CycleORB (Apple,M5)	2026.06.01 14:30:00   CTrade::OrderSend: buy stop 17.96 Apple at 311.34 sl: 308.59 tp: 314.36 [done]
+CS	0	16:07:30.296	CycleORB (Apple,M5)	2026.06.01 14:30:00   [CycleORB] PLACE BUY_STOP lots=17.96 @311.34 sl=308.59 tp=314.36 magic=26110602 retcode=10009
+CS	0	16:07:30.310	Trade	2026.06.01 17:30:00   order canceled [#27 buy stop 17.96 Apple at 311.34]
+CS	0	16:07:30.310	CycleORB (Apple,M5)	2026.06.01 17:30:00   CTrade::OrderSend: cancel #27 [done]
+CS	0	16:07:30.310	CycleORB (Apple,M5)	2026.06.01 17:30:00   [CycleORB] DELETE order #27 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.328	CycleORB (Apple,M5)	2026.06.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.332	CycleORB (Apple,M5)	2026.06.02 14:30:00   [CycleORB] RANGE NY 2026.06.02 13:30 hi=309.72 lo=306.44 range=328pt atr%=64.9 spread=29.4pt (live 32pt) cost%=9.0 buffer=59pt risk=49.41 trend=1
+CS	0	16:07:30.332	CycleORB (Apple,M5)	2026.06.02 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:30.357	CycleORB (Apple,M5)	2026.06.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.358	CycleORB (Apple,M5)	2026.06.03 14:30:00   [CycleORB] RANGE NY 2026.06.03 13:30 hi=316.76 lo=314.39 range=237pt atr%=43.0 spread=30.2pt (live 32pt) cost%=12.7 buffer=60pt risk=49.41 trend=1
+CS	0	16:07:30.358	Trade	2026.06.03 14:30:00   buy stop 16.63 Apple at 317.36 sl: 314.39 tp: 320.63 (314.18 / 314.50)
+CS	0	16:07:30.358	CycleORB (Apple,M5)	2026.06.03 14:30:00   CTrade::OrderSend: buy stop 16.63 Apple at 317.36 sl: 314.39 tp: 320.63 [done]
+CS	0	16:07:30.358	CycleORB (Apple,M5)	2026.06.03 14:30:00   [CycleORB] PLACE BUY_STOP lots=16.63 @317.36 sl=314.39 tp=320.63 magic=26110602 retcode=10009
+CS	0	16:07:30.386	Trade	2026.06.03 17:30:00   order canceled [#28 buy stop 16.63 Apple at 317.36]
+CS	0	16:07:30.386	CycleORB (Apple,M5)	2026.06.03 17:30:00   CTrade::OrderSend: cancel #28 [done]
+CS	0	16:07:30.386	CycleORB (Apple,M5)	2026.06.03 17:30:00   [CycleORB] DELETE order #28 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.400	CycleORB (Apple,M5)	2026.06.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.405	CycleORB (Apple,M5)	2026.06.04 14:30:00   [CycleORB] RANGE NY 2026.06.04 13:30 hi=312.32 lo=310.23 range=209pt atr%=37.4 spread=29.8pt (live 36pt) cost%=14.3 buffer=60pt risk=49.41 trend=1
+CS	0	16:07:30.405	Trade	2026.06.04 14:30:00   buy stop 18.36 Apple at 312.92 sl: 310.23 tp: 315.88 (310.08 / 310.44)
+CS	0	16:07:30.405	CycleORB (Apple,M5)	2026.06.04 14:30:00   CTrade::OrderSend: buy stop 18.36 Apple at 312.92 sl: 310.23 tp: 315.88 [done]
+CS	0	16:07:30.405	CycleORB (Apple,M5)	2026.06.04 14:30:00   [CycleORB] PLACE BUY_STOP lots=18.36 @312.92 sl=310.23 tp=315.88 magic=26110602 retcode=10009
+CS	0	16:07:30.426	Trade	2026.06.04 17:30:00   order canceled [#29 buy stop 18.36 Apple at 312.92]
+CS	0	16:07:30.426	CycleORB (Apple,M5)	2026.06.04 17:30:00   CTrade::OrderSend: cancel #29 [done]
+CS	0	16:07:30.426	CycleORB (Apple,M5)	2026.06.04 17:30:00   [CycleORB] DELETE order #29 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.443	CycleORB (Apple,M5)	2026.06.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.448	CycleORB (Apple,M5)	2026.06.05 14:30:00   [CycleORB] RANGE NY 2026.06.05 13:30 hi=314.34 lo=312.23 range=211pt atr%=38.6 spread=30.5pt (live 35pt) cost%=14.5 buffer=61pt risk=49.41 trend=1
+CS	0	16:07:30.448	Trade	2026.06.05 14:30:00   buy stop 18.16 Apple at 314.95 sl: 312.23 tp: 317.94 (313.25 / 313.60)
+CS	0	16:07:30.448	CycleORB (Apple,M5)	2026.06.05 14:30:00   CTrade::OrderSend: buy stop 18.16 Apple at 314.95 sl: 312.23 tp: 317.94 [done]
+CS	0	16:07:30.448	CycleORB (Apple,M5)	2026.06.05 14:30:00   [CycleORB] PLACE BUY_STOP lots=18.16 @314.95 sl=312.23 tp=317.94 magic=26110602 retcode=10009
+CS	0	16:07:30.467	Trade	2026.06.05 17:30:00   order canceled [#30 buy stop 18.16 Apple at 314.95]
+CS	0	16:07:30.467	CycleORB (Apple,M5)	2026.06.05 17:30:00   CTrade::OrderSend: cancel #30 [done]
+CS	0	16:07:30.467	CycleORB (Apple,M5)	2026.06.05 17:30:00   [CycleORB] DELETE order #30 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.501	CycleORB (Apple,M5)	2026.06.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.505	CycleORB (Apple,M5)	2026.06.08 14:30:00   [CycleORB] RANGE NY 2026.06.08 13:30 hi=314.85 lo=310.40 range=445pt atr%=79.9 spread=29.7pt (live 31pt) cost%=6.7 buffer=59pt risk=49.41 trend=1
+CS	0	16:07:30.505	Trade	2026.06.08 14:30:00   buy stop 9.8 Apple at 315.44 sl: 310.40 tp: 320.98 (311.83 / 312.14)
+CS	0	16:07:30.505	CycleORB (Apple,M5)	2026.06.08 14:30:00   CTrade::OrderSend: buy stop 9.80 Apple at 315.44 sl: 310.40 tp: 320.98 [done]
+CS	0	16:07:30.505	CycleORB (Apple,M5)	2026.06.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.80 @315.44 sl=310.40 tp=320.98 magic=26110602 retcode=10009
+CS	0	16:07:30.510	Trade	2026.06.08 14:59:42   order [#31 buy stop 9.8 Apple at 315.44] triggered
+CS	0	16:07:30.510	Trades	2026.06.08 14:59:42   deal #20 buy 9.8 Apple at 315.49 done (based on order #31)
+CS	0	16:07:30.510	Trade	2026.06.08 14:59:42   deal performed [#20 buy 9.8 Apple at 315.49]
+CS	0	16:07:30.510	Trade	2026.06.08 14:59:42   order performed buy 9.8 at 315.49 [#31 buy stop 9.8 Apple at 315.44]
+CS	0	16:07:30.541	Trade	2026.06.08 17:41:52   stop loss triggered #31 buy 9.8 Apple 315.49 sl: 310.40 tp: 320.98 [#32 sell 9.8 Apple at 310.40]
+CS	0	16:07:30.541	Trades	2026.06.08 17:41:52   deal #21 sell 9.8 Apple at 310.40 done (based on order #32)
+CS	0	16:07:30.541	Trade	2026.06.08 17:41:52   deal performed [#21 sell 9.8 Apple at 310.40]
+CS	0	16:07:30.541	Trade	2026.06.08 17:41:52   order performed sell 9.8 at 310.40 [#32 sell 9.8 Apple at 310.40]
+CS	0	16:07:30.560	CycleORB (Apple,M5)	2026.06.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.563	CycleORB (Apple,M5)	2026.06.09 14:30:00   [CycleORB] RANGE NY 2026.06.09 13:30 hi=300.09 lo=295.76 range=433pt atr%=68.2 spread=30.0pt (live 33pt) cost%=6.9 buffer=60pt risk=49.41 trend=-1
+CS	0	16:07:30.563	CycleORB (Apple,M5)	2026.06.09 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	16:07:30.599	CycleORB (Apple,M5)	2026.06.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.602	CycleORB (Apple,M5)	2026.06.10 14:30:00   [CycleORB] RANGE NY 2026.06.10 13:30 hi=290.79 lo=287.19 range=360pt atr%=51.0 spread=29.6pt (live 39pt) cost%=8.2 buffer=59pt risk=49.41 trend=-1
+CS	0	16:07:30.602	Trade	2026.06.10 14:30:00   sell stop 11.79 Apple at 286.60 sl: 290.79 tp: 281.99 (289.58 / 289.97)
+CS	0	16:07:30.602	CycleORB (Apple,M5)	2026.06.10 14:30:00   CTrade::OrderSend: sell stop 11.79 Apple at 286.60 sl: 290.79 tp: 281.99 [done]
+CS	0	16:07:30.602	CycleORB (Apple,M5)	2026.06.10 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.79 @286.60 sl=290.79 tp=281.99 magic=26110602 retcode=10009
+CS	0	16:07:30.632	Trade	2026.06.10 17:30:00   order canceled [#33 sell stop 11.79 Apple at 286.60]
+CS	0	16:07:30.632	CycleORB (Apple,M5)	2026.06.10 17:30:00   CTrade::OrderSend: cancel #33 [done]
+CS	0	16:07:30.632	CycleORB (Apple,M5)	2026.06.10 17:30:00   [CycleORB] DELETE order #33 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.653	CycleORB (Apple,M5)	2026.06.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.657	CycleORB (Apple,M5)	2026.06.11 14:30:00   [CycleORB] RANGE NY 2026.06.11 13:30 hi=293.79 lo=290.20 range=359pt atr%=49.5 spread=30.2pt (live 39pt) cost%=8.4 buffer=60pt risk=49.41 trend=-1
+CS	0	16:07:30.657	Trade	2026.06.11 14:30:00   sell stop 11.79 Apple at 289.60 sl: 293.79 tp: 284.99 (290.35 / 290.74)
+CS	0	16:07:30.657	CycleORB (Apple,M5)	2026.06.11 14:30:00   CTrade::OrderSend: sell stop 11.79 Apple at 289.60 sl: 293.79 tp: 284.99 [done]
+CS	0	16:07:30.657	CycleORB (Apple,M5)	2026.06.11 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.79 @289.60 sl=293.79 tp=284.99 magic=26110602 retcode=10009
+CS	0	16:07:30.662	Trade	2026.06.11 14:58:55   order [#34 sell stop 11.79 Apple at 289.60] triggered
+CS	0	16:07:30.662	Trades	2026.06.11 14:58:55   deal #22 sell 11.79 Apple at 289.59 done (based on order #34)
+CS	0	16:07:30.662	Trade	2026.06.11 14:58:55   deal performed [#22 sell 11.79 Apple at 289.59]
+CS	0	16:07:30.662	Trade	2026.06.11 14:58:55   order performed sell 11.79 at 289.59 [#34 sell stop 11.79 Apple at 289.60]
+CS	0	16:07:30.674	Trade	2026.06.11 16:00:39   stop loss triggered #34 sell 11.79 Apple 289.59 sl: 293.79 tp: 284.99 [#35 buy 11.79 Apple at 293.79]
+CS	0	16:07:30.674	Trades	2026.06.11 16:00:39   deal #23 buy 11.79 Apple at 293.80 done (based on order #35)
+CS	0	16:07:30.674	Trade	2026.06.11 16:00:39   deal performed [#23 buy 11.79 Apple at 293.80]
+CS	0	16:07:30.674	Trade	2026.06.11 16:00:39   order performed buy 11.79 at 293.80 [#35 buy 11.79 Apple at 293.79]
+CS	0	16:07:30.709	CycleORB (Apple,M5)	2026.06.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.713	CycleORB (Apple,M5)	2026.06.12 14:30:00   [CycleORB] SKIP NY 2026.06.12 13:30 hi=296.85 lo=290.85 range=600pt atr%=80.4 spread=30.2pt (live 40pt) cost%=5.0 (range/ATR outside band)
+CS	0	16:07:30.761	CycleORB (Apple,M5)	2026.06.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.765	CycleORB (Apple,M5)	2026.06.15 14:30:00   [CycleORB] RANGE NY 2026.06.15 13:30 hi=295.76 lo=291.47 range=429pt atr%=57.0 spread=30.5pt (live 36pt) cost%=7.1 buffer=61pt risk=49.41 trend=-1
+CS	0	16:07:30.765	Trade	2026.06.15 14:30:00   sell stop 10.08 Apple at 290.86 sl: 295.76 tp: 285.47 (295.53 / 295.89)
+CS	0	16:07:30.765	CycleORB (Apple,M5)	2026.06.15 14:30:00   CTrade::OrderSend: sell stop 10.08 Apple at 290.86 sl: 295.76 tp: 285.47 [done]
+CS	0	16:07:30.765	CycleORB (Apple,M5)	2026.06.15 14:30:00   [CycleORB] PLACE SELL_STOP lots=10.08 @290.86 sl=295.76 tp=285.47 magic=26110602 retcode=10009
+CS	0	16:07:30.781	Trade	2026.06.15 17:30:00   order canceled [#36 sell stop 10.08 Apple at 290.86]
+CS	0	16:07:30.781	CycleORB (Apple,M5)	2026.06.15 17:30:00   CTrade::OrderSend: cancel #36 [done]
+CS	0	16:07:30.781	CycleORB (Apple,M5)	2026.06.15 17:30:00   [CycleORB] DELETE order #36 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.795	CycleORB (Apple,M5)	2026.06.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.799	CycleORB (Apple,M5)	2026.06.16 14:30:00   [CycleORB] RANGE NY 2026.06.16 13:30 hi=297.80 lo=293.79 range=401pt atr%=52.1 spread=29.3pt (live 40pt) cost%=7.3 buffer=59pt risk=49.41 trend=-1
+CS	0	16:07:30.799	Trade	2026.06.16 14:30:00   sell stop 10.74 Apple at 293.20 sl: 297.80 tp: 288.14 (297.34 / 297.74)
+CS	0	16:07:30.799	CycleORB (Apple,M5)	2026.06.16 14:30:00   CTrade::OrderSend: sell stop 10.74 Apple at 293.20 sl: 297.80 tp: 288.14 [done]
+CS	0	16:07:30.799	CycleORB (Apple,M5)	2026.06.16 14:30:00   [CycleORB] PLACE SELL_STOP lots=10.74 @293.20 sl=297.80 tp=288.14 magic=26110602 retcode=10009
+CS	0	16:07:30.824	Trade	2026.06.16 17:30:00   order canceled [#37 sell stop 10.74 Apple at 293.20]
+CS	0	16:07:30.824	CycleORB (Apple,M5)	2026.06.16 17:30:00   CTrade::OrderSend: cancel #37 [done]
+CS	0	16:07:30.824	CycleORB (Apple,M5)	2026.06.16 17:30:00   [CycleORB] DELETE order #37 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.841	CycleORB (Apple,M5)	2026.06.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.844	CycleORB (Apple,M5)	2026.06.17 14:30:00   [CycleORB] RANGE NY 2026.06.17 13:30 hi=301.60 lo=299.06 range=254pt atr%=32.6 spread=30.4pt (live 34pt) cost%=12.0 buffer=61pt risk=49.41 trend=-1
+CS	0	16:07:30.844	Trade	2026.06.17 14:30:00   sell stop 15.68 Apple at 298.45 sl: 301.60 tp: 294.98 (300.28 / 300.62)
+CS	0	16:07:30.844	CycleORB (Apple,M5)	2026.06.17 14:30:00   CTrade::OrderSend: sell stop 15.68 Apple at 298.45 sl: 301.60 tp: 294.98 [done]
+CS	0	16:07:30.844	CycleORB (Apple,M5)	2026.06.17 14:30:00   [CycleORB] PLACE SELL_STOP lots=15.68 @298.45 sl=301.60 tp=294.98 magic=26110602 retcode=10009
+CS	0	16:07:30.846	Trade	2026.06.17 14:54:23   order [#38 sell stop 15.68 Apple at 298.45] triggered
+CS	0	16:07:30.846	Trades	2026.06.17 14:54:23   deal #24 sell 15.68 Apple at 298.45 done (based on order #38)
+CS	0	16:07:30.846	Trade	2026.06.17 14:54:23   deal performed [#24 sell 15.68 Apple at 298.45]
+CS	0	16:07:30.846	Trade	2026.06.17 14:54:23   order performed sell 15.68 at 298.45 [#38 sell stop 15.68 Apple at 298.45]
+CS	0	16:07:30.883	Trade	2026.06.17 18:57:30   take profit triggered #38 sell 15.68 Apple 298.45 sl: 301.60 tp: 294.98 [#39 buy 15.68 Apple at 294.98]
+CS	0	16:07:30.883	Trades	2026.06.17 18:57:30   deal #25 buy 15.68 Apple at 294.97 done (based on order #39)
+CS	0	16:07:30.883	Trade	2026.06.17 18:57:30   deal performed [#25 buy 15.68 Apple at 294.97]
+CS	0	16:07:30.883	Trade	2026.06.17 18:57:30   order performed buy 15.68 at 294.97 [#39 buy 15.68 Apple at 294.98]
+CS	0	16:07:30.897	CycleORB (Apple,M5)	2026.06.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.900	CycleORB (Apple,M5)	2026.06.18 14:30:00   [CycleORB] RANGE NY 2026.06.18 13:30 hi=300.16 lo=295.37 range=479pt atr%=59.1 spread=29.9pt (live 31pt) cost%=6.2 buffer=60pt risk=49.41 trend=-1
+CS	0	16:07:30.900	Trade	2026.06.18 14:30:00   sell stop 9.16 Apple at 294.77 sl: 300.16 tp: 288.84 (299.48 / 299.79)
+CS	0	16:07:30.900	CycleORB (Apple,M5)	2026.06.18 14:30:00   CTrade::OrderSend: sell stop 9.16 Apple at 294.77 sl: 300.16 tp: 288.84 [done]
+CS	0	16:07:30.900	CycleORB (Apple,M5)	2026.06.18 14:30:00   [CycleORB] PLACE SELL_STOP lots=9.16 @294.77 sl=300.16 tp=288.84 magic=26110602 retcode=10009
+CS	0	16:07:30.928	Trade	2026.06.18 17:30:01   order canceled [#40 sell stop 9.16 Apple at 294.77]
+CS	0	16:07:30.928	CycleORB (Apple,M5)	2026.06.18 17:30:01   CTrade::OrderSend: cancel #40 [done]
+CS	0	16:07:30.928	CycleORB (Apple,M5)	2026.06.18 17:30:01   [CycleORB] DELETE order #40 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.944	CycleORB (Apple,M5)	2026.06.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.946	CycleORB (Apple,M5)	2026.06.22 14:30:00   [CycleORB] RANGE NY 2026.06.22 13:30 hi=301.85 lo=298.01 range=384pt atr%=47.6 spread=30.2pt (live 33pt) cost%=7.9 buffer=60pt risk=49.41 trend=-1
+CS	0	16:07:30.946	Trade	2026.06.22 14:30:00   sell stop 11.12 Apple at 297.41 sl: 301.85 tp: 292.53 (301.01 / 301.34)
+CS	0	16:07:30.946	CycleORB (Apple,M5)	2026.06.22 14:30:00   CTrade::OrderSend: sell stop 11.12 Apple at 297.41 sl: 301.85 tp: 292.53 [done]
+CS	0	16:07:30.946	CycleORB (Apple,M5)	2026.06.22 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.12 @297.41 sl=301.85 tp=292.53 magic=26110602 retcode=10009
+CS	0	16:07:30.968	Trade	2026.06.22 17:30:00   order canceled [#41 sell stop 11.12 Apple at 297.41]
+CS	0	16:07:30.968	CycleORB (Apple,M5)	2026.06.22 17:30:00   CTrade::OrderSend: cancel #41 [done]
+CS	0	16:07:30.968	CycleORB (Apple,M5)	2026.06.22 17:30:00   [CycleORB] DELETE order #41 magic=26110602 (NY entry window closed)
+CS	0	16:07:30.979	CycleORB (Apple,M5)	2026.06.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:30.982	CycleORB (Apple,M5)	2026.06.23 14:30:00   [CycleORB] SKIP NY 2026.06.23 13:30 hi=301.50 lo=294.88 range=662pt atr%=83.0 spread=30.0pt (live 32pt) cost%=4.5 (range/ATR outside band)
+CS	0	16:07:31.012	CycleORB (Apple,M5)	2026.06.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.014	CycleORB (Apple,M5)	2026.06.24 14:30:00   [CycleORB] RANGE NY 2026.06.24 13:30 hi=296.24 lo=292.97 range=327pt atr%=41.7 spread=31.0pt (live 36pt) cost%=9.5 buffer=62pt risk=49.41 trend=-1
+CS	0	16:07:31.014	Trade	2026.06.24 14:30:00   sell stop 12.7 Apple at 292.35 sl: 296.24 tp: 288.07 (295.26 / 295.62)
+CS	0	16:07:31.014	CycleORB (Apple,M5)	2026.06.24 14:30:00   CTrade::OrderSend: sell stop 12.70 Apple at 292.35 sl: 296.24 tp: 288.07 [done]
+CS	0	16:07:31.014	CycleORB (Apple,M5)	2026.06.24 14:30:00   [CycleORB] PLACE SELL_STOP lots=12.70 @292.35 sl=296.24 tp=288.07 magic=26110602 retcode=10009
+CS	0	16:07:31.031	Trade	2026.06.24 17:30:00   order canceled [#42 sell stop 12.7 Apple at 292.35]
+CS	0	16:07:31.031	CycleORB (Apple,M5)	2026.06.24 17:30:00   CTrade::OrderSend: cancel #42 [done]
+CS	0	16:07:31.031	CycleORB (Apple,M5)	2026.06.24 17:30:00   [CycleORB] DELETE order #42 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.056	CycleORB (Apple,M5)	2026.06.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.058	CycleORB (Apple,M5)	2026.06.25 14:30:00   [CycleORB] SKIP NY 2026.06.25 13:30 hi=288.51 lo=277.42 range=1109pt atr%=143.1 spread=29.5pt (live 40pt) cost%=2.7 (range/ATR outside band)
+CS	0	16:07:31.099	CycleORB (Apple,M5)	2026.06.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.102	CycleORB (Apple,M5)	2026.06.26 14:30:00   [CycleORB] RANGE NY 2026.06.26 13:30 hi=277.94 lo=274.31 range=363pt atr%=40.6 spread=29.7pt (live 31pt) cost%=8.2 buffer=59pt risk=49.41 trend=-1
+CS	0	16:07:31.102	Trade	2026.06.26 14:30:00   sell stop 11.7 Apple at 273.72 sl: 277.94 tp: 269.08 (278.11 / 278.42)
+CS	0	16:07:31.102	CycleORB (Apple,M5)	2026.06.26 14:30:00   CTrade::OrderSend: sell stop 11.70 Apple at 273.72 sl: 277.94 tp: 269.08 [done]
+CS	0	16:07:31.102	CycleORB (Apple,M5)	2026.06.26 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.70 @273.72 sl=277.94 tp=269.08 magic=26110602 retcode=10009
+CS	0	16:07:31.128	Trade	2026.06.26 17:30:01   order canceled [#43 sell stop 11.7 Apple at 273.72]
+CS	0	16:07:31.128	CycleORB (Apple,M5)	2026.06.26 17:30:01   CTrade::OrderSend: cancel #43 [done]
+CS	0	16:07:31.128	CycleORB (Apple,M5)	2026.06.26 17:30:01   [CycleORB] DELETE order #43 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.146	CycleORB (Apple,M5)	2026.06.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.149	CycleORB (Apple,M5)	2026.06.29 14:30:00   [CycleORB] RANGE NY 2026.06.29 13:30 hi=287.14 lo=283.37 range=377pt atr%=41.0 spread=30.1pt (live 38pt) cost%=8.0 buffer=60pt risk=49.41 trend=-1
+CS	0	16:07:31.149	CycleORB (Apple,M5)	2026.06.29 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	16:07:31.179	CycleORB (Apple,M5)	2026.06.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.181	CycleORB (Apple,M5)	2026.06.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:31.203	CycleORB (Apple,M5)	2026.07.01 13:30:30   [CycleORB] CYCLE_END 202606 capital=9881.01 realized=-44.95 floating=0.00 pnl=-0.45% peak=0.17% state=ACTIVE 
+CS	0	16:07:31.203	CycleORB (Apple,M5)	2026.07.01 13:30:30   [CycleORB] CYCLE_BEGIN 202607 capital=9836.06 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:31.205	CycleORB (Apple,M5)	2026.07.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.207	CycleORB (Apple,M5)	2026.07.01 14:30:00   [CycleORB] RANGE NY 2026.07.01 13:30 hi=292.80 lo=289.00 range=380pt atr%=46.6 spread=30.5pt (live 40pt) cost%=8.0 buffer=61pt risk=49.18 trend=-1
+CS	0	16:07:31.207	Trade	2026.07.01 14:30:00   sell stop 11.15 Apple at 288.39 sl: 292.80 tp: 283.54 (292.84 / 293.24)
+CS	0	16:07:31.207	CycleORB (Apple,M5)	2026.07.01 14:30:00   CTrade::OrderSend: sell stop 11.15 Apple at 288.39 sl: 292.80 tp: 283.54 [done]
+CS	0	16:07:31.207	CycleORB (Apple,M5)	2026.07.01 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.15 @288.39 sl=292.80 tp=283.54 magic=26110602 retcode=10009
+CS	0	16:07:31.224	Trade	2026.07.01 17:30:00   order canceled [#44 sell stop 11.15 Apple at 288.39]
+CS	0	16:07:31.224	CycleORB (Apple,M5)	2026.07.01 17:30:00   CTrade::OrderSend: cancel #44 [done]
+CS	0	16:07:31.224	CycleORB (Apple,M5)	2026.07.01 17:30:00   [CycleORB] DELETE order #44 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.236	CycleORB (Apple,M5)	2026.07.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.240	CycleORB (Apple,M5)	2026.07.02 14:30:00   [CycleORB] SKIP NY 2026.07.02 13:30 hi=302.58 lo=295.55 range=703pt atr%=86.1 spread=30.7pt (live 43pt) cost%=4.4 (range/ATR outside band)
+CS	0	16:07:31.266	CycleORB (Apple,M5)	2026.07.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.269	CycleORB (Apple,M5)	2026.07.06 14:30:00   [CycleORB] RANGE NY 2026.07.06 13:30 hi=309.79 lo=307.06 range=273pt atr%=31.3 spread=29.9pt (live 38pt) cost%=10.9 buffer=60pt risk=49.18 trend=1
+CS	0	16:07:31.269	CycleORB (Apple,M5)	2026.07.06 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:31.297	CycleORB (Apple,M5)	2026.07.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.299	CycleORB (Apple,M5)	2026.07.07 14:30:00   [CycleORB] RANGE NY 2026.07.07 13:30 hi=315.28 lo=309.98 range=530pt atr%=61.1 spread=31.3pt (live 36pt) cost%=5.9 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.299	Trade	2026.07.07 14:30:00   buy stop 8.29 Apple at 315.91 sl: 309.98 tp: 322.43 (311.23 / 311.59)
+CS	0	16:07:31.299	CycleORB (Apple,M5)	2026.07.07 14:30:00   CTrade::OrderSend: buy stop 8.29 Apple at 315.91 sl: 309.98 tp: 322.43 [done]
+CS	0	16:07:31.299	CycleORB (Apple,M5)	2026.07.07 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.29 @315.91 sl=309.98 tp=322.43 magic=26110602 retcode=10009
+CS	0	16:07:31.315	Trade	2026.07.07 17:30:01   order canceled [#45 buy stop 8.29 Apple at 315.91]
+CS	0	16:07:31.315	CycleORB (Apple,M5)	2026.07.07 17:30:01   CTrade::OrderSend: cancel #45 [done]
+CS	0	16:07:31.315	CycleORB (Apple,M5)	2026.07.07 17:30:01   [CycleORB] DELETE order #45 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.331	CycleORB (Apple,M5)	2026.07.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.334	CycleORB (Apple,M5)	2026.07.08 14:30:00   [CycleORB] RANGE NY 2026.07.08 13:30 hi=310.59 lo=306.86 range=373pt atr%=43.4 spread=30.1pt (live 38pt) cost%=8.1 buffer=60pt risk=49.18 trend=1
+CS	0	16:07:31.334	Trade	2026.07.08 14:30:00   buy stop 11.35 Apple at 311.19 sl: 306.86 tp: 315.95 (308.65 / 309.03)
+CS	0	16:07:31.334	CycleORB (Apple,M5)	2026.07.08 14:30:00   CTrade::OrderSend: buy stop 11.35 Apple at 311.19 sl: 306.86 tp: 315.95 [done]
+CS	0	16:07:31.334	CycleORB (Apple,M5)	2026.07.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.35 @311.19 sl=306.86 tp=315.95 magic=26110602 retcode=10009
+CS	0	16:07:31.346	Trade	2026.07.08 16:05:34   order [#46 buy stop 11.35 Apple at 311.19] triggered
+CS	0	16:07:31.346	Trades	2026.07.08 16:05:34   deal #26 buy 11.35 Apple at 311.23 done (based on order #46)
+CS	0	16:07:31.346	Trade	2026.07.08 16:05:34   deal performed [#26 buy 11.35 Apple at 311.23]
+CS	0	16:07:31.346	Trade	2026.07.08 16:05:34   order performed buy 11.35 at 311.23 [#46 buy stop 11.35 Apple at 311.19]
+CS	0	16:07:31.379	Trade	2026.07.08 19:55:00   market sell 11.35 Apple, close #46 (313.18 / 313.53)
+CS	0	16:07:31.379	Trades	2026.07.08 19:55:00   deal #27 sell 11.35 Apple at 313.18 done (based on order #47)
+CS	0	16:07:31.379	Trade	2026.07.08 19:55:00   deal performed [#27 sell 11.35 Apple at 313.18]
+CS	0	16:07:31.379	Trade	2026.07.08 19:55:00   order performed sell 11.35 at 313.18 [#47 sell 11.35 Apple at 313.18]
+CS	0	16:07:31.379	CycleORB (Apple,M5)	2026.07.08 19:55:00   CTrade::OrderSend: market sell 11.35 position #46 Apple [done at 313.18]
+CS	0	16:07:31.379	CycleORB (Apple,M5)	2026.07.08 19:55:00   [CycleORB] CLOSE position #46 magic=26110602 (NY time exit)
+CS	0	16:07:31.383	CycleORB (Apple,M5)	2026.07.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.385	CycleORB (Apple,M5)	2026.07.09 14:30:00   [CycleORB] RANGE NY 2026.07.09 13:30 hi=311.88 lo=307.90 range=398pt atr%=45.8 spread=31.0pt (live 38pt) cost%=7.8 buffer=62pt risk=49.18 trend=1
+CS	0	16:07:31.386	Trade	2026.07.09 14:30:00   buy stop 10.69 Apple at 312.50 sl: 307.90 tp: 317.56 (311.87 / 312.25)
+CS	0	16:07:31.386	CycleORB (Apple,M5)	2026.07.09 14:30:00   CTrade::OrderSend: buy stop 10.69 Apple at 312.50 sl: 307.90 tp: 317.56 [done]
+CS	0	16:07:31.386	CycleORB (Apple,M5)	2026.07.09 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.69 @312.50 sl=307.90 tp=317.56 magic=26110602 retcode=10009
+CS	0	16:07:31.386	Trade	2026.07.09 14:30:57   order [#48 buy stop 10.69 Apple at 312.50] triggered
+CS	0	16:07:31.386	Trades	2026.07.09 14:30:57   deal #28 buy 10.69 Apple at 312.51 done (based on order #48)
+CS	0	16:07:31.386	Trade	2026.07.09 14:30:57   deal performed [#28 buy 10.69 Apple at 312.51]
+CS	0	16:07:31.386	Trade	2026.07.09 14:30:57   order performed buy 10.69 at 312.51 [#48 buy stop 10.69 Apple at 312.50]
+CS	0	16:07:31.425	Trade	2026.07.09 19:55:00   market sell 10.69 Apple, close #48 (316.23 / 316.63)
+CS	0	16:07:31.425	Trades	2026.07.09 19:55:00   deal #29 sell 10.69 Apple at 316.23 done (based on order #49)
+CS	0	16:07:31.425	Trade	2026.07.09 19:55:00   deal performed [#29 sell 10.69 Apple at 316.23]
+CS	0	16:07:31.425	Trade	2026.07.09 19:55:00   order performed sell 10.69 at 316.23 [#49 sell 10.69 Apple at 316.23]
+CS	0	16:07:31.425	CycleORB (Apple,M5)	2026.07.09 19:55:00   CTrade::OrderSend: market sell 10.69 position #48 Apple [done at 316.23]
+CS	0	16:07:31.425	CycleORB (Apple,M5)	2026.07.09 19:55:00   [CycleORB] CLOSE position #48 magic=26110602 (NY time exit)
+CS	0	16:07:31.432	CycleORB (Apple,M5)	2026.07.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.435	CycleORB (Apple,M5)	2026.07.10 14:30:00   [CycleORB] RANGE NY 2026.07.10 13:30 hi=316.17 lo=313.07 range=310pt atr%=35.4 spread=29.9pt (live 31pt) cost%=9.6 buffer=60pt risk=49.18 trend=1
+CS	0	16:07:31.435	Trade	2026.07.10 14:30:00   buy stop 13.29 Apple at 316.77 sl: 313.07 tp: 320.84 (312.95 / 313.26)
+CS	0	16:07:31.435	CycleORB (Apple,M5)	2026.07.10 14:30:00   CTrade::OrderSend: buy stop 13.29 Apple at 316.77 sl: 313.07 tp: 320.84 [done]
+CS	0	16:07:31.435	CycleORB (Apple,M5)	2026.07.10 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.29 @316.77 sl=313.07 tp=320.84 magic=26110602 retcode=10009
+CS	0	16:07:31.463	Trade	2026.07.10 17:30:01   order canceled [#50 buy stop 13.29 Apple at 316.77]
+CS	0	16:07:31.463	CycleORB (Apple,M5)	2026.07.10 17:30:01   CTrade::OrderSend: cancel #50 [done]
+CS	0	16:07:31.463	CycleORB (Apple,M5)	2026.07.10 17:30:01   [CycleORB] DELETE order #50 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.476	CycleORB (Apple,M5)	2026.07.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.478	CycleORB (Apple,M5)	2026.07.13 14:30:00   [CycleORB] RANGE NY 2026.07.13 13:30 hi=323.28 lo=318.36 range=492pt atr%=56.2 spread=30.7pt (live 40pt) cost%=6.2 buffer=61pt risk=49.18 trend=1
+CS	0	16:07:31.478	Trade	2026.07.13 14:30:00   buy stop 8.89 Apple at 323.89 sl: 318.36 tp: 329.97 (320.01 / 320.41)
+CS	0	16:07:31.478	CycleORB (Apple,M5)	2026.07.13 14:30:00   CTrade::OrderSend: buy stop 8.89 Apple at 323.89 sl: 318.36 tp: 329.97 [done]
+CS	0	16:07:31.478	CycleORB (Apple,M5)	2026.07.13 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.89 @323.89 sl=318.36 tp=329.97 magic=26110602 retcode=10009
+CS	0	16:07:31.493	Trade	2026.07.13 17:30:00   order canceled [#51 buy stop 8.89 Apple at 323.89]
+CS	0	16:07:31.493	CycleORB (Apple,M5)	2026.07.13 17:30:00   CTrade::OrderSend: cancel #51 [done]
+CS	0	16:07:31.493	CycleORB (Apple,M5)	2026.07.13 17:30:00   [CycleORB] DELETE order #51 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.509	CycleORB (Apple,M5)	2026.07.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.512	CycleORB (Apple,M5)	2026.07.14 14:30:00   [CycleORB] RANGE NY 2026.07.14 13:30 hi=315.55 lo=311.92 range=363pt atr%=40.6 spread=30.2pt (live 39pt) cost%=8.3 buffer=60pt risk=49.18 trend=1
+CS	0	16:07:31.512	Trade	2026.07.14 14:30:00   buy stop 11.62 Apple at 316.15 sl: 311.92 tp: 320.80 (314.77 / 315.16)
+CS	0	16:07:31.512	CycleORB (Apple,M5)	2026.07.14 14:30:00   CTrade::OrderSend: buy stop 11.62 Apple at 316.15 sl: 311.92 tp: 320.80 [done]
+CS	0	16:07:31.512	CycleORB (Apple,M5)	2026.07.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.62 @316.15 sl=311.92 tp=320.80 magic=26110602 retcode=10009
+CS	0	16:07:31.512	Trade	2026.07.14 14:34:13   order [#52 buy stop 11.62 Apple at 316.15] triggered
+CS	0	16:07:31.512	Trades	2026.07.14 14:34:13   deal #30 buy 11.62 Apple at 316.19 done (based on order #52)
+CS	0	16:07:31.512	Trade	2026.07.14 14:34:13   deal performed [#30 buy 11.62 Apple at 316.19]
+CS	0	16:07:31.512	Trade	2026.07.14 14:34:13   order performed buy 11.62 at 316.19 [#52 buy stop 11.62 Apple at 316.15]
+CS	0	16:07:31.564	Trade	2026.07.14 19:55:00   market sell 11.62 Apple, close #52 (314.67 / 315.33)
+CS	0	16:07:31.564	Trades	2026.07.14 19:55:00   deal #31 sell 11.62 Apple at 314.67 done (based on order #53)
+CS	0	16:07:31.564	Trade	2026.07.14 19:55:00   deal performed [#31 sell 11.62 Apple at 314.67]
+CS	0	16:07:31.564	Trade	2026.07.14 19:55:00   order performed sell 11.62 at 314.67 [#53 sell 11.62 Apple at 314.67]
+CS	0	16:07:31.564	CycleORB (Apple,M5)	2026.07.14 19:55:00   CTrade::OrderSend: market sell 11.62 position #52 Apple [done at 314.67]
+CS	0	16:07:31.564	CycleORB (Apple,M5)	2026.07.14 19:55:00   [CycleORB] CLOSE position #52 magic=26110602 (NY time exit)
+CS	0	16:07:31.567	CycleORB (Apple,M5)	2026.07.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.571	CycleORB (Apple,M5)	2026.07.15 14:30:00   [CycleORB] RANGE NY 2026.07.15 13:30 hi=321.61 lo=317.18 range=443pt atr%=50.3 spread=31.1pt (live 37pt) cost%=7.0 buffer=62pt risk=49.18 trend=1
+CS	0	16:07:31.571	CycleORB (Apple,M5)	2026.07.15 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:31.596	CycleORB (Apple,M5)	2026.07.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.599	CycleORB (Apple,M5)	2026.07.16 14:30:00   [CycleORB] RANGE NY 2026.07.16 13:30 hi=330.91 lo=326.58 range=433pt atr%=46.5 spread=30.8pt (live 33pt) cost%=7.1 buffer=62pt risk=49.18 trend=1
+CS	0	16:07:31.599	Trade	2026.07.16 14:30:00   buy stop 9.93 Apple at 331.53 sl: 326.58 tp: 336.97 (330.20 / 330.53)
+CS	0	16:07:31.599	CycleORB (Apple,M5)	2026.07.16 14:30:00   CTrade::OrderSend: buy stop 9.93 Apple at 331.53 sl: 326.58 tp: 336.97 [done]
+CS	0	16:07:31.599	CycleORB (Apple,M5)	2026.07.16 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.93 @331.53 sl=326.58 tp=336.97 magic=26110602 retcode=10009
+CS	0	16:07:31.608	Trade	2026.07.16 15:39:56   order [#54 buy stop 9.93 Apple at 331.53] triggered
+CS	0	16:07:31.608	Trades	2026.07.16 15:39:56   deal #32 buy 9.93 Apple at 331.53 done (based on order #54)
+CS	0	16:07:31.608	Trade	2026.07.16 15:39:56   deal performed [#32 buy 9.93 Apple at 331.53]
+CS	0	16:07:31.608	Trade	2026.07.16 15:39:56   order performed buy 9.93 at 331.53 [#54 buy stop 9.93 Apple at 331.53]
+CS	0	16:07:31.645	Trade	2026.07.16 19:55:00   market sell 9.93 Apple, close #54 (332.38 / 332.82)
+CS	0	16:07:31.645	Trades	2026.07.16 19:55:00   deal #33 sell 9.93 Apple at 332.38 done (based on order #55)
+CS	0	16:07:31.645	Trade	2026.07.16 19:55:00   deal performed [#33 sell 9.93 Apple at 332.38]
+CS	0	16:07:31.645	Trade	2026.07.16 19:55:00   order performed sell 9.93 at 332.38 [#55 sell 9.93 Apple at 332.38]
+CS	0	16:07:31.645	CycleORB (Apple,M5)	2026.07.16 19:55:00   CTrade::OrderSend: market sell 9.93 position #54 Apple [done at 332.38]
+CS	0	16:07:31.645	CycleORB (Apple,M5)	2026.07.16 19:55:00   [CycleORB] CLOSE position #54 magic=26110602 (NY time exit)
+CS	0	16:07:31.650	CycleORB (Apple,M5)	2026.07.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.653	CycleORB (Apple,M5)	2026.07.17 14:30:00   [CycleORB] RANGE NY 2026.07.17 13:30 hi=334.79 lo=330.74 range=405pt atr%=47.7 spread=32.0pt (live 36pt) cost%=7.9 buffer=64pt risk=49.18 trend=1
+CS	0	16:07:31.653	Trade	2026.07.17 14:30:00   buy stop 10.48 Apple at 335.43 sl: 330.74 tp: 340.59 (331.69 / 332.05)
+CS	0	16:07:31.653	CycleORB (Apple,M5)	2026.07.17 14:30:00   CTrade::OrderSend: buy stop 10.48 Apple at 335.43 sl: 330.74 tp: 340.59 [done]
+CS	0	16:07:31.653	CycleORB (Apple,M5)	2026.07.17 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.48 @335.43 sl=330.74 tp=340.59 magic=26110602 retcode=10009
+CS	0	16:07:31.680	Trade	2026.07.17 17:30:00   order canceled [#56 buy stop 10.48 Apple at 335.43]
+CS	0	16:07:31.680	CycleORB (Apple,M5)	2026.07.17 17:30:00   CTrade::OrderSend: cancel #56 [done]
+CS	0	16:07:31.680	CycleORB (Apple,M5)	2026.07.17 17:30:00   [CycleORB] DELETE order #56 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.693	CycleORB (Apple,M5)	2026.07.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.696	CycleORB (Apple,M5)	2026.07.20 14:30:00   [CycleORB] RANGE NY 2026.07.20 13:30 hi=333.22 lo=328.19 range=503pt atr%=62.4 spread=30.3pt (live 36pt) cost%=6.0 buffer=61pt risk=49.18 trend=1
+CS	0	16:07:31.696	Trade	2026.07.20 14:30:00   buy stop 8.71 Apple at 333.83 sl: 328.19 tp: 340.03 (326.78 / 327.14)
+CS	0	16:07:31.696	CycleORB (Apple,M5)	2026.07.20 14:30:00   CTrade::OrderSend: buy stop 8.71 Apple at 333.83 sl: 328.19 tp: 340.03 [done]
+CS	0	16:07:31.696	CycleORB (Apple,M5)	2026.07.20 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.71 @333.83 sl=328.19 tp=340.03 magic=26110602 retcode=10009
+CS	0	16:07:31.718	Trade	2026.07.20 17:30:00   order canceled [#57 buy stop 8.71 Apple at 333.83]
+CS	0	16:07:31.718	CycleORB (Apple,M5)	2026.07.20 17:30:00   CTrade::OrderSend: cancel #57 [done]
+CS	0	16:07:31.718	CycleORB (Apple,M5)	2026.07.20 17:30:00   [CycleORB] DELETE order #57 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.732	CycleORB (Apple,M5)	2026.07.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.734	CycleORB (Apple,M5)	2026.07.21 14:30:00   [CycleORB] RANGE NY 2026.07.21 13:30 hi=325.39 lo=322.07 range=332pt atr%=40.2 spread=31.8pt (live 38pt) cost%=9.6 buffer=64pt risk=49.18 trend=1
+CS	0	16:07:31.734	CycleORB (Apple,M5)	2026.07.21 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:31.756	CycleORB (Apple,M5)	2026.07.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.759	CycleORB (Apple,M5)	2026.07.22 14:30:00   [CycleORB] RANGE NY 2026.07.22 13:30 hi=328.77 lo=325.49 range=328pt atr%=40.0 spread=30.6pt (live 40pt) cost%=9.3 buffer=61pt risk=49.18 trend=1
+CS	0	16:07:31.759	Trade	2026.07.22 14:30:00   buy stop 12.64 Apple at 329.38 sl: 325.49 tp: 333.66 (324.30 / 324.70)
+CS	0	16:07:31.759	CycleORB (Apple,M5)	2026.07.22 14:30:00   CTrade::OrderSend: buy stop 12.64 Apple at 329.38 sl: 325.49 tp: 333.66 [done]
+CS	0	16:07:31.759	CycleORB (Apple,M5)	2026.07.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.64 @329.38 sl=325.49 tp=333.66 magic=26110602 retcode=10009
+CS	0	16:07:31.778	Trade	2026.07.22 17:30:00   order canceled [#58 buy stop 12.64 Apple at 329.38]
+CS	0	16:07:31.778	CycleORB (Apple,M5)	2026.07.22 17:30:00   CTrade::OrderSend: cancel #58 [done]
+CS	0	16:07:31.778	CycleORB (Apple,M5)	2026.07.22 17:30:00   [CycleORB] DELETE order #58 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.792	CycleORB (Apple,M5)	2026.07.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.795	CycleORB (Apple,M5)	2026.07.23 14:30:00   [CycleORB] RANGE NY 2026.07.23 13:30 hi=323.07 lo=319.15 range=392pt atr%=48.6 spread=31.5pt (live 35pt) cost%=8.0 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.795	Trade	2026.07.23 14:30:00   buy stop 10.8 Apple at 323.70 sl: 319.15 tp: 328.71 (321.28 / 321.63)
+CS	0	16:07:31.795	CycleORB (Apple,M5)	2026.07.23 14:30:00   CTrade::OrderSend: buy stop 10.80 Apple at 323.70 sl: 319.15 tp: 328.71 [done]
+CS	0	16:07:31.795	CycleORB (Apple,M5)	2026.07.23 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.80 @323.70 sl=319.15 tp=328.71 magic=26110602 retcode=10009
+CS	0	16:07:31.811	Trade	2026.07.23 17:30:00   order canceled [#59 buy stop 10.8 Apple at 323.70]
+CS	0	16:07:31.811	CycleORB (Apple,M5)	2026.07.23 17:30:00   CTrade::OrderSend: cancel #59 [done]
+CS	0	16:07:31.811	CycleORB (Apple,M5)	2026.07.23 17:30:00   [CycleORB] DELETE order #59 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.820	CycleORB (Apple,M5)	2026.07.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.822	CycleORB (Apple,M5)	2026.07.24 14:30:00   [CycleORB] RANGE NY 2026.07.24 13:30 hi=327.59 lo=322.85 range=474pt atr%=63.3 spread=30.2pt (live 39pt) cost%=6.4 buffer=60pt risk=49.18 trend=1
+CS	0	16:07:31.822	CycleORB (Apple,M5)	2026.07.24 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:31.846	CycleORB (Apple,M5)	2026.07.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.847	CycleORB (Apple,M5)	2026.07.27 14:30:00   [CycleORB] RANGE NY 2026.07.27 13:30 hi=336.96 lo=333.85 range=311pt atr%=39.3 spread=31.5pt (live 43pt) cost%=10.1 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.847	CycleORB (Apple,M5)	2026.07.27 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:31.881	CycleORB (Apple,M5)	2026.07.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.884	CycleORB (Apple,M5)	2026.07.28 14:30:00   [CycleORB] RANGE NY 2026.07.28 13:30 hi=342.59 lo=336.98 range=561pt atr%=70.2 spread=31.5pt (live 32pt) cost%=5.6 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.884	Trade	2026.07.28 14:30:00   buy stop 7.88 Apple at 343.22 sl: 336.98 tp: 350.08 (337.81 / 338.13)
+CS	0	16:07:31.884	CycleORB (Apple,M5)	2026.07.28 14:30:00   CTrade::OrderSend: buy stop 7.88 Apple at 343.22 sl: 336.98 tp: 350.08 [done]
+CS	0	16:07:31.884	CycleORB (Apple,M5)	2026.07.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=7.88 @343.22 sl=336.98 tp=350.08 magic=26110602 retcode=10009
+CS	0	16:07:31.902	Trade	2026.07.28 17:30:00   order canceled [#60 buy stop 7.88 Apple at 343.22]
+CS	0	16:07:31.902	CycleORB (Apple,M5)	2026.07.28 17:30:00   CTrade::OrderSend: cancel #60 [done]
+CS	0	16:07:31.902	CycleORB (Apple,M5)	2026.07.28 17:30:00   [CycleORB] DELETE order #60 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.918	CycleORB (Apple,M5)	2026.07.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.921	CycleORB (Apple,M5)	2026.07.29 14:30:00   [CycleORB] RANGE NY 2026.07.29 13:30 hi=343.47 lo=339.43 range=404pt atr%=50.8 spread=31.3pt (live 42pt) cost%=7.7 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.921	Trade	2026.07.29 14:30:00   buy stop 10.53 Apple at 344.10 sl: 339.43 tp: 349.24 (340.98 / 341.40)
+CS	0	16:07:31.921	CycleORB (Apple,M5)	2026.07.29 14:30:00   CTrade::OrderSend: buy stop 10.53 Apple at 344.10 sl: 339.43 tp: 349.24 [done]
+CS	0	16:07:31.921	CycleORB (Apple,M5)	2026.07.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.53 @344.10 sl=339.43 tp=349.24 magic=26110602 retcode=10009
+CS	0	16:07:31.939	Trade	2026.07.29 17:30:00   order canceled [#61 buy stop 10.53 Apple at 344.10]
+CS	0	16:07:31.939	CycleORB (Apple,M5)	2026.07.29 17:30:00   CTrade::OrderSend: cancel #61 [done]
+CS	0	16:07:31.939	CycleORB (Apple,M5)	2026.07.29 17:30:00   [CycleORB] DELETE order #61 magic=26110602 (NY entry window closed)
+CS	0	16:07:31.960	CycleORB (Apple,M5)	2026.07.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:31.963	CycleORB (Apple,M5)	2026.07.30 14:30:00   [CycleORB] RANGE NY 2026.07.30 13:30 hi=334.24 lo=330.56 range=368pt atr%=46.7 spread=31.5pt (live 35pt) cost%=8.6 buffer=63pt risk=49.18 trend=1
+CS	0	16:07:31.963	Trade	2026.07.30 14:30:00   buy stop 11.41 Apple at 334.87 sl: 330.56 tp: 339.61 (331.11 / 331.46)
+CS	0	16:07:31.963	CycleORB (Apple,M5)	2026.07.30 14:30:00   CTrade::OrderSend: buy stop 11.41 Apple at 334.87 sl: 330.56 tp: 339.61 [done]
+CS	0	16:07:31.963	CycleORB (Apple,M5)	2026.07.30 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.41 @334.87 sl=330.56 tp=339.61 magic=26110602 retcode=10009
+CS	0	16:07:31.989	Trade	2026.07.30 17:30:00   order canceled [#62 buy stop 11.41 Apple at 334.87]
+CS	0	16:07:31.989	CycleORB (Apple,M5)	2026.07.30 17:30:00   CTrade::OrderSend: cancel #62 [done]
+CS	0	16:07:31.989	CycleORB (Apple,M5)	2026.07.30 17:30:00   [CycleORB] DELETE order #62 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.010	CycleORB (Apple,M5)	2026.07.31 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.013	CycleORB (Apple,M5)	2026.07.31 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:32.042	CycleORB (Apple,M5)	2026.08.03 13:30:30   [CycleORB] CYCLE_END 202607 capital=9836.06 realized=52.68 floating=0.00 pnl=0.54% peak=0.75% state=ACTIVE 
+CS	0	16:07:32.042	CycleORB (Apple,M5)	2026.08.03 13:30:30   [CycleORB] CYCLE_BEGIN 202608 capital=9888.74 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:32.045	CycleORB (Apple,M5)	2026.08.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.049	CycleORB (Apple,M5)	2026.08.03 14:30:00   [CycleORB] RANGE NY 2026.08.03 13:30 hi=311.54 lo=304.88 range=666pt atr%=66.9 spread=29.7pt (live 29pt) cost%=4.5 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.049	Trade	2026.08.03 14:30:00   sell stop 6.81 Apple at 304.29 sl: 311.54 tp: 296.32 (305.40 / 305.69)
+CS	0	16:07:32.049	CycleORB (Apple,M5)	2026.08.03 14:30:00   CTrade::OrderSend: sell stop 6.81 Apple at 304.29 sl: 311.54 tp: 296.32 [done]
+CS	0	16:07:32.049	CycleORB (Apple,M5)	2026.08.03 14:30:00   [CycleORB] PLACE SELL_STOP lots=6.81 @304.29 sl=311.54 tp=296.32 magic=26110602 retcode=10009
+CS	0	16:07:32.054	Trade	2026.08.03 15:26:56   order [#63 sell stop 6.81 Apple at 304.29] triggered
+CS	0	16:07:32.054	Trades	2026.08.03 15:26:56   deal #34 sell 6.81 Apple at 304.28 done (based on order #63)
+CS	0	16:07:32.054	Trade	2026.08.03 15:26:56   deal performed [#34 sell 6.81 Apple at 304.28]
+CS	0	16:07:32.054	Trade	2026.08.03 15:26:56   order performed sell 6.81 at 304.28 [#63 sell stop 6.81 Apple at 304.29]
+CS	0	16:07:32.087	Trade	2026.08.03 19:55:00   market buy 6.81 Apple, close #63 (303.25 / 303.55)
+CS	0	16:07:32.087	Trades	2026.08.03 19:55:00   deal #35 buy 6.81 Apple at 303.55 done (based on order #64)
+CS	0	16:07:32.087	Trade	2026.08.03 19:55:00   deal performed [#35 buy 6.81 Apple at 303.55]
+CS	0	16:07:32.087	Trade	2026.08.03 19:55:00   order performed buy 6.81 at 303.55 [#64 buy 6.81 Apple at 303.55]
+CS	0	16:07:32.087	CycleORB (Apple,M5)	2026.08.03 19:55:00   CTrade::OrderSend: market buy 6.81 position #63 Apple [done at 303.55]
+CS	0	16:07:32.087	CycleORB (Apple,M5)	2026.08.03 19:55:00   [CycleORB] CLOSE position #63 magic=26110602 (NY time exit)
+CS	0	16:07:32.094	CycleORB (Apple,M5)	2026.08.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.096	CycleORB (Apple,M5)	2026.08.04 14:30:00   [CycleORB] RANGE NY 2026.08.04 13:30 hi=305.19 lo=302.24 range=295pt atr%=28.8 spread=30.1pt (live 33pt) cost%=10.2 buffer=60pt risk=49.44 trend=-1
+CS	0	16:07:32.096	Trade	2026.08.04 14:30:00   sell stop 13.92 Apple at 301.64 sl: 305.19 tp: 297.73 (306.66 / 306.99)
+CS	0	16:07:32.096	CycleORB (Apple,M5)	2026.08.04 14:30:00   CTrade::OrderSend: sell stop 13.92 Apple at 301.64 sl: 305.19 tp: 297.73 [done]
+CS	0	16:07:32.096	CycleORB (Apple,M5)	2026.08.04 14:30:00   [CycleORB] PLACE SELL_STOP lots=13.92 @301.64 sl=305.19 tp=297.73 magic=26110602 retcode=10009
+CS	0	16:07:32.119	Trade	2026.08.04 17:30:01   order canceled [#65 sell stop 13.92 Apple at 301.64]
+CS	0	16:07:32.119	CycleORB (Apple,M5)	2026.08.04 17:30:01   CTrade::OrderSend: cancel #65 [done]
+CS	0	16:07:32.119	CycleORB (Apple,M5)	2026.08.04 17:30:01   [CycleORB] DELETE order #65 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.134	CycleORB (Apple,M5)	2026.08.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.140	CycleORB (Apple,M5)	2026.08.05 14:30:00   [CycleORB] RANGE NY 2026.08.05 13:30 hi=308.85 lo=305.46 range=339pt atr%=34.5 spread=29.4pt (live 34pt) cost%=8.7 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.140	Trade	2026.08.05 14:30:00   sell stop 12.42 Apple at 304.87 sl: 308.85 tp: 300.49 (306.57 / 306.91)
+CS	0	16:07:32.140	CycleORB (Apple,M5)	2026.08.05 14:30:00   CTrade::OrderSend: sell stop 12.42 Apple at 304.87 sl: 308.85 tp: 300.49 [done]
+CS	0	16:07:32.140	CycleORB (Apple,M5)	2026.08.05 14:30:00   [CycleORB] PLACE SELL_STOP lots=12.42 @304.87 sl=308.85 tp=300.49 magic=26110602 retcode=10009
+CS	0	16:07:32.173	Trade	2026.08.05 17:30:00   order canceled [#66 sell stop 12.42 Apple at 304.87]
+CS	0	16:07:32.173	CycleORB (Apple,M5)	2026.08.05 17:30:00   CTrade::OrderSend: cancel #66 [done]
+CS	0	16:07:32.173	CycleORB (Apple,M5)	2026.08.05 17:30:00   [CycleORB] DELETE order #66 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.190	CycleORB (Apple,M5)	2026.08.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.194	CycleORB (Apple,M5)	2026.08.06 14:30:00   [CycleORB] RANGE NY 2026.08.06 13:30 hi=316.09 lo=313.35 range=274pt atr%=28.3 spread=30.7pt (live 39pt) cost%=11.2 buffer=61pt risk=49.44 trend=-1
+CS	0	16:07:32.194	CycleORB (Apple,M5)	2026.08.06 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	16:07:32.214	CycleORB (Apple,M5)	2026.08.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.217	CycleORB (Apple,M5)	2026.08.07 14:30:00   [CycleORB] RANGE NY 2026.08.07 13:30 hi=313.64 lo=310.55 range=309pt atr%=31.6 spread=30.0pt (live 34pt) cost%=9.7 buffer=60pt risk=49.44 trend=-1
+CS	0	16:07:32.217	Trade	2026.08.07 14:30:00   sell stop 13.39 Apple at 309.95 sl: 313.64 tp: 305.89 (313.93 / 314.27)
+CS	0	16:07:32.217	CycleORB (Apple,M5)	2026.08.07 14:30:00   CTrade::OrderSend: sell stop 13.39 Apple at 309.95 sl: 313.64 tp: 305.89 [done]
+CS	0	16:07:32.217	CycleORB (Apple,M5)	2026.08.07 14:30:00   [CycleORB] PLACE SELL_STOP lots=13.39 @309.95 sl=313.64 tp=305.89 magic=26110602 retcode=10009
+CS	0	16:07:32.231	Trade	2026.08.07 17:30:00   order canceled [#67 sell stop 13.39 Apple at 309.95]
+CS	0	16:07:32.231	CycleORB (Apple,M5)	2026.08.07 17:30:00   CTrade::OrderSend: cancel #67 [done]
+CS	0	16:07:32.231	CycleORB (Apple,M5)	2026.08.07 17:30:00   [CycleORB] DELETE order #67 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.239	CycleORB (Apple,M5)	2026.08.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.242	CycleORB (Apple,M5)	2026.08.10 14:30:00   [CycleORB] RANGE NY 2026.08.10 13:30 hi=307.22 lo=304.36 range=286pt atr%=30.6 spread=30.1pt (live 34pt) cost%=10.5 buffer=60pt risk=49.44 trend=-1
+CS	0	16:07:32.242	Trade	2026.08.10 14:30:00   sell stop 14.29 Apple at 303.76 sl: 307.22 tp: 299.95 (306.72 / 307.06)
+CS	0	16:07:32.242	CycleORB (Apple,M5)	2026.08.10 14:30:00   CTrade::OrderSend: sell stop 14.29 Apple at 303.76 sl: 307.22 tp: 299.95 [done]
+CS	0	16:07:32.242	CycleORB (Apple,M5)	2026.08.10 14:30:00   [CycleORB] PLACE SELL_STOP lots=14.29 @303.76 sl=307.22 tp=299.95 magic=26110602 retcode=10009
+CS	0	16:07:32.252	Trade	2026.08.10 17:30:01   order canceled [#68 sell stop 14.29 Apple at 303.76]
+CS	0	16:07:32.252	CycleORB (Apple,M5)	2026.08.10 17:30:01   CTrade::OrderSend: cancel #68 [done]
+CS	0	16:07:32.252	CycleORB (Apple,M5)	2026.08.10 17:30:01   [CycleORB] DELETE order #68 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.260	CycleORB (Apple,M5)	2026.08.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.262	CycleORB (Apple,M5)	2026.08.11 14:30:00   [CycleORB] RANGE NY 2026.08.11 13:30 hi=309.72 lo=305.52 range=420pt atr%=44.5 spread=29.4pt (live 31pt) cost%=7.0 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.262	Trade	2026.08.11 14:30:00   sell stop 10.32 Apple at 304.93 sl: 309.72 tp: 299.66 (306.04 / 306.35)
+CS	0	16:07:32.262	CycleORB (Apple,M5)	2026.08.11 14:30:00   CTrade::OrderSend: sell stop 10.32 Apple at 304.93 sl: 309.72 tp: 299.66 [done]
+CS	0	16:07:32.262	CycleORB (Apple,M5)	2026.08.11 14:30:00   [CycleORB] PLACE SELL_STOP lots=10.32 @304.93 sl=309.72 tp=299.66 magic=26110602 retcode=10009
+CS	0	16:07:32.271	Trade	2026.08.11 17:30:00   order canceled [#69 sell stop 10.32 Apple at 304.93]
+CS	0	16:07:32.271	CycleORB (Apple,M5)	2026.08.11 17:30:00   CTrade::OrderSend: cancel #69 [done]
+CS	0	16:07:32.271	CycleORB (Apple,M5)	2026.08.11 17:30:00   [CycleORB] DELETE order #69 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.279	CycleORB (Apple,M5)	2026.08.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.281	CycleORB (Apple,M5)	2026.08.12 14:30:00   [CycleORB] RANGE NY 2026.08.12 13:30 hi=304.53 lo=301.97 range=256pt atr%=26.8 spread=30.8pt (live 33pt) cost%=12.0 buffer=62pt risk=49.44 trend=-1
+CS	0	16:07:32.281	Trade	2026.08.12 14:30:00   sell stop 15.54 Apple at 301.35 sl: 304.53 tp: 297.85 (302.20 / 302.53)
+CS	0	16:07:32.281	CycleORB (Apple,M5)	2026.08.12 14:30:00   CTrade::OrderSend: sell stop 15.54 Apple at 301.35 sl: 304.53 tp: 297.85 [done]
+CS	0	16:07:32.281	CycleORB (Apple,M5)	2026.08.12 14:30:00   [CycleORB] PLACE SELL_STOP lots=15.54 @301.35 sl=304.53 tp=297.85 magic=26110602 retcode=10009
+CS	0	16:07:32.284	Trade	2026.08.12 15:16:48   order [#70 sell stop 15.54 Apple at 301.35] triggered
+CS	0	16:07:32.284	Trades	2026.08.12 15:16:48   deal #36 sell 15.54 Apple at 301.35 done (based on order #70)
+CS	0	16:07:32.284	Trade	2026.08.12 15:16:48   deal performed [#36 sell 15.54 Apple at 301.35]
+CS	0	16:07:32.284	Trade	2026.08.12 15:16:48   order performed sell 15.54 at 301.35 [#70 sell stop 15.54 Apple at 301.35]
+CS	0	16:07:32.305	Trade	2026.08.12 19:55:00   market buy 15.54 Apple, close #70 (301.03 / 301.54)
+CS	0	16:07:32.305	Trades	2026.08.12 19:55:00   deal #37 buy 15.54 Apple at 301.54 done (based on order #71)
+CS	0	16:07:32.305	Trade	2026.08.12 19:55:00   deal performed [#37 buy 15.54 Apple at 301.54]
+CS	0	16:07:32.305	Trade	2026.08.12 19:55:00   order performed buy 15.54 at 301.54 [#71 buy 15.54 Apple at 301.54]
+CS	0	16:07:32.305	CycleORB (Apple,M5)	2026.08.12 19:55:00   CTrade::OrderSend: market buy 15.54 position #70 Apple [done at 301.54]
+CS	0	16:07:32.305	CycleORB (Apple,M5)	2026.08.12 19:55:00   [CycleORB] CLOSE position #70 magic=26110602 (NY time exit)
+CS	0	16:07:32.309	CycleORB (Apple,M5)	2026.08.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.311	CycleORB (Apple,M5)	2026.08.13 14:30:00   [CycleORB] RANGE NY 2026.08.13 13:30 hi=304.59 lo=302.05 range=254pt atr%=27.1 spread=29.6pt (live 38pt) cost%=11.7 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.311	Trade	2026.08.13 14:30:00   sell stop 15.79 Apple at 301.46 sl: 304.59 tp: 298.02 (305.47 / 305.85)
+CS	0	16:07:32.311	CycleORB (Apple,M5)	2026.08.13 14:30:00   CTrade::OrderSend: sell stop 15.79 Apple at 301.46 sl: 304.59 tp: 298.02 [done]
+CS	0	16:07:32.311	CycleORB (Apple,M5)	2026.08.13 14:30:00   [CycleORB] PLACE SELL_STOP lots=15.79 @301.46 sl=304.59 tp=298.02 magic=26110602 retcode=10009
+CS	0	16:07:32.330	Trade	2026.08.13 17:30:00   order canceled [#72 sell stop 15.79 Apple at 301.46]
+CS	0	16:07:32.330	CycleORB (Apple,M5)	2026.08.13 17:30:00   CTrade::OrderSend: cancel #72 [done]
+CS	0	16:07:32.330	CycleORB (Apple,M5)	2026.08.13 17:30:00   [CycleORB] DELETE order #72 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.342	CycleORB (Apple,M5)	2026.08.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.344	CycleORB (Apple,M5)	2026.08.14 14:30:00   [CycleORB] RANGE NY 2026.08.14 13:30 hi=307.27 lo=305.37 range=190pt atr%=21.8 spread=31.1pt (live 32pt) cost%=16.4 buffer=62pt risk=49.44 trend=-1
+CS	0	16:07:32.344	Trade	2026.08.14 14:30:00   sell stop 19.62 Apple at 304.75 sl: 307.27 tp: 301.98 (304.85 / 305.17)
+CS	0	16:07:32.344	CycleORB (Apple,M5)	2026.08.14 14:30:00   CTrade::OrderSend: sell stop 19.62 Apple at 304.75 sl: 307.27 tp: 301.98 [done]
+CS	0	16:07:32.344	CycleORB (Apple,M5)	2026.08.14 14:30:00   [CycleORB] PLACE SELL_STOP lots=19.62 @304.75 sl=307.27 tp=301.98 magic=26110602 retcode=10009
+CS	0	16:07:32.344	Trade	2026.08.14 14:30:14   order [#73 sell stop 19.62 Apple at 304.75] triggered
+CS	0	16:07:32.344	Trades	2026.08.14 14:30:14   deal #38 sell 19.62 Apple at 304.74 done (based on order #73)
+CS	0	16:07:32.344	Trade	2026.08.14 14:30:14   deal performed [#38 sell 19.62 Apple at 304.74]
+CS	0	16:07:32.344	Trade	2026.08.14 14:30:14   order performed sell 19.62 at 304.74 [#73 sell stop 19.62 Apple at 304.75]
+CS	0	16:07:32.380	Trade	2026.08.14 19:55:00   market buy 19.62 Apple, close #73 (305.80 / 306.11)
+CS	0	16:07:32.380	Trades	2026.08.14 19:55:00   deal #39 buy 19.62 Apple at 306.11 done (based on order #74)
+CS	0	16:07:32.380	Trade	2026.08.14 19:55:00   deal performed [#39 buy 19.62 Apple at 306.11]
+CS	0	16:07:32.380	Trade	2026.08.14 19:55:00   order performed buy 19.62 at 306.11 [#74 buy 19.62 Apple at 306.11]
+CS	0	16:07:32.381	CycleORB (Apple,M5)	2026.08.14 19:55:00   CTrade::OrderSend: market buy 19.62 position #73 Apple [done at 306.11]
+CS	0	16:07:32.381	CycleORB (Apple,M5)	2026.08.14 19:55:00   [CycleORB] CLOSE position #73 magic=26110602 (NY time exit)
+CS	0	16:07:32.385	CycleORB (Apple,M5)	2026.08.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.388	CycleORB (Apple,M5)	2026.08.17 14:30:00   [CycleORB] RANGE NY 2026.08.17 13:30 hi=307.44 lo=303.85 range=359pt atr%=42.3 spread=29.3pt (live 32pt) cost%=8.2 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.388	Trade	2026.08.17 14:30:00   sell stop 11.82 Apple at 303.26 sl: 307.44 tp: 298.66 (304.35 / 304.67)
+CS	0	16:07:32.388	CycleORB (Apple,M5)	2026.08.17 14:30:00   CTrade::OrderSend: sell stop 11.82 Apple at 303.26 sl: 307.44 tp: 298.66 [done]
+CS	0	16:07:32.388	CycleORB (Apple,M5)	2026.08.17 14:30:00   [CycleORB] PLACE SELL_STOP lots=11.82 @303.26 sl=307.44 tp=298.66 magic=26110602 retcode=10009
+CS	0	16:07:32.395	Trade	2026.08.17 15:41:18   order [#75 sell stop 11.82 Apple at 303.26] triggered
+CS	0	16:07:32.395	Trades	2026.08.17 15:41:18   deal #40 sell 11.82 Apple at 303.26 done (based on order #75)
+CS	0	16:07:32.395	Trade	2026.08.17 15:41:18   deal performed [#40 sell 11.82 Apple at 303.26]
+CS	0	16:07:32.396	Trade	2026.08.17 15:41:18   order performed sell 11.82 at 303.26 [#75 sell stop 11.82 Apple at 303.26]
+CS	0	16:07:32.425	Trade	2026.08.17 19:55:00   market buy 11.82 Apple, close #75 (305.36 / 305.69)
+CS	0	16:07:32.425	Trades	2026.08.17 19:55:00   deal #41 buy 11.82 Apple at 305.69 done (based on order #76)
+CS	0	16:07:32.425	Trade	2026.08.17 19:55:00   deal performed [#41 buy 11.82 Apple at 305.69]
+CS	0	16:07:32.425	Trade	2026.08.17 19:55:00   order performed buy 11.82 at 305.69 [#76 buy 11.82 Apple at 305.69]
+CS	0	16:07:32.425	CycleORB (Apple,M5)	2026.08.17 19:55:00   CTrade::OrderSend: market buy 11.82 position #75 Apple [done at 305.69]
+CS	0	16:07:32.425	CycleORB (Apple,M5)	2026.08.17 19:55:00   [CycleORB] CLOSE position #75 magic=26110602 (NY time exit)
+CS	0	16:07:32.430	CycleORB (Apple,M5)	2026.08.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.432	CycleORB (Apple,M5)	2026.08.18 14:30:00   [CycleORB] RANGE NY 2026.08.18 13:30 hi=307.61 lo=305.56 range=205pt atr%=24.7 spread=30.4pt (live 32pt) cost%=14.8 buffer=61pt risk=49.44 trend=-1
+CS	0	16:07:32.432	Trade	2026.08.18 14:30:00   sell stop 18.58 Apple at 304.95 sl: 307.61 tp: 302.02 (309.47 / 309.79)
+CS	0	16:07:32.432	CycleORB (Apple,M5)	2026.08.18 14:30:00   CTrade::OrderSend: sell stop 18.58 Apple at 304.95 sl: 307.61 tp: 302.02 [done]
+CS	0	16:07:32.432	CycleORB (Apple,M5)	2026.08.18 14:30:00   [CycleORB] PLACE SELL_STOP lots=18.58 @304.95 sl=307.61 tp=302.02 magic=26110602 retcode=10009
+CS	0	16:07:32.447	Trade	2026.08.18 17:30:00   order canceled [#77 sell stop 18.58 Apple at 304.95]
+CS	0	16:07:32.447	CycleORB (Apple,M5)	2026.08.18 17:30:00   CTrade::OrderSend: cancel #77 [done]
+CS	0	16:07:32.447	CycleORB (Apple,M5)	2026.08.18 17:30:00   [CycleORB] DELETE order #77 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.464	CycleORB (Apple,M5)	2026.08.19 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.467	CycleORB (Apple,M5)	2026.08.19 14:30:00   [CycleORB] RANGE NY 2026.08.19 13:30 hi=316.23 lo=309.77 range=646pt atr%=78.9 spread=29.6pt (live 36pt) cost%=4.6 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.467	Trade	2026.08.19 14:30:00   sell stop 7.01 Apple at 309.18 sl: 316.23 tp: 301.43 (315.82 / 316.18)
+CS	0	16:07:32.467	CycleORB (Apple,M5)	2026.08.19 14:30:00   CTrade::OrderSend: sell stop 7.01 Apple at 309.18 sl: 316.23 tp: 301.43 [done]
+CS	0	16:07:32.467	CycleORB (Apple,M5)	2026.08.19 14:30:00   [CycleORB] PLACE SELL_STOP lots=7.01 @309.18 sl=316.23 tp=301.43 magic=26110602 retcode=10009
+CS	0	16:07:32.488	Trade	2026.08.19 17:30:00   order canceled [#78 sell stop 7.01 Apple at 309.18]
+CS	0	16:07:32.488	CycleORB (Apple,M5)	2026.08.19 17:30:00   CTrade::OrderSend: cancel #78 [done]
+CS	0	16:07:32.488	CycleORB (Apple,M5)	2026.08.19 17:30:00   [CycleORB] DELETE order #78 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.502	CycleORB (Apple,M5)	2026.08.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.505	CycleORB (Apple,M5)	2026.08.20 14:30:00   [CycleORB] RANGE NY 2026.08.20 13:30 hi=320.10 lo=316.85 range=325pt atr%=39.4 spread=30.6pt (live 33pt) cost%=9.4 buffer=61pt risk=49.44 trend=1
+CS	0	16:07:32.505	Trade	2026.08.20 14:30:00   buy stop 12.8 Apple at 320.71 sl: 316.85 tp: 324.96 (316.28 / 316.61)
+CS	0	16:07:32.505	CycleORB (Apple,M5)	2026.08.20 14:30:00   CTrade::OrderSend: buy stop 12.80 Apple at 320.71 sl: 316.85 tp: 324.96 [done]
+CS	0	16:07:32.505	CycleORB (Apple,M5)	2026.08.20 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.80 @320.71 sl=316.85 tp=324.96 magic=26110602 retcode=10009
+CS	0	16:07:32.519	Trade	2026.08.20 17:30:00   order canceled [#79 buy stop 12.8 Apple at 320.71]
+CS	0	16:07:32.519	CycleORB (Apple,M5)	2026.08.20 17:30:00   CTrade::OrderSend: cancel #79 [done]
+CS	0	16:07:32.519	CycleORB (Apple,M5)	2026.08.20 17:30:00   [CycleORB] DELETE order #79 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.530	CycleORB (Apple,M5)	2026.08.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.533	CycleORB (Apple,M5)	2026.08.21 14:30:00   [CycleORB] RANGE NY 2026.08.21 13:30 hi=311.95 lo=306.86 range=509pt atr%=78.1 spread=29.3pt (live 31pt) cost%=5.8 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.533	Trade	2026.08.21 14:30:00   sell stop 8.7 Apple at 306.27 sl: 311.95 tp: 300.02 (307.64 / 307.95)
+CS	0	16:07:32.533	CycleORB (Apple,M5)	2026.08.21 14:30:00   CTrade::OrderSend: sell stop 8.70 Apple at 306.27 sl: 311.95 tp: 300.02 [done]
+CS	0	16:07:32.533	CycleORB (Apple,M5)	2026.08.21 14:30:00   [CycleORB] PLACE SELL_STOP lots=8.70 @306.27 sl=311.95 tp=300.02 magic=26110602 retcode=10009
+CS	0	16:07:32.563	Trade	2026.08.21 17:30:00   order canceled [#80 sell stop 8.7 Apple at 306.27]
+CS	0	16:07:32.564	CycleORB (Apple,M5)	2026.08.21 17:30:00   CTrade::OrderSend: cancel #80 [done]
+CS	0	16:07:32.564	CycleORB (Apple,M5)	2026.08.21 17:30:00   [CycleORB] DELETE order #80 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.577	CycleORB (Apple,M5)	2026.08.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.580	CycleORB (Apple,M5)	2026.08.24 14:30:00   [CycleORB] RANGE NY 2026.08.24 13:30 hi=312.13 lo=309.77 range=236pt atr%=37.9 spread=30.3pt (live 31pt) cost%=12.8 buffer=61pt risk=49.44 trend=-1
+CS	0	16:07:32.580	Trade	2026.08.24 14:30:00   sell stop 16.64 Apple at 309.16 sl: 312.13 tp: 305.89 (312.78 / 313.09)
+CS	0	16:07:32.580	CycleORB (Apple,M5)	2026.08.24 14:30:00   CTrade::OrderSend: sell stop 16.64 Apple at 309.16 sl: 312.13 tp: 305.89 [done]
+CS	0	16:07:32.580	CycleORB (Apple,M5)	2026.08.24 14:30:00   [CycleORB] PLACE SELL_STOP lots=16.64 @309.16 sl=312.13 tp=305.89 magic=26110602 retcode=10009
+CS	0	16:07:32.595	Trade	2026.08.24 17:30:00   order canceled [#81 sell stop 16.64 Apple at 309.16]
+CS	0	16:07:32.595	CycleORB (Apple,M5)	2026.08.24 17:30:00   CTrade::OrderSend: cancel #81 [done]
+CS	0	16:07:32.595	CycleORB (Apple,M5)	2026.08.24 17:30:00   [CycleORB] DELETE order #81 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.605	CycleORB (Apple,M5)	2026.08.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.608	CycleORB (Apple,M5)	2026.08.25 14:30:00   [CycleORB] RANGE NY 2026.08.25 13:30 hi=313.32 lo=309.88 range=344pt atr%=57.8 spread=29.7pt (live 37pt) cost%=8.6 buffer=59pt risk=49.44 trend=-1
+CS	0	16:07:32.608	Trade	2026.08.25 14:30:00   sell stop 12.26 Apple at 309.29 sl: 313.32 tp: 304.86 (309.92 / 310.29)
+CS	0	16:07:32.608	CycleORB (Apple,M5)	2026.08.25 14:30:00   CTrade::OrderSend: sell stop 12.26 Apple at 309.29 sl: 313.32 tp: 304.86 [done]
+CS	0	16:07:32.608	CycleORB (Apple,M5)	2026.08.25 14:30:00   [CycleORB] PLACE SELL_STOP lots=12.26 @309.29 sl=313.32 tp=304.86 magic=26110602 retcode=10009
+CS	0	16:07:32.612	Trade	2026.08.25 14:50:20   order [#82 sell stop 12.26 Apple at 309.29] triggered
+CS	0	16:07:32.612	Trades	2026.08.25 14:50:20   deal #42 sell 12.26 Apple at 309.28 done (based on order #82)
+CS	0	16:07:32.612	Trade	2026.08.25 14:50:20   deal performed [#42 sell 12.26 Apple at 309.28]
+CS	0	16:07:32.612	Trade	2026.08.25 14:50:20   order performed sell 12.26 at 309.28 [#82 sell stop 12.26 Apple at 309.29]
+CS	0	16:07:32.654	Trade	2026.08.25 19:55:00   market buy 12.26 Apple, close #82 (309.71 / 310.11)
+CS	0	16:07:32.654	Trades	2026.08.25 19:55:00   deal #43 buy 12.26 Apple at 310.11 done (based on order #83)
+CS	0	16:07:32.654	Trade	2026.08.25 19:55:00   deal performed [#43 buy 12.26 Apple at 310.11]
+CS	0	16:07:32.654	Trade	2026.08.25 19:55:00   order performed buy 12.26 at 310.11 [#83 buy 12.26 Apple at 310.11]
+CS	0	16:07:32.654	CycleORB (Apple,M5)	2026.08.25 19:55:00   CTrade::OrderSend: market buy 12.26 position #82 Apple [done at 310.11]
+CS	0	16:07:32.654	CycleORB (Apple,M5)	2026.08.25 19:55:00   [CycleORB] CLOSE position #82 magic=26110602 (NY time exit)
+CS	0	16:07:32.658	CycleORB (Apple,M5)	2026.08.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.663	CycleORB (Apple,M5)	2026.08.26 14:30:00   [CycleORB] RANGE NY 2026.08.26 13:30 hi=312.53 lo=308.65 range=388pt atr%=65.9 spread=30.8pt (live 39pt) cost%=7.9 buffer=62pt risk=49.44 trend=-1
+CS	0	16:07:32.663	Trade	2026.08.26 14:30:00   sell stop 10.98 Apple at 308.03 sl: 312.53 tp: 303.08 (311.61 / 312.00)
+CS	0	16:07:32.663	CycleORB (Apple,M5)	2026.08.26 14:30:00   CTrade::OrderSend: sell stop 10.98 Apple at 308.03 sl: 312.53 tp: 303.08 [done]
+CS	0	16:07:32.663	CycleORB (Apple,M5)	2026.08.26 14:30:00   [CycleORB] PLACE SELL_STOP lots=10.98 @308.03 sl=312.53 tp=303.08 magic=26110602 retcode=10009
+CS	0	16:07:32.678	Trade	2026.08.26 17:30:00   order canceled [#84 sell stop 10.98 Apple at 308.03]
+CS	0	16:07:32.678	CycleORB (Apple,M5)	2026.08.26 17:30:00   CTrade::OrderSend: cancel #84 [done]
+CS	0	16:07:32.678	CycleORB (Apple,M5)	2026.08.26 17:30:00   [CycleORB] DELETE order #84 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.690	CycleORB (Apple,M5)	2026.08.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.693	CycleORB (Apple,M5)	2026.08.27 14:30:00   [CycleORB] RANGE NY 2026.08.27 13:30 hi=311.95 lo=309.19 range=276pt atr%=47.1 spread=29.5pt (live 36pt) cost%=10.7 buffer=59pt risk=49.44 trend=1
+CS	0	16:07:32.693	Trade	2026.08.27 14:30:00   buy stop 14.75 Apple at 312.54 sl: 309.19 tp: 316.23 (310.66 / 311.02)
+CS	0	16:07:32.693	CycleORB (Apple,M5)	2026.08.27 14:30:00   CTrade::OrderSend: buy stop 14.75 Apple at 312.54 sl: 309.19 tp: 316.23 [done]
+CS	0	16:07:32.693	CycleORB (Apple,M5)	2026.08.27 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.75 @312.54 sl=309.19 tp=316.23 magic=26110602 retcode=10009
+CS	0	16:07:32.694	Trade	2026.08.27 14:38:00   order [#85 buy stop 14.75 Apple at 312.54] triggered
+CS	0	16:07:32.694	Trades	2026.08.27 14:38:00   deal #44 buy 14.75 Apple at 312.61 done (based on order #85)
+CS	0	16:07:32.694	Trade	2026.08.27 14:38:00   deal performed [#44 buy 14.75 Apple at 312.61]
+CS	0	16:07:32.694	Trade	2026.08.27 14:38:00   order performed buy 14.75 at 312.61 [#85 buy stop 14.75 Apple at 312.54]
+CS	0	16:07:32.742	Trade	2026.08.27 19:55:00   market sell 14.75 Apple, close #85 (314.71 / 315.05)
+CS	0	16:07:32.742	Trades	2026.08.27 19:55:00   deal #45 sell 14.75 Apple at 314.71 done (based on order #86)
+CS	0	16:07:32.742	Trade	2026.08.27 19:55:00   deal performed [#45 sell 14.75 Apple at 314.71]
+CS	0	16:07:32.742	Trade	2026.08.27 19:55:00   order performed sell 14.75 at 314.71 [#86 sell 14.75 Apple at 314.71]
+CS	0	16:07:32.742	CycleORB (Apple,M5)	2026.08.27 19:55:00   CTrade::OrderSend: market sell 14.75 position #85 Apple [done at 314.71]
+CS	0	16:07:32.742	CycleORB (Apple,M5)	2026.08.27 19:55:00   [CycleORB] CLOSE position #85 magic=26110602 (NY time exit)
+CS	0	16:07:32.746	CycleORB (Apple,M5)	2026.08.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.748	CycleORB (Apple,M5)	2026.08.28 14:30:00   [CycleORB] RANGE NY 2026.08.28 13:30 hi=317.96 lo=315.27 range=269pt atr%=44.9 spread=30.4pt (live 32pt) cost%=11.3 buffer=61pt risk=49.44 trend=1
+CS	0	16:07:32.748	Trade	2026.08.28 14:30:00   buy stop 14.98 Apple at 318.57 sl: 315.27 tp: 322.20 (316.58 / 316.90)
+CS	0	16:07:32.748	CycleORB (Apple,M5)	2026.08.28 14:30:00   CTrade::OrderSend: buy stop 14.98 Apple at 318.57 sl: 315.27 tp: 322.20 [done]
+CS	0	16:07:32.748	CycleORB (Apple,M5)	2026.08.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.98 @318.57 sl=315.27 tp=322.20 magic=26110602 retcode=10009
+CS	0	16:07:32.751	Trade	2026.08.28 14:43:52   order [#87 buy stop 14.98 Apple at 318.57] triggered
+CS	0	16:07:32.751	Trades	2026.08.28 14:43:52   deal #46 buy 14.98 Apple at 318.58 done (based on order #87)
+CS	0	16:07:32.751	Trade	2026.08.28 14:43:52   deal performed [#46 buy 14.98 Apple at 318.58]
+CS	0	16:07:32.751	Trade	2026.08.28 14:43:52   order performed buy 14.98 at 318.58 [#87 buy stop 14.98 Apple at 318.57]
+CS	0	16:07:32.759	Trade	2026.08.28 15:34:39   take profit triggered #87 buy 14.98 Apple 318.58 sl: 315.27 tp: 322.20 [#88 sell 14.98 Apple at 322.20]
+CS	0	16:07:32.759	Trades	2026.08.28 15:34:39   deal #47 sell 14.98 Apple at 322.21 done (based on order #88)
+CS	0	16:07:32.759	Trade	2026.08.28 15:34:39   deal performed [#47 sell 14.98 Apple at 322.21]
+CS	0	16:07:32.759	Trade	2026.08.28 15:34:39   order performed sell 14.98 at 322.21 [#88 sell 14.98 Apple at 322.20]
+CS	0	16:07:32.780	CycleORB (Apple,M5)	2026.08.31 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.786	CycleORB (Apple,M5)	2026.08.31 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:32.811	CycleORB (Apple,M5)	2026.09.01 13:30:30   [CycleORB] CYCLE_END 202608 capital=9888.74 realized=21.60 floating=0.00 pnl=0.22% peak=0.22% state=ACTIVE 
+CS	0	16:07:32.811	CycleORB (Apple,M5)	2026.09.01 13:30:30   [CycleORB] CYCLE_BEGIN 202609 capital=9910.34 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:32.814	CycleORB (Apple,M5)	2026.09.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.817	CycleORB (Apple,M5)	2026.09.01 14:30:00   [CycleORB] SKIP NY 2026.09.01 13:30 hi=322.61 lo=314.57 range=804pt atr%=134.8 spread=30.3pt (live 33pt) cost%=3.8 (range/ATR outside band)
+CS	0	16:07:32.841	CycleORB (Apple,M5)	2026.09.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.844	CycleORB (Apple,M5)	2026.09.02 14:30:00   [CycleORB] RANGE NY 2026.09.02 13:30 hi=327.97 lo=323.94 range=403pt atr%=61.5 spread=29.4pt (live 32pt) cost%=7.3 buffer=59pt risk=49.55 trend=1
+CS	0	16:07:32.844	Trade	2026.09.02 14:30:00   buy stop 10.72 Apple at 328.56 sl: 323.94 tp: 333.64 (324.43 / 324.75)
+CS	0	16:07:32.844	CycleORB (Apple,M5)	2026.09.02 14:30:00   CTrade::OrderSend: buy stop 10.72 Apple at 328.56 sl: 323.94 tp: 333.64 [done]
+CS	0	16:07:32.844	CycleORB (Apple,M5)	2026.09.02 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.72 @328.56 sl=323.94 tp=333.64 magic=26110602 retcode=10009
+CS	0	16:07:32.865	Trade	2026.09.02 17:30:01   order canceled [#89 buy stop 10.72 Apple at 328.56]
+CS	0	16:07:32.865	CycleORB (Apple,M5)	2026.09.02 17:30:01   CTrade::OrderSend: cancel #89 [done]
+CS	0	16:07:32.865	CycleORB (Apple,M5)	2026.09.02 17:30:01   [CycleORB] DELETE order #89 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.882	CycleORB (Apple,M5)	2026.09.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.884	CycleORB (Apple,M5)	2026.09.03 14:30:00   [CycleORB] RANGE NY 2026.09.03 13:30 hi=327.25 lo=323.95 range=330pt atr%=50.0 spread=31.2pt (live 31pt) cost%=9.5 buffer=62pt risk=49.55 trend=1
+CS	0	16:07:32.884	CycleORB (Apple,M5)	2026.09.03 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:32.906	CycleORB (Apple,M5)	2026.09.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.910	CycleORB (Apple,M5)	2026.09.04 14:30:00   [CycleORB] SKIP NY 2026.09.04 13:30 hi=328.71 lo=322.90 range=581pt atr%=84.7 spread=29.8pt (live 33pt) cost%=5.1 (range/ATR outside band)
+CS	0	16:07:32.938	CycleORB (Apple,M5)	2026.09.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.940	CycleORB (Apple,M5)	2026.09.08 14:30:00   [CycleORB] RANGE NY 2026.09.08 13:30 hi=320.32 lo=315.52 range=480pt atr%=65.6 spread=30.9pt (live 38pt) cost%=6.4 buffer=62pt risk=49.55 trend=1
+CS	0	16:07:32.940	Trade	2026.09.08 14:30:00   buy stop 9.14 Apple at 320.94 sl: 315.52 tp: 326.90 (315.47 / 315.85)
+CS	0	16:07:32.940	CycleORB (Apple,M5)	2026.09.08 14:30:00   CTrade::OrderSend: buy stop 9.14 Apple at 320.94 sl: 315.52 tp: 326.90 [done]
+CS	0	16:07:32.940	CycleORB (Apple,M5)	2026.09.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.14 @320.94 sl=315.52 tp=326.90 magic=26110602 retcode=10009
+CS	0	16:07:32.951	Trade	2026.09.08 17:30:00   order canceled [#90 buy stop 9.14 Apple at 320.94]
+CS	0	16:07:32.951	CycleORB (Apple,M5)	2026.09.08 17:30:00   CTrade::OrderSend: cancel #90 [done]
+CS	0	16:07:32.951	CycleORB (Apple,M5)	2026.09.08 17:30:00   [CycleORB] DELETE order #90 magic=26110602 (NY entry window closed)
+CS	0	16:07:32.964	CycleORB (Apple,M5)	2026.09.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:32.966	CycleORB (Apple,M5)	2026.09.09 14:30:00   [CycleORB] RANGE NY 2026.09.09 13:30 hi=317.82 lo=314.85 range=297pt atr%=40.7 spread=29.5pt (live 32pt) cost%=9.9 buffer=59pt risk=49.55 trend=1
+CS	0	16:07:32.966	Trade	2026.09.09 14:30:00   buy stop 13.91 Apple at 318.41 sl: 314.85 tp: 322.33 (314.56 / 314.88)
+CS	0	16:07:32.966	CycleORB (Apple,M5)	2026.09.09 14:30:00   CTrade::OrderSend: buy stop 13.91 Apple at 318.41 sl: 314.85 tp: 322.33 [done]
+CS	0	16:07:32.966	CycleORB (Apple,M5)	2026.09.09 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.91 @318.41 sl=314.85 tp=322.33 magic=26110602 retcode=10009
+CS	0	16:07:32.987	Trade	2026.09.09 17:30:00   order canceled [#91 buy stop 13.91 Apple at 318.41]
+CS	0	16:07:32.987	CycleORB (Apple,M5)	2026.09.09 17:30:00   CTrade::OrderSend: cancel #91 [done]
+CS	0	16:07:32.987	CycleORB (Apple,M5)	2026.09.09 17:30:00   [CycleORB] DELETE order #91 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.008	CycleORB (Apple,M5)	2026.09.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.009	CycleORB (Apple,M5)	2026.09.10 14:30:00   [CycleORB] SKIP NY 2026.09.10 13:30 hi=322.90 lo=316.55 range=635pt atr%=87.3 spread=31.5pt (live 38pt) cost%=5.0 (range/ATR outside band)
+CS	0	16:07:33.038	CycleORB (Apple,M5)	2026.09.11 14:00:02   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.043	CycleORB (Apple,M5)	2026.09.11 14:30:00   [CycleORB] SKIP NY 2026.09.11 13:30 hi=334.04 lo=327.29 range=675pt atr%=91.3 spread=30.3pt (live 30pt) cost%=4.5 (range/ATR outside band)
+CS	0	16:07:33.069	CycleORB (Apple,M5)	2026.09.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.072	CycleORB (Apple,M5)	2026.09.14 14:30:00   [CycleORB] RANGE NY 2026.09.14 13:30 hi=334.88 lo=331.13 range=375pt atr%=48.5 spread=31.1pt (live 35pt) cost%=8.3 buffer=62pt risk=49.55 trend=1
+CS	0	16:07:33.072	Trade	2026.09.14 14:30:00   buy stop 11.33 Apple at 335.50 sl: 331.13 tp: 340.31 (333.04 / 333.39)
+CS	0	16:07:33.072	CycleORB (Apple,M5)	2026.09.14 14:30:00   CTrade::OrderSend: buy stop 11.33 Apple at 335.50 sl: 331.13 tp: 340.31 [done]
+CS	0	16:07:33.072	CycleORB (Apple,M5)	2026.09.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.33 @335.50 sl=331.13 tp=340.31 magic=26110602 retcode=10009
+CS	0	16:07:33.085	Trade	2026.09.14 15:57:35   order [#92 buy stop 11.33 Apple at 335.50] triggered
+CS	0	16:07:33.085	Trades	2026.09.14 15:57:35   deal #48 buy 11.33 Apple at 335.52 done (based on order #92)
+CS	0	16:07:33.085	Trade	2026.09.14 15:57:35   deal performed [#48 buy 11.33 Apple at 335.52]
+CS	0	16:07:33.085	Trade	2026.09.14 15:57:35   order performed buy 11.33 at 335.52 [#92 buy stop 11.33 Apple at 335.50]
+CS	0	16:07:33.105	Trade	2026.09.14 19:55:00   market sell 11.33 Apple, close #92 (333.85 / 334.18)
+CS	0	16:07:33.105	Trades	2026.09.14 19:55:00   deal #49 sell 11.33 Apple at 333.85 done (based on order #93)
+CS	0	16:07:33.105	Trade	2026.09.14 19:55:00   deal performed [#49 sell 11.33 Apple at 333.85]
+CS	0	16:07:33.105	Trade	2026.09.14 19:55:00   order performed sell 11.33 at 333.85 [#93 sell 11.33 Apple at 333.85]
+CS	0	16:07:33.105	CycleORB (Apple,M5)	2026.09.14 19:55:00   CTrade::OrderSend: market sell 11.33 position #92 Apple [done at 333.85]
+CS	0	16:07:33.105	CycleORB (Apple,M5)	2026.09.14 19:55:00   [CycleORB] CLOSE position #92 magic=26110602 (NY time exit)
+CS	0	16:07:33.109	CycleORB (Apple,M5)	2026.09.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.111	CycleORB (Apple,M5)	2026.09.15 14:30:01   [CycleORB] RANGE NY 2026.09.15 13:30 hi=331.40 lo=329.49 range=191pt atr%=24.7 spread=29.6pt (live 37pt) cost%=15.5 buffer=59pt risk=49.55 trend=1
+CS	0	16:07:33.111	Trade	2026.09.15 14:30:01   buy stop 19.82 Apple at 331.99 sl: 329.49 tp: 334.74 (329.34 / 329.71)
+CS	0	16:07:33.111	CycleORB (Apple,M5)	2026.09.15 14:30:01   CTrade::OrderSend: buy stop 19.82 Apple at 331.99 sl: 329.49 tp: 334.74 [done]
+CS	0	16:07:33.111	CycleORB (Apple,M5)	2026.09.15 14:30:01   [CycleORB] PLACE BUY_STOP lots=19.82 @331.99 sl=329.49 tp=334.74 magic=26110602 retcode=10009
+CS	0	16:07:33.129	Trade	2026.09.15 17:30:00   order canceled [#94 buy stop 19.82 Apple at 331.99]
+CS	0	16:07:33.129	CycleORB (Apple,M5)	2026.09.15 17:30:00   CTrade::OrderSend: cancel #94 [done]
+CS	0	16:07:33.129	CycleORB (Apple,M5)	2026.09.15 17:30:00   [CycleORB] DELETE order #94 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.138	CycleORB (Apple,M5)	2026.09.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.140	CycleORB (Apple,M5)	2026.09.16 14:30:00   [CycleORB] RANGE NY 2026.09.16 13:30 hi=335.30 lo=331.72 range=358pt atr%=46.8 spread=31.0pt (live 36pt) cost%=8.6 buffer=62pt risk=49.55 trend=1
+CS	0	16:07:33.140	Trade	2026.09.16 14:30:00   buy stop 11.79 Apple at 335.92 sl: 331.72 tp: 340.54 (333.11 / 333.47)
+CS	0	16:07:33.140	CycleORB (Apple,M5)	2026.09.16 14:30:00   CTrade::OrderSend: buy stop 11.79 Apple at 335.92 sl: 331.72 tp: 340.54 [done]
+CS	0	16:07:33.140	CycleORB (Apple,M5)	2026.09.16 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.79 @335.92 sl=331.72 tp=340.54 magic=26110602 retcode=10009
+CS	0	16:07:33.150	Trade	2026.09.16 17:30:00   order canceled [#95 buy stop 11.79 Apple at 335.92]
+CS	0	16:07:33.150	CycleORB (Apple,M5)	2026.09.16 17:30:00   CTrade::OrderSend: cancel #95 [done]
+CS	0	16:07:33.150	CycleORB (Apple,M5)	2026.09.16 17:30:00   [CycleORB] DELETE order #95 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.176	CycleORB (Apple,M5)	2026.09.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.178	CycleORB (Apple,M5)	2026.09.17 14:30:00   [CycleORB] RANGE NY 2026.09.17 13:30 hi=334.42 lo=330.00 range=442pt atr%=58.7 spread=29.8pt (live 33pt) cost%=6.7 buffer=60pt risk=49.55 trend=1
+CS	0	16:07:33.178	Trade	2026.09.17 14:30:00   buy stop 9.87 Apple at 335.02 sl: 330.00 tp: 340.54 (333.29 / 333.62)
+CS	0	16:07:33.178	CycleORB (Apple,M5)	2026.09.17 14:30:00   CTrade::OrderSend: buy stop 9.87 Apple at 335.02 sl: 330.00 tp: 340.54 [done]
+CS	0	16:07:33.178	CycleORB (Apple,M5)	2026.09.17 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.87 @335.02 sl=330.00 tp=340.54 magic=26110602 retcode=10009
+CS	0	16:07:33.188	Trade	2026.09.17 15:54:56   order [#96 buy stop 9.87 Apple at 335.02] triggered
+CS	0	16:07:33.188	Trades	2026.09.17 15:54:56   deal #50 buy 9.87 Apple at 335.05 done (based on order #96)
+CS	0	16:07:33.188	Trade	2026.09.17 15:54:56   deal performed [#50 buy 9.87 Apple at 335.05]
+CS	0	16:07:33.188	Trade	2026.09.17 15:54:56   order performed buy 9.87 at 335.05 [#96 buy stop 9.87 Apple at 335.02]
+CS	0	16:07:33.214	Trade	2026.09.17 19:55:00   market sell 9.87 Apple, close #96 (337.30 / 337.59)
+CS	0	16:07:33.214	Trades	2026.09.17 19:55:00   deal #51 sell 9.87 Apple at 337.30 done (based on order #97)
+CS	0	16:07:33.214	Trade	2026.09.17 19:55:00   deal performed [#51 sell 9.87 Apple at 337.30]
+CS	0	16:07:33.214	Trade	2026.09.17 19:55:00   order performed sell 9.87 at 337.30 [#97 sell 9.87 Apple at 337.30]
+CS	0	16:07:33.214	CycleORB (Apple,M5)	2026.09.17 19:55:00   CTrade::OrderSend: market sell 9.87 position #96 Apple [done at 337.30]
+CS	0	16:07:33.214	CycleORB (Apple,M5)	2026.09.17 19:55:00   [CycleORB] CLOSE position #96 magic=26110602 (NY time exit)
+CS	0	16:07:33.217	CycleORB (Apple,M5)	2026.09.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.219	CycleORB (Apple,M5)	2026.09.18 14:30:00   [CycleORB] RANGE NY 2026.09.18 13:30 hi=338.17 lo=334.65 range=352pt atr%=45.9 spread=30.5pt (live 38pt) cost%=8.7 buffer=61pt risk=49.55 trend=1
+CS	0	16:07:33.219	Trade	2026.09.18 14:30:00   buy stop 11.99 Apple at 338.78 sl: 334.65 tp: 343.32 (333.31 / 333.69)
+CS	0	16:07:33.219	CycleORB (Apple,M5)	2026.09.18 14:30:00   CTrade::OrderSend: buy stop 11.99 Apple at 338.78 sl: 334.65 tp: 343.32 [done]
+CS	0	16:07:33.219	CycleORB (Apple,M5)	2026.09.18 14:30:00   [CycleORB] PLACE BUY_STOP lots=11.99 @338.78 sl=334.65 tp=343.32 magic=26110602 retcode=10009
+CS	0	16:07:33.230	Trade	2026.09.18 17:30:03   order canceled [#98 buy stop 11.99 Apple at 338.78]
+CS	0	16:07:33.230	CycleORB (Apple,M5)	2026.09.18 17:30:03   CTrade::OrderSend: cancel #98 [done]
+CS	0	16:07:33.230	CycleORB (Apple,M5)	2026.09.18 17:30:03   [CycleORB] DELETE order #98 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.245	CycleORB (Apple,M5)	2026.09.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.248	CycleORB (Apple,M5)	2026.09.21 14:30:00   [CycleORB] RANGE NY 2026.09.21 13:30 hi=336.12 lo=332.88 range=324pt atr%=43.0 spread=30.1pt (live 33pt) cost%=9.3 buffer=60pt risk=49.55 trend=1
+CS	0	16:07:33.248	CycleORB (Apple,M5)	2026.09.21 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:33.270	CycleORB (Apple,M5)	2026.09.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.272	CycleORB (Apple,M5)	2026.09.22 14:30:00   [CycleORB] RANGE NY 2026.09.22 13:30 hi=345.16 lo=340.07 range=509pt atr%=68.4 spread=30.7pt (live 31pt) cost%=6.0 buffer=61pt risk=49.55 trend=1
+CS	0	16:07:33.272	Trade	2026.09.22 14:30:00   buy stop 8.69 Apple at 345.77 sl: 340.07 tp: 352.04 (340.25 / 340.56)
+CS	0	16:07:33.273	CycleORB (Apple,M5)	2026.09.22 14:30:00   CTrade::OrderSend: buy stop 8.69 Apple at 345.77 sl: 340.07 tp: 352.04 [done]
+CS	0	16:07:33.273	CycleORB (Apple,M5)	2026.09.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=8.69 @345.77 sl=340.07 tp=352.04 magic=26110602 retcode=10009
+CS	0	16:07:33.289	Trade	2026.09.22 17:30:01   order canceled [#99 buy stop 8.69 Apple at 345.77]
+CS	0	16:07:33.289	CycleORB (Apple,M5)	2026.09.22 17:30:01   CTrade::OrderSend: cancel #99 [done]
+CS	0	16:07:33.289	CycleORB (Apple,M5)	2026.09.22 17:30:01   [CycleORB] DELETE order #99 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.301	CycleORB (Apple,M5)	2026.09.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.303	CycleORB (Apple,M5)	2026.09.23 14:30:00   [CycleORB] RANGE NY 2026.09.23 13:30 hi=341.58 lo=336.81 range=477pt atr%=67.9 spread=30.1pt (live 37pt) cost%=6.3 buffer=60pt risk=49.55 trend=1
+CS	0	16:07:33.303	Trade	2026.09.23 14:30:00   buy stop 9.22 Apple at 342.18 sl: 336.81 tp: 348.09 (337.18 / 337.55)
+CS	0	16:07:33.303	CycleORB (Apple,M5)	2026.09.23 14:30:00   CTrade::OrderSend: buy stop 9.22 Apple at 342.18 sl: 336.81 tp: 348.09 [done]
+CS	0	16:07:33.303	CycleORB (Apple,M5)	2026.09.23 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.22 @342.18 sl=336.81 tp=348.09 magic=26110602 retcode=10009
+CS	0	16:07:33.316	Trade	2026.09.23 17:30:00   order canceled [#100 buy stop 9.22 Apple at 342.18]
+CS	0	16:07:33.318	CycleORB (Apple,M5)	2026.09.23 17:30:00   CTrade::OrderSend: cancel #100 [done]
+CS	0	16:07:33.318	CycleORB (Apple,M5)	2026.09.23 17:30:00   [CycleORB] DELETE order #100 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.326	CycleORB (Apple,M5)	2026.09.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.328	CycleORB (Apple,M5)	2026.09.24 14:30:00   [CycleORB] RANGE NY 2026.09.24 13:30 hi=337.28 lo=334.08 range=320pt atr%=44.9 spread=32.2pt (live 39pt) cost%=10.1 buffer=64pt risk=49.55 trend=1
+CS	0	16:07:33.328	Trade	2026.09.24 14:30:00   buy stop 12.9 Apple at 337.92 sl: 334.08 tp: 342.14 (337.29 / 337.68)
+CS	0	16:07:33.328	CycleORB (Apple,M5)	2026.09.24 14:30:00   CTrade::OrderSend: buy stop 12.90 Apple at 337.92 sl: 334.08 tp: 342.14 [done]
+CS	0	16:07:33.328	CycleORB (Apple,M5)	2026.09.24 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.90 @337.92 sl=334.08 tp=342.14 magic=26110602 retcode=10009
+CS	0	16:07:33.334	Trade	2026.09.24 16:14:29   order [#101 buy stop 12.9 Apple at 337.92] triggered
+CS	0	16:07:33.334	Trades	2026.09.24 16:14:29   deal #52 buy 12.9 Apple at 337.92 done (based on order #101)
+CS	0	16:07:33.334	Trade	2026.09.24 16:14:29   deal performed [#52 buy 12.9 Apple at 337.92]
+CS	0	16:07:33.334	Trade	2026.09.24 16:14:29   order performed buy 12.9 at 337.92 [#101 buy stop 12.9 Apple at 337.92]
+CS	0	16:07:33.348	Trade	2026.09.24 19:55:00   market sell 12.9 Apple, close #101 (336.56 / 336.89)
+CS	0	16:07:33.348	Trades	2026.09.24 19:55:00   deal #53 sell 12.9 Apple at 336.56 done (based on order #102)
+CS	0	16:07:33.348	Trade	2026.09.24 19:55:00   deal performed [#53 sell 12.9 Apple at 336.56]
+CS	0	16:07:33.348	Trade	2026.09.24 19:55:00   order performed sell 12.9 at 336.56 [#102 sell 12.9 Apple at 336.56]
+CS	0	16:07:33.348	CycleORB (Apple,M5)	2026.09.24 19:55:00   CTrade::OrderSend: market sell 12.90 position #101 Apple [done at 336.56]
+CS	0	16:07:33.348	CycleORB (Apple,M5)	2026.09.24 19:55:00   [CycleORB] CLOSE position #101 magic=26110602 (NY time exit)
+CS	0	16:07:33.351	CycleORB (Apple,M5)	2026.09.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.353	CycleORB (Apple,M5)	2026.09.25 14:30:00   [CycleORB] RANGE NY 2026.09.25 13:30 hi=336.55 lo=334.35 range=220pt atr%=31.5 spread=29.7pt (live 32pt) cost%=13.5 buffer=59pt risk=49.55 trend=1
+CS	0	16:07:33.353	Trade	2026.09.25 14:30:00   buy stop 17.76 Apple at 337.14 sl: 334.35 tp: 340.21 (336.20 / 336.52)
+CS	0	16:07:33.353	CycleORB (Apple,M5)	2026.09.25 14:30:00   CTrade::OrderSend: buy stop 17.76 Apple at 337.14 sl: 334.35 tp: 340.21 [done]
+CS	0	16:07:33.353	CycleORB (Apple,M5)	2026.09.25 14:30:00   [CycleORB] PLACE BUY_STOP lots=17.76 @337.14 sl=334.35 tp=340.21 magic=26110602 retcode=10009
+CS	0	16:07:33.354	Trade	2026.09.25 14:32:55   order [#103 buy stop 17.76 Apple at 337.14] triggered
+CS	0	16:07:33.354	Trades	2026.09.25 14:32:55   deal #54 buy 17.76 Apple at 337.15 done (based on order #103)
+CS	0	16:07:33.354	Trade	2026.09.25 14:32:55   deal performed [#54 buy 17.76 Apple at 337.15]
+CS	0	16:07:33.354	Trade	2026.09.25 14:32:55   order performed buy 17.76 at 337.15 [#103 buy stop 17.76 Apple at 337.14]
+CS	0	16:07:33.371	Trade	2026.09.25 17:32:57   take profit triggered #103 buy 17.76 Apple 337.15 sl: 334.35 tp: 340.21 [#104 sell 17.76 Apple at 340.21]
+CS	0	16:07:33.371	Trades	2026.09.25 17:32:57   deal #55 sell 17.76 Apple at 340.23 done (based on order #104)
+CS	0	16:07:33.371	Trade	2026.09.25 17:32:57   deal performed [#55 sell 17.76 Apple at 340.23]
+CS	0	16:07:33.371	Trade	2026.09.25 17:32:57   order performed sell 17.76 at 340.23 [#104 sell 17.76 Apple at 340.21]
+CS	0	16:07:33.382	CycleORB (Apple,M5)	2026.09.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.383	CycleORB (Apple,M5)	2026.09.28 14:30:00   [CycleORB] RANGE NY 2026.09.28 13:30 hi=342.81 lo=340.14 range=267pt atr%=39.8 spread=30.9pt (live 36pt) cost%=11.6 buffer=62pt risk=49.55 trend=1
+CS	0	16:07:33.383	Trade	2026.09.28 14:30:00   buy stop 15.06 Apple at 343.43 sl: 340.14 tp: 347.05 (340.66 / 341.02)
+CS	0	16:07:33.383	CycleORB (Apple,M5)	2026.09.28 14:30:00   CTrade::OrderSend: buy stop 15.06 Apple at 343.43 sl: 340.14 tp: 347.05 [done]
+CS	0	16:07:33.383	CycleORB (Apple,M5)	2026.09.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.06 @343.43 sl=340.14 tp=347.05 magic=26110602 retcode=10009
+CS	0	16:07:33.394	Trade	2026.09.28 17:30:00   order canceled [#105 buy stop 15.06 Apple at 343.43]
+CS	0	16:07:33.394	CycleORB (Apple,M5)	2026.09.28 17:30:00   CTrade::OrderSend: cancel #105 [done]
+CS	0	16:07:33.394	CycleORB (Apple,M5)	2026.09.28 17:30:00   [CycleORB] DELETE order #105 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.401	CycleORB (Apple,M5)	2026.09.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.402	CycleORB (Apple,M5)	2026.09.29 14:30:00   [CycleORB] RANGE NY 2026.09.29 13:30 hi=334.36 lo=331.86 range=250pt atr%=37.5 spread=30.4pt (live 35pt) cost%=12.2 buffer=61pt risk=49.55 trend=1
+CS	0	16:07:33.402	Trade	2026.09.29 14:30:00   buy stop 15.93 Apple at 334.97 sl: 331.86 tp: 338.39 (331.87 / 332.22)
+CS	0	16:07:33.402	CycleORB (Apple,M5)	2026.09.29 14:30:00   CTrade::OrderSend: buy stop 15.93 Apple at 334.97 sl: 331.86 tp: 338.39 [done]
+CS	0	16:07:33.402	CycleORB (Apple,M5)	2026.09.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.93 @334.97 sl=331.86 tp=338.39 magic=26110602 retcode=10009
+CS	0	16:07:33.412	Trade	2026.09.29 17:30:01   order canceled [#106 buy stop 15.93 Apple at 334.97]
+CS	0	16:07:33.412	CycleORB (Apple,M5)	2026.09.29 17:30:01   CTrade::OrderSend: cancel #106 [done]
+CS	0	16:07:33.412	CycleORB (Apple,M5)	2026.09.29 17:30:01   [CycleORB] DELETE order #106 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.421	CycleORB (Apple,M5)	2026.09.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.423	CycleORB (Apple,M5)	2026.09.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:33.436	CycleORB (Apple,M5)	2026.10.01 13:30:30   [CycleORB] CYCLE_END 202609 capital=9910.34 realized=40.45 floating=0.00 pnl=0.41% peak=0.41% state=ACTIVE 
+CS	0	16:07:33.436	CycleORB (Apple,M5)	2026.10.01 13:30:30   [CycleORB] CYCLE_BEGIN 202610 capital=9950.79 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:07:33.439	CycleORB (Apple,M5)	2026.10.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.441	CycleORB (Apple,M5)	2026.10.01 14:30:00   [CycleORB] RANGE NY 2026.10.01 13:30 hi=332.27 lo=328.06 range=421pt atr%=63.6 spread=31.3pt (live 34pt) cost%=7.4 buffer=63pt risk=49.75 trend=1
+CS	0	16:07:33.441	Trade	2026.10.01 14:30:00   buy stop 10.27 Apple at 332.90 sl: 328.06 tp: 338.22 (330.74 / 331.08)
+CS	0	16:07:33.441	CycleORB (Apple,M5)	2026.10.01 14:30:00   CTrade::OrderSend: buy stop 10.27 Apple at 332.90 sl: 328.06 tp: 338.22 [done]
+CS	0	16:07:33.441	CycleORB (Apple,M5)	2026.10.01 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.27 @332.90 sl=328.06 tp=338.22 magic=26110602 retcode=10009
+CS	0	16:07:33.457	Trade	2026.10.01 17:30:00   order canceled [#107 buy stop 10.27 Apple at 332.90]
+CS	0	16:07:33.457	CycleORB (Apple,M5)	2026.10.01 17:30:00   CTrade::OrderSend: cancel #107 [done]
+CS	0	16:07:33.457	CycleORB (Apple,M5)	2026.10.01 17:30:00   [CycleORB] DELETE order #107 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.469	CycleORB (Apple,M5)	2026.10.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.471	CycleORB (Apple,M5)	2026.10.02 14:30:00   [CycleORB] RANGE NY 2026.10.02 13:30 hi=332.87 lo=330.43 range=244pt atr%=37.7 spread=30.9pt (live 31pt) cost%=12.7 buffer=62pt risk=49.75 trend=-1
+CS	0	16:07:33.471	Trade	2026.10.02 14:30:00   sell stop 16.25 Apple at 329.81 sl: 332.87 tp: 326.44 (334.15 / 334.46)
+CS	0	16:07:33.471	CycleORB (Apple,M5)	2026.10.02 14:30:00   CTrade::OrderSend: sell stop 16.25 Apple at 329.81 sl: 332.87 tp: 326.44 [done]
+CS	0	16:07:33.471	CycleORB (Apple,M5)	2026.10.02 14:30:00   [CycleORB] PLACE SELL_STOP lots=16.25 @329.81 sl=332.87 tp=326.44 magic=26110602 retcode=10009
+CS	0	16:07:33.483	Trade	2026.10.02 17:30:00   order canceled [#108 sell stop 16.25 Apple at 329.81]
+CS	0	16:07:33.483	CycleORB (Apple,M5)	2026.10.02 17:30:00   CTrade::OrderSend: cancel #108 [done]
+CS	0	16:07:33.483	CycleORB (Apple,M5)	2026.10.02 17:30:00   [CycleORB] DELETE order #108 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.492	CycleORB (Apple,M5)	2026.10.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.494	CycleORB (Apple,M5)	2026.10.05 14:30:00   [CycleORB] RANGE NY 2026.10.05 13:30 hi=336.00 lo=331.36 range=464pt atr%=71.7 spread=31.6pt (live 41pt) cost%=6.8 buffer=63pt risk=49.75 trend=1
+CS	0	16:07:33.494	Trade	2026.10.05 14:30:00   buy stop 9.44 Apple at 336.63 sl: 331.36 tp: 342.43 (333.23 / 333.64)
+CS	0	16:07:33.494	CycleORB (Apple,M5)	2026.10.05 14:30:00   CTrade::OrderSend: buy stop 9.44 Apple at 336.63 sl: 331.36 tp: 342.43 [done]
+CS	0	16:07:33.494	CycleORB (Apple,M5)	2026.10.05 14:30:00   [CycleORB] PLACE BUY_STOP lots=9.44 @336.63 sl=331.36 tp=342.43 magic=26110602 retcode=10009
+CS	0	16:07:33.505	Trade	2026.10.05 17:30:00   order canceled [#109 buy stop 9.44 Apple at 336.63]
+CS	0	16:07:33.505	CycleORB (Apple,M5)	2026.10.05 17:30:00   CTrade::OrderSend: cancel #109 [done]
+CS	0	16:07:33.505	CycleORB (Apple,M5)	2026.10.05 17:30:00   [CycleORB] DELETE order #109 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.512	CycleORB (Apple,M5)	2026.10.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.515	CycleORB (Apple,M5)	2026.10.06 14:30:00   [CycleORB] RANGE NY 2026.10.06 13:30 hi=333.46 lo=330.46 range=300pt atr%=46.1 spread=31.2pt (live 42pt) cost%=10.4 buffer=62pt risk=49.75 trend=1
+CS	0	16:07:33.515	Trade	2026.10.06 14:30:00   buy stop 13.74 Apple at 334.08 sl: 330.46 tp: 338.06 (333.22 / 333.64)
+CS	0	16:07:33.515	CycleORB (Apple,M5)	2026.10.06 14:30:00   CTrade::OrderSend: buy stop 13.74 Apple at 334.08 sl: 330.46 tp: 338.06 [done]
+CS	0	16:07:33.515	CycleORB (Apple,M5)	2026.10.06 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.74 @334.08 sl=330.46 tp=338.06 magic=26110602 retcode=10009
+CS	0	16:07:33.516	Trade	2026.10.06 14:41:54   order [#110 buy stop 13.74 Apple at 334.08] triggered
+CS	0	16:07:33.516	Trades	2026.10.06 14:41:54   deal #56 buy 13.74 Apple at 334.14 done (based on order #110)
+CS	0	16:07:33.516	Trade	2026.10.06 14:41:54   deal performed [#56 buy 13.74 Apple at 334.14]
+CS	0	16:07:33.516	Trade	2026.10.06 14:41:54   order performed buy 13.74 at 334.14 [#110 buy stop 13.74 Apple at 334.08]
+CS	0	16:07:33.536	Trade	2026.10.06 19:55:00   market sell 13.74 Apple, close #110 (333.19 / 333.57)
+CS	0	16:07:33.537	Trades	2026.10.06 19:55:00   deal #57 sell 13.74 Apple at 333.19 done (based on order #111)
+CS	0	16:07:33.537	Trade	2026.10.06 19:55:00   deal performed [#57 sell 13.74 Apple at 333.19]
+CS	0	16:07:33.537	Trade	2026.10.06 19:55:00   order performed sell 13.74 at 333.19 [#111 sell 13.74 Apple at 333.19]
+CS	0	16:07:33.537	CycleORB (Apple,M5)	2026.10.06 19:55:00   CTrade::OrderSend: market sell 13.74 position #110 Apple [done at 333.19]
+CS	0	16:07:33.537	CycleORB (Apple,M5)	2026.10.06 19:55:00   [CycleORB] CLOSE position #110 magic=26110602 (NY time exit)
+CS	0	16:07:33.541	CycleORB (Apple,M5)	2026.10.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.542	CycleORB (Apple,M5)	2026.10.07 14:30:00   [CycleORB] SKIP NY 2026.10.07 13:30 hi=338.37 lo=332.62 range=575pt atr%=89.4 spread=31.5pt (live 33pt) cost%=5.5 (range/ATR outside band)
+CS	0	16:07:33.554	CycleORB (Apple,M5)	2026.10.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.555	CycleORB (Apple,M5)	2026.10.08 14:30:00   [CycleORB] RANGE NY 2026.10.08 13:30 hi=337.42 lo=335.76 range=166pt atr%=26.5 spread=32.1pt (live 37pt) cost%=19.4 buffer=64pt risk=49.75 trend=1
+CS	0	16:07:33.555	Trade	2026.10.08 14:30:00   buy stop 21.63 Apple at 338.06 sl: 335.76 tp: 340.59 (337.42 / 337.79)
+CS	0	16:07:33.555	CycleORB (Apple,M5)	2026.10.08 14:30:00   CTrade::OrderSend: buy stop 21.63 Apple at 338.06 sl: 335.76 tp: 340.59 [done]
+CS	0	16:07:33.555	CycleORB (Apple,M5)	2026.10.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.63 @338.06 sl=335.76 tp=340.59 magic=26110602 retcode=10009
+CS	0	16:07:33.555	Trade	2026.10.08 14:31:52   order [#112 buy stop 21.63 Apple at 338.06] triggered
+CS	0	16:07:33.555	Trades	2026.10.08 14:31:52   deal #58 buy 21.63 Apple at 338.06 done (based on order #112)
+CS	0	16:07:33.555	Trade	2026.10.08 14:31:52   deal performed [#58 buy 21.63 Apple at 338.06]
+CS	0	16:07:33.555	Trade	2026.10.08 14:31:52   order performed buy 21.63 at 338.06 [#112 buy stop 21.63 Apple at 338.06]
+CS	0	16:07:33.575	Trade	2026.10.08 18:48:57   take profit triggered #112 buy 21.63 Apple 338.06 sl: 335.76 tp: 340.59 [#113 sell 21.63 Apple at 340.59]
+CS	0	16:07:33.575	Trades	2026.10.08 18:48:57   deal #59 sell 21.63 Apple at 340.60 done (based on order #113)
+CS	0	16:07:33.575	Trade	2026.10.08 18:48:57   deal performed [#59 sell 21.63 Apple at 340.60]
+CS	0	16:07:33.575	Trade	2026.10.08 18:48:57   order performed sell 21.63 at 340.60 [#113 sell 21.63 Apple at 340.59]
+CS	0	16:07:33.583	CycleORB (Apple,M5)	2026.10.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.586	CycleORB (Apple,M5)	2026.10.09 14:30:00   [CycleORB] RANGE NY 2026.10.09 13:30 hi=333.60 lo=330.53 range=307pt atr%=49.1 spread=30.6pt (live 37pt) cost%=10.0 buffer=61pt risk=49.75 trend=1
+CS	0	16:07:33.586	Trade	2026.10.09 14:30:00   buy stop 13.52 Apple at 334.21 sl: 330.53 tp: 338.26 (332.93 / 333.30)
+CS	0	16:07:33.586	CycleORB (Apple,M5)	2026.10.09 14:30:00   CTrade::OrderSend: buy stop 13.52 Apple at 334.21 sl: 330.53 tp: 338.26 [done]
+CS	0	16:07:33.586	CycleORB (Apple,M5)	2026.10.09 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.52 @334.21 sl=330.53 tp=338.26 magic=26110602 retcode=10009
+CS	0	16:07:33.588	Trade	2026.10.09 14:58:27   order [#114 buy stop 13.52 Apple at 334.21] triggered
+CS	0	16:07:33.588	Trades	2026.10.09 14:58:27   deal #60 buy 13.52 Apple at 334.21 done (based on order #114)
+CS	0	16:07:33.588	Trade	2026.10.09 14:58:27   deal performed [#60 buy 13.52 Apple at 334.21]
+CS	0	16:07:33.588	Trade	2026.10.09 14:58:27   order performed buy 13.52 at 334.21 [#114 buy stop 13.52 Apple at 334.21]
+CS	0	16:07:33.602	Trade	2026.10.09 19:11:02   take profit triggered #114 buy 13.52 Apple 334.21 sl: 330.53 tp: 338.26 [#115 sell 13.52 Apple at 338.26]
+CS	0	16:07:33.602	Trades	2026.10.09 19:11:02   deal #61 sell 13.52 Apple at 338.28 done (based on order #115)
+CS	0	16:07:33.602	Trade	2026.10.09 19:11:02   deal performed [#61 sell 13.52 Apple at 338.28]
+CS	0	16:07:33.602	Trade	2026.10.09 19:11:02   order performed sell 13.52 at 338.28 [#115 sell 13.52 Apple at 338.26]
+CS	0	16:07:33.607	CycleORB (Apple,M5)	2026.10.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.608	CycleORB (Apple,M5)	2026.10.12 14:30:01   [CycleORB] RANGE NY 2026.10.12 13:30 hi=342.10 lo=339.57 range=253pt atr%=39.1 spread=31.7pt (live 33pt) cost%=12.5 buffer=63pt risk=49.75 trend=1
+CS	0	16:07:33.608	Trade	2026.10.12 14:30:01   buy stop 15.74 Apple at 342.73 sl: 339.57 tp: 346.21 (341.19 / 341.52)
+CS	0	16:07:33.608	CycleORB (Apple,M5)	2026.10.12 14:30:01   CTrade::OrderSend: buy stop 15.74 Apple at 342.73 sl: 339.57 tp: 346.21 [done]
+CS	0	16:07:33.608	CycleORB (Apple,M5)	2026.10.12 14:30:01   [CycleORB] PLACE BUY_STOP lots=15.74 @342.73 sl=339.57 tp=346.21 magic=26110602 retcode=10009
+CS	0	16:07:33.617	Trade	2026.10.12 17:30:01   order canceled [#116 buy stop 15.74 Apple at 342.73]
+CS	0	16:07:33.617	CycleORB (Apple,M5)	2026.10.12 17:30:01   CTrade::OrderSend: cancel #116 [done]
+CS	0	16:07:33.617	CycleORB (Apple,M5)	2026.10.12 17:30:01   [CycleORB] DELETE order #116 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.628	CycleORB (Apple,M5)	2026.10.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.630	CycleORB (Apple,M5)	2026.10.13 14:30:00   [CycleORB] SKIP NY 2026.10.13 13:30 hi=347.89 lo=340.89 range=700pt atr%=108.8 spread=31.8pt (live 32pt) cost%=4.5 (range/ATR outside band)
+CS	0	16:07:33.646	CycleORB (Apple,M5)	2026.10.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.648	CycleORB (Apple,M5)	2026.10.14 14:30:00   [CycleORB] RANGE NY 2026.10.14 13:30 hi=346.87 lo=343.50 range=337pt atr%=51.7 spread=30.5pt (live 34pt) cost%=9.0 buffer=61pt risk=49.75 trend=1
+CS	0	16:07:33.648	Trade	2026.10.14 14:30:00   buy stop 12.5 Apple at 347.48 sl: 343.50 tp: 351.86 (345.77 / 346.11)
+CS	0	16:07:33.648	CycleORB (Apple,M5)	2026.10.14 14:30:00   CTrade::OrderSend: buy stop 12.50 Apple at 347.48 sl: 343.50 tp: 351.86 [done]
+CS	0	16:07:33.648	CycleORB (Apple,M5)	2026.10.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.50 @347.48 sl=343.50 tp=351.86 magic=26110602 retcode=10009
+CS	0	16:07:33.663	Trade	2026.10.14 17:30:00   order canceled [#117 buy stop 12.5 Apple at 347.48]
+CS	0	16:07:33.663	CycleORB (Apple,M5)	2026.10.14 17:30:00   CTrade::OrderSend: cancel #117 [done]
+CS	0	16:07:33.663	CycleORB (Apple,M5)	2026.10.14 17:30:00   [CycleORB] DELETE order #117 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.673	CycleORB (Apple,M5)	2026.10.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.675	CycleORB (Apple,M5)	2026.10.15 14:30:00   [CycleORB] RANGE NY 2026.10.15 13:30 hi=347.35 lo=344.60 range=275pt atr%=41.7 spread=31.1pt (live 42pt) cost%=11.3 buffer=62pt risk=49.75 trend=1
+CS	0	16:07:33.675	Trade	2026.10.15 14:30:00   buy stop 14.76 Apple at 347.97 sl: 344.60 tp: 351.68 (344.73 / 345.15)
+CS	0	16:07:33.675	CycleORB (Apple,M5)	2026.10.15 14:30:00   CTrade::OrderSend: buy stop 14.76 Apple at 347.97 sl: 344.60 tp: 351.68 [done]
+CS	0	16:07:33.675	CycleORB (Apple,M5)	2026.10.15 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.76 @347.97 sl=344.60 tp=351.68 magic=26110602 retcode=10009
+CS	0	16:07:33.686	Trade	2026.10.15 17:30:00   order canceled [#118 buy stop 14.76 Apple at 347.97]
+CS	0	16:07:33.686	CycleORB (Apple,M5)	2026.10.15 17:30:00   CTrade::OrderSend: cancel #118 [done]
+CS	0	16:07:33.686	CycleORB (Apple,M5)	2026.10.15 17:30:00   [CycleORB] DELETE order #118 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.698	CycleORB (Apple,M5)	2026.10.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.701	CycleORB (Apple,M5)	2026.10.16 14:30:00   [CycleORB] SKIP NY 2026.10.16 13:30 hi=347.64 lo=341.87 range=577pt atr%=88.7 spread=30.9pt (live 39pt) cost%=5.4 (range/ATR outside band)
+CS	0	16:07:33.724	CycleORB (Apple,M5)	2026.10.19 14:10:36   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.725	CycleORB (Apple,M5)	2026.10.19 14:30:01   [CycleORB] SKIP NY: only -1 M1 bars in range window
+CS	0	16:07:33.738	CycleORB (Apple,M5)	2026.10.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.740	CycleORB (Apple,M5)	2026.10.20 14:30:00   [CycleORB] RANGE NY 2026.10.20 13:30 hi=342.82 lo=339.42 range=340pt atr%=53.9 spread=32.3pt (live 33pt) cost%=9.5 buffer=65pt risk=49.75 trend=1
+CS	0	16:07:33.740	Trade	2026.10.20 14:30:00   buy stop 12.28 Apple at 343.47 sl: 339.42 tp: 347.93 (341.92 / 342.25)
+CS	0	16:07:33.740	CycleORB (Apple,M5)	2026.10.20 14:30:00   CTrade::OrderSend: buy stop 12.28 Apple at 343.47 sl: 339.42 tp: 347.93 [done]
+CS	0	16:07:33.740	CycleORB (Apple,M5)	2026.10.20 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.28 @343.47 sl=339.42 tp=347.93 magic=26110602 retcode=10009
+CS	0	16:07:33.752	Trade	2026.10.20 17:30:00   order canceled [#119 buy stop 12.28 Apple at 343.47]
+CS	0	16:07:33.752	CycleORB (Apple,M5)	2026.10.20 17:30:00   CTrade::OrderSend: cancel #119 [done]
+CS	0	16:07:33.752	CycleORB (Apple,M5)	2026.10.20 17:30:00   [CycleORB] DELETE order #119 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.758	CycleORB (Apple,M5)	2026.10.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.760	CycleORB (Apple,M5)	2026.10.21 14:30:00   [CycleORB] RANGE NY 2026.10.21 13:30 hi=341.17 lo=338.68 range=249pt atr%=42.3 spread=31.7pt (live 35pt) cost%=12.7 buffer=63pt risk=49.75 trend=1
+CS	0	16:07:33.760	Trade	2026.10.21 14:30:00   buy stop 15.94 Apple at 341.80 sl: 338.68 tp: 345.23 (340.21 / 340.56)
+CS	0	16:07:33.760	CycleORB (Apple,M5)	2026.10.21 14:30:00   CTrade::OrderSend: buy stop 15.94 Apple at 341.80 sl: 338.68 tp: 345.23 [done]
+CS	0	16:07:33.760	CycleORB (Apple,M5)	2026.10.21 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.94 @341.80 sl=338.68 tp=345.23 magic=26110602 retcode=10009
+CS	0	16:07:33.761	Trade	2026.10.21 14:54:23   order [#120 buy stop 15.94 Apple at 341.80] triggered
+CS	0	16:07:33.761	Trades	2026.10.21 14:54:23   deal #62 buy 15.94 Apple at 341.85 done (based on order #120)
+CS	0	16:07:33.761	Trade	2026.10.21 14:54:23   deal performed [#62 buy 15.94 Apple at 341.85]
+CS	0	16:07:33.761	Trade	2026.10.21 14:54:23   order performed buy 15.94 at 341.85 [#120 buy stop 15.94 Apple at 341.80]
+CS	0	16:07:33.782	Trade	2026.10.21 19:55:00   market sell 15.94 Apple, close #120 (344.04 / 344.54)
+CS	0	16:07:33.782	Trades	2026.10.21 19:55:00   deal #63 sell 15.94 Apple at 344.04 done (based on order #121)
+CS	0	16:07:33.782	Trade	2026.10.21 19:55:00   deal performed [#63 sell 15.94 Apple at 344.04]
+CS	0	16:07:33.782	Trade	2026.10.21 19:55:00   order performed sell 15.94 at 344.04 [#121 sell 15.94 Apple at 344.04]
+CS	0	16:07:33.782	CycleORB (Apple,M5)	2026.10.21 19:55:00   CTrade::OrderSend: market sell 15.94 position #120 Apple [done at 344.04]
+CS	0	16:07:33.782	CycleORB (Apple,M5)	2026.10.21 19:55:00   [CycleORB] CLOSE position #120 magic=26110602 (NY time exit)
+CS	0	16:07:33.786	CycleORB (Apple,M5)	2026.10.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.790	CycleORB (Apple,M5)	2026.10.22 14:30:00   [CycleORB] RANGE NY 2026.10.22 13:30 hi=347.04 lo=344.45 range=259pt atr%=44.6 spread=32.6pt (live 38pt) cost%=12.6 buffer=65pt risk=49.75 trend=1
+CS	0	16:07:33.790	Trade	2026.10.22 14:30:00   buy stop 15.35 Apple at 347.69 sl: 344.45 tp: 351.25 (343.07 / 343.45)
+CS	0	16:07:33.790	CycleORB (Apple,M5)	2026.10.22 14:30:00   CTrade::OrderSend: buy stop 15.35 Apple at 347.69 sl: 344.45 tp: 351.25 [done]
+CS	0	16:07:33.790	CycleORB (Apple,M5)	2026.10.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.35 @347.69 sl=344.45 tp=351.25 magic=26110602 retcode=10009
+CS	0	16:07:33.805	Trade	2026.10.22 17:30:00   order canceled [#122 buy stop 15.35 Apple at 347.69]
+CS	0	16:07:33.805	CycleORB (Apple,M5)	2026.10.22 17:30:00   CTrade::OrderSend: cancel #122 [done]
+CS	0	16:07:33.805	CycleORB (Apple,M5)	2026.10.22 17:30:00   [CycleORB] DELETE order #122 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.815	CycleORB (Apple,M5)	2026.10.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.817	CycleORB (Apple,M5)	2026.10.23 14:30:00   [CycleORB] RANGE NY 2026.10.23 13:30 hi=351.44 lo=348.47 range=297pt atr%=50.0 spread=32.2pt (live 41pt) cost%=10.8 buffer=64pt risk=49.75 trend=1
+CS	0	16:07:33.817	Trade	2026.10.23 14:30:00   buy stop 13.78 Apple at 352.08 sl: 348.47 tp: 356.05 (347.08 / 347.49)
+CS	0	16:07:33.817	CycleORB (Apple,M5)	2026.10.23 14:30:00   CTrade::OrderSend: buy stop 13.78 Apple at 352.08 sl: 348.47 tp: 356.05 [done]
+CS	0	16:07:33.817	CycleORB (Apple,M5)	2026.10.23 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.78 @352.08 sl=348.47 tp=356.05 magic=26110602 retcode=10009
+CS	0	16:07:33.828	Trade	2026.10.23 17:30:01   order canceled [#123 buy stop 13.78 Apple at 352.08]
+CS	0	16:07:33.828	CycleORB (Apple,M5)	2026.10.23 17:30:01   CTrade::OrderSend: cancel #123 [done]
+CS	0	16:07:33.828	CycleORB (Apple,M5)	2026.10.23 17:30:01   [CycleORB] DELETE order #123 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.838	CycleORB (Apple,M5)	2026.10.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.840	CycleORB (Apple,M5)	2026.10.26 14:30:00   [CycleORB] RANGE NY 2026.10.26 13:30 hi=344.70 lo=340.90 range=380pt atr%=63.0 spread=31.1pt (live 33pt) cost%=8.2 buffer=62pt risk=49.75 trend=1
+CS	0	16:07:33.840	CycleORB (Apple,M5)	2026.10.26 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	16:07:33.854	CycleORB (Apple,M5)	2026.10.27 14:00:02   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.856	CycleORB (Apple,M5)	2026.10.27 14:30:00   [CycleORB] RANGE NY 2026.10.27 13:30 hi=344.75 lo=342.20 range=255pt atr%=41.0 spread=32.6pt (live 44pt) cost%=12.8 buffer=65pt risk=49.75 trend=1
+CS	0	16:07:33.856	Trade	2026.10.27 14:30:00   buy stop 15.54 Apple at 345.40 sl: 342.20 tp: 348.92 (344.51 / 344.95)
+CS	0	16:07:33.856	CycleORB (Apple,M5)	2026.10.27 14:30:00   CTrade::OrderSend: buy stop 15.54 Apple at 345.40 sl: 342.20 tp: 348.92 [done]
+CS	0	16:07:33.856	CycleORB (Apple,M5)	2026.10.27 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.54 @345.40 sl=342.20 tp=348.92 magic=26110602 retcode=10009
+CS	0	16:07:33.856	Trade	2026.10.27 14:30:58   order [#124 buy stop 15.54 Apple at 345.40] triggered
+CS	0	16:07:33.856	Trades	2026.10.27 14:30:58   deal #64 buy 15.54 Apple at 345.43 done (based on order #124)
+CS	0	16:07:33.856	Trade	2026.10.27 14:30:58   deal performed [#64 buy 15.54 Apple at 345.43]
+CS	0	16:07:33.856	Trade	2026.10.27 14:30:58   order performed buy 15.54 at 345.43 [#124 buy stop 15.54 Apple at 345.40]
+CS	0	16:07:33.884	Trade	2026.10.27 19:55:00   market sell 15.54 Apple, close #124 (346.34 / 346.68)
+CS	0	16:07:33.884	Trades	2026.10.27 19:55:00   deal #65 sell 15.54 Apple at 346.34 done (based on order #125)
+CS	0	16:07:33.884	Trade	2026.10.27 19:55:00   deal performed [#65 sell 15.54 Apple at 346.34]
+CS	0	16:07:33.884	Trade	2026.10.27 19:55:00   order performed sell 15.54 at 346.34 [#125 sell 15.54 Apple at 346.34]
+CS	0	16:07:33.884	CycleORB (Apple,M5)	2026.10.27 19:55:00   CTrade::OrderSend: market sell 15.54 position #124 Apple [done at 346.34]
+CS	0	16:07:33.884	CycleORB (Apple,M5)	2026.10.27 19:55:00   [CycleORB] CLOSE position #124 magic=26110602 (NY time exit)
+CS	0	16:07:33.886	CycleORB (Apple,M5)	2026.10.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.886	CycleORB (Apple,M5)	2026.10.28 14:30:02   [CycleORB] RANGE NY 2026.10.28 13:30 hi=346.82 lo=344.50 range=232pt atr%=37.4 spread=31.7pt (live 36pt) cost%=13.6 buffer=63pt risk=49.75 trend=1
+CS	0	16:07:33.886	Trade	2026.10.28 14:30:02   buy stop 16.86 Apple at 347.45 sl: 344.50 tp: 350.70 (344.49 / 344.85)
+CS	0	16:07:33.886	CycleORB (Apple,M5)	2026.10.28 14:30:02   CTrade::OrderSend: buy stop 16.86 Apple at 347.45 sl: 344.50 tp: 350.70 [done]
+CS	0	16:07:33.886	CycleORB (Apple,M5)	2026.10.28 14:30:02   [CycleORB] PLACE BUY_STOP lots=16.86 @347.45 sl=344.50 tp=350.70 magic=26110602 retcode=10009
+CS	0	16:07:33.894	Trade	2026.10.28 17:30:00   order canceled [#126 buy stop 16.86 Apple at 347.45]
+CS	0	16:07:33.894	CycleORB (Apple,M5)	2026.10.28 17:30:00   CTrade::OrderSend: cancel #126 [done]
+CS	0	16:07:33.894	CycleORB (Apple,M5)	2026.10.28 17:30:00   [CycleORB] DELETE order #126 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.900	CycleORB (Apple,M5)	2026.10.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.901	CycleORB (Apple,M5)	2026.10.29 14:30:00   [CycleORB] RANGE NY 2026.10.29 13:30 hi=351.14 lo=347.66 range=348pt atr%=57.5 spread=30.8pt (live 34pt) cost%=8.9 buffer=62pt risk=49.75 trend=1
+CS	0	16:07:33.901	Trade	2026.10.29 14:30:00   buy stop 12.13 Apple at 351.76 sl: 347.66 tp: 356.27 (349.67 / 350.01)
+CS	0	16:07:33.901	CycleORB (Apple,M5)	2026.10.29 14:30:00   CTrade::OrderSend: buy stop 12.13 Apple at 351.76 sl: 347.66 tp: 356.27 [done]
+CS	0	16:07:33.901	CycleORB (Apple,M5)	2026.10.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.13 @351.76 sl=347.66 tp=356.27 magic=26110602 retcode=10009
+CS	0	16:07:33.908	Trade	2026.10.29 17:30:00   order canceled [#127 buy stop 12.13 Apple at 351.76]
+CS	0	16:07:33.908	CycleORB (Apple,M5)	2026.10.29 17:30:00   CTrade::OrderSend: cancel #127 [done]
+CS	0	16:07:33.908	CycleORB (Apple,M5)	2026.10.29 17:30:00   [CycleORB] DELETE order #127 magic=26110602 (NY entry window closed)
+CS	0	16:07:33.916	CycleORB (Apple,M5)	2026.10.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	16:07:33.917	CycleORB (Apple,M5)	2026.10.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	16:07:33.931	Tester	final balance 10096.76 USD
+CS	0	16:07:33.931	CycleORB (Apple,M5)	2026.10.30 19:59:50   [CycleORB] CYCLE_PARTIAL 202610 capital=9950.79 realized=145.97 floating=0.00 pnl=1.47% peak=1.66% state=ACTIVE 
+CS	0	16:07:33.939	Tester	Apple,M5: 5556161 ticks, 9897 bars generated. Environment synchronized in 0:00:00.032. Test passed in 0:00:05.510 (including ticks preprocessing 0:00:00.953).
+CS	0	16:07:33.939	Tester	Apple,M5: total time from login to stop testing 0:00:05.542 (including 0:00:00.032 for history data synchronization)
+CS	0	16:07:33.939	Tester	181 Mb memory used including 22 Mb of history data, 128 Mb of tick data
+CS	0	16:07:33.939	Tester	log file "C:\Users\emili\AppData\Roaming\MetaQuotes\Tester\D0E8209F77C8CF37AD8BF550E51FF075\Agent-127.0.0.1-3000\logs\20261103.log" written
+CS	0	16:07:33.942	Tester	test Experts\CycleORB\CycleORB.ex5 on Apple,M5 thread finished
+CS	0	16:07:34.451	127.0.0.1	tester forced to close
+CS	0	16:07:34.451	127.0.0.1	prepare for shutdown
+CS	0	16:07:34.451	127.0.0.1	stop immediately
+CS	0	16:07:34.451	127.0.0.1	shutdown finished
+CS	0	16:07:34.727	Server	MetaTester 5 stopped

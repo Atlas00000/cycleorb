@@ -1,0 +1,87 @@
+; CycleORB v1.05 (needs v1.05+: waits for the broker trade session before placing) - NVDA (YWO share CFD `NVDA`) M5 chart preset, New York cash-open ORB on expansion opens (6-month review 2026-05 -> 2026-10)
+; Research: Ouroboros research/assets/NVDA/CycleORB_M5_chart_preset.md
+; Broker clock YWO-Trade = UTC+0 -> fixed offset 0. NVDA quotes 09:30-16:00 New York only
+; Session: range 09:30-10:00 New York, entries until 13:30, flat 15:50 (before the 16:00 close; broker Friday session ends 15:55 NY in winter)
+; Geometry: stop = opposite range edge, TP = 1.5 x stop distance (never TP < SL; EA refuses TargetR < 1 and skips any side whose TP distance < SL distance)
+; Regime filters: opening range >= 40% of previous daily ATR(14) (expansion open; no ceiling) AND spread <= 10% of range (range >= ~10 spreads)
+;
+; === Server time ===
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup - OFF: NVDA has no London session ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup (New York local time) = US cash open ===
+InpNYEnable=true
+InpNYRangeStart=09:30
+InpNYRangeMinutes=30
+InpNYEntryEnd=13:30
+InpNYExit=15:50
+; === Tokyo setup - OFF (explicit: a chart or the tester keeps the previous value of any input a .set omits) ===
+InpTkyEnable=false
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=1.5
+InpBufferSpreadMult=1.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=40.0
+InpMaxRangeATRPct=1000.0
+InpMaxCostRangePct=10.0
+InpCommissionPoints=0
+InpMinVolPct=0.0
+InpVolATRPeriod=20
+InpVolLookback=200
+InpTrendSideOnly=false
+InpTrendMAPeriod=20
+; === Calendar - NYSE holidays + 13:00 early closes 2025-07 -> 2027 (exit is after the early close) ===
+InpSkipDates=250703,250704,250901,251127,251128,251224,251225,260101,260119,260216,260403,260525,260619,260703,260907,261126,261127,261224,270101,270118,270215,270326,270531,270618,270705,270906,271125,271126,271224
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=false
+InpAosRunTag=
+InpAosEventCcy=USD,EUR,GBP,JPY
+InpAosCtxSymbols=
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=false
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110400
+InpSlippagePoints=50
+InpMaxLot=100.0

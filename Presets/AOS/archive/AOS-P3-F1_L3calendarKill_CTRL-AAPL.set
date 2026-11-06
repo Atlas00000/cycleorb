@@ -1,0 +1,83 @@
+; AOS-P3-F1 L3calendarKill CTRL-AAPL
+; Base: AOS-P1-T06_L6L1_observeAll_CTRL-AAPL.set. Changed inputs: InpAosCalendarKill=true, InpAosRunTag=P3F1
+; Hypothesis: functional: AAPL's Friday 15:55 holds must trip the kill
+; Expected fire change: all entries after the first leak
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup — OFF (Apple not quoted in London hours) ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup (New York local time) = US cash open ===
+InpNYEnable=true
+InpNYRangeStart=09:30
+InpNYRangeMinutes=30
+InpNYEntryEnd=13:30
+InpNYExit=15:55
+; === Tokyo setup - OFF (explicit: a chart or the tester keeps the previous value of any input a .set omits) ===
+InpTkyEnable=false
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=1.1
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=20.0
+InpMaxRangeATRPct=80.0
+InpMaxCostRangePct=100.0
+InpCommissionPoints=0
+InpMinVolPct=0.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=true
+InpTrendMAPeriod=20
+; === Calendar - NYSE holidays + 13:00 early closes 2025-07 -> 2027 (exit is after the early close) ===
+InpSkipDates=250703,250704,250901,251127,251128,251224,251225,260101,260119,260216,260403,260525,260619,260703,260907,261126,261127,261224,270101,270118,270215,270326,270531,270618,270705,270906,271125,271126,271224
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=0.5
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=P3F1
+InpAosEventCcy=USD
+InpAosCtxSymbols=SPX500,DE30
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=true
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110600
+InpSlippagePoints=50
+InpMaxLot=100.0

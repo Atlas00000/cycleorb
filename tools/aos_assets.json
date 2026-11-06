@@ -1,0 +1,15 @@
+{
+ "comment": "AOS baseline spec: one v1.09 tester run per asset (2025-07-01 -> 2026-10-31, 1000 USD; UK100 from 2025-12-17 where broker history starts). role=control marks the negative controls, which must stay at E <= 0 under every AI OS layer.",
+ "runs_root": "../tester/aos/runs",
+ "assets": {
+  "EURUSD-NY": {"preset": "CycleORB-M5-EURUSD-6M-NY", "run_id": "v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000", "f_op": 0.010},
+  "EURUSD-LON0700": {"preset": "CycleORB-M5-EURUSD-LON0700", "run_id": "v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000", "f_op": 0.005},
+  "DE40": {"preset": "CycleORB-M5-DE40-6M-FRA-500USD", "run_id": "v1.11_DE30_26110310_2025-07-01_2026-10-31_1000", "f_op": 0.025},
+  "JP225": {"preset": "CycleORB-M5-JP225-6M-TKY", "run_id": "v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000", "f_op": 0.010},
+  "UK100": {"preset": "CycleORB-M5-UK100-6M-LON", "run_id": "v1.11_UK100_26110800_2025-12-17_2026-10-31_1000", "f_op": 0.010},
+  "US500": {"preset": "CycleORB-M5-US500-6M-NY", "run_id": "v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000", "f_op": 0.010},
+  "CTRL-AAPL": {"preset": "CycleORB-M5-AAPL-6M-NY-RESEARCH", "run_id": "v1.11_Apple_26110600_2025-07-01_2026-10-31_1000", "f_op": 0.005, "role": "control"},
+  "CTRL-MSFT": {"preset": "CycleORB-M5-MSFT-6M-NY-RESEARCH", "run_id": "v1.11_Microsoft_26111100_2025-07-01_2026-10-31_1000", "f_op": 0.005, "role": "control"},
+  "CTRL-XOM": {"preset": "CycleORB-M5-XOM-6M-NY-RESEARCH", "run_id": "v1.11_Exxon_26111000_2025-07-01_2026-10-31_1000", "f_op": 0.0025, "role": "control"}
+ }
+}

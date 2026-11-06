@@ -1,0 +1,582 @@
+{
+ "pairs": [
+  {
+   "base": "v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G",
+   "symbol": "EURUSD",
+   "health_base": {
+    "n": 146,
+    "WR": 0.4794520547945205,
+    "R": 1.6617852206484853,
+    "AL": 0.9505930526315789,
+    "E": 0.2625522739726028,
+    "E_N": 0.2761983934616026,
+    "EF": 0.09270147164620485,
+    "worst": -2.401408,
+    "maxdd_R": 5.985562000000002,
+    "maxdd_pct": 5.43275770940379
+   },
+   "health_variant": {
+    "n": 146,
+    "WR": 0.4657534246575342,
+    "R": 1.8140503236874486,
+    "AL": 0.869814858974359,
+    "E": 0.270211095890411,
+    "E_N": 0.31065357541607175,
+    "EF": 0.0998472471478819,
+    "worst": -1.090226,
+    "maxdd_R": 5.091700000000001,
+    "maxdd_pct": 4.6754642105172
+   },
+   "delta": {
+    "E": 0.007658821917808201,
+    "E_N": 0.03445518195446917,
+    "WR": -0.0136986301369863,
+    "R": 0.15226510303896323,
+    "AL": -0.08077819365721994,
+    "EF": 0.007145775501677054,
+    "worst": 1.311182,
+    "maxdd_R": -0.8938620000000004,
+    "maxdd_pct": -0.7572934988865905
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 38.332632000000004,
+    "sum_variant": 39.8185010412754,
+    "mean_variant": 0.2727294591868178
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 11,
+   "guard_exits": {
+    "n": 5,
+    "base_R": -2.14762,
+    "variant_R": -1.029432
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G",
+   "symbol": "EURUSD",
+   "health_base": {
+    "n": 191,
+    "WR": 0.49473684210526314,
+    "R": 1.3320513203505007,
+    "AL": 0.8731367395833334,
+    "E": 0.13354340314136126,
+    "E_N": 0.1537517058576161,
+    "EF": 0.05310272802694412,
+    "worst": -1.095506,
+    "maxdd_R": 15.066586999999998,
+    "maxdd_pct": 5.696177770822786
+   },
+   "health_variant": {
+    "n": 191,
+    "WR": 0.49473684210526314,
+    "R": 1.3320513203505007,
+    "AL": 0.8731367395833334,
+    "E": 0.13354340314136126,
+    "E_N": 0.1537517058576161,
+    "EF": 0.05310272802694412,
+    "worst": -1.095506,
+    "maxdd_R": 15.066586999999998,
+    "maxdd_pct": 5.696177770822786
+   },
+   "delta": {
+    "E": 0.0,
+    "E_N": 0.0,
+    "WR": 0.0,
+    "R": 0.0,
+    "AL": 0.0,
+    "EF": 0.0,
+    "worst": 0.0,
+    "maxdd_R": 0.0,
+    "maxdd_pct": 0.0
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 25.50679,
+    "sum_variant": 25.50679,
+    "mean_variant": 0.13354340314136126
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 0,
+   "guard_exits": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G",
+   "symbol": "DE30",
+   "health_base": {
+    "n": 120,
+    "WR": 0.49166666666666664,
+    "R": 1.5679111593419996,
+    "AL": 0.8965477704918032,
+    "E": 0.23539428333333332,
+    "E_N": 0.26255632000981644,
+    "EF": 0.09718161488386355,
+    "worst": -1.411231,
+    "maxdd_R": 5.411134000000008,
+    "maxdd_pct": 13.818600657147096
+   },
+   "health_variant": {
+    "n": 120,
+    "WR": 0.49166666666666664,
+    "R": 1.5679111593419996,
+    "AL": 0.8965477704918032,
+    "E": 0.23539428333333332,
+    "E_N": 0.26255632000981644,
+    "EF": 0.09718161488386355,
+    "worst": -1.411231,
+    "maxdd_R": 5.411134000000008,
+    "maxdd_pct": 13.818600657147096
+   },
+   "delta": {
+    "E": 0.0,
+    "E_N": 0.0,
+    "WR": 0.0,
+    "R": 0.0,
+    "AL": 0.0,
+    "EF": 0.0,
+    "worst": 0.0,
+    "maxdd_R": 0.0,
+    "maxdd_pct": 0.0
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 28.247314,
+    "sum_variant": 28.247314,
+    "mean_variant": 0.23539428333333332
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 0,
+   "guard_exits": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G",
+   "symbol": "JPN225",
+   "health_base": {
+    "n": 102,
+    "WR": 0.5490196078431373,
+    "R": 1.5243813483160131,
+    "AL": 0.525532152173913,
+    "E": 0.20282117647058825,
+    "E_N": 0.38593485789898785,
+    "EF": 0.14523668918569435,
+    "worst": -1.027117,
+    "maxdd_R": 4.0717,
+    "maxdd_pct": 3.939882004866846
+   },
+   "health_variant": {
+    "n": 102,
+    "WR": 0.5392156862745098,
+    "R": 1.5398988945386873,
+    "AL": 0.5150869574468085,
+    "E": 0.19035209803921568,
+    "E_N": 0.36955332548654707,
+    "EF": 0.13781415564124408,
+    "worst": -1.027117,
+    "maxdd_R": 4.071700000000002,
+    "maxdd_pct": 3.9181467865526898
+   },
+   "delta": {
+    "E": -0.012469078431372571,
+    "E_N": -0.01638153241244078,
+    "WR": -0.009803921568627527,
+    "R": 0.015517546222674206,
+    "AL": -0.010445194727104479,
+    "EF": -0.007422533544450272,
+    "worst": 0.0,
+    "maxdd_R": 1.7763568394002505e-15,
+    "maxdd_pct": -0.021735218314156146
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 20.68776,
+    "sum_variant": 19.16581217854238,
+    "mean_variant": 0.18790011939747434
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 47,
+   "guard_exits": {
+    "n": 1,
+    "base_R": 1.237238,
+    "variant_R": -0.034608
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs",
+   "variant": "v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G",
+   "symbol": "UK100",
+   "health_base": {
+    "n": 88,
+    "WR": 0.5227272727272727,
+    "R": 1.8158299727805236,
+    "AL": 0.8397226666666666,
+    "E": 0.3962744659090909,
+    "E_N": 0.47191112213527364,
+    "EF": 0.15738534514484906,
+    "worst": -1.133674,
+    "maxdd_R": 6.279114999999997,
+    "maxdd_pct": 5.166264223600503
+   },
+   "health_variant": {
+    "n": 88,
+    "WR": 0.5227272727272727,
+    "R": 1.8158299727805236,
+    "AL": 0.8397226666666666,
+    "E": 0.3962744659090909,
+    "E_N": 0.47191112213527364,
+    "EF": 0.15738534514484906,
+    "worst": -1.133674,
+    "maxdd_R": 6.279114999999997,
+    "maxdd_pct": 5.166264223600503
+   },
+   "delta": {
+    "E": 0.0,
+    "E_N": 0.0,
+    "WR": 0.0,
+    "R": 0.0,
+    "AL": 0.0,
+    "EF": 0.0,
+    "worst": 0.0,
+    "maxdd_R": 0.0,
+    "maxdd_pct": 0.0
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 34.872153,
+    "sum_variant": 34.872153,
+    "mean_variant": 0.3962744659090909
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 0,
+   "guard_exits": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G",
+   "symbol": "SPX500",
+   "health_base": {
+    "n": 69,
+    "WR": 0.5652173913043478,
+    "R": 1.5250892623193182,
+    "AL": 0.6741905,
+    "E": 0.28803060869565217,
+    "E_N": 0.4272243656587449,
+    "EF": 0.16008236055205194,
+    "worst": -1.053805,
+    "maxdd_R": 5.256659000000003,
+    "maxdd_pct": 4.900498537349107
+   },
+   "health_variant": {
+    "n": 69,
+    "WR": 0.5652173913043478,
+    "R": 1.5250892623193182,
+    "AL": 0.6741905,
+    "E": 0.28803060869565217,
+    "E_N": 0.4272243656587449,
+    "EF": 0.16008236055205194,
+    "worst": -1.053805,
+    "maxdd_R": 5.256659000000003,
+    "maxdd_pct": 4.900498537349107
+   },
+   "delta": {
+    "E": 0.0,
+    "E_N": 0.0,
+    "WR": 0.0,
+    "R": 0.0,
+    "AL": 0.0,
+    "EF": 0.0,
+    "worst": 0.0,
+    "maxdd_R": 0.0,
+    "maxdd_pct": 0.0
+   },
+   "fire_retention": 1.0,
+   "withheld": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": 19.874112,
+    "sum_variant": 19.874112,
+    "mean_variant": 0.28803060869565217
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 0,
+   "guard_exits": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "checks": {
+    "expectancy": true,
+    "skip_precision": true,
+    "health_EF": true,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [],
+   "verdict": "ACCEPT"
+  },
+  {
+   "base": "v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs",
+   "variant": "v1.13_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1",
+   "symbol": "Apple",
+   "health_base": {
+    "n": 81,
+    "WR": 0.37037037037037035,
+    "R": 1.2482473367136926,
+    "AL": 0.5033420980392157,
+    "E": -0.08421708641975308,
+    "E_N": -0.16731580121715095,
+    "EF": -0.11476671516406055,
+    "worst": -1.216958,
+    "maxdd_R": 12.464039999999997,
+    "maxdd_pct": 6.187999999999971
+   },
+   "health_variant": {
+    "n": 26,
+    "WR": 0.23076923076923078,
+    "R": 0.8243672355993653,
+    "AL": 0.48888324999999994,
+    "E": -0.2830595769230769,
+    "E_N": -0.5789921764001464,
+    "EF": -0.3753037310064145,
+    "worst": -1.216958,
+    "maxdd_R": 7.359548999999999,
+    "maxdd_pct": 3.634000000000026
+   },
+   "delta": {
+    "E": -0.19884249050332387,
+    "E_N": -0.4116763751829955,
+    "WR": -0.13960113960113957,
+    "R": -0.4238801011143273,
+    "AL": -0.014458848039215766,
+    "EF": -0.26053701584235395,
+    "worst": 0.0,
+    "maxdd_R": -5.104490999999999,
+    "maxdd_pct": -2.553999999999945
+   },
+   "fire_retention": 0.32098765432098764,
+   "withheld": {
+    "n": 55,
+    "mean_R": 0.009781181818181823,
+    "sum_R": 0.5379650000000002,
+    "BM": 0.00816946932512791
+   },
+   "resized_down": {
+    "n": 0,
+    "mean_R": null,
+    "sum_R": 0.0,
+    "BM": null
+   },
+   "resized_up": 0,
+   "weighted": {
+    "sum_base": -6.821584,
+    "sum_variant": -7.3595489999999995,
+    "mean_variant": -0.2830595769230769
+   },
+   "added": 0,
+   "outcome_changed": 0,
+   "switched": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "volume_drift": 0,
+   "guard_exits": {
+    "n": 0,
+    "base_R": 0,
+    "variant_R": 0
+   },
+   "checks": {
+    "expectancy": false,
+    "skip_precision": false,
+    "health_EF": false,
+    "health_MaxDD": true
+   },
+   "rejects": [],
+   "warnings": [
+    "FREQUENCY_STALL: fire retention 32% < 70%"
+   ],
+   "verdict": "NOT ACCEPTED"
+  }
+ ],
+ "controls": [],
+ "pooled": {
+  "pairs": 7,
+  "improved": 5,
+  "worst_asset_dE": -0.19884249050332387,
+  "breadth_ok": false,
+  "controls_ok": true,
+  "verdict": "NOT ACCEPTED"
+ }
+}

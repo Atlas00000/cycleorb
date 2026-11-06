@@ -1,0 +1,1080 @@
+﻿CS	0	16:22:57.058	Startup	MetaTester 5 build 6230, 25 Sep 2026
+CS	0	16:22:57.059	Startup	Windows 11 build 26300, 12 x Intel Core i7-10750H  @ 2.60GHz, AVX2, 7 / 23 Gb memory, 155 / 952 Gb disk, UAC, GMT+1
+CS	0	16:22:57.061	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	16:22:57.063	Startup	cloud network mode is off
+CS	0	16:22:57.063	Startup	initialization finished
+CS	0	16:22:57.167	127.0.0.1	login (build 6230)
+CS	0	16:22:57.180	Network	17744 bytes of account info loaded
+CS	0	16:22:57.180	Network	1478 bytes of tester parameters loaded
+CS	0	16:22:57.180	Network	22212 bytes of input parameters loaded
+CS	0	16:22:57.181	Network	10030 bytes of symbols list loaded (1045 symbols)
+CS	0	16:22:57.181	Tester	expert file added: Experts\CycleORB\CycleORB.ex5. 67493 bytes loaded
+CS	0	16:22:57.184	Tester	7895 Mb available, 98 blocks set for ticks generating
+CS	0	16:22:57.184	Tester	initial deposit 10000.00 USD, leverage 1:500
+CS	0	16:22:57.185	Tester	successfully initialized
+CS	0	16:22:57.185	Network	79 Kb of total initialization data received
+CS	0	16:22:57.185	Tester	Intel Core i7-10750H  @ 2.60GHz, 24358 MB
+CS	0	16:22:57.189	Symbols	DE30: symbol to be synchronized
+CS	0	16:22:57.189	Symbols	DE30: symbol synchronized, 4120 bytes of symbol info received
+CS	0	16:22:57.205	History	DE30: load 23 bytes of history data to synchronize in 0:00:00.000
+CS	0	16:22:57.205	History	DE30: history synchronized from 2025.06.05 to 2026.10.30
+CS	0	16:22:57.205	Ticks	DE30: ticks synchronization started
+CS	0	16:22:59.708	Ticks	DE30: load 92.71 Mb of tick data to synchronize in 0:00:02.500
+CS	0	16:22:59.708	Ticks	DE30: history ticks synchronized from 2026.05.04 to 2026.10.30
+CS	0	16:22:59.749	History	DE30,M5: history cache allocated for 100156 bars and contains 62468 bars from 2025.06.05 14:05 to 2026.04.30 19:00
+CS	0	16:22:59.749	History	DE30,M5: history begins from 2025.06.05 14:05
+CS	0	16:22:59.749	Tester	DE30,M5 (YWO-Trade): generating based on real ticks
+CS	0	16:22:59.749	Tester	DE30,M5: testing of Experts\CycleORB\CycleORB.ex5 from 2026.05.01 00:00 to 2026.10.31 00:00 started with inputs:
+CS	0	16:22:59.749	Tester	  Server time=
+CS	0	16:22:59.749	Tester	  InpServerTZ=1
+CS	0	16:22:59.749	Tester	  InpServerFixedOffsetH=0
+CS	0	16:22:59.749	Tester	  London setup (London local time)=
+CS	0	16:22:59.749	Tester	  InpLonEnable=true
+CS	0	16:22:59.749	Tester	  InpLonRangeStart=08:15
+CS	0	16:22:59.749	Tester	  InpLonRangeMinutes=60
+CS	0	16:22:59.749	Tester	  InpLonEntryEnd=11:30
+CS	0	16:22:59.749	Tester	  InpLonExit=16:00
+CS	0	16:22:59.749	Tester	  New York setup (New York local time)=
+CS	0	16:22:59.749	Tester	  InpNYEnable=false
+CS	0	16:22:59.749	Tester	  InpNYRangeStart=08:00
+CS	0	16:22:59.749	Tester	  InpNYRangeMinutes=30
+CS	0	16:22:59.749	Tester	  InpNYEntryEnd=11:30
+CS	0	16:22:59.749	Tester	  InpNYExit=15:00
+CS	0	16:22:59.749	Tester	  Entry / exit=
+CS	0	16:22:59.749	Tester	  InpStopMode=0
+CS	0	16:22:59.749	Tester	  InpTargetR=2.5
+CS	0	16:22:59.749	Tester	  InpBufferSpreadMult=2.0
+CS	0	16:22:59.749	Tester	  InpBufferRangePct=5.0
+CS	0	16:22:59.749	Tester	  Filters=
+CS	0	16:22:59.749	Tester	  InpATRPeriod=14
+CS	0	16:22:59.749	Tester	  InpMinRangeATRPct=10.0
+CS	0	16:22:59.749	Tester	  InpMaxRangeATRPct=40.0
+CS	0	16:22:59.749	Tester	  InpMaxCostRangePct=10.0
+CS	0	16:22:59.749	Tester	  InpCommissionPoints=0
+CS	0	16:22:59.749	Tester	  InpMinVolPct=33.0
+CS	0	16:22:59.749	Tester	  InpVolATRPeriod=20
+CS	0	16:22:59.749	Tester	  InpVolLookback=500
+CS	0	16:22:59.749	Tester	  Monthly cycle=
+CS	0	16:22:59.749	Tester	  InpCycleCapital=0.0
+CS	0	16:22:59.749	Tester	  InpSoftHaltPct=30.0
+CS	0	16:22:59.749	Tester	  InpHardFlattenPct=38.0
+CS	0	16:22:59.749	Tester	  InpRatchetArmPct=20.0
+CS	0	16:22:59.749	Tester	  InpRatchetFloorPct=10.0
+CS	0	16:22:59.749	Tester	  InpRatchetTrail=0.5
+CS	0	16:22:59.749	Tester	  InpRiskDivisor=8.0
+CS	0	16:22:59.749	Tester	  InpMaxRiskPct=1.0
+CS	0	16:22:59.749	Tester	  InpNoEntryLastDay=true
+CS	0	16:22:59.749	Tester	  Execution=
+CS	0	16:22:59.749	Tester	  InpMagicBase=26110300
+CS	0	16:22:59.749	Tester	  InpSlippagePoints=100
+CS	0	16:22:59.749	Tester	  InpMaxLot=50.0
+CS	0	16:22:59.760	CycleORB (DE30,M5)	2026.05.01 00:00:00   [CycleORB] WARNING built and defaulted for EURUSD, running on DE30
+CS	0	16:22:59.785	History	DE30,Daily: history cache allocated for 404 bars and contains 273 bars from 2025.06.05 00:00 to 2026.04.30 00:00
+CS	0	16:22:59.785	History	DE30,Daily: history begins from 2025.06.05 00:00
+CS	0	16:22:59.815	History	DE30,H1: history cache allocated for 8365 bars and contains 5225 bars from 2025.06.05 14:00 to 2026.04.30 19:00
+CS	0	16:22:59.815	History	DE30,H1: history begins from 2025.06.05 14:00
+CS	0	16:22:59.815	CycleORB (DE30,M5)	2026.05.01 00:00:00   [CycleORB] Clock 2026: UK DST 2026.03.29 -> 2026.10.25 | US DST 2026.03.08 -> 2026.11.01 | server offset now +0h
+CS	0	16:22:59.815	CycleORB (DE30,M5)	2026.05.01 00:00:00   [CycleORB] CYCLE_BEGIN 202605 capital=10000.00 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:22:59.815	CycleORB (DE30,M5)	2026.05.01 00:00:00   [CycleORB] Init OK DE30 | magics LON=26110301 NY=26110302 | stop=CORB_STOP_OPPOSITE TP=2.5R | volpct>=33.0 | soft=30% hard=38% ratchet arm=20% floor=10% trail=0.50
+CS	0	16:23:01.787	Ticks	DE30 : real ticks begin from 2026.05.04 00:00:00
+CS	0	16:23:01.919	History	DE30,M1: history cache allocated for 496514 bars and contains 308072 bars from 2025.06.05 14:06 to 2026.04.30 19:00
+CS	0	16:23:01.942	History	DE30,M1: 481 bars from 2026.05.04 00:15 to 2026.05.04 08:15 added
+CS	0	16:23:01.942	History	DE30,M1: history begins from 2025.06.05 14:06
+CS	0	16:23:01.944	CycleORB (DE30,M5)	2026.05.04 08:15:00   [CycleORB] RANGE LON 2026.05.04 07:15 hi=24389.43 lo=24271.88 range=11755pt atr%=32.6 spread=92.0pt (live 92pt) cost%=0.8 buffer=588pt risk=100.00
+CS	0	16:23:01.944	Symbols	EURUSD: symbol to be synchronized
+CS	0	16:23:01.944	Symbols	EURUSD: symbol synchronized, 3800 bytes of symbol info received
+CS	0	16:23:01.953	History	EURUSD: load 27 bytes of history data to synchronize in 0:00:00.003
+CS	0	16:23:01.953	History	EURUSD: history synchronized from 1989.01.02 to 2026.10.30
+CS	0	16:23:01.955	Ticks	EURUSD: ticks synchronization started
+CS	0	16:23:02.970	Ticks	EURUSD: load 34 bytes of tick data to synchronize in 0:00:01.015
+CS	0	16:23:02.970	Ticks	EURUSD: history ticks synchronized from 2025.06.04 to 2026.10.30
+CS	0	16:23:02.984	Trade	2026.05.04 08:15:00   buy stop 0.6 DE30 at 24395.31 sl: 24271.88 tp: 24703.89 (24290.38 / 24291.30)
+CS	0	16:23:02.984	CycleORB (DE30,M5)	2026.05.04 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 24395.31 sl: 24271.88 tp: 24703.89 [done]
+CS	0	16:23:02.984	CycleORB (DE30,M5)	2026.05.04 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @24395.31 sl=24271.88 tp=24703.89 magic=26110301 retcode=10009
+CS	0	16:23:02.984	Trade	2026.05.04 08:15:00   sell stop 0.6 DE30 at 24266.00 sl: 24389.43 tp: 23957.43 (24290.38 / 24291.30)
+CS	0	16:23:02.984	CycleORB (DE30,M5)	2026.05.04 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 24266.00 sl: 24389.43 tp: 23957.43 [done]
+CS	0	16:23:02.984	CycleORB (DE30,M5)	2026.05.04 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @24266.00 sl=24389.43 tp=23957.43 magic=26110301 retcode=10009
+CS	0	16:23:04.943	Ticks	EURUSD : real ticks begin from 2025.06.04 00:00:00
+CS	0	16:23:04.993	Trade	2026.05.04 10:03:45   order [#3 sell stop 0.6 DE30 at 24266.00] triggered
+CS	0	16:23:04.993	Trades	2026.05.04 10:03:45   deal #2 sell 0.6 DE30 at 24265.62 done (based on order #3)
+CS	0	16:23:04.993	Trade	2026.05.04 10:03:45   deal performed [#2 sell 0.6 DE30 at 24265.62]
+CS	0	16:23:04.993	Trade	2026.05.04 10:03:45   order performed sell 0.6 at 24265.62 [#3 sell stop 0.6 DE30 at 24266.00]
+CS	0	16:23:04.993	Trade	2026.05.04 10:03:45   order canceled [#2 buy stop 0.6 DE30 at 24395.31]
+CS	0	16:23:04.993	CycleORB (DE30,M5)	2026.05.04 10:03:45   CTrade::OrderSend: cancel #2 [done]
+CS	0	16:23:04.993	CycleORB (DE30,M5)	2026.05.04 10:03:45   [CycleORB] DELETE order #2 magic=26110301 (LON OCO)
+CS	0	16:23:05.072	Trade	2026.05.04 15:00:00   market buy 0.6 DE30, close #3 (24097.73 / 24098.65)
+CS	0	16:23:05.072	Trades	2026.05.04 15:00:00   deal #3 buy 0.6 DE30 at 24098.65 done (based on order #4)
+CS	0	16:23:05.072	Trade	2026.05.04 15:00:00   deal performed [#3 buy 0.6 DE30 at 24098.65]
+CS	0	16:23:05.072	Trade	2026.05.04 15:00:00   order performed buy 0.6 at 24098.65 [#4 buy 0.6 DE30 at 24098.65]
+CS	0	16:23:05.072	CycleORB (DE30,M5)	2026.05.04 15:00:00   CTrade::OrderSend: market buy 0.60 position #3 DE30 [done at 24098.65]
+CS	0	16:23:05.072	CycleORB (DE30,M5)	2026.05.04 15:00:00   [CycleORB] CLOSE position #3 magic=26110301 (LON time exit)
+CS	0	16:23:05.137	CycleORB (DE30,M5)	2026.05.05 08:15:00   [CycleORB] SKIP LON 2026.05.05 07:15 hi=24207.40 lo=24045.07 range=16233pt atr%=41.7 spread=92.0pt (live 92pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:05.269	CycleORB (DE30,M5)	2026.05.06 08:15:00   [CycleORB] SKIP LON 2026.05.06 07:15 hi=24786.89 lo=24659.81 range=12708pt atr%=30.0 spread=92.0pt (live 92pt) cost%=0.7 volpct=31.2 (H1 vol below regime floor)
+CS	0	16:23:05.403	CycleORB (DE30,M5)	2026.05.07 08:15:00   [CycleORB] SKIP LON 2026.05.07 07:15 hi=25004.54 lo=24924.54 range=8000pt atr%=19.0 spread=92.0pt (live 92pt) cost%=1.1 volpct=25.4 (H1 vol below regime floor)
+CS	0	16:23:05.541	CycleORB (DE30,M5)	2026.05.08 08:15:00   [CycleORB] RANGE LON 2026.05.08 07:15 hi=24465.91 lo=24391.39 range=7452pt atr%=16.7 spread=92.0pt (live 92pt) cost%=1.2 buffer=373pt risk=100.00
+CS	0	16:23:05.541	Trade	2026.05.08 08:15:00   buy stop 1 DE30 at 24469.64 sl: 24391.39 tp: 24665.27 (24398.95 / 24399.87)
+CS	0	16:23:05.542	CycleORB (DE30,M5)	2026.05.08 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 24469.64 sl: 24391.39 tp: 24665.27 [done]
+CS	0	16:23:05.542	CycleORB (DE30,M5)	2026.05.08 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @24469.64 sl=24391.39 tp=24665.27 magic=26110301 retcode=10009
+CS	0	16:23:05.542	Trade	2026.05.08 08:15:00   sell stop 1 DE30 at 24387.66 sl: 24465.91 tp: 24192.04 (24398.95 / 24399.87)
+CS	0	16:23:05.542	CycleORB (DE30,M5)	2026.05.08 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 24387.66 sl: 24465.91 tp: 24192.04 [done]
+CS	0	16:23:05.542	CycleORB (DE30,M5)	2026.05.08 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @24387.66 sl=24465.91 tp=24192.04 magic=26110301 retcode=10009
+CS	0	16:23:05.551	Trade	2026.05.08 08:50:48   order [#6 sell stop 1 DE30 at 24387.66] triggered
+CS	0	16:23:05.551	Trades	2026.05.08 08:50:48   deal #4 sell 1 DE30 at 24387.31 done (based on order #6)
+CS	0	16:23:05.551	Trade	2026.05.08 08:50:48   deal performed [#4 sell 1 DE30 at 24387.31]
+CS	0	16:23:05.551	Trade	2026.05.08 08:50:48   order performed sell 1 at 24387.31 [#6 sell stop 1 DE30 at 24387.66]
+CS	0	16:23:05.551	Trade	2026.05.08 08:50:48   order canceled [#5 buy stop 1 DE30 at 24469.64]
+CS	0	16:23:05.551	CycleORB (DE30,M5)	2026.05.08 08:50:48   CTrade::OrderSend: cancel #5 [done]
+CS	0	16:23:05.551	CycleORB (DE30,M5)	2026.05.08 08:50:48   [CycleORB] DELETE order #5 magic=26110301 (LON OCO)
+CS	0	16:23:05.558	Trade	2026.05.08 09:23:29   stop loss triggered #6 sell 1 DE30 24387.31 sl: 24465.91 tp: 24192.04 [#7 buy 1 DE30 at 24465.91]
+CS	0	16:23:05.558	Trades	2026.05.08 09:23:29   deal #5 buy 1 DE30 at 24466.22 done (based on order #7)
+CS	0	16:23:05.558	Trade	2026.05.08 09:23:29   deal performed [#5 buy 1 DE30 at 24466.22]
+CS	0	16:23:05.558	Trade	2026.05.08 09:23:29   order performed buy 1 at 24466.22 [#7 buy 1 DE30 at 24465.91]
+CS	0	16:23:05.669	CycleORB (DE30,M5)	2026.05.11 08:15:00   [CycleORB] RANGE LON 2026.05.11 07:15 hi=24335.46 lo=24258.06 range=7740pt atr%=18.8 spread=92.0pt (live 92pt) cost%=1.2 buffer=387pt risk=100.00
+CS	0	16:23:05.669	Trade	2026.05.11 08:15:00   buy stop 1 DE30 at 24339.33 sl: 24258.06 tp: 24542.51 (24309.67 / 24310.59)
+CS	0	16:23:05.669	CycleORB (DE30,M5)	2026.05.11 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 24339.33 sl: 24258.06 tp: 24542.51 [done]
+CS	0	16:23:05.669	CycleORB (DE30,M5)	2026.05.11 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @24339.33 sl=24258.06 tp=24542.51 magic=26110301 retcode=10009
+CS	0	16:23:05.669	Trade	2026.05.11 08:15:00   sell stop 1 DE30 at 24254.19 sl: 24335.46 tp: 24051.02 (24309.67 / 24310.59)
+CS	0	16:23:05.669	CycleORB (DE30,M5)	2026.05.11 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 24254.19 sl: 24335.46 tp: 24051.02 [done]
+CS	0	16:23:05.669	CycleORB (DE30,M5)	2026.05.11 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @24254.19 sl=24335.46 tp=24051.02 magic=26110301 retcode=10009
+CS	0	16:23:05.671	Trade	2026.05.11 08:23:30   order [#8 buy stop 1 DE30 at 24339.33] triggered
+CS	0	16:23:05.671	Trades	2026.05.11 08:23:30   deal #6 buy 1 DE30 at 24340.88 done (based on order #8)
+CS	0	16:23:05.671	Trade	2026.05.11 08:23:30   deal performed [#6 buy 1 DE30 at 24340.88]
+CS	0	16:23:05.671	Trade	2026.05.11 08:23:30   order performed buy 1 at 24340.88 [#8 buy stop 1 DE30 at 24339.33]
+CS	0	16:23:05.671	Trade	2026.05.11 08:23:30   order canceled [#9 sell stop 1 DE30 at 24254.19]
+CS	0	16:23:05.671	CycleORB (DE30,M5)	2026.05.11 08:23:30   CTrade::OrderSend: cancel #9 [done]
+CS	0	16:23:05.671	CycleORB (DE30,M5)	2026.05.11 08:23:30   [CycleORB] DELETE order #9 magic=26110301 (LON OCO)
+CS	0	16:23:05.716	Trade	2026.05.11 11:46:40   stop loss triggered #8 buy 1 DE30 24340.88 sl: 24258.06 tp: 24542.51 [#10 sell 1 DE30 at 24258.06]
+CS	0	16:23:05.716	Trades	2026.05.11 11:46:40   deal #7 sell 1 DE30 at 24255.36 done (based on order #10)
+CS	0	16:23:05.716	Trade	2026.05.11 11:46:40   deal performed [#7 sell 1 DE30 at 24255.36]
+CS	0	16:23:05.716	Trade	2026.05.11 11:46:40   order performed sell 1 at 24255.36 [#10 sell 1 DE30 at 24258.06]
+CS	0	16:23:05.780	CycleORB (DE30,M5)	2026.05.12 08:15:00   [CycleORB] RANGE LON 2026.05.12 07:15 hi=24195.47 lo=24060.27 range=13520pt atr%=33.4 spread=84.0pt (live 84pt) cost%=0.6 buffer=676pt risk=100.00
+CS	0	16:23:05.780	Trade	2026.05.12 08:15:00   buy stop 0.5 DE30 at 24202.23 sl: 24060.27 tp: 24557.13 (24126.17 / 24127.01)
+CS	0	16:23:05.781	CycleORB (DE30,M5)	2026.05.12 08:15:00   CTrade::OrderSend: buy stop 0.50 DE30 at 24202.23 sl: 24060.27 tp: 24557.13 [done]
+CS	0	16:23:05.781	CycleORB (DE30,M5)	2026.05.12 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.50 @24202.23 sl=24060.27 tp=24557.13 magic=26110301 retcode=10009
+CS	0	16:23:05.781	Trade	2026.05.12 08:15:00   sell stop 0.5 DE30 at 24053.51 sl: 24195.47 tp: 23698.61 (24126.17 / 24127.01)
+CS	0	16:23:05.781	CycleORB (DE30,M5)	2026.05.12 08:15:00   CTrade::OrderSend: sell stop 0.50 DE30 at 24053.51 sl: 24195.47 tp: 23698.61 [done]
+CS	0	16:23:05.781	CycleORB (DE30,M5)	2026.05.12 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.50 @24053.51 sl=24195.47 tp=23698.61 magic=26110301 retcode=10009
+CS	0	16:23:05.794	Trade	2026.05.12 09:30:30   order [#11 buy stop 0.5 DE30 at 24202.23] triggered
+CS	0	16:23:05.794	Trades	2026.05.12 09:30:30   deal #8 buy 0.5 DE30 at 24204.02 done (based on order #11)
+CS	0	16:23:05.794	Trade	2026.05.12 09:30:30   deal performed [#8 buy 0.5 DE30 at 24204.02]
+CS	0	16:23:05.794	Trade	2026.05.12 09:30:30   order performed buy 0.5 at 24204.02 [#11 buy stop 0.5 DE30 at 24202.23]
+CS	0	16:23:05.794	Trade	2026.05.12 09:30:30   order canceled [#12 sell stop 0.5 DE30 at 24053.51]
+CS	0	16:23:05.794	CycleORB (DE30,M5)	2026.05.12 09:30:30   CTrade::OrderSend: cancel #12 [done]
+CS	0	16:23:05.794	CycleORB (DE30,M5)	2026.05.12 09:30:30   [CycleORB] DELETE order #12 magic=26110301 (LON OCO)
+CS	0	16:23:05.821	Trade	2026.05.12 12:07:52   stop loss triggered #11 buy 0.5 DE30 24204.02 sl: 24060.27 tp: 24557.13 [#13 sell 0.5 DE30 at 24060.27]
+CS	0	16:23:05.821	Trades	2026.05.12 12:07:52   deal #9 sell 0.5 DE30 at 24060.18 done (based on order #13)
+CS	0	16:23:05.821	Trade	2026.05.12 12:07:52   deal performed [#9 sell 0.5 DE30 at 24060.18]
+CS	0	16:23:05.821	Trade	2026.05.12 12:07:52   order performed sell 0.5 at 24060.18 [#13 sell 0.5 DE30 at 24060.27]
+CS	0	16:23:05.900	CycleORB (DE30,M5)	2026.05.13 08:15:00   [CycleORB] SKIP LON 2026.05.13 07:15 hi=24193.31 lo=24085.25 range=10806pt atr%=26.9 spread=84.0pt (live 84pt) cost%=0.8 volpct=20.4 (H1 vol below regime floor)
+CS	0	16:23:05.977	CycleORB (DE30,M5)	2026.05.14 08:15:00   [CycleORB] SKIP LON 2026.05.14 07:15 hi=24395.66 lo=24311.99 range=8367pt atr%=21.0 spread=84.0pt (live 84pt) cost%=1.0 volpct=20.8 (H1 vol below regime floor)
+CS	0	16:23:06.067	CycleORB (DE30,M5)	2026.05.15 08:15:00   [CycleORB] SKIP LON 2026.05.15 07:15 hi=24289.07 lo=24108.52 range=18055pt atr%=43.7 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:06.177	CycleORB (DE30,M5)	2026.05.18 08:15:00   [CycleORB] RANGE LON 2026.05.18 07:15 hi=23905.75 lo=23792.41 range=11334pt atr%=27.1 spread=84.0pt (live 84pt) cost%=0.7 buffer=567pt risk=100.00
+CS	0	16:23:06.177	Trade	2026.05.18 08:15:00   buy stop 0.7 DE30 at 23911.42 sl: 23792.41 tp: 24208.94 (23894.41 / 23895.25)
+CS	0	16:23:06.177	CycleORB (DE30,M5)	2026.05.18 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 23911.42 sl: 23792.41 tp: 24208.94 [done]
+CS	0	16:23:06.177	CycleORB (DE30,M5)	2026.05.18 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @23911.42 sl=23792.41 tp=24208.94 magic=26110301 retcode=10009
+CS	0	16:23:06.177	Trade	2026.05.18 08:15:00   sell stop 0.7 DE30 at 23786.74 sl: 23905.75 tp: 23489.22 (23894.41 / 23895.25)
+CS	0	16:23:06.177	CycleORB (DE30,M5)	2026.05.18 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 23786.74 sl: 23905.75 tp: 23489.22 [done]
+CS	0	16:23:06.177	CycleORB (DE30,M5)	2026.05.18 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @23786.74 sl=23905.75 tp=23489.22 magic=26110301 retcode=10009
+CS	0	16:23:06.178	Trade	2026.05.18 08:20:11   order [#14 buy stop 0.7 DE30 at 23911.42] triggered
+CS	0	16:23:06.178	Trades	2026.05.18 08:20:11   deal #10 buy 0.7 DE30 at 23911.49 done (based on order #14)
+CS	0	16:23:06.178	Trade	2026.05.18 08:20:11   deal performed [#10 buy 0.7 DE30 at 23911.49]
+CS	0	16:23:06.178	Trade	2026.05.18 08:20:11   order performed buy 0.7 at 23911.49 [#14 buy stop 0.7 DE30 at 23911.42]
+CS	0	16:23:06.178	Trade	2026.05.18 08:20:11   order canceled [#15 sell stop 0.7 DE30 at 23786.74]
+CS	0	16:23:06.178	CycleORB (DE30,M5)	2026.05.18 08:20:11   CTrade::OrderSend: cancel #15 [done]
+CS	0	16:23:06.178	CycleORB (DE30,M5)	2026.05.18 08:20:11   [CycleORB] DELETE order #15 magic=26110301 (LON OCO)
+CS	0	16:23:06.213	Trade	2026.05.18 11:41:14   take profit triggered #14 buy 0.7 DE30 23911.49 sl: 23792.41 tp: 24208.94 [#16 sell 0.7 DE30 at 24208.94]
+CS	0	16:23:06.213	Trades	2026.05.18 11:41:14   deal #11 sell 0.7 DE30 at 24210.65 done (based on order #16)
+CS	0	16:23:06.213	Trade	2026.05.18 11:41:14   deal performed [#11 sell 0.7 DE30 at 24210.65]
+CS	0	16:23:06.213	Trade	2026.05.18 11:41:14   order performed sell 0.7 at 24210.65 [#16 sell 0.7 DE30 at 24208.94]
+CS	0	16:23:06.302	CycleORB (DE30,M5)	2026.05.19 08:15:00   [CycleORB] SKIP LON 2026.05.19 07:15 hi=24661.83 lo=24425.90 range=23593pt atr%=52.5 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:06.396	CycleORB (DE30,M5)	2026.05.20 08:15:00   [CycleORB] RANGE LON 2026.05.20 07:15 hi=24408.47 lo=24275.92 range=13255pt atr%=30.5 spread=84.0pt (live 84pt) cost%=0.6 buffer=663pt risk=100.00
+CS	0	16:23:06.396	Trade	2026.05.20 08:15:00   buy stop 0.6 DE30 at 24415.10 sl: 24275.92 tp: 24763.05 (24304.09 / 24304.93)
+CS	0	16:23:06.396	CycleORB (DE30,M5)	2026.05.20 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 24415.10 sl: 24275.92 tp: 24763.05 [done]
+CS	0	16:23:06.396	CycleORB (DE30,M5)	2026.05.20 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @24415.10 sl=24275.92 tp=24763.05 magic=26110301 retcode=10009
+CS	0	16:23:06.396	Trade	2026.05.20 08:15:00   sell stop 0.6 DE30 at 24269.29 sl: 24408.47 tp: 23921.34 (24304.09 / 24304.93)
+CS	0	16:23:06.396	CycleORB (DE30,M5)	2026.05.20 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 24269.29 sl: 24408.47 tp: 23921.34 [done]
+CS	0	16:23:06.396	CycleORB (DE30,M5)	2026.05.20 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @24269.29 sl=24408.47 tp=23921.34 magic=26110301 retcode=10009
+CS	0	16:23:06.398	Trade	2026.05.20 08:38:23   order [#17 buy stop 0.6 DE30 at 24415.10] triggered
+CS	0	16:23:06.398	Trades	2026.05.20 08:38:23   deal #12 buy 0.6 DE30 at 24417.51 done (based on order #17)
+CS	0	16:23:06.398	Trade	2026.05.20 08:38:23   deal performed [#12 buy 0.6 DE30 at 24417.51]
+CS	0	16:23:06.398	Trade	2026.05.20 08:38:23   order performed buy 0.6 at 24417.51 [#17 buy stop 0.6 DE30 at 24415.10]
+CS	0	16:23:06.398	Trade	2026.05.20 08:38:23   order canceled [#18 sell stop 0.6 DE30 at 24269.29]
+CS	0	16:23:06.398	CycleORB (DE30,M5)	2026.05.20 08:38:23   CTrade::OrderSend: cancel #18 [done]
+CS	0	16:23:06.398	CycleORB (DE30,M5)	2026.05.20 08:38:23   [CycleORB] DELETE order #18 magic=26110301 (LON OCO)
+CS	0	16:23:06.453	Trade	2026.05.20 15:00:00   market sell 0.6 DE30, close #17 (24675.42 / 24676.26)
+CS	0	16:23:06.453	Trades	2026.05.20 15:00:00   deal #13 sell 0.6 DE30 at 24675.42 done (based on order #19)
+CS	0	16:23:06.453	Trade	2026.05.20 15:00:00   deal performed [#13 sell 0.6 DE30 at 24675.42]
+CS	0	16:23:06.453	Trade	2026.05.20 15:00:00   order performed sell 0.6 at 24675.42 [#19 sell 0.6 DE30 at 24675.42]
+CS	0	16:23:06.453	CycleORB (DE30,M5)	2026.05.20 15:00:00   CTrade::OrderSend: market sell 0.60 position #17 DE30 [done at 24675.42]
+CS	0	16:23:06.453	CycleORB (DE30,M5)	2026.05.20 15:00:00   [CycleORB] CLOSE position #17 magic=26110301 (LON time exit)
+CS	0	16:23:06.503	CycleORB (DE30,M5)	2026.05.21 08:15:00   [CycleORB] SKIP LON 2026.05.21 07:15 hi=24829.69 lo=24591.68 range=23801pt atr%=53.3 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:06.589	CycleORB (DE30,M5)	2026.05.22 08:15:00   [CycleORB] RANGE LON 2026.05.22 07:15 hi=24818.55 lo=24699.84 range=11871pt atr%=27.9 spread=84.0pt (live 84pt) cost%=0.7 buffer=594pt risk=100.00
+CS	0	16:23:06.589	Trade	2026.05.22 08:15:00   buy stop 0.6 DE30 at 24824.49 sl: 24699.84 tp: 25136.12 (24739.72 / 24740.56)
+CS	0	16:23:06.589	CycleORB (DE30,M5)	2026.05.22 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 24824.49 sl: 24699.84 tp: 25136.12 [done]
+CS	0	16:23:06.589	CycleORB (DE30,M5)	2026.05.22 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @24824.49 sl=24699.84 tp=25136.12 magic=26110301 retcode=10009
+CS	0	16:23:06.589	Trade	2026.05.22 08:15:00   sell stop 0.6 DE30 at 24693.90 sl: 24818.55 tp: 24382.28 (24739.72 / 24740.56)
+CS	0	16:23:06.589	CycleORB (DE30,M5)	2026.05.22 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 24693.90 sl: 24818.55 tp: 24382.28 [done]
+CS	0	16:23:06.589	CycleORB (DE30,M5)	2026.05.22 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @24693.90 sl=24818.55 tp=24382.28 magic=26110301 retcode=10009
+CS	0	16:23:06.593	Trade	2026.05.22 08:34:52   order [#21 sell stop 0.6 DE30 at 24693.90] triggered
+CS	0	16:23:06.593	Trades	2026.05.22 08:34:52   deal #14 sell 0.6 DE30 at 24663.32 done (based on order #21)
+CS	0	16:23:06.593	Trade	2026.05.22 08:34:52   deal performed [#14 sell 0.6 DE30 at 24663.32]
+CS	0	16:23:06.593	Trade	2026.05.22 08:34:52   order performed sell 0.6 at 24663.32 [#21 sell stop 0.6 DE30 at 24693.90]
+CS	0	16:23:06.593	Trade	2026.05.22 08:34:52   order canceled [#20 buy stop 0.6 DE30 at 24824.49]
+CS	0	16:23:06.593	CycleORB (DE30,M5)	2026.05.22 08:34:52   CTrade::OrderSend: cancel #20 [done]
+CS	0	16:23:06.593	CycleORB (DE30,M5)	2026.05.22 08:34:52   [CycleORB] DELETE order #20 magic=26110301 (LON OCO)
+CS	0	16:23:06.622	Trade	2026.05.22 11:47:39   stop loss triggered #21 sell 0.6 DE30 24663.32 sl: 24818.55 tp: 24382.28 [#22 buy 0.6 DE30 at 24818.55]
+CS	0	16:23:06.622	Trades	2026.05.22 11:47:39   deal #15 buy 0.6 DE30 at 24839.23 done (based on order #22)
+CS	0	16:23:06.622	Trade	2026.05.22 11:47:39   deal performed [#15 buy 0.6 DE30 at 24839.23]
+CS	0	16:23:06.622	Trade	2026.05.22 11:47:39   order performed buy 0.6 at 24839.23 [#22 buy 0.6 DE30 at 24818.55]
+CS	0	16:23:06.686	CycleORB (DE30,M5)	2026.05.25 08:15:00   [CycleORB] SKIP LON 2026.05.25 07:15 hi=25213.24 lo=25053.99 range=15925pt atr%=42.9 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:06.739	CycleORB (DE30,M5)	2026.05.26 08:15:00   [CycleORB] SKIP LON 2026.05.26 07:15 hi=25342.49 lo=25209.32 range=13317pt atr%=34.5 spread=84.0pt (live 84pt) cost%=0.6 volpct=1.4 (H1 vol below regime floor)
+CS	0	16:23:06.808	CycleORB (DE30,M5)	2026.05.27 08:15:00   [CycleORB] SKIP LON 2026.05.27 07:15 hi=25368.55 lo=25306.66 range=6189pt atr%=15.8 spread=84.0pt (live 84pt) cost%=1.4 volpct=0.2 (H1 vol below regime floor)
+CS	0	16:23:06.899	CycleORB (DE30,M5)	2026.05.28 08:15:00   [CycleORB] RANGE LON 2026.05.28 07:15 hi=25172.03 lo=25086.21 range=8582pt atr%=21.4 spread=84.0pt (live 84pt) cost%=1.0 buffer=429pt risk=100.00
+CS	0	16:23:06.899	Trade	2026.05.28 08:15:00   buy stop 0.9 DE30 at 25176.32 sl: 25086.21 tp: 25401.60 (25163.21 / 25164.05)
+CS	0	16:23:06.899	CycleORB (DE30,M5)	2026.05.28 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 25176.32 sl: 25086.21 tp: 25401.60 [done]
+CS	0	16:23:06.899	CycleORB (DE30,M5)	2026.05.28 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @25176.32 sl=25086.21 tp=25401.60 magic=26110301 retcode=10009
+CS	0	16:23:06.899	Trade	2026.05.28 08:15:00   sell stop 0.9 DE30 at 25081.92 sl: 25172.03 tp: 24856.64 (25163.21 / 25164.05)
+CS	0	16:23:06.899	CycleORB (DE30,M5)	2026.05.28 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 25081.92 sl: 25172.03 tp: 24856.64 [done]
+CS	0	16:23:06.899	CycleORB (DE30,M5)	2026.05.28 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @25081.92 sl=25172.03 tp=24856.64 magic=26110301 retcode=10009
+CS	0	16:23:06.916	Trade	2026.05.28 10:23:55   order [#24 sell stop 0.9 DE30 at 25081.92] triggered
+CS	0	16:23:06.916	Trades	2026.05.28 10:23:55   deal #16 sell 0.9 DE30 at 25081.86 done (based on order #24)
+CS	0	16:23:06.916	Trade	2026.05.28 10:23:55   deal performed [#16 sell 0.9 DE30 at 25081.86]
+CS	0	16:23:06.916	Trade	2026.05.28 10:23:55   order performed sell 0.9 at 25081.86 [#24 sell stop 0.9 DE30 at 25081.92]
+CS	0	16:23:06.916	Trade	2026.05.28 10:23:55   order canceled [#23 buy stop 0.9 DE30 at 25176.32]
+CS	0	16:23:06.916	CycleORB (DE30,M5)	2026.05.28 10:23:55   CTrade::OrderSend: cancel #23 [done]
+CS	0	16:23:06.916	CycleORB (DE30,M5)	2026.05.28 10:23:55   [CycleORB] DELETE order #23 magic=26110301 (LON OCO)
+CS	0	16:23:06.947	Trade	2026.05.28 14:12:59   stop loss triggered #24 sell 0.9 DE30 25081.86 sl: 25172.03 tp: 24856.64 [#25 buy 0.9 DE30 at 25172.03]
+CS	0	16:23:06.947	Trades	2026.05.28 14:12:59   deal #17 buy 0.9 DE30 at 25174.70 done (based on order #25)
+CS	0	16:23:06.947	Trade	2026.05.28 14:12:59   deal performed [#17 buy 0.9 DE30 at 25174.70]
+CS	0	16:23:06.947	Trade	2026.05.28 14:12:59   order performed buy 0.9 at 25174.70 [#25 buy 0.9 DE30 at 25172.03]
+CS	0	16:23:06.985	CycleORB (DE30,M5)	2026.05.29 08:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:07.036	CycleORB (DE30,M5)	2026.06.01 00:00:01   [CycleORB] CYCLE_END 202605 capital=10000.00 realized=43.19 floating=0.00 pnl=0.43% peak=3.01% state=ACTIVE 
+CS	0	16:23:07.036	CycleORB (DE30,M5)	2026.06.01 00:00:01   [CycleORB] CYCLE_BEGIN 202606 capital=10043.19 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:23:07.052	CycleORB (DE30,M5)	2026.06.01 08:15:00   [CycleORB] SKIP LON 2026.06.01 07:15 hi=25182.93 lo=25085.35 range=9758pt atr%=26.0 spread=84.0pt (live 84pt) cost%=0.9 volpct=20.6 (H1 vol below regime floor)
+CS	0	16:23:07.123	CycleORB (DE30,M5)	2026.06.02 08:15:00   [CycleORB] SKIP LON 2026.06.02 07:15 hi=25360.38 lo=25208.60 range=15178pt atr%=41.6 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:07.190	CycleORB (DE30,M5)	2026.06.03 08:15:00   [CycleORB] SKIP LON 2026.06.03 07:15 hi=24969.62 lo=24876.29 range=9333pt atr%=24.4 spread=83.9pt (live 84pt) cost%=0.9 volpct=4.8 (H1 vol below regime floor)
+CS	0	16:23:07.265	CycleORB (DE30,M5)	2026.06.04 08:15:00   [CycleORB] SKIP LON 2026.06.04 07:15 hi=24970.72 lo=24875.19 range=9553pt atr%=26.8 spread=84.0pt (live 84pt) cost%=0.9 volpct=16.4 (H1 vol below regime floor)
+CS	0	16:23:07.343	CycleORB (DE30,M5)	2026.06.05 08:15:00   [CycleORB] SKIP LON 2026.06.05 07:15 hi=24943.11 lo=24813.31 range=12980pt atr%=37.4 spread=84.0pt (live 84pt) cost%=0.6 volpct=11.4 (H1 vol below regime floor)
+CS	0	16:23:07.450	CycleORB (DE30,M5)	2026.06.08 08:15:00   [CycleORB] SKIP LON 2026.06.08 07:15 hi=24590.55 lo=24424.30 range=16625pt atr%=51.7 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:07.547	CycleORB (DE30,M5)	2026.06.09 08:15:00   [CycleORB] SKIP LON 2026.06.09 07:15 hi=24712.25 lo=24530.76 range=18149pt atr%=54.9 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:00   [CycleORB] RANGE LON 2026.06.10 07:15 hi=24495.55 lo=24399.96 range=9559pt atr%=27.0 spread=84.0pt (live 84pt) cost%=0.9 buffer=478pt risk=100.43
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:00   buy stop 0.8 DE30 at 24500.33 sl: 24399.96 tp: 24751.26 (24401.21 / 24402.05)
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 24500.33 sl: 24399.96 tp: 24751.26 [done]
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @24500.33 sl=24399.96 tp=24751.26 magic=26110301 retcode=10009
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:00   sell stop 0.8 DE30 at 24395.18 sl: 24495.55 tp: 24144.26 (24401.21 / 24402.05)
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 24395.18 sl: 24495.55 tp: 24144.26 [done]
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @24395.18 sl=24495.55 tp=24144.26 magic=26110301 retcode=10009
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:31   order [#27 sell stop 0.8 DE30 at 24395.18] triggered
+CS	0	16:23:07.651	Trades	2026.06.10 08:15:31   deal #18 sell 0.8 DE30 at 24394.55 done (based on order #27)
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:31   deal performed [#18 sell 0.8 DE30 at 24394.55]
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:31   order performed sell 0.8 at 24394.55 [#27 sell stop 0.8 DE30 at 24395.18]
+CS	0	16:23:07.651	Trade	2026.06.10 08:15:31   order canceled [#26 buy stop 0.8 DE30 at 24500.33]
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:31   CTrade::OrderSend: cancel #26 [done]
+CS	0	16:23:07.651	CycleORB (DE30,M5)	2026.06.10 08:15:31   [CycleORB] DELETE order #26 magic=26110301 (LON OCO)
+CS	0	16:23:07.683	Trade	2026.06.10 11:04:06   take profit triggered #27 sell 0.8 DE30 24394.55 sl: 24495.55 tp: 24144.26 [#28 buy 0.8 DE30 at 24144.26]
+CS	0	16:23:07.683	Trades	2026.06.10 11:04:06   deal #19 buy 0.8 DE30 at 24143.55 done (based on order #28)
+CS	0	16:23:07.683	Trade	2026.06.10 11:04:06   deal performed [#19 buy 0.8 DE30 at 24143.55]
+CS	0	16:23:07.683	Trade	2026.06.10 11:04:06   order performed buy 0.8 at 24143.55 [#28 buy 0.8 DE30 at 24144.26]
+CS	0	16:23:07.860	CycleORB (DE30,M5)	2026.06.11 08:15:00   [CycleORB] RANGE LON 2026.06.11 07:15 hi=24260.39 lo=24157.23 range=10316pt atr%=28.3 spread=84.0pt (live 84pt) cost%=0.8 buffer=516pt risk=100.43
+CS	0	16:23:07.860	Trade	2026.06.11 08:15:00   buy stop 0.8 DE30 at 24265.55 sl: 24157.23 tp: 24536.35 (24251.89 / 24252.73)
+CS	0	16:23:07.860	CycleORB (DE30,M5)	2026.06.11 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 24265.55 sl: 24157.23 tp: 24536.35 [done]
+CS	0	16:23:07.860	CycleORB (DE30,M5)	2026.06.11 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @24265.55 sl=24157.23 tp=24536.35 magic=26110301 retcode=10009
+CS	0	16:23:07.860	Trade	2026.06.11 08:15:00   sell stop 0.8 DE30 at 24152.07 sl: 24260.39 tp: 23881.27 (24251.89 / 24252.73)
+CS	0	16:23:07.860	CycleORB (DE30,M5)	2026.06.11 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 24152.07 sl: 24260.39 tp: 23881.27 [done]
+CS	0	16:23:07.860	CycleORB (DE30,M5)	2026.06.11 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @24152.07 sl=24260.39 tp=23881.27 magic=26110301 retcode=10009
+CS	0	16:23:07.877	Trade	2026.06.11 09:55:26   order [#29 buy stop 0.8 DE30 at 24265.55] triggered
+CS	0	16:23:07.877	Trades	2026.06.11 09:55:26   deal #20 buy 0.8 DE30 at 24266.23 done (based on order #29)
+CS	0	16:23:07.877	Trade	2026.06.11 09:55:26   deal performed [#20 buy 0.8 DE30 at 24266.23]
+CS	0	16:23:07.877	Trade	2026.06.11 09:55:26   order performed buy 0.8 at 24266.23 [#29 buy stop 0.8 DE30 at 24265.55]
+CS	0	16:23:07.877	Trade	2026.06.11 09:55:26   order canceled [#30 sell stop 0.8 DE30 at 24152.07]
+CS	0	16:23:07.877	CycleORB (DE30,M5)	2026.06.11 09:55:26   CTrade::OrderSend: cancel #30 [done]
+CS	0	16:23:07.877	CycleORB (DE30,M5)	2026.06.11 09:55:26   [CycleORB] DELETE order #30 magic=26110301 (LON OCO)
+CS	0	16:23:07.903	Trade	2026.06.11 12:22:11   stop loss triggered #29 buy 0.8 DE30 24266.23 sl: 24157.23 tp: 24536.35 [#31 sell 0.8 DE30 at 24157.23]
+CS	0	16:23:07.903	Trades	2026.06.11 12:22:11   deal #21 sell 0.8 DE30 at 24143.56 done (based on order #31)
+CS	0	16:23:07.903	Trade	2026.06.11 12:22:11   deal performed [#21 sell 0.8 DE30 at 24143.56]
+CS	0	16:23:07.903	Trade	2026.06.11 12:22:11   order performed sell 0.8 at 24143.56 [#31 sell 0.8 DE30 at 24157.23]
+CS	0	16:23:08.020	CycleORB (DE30,M5)	2026.06.12 08:15:00   [CycleORB] SKIP LON 2026.06.12 07:15 hi=24716.47 lo=24490.83 range=22564pt atr%=56.5 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:08.129	CycleORB (DE30,M5)	2026.06.15 08:15:00   [CycleORB] RANGE LON 2026.06.15 07:15 hi=25087.32 lo=24977.72 range=10960pt atr%=27.5 spread=84.0pt (live 84pt) cost%=0.8 buffer=548pt risk=100.43
+CS	0	16:23:08.129	Trade	2026.06.15 08:15:00   buy stop 0.7 DE30 at 25092.80 sl: 24977.72 tp: 25380.50 (24987.85 / 24988.69)
+CS	0	16:23:08.129	CycleORB (DE30,M5)	2026.06.15 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25092.80 sl: 24977.72 tp: 25380.50 [done]
+CS	0	16:23:08.129	CycleORB (DE30,M5)	2026.06.15 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25092.80 sl=24977.72 tp=25380.50 magic=26110301 retcode=10009
+CS	0	16:23:08.129	Trade	2026.06.15 08:15:00   sell stop 0.7 DE30 at 24972.24 sl: 25087.32 tp: 24684.54 (24987.85 / 24988.69)
+CS	0	16:23:08.129	CycleORB (DE30,M5)	2026.06.15 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24972.24 sl: 25087.32 tp: 24684.54 [done]
+CS	0	16:23:08.129	CycleORB (DE30,M5)	2026.06.15 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24972.24 sl=25087.32 tp=24684.54 magic=26110301 retcode=10009
+CS	0	16:23:08.130	Trade	2026.06.15 08:19:58   order [#33 sell stop 0.7 DE30 at 24972.24] triggered
+CS	0	16:23:08.130	Trades	2026.06.15 08:19:58   deal #22 sell 0.7 DE30 at 24972.12 done (based on order #33)
+CS	0	16:23:08.130	Trade	2026.06.15 08:19:58   deal performed [#22 sell 0.7 DE30 at 24972.12]
+CS	0	16:23:08.130	Trade	2026.06.15 08:19:58   order performed sell 0.7 at 24972.12 [#33 sell stop 0.7 DE30 at 24972.24]
+CS	0	16:23:08.130	Trade	2026.06.15 08:19:58   order canceled [#32 buy stop 0.7 DE30 at 25092.80]
+CS	0	16:23:08.130	CycleORB (DE30,M5)	2026.06.15 08:19:58   CTrade::OrderSend: cancel #32 [done]
+CS	0	16:23:08.130	CycleORB (DE30,M5)	2026.06.15 08:19:58   [CycleORB] DELETE order #32 magic=26110301 (LON OCO)
+CS	0	16:23:08.199	Trade	2026.06.15 15:00:00   market buy 0.7 DE30, close #33 (24932.81 / 24933.65)
+CS	0	16:23:08.199	Trades	2026.06.15 15:00:00   deal #23 buy 0.7 DE30 at 24933.65 done (based on order #34)
+CS	0	16:23:08.199	Trade	2026.06.15 15:00:00   deal performed [#23 buy 0.7 DE30 at 24933.65]
+CS	0	16:23:08.199	Trade	2026.06.15 15:00:00   order performed buy 0.7 at 24933.65 [#34 buy 0.7 DE30 at 24933.65]
+CS	0	16:23:08.199	CycleORB (DE30,M5)	2026.06.15 15:00:00   CTrade::OrderSend: market buy 0.70 position #33 DE30 [done at 24933.65]
+CS	0	16:23:08.199	CycleORB (DE30,M5)	2026.06.15 15:00:00   [CycleORB] CLOSE position #33 magic=26110301 (LON time exit)
+CS	0	16:23:08.240	CycleORB (DE30,M5)	2026.06.16 08:15:00   [CycleORB] SKIP LON 2026.06.16 07:15 hi=25052.06 lo=24895.06 range=15700pt atr%=38.7 spread=84.0pt (live 84pt) cost%=0.5 volpct=0.8 (H1 vol below regime floor)
+CS	0	16:23:08.338	CycleORB (DE30,M5)	2026.06.17 08:15:00   [CycleORB] SKIP LON 2026.06.17 07:15 hi=24853.53 lo=24794.15 range=5938pt atr%=13.9 spread=84.0pt (live 84pt) cost%=1.4 volpct=2.0 (H1 vol below regime floor)
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:15:00   [CycleORB] RANGE LON 2026.06.18 07:15 hi=25052.91 lo=24947.08 range=10583pt atr%=25.6 spread=84.0pt (live 84pt) cost%=0.8 buffer=529pt risk=100.43
+CS	0	16:23:08.451	Trade	2026.06.18 08:15:00   buy stop 0.7 DE30 at 25058.20 sl: 24947.08 tp: 25336.00 (24973.41 / 24974.25)
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25058.20 sl: 24947.08 tp: 25336.00 [done]
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25058.20 sl=24947.08 tp=25336.00 magic=26110301 retcode=10009
+CS	0	16:23:08.451	Trade	2026.06.18 08:15:00   sell stop 0.7 DE30 at 24941.79 sl: 25052.91 tp: 24663.99 (24973.41 / 24974.25)
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24941.79 sl: 25052.91 tp: 24663.99 [done]
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24941.79 sl=25052.91 tp=24663.99 magic=26110301 retcode=10009
+CS	0	16:23:08.451	Trade	2026.06.18 08:19:45   order [#36 sell stop 0.7 DE30 at 24941.79] triggered
+CS	0	16:23:08.451	Trades	2026.06.18 08:19:45   deal #24 sell 0.7 DE30 at 24941.66 done (based on order #36)
+CS	0	16:23:08.451	Trade	2026.06.18 08:19:45   deal performed [#24 sell 0.7 DE30 at 24941.66]
+CS	0	16:23:08.451	Trade	2026.06.18 08:19:45   order performed sell 0.7 at 24941.66 [#36 sell stop 0.7 DE30 at 24941.79]
+CS	0	16:23:08.451	Trade	2026.06.18 08:19:45   order canceled [#35 buy stop 0.7 DE30 at 25058.20]
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:19:45   CTrade::OrderSend: cancel #35 [done]
+CS	0	16:23:08.451	CycleORB (DE30,M5)	2026.06.18 08:19:45   [CycleORB] DELETE order #35 magic=26110301 (LON OCO)
+CS	0	16:23:08.533	Trade	2026.06.18 15:00:00   market buy 0.7 DE30, close #36 (25031.26 / 25032.10)
+CS	0	16:23:08.533	Trades	2026.06.18 15:00:00   deal #25 buy 0.7 DE30 at 25032.10 done (based on order #37)
+CS	0	16:23:08.533	Trade	2026.06.18 15:00:00   deal performed [#25 buy 0.7 DE30 at 25032.10]
+CS	0	16:23:08.533	Trade	2026.06.18 15:00:00   order performed buy 0.7 at 25032.10 [#37 buy 0.7 DE30 at 25032.10]
+CS	0	16:23:08.533	CycleORB (DE30,M5)	2026.06.18 15:00:00   CTrade::OrderSend: market buy 0.70 position #36 DE30 [done at 25032.10]
+CS	0	16:23:08.533	CycleORB (DE30,M5)	2026.06.18 15:00:00   [CycleORB] CLOSE position #36 magic=26110301 (LON time exit)
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:15:00   [CycleORB] RANGE LON 2026.06.19 07:15 hi=25155.26 lo=25049.76 range=10550pt atr%=26.0 spread=84.0pt (live 84pt) cost%=0.8 buffer=528pt risk=100.43
+CS	0	16:23:08.583	Trade	2026.06.19 08:15:00   buy stop 0.7 DE30 at 25160.54 sl: 25049.76 tp: 25437.49 (25137.00 / 25137.84)
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25160.54 sl: 25049.76 tp: 25437.49 [done]
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25160.54 sl=25049.76 tp=25437.49 magic=26110301 retcode=10009
+CS	0	16:23:08.583	Trade	2026.06.19 08:15:00   sell stop 0.7 DE30 at 25044.48 sl: 25155.26 tp: 24767.53 (25137.00 / 25137.84)
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 25044.48 sl: 25155.26 tp: 24767.53 [done]
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @25044.48 sl=25155.26 tp=24767.53 magic=26110301 retcode=10009
+CS	0	16:23:08.583	Trade	2026.06.19 08:16:59   order [#38 buy stop 0.7 DE30 at 25160.54] triggered
+CS	0	16:23:08.583	Trades	2026.06.19 08:16:59   deal #26 buy 0.7 DE30 at 25161.01 done (based on order #38)
+CS	0	16:23:08.583	Trade	2026.06.19 08:16:59   deal performed [#26 buy 0.7 DE30 at 25161.01]
+CS	0	16:23:08.583	Trade	2026.06.19 08:16:59   order performed buy 0.7 at 25161.01 [#38 buy stop 0.7 DE30 at 25160.54]
+CS	0	16:23:08.583	Trade	2026.06.19 08:16:59   order canceled [#39 sell stop 0.7 DE30 at 25044.48]
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:16:59   CTrade::OrderSend: cancel #39 [done]
+CS	0	16:23:08.583	CycleORB (DE30,M5)	2026.06.19 08:16:59   [CycleORB] DELETE order #39 magic=26110301 (LON OCO)
+CS	0	16:23:08.592	Trade	2026.06.19 09:26:03   stop loss triggered #38 buy 0.7 DE30 25161.01 sl: 25049.76 tp: 25437.49 [#40 sell 0.7 DE30 at 25049.76]
+CS	0	16:23:08.592	Trades	2026.06.19 09:26:03   deal #27 sell 0.7 DE30 at 25049.75 done (based on order #40)
+CS	0	16:23:08.592	Trade	2026.06.19 09:26:03   deal performed [#27 sell 0.7 DE30 at 25049.75]
+CS	0	16:23:08.592	Trade	2026.06.19 09:26:03   order performed sell 0.7 at 25049.75 [#40 sell 0.7 DE30 at 25049.76]
+CS	0	16:23:08.659	CycleORB (DE30,M5)	2026.06.22 08:15:00   [CycleORB] RANGE LON 2026.06.22 07:15 hi=25079.50 lo=24965.21 range=11429pt atr%=30.2 spread=84.0pt (live 84pt) cost%=0.7 buffer=571pt risk=100.43
+CS	0	16:23:08.659	Trade	2026.06.22 08:15:00   buy stop 0.7 DE30 at 25085.21 sl: 24965.21 tp: 25385.21 (24983.97 / 24984.81)
+CS	0	16:23:08.659	CycleORB (DE30,M5)	2026.06.22 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25085.21 sl: 24965.21 tp: 25385.21 [done]
+CS	0	16:23:08.659	CycleORB (DE30,M5)	2026.06.22 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25085.21 sl=24965.21 tp=25385.21 magic=26110301 retcode=10009
+CS	0	16:23:08.659	Trade	2026.06.22 08:15:00   sell stop 0.7 DE30 at 24959.50 sl: 25079.50 tp: 24659.50 (24983.97 / 24984.81)
+CS	0	16:23:08.659	CycleORB (DE30,M5)	2026.06.22 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24959.50 sl: 25079.50 tp: 24659.50 [done]
+CS	0	16:23:08.659	CycleORB (DE30,M5)	2026.06.22 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24959.50 sl=25079.50 tp=24659.50 magic=26110301 retcode=10009
+CS	0	16:23:08.662	Trade	2026.06.22 08:31:56   order [#42 sell stop 0.7 DE30 at 24959.50] triggered
+CS	0	16:23:08.662	Trades	2026.06.22 08:31:56   deal #28 sell 0.7 DE30 at 24958.37 done (based on order #42)
+CS	0	16:23:08.662	Trade	2026.06.22 08:31:56   deal performed [#28 sell 0.7 DE30 at 24958.37]
+CS	0	16:23:08.662	Trade	2026.06.22 08:31:56   order performed sell 0.7 at 24958.37 [#42 sell stop 0.7 DE30 at 24959.50]
+CS	0	16:23:08.662	Trade	2026.06.22 08:31:56   order canceled [#41 buy stop 0.7 DE30 at 25085.21]
+CS	0	16:23:08.662	CycleORB (DE30,M5)	2026.06.22 08:31:56   CTrade::OrderSend: cancel #41 [done]
+CS	0	16:23:08.662	CycleORB (DE30,M5)	2026.06.22 08:31:56   [CycleORB] DELETE order #41 magic=26110301 (LON OCO)
+CS	0	16:23:08.703	Trade	2026.06.22 13:26:30   stop loss triggered #42 sell 0.7 DE30 24958.37 sl: 25079.50 tp: 24659.50 [#43 buy 0.7 DE30 at 25079.50]
+CS	0	16:23:08.703	Trades	2026.06.22 13:26:30   deal #29 buy 0.7 DE30 at 25084.56 done (based on order #43)
+CS	0	16:23:08.703	Trade	2026.06.22 13:26:30   deal performed [#29 buy 0.7 DE30 at 25084.56]
+CS	0	16:23:08.703	Trade	2026.06.22 13:26:30   order performed buy 0.7 at 25084.56 [#43 buy 0.7 DE30 at 25079.50]
+CS	0	16:23:08.771	CycleORB (DE30,M5)	2026.06.23 08:15:00   [CycleORB] RANGE LON 2026.06.23 07:15 hi=24848.55 lo=24742.21 range=10634pt atr%=29.5 spread=84.0pt (live 84pt) cost%=0.8 buffer=532pt risk=100.43
+CS	0	16:23:08.771	Trade	2026.06.23 08:15:00   buy stop 0.7 DE30 at 24853.87 sl: 24742.21 tp: 25133.02 (24757.46 / 24758.30)
+CS	0	16:23:08.771	CycleORB (DE30,M5)	2026.06.23 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 24853.87 sl: 24742.21 tp: 25133.02 [done]
+CS	0	16:23:08.771	CycleORB (DE30,M5)	2026.06.23 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @24853.87 sl=24742.21 tp=25133.02 magic=26110301 retcode=10009
+CS	0	16:23:08.771	Trade	2026.06.23 08:15:00   sell stop 0.7 DE30 at 24736.89 sl: 24848.55 tp: 24457.74 (24757.46 / 24758.30)
+CS	0	16:23:08.771	CycleORB (DE30,M5)	2026.06.23 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24736.89 sl: 24848.55 tp: 24457.74 [done]
+CS	0	16:23:08.771	CycleORB (DE30,M5)	2026.06.23 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24736.89 sl=24848.55 tp=24457.74 magic=26110301 retcode=10009
+CS	0	16:23:08.773	Trade	2026.06.23 08:19:56   order [#45 sell stop 0.7 DE30 at 24736.89] triggered
+CS	0	16:23:08.773	Trades	2026.06.23 08:19:56   deal #30 sell 0.7 DE30 at 24736.46 done (based on order #45)
+CS	0	16:23:08.773	Trade	2026.06.23 08:19:56   deal performed [#30 sell 0.7 DE30 at 24736.46]
+CS	0	16:23:08.773	Trade	2026.06.23 08:19:56   order performed sell 0.7 at 24736.46 [#45 sell stop 0.7 DE30 at 24736.89]
+CS	0	16:23:08.773	Trade	2026.06.23 08:19:56   order canceled [#44 buy stop 0.7 DE30 at 24853.87]
+CS	0	16:23:08.773	CycleORB (DE30,M5)	2026.06.23 08:19:56   CTrade::OrderSend: cancel #44 [done]
+CS	0	16:23:08.773	CycleORB (DE30,M5)	2026.06.23 08:19:56   [CycleORB] DELETE order #44 magic=26110301 (LON OCO)
+CS	0	16:23:08.790	Trade	2026.06.23 09:57:07   stop loss triggered #45 sell 0.7 DE30 24736.46 sl: 24848.55 tp: 24457.74 [#46 buy 0.7 DE30 at 24848.55]
+CS	0	16:23:08.790	Trades	2026.06.23 09:57:07   deal #31 buy 0.7 DE30 at 24849.21 done (based on order #46)
+CS	0	16:23:08.790	Trade	2026.06.23 09:57:07   deal performed [#31 buy 0.7 DE30 at 24849.21]
+CS	0	16:23:08.790	Trade	2026.06.23 09:57:07   order performed buy 0.7 at 24849.21 [#46 buy 0.7 DE30 at 24848.55]
+CS	0	16:23:08.878	CycleORB (DE30,M5)	2026.06.24 08:15:00   [CycleORB] RANGE LON 2026.06.24 07:15 hi=24784.80 lo=24658.24 range=12656pt atr%=33.7 spread=84.0pt (live 84pt) cost%=0.7 buffer=633pt risk=100.43
+CS	0	16:23:08.878	Trade	2026.06.24 08:15:00   buy stop 0.6 DE30 at 24791.13 sl: 24658.24 tp: 25123.36 (24724.49 / 24725.33)
+CS	0	16:23:08.878	CycleORB (DE30,M5)	2026.06.24 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 24791.13 sl: 24658.24 tp: 25123.36 [done]
+CS	0	16:23:08.878	CycleORB (DE30,M5)	2026.06.24 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @24791.13 sl=24658.24 tp=25123.36 magic=26110301 retcode=10009
+CS	0	16:23:08.878	Trade	2026.06.24 08:15:00   sell stop 0.6 DE30 at 24651.91 sl: 24784.80 tp: 24319.69 (24724.49 / 24725.33)
+CS	0	16:23:08.878	CycleORB (DE30,M5)	2026.06.24 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 24651.91 sl: 24784.80 tp: 24319.69 [done]
+CS	0	16:23:08.878	CycleORB (DE30,M5)	2026.06.24 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @24651.91 sl=24784.80 tp=24319.69 magic=26110301 retcode=10009
+CS	0	16:23:08.890	Trade	2026.06.24 09:40:29   order [#48 sell stop 0.6 DE30 at 24651.91] triggered
+CS	0	16:23:08.890	Trades	2026.06.24 09:40:29   deal #32 sell 0.6 DE30 at 24651.75 done (based on order #48)
+CS	0	16:23:08.890	Trade	2026.06.24 09:40:29   deal performed [#32 sell 0.6 DE30 at 24651.75]
+CS	0	16:23:08.890	Trade	2026.06.24 09:40:29   order performed sell 0.6 at 24651.75 [#48 sell stop 0.6 DE30 at 24651.91]
+CS	0	16:23:08.891	Trade	2026.06.24 09:40:29   order canceled [#47 buy stop 0.6 DE30 at 24791.13]
+CS	0	16:23:08.891	CycleORB (DE30,M5)	2026.06.24 09:40:29   CTrade::OrderSend: cancel #47 [done]
+CS	0	16:23:08.891	CycleORB (DE30,M5)	2026.06.24 09:40:29   [CycleORB] DELETE order #47 magic=26110301 (LON OCO)
+CS	0	16:23:08.953	Trade	2026.06.24 15:00:00   market buy 0.6 DE30, close #48 (24699.08 / 24699.92)
+CS	0	16:23:08.953	Trades	2026.06.24 15:00:00   deal #33 buy 0.6 DE30 at 24699.92 done (based on order #49)
+CS	0	16:23:08.953	Trade	2026.06.24 15:00:00   deal performed [#33 buy 0.6 DE30 at 24699.92]
+CS	0	16:23:08.953	Trade	2026.06.24 15:00:00   order performed buy 0.6 at 24699.92 [#49 buy 0.6 DE30 at 24699.92]
+CS	0	16:23:08.953	CycleORB (DE30,M5)	2026.06.24 15:00:00   CTrade::OrderSend: market buy 0.60 position #48 DE30 [done at 24699.92]
+CS	0	16:23:08.953	CycleORB (DE30,M5)	2026.06.24 15:00:00   [CycleORB] CLOSE position #48 magic=26110301 (LON time exit)
+CS	0	16:23:09.020	CycleORB (DE30,M5)	2026.06.25 08:15:00   [CycleORB] RANGE LON 2026.06.25 07:15 hi=24870.21 lo=24801.69 range=6852pt atr%=18.3 spread=84.0pt (live 84pt) cost%=1.2 buffer=343pt risk=100.43
+CS	0	16:23:09.020	Trade	2026.06.25 08:15:00   buy stop 1.2 DE30 at 24873.64 sl: 24801.69 tp: 25053.52 (24852.35 / 24853.19)
+CS	0	16:23:09.020	CycleORB (DE30,M5)	2026.06.25 08:15:00   CTrade::OrderSend: buy stop 1.20 DE30 at 24873.64 sl: 24801.69 tp: 25053.52 [done]
+CS	0	16:23:09.020	CycleORB (DE30,M5)	2026.06.25 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.20 @24873.64 sl=24801.69 tp=25053.52 magic=26110301 retcode=10009
+CS	0	16:23:09.020	Trade	2026.06.25 08:15:00   sell stop 1.2 DE30 at 24798.26 sl: 24870.21 tp: 24618.38 (24852.35 / 24853.19)
+CS	0	16:23:09.020	CycleORB (DE30,M5)	2026.06.25 08:15:00   CTrade::OrderSend: sell stop 1.20 DE30 at 24798.26 sl: 24870.21 tp: 24618.38 [done]
+CS	0	16:23:09.020	CycleORB (DE30,M5)	2026.06.25 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.20 @24798.26 sl=24870.21 tp=24618.38 magic=26110301 retcode=10009
+CS	0	16:23:09.023	Trade	2026.06.25 08:35:34   order [#50 buy stop 1.2 DE30 at 24873.64] triggered
+CS	0	16:23:09.023	Trades	2026.06.25 08:35:34   deal #34 buy 1.2 DE30 at 24873.87 done (based on order #50)
+CS	0	16:23:09.023	Trade	2026.06.25 08:35:34   deal performed [#34 buy 1.2 DE30 at 24873.87]
+CS	0	16:23:09.023	Trade	2026.06.25 08:35:34   order performed buy 1.2 at 24873.87 [#50 buy stop 1.2 DE30 at 24873.64]
+CS	0	16:23:09.023	Trade	2026.06.25 08:35:34   order canceled [#51 sell stop 1.2 DE30 at 24798.26]
+CS	0	16:23:09.023	CycleORB (DE30,M5)	2026.06.25 08:35:34   CTrade::OrderSend: cancel #51 [done]
+CS	0	16:23:09.023	CycleORB (DE30,M5)	2026.06.25 08:35:34   [CycleORB] DELETE order #51 magic=26110301 (LON OCO)
+CS	0	16:23:09.081	Trade	2026.06.25 14:19:39   take profit triggered #50 buy 1.2 DE30 24873.87 sl: 24801.69 tp: 25053.52 [#52 sell 1.2 DE30 at 25053.52]
+CS	0	16:23:09.081	Trades	2026.06.25 14:19:39   deal #35 sell 1.2 DE30 at 25053.86 done (based on order #52)
+CS	0	16:23:09.081	Trade	2026.06.25 14:19:39   deal performed [#35 sell 1.2 DE30 at 25053.86]
+CS	0	16:23:09.081	Trade	2026.06.25 14:19:39   order performed sell 1.2 at 25053.86 [#52 sell 1.2 DE30 at 25053.52]
+CS	0	16:23:09.167	CycleORB (DE30,M5)	2026.06.26 08:15:00   [CycleORB] RANGE LON 2026.06.26 07:15 hi=24867.76 lo=24771.57 range=9619pt atr%=26.6 spread=84.0pt (live 84pt) cost%=0.9 buffer=481pt risk=100.43
+CS	0	16:23:09.167	Trade	2026.06.26 08:15:00   buy stop 0.8 DE30 at 24872.57 sl: 24771.57 tp: 25125.07 (24781.10 / 24781.94)
+CS	0	16:23:09.167	CycleORB (DE30,M5)	2026.06.26 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 24872.57 sl: 24771.57 tp: 25125.07 [done]
+CS	0	16:23:09.167	CycleORB (DE30,M5)	2026.06.26 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @24872.57 sl=24771.57 tp=25125.07 magic=26110301 retcode=10009
+CS	0	16:23:09.167	Trade	2026.06.26 08:15:00   sell stop 0.8 DE30 at 24766.76 sl: 24867.76 tp: 24514.26 (24781.10 / 24781.94)
+CS	0	16:23:09.167	CycleORB (DE30,M5)	2026.06.26 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 24766.76 sl: 24867.76 tp: 24514.26 [done]
+CS	0	16:23:09.167	CycleORB (DE30,M5)	2026.06.26 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @24766.76 sl=24867.76 tp=24514.26 magic=26110301 retcode=10009
+CS	0	16:23:09.172	Trade	2026.06.26 08:34:55   order [#54 sell stop 0.8 DE30 at 24766.76] triggered
+CS	0	16:23:09.172	Trades	2026.06.26 08:34:55   deal #36 sell 0.8 DE30 at 24766.40 done (based on order #54)
+CS	0	16:23:09.172	Trade	2026.06.26 08:34:55   deal performed [#36 sell 0.8 DE30 at 24766.40]
+CS	0	16:23:09.172	Trade	2026.06.26 08:34:55   order performed sell 0.8 at 24766.40 [#54 sell stop 0.8 DE30 at 24766.76]
+CS	0	16:23:09.172	Trade	2026.06.26 08:34:55   order canceled [#53 buy stop 0.8 DE30 at 24872.57]
+CS	0	16:23:09.172	CycleORB (DE30,M5)	2026.06.26 08:34:55   CTrade::OrderSend: cancel #53 [done]
+CS	0	16:23:09.172	CycleORB (DE30,M5)	2026.06.26 08:34:55   [CycleORB] DELETE order #53 magic=26110301 (LON OCO)
+CS	0	16:23:09.285	Trade	2026.06.26 15:00:00   market buy 0.8 DE30, close #54 (24606.59 / 24607.43)
+CS	0	16:23:09.285	Trades	2026.06.26 15:00:00   deal #37 buy 0.8 DE30 at 24607.43 done (based on order #55)
+CS	0	16:23:09.285	Trade	2026.06.26 15:00:00   deal performed [#37 buy 0.8 DE30 at 24607.43]
+CS	0	16:23:09.285	Trade	2026.06.26 15:00:00   order performed buy 0.8 at 24607.43 [#55 buy 0.8 DE30 at 24607.43]
+CS	0	16:23:09.285	CycleORB (DE30,M5)	2026.06.26 15:00:00   CTrade::OrderSend: market buy 0.80 position #54 DE30 [done at 24607.43]
+CS	0	16:23:09.285	CycleORB (DE30,M5)	2026.06.26 15:00:00   [CycleORB] CLOSE position #54 magic=26110301 (LON time exit)
+CS	0	16:23:09.377	CycleORB (DE30,M5)	2026.06.29 08:15:00   [CycleORB] RANGE LON 2026.06.29 07:15 hi=24759.66 lo=24699.24 range=6042pt atr%=19.7 spread=84.0pt (live 84pt) cost%=1.4 buffer=302pt risk=100.43
+CS	0	16:23:09.377	Trade	2026.06.29 08:15:00   buy stop 1.3 DE30 at 24762.68 sl: 24699.24 tp: 24921.28 (24724.57 / 24725.41)
+CS	0	16:23:09.377	CycleORB (DE30,M5)	2026.06.29 08:15:00   CTrade::OrderSend: buy stop 1.30 DE30 at 24762.68 sl: 24699.24 tp: 24921.28 [done]
+CS	0	16:23:09.377	CycleORB (DE30,M5)	2026.06.29 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.30 @24762.68 sl=24699.24 tp=24921.28 magic=26110301 retcode=10009
+CS	0	16:23:09.377	Trade	2026.06.29 08:15:00   sell stop 1.3 DE30 at 24696.22 sl: 24759.66 tp: 24537.62 (24724.57 / 24725.41)
+CS	0	16:23:09.377	CycleORB (DE30,M5)	2026.06.29 08:15:00   CTrade::OrderSend: sell stop 1.30 DE30 at 24696.22 sl: 24759.66 tp: 24537.62 [done]
+CS	0	16:23:09.377	CycleORB (DE30,M5)	2026.06.29 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.30 @24696.22 sl=24759.66 tp=24537.62 magic=26110301 retcode=10009
+CS	0	16:23:09.378	Trade	2026.06.29 08:24:14   order [#57 sell stop 1.3 DE30 at 24696.22] triggered
+CS	0	16:23:09.378	Trades	2026.06.29 08:24:14   deal #38 sell 1.3 DE30 at 24696.16 done (based on order #57)
+CS	0	16:23:09.378	Trade	2026.06.29 08:24:14   deal performed [#38 sell 1.3 DE30 at 24696.16]
+CS	0	16:23:09.378	Trade	2026.06.29 08:24:14   order performed sell 1.3 at 24696.16 [#57 sell stop 1.3 DE30 at 24696.22]
+CS	0	16:23:09.378	Trade	2026.06.29 08:24:14   order canceled [#56 buy stop 1.3 DE30 at 24762.68]
+CS	0	16:23:09.378	CycleORB (DE30,M5)	2026.06.29 08:24:14   CTrade::OrderSend: cancel #56 [done]
+CS	0	16:23:09.378	CycleORB (DE30,M5)	2026.06.29 08:24:14   [CycleORB] DELETE order #56 magic=26110301 (LON OCO)
+CS	0	16:23:09.445	Trade	2026.06.29 15:00:00   market buy 1.3 DE30, close #57 (24582.24 / 24583.08)
+CS	0	16:23:09.445	Trades	2026.06.29 15:00:00   deal #39 buy 1.3 DE30 at 24583.08 done (based on order #58)
+CS	0	16:23:09.445	Trade	2026.06.29 15:00:00   deal performed [#39 buy 1.3 DE30 at 24583.08]
+CS	0	16:23:09.445	Trade	2026.06.29 15:00:00   order performed buy 1.3 at 24583.08 [#58 buy 1.3 DE30 at 24583.08]
+CS	0	16:23:09.445	CycleORB (DE30,M5)	2026.06.29 15:00:00   CTrade::OrderSend: market buy 1.30 position #57 DE30 [done at 24583.08]
+CS	0	16:23:09.445	CycleORB (DE30,M5)	2026.06.29 15:00:00   [CycleORB] CLOSE position #57 magic=26110301 (LON time exit)
+CS	0	16:23:09.489	CycleORB (DE30,M5)	2026.06.30 08:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:09.552	CycleORB (DE30,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_END 202606 capital=10043.19 realized=322.43 floating=0.00 pnl=3.21% peak=3.62% state=ACTIVE 
+CS	0	16:23:09.552	CycleORB (DE30,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_BEGIN 202607 capital=10365.62 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:23:09.571	CycleORB (DE30,M5)	2026.07.01 08:15:00   [CycleORB] SKIP LON 2026.07.01 07:15 hi=25059.92 lo=24950.42 range=10950pt atr%=35.7 spread=84.0pt (live 84pt) cost%=0.8 volpct=1.6 (H1 vol below regime floor)
+CS	0	16:23:09.656	CycleORB (DE30,M5)	2026.07.02 08:15:00   [CycleORB] RANGE LON 2026.07.02 07:15 hi=25138.82 lo=25024.49 range=11433pt atr%=37.9 spread=84.0pt (live 84pt) cost%=0.7 buffer=572pt risk=103.66
+CS	0	16:23:09.656	Trade	2026.07.02 08:15:00   buy stop 0.7 DE30 at 25144.54 sl: 25024.49 tp: 25444.67 (25109.16 / 25110.00)
+CS	0	16:23:09.656	CycleORB (DE30,M5)	2026.07.02 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25144.54 sl: 25024.49 tp: 25444.67 [done]
+CS	0	16:23:09.656	CycleORB (DE30,M5)	2026.07.02 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25144.54 sl=25024.49 tp=25444.67 magic=26110301 retcode=10009
+CS	0	16:23:09.656	Trade	2026.07.02 08:15:00   sell stop 0.7 DE30 at 25018.77 sl: 25138.82 tp: 24718.65 (25109.16 / 25110.00)
+CS	0	16:23:09.656	CycleORB (DE30,M5)	2026.07.02 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 25018.77 sl: 25138.82 tp: 24718.65 [done]
+CS	0	16:23:09.656	CycleORB (DE30,M5)	2026.07.02 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @25018.77 sl=25138.82 tp=24718.65 magic=26110301 retcode=10009
+CS	0	16:23:09.659	Trade	2026.07.02 08:36:28   order [#59 buy stop 0.7 DE30 at 25144.54] triggered
+CS	0	16:23:09.659	Trades	2026.07.02 08:36:28   deal #40 buy 0.7 DE30 at 25144.58 done (based on order #59)
+CS	0	16:23:09.659	Trade	2026.07.02 08:36:28   deal performed [#40 buy 0.7 DE30 at 25144.58]
+CS	0	16:23:09.659	Trade	2026.07.02 08:36:28   order performed buy 0.7 at 25144.58 [#59 buy stop 0.7 DE30 at 25144.54]
+CS	0	16:23:09.659	Trade	2026.07.02 08:36:28   order canceled [#60 sell stop 0.7 DE30 at 25018.77]
+CS	0	16:23:09.659	CycleORB (DE30,M5)	2026.07.02 08:36:28   CTrade::OrderSend: cancel #60 [done]
+CS	0	16:23:09.659	CycleORB (DE30,M5)	2026.07.02 08:36:28   [CycleORB] DELETE order #60 magic=26110301 (LON OCO)
+CS	0	16:23:09.695	Trade	2026.07.02 12:41:17   take profit triggered #59 buy 0.7 DE30 25144.58 sl: 25024.49 tp: 25444.67 [#61 sell 0.7 DE30 at 25444.67]
+CS	0	16:23:09.695	Trades	2026.07.02 12:41:17   deal #41 sell 0.7 DE30 at 25447.94 done (based on order #61)
+CS	0	16:23:09.695	Trade	2026.07.02 12:41:17   deal performed [#41 sell 0.7 DE30 at 25447.94]
+CS	0	16:23:09.695	Trade	2026.07.02 12:41:17   order performed sell 0.7 at 25447.94 [#61 sell 0.7 DE30 at 25444.67]
+CS	0	16:23:09.762	CycleORB (DE30,M5)	2026.07.03 08:15:00   [CycleORB] RANGE LON 2026.07.03 07:15 hi=25787.42 lo=25671.12 range=11630pt atr%=35.8 spread=84.0pt (live 84pt) cost%=0.7 buffer=581pt risk=103.66
+CS	0	16:23:09.762	Trade	2026.07.03 08:15:00   buy stop 0.7 DE30 at 25793.23 sl: 25671.12 tp: 26098.51 (25708.12 / 25708.96)
+CS	0	16:23:09.762	CycleORB (DE30,M5)	2026.07.03 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25793.23 sl: 25671.12 tp: 26098.51 [done]
+CS	0	16:23:09.762	CycleORB (DE30,M5)	2026.07.03 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25793.23 sl=25671.12 tp=26098.51 magic=26110301 retcode=10009
+CS	0	16:23:09.762	Trade	2026.07.03 08:15:00   sell stop 0.7 DE30 at 25665.31 sl: 25787.42 tp: 25360.04 (25708.12 / 25708.96)
+CS	0	16:23:09.762	CycleORB (DE30,M5)	2026.07.03 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 25665.31 sl: 25787.42 tp: 25360.04 [done]
+CS	0	16:23:09.762	CycleORB (DE30,M5)	2026.07.03 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @25665.31 sl=25787.42 tp=25360.04 magic=26110301 retcode=10009
+CS	0	16:23:09.767	Trade	2026.07.03 08:48:36   order [#63 sell stop 0.7 DE30 at 25665.31] triggered
+CS	0	16:23:09.767	Trades	2026.07.03 08:48:36   deal #42 sell 0.7 DE30 at 25664.29 done (based on order #63)
+CS	0	16:23:09.767	Trade	2026.07.03 08:48:36   deal performed [#42 sell 0.7 DE30 at 25664.29]
+CS	0	16:23:09.767	Trade	2026.07.03 08:48:36   order performed sell 0.7 at 25664.29 [#63 sell stop 0.7 DE30 at 25665.31]
+CS	0	16:23:09.767	Trade	2026.07.03 08:48:36   order canceled [#62 buy stop 0.7 DE30 at 25793.23]
+CS	0	16:23:09.767	CycleORB (DE30,M5)	2026.07.03 08:48:36   CTrade::OrderSend: cancel #62 [done]
+CS	0	16:23:09.767	CycleORB (DE30,M5)	2026.07.03 08:48:36   [CycleORB] DELETE order #62 magic=26110301 (LON OCO)
+CS	0	16:23:09.800	Trade	2026.07.03 14:05:20   stop loss triggered #63 sell 0.7 DE30 25664.29 sl: 25787.42 tp: 25360.04 [#64 buy 0.7 DE30 at 25787.42]
+CS	0	16:23:09.800	Trades	2026.07.03 14:05:20   deal #43 buy 0.7 DE30 at 25787.48 done (based on order #64)
+CS	0	16:23:09.800	Trade	2026.07.03 14:05:20   deal performed [#43 buy 0.7 DE30 at 25787.48]
+CS	0	16:23:09.800	Trade	2026.07.03 14:05:20   order performed buy 0.7 at 25787.48 [#64 buy 0.7 DE30 at 25787.42]
+CS	0	16:23:09.831	CycleORB (DE30,M5)	2026.07.06 08:15:00   [CycleORB] SKIP LON 2026.07.06 07:15 hi=25899.34 lo=25781.19 range=11815pt atr%=38.2 spread=84.0pt (live 84pt) cost%=0.7 volpct=3.4 (H1 vol below regime floor)
+CS	0	16:23:09.901	CycleORB (DE30,M5)	2026.07.07 08:15:00   [CycleORB] SKIP LON 2026.07.07 07:15 hi=25809.62 lo=25749.12 range=6050pt atr%=19.9 spread=84.0pt (live 84pt) cost%=1.4 volpct=0.2 (H1 vol below regime floor)
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:15:00   [CycleORB] RANGE LON 2026.07.08 07:15 hi=25227.71 lo=25145.45 range=8226pt atr%=25.4 spread=84.0pt (live 84pt) cost%=1.0 buffer=411pt risk=103.66
+CS	0	16:23:09.983	Trade	2026.07.08 08:15:00   buy stop 1 DE30 at 25231.82 sl: 25145.45 tp: 25447.74 (25161.36 / 25162.20)
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25231.82 sl: 25145.45 tp: 25447.74 [done]
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25231.82 sl=25145.45 tp=25447.74 magic=26110301 retcode=10009
+CS	0	16:23:09.983	Trade	2026.07.08 08:15:00   sell stop 1 DE30 at 25141.34 sl: 25227.71 tp: 24925.42 (25161.36 / 25162.20)
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25141.34 sl: 25227.71 tp: 24925.42 [done]
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25141.34 sl=25227.71 tp=24925.42 magic=26110301 retcode=10009
+CS	0	16:23:09.983	Trade	2026.07.08 08:16:23   order [#66 sell stop 1 DE30 at 25141.34] triggered
+CS	0	16:23:09.983	Trades	2026.07.08 08:16:23   deal #44 sell 1 DE30 at 25138.44 done (based on order #66)
+CS	0	16:23:09.983	Trade	2026.07.08 08:16:23   deal performed [#44 sell 1 DE30 at 25138.44]
+CS	0	16:23:09.983	Trade	2026.07.08 08:16:23   order performed sell 1 at 25138.44 [#66 sell stop 1 DE30 at 25141.34]
+CS	0	16:23:09.983	Trade	2026.07.08 08:16:23   order canceled [#65 buy stop 1 DE30 at 25231.82]
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:16:23   CTrade::OrderSend: cancel #65 [done]
+CS	0	16:23:09.983	CycleORB (DE30,M5)	2026.07.08 08:16:23   [CycleORB] DELETE order #65 magic=26110301 (LON OCO)
+CS	0	16:23:09.992	Trade	2026.07.08 08:37:33   take profit triggered #66 sell 1 DE30 25138.44 sl: 25227.71 tp: 24925.42 [#67 buy 1 DE30 at 24925.42]
+CS	0	16:23:09.992	Trades	2026.07.08 08:37:33   deal #45 buy 1 DE30 at 24924.42 done (based on order #67)
+CS	0	16:23:09.992	Trade	2026.07.08 08:37:33   deal performed [#45 buy 1 DE30 at 24924.42]
+CS	0	16:23:09.992	Trade	2026.07.08 08:37:33   order performed buy 1 at 24924.42 [#67 buy 1 DE30 at 24925.42]
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:15:00   [CycleORB] RANGE LON 2026.07.09 07:15 hi=25070.42 lo=24991.02 range=7940pt atr%=22.7 spread=84.0pt (live 84pt) cost%=1.1 buffer=397pt risk=103.66
+CS	0	16:23:10.085	Trade	2026.07.09 08:15:00   buy stop 1 DE30 at 25074.39 sl: 24991.02 tp: 25282.81 (25014.67 / 25015.51)
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25074.39 sl: 24991.02 tp: 25282.81 [done]
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25074.39 sl=24991.02 tp=25282.81 magic=26110301 retcode=10009
+CS	0	16:23:10.085	Trade	2026.07.09 08:15:00   sell stop 1 DE30 at 24987.05 sl: 25070.42 tp: 24778.63 (25014.67 / 25015.51)
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 24987.05 sl: 25070.42 tp: 24778.63 [done]
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @24987.05 sl=25070.42 tp=24778.63 magic=26110301 retcode=10009
+CS	0	16:23:10.085	Trade	2026.07.09 08:19:00   order [#69 sell stop 1 DE30 at 24987.05] triggered
+CS	0	16:23:10.085	Trades	2026.07.09 08:19:00   deal #46 sell 1 DE30 at 24986.67 done (based on order #69)
+CS	0	16:23:10.085	Trade	2026.07.09 08:19:00   deal performed [#46 sell 1 DE30 at 24986.67]
+CS	0	16:23:10.085	Trade	2026.07.09 08:19:00   order performed sell 1 at 24986.67 [#69 sell stop 1 DE30 at 24987.05]
+CS	0	16:23:10.085	Trade	2026.07.09 08:19:00   order canceled [#68 buy stop 1 DE30 at 25074.39]
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:19:00   CTrade::OrderSend: cancel #68 [done]
+CS	0	16:23:10.085	CycleORB (DE30,M5)	2026.07.09 08:19:00   [CycleORB] DELETE order #68 magic=26110301 (LON OCO)
+CS	0	16:23:10.137	Trade	2026.07.09 14:32:59   stop loss triggered #69 sell 1 DE30 24986.67 sl: 25070.42 tp: 24778.63 [#70 buy 1 DE30 at 25070.42]
+CS	0	16:23:10.137	Trades	2026.07.09 14:32:59   deal #47 buy 1 DE30 at 25070.76 done (based on order #70)
+CS	0	16:23:10.137	Trade	2026.07.09 14:32:59   deal performed [#47 buy 1 DE30 at 25070.76]
+CS	0	16:23:10.137	Trade	2026.07.09 14:32:59   order performed buy 1 at 25070.76 [#70 buy 1 DE30 at 25070.42]
+CS	0	16:23:10.175	CycleORB (DE30,M5)	2026.07.10 08:15:00   [CycleORB] SKIP LON 2026.07.10 07:15 hi=25201.89 lo=25097.73 range=10416pt atr%=30.4 spread=84.0pt (live 84pt) cost%=0.8 volpct=8.4 (H1 vol below regime floor)
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:15:00   [CycleORB] RANGE LON 2026.07.13 07:15 hi=25089.53 lo=25008.54 range=8099pt atr%=25.7 spread=84.0pt (live 84pt) cost%=1.0 buffer=405pt risk=103.66
+CS	0	16:23:10.247	Trade	2026.07.13 08:15:00   buy stop 1 DE30 at 25093.58 sl: 25008.54 tp: 25306.18 (25082.53 / 25083.37)
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25093.58 sl: 25008.54 tp: 25306.18 [done]
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25093.58 sl=25008.54 tp=25306.18 magic=26110301 retcode=10009
+CS	0	16:23:10.247	Trade	2026.07.13 08:15:00   sell stop 1 DE30 at 25004.49 sl: 25089.53 tp: 24791.89 (25082.53 / 25083.37)
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25004.49 sl: 25089.53 tp: 24791.89 [done]
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25004.49 sl=25089.53 tp=24791.89 magic=26110301 retcode=10009
+CS	0	16:23:10.247	Trade	2026.07.13 08:18:03   order [#71 buy stop 1 DE30 at 25093.58] triggered
+CS	0	16:23:10.247	Trades	2026.07.13 08:18:03   deal #48 buy 1 DE30 at 25094.32 done (based on order #71)
+CS	0	16:23:10.247	Trade	2026.07.13 08:18:03   deal performed [#48 buy 1 DE30 at 25094.32]
+CS	0	16:23:10.247	Trade	2026.07.13 08:18:03   order performed buy 1 at 25094.32 [#71 buy stop 1 DE30 at 25093.58]
+CS	0	16:23:10.247	Trade	2026.07.13 08:18:03   order canceled [#72 sell stop 1 DE30 at 25004.49]
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:18:03   CTrade::OrderSend: cancel #72 [done]
+CS	0	16:23:10.247	CycleORB (DE30,M5)	2026.07.13 08:18:03   [CycleORB] DELETE order #72 magic=26110301 (LON OCO)
+CS	0	16:23:10.291	Trade	2026.07.13 14:16:50   stop loss triggered #71 buy 1 DE30 25094.32 sl: 25008.54 tp: 25306.18 [#73 sell 1 DE30 at 25008.54]
+CS	0	16:23:10.291	Trades	2026.07.13 14:16:50   deal #49 sell 1 DE30 at 24999.20 done (based on order #73)
+CS	0	16:23:10.291	Trade	2026.07.13 14:16:50   deal performed [#49 sell 1 DE30 at 24999.20]
+CS	0	16:23:10.291	Trade	2026.07.13 14:16:50   order performed sell 1 at 24999.20 [#73 sell 1 DE30 at 25008.54]
+CS	0	16:23:10.363	CycleORB (DE30,M5)	2026.07.14 08:15:00   [CycleORB] RANGE LON 2026.07.14 07:15 hi=25012.83 lo=24899.78 range=11305pt atr%=36.4 spread=84.0pt (live 84pt) cost%=0.7 buffer=565pt risk=103.66
+CS	0	16:23:10.363	Trade	2026.07.14 08:15:00   buy stop 0.7 DE30 at 25018.48 sl: 24899.78 tp: 25315.23 (24967.08 / 24967.92)
+CS	0	16:23:10.363	CycleORB (DE30,M5)	2026.07.14 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25018.48 sl: 24899.78 tp: 25315.23 [done]
+CS	0	16:23:10.363	CycleORB (DE30,M5)	2026.07.14 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25018.48 sl=24899.78 tp=25315.23 magic=26110301 retcode=10009
+CS	0	16:23:10.363	Trade	2026.07.14 08:15:00   sell stop 0.7 DE30 at 24894.13 sl: 25012.83 tp: 24597.38 (24967.08 / 24967.92)
+CS	0	16:23:10.363	CycleORB (DE30,M5)	2026.07.14 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24894.13 sl: 25012.83 tp: 24597.38 [done]
+CS	0	16:23:10.363	CycleORB (DE30,M5)	2026.07.14 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24894.13 sl=25012.83 tp=24597.38 magic=26110301 retcode=10009
+CS	0	16:23:10.380	Trade	2026.07.14 10:04:24   order [#74 buy stop 0.7 DE30 at 25018.48] triggered
+CS	0	16:23:10.380	Trades	2026.07.14 10:04:24   deal #50 buy 0.7 DE30 at 25019.25 done (based on order #74)
+CS	0	16:23:10.380	Trade	2026.07.14 10:04:24   deal performed [#50 buy 0.7 DE30 at 25019.25]
+CS	0	16:23:10.380	Trade	2026.07.14 10:04:24   order performed buy 0.7 at 25019.25 [#74 buy stop 0.7 DE30 at 25018.48]
+CS	0	16:23:10.380	Trade	2026.07.14 10:04:24   order canceled [#75 sell stop 0.7 DE30 at 24894.13]
+CS	0	16:23:10.380	CycleORB (DE30,M5)	2026.07.14 10:04:24   CTrade::OrderSend: cancel #75 [done]
+CS	0	16:23:10.380	CycleORB (DE30,M5)	2026.07.14 10:04:24   [CycleORB] DELETE order #75 magic=26110301 (LON OCO)
+CS	0	16:23:10.397	Trade	2026.07.14 11:02:31   stop loss triggered #74 buy 0.7 DE30 25019.25 sl: 24899.78 tp: 25315.23 [#76 sell 0.7 DE30 at 24899.78]
+CS	0	16:23:10.397	Trades	2026.07.14 11:02:31   deal #51 sell 0.7 DE30 at 24897.83 done (based on order #76)
+CS	0	16:23:10.397	Trade	2026.07.14 11:02:31   deal performed [#51 sell 0.7 DE30 at 24897.83]
+CS	0	16:23:10.397	Trade	2026.07.14 11:02:31   order performed sell 0.7 at 24897.83 [#76 sell 0.7 DE30 at 24899.78]
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:00   [CycleORB] RANGE LON 2026.07.15 07:15 hi=24950.00 lo=24829.33 range=12067pt atr%=36.2 spread=84.0pt (live 84pt) cost%=0.7 buffer=603pt risk=103.66
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:00   buy stop 0.7 DE30 at 24956.03 sl: 24829.33 tp: 25272.78 (24951.25 / 24952.09)
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 24956.03 sl: 24829.33 tp: 25272.78 [done]
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @24956.03 sl=24829.33 tp=25272.78 magic=26110301 retcode=10009
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:00   sell stop 0.7 DE30 at 24823.30 sl: 24950.00 tp: 24506.55 (24951.25 / 24952.09)
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24823.30 sl: 24950.00 tp: 24506.55 [done]
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24823.30 sl=24950.00 tp=24506.55 magic=26110301 retcode=10009
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:06   order [#77 buy stop 0.7 DE30 at 24956.03] triggered
+CS	0	16:23:10.495	Trades	2026.07.15 08:15:06   deal #52 buy 0.7 DE30 at 24956.21 done (based on order #77)
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:06   deal performed [#52 buy 0.7 DE30 at 24956.21]
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:06   order performed buy 0.7 at 24956.21 [#77 buy stop 0.7 DE30 at 24956.03]
+CS	0	16:23:10.495	Trade	2026.07.15 08:15:06   order canceled [#78 sell stop 0.7 DE30 at 24823.30]
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:06   CTrade::OrderSend: cancel #78 [done]
+CS	0	16:23:10.495	CycleORB (DE30,M5)	2026.07.15 08:15:06   [CycleORB] DELETE order #78 magic=26110301 (LON OCO)
+CS	0	16:23:10.565	Trade	2026.07.15 15:00:00   market sell 0.7 DE30, close #77 (25033.81 / 25034.65)
+CS	0	16:23:10.565	Trades	2026.07.15 15:00:00   deal #53 sell 0.7 DE30 at 25033.81 done (based on order #79)
+CS	0	16:23:10.565	Trade	2026.07.15 15:00:00   deal performed [#53 sell 0.7 DE30 at 25033.81]
+CS	0	16:23:10.565	Trade	2026.07.15 15:00:00   order performed sell 0.7 at 25033.81 [#79 sell 0.7 DE30 at 25033.81]
+CS	0	16:23:10.565	CycleORB (DE30,M5)	2026.07.15 15:00:00   CTrade::OrderSend: market sell 0.70 position #77 DE30 [done at 25033.81]
+CS	0	16:23:10.565	CycleORB (DE30,M5)	2026.07.15 15:00:00   [CycleORB] CLOSE position #77 magic=26110301 (LON time exit)
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:00   [CycleORB] RANGE LON 2026.07.16 07:15 hi=24963.80 lo=24835.18 range=12862pt atr%=38.1 spread=84.0pt (live 84pt) cost%=0.7 buffer=643pt risk=103.66
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:00   buy stop 0.6 DE30 at 24970.23 sl: 24835.18 tp: 25307.85 (24838.30 / 24839.14)
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 24970.23 sl: 24835.18 tp: 25307.85 [done]
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @24970.23 sl=24835.18 tp=25307.85 magic=26110301 retcode=10009
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:00   sell stop 0.6 DE30 at 24828.75 sl: 24963.80 tp: 24491.13 (24838.30 / 24839.14)
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 24828.75 sl: 24963.80 tp: 24491.13 [done]
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @24828.75 sl=24963.80 tp=24491.13 magic=26110301 retcode=10009
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:21   order [#81 sell stop 0.6 DE30 at 24828.75] triggered
+CS	0	16:23:10.608	Trades	2026.07.16 08:15:21   deal #54 sell 0.6 DE30 at 24828.55 done (based on order #81)
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:21   deal performed [#54 sell 0.6 DE30 at 24828.55]
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:21   order performed sell 0.6 at 24828.55 [#81 sell stop 0.6 DE30 at 24828.75]
+CS	0	16:23:10.608	Trade	2026.07.16 08:15:21   order canceled [#80 buy stop 0.6 DE30 at 24970.23]
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:21   CTrade::OrderSend: cancel #80 [done]
+CS	0	16:23:10.608	CycleORB (DE30,M5)	2026.07.16 08:15:21   [CycleORB] DELETE order #80 magic=26110301 (LON OCO)
+CS	0	16:23:10.673	Trade	2026.07.16 15:00:00   market buy 0.6 DE30, close #81 (24816.39 / 24817.23)
+CS	0	16:23:10.673	Trades	2026.07.16 15:00:00   deal #55 buy 0.6 DE30 at 24817.23 done (based on order #82)
+CS	0	16:23:10.673	Trade	2026.07.16 15:00:00   deal performed [#55 buy 0.6 DE30 at 24817.23]
+CS	0	16:23:10.673	Trade	2026.07.16 15:00:00   order performed buy 0.6 at 24817.23 [#82 buy 0.6 DE30 at 24817.23]
+CS	0	16:23:10.673	CycleORB (DE30,M5)	2026.07.16 15:00:00   CTrade::OrderSend: market buy 0.60 position #81 DE30 [done at 24817.23]
+CS	0	16:23:10.673	CycleORB (DE30,M5)	2026.07.16 15:00:00   [CycleORB] CLOSE position #81 magic=26110301 (LON time exit)
+CS	0	16:23:10.716	CycleORB (DE30,M5)	2026.07.17 08:15:00   [CycleORB] RANGE LON 2026.07.17 07:15 hi=24849.09 lo=24739.40 range=10969pt atr%=32.5 spread=84.0pt (live 84pt) cost%=0.8 buffer=548pt risk=103.66
+CS	0	16:23:10.716	Trade	2026.07.17 08:15:00   buy stop 0.7 DE30 at 24854.57 sl: 24739.40 tp: 25142.49 (24800.43 / 24801.27)
+CS	0	16:23:10.716	CycleORB (DE30,M5)	2026.07.17 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 24854.57 sl: 24739.40 tp: 25142.49 [done]
+CS	0	16:23:10.716	CycleORB (DE30,M5)	2026.07.17 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @24854.57 sl=24739.40 tp=25142.49 magic=26110301 retcode=10009
+CS	0	16:23:10.716	Trade	2026.07.17 08:15:00   sell stop 0.7 DE30 at 24733.92 sl: 24849.09 tp: 24445.99 (24800.43 / 24801.27)
+CS	0	16:23:10.716	CycleORB (DE30,M5)	2026.07.17 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 24733.92 sl: 24849.09 tp: 24445.99 [done]
+CS	0	16:23:10.716	CycleORB (DE30,M5)	2026.07.17 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @24733.92 sl=24849.09 tp=24445.99 magic=26110301 retcode=10009
+CS	0	16:23:10.718	Trade	2026.07.17 08:22:36   order [#84 sell stop 0.7 DE30 at 24733.92] triggered
+CS	0	16:23:10.718	Trades	2026.07.17 08:22:36   deal #56 sell 0.7 DE30 at 24733.85 done (based on order #84)
+CS	0	16:23:10.718	Trade	2026.07.17 08:22:36   deal performed [#56 sell 0.7 DE30 at 24733.85]
+CS	0	16:23:10.718	Trade	2026.07.17 08:22:36   order performed sell 0.7 at 24733.85 [#84 sell stop 0.7 DE30 at 24733.92]
+CS	0	16:23:10.718	Trade	2026.07.17 08:22:36   order canceled [#83 buy stop 0.7 DE30 at 24854.57]
+CS	0	16:23:10.718	CycleORB (DE30,M5)	2026.07.17 08:22:36   CTrade::OrderSend: cancel #83 [done]
+CS	0	16:23:10.718	CycleORB (DE30,M5)	2026.07.17 08:22:36   [CycleORB] DELETE order #83 magic=26110301 (LON OCO)
+CS	0	16:23:10.787	Trade	2026.07.17 15:00:00   market buy 0.7 DE30, close #84 (24799.43 / 24800.27)
+CS	0	16:23:10.787	Trades	2026.07.17 15:00:00   deal #57 buy 0.7 DE30 at 24800.27 done (based on order #85)
+CS	0	16:23:10.787	Trade	2026.07.17 15:00:00   deal performed [#57 buy 0.7 DE30 at 24800.27]
+CS	0	16:23:10.787	Trade	2026.07.17 15:00:00   order performed buy 0.7 at 24800.27 [#85 buy 0.7 DE30 at 24800.27]
+CS	0	16:23:10.787	CycleORB (DE30,M5)	2026.07.17 15:00:00   CTrade::OrderSend: market buy 0.70 position #84 DE30 [done at 24800.27]
+CS	0	16:23:10.787	CycleORB (DE30,M5)	2026.07.17 15:00:00   [CycleORB] CLOSE position #84 magic=26110301 (LON time exit)
+CS	0	16:23:10.837	CycleORB (DE30,M5)	2026.07.20 08:15:00   [CycleORB] SKIP LON 2026.07.20 07:15 hi=24902.31 lo=24746.73 range=15558pt atr%=52.2 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:10.913	CycleORB (DE30,M5)	2026.07.21 08:15:00   [CycleORB] RANGE LON 2026.07.21 07:15 hi=24906.49 lo=24822.11 range=8438pt atr%=27.7 spread=84.0pt (live 84pt) cost%=1.0 buffer=422pt risk=103.66
+CS	0	16:23:10.913	Trade	2026.07.21 08:15:00   buy stop 1 DE30 at 24910.71 sl: 24822.11 tp: 25132.21 (24866.82 / 24867.66)
+CS	0	16:23:10.913	CycleORB (DE30,M5)	2026.07.21 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 24910.71 sl: 24822.11 tp: 25132.21 [done]
+CS	0	16:23:10.913	CycleORB (DE30,M5)	2026.07.21 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @24910.71 sl=24822.11 tp=25132.21 magic=26110301 retcode=10009
+CS	0	16:23:10.913	Trade	2026.07.21 08:15:00   sell stop 1 DE30 at 24817.89 sl: 24906.49 tp: 24596.39 (24866.82 / 24867.66)
+CS	0	16:23:10.913	CycleORB (DE30,M5)	2026.07.21 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 24817.89 sl: 24906.49 tp: 24596.39 [done]
+CS	0	16:23:10.913	CycleORB (DE30,M5)	2026.07.21 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @24817.89 sl=24906.49 tp=24596.39 magic=26110301 retcode=10009
+CS	0	16:23:10.918	Trade	2026.07.21 09:05:00   order [#86 buy stop 1 DE30 at 24910.71] triggered
+CS	0	16:23:10.918	Trades	2026.07.21 09:05:00   deal #58 buy 1 DE30 at 24912.58 done (based on order #86)
+CS	0	16:23:10.918	Trade	2026.07.21 09:05:00   deal performed [#58 buy 1 DE30 at 24912.58]
+CS	0	16:23:10.918	Trade	2026.07.21 09:05:00   order performed buy 1 at 24912.58 [#86 buy stop 1 DE30 at 24910.71]
+CS	0	16:23:10.918	Trade	2026.07.21 09:05:00   order canceled [#87 sell stop 1 DE30 at 24817.89]
+CS	0	16:23:10.918	CycleORB (DE30,M5)	2026.07.21 09:05:00   CTrade::OrderSend: cancel #87 [done]
+CS	0	16:23:10.918	CycleORB (DE30,M5)	2026.07.21 09:05:00   [CycleORB] DELETE order #87 magic=26110301 (LON OCO)
+CS	0	16:23:10.960	Trade	2026.07.21 13:43:58   stop loss triggered #86 buy 1 DE30 24912.58 sl: 24822.11 tp: 25132.21 [#88 sell 1 DE30 at 24822.11]
+CS	0	16:23:10.960	Trades	2026.07.21 13:43:58   deal #59 sell 1 DE30 at 24817.98 done (based on order #88)
+CS	0	16:23:10.960	Trade	2026.07.21 13:43:58   deal performed [#59 sell 1 DE30 at 24817.98]
+CS	0	16:23:10.960	Trade	2026.07.21 13:43:58   order performed sell 1 at 24817.98 [#88 sell 1 DE30 at 24822.11]
+CS	0	16:23:11.005	CycleORB (DE30,M5)	2026.07.22 08:15:00   [CycleORB] SKIP LON 2026.07.22 07:15 hi=25153.76 lo=24991.18 range=16258pt atr%=49.4 spread=83.9pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:11.079	CycleORB (DE30,M5)	2026.07.23 08:15:00   [CycleORB] SKIP LON 2026.07.23 07:15 hi=25035.29 lo=24918.41 range=11688pt atr%=34.8 spread=84.0pt (live 84pt) cost%=0.7 volpct=31.0 (H1 vol below regime floor)
+CS	0	16:23:11.170	CycleORB (DE30,M5)	2026.07.24 08:15:00   [CycleORB] RANGE LON 2026.07.24 07:15 hi=24948.17 lo=24858.91 range=8926pt atr%=25.9 spread=84.0pt (live 84pt) cost%=0.9 buffer=446pt risk=103.66
+CS	0	16:23:11.170	Trade	2026.07.24 08:15:00   buy stop 0.9 DE30 at 24952.63 sl: 24858.91 tp: 25186.93 (24894.19 / 24895.03)
+CS	0	16:23:11.170	CycleORB (DE30,M5)	2026.07.24 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 24952.63 sl: 24858.91 tp: 25186.93 [done]
+CS	0	16:23:11.170	CycleORB (DE30,M5)	2026.07.24 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @24952.63 sl=24858.91 tp=25186.93 magic=26110301 retcode=10009
+CS	0	16:23:11.170	Trade	2026.07.24 08:15:00   sell stop 0.9 DE30 at 24854.45 sl: 24948.17 tp: 24620.15 (24894.19 / 24895.03)
+CS	0	16:23:11.170	CycleORB (DE30,M5)	2026.07.24 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 24854.45 sl: 24948.17 tp: 24620.15 [done]
+CS	0	16:23:11.170	CycleORB (DE30,M5)	2026.07.24 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @24854.45 sl=24948.17 tp=24620.15 magic=26110301 retcode=10009
+CS	0	16:23:11.172	Trade	2026.07.24 08:31:40   order [#89 buy stop 0.9 DE30 at 24952.63] triggered
+CS	0	16:23:11.172	Trades	2026.07.24 08:31:40   deal #60 buy 0.9 DE30 at 24953.91 done (based on order #89)
+CS	0	16:23:11.172	Trade	2026.07.24 08:31:40   deal performed [#60 buy 0.9 DE30 at 24953.91]
+CS	0	16:23:11.172	Trade	2026.07.24 08:31:40   order performed buy 0.9 at 24953.91 [#89 buy stop 0.9 DE30 at 24952.63]
+CS	0	16:23:11.172	Trade	2026.07.24 08:31:40   order canceled [#90 sell stop 0.9 DE30 at 24854.45]
+CS	0	16:23:11.172	CycleORB (DE30,M5)	2026.07.24 08:31:40   CTrade::OrderSend: cancel #90 [done]
+CS	0	16:23:11.172	CycleORB (DE30,M5)	2026.07.24 08:31:40   [CycleORB] DELETE order #90 magic=26110301 (LON OCO)
+CS	0	16:23:11.231	Trade	2026.07.24 15:00:00   market sell 0.9 DE30, close #89 (24998.07 / 24998.91)
+CS	0	16:23:11.231	Trades	2026.07.24 15:00:00   deal #61 sell 0.9 DE30 at 24998.07 done (based on order #91)
+CS	0	16:23:11.231	Trade	2026.07.24 15:00:00   deal performed [#61 sell 0.9 DE30 at 24998.07]
+CS	0	16:23:11.231	Trade	2026.07.24 15:00:00   order performed sell 0.9 at 24998.07 [#91 sell 0.9 DE30 at 24998.07]
+CS	0	16:23:11.231	CycleORB (DE30,M5)	2026.07.24 15:00:00   CTrade::OrderSend: market sell 0.90 position #89 DE30 [done at 24998.07]
+CS	0	16:23:11.231	CycleORB (DE30,M5)	2026.07.24 15:00:00   [CycleORB] CLOSE position #89 magic=26110301 (LON time exit)
+CS	0	16:23:11.276	CycleORB (DE30,M5)	2026.07.27 08:15:00   [CycleORB] RANGE LON 2026.07.27 07:15 hi=25458.97 lo=25363.83 range=9514pt atr%=29.3 spread=84.0pt (live 84pt) cost%=0.9 buffer=476pt risk=103.66
+CS	0	16:23:11.276	Trade	2026.07.27 08:15:00   buy stop 0.9 DE30 at 25463.73 sl: 25363.83 tp: 25713.48 (25415.75 / 25416.59)
+CS	0	16:23:11.276	CycleORB (DE30,M5)	2026.07.27 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 25463.73 sl: 25363.83 tp: 25713.48 [done]
+CS	0	16:23:11.276	CycleORB (DE30,M5)	2026.07.27 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @25463.73 sl=25363.83 tp=25713.48 magic=26110301 retcode=10009
+CS	0	16:23:11.276	Trade	2026.07.27 08:15:00   sell stop 0.9 DE30 at 25359.07 sl: 25458.97 tp: 25109.32 (25415.75 / 25416.59)
+CS	0	16:23:11.276	CycleORB (DE30,M5)	2026.07.27 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 25359.07 sl: 25458.97 tp: 25109.32 [done]
+CS	0	16:23:11.276	CycleORB (DE30,M5)	2026.07.27 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @25359.07 sl=25458.97 tp=25109.32 magic=26110301 retcode=10009
+CS	0	16:23:11.279	Trade	2026.07.27 08:36:47   order [#92 buy stop 0.9 DE30 at 25463.73] triggered
+CS	0	16:23:11.279	Trades	2026.07.27 08:36:47   deal #62 buy 0.9 DE30 at 25463.77 done (based on order #92)
+CS	0	16:23:11.279	Trade	2026.07.27 08:36:47   deal performed [#62 buy 0.9 DE30 at 25463.77]
+CS	0	16:23:11.279	Trade	2026.07.27 08:36:47   order performed buy 0.9 at 25463.77 [#92 buy stop 0.9 DE30 at 25463.73]
+CS	0	16:23:11.279	Trade	2026.07.27 08:36:47   order canceled [#93 sell stop 0.9 DE30 at 25359.07]
+CS	0	16:23:11.279	CycleORB (DE30,M5)	2026.07.27 08:36:47   CTrade::OrderSend: cancel #93 [done]
+CS	0	16:23:11.279	CycleORB (DE30,M5)	2026.07.27 08:36:47   [CycleORB] DELETE order #93 magic=26110301 (LON OCO)
+CS	0	16:23:11.335	Trade	2026.07.27 15:00:00   market sell 0.9 DE30, close #92 (25475.70 / 25476.54)
+CS	0	16:23:11.335	Trades	2026.07.27 15:00:00   deal #63 sell 0.9 DE30 at 25475.70 done (based on order #94)
+CS	0	16:23:11.335	Trade	2026.07.27 15:00:00   deal performed [#63 sell 0.9 DE30 at 25475.70]
+CS	0	16:23:11.335	Trade	2026.07.27 15:00:00   order performed sell 0.9 at 25475.70 [#94 sell 0.9 DE30 at 25475.70]
+CS	0	16:23:11.335	CycleORB (DE30,M5)	2026.07.27 15:00:00   CTrade::OrderSend: market sell 0.90 position #92 DE30 [done at 25475.70]
+CS	0	16:23:11.335	CycleORB (DE30,M5)	2026.07.27 15:00:00   [CycleORB] CLOSE position #92 magic=26110301 (LON time exit)
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:15:00   [CycleORB] RANGE LON 2026.07.28 07:15 hi=25552.23 lo=25445.23 range=10700pt atr%=32.1 spread=84.0pt (live 84pt) cost%=0.8 buffer=535pt risk=103.66
+CS	0	16:23:11.386	Trade	2026.07.28 08:15:00   buy stop 0.8 DE30 at 25557.58 sl: 25445.23 tp: 25838.46 (25446.90 / 25447.74)
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 25557.58 sl: 25445.23 tp: 25838.46 [done]
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @25557.58 sl=25445.23 tp=25838.46 magic=26110301 retcode=10009
+CS	0	16:23:11.386	Trade	2026.07.28 08:15:00   sell stop 0.8 DE30 at 25439.88 sl: 25552.23 tp: 25159.01 (25446.90 / 25447.74)
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 25439.88 sl: 25552.23 tp: 25159.01 [done]
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @25439.88 sl=25552.23 tp=25159.01 magic=26110301 retcode=10009
+CS	0	16:23:11.386	Trade	2026.07.28 08:17:11   order [#96 sell stop 0.8 DE30 at 25439.88] triggered
+CS	0	16:23:11.386	Trades	2026.07.28 08:17:11   deal #64 sell 0.8 DE30 at 25439.49 done (based on order #96)
+CS	0	16:23:11.386	Trade	2026.07.28 08:17:11   deal performed [#64 sell 0.8 DE30 at 25439.49]
+CS	0	16:23:11.386	Trade	2026.07.28 08:17:11   order performed sell 0.8 at 25439.49 [#96 sell stop 0.8 DE30 at 25439.88]
+CS	0	16:23:11.386	Trade	2026.07.28 08:17:11   order canceled [#95 buy stop 0.8 DE30 at 25557.58]
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:17:11   CTrade::OrderSend: cancel #95 [done]
+CS	0	16:23:11.386	CycleORB (DE30,M5)	2026.07.28 08:17:11   [CycleORB] DELETE order #95 magic=26110301 (LON OCO)
+CS	0	16:23:11.457	Trade	2026.07.28 15:00:00   market buy 0.8 DE30, close #96 (25388.36 / 25389.20)
+CS	0	16:23:11.457	Trades	2026.07.28 15:00:00   deal #65 buy 0.8 DE30 at 25389.20 done (based on order #97)
+CS	0	16:23:11.457	Trade	2026.07.28 15:00:00   deal performed [#65 buy 0.8 DE30 at 25389.20]
+CS	0	16:23:11.457	Trade	2026.07.28 15:00:00   order performed buy 0.8 at 25389.20 [#97 buy 0.8 DE30 at 25389.20]
+CS	0	16:23:11.457	CycleORB (DE30,M5)	2026.07.28 15:00:00   CTrade::OrderSend: market buy 0.80 position #96 DE30 [done at 25389.20]
+CS	0	16:23:11.457	CycleORB (DE30,M5)	2026.07.28 15:00:00   [CycleORB] CLOSE position #96 magic=26110301 (LON time exit)
+CS	0	16:23:11.521	CycleORB (DE30,M5)	2026.07.29 08:15:00   [CycleORB] RANGE LON 2026.07.29 07:15 hi=25544.28 lo=25420.52 range=12376pt atr%=35.9 spread=84.0pt (live 84pt) cost%=0.7 buffer=619pt risk=103.66
+CS	0	16:23:11.521	Trade	2026.07.29 08:15:00   buy stop 0.6 DE30 at 25550.47 sl: 25420.52 tp: 25875.35 (25422.77 / 25423.61)
+CS	0	16:23:11.521	CycleORB (DE30,M5)	2026.07.29 08:15:00   CTrade::OrderSend: buy stop 0.60 DE30 at 25550.47 sl: 25420.52 tp: 25875.35 [done]
+CS	0	16:23:11.521	CycleORB (DE30,M5)	2026.07.29 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.60 @25550.47 sl=25420.52 tp=25875.35 magic=26110301 retcode=10009
+CS	0	16:23:11.521	Trade	2026.07.29 08:15:00   sell stop 0.6 DE30 at 25414.33 sl: 25544.28 tp: 25089.46 (25422.77 / 25423.61)
+CS	0	16:23:11.521	CycleORB (DE30,M5)	2026.07.29 08:15:00   CTrade::OrderSend: sell stop 0.60 DE30 at 25414.33 sl: 25544.28 tp: 25089.46 [done]
+CS	0	16:23:11.521	CycleORB (DE30,M5)	2026.07.29 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.60 @25414.33 sl=25544.28 tp=25089.46 magic=26110301 retcode=10009
+CS	0	16:23:11.522	Trade	2026.07.29 08:23:10   order [#99 sell stop 0.6 DE30 at 25414.33] triggered
+CS	0	16:23:11.522	Trades	2026.07.29 08:23:10   deal #66 sell 0.6 DE30 at 25414.27 done (based on order #99)
+CS	0	16:23:11.522	Trade	2026.07.29 08:23:10   deal performed [#66 sell 0.6 DE30 at 25414.27]
+CS	0	16:23:11.522	Trade	2026.07.29 08:23:10   order performed sell 0.6 at 25414.27 [#99 sell stop 0.6 DE30 at 25414.33]
+CS	0	16:23:11.522	Trade	2026.07.29 08:23:10   order canceled [#98 buy stop 0.6 DE30 at 25550.47]
+CS	0	16:23:11.522	CycleORB (DE30,M5)	2026.07.29 08:23:10   CTrade::OrderSend: cancel #98 [done]
+CS	0	16:23:11.522	CycleORB (DE30,M5)	2026.07.29 08:23:10   [CycleORB] DELETE order #98 magic=26110301 (LON OCO)
+CS	0	16:23:11.563	Trade	2026.07.29 11:57:31   stop loss triggered #99 sell 0.6 DE30 25414.27 sl: 25544.28 tp: 25089.46 [#100 buy 0.6 DE30 at 25544.28]
+CS	0	16:23:11.563	Trades	2026.07.29 11:57:31   deal #67 buy 0.6 DE30 at 25544.37 done (based on order #100)
+CS	0	16:23:11.563	Trade	2026.07.29 11:57:31   deal performed [#67 buy 0.6 DE30 at 25544.37]
+CS	0	16:23:11.563	Trade	2026.07.29 11:57:31   order performed buy 0.6 at 25544.37 [#100 buy 0.6 DE30 at 25544.28]
+CS	0	16:23:11.671	CycleORB (DE30,M5)	2026.07.30 08:15:00   [CycleORB] SKIP LON 2026.07.30 07:15 hi=25433.70 lo=25291.32 range=14238pt atr%=41.7 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:11.791	CycleORB (DE30,M5)	2026.07.31 08:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:11.862	CycleORB (DE30,M5)	2026.08.02 22:05:00   [CycleORB] CYCLE_END 202607 capital=10365.62 realized=10.69 floating=0.00 pnl=0.10% peak=5.17% state=ACTIVE 
+CS	0	16:23:11.862	CycleORB (DE30,M5)	2026.08.02 22:05:00   [CycleORB] CYCLE_BEGIN 202608 capital=10376.31 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:23:11.894	CycleORB (DE30,M5)	2026.08.03 08:15:00   [CycleORB] RANGE LON 2026.08.03 07:15 hi=26005.58 lo=25919.96 range=8562pt atr%=25.5 spread=83.9pt (live 84pt) cost%=1.0 buffer=428pt risk=103.76
+CS	0	16:23:11.894	Trade	2026.08.03 08:15:00   buy stop 1 DE30 at 26009.86 sl: 25919.96 tp: 26234.61 (26005.36 / 26006.20)
+CS	0	16:23:11.894	CycleORB (DE30,M5)	2026.08.03 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 26009.86 sl: 25919.96 tp: 26234.61 [done]
+CS	0	16:23:11.894	CycleORB (DE30,M5)	2026.08.03 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @26009.86 sl=25919.96 tp=26234.61 magic=26110301 retcode=10009
+CS	0	16:23:11.894	Trade	2026.08.03 08:15:00   sell stop 1 DE30 at 25915.68 sl: 26005.58 tp: 25690.93 (26005.36 / 26006.20)
+CS	0	16:23:11.894	CycleORB (DE30,M5)	2026.08.03 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25915.68 sl: 26005.58 tp: 25690.93 [done]
+CS	0	16:23:11.894	CycleORB (DE30,M5)	2026.08.03 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25915.68 sl=26005.58 tp=25690.93 magic=26110301 retcode=10009
+CS	0	16:23:11.899	Trade	2026.08.03 08:57:00   order [#101 buy stop 1 DE30 at 26009.86] triggered
+CS	0	16:23:11.899	Trades	2026.08.03 08:57:00   deal #68 buy 1 DE30 at 26011.43 done (based on order #101)
+CS	0	16:23:11.899	Trade	2026.08.03 08:57:00   deal performed [#68 buy 1 DE30 at 26011.43]
+CS	0	16:23:11.899	Trade	2026.08.03 08:57:00   order performed buy 1 at 26011.43 [#101 buy stop 1 DE30 at 26009.86]
+CS	0	16:23:11.899	Trade	2026.08.03 08:57:00   order canceled [#102 sell stop 1 DE30 at 25915.68]
+CS	0	16:23:11.899	CycleORB (DE30,M5)	2026.08.03 08:57:00   CTrade::OrderSend: cancel #102 [done]
+CS	0	16:23:11.899	CycleORB (DE30,M5)	2026.08.03 08:57:00   [CycleORB] DELETE order #102 magic=26110301 (LON OCO)
+CS	0	16:23:11.964	Trade	2026.08.03 15:00:00   market sell 1 DE30, close #101 (26073.87 / 26074.71)
+CS	0	16:23:11.964	Trades	2026.08.03 15:00:00   deal #69 sell 1 DE30 at 26073.87 done (based on order #103)
+CS	0	16:23:11.964	Trade	2026.08.03 15:00:00   deal performed [#69 sell 1 DE30 at 26073.87]
+CS	0	16:23:11.964	Trade	2026.08.03 15:00:00   order performed sell 1 at 26073.87 [#103 sell 1 DE30 at 26073.87]
+CS	0	16:23:11.964	CycleORB (DE30,M5)	2026.08.03 15:00:00   CTrade::OrderSend: market sell 1.00 position #101 DE30 [done at 26073.87]
+CS	0	16:23:11.964	CycleORB (DE30,M5)	2026.08.03 15:00:00   [CycleORB] CLOSE position #101 magic=26110301 (LON time exit)
+CS	0	16:23:12.000	CycleORB (DE30,M5)	2026.08.04 08:15:00   [CycleORB] SKIP LON 2026.08.04 07:15 hi=26266.69 lo=26202.93 range=6376pt atr%=18.8 spread=84.0pt (live 84pt) cost%=1.3 volpct=7.4 (H1 vol below regime floor)
+CS	0	16:23:12.072	CycleORB (DE30,M5)	2026.08.05 08:15:00   [CycleORB] SKIP LON 2026.08.05 07:15 hi=26382.77 lo=26223.86 range=15891pt atr%=44.5 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:12.147	CycleORB (DE30,M5)	2026.08.06 08:15:00   [CycleORB] SKIP LON 2026.08.06 07:15 hi=26204.01 lo=26078.51 range=12550pt atr%=35.2 spread=84.0pt (live 84pt) cost%=0.7 volpct=6.4 (H1 vol below regime floor)
+CS	0	16:23:12.212	CycleORB (DE30,M5)	2026.08.07 08:15:00   [CycleORB] SKIP LON 2026.08.07 07:15 hi=26289.44 lo=26226.19 range=6325pt atr%=18.7 spread=84.0pt (live 84pt) cost%=1.3 volpct=1.0 (H1 vol below regime floor)
+CS	0	16:23:12.280	CycleORB (DE30,M5)	2026.08.10 08:15:00   [CycleORB] SKIP LON 2026.08.10 07:15 hi=26372.32 lo=26308.90 range=6342pt atr%=20.8 spread=84.0pt (live 84pt) cost%=1.3 volpct=3.8 (H1 vol below regime floor)
+CS	0	16:23:12.340	CycleORB (DE30,M5)	2026.08.11 08:15:00   [CycleORB] SKIP LON 2026.08.11 07:15 hi=26341.39 lo=26257.11 range=8428pt atr%=29.7 spread=84.0pt (live 84pt) cost%=1.0 volpct=2.2 (H1 vol below regime floor)
+CS	0	16:23:12.401	CycleORB (DE30,M5)	2026.08.12 08:15:00   [CycleORB] SKIP LON 2026.08.12 07:15 hi=26459.73 lo=26395.85 range=6388pt atr%=22.6 spread=84.0pt (live 84pt) cost%=1.3 volpct=0.8 (H1 vol below regime floor)
+CS	0	16:23:12.465	CycleORB (DE30,M5)	2026.08.13 08:15:00   [CycleORB] SKIP LON 2026.08.13 07:15 hi=26452.32 lo=26398.16 range=5416pt atr%=19.8 spread=84.0pt (live 84pt) cost%=1.6 volpct=5.8 (H1 vol below regime floor)
+CS	0	16:23:12.515	CycleORB (DE30,M5)	2026.08.14 08:15:00   [CycleORB] SKIP LON 2026.08.14 07:15 hi=26494.33 lo=26435.00 range=5933pt atr%=22.1 spread=84.0pt (live 84pt) cost%=1.4 volpct=1.8 (H1 vol below regime floor)
+CS	0	16:23:12.576	CycleORB (DE30,M5)	2026.08.17 08:15:00   [CycleORB] SKIP LON 2026.08.17 07:15 hi=26479.00 lo=26411.33 range=6767pt atr%=29.9 spread=84.0pt (live 84pt) cost%=1.2 volpct=2.2 (H1 vol below regime floor)
+CS	0	16:23:12.657	CycleORB (DE30,M5)	2026.08.18 08:15:00   [CycleORB] SKIP LON 2026.08.18 07:15 hi=26253.54 lo=26151.96 range=10158pt atr%=46.6 spread=84.0pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:12.761	CycleORB (DE30,M5)	2026.08.19 08:15:00   [CycleORB] SKIP LON 2026.08.19 07:15 hi=26146.73 lo=26093.23 range=5350pt atr%=24.7 spread=84.0pt (live 84pt) cost%=1.6 volpct=22.8 (H1 vol below regime floor)
+CS	0	16:23:12.859	CycleORB (DE30,M5)	2026.08.20 08:15:00   [CycleORB] SKIP LON 2026.08.20 07:15 hi=26016.72 lo=25953.87 range=6285pt atr%=30.7 spread=84.0pt (live 84pt) cost%=1.3 volpct=30.2 (H1 vol below regime floor)
+CS	0	16:23:12.946	CycleORB (DE30,M5)	2026.08.21 08:15:00   [CycleORB] SKIP LON 2026.08.21 07:15 hi=26066.17 lo=25965.57 range=10060pt atr%=51.3 spread=84.0pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:13.023	CycleORB (DE30,M5)	2026.08.24 08:15:00   [CycleORB] SKIP LON 2026.08.24 07:15 hi=26126.39 lo=26031.14 range=9525pt atr%=52.4 spread=84.0pt (live 84pt) cost%=0.9 (range/ATR outside band)
+CS	0	16:23:13.095	CycleORB (DE30,M5)	2026.08.25 08:15:00   [CycleORB] SKIP LON 2026.08.25 07:15 hi=26221.65 lo=26159.27 range=6238pt atr%=36.9 spread=84.0pt (live 84pt) cost%=1.3 volpct=9.6 (H1 vol below regime floor)
+CS	0	16:23:13.167	CycleORB (DE30,M5)	2026.08.26 08:15:00   [CycleORB] SKIP LON 2026.08.26 07:15 hi=26266.38 lo=26193.51 range=7287pt atr%=39.5 spread=84.0pt (live 84pt) cost%=1.2 volpct=9.0 (H1 vol below regime floor)
+CS	0	16:23:13.238	CycleORB (DE30,M5)	2026.08.27 08:15:00   [CycleORB] SKIP LON 2026.08.27 07:15 hi=26371.39 lo=26281.09 range=9030pt atr%=46.9 spread=84.0pt (live 84pt) cost%=0.9 (range/ATR outside band)
+CS	0	16:23:13.303	CycleORB (DE30,M5)	2026.08.28 08:15:00   [CycleORB] RANGE LON 2026.08.28 07:15 hi=26552.23 lo=26483.60 range=6863pt atr%=37.0 spread=84.0pt (live 84pt) cost%=1.2 buffer=343pt risk=103.76
+CS	0	16:23:13.303	Trade	2026.08.28 08:15:00   buy stop 1.2 DE30 at 26555.66 sl: 26483.60 tp: 26735.81 (26523.63 / 26524.47)
+CS	0	16:23:13.303	CycleORB (DE30,M5)	2026.08.28 08:15:00   CTrade::OrderSend: buy stop 1.20 DE30 at 26555.66 sl: 26483.60 tp: 26735.81 [done]
+CS	0	16:23:13.303	CycleORB (DE30,M5)	2026.08.28 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.20 @26555.66 sl=26483.60 tp=26735.81 magic=26110301 retcode=10009
+CS	0	16:23:13.303	Trade	2026.08.28 08:15:00   sell stop 1.2 DE30 at 26480.17 sl: 26552.23 tp: 26300.02 (26523.63 / 26524.47)
+CS	0	16:23:13.303	CycleORB (DE30,M5)	2026.08.28 08:15:00   CTrade::OrderSend: sell stop 1.20 DE30 at 26480.17 sl: 26552.23 tp: 26300.02 [done]
+CS	0	16:23:13.303	CycleORB (DE30,M5)	2026.08.28 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.20 @26480.17 sl=26552.23 tp=26300.02 magic=26110301 retcode=10009
+CS	0	16:23:13.307	Trade	2026.08.28 08:44:01   order [#104 buy stop 1.2 DE30 at 26555.66] triggered
+CS	0	16:23:13.307	Trades	2026.08.28 08:44:01   deal #70 buy 1.2 DE30 at 26555.82 done (based on order #104)
+CS	0	16:23:13.307	Trade	2026.08.28 08:44:01   deal performed [#70 buy 1.2 DE30 at 26555.82]
+CS	0	16:23:13.307	Trade	2026.08.28 08:44:01   order performed buy 1.2 at 26555.82 [#104 buy stop 1.2 DE30 at 26555.66]
+CS	0	16:23:13.307	Trade	2026.08.28 08:44:01   order canceled [#105 sell stop 1.2 DE30 at 26480.17]
+CS	0	16:23:13.307	CycleORB (DE30,M5)	2026.08.28 08:44:01   CTrade::OrderSend: cancel #105 [done]
+CS	0	16:23:13.307	CycleORB (DE30,M5)	2026.08.28 08:44:01   [CycleORB] DELETE order #105 magic=26110301 (LON OCO)
+CS	0	16:23:13.322	Trade	2026.08.28 10:49:31   stop loss triggered #104 buy 1.2 DE30 26555.82 sl: 26483.60 tp: 26735.81 [#106 sell 1.2 DE30 at 26483.60]
+CS	0	16:23:13.322	Trades	2026.08.28 10:49:31   deal #71 sell 1.2 DE30 at 26483.47 done (based on order #106)
+CS	0	16:23:13.322	Trade	2026.08.28 10:49:31   deal performed [#71 sell 1.2 DE30 at 26483.47]
+CS	0	16:23:13.322	Trade	2026.08.28 10:49:31   order performed sell 1.2 at 26483.47 [#106 sell 1.2 DE30 at 26483.60]
+CS	0	16:23:13.408	CycleORB (DE30,M5)	2026.08.31 08:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:13.461	CycleORB (DE30,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_END 202608 capital=10376.31 realized=-29.22 floating=0.00 pnl=-0.28% peak=1.03% state=ACTIVE 
+CS	0	16:23:13.461	CycleORB (DE30,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_BEGIN 202609 capital=10347.09 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:23:13.479	CycleORB (DE30,M5)	2026.09.01 08:15:00   [CycleORB] SKIP LON 2026.09.01 07:15 hi=26198.16 lo=26101.34 range=9682pt atr%=50.0 spread=84.0pt (live 84pt) cost%=0.9 (range/ATR outside band)
+CS	0	16:23:13.571	CycleORB (DE30,M5)	2026.09.02 08:15:00   [CycleORB] RANGE LON 2026.09.02 07:15 hi=25923.33 lo=25839.61 range=8372pt atr%=37.7 spread=84.0pt (live 84pt) cost%=1.0 buffer=419pt risk=103.47
+CS	0	16:23:13.571	Trade	2026.09.02 08:15:00   buy stop 1 DE30 at 25927.52 sl: 25839.61 tp: 26147.30 (25850.99 / 25851.83)
+CS	0	16:23:13.571	CycleORB (DE30,M5)	2026.09.02 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25927.52 sl: 25839.61 tp: 26147.30 [done]
+CS	0	16:23:13.571	CycleORB (DE30,M5)	2026.09.02 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25927.52 sl=25839.61 tp=26147.30 magic=26110301 retcode=10009
+CS	0	16:23:13.571	Trade	2026.09.02 08:15:00   sell stop 1 DE30 at 25835.42 sl: 25923.33 tp: 25615.64 (25850.99 / 25851.83)
+CS	0	16:23:13.572	CycleORB (DE30,M5)	2026.09.02 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25835.42 sl: 25923.33 tp: 25615.64 [done]
+CS	0	16:23:13.572	CycleORB (DE30,M5)	2026.09.02 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25835.42 sl=25923.33 tp=25615.64 magic=26110301 retcode=10009
+CS	0	16:23:13.577	Trade	2026.09.02 08:50:28   order [#108 sell stop 1 DE30 at 25835.42] triggered
+CS	0	16:23:13.577	Trades	2026.09.02 08:50:28   deal #72 sell 1 DE30 at 25835.33 done (based on order #108)
+CS	0	16:23:13.577	Trade	2026.09.02 08:50:28   deal performed [#72 sell 1 DE30 at 25835.33]
+CS	0	16:23:13.577	Trade	2026.09.02 08:50:28   order performed sell 1 at 25835.33 [#108 sell stop 1 DE30 at 25835.42]
+CS	0	16:23:13.577	Trade	2026.09.02 08:50:28   order canceled [#107 buy stop 1 DE30 at 25927.52]
+CS	0	16:23:13.577	CycleORB (DE30,M5)	2026.09.02 08:50:28   CTrade::OrderSend: cancel #107 [done]
+CS	0	16:23:13.577	CycleORB (DE30,M5)	2026.09.02 08:50:28   [CycleORB] DELETE order #107 magic=26110301 (LON OCO)
+CS	0	16:23:13.645	Trade	2026.09.02 15:00:00   market buy 1 DE30, close #108 (25834.98 / 25835.82)
+CS	0	16:23:13.646	Trades	2026.09.02 15:00:00   deal #73 buy 1 DE30 at 25835.82 done (based on order #109)
+CS	0	16:23:13.646	Trade	2026.09.02 15:00:00   deal performed [#73 buy 1 DE30 at 25835.82]
+CS	0	16:23:13.646	Trade	2026.09.02 15:00:00   order performed buy 1 at 25835.82 [#109 buy 1 DE30 at 25835.82]
+CS	0	16:23:13.646	CycleORB (DE30,M5)	2026.09.02 15:00:00   CTrade::OrderSend: market buy 1.00 position #108 DE30 [done at 25835.82]
+CS	0	16:23:13.646	CycleORB (DE30,M5)	2026.09.02 15:00:00   [CycleORB] CLOSE position #108 magic=26110301 (LON time exit)
+CS	0	16:23:13.690	CycleORB (DE30,M5)	2026.09.03 08:15:00   [CycleORB] SKIP LON 2026.09.03 07:15 hi=25896.55 lo=25796.95 range=9960pt atr%=45.2 spread=83.9pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:13.763	CycleORB (DE30,M5)	2026.09.04 08:15:00   [CycleORB] RANGE LON 2026.09.04 07:15 hi=26080.48 lo=26007.15 range=7333pt atr%=32.7 spread=84.0pt (live 84pt) cost%=1.1 buffer=367pt risk=103.47
+CS	0	16:23:13.763	Trade	2026.09.04 08:15:00   buy stop 1.1 DE30 at 26084.15 sl: 26007.15 tp: 26276.65 (26036.02 / 26036.86)
+CS	0	16:23:13.763	CycleORB (DE30,M5)	2026.09.04 08:15:00   CTrade::OrderSend: buy stop 1.10 DE30 at 26084.15 sl: 26007.15 tp: 26276.65 [done]
+CS	0	16:23:13.763	CycleORB (DE30,M5)	2026.09.04 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.10 @26084.15 sl=26007.15 tp=26276.65 magic=26110301 retcode=10009
+CS	0	16:23:13.763	Trade	2026.09.04 08:15:00   sell stop 1.1 DE30 at 26003.48 sl: 26080.48 tp: 25810.98 (26036.02 / 26036.86)
+CS	0	16:23:13.763	CycleORB (DE30,M5)	2026.09.04 08:15:00   CTrade::OrderSend: sell stop 1.10 DE30 at 26003.48 sl: 26080.48 tp: 25810.98 [done]
+CS	0	16:23:13.763	CycleORB (DE30,M5)	2026.09.04 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.10 @26003.48 sl=26080.48 tp=25810.98 magic=26110301 retcode=10009
+CS	0	16:23:13.764	Trade	2026.09.04 08:23:40   order [#111 sell stop 1.1 DE30 at 26003.48] triggered
+CS	0	16:23:13.764	Trades	2026.09.04 08:23:40   deal #74 sell 1.1 DE30 at 26003.21 done (based on order #111)
+CS	0	16:23:13.764	Trade	2026.09.04 08:23:40   deal performed [#74 sell 1.1 DE30 at 26003.21]
+CS	0	16:23:13.764	Trade	2026.09.04 08:23:40   order performed sell 1.1 at 26003.21 [#111 sell stop 1.1 DE30 at 26003.48]
+CS	0	16:23:13.764	Trade	2026.09.04 08:23:40   order canceled [#110 buy stop 1.1 DE30 at 26084.15]
+CS	0	16:23:13.764	CycleORB (DE30,M5)	2026.09.04 08:23:40   CTrade::OrderSend: cancel #110 [done]
+CS	0	16:23:13.764	CycleORB (DE30,M5)	2026.09.04 08:23:40   [CycleORB] DELETE order #110 magic=26110301 (LON OCO)
+CS	0	16:23:13.780	Trade	2026.09.04 10:25:52   stop loss triggered #111 sell 1.1 DE30 26003.21 sl: 26080.48 tp: 25810.98 [#112 buy 1.1 DE30 at 26080.48]
+CS	0	16:23:13.780	Trades	2026.09.04 10:25:52   deal #75 buy 1.1 DE30 at 26082.90 done (based on order #112)
+CS	0	16:23:13.780	Trade	2026.09.04 10:25:52   deal performed [#75 buy 1.1 DE30 at 26082.90]
+CS	0	16:23:13.780	Trade	2026.09.04 10:25:52   order performed buy 1.1 at 26082.90 [#112 buy 1.1 DE30 at 26080.48]
+CS	0	16:23:13.839	CycleORB (DE30,M5)	2026.09.07 08:15:00   [CycleORB] SKIP LON 2026.09.07 07:15 hi=26048.49 lo=25925.47 range=12302pt atr%=57.3 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:13.889	CycleORB (DE30,M5)	2026.09.08 08:15:00   [CycleORB] SKIP LON 2026.09.08 07:15 hi=25952.25 lo=25826.42 range=12583pt atr%=59.6 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:13.970	CycleORB (DE30,M5)	2026.09.09 08:15:00   [CycleORB] RANGE LON 2026.09.09 07:15 hi=25898.58 lo=25820.46 range=7812pt atr%=35.0 spread=84.0pt (live 84pt) cost%=1.1 buffer=391pt risk=103.47
+CS	0	16:23:13.970	Trade	2026.09.09 08:15:00   buy stop 1 DE30 at 25902.49 sl: 25820.46 tp: 26107.57 (25826.13 / 25826.97)
+CS	0	16:23:13.970	CycleORB (DE30,M5)	2026.09.09 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25902.49 sl: 25820.46 tp: 26107.57 [done]
+CS	0	16:23:13.970	CycleORB (DE30,M5)	2026.09.09 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25902.49 sl=25820.46 tp=26107.57 magic=26110301 retcode=10009
+CS	0	16:23:13.970	Trade	2026.09.09 08:15:00   sell stop 1 DE30 at 25816.55 sl: 25898.58 tp: 25611.47 (25826.13 / 25826.97)
+CS	0	16:23:13.970	CycleORB (DE30,M5)	2026.09.09 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25816.55 sl: 25898.58 tp: 25611.47 [done]
+CS	0	16:23:13.970	CycleORB (DE30,M5)	2026.09.09 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25816.55 sl=25898.58 tp=25611.47 magic=26110301 retcode=10009
+CS	0	16:23:13.971	Trade	2026.09.09 08:23:19   order [#114 sell stop 1 DE30 at 25816.55] triggered
+CS	0	16:23:13.971	Trades	2026.09.09 08:23:19   deal #76 sell 1 DE30 at 25816.49 done (based on order #114)
+CS	0	16:23:13.971	Trade	2026.09.09 08:23:19   deal performed [#76 sell 1 DE30 at 25816.49]
+CS	0	16:23:13.971	Trade	2026.09.09 08:23:19   order performed sell 1 at 25816.49 [#114 sell stop 1 DE30 at 25816.55]
+CS	0	16:23:13.971	Trade	2026.09.09 08:23:19   order canceled [#113 buy stop 1 DE30 at 25902.49]
+CS	0	16:23:13.971	CycleORB (DE30,M5)	2026.09.09 08:23:19   CTrade::OrderSend: cancel #113 [done]
+CS	0	16:23:13.971	CycleORB (DE30,M5)	2026.09.09 08:23:19   [CycleORB] DELETE order #113 magic=26110301 (LON OCO)
+CS	0	16:23:13.996	Trade	2026.09.09 10:43:57   take profit triggered #114 sell 1 DE30 25816.49 sl: 25898.58 tp: 25611.47 [#115 buy 1 DE30 at 25611.47]
+CS	0	16:23:13.996	Trades	2026.09.09 10:43:57   deal #77 buy 1 DE30 at 25611.37 done (based on order #115)
+CS	0	16:23:13.996	Trade	2026.09.09 10:43:57   deal performed [#77 buy 1 DE30 at 25611.37]
+CS	0	16:23:13.996	Trade	2026.09.09 10:43:57   order performed buy 1 at 25611.37 [#115 buy 1 DE30 at 25611.47]
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:15:00   [CycleORB] RANGE LON 2026.09.10 07:15 hi=25612.58 lo=25535.58 range=7700pt atr%=31.9 spread=84.0pt (live 84pt) cost%=1.1 buffer=385pt risk=103.47
+CS	0	16:23:14.069	Trade	2026.09.10 08:15:00   buy stop 1 DE30 at 25616.43 sl: 25535.58 tp: 25818.55 (25550.24 / 25551.08)
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25616.43 sl: 25535.58 tp: 25818.55 [done]
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25616.43 sl=25535.58 tp=25818.55 magic=26110301 retcode=10009
+CS	0	16:23:14.069	Trade	2026.09.10 08:15:00   sell stop 1 DE30 at 25531.73 sl: 25612.58 tp: 25329.60 (25550.24 / 25551.08)
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25531.73 sl: 25612.58 tp: 25329.60 [done]
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25531.73 sl=25612.58 tp=25329.60 magic=26110301 retcode=10009
+CS	0	16:23:14.069	Trade	2026.09.10 08:17:15   order [#117 sell stop 1 DE30 at 25531.73] triggered
+CS	0	16:23:14.069	Trades	2026.09.10 08:17:15   deal #78 sell 1 DE30 at 25531.41 done (based on order #117)
+CS	0	16:23:14.069	Trade	2026.09.10 08:17:15   deal performed [#78 sell 1 DE30 at 25531.41]
+CS	0	16:23:14.069	Trade	2026.09.10 08:17:15   order performed sell 1 at 25531.41 [#117 sell stop 1 DE30 at 25531.73]
+CS	0	16:23:14.069	Trade	2026.09.10 08:17:15   order canceled [#116 buy stop 1 DE30 at 25616.43]
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:17:15   CTrade::OrderSend: cancel #116 [done]
+CS	0	16:23:14.069	CycleORB (DE30,M5)	2026.09.10 08:17:15   [CycleORB] DELETE order #116 magic=26110301 (LON OCO)
+CS	0	16:23:14.151	Trade	2026.09.10 15:00:00   market buy 1 DE30, close #117 (25412.75 / 25413.59)
+CS	0	16:23:14.151	Trades	2026.09.10 15:00:00   deal #79 buy 1 DE30 at 25413.59 done (based on order #118)
+CS	0	16:23:14.151	Trade	2026.09.10 15:00:00   deal performed [#79 buy 1 DE30 at 25413.59]
+CS	0	16:23:14.151	Trade	2026.09.10 15:00:00   order performed buy 1 at 25413.59 [#118 buy 1 DE30 at 25413.59]
+CS	0	16:23:14.151	CycleORB (DE30,M5)	2026.09.10 15:00:00   CTrade::OrderSend: market buy 1.00 position #117 DE30 [done at 25413.59]
+CS	0	16:23:14.151	CycleORB (DE30,M5)	2026.09.10 15:00:00   [CycleORB] CLOSE position #117 magic=26110301 (LON time exit)
+CS	0	16:23:14.208	CycleORB (DE30,M5)	2026.09.11 08:15:00   [CycleORB] RANGE LON 2026.09.11 07:15 hi=25474.69 lo=25391.25 range=8344pt atr%=33.9 spread=84.0pt (live 84pt) cost%=1.0 buffer=417pt risk=103.47
+CS	0	16:23:14.208	Trade	2026.09.11 08:15:00   buy stop 1 DE30 at 25478.86 sl: 25391.25 tp: 25697.89 (25428.18 / 25429.02)
+CS	0	16:23:14.208	CycleORB (DE30,M5)	2026.09.11 08:15:00   CTrade::OrderSend: buy stop 1.00 DE30 at 25478.86 sl: 25391.25 tp: 25697.89 [done]
+CS	0	16:23:14.208	CycleORB (DE30,M5)	2026.09.11 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.00 @25478.86 sl=25391.25 tp=25697.89 magic=26110301 retcode=10009
+CS	0	16:23:14.208	Trade	2026.09.11 08:15:00   sell stop 1 DE30 at 25387.08 sl: 25474.69 tp: 25168.06 (25428.18 / 25429.02)
+CS	0	16:23:14.208	CycleORB (DE30,M5)	2026.09.11 08:15:00   CTrade::OrderSend: sell stop 1.00 DE30 at 25387.08 sl: 25474.69 tp: 25168.06 [done]
+CS	0	16:23:14.208	CycleORB (DE30,M5)	2026.09.11 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.00 @25387.08 sl=25474.69 tp=25168.06 magic=26110301 retcode=10009
+CS	0	16:23:14.211	Trade	2026.09.11 08:35:00   order [#119 buy stop 1 DE30 at 25478.86] triggered
+CS	0	16:23:14.211	Trades	2026.09.11 08:35:00   deal #80 buy 1 DE30 at 25479.82 done (based on order #119)
+CS	0	16:23:14.211	Trade	2026.09.11 08:35:00   deal performed [#80 buy 1 DE30 at 25479.82]
+CS	0	16:23:14.211	Trade	2026.09.11 08:35:00   order performed buy 1 at 25479.82 [#119 buy stop 1 DE30 at 25478.86]
+CS	0	16:23:14.211	Trade	2026.09.11 08:35:00   order canceled [#120 sell stop 1 DE30 at 25387.08]
+CS	0	16:23:14.211	CycleORB (DE30,M5)	2026.09.11 08:35:00   CTrade::OrderSend: cancel #120 [done]
+CS	0	16:23:14.211	CycleORB (DE30,M5)	2026.09.11 08:35:00   [CycleORB] DELETE order #120 magic=26110301 (LON OCO)
+CS	0	16:23:14.289	Trade	2026.09.11 15:00:00   market sell 1 DE30, close #119 (25513.08 / 25513.92)
+CS	0	16:23:14.289	Trades	2026.09.11 15:00:00   deal #81 sell 1 DE30 at 25513.08 done (based on order #121)
+CS	0	16:23:14.289	Trade	2026.09.11 15:00:00   deal performed [#81 sell 1 DE30 at 25513.08]
+CS	0	16:23:14.289	Trade	2026.09.11 15:00:00   order performed sell 1 at 25513.08 [#121 sell 1 DE30 at 25513.08]
+CS	0	16:23:14.289	CycleORB (DE30,M5)	2026.09.11 15:00:00   CTrade::OrderSend: market sell 1.00 position #119 DE30 [done at 25513.08]
+CS	0	16:23:14.289	CycleORB (DE30,M5)	2026.09.11 15:00:00   [CycleORB] CLOSE position #119 magic=26110301 (LON time exit)
+CS	0	16:23:14.342	CycleORB (DE30,M5)	2026.09.14 08:15:00   [CycleORB] SKIP LON 2026.09.14 07:15 hi=25525.80 lo=25384.92 range=14088pt atr%=56.5 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:14.436	CycleORB (DE30,M5)	2026.09.15 08:15:00   [CycleORB] SKIP LON 2026.09.15 07:15 hi=25357.75 lo=25162.17 range=19558pt atr%=78.8 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:14.526	CycleORB (DE30,M5)	2026.09.16 08:15:00   [CycleORB] SKIP LON 2026.09.16 07:15 hi=25506.15 lo=25391.97 range=11418pt atr%=42.9 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:14.619	CycleORB (DE30,M5)	2026.09.17 08:15:00   [CycleORB] SKIP LON 2026.09.17 07:15 hi=25748.85 lo=25608.68 range=14017pt atr%=54.4 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:14.693	CycleORB (DE30,M5)	2026.09.18 08:15:00   [CycleORB] SKIP LON 2026.09.18 07:15 hi=25637.31 lo=25563.80 range=7351pt atr%=30.5 spread=84.0pt (live 84pt) cost%=1.1 volpct=27.4 (H1 vol below regime floor)
+CS	0	16:23:14.787	CycleORB (DE30,M5)	2026.09.21 08:15:00   [CycleORB] SKIP LON 2026.09.21 07:15 hi=25544.20 lo=25435.78 range=10842pt atr%=44.7 spread=84.0pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:14.868	CycleORB (DE30,M5)	2026.09.22 08:15:00   [CycleORB] SKIP LON 2026.09.22 07:15 hi=25540.14 lo=25454.29 range=8585pt atr%=34.2 spread=84.0pt (live 84pt) cost%=1.0 volpct=11.0 (H1 vol below regime floor)
+CS	0	16:23:14.961	CycleORB (DE30,M5)	2026.09.23 08:15:00   [CycleORB] SKIP LON 2026.09.23 07:15 hi=25650.13 lo=25538.63 range=11150pt atr%=40.5 spread=84.0pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:15.049	CycleORB (DE30,M5)	2026.09.24 08:15:00   [CycleORB] SKIP LON 2026.09.24 07:15 hi=25394.53 lo=25183.23 range=21130pt atr%=70.7 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:15.159	CycleORB (DE30,M5)	2026.09.25 08:15:00   [CycleORB] RANGE LON 2026.09.25 07:15 hi=25451.06 lo=25378.57 range=7249pt atr%=24.0 spread=84.0pt (live 84pt) cost%=1.2 buffer=362pt risk=103.47
+CS	0	16:23:15.159	Trade	2026.09.25 08:15:00   buy stop 1.1 DE30 at 25454.68 sl: 25378.57 tp: 25644.96 (25425.99 / 25426.83)
+CS	0	16:23:15.159	CycleORB (DE30,M5)	2026.09.25 08:15:00   CTrade::OrderSend: buy stop 1.10 DE30 at 25454.68 sl: 25378.57 tp: 25644.96 [done]
+CS	0	16:23:15.159	CycleORB (DE30,M5)	2026.09.25 08:15:00   [CycleORB] PLACE BUY_STOP lots=1.10 @25454.68 sl=25378.57 tp=25644.96 magic=26110301 retcode=10009
+CS	0	16:23:15.159	Trade	2026.09.25 08:15:00   sell stop 1.1 DE30 at 25374.95 sl: 25451.06 tp: 25184.68 (25425.99 / 25426.83)
+CS	0	16:23:15.159	CycleORB (DE30,M5)	2026.09.25 08:15:00   CTrade::OrderSend: sell stop 1.10 DE30 at 25374.95 sl: 25451.06 tp: 25184.68 [done]
+CS	0	16:23:15.159	CycleORB (DE30,M5)	2026.09.25 08:15:00   [CycleORB] PLACE SELL_STOP lots=1.10 @25374.95 sl=25451.06 tp=25184.68 magic=26110301 retcode=10009
+CS	0	16:23:15.160	Trade	2026.09.25 08:25:12   order [#122 buy stop 1.1 DE30 at 25454.68] triggered
+CS	0	16:23:15.160	Trades	2026.09.25 08:25:12   deal #82 buy 1.1 DE30 at 25455.76 done (based on order #122)
+CS	0	16:23:15.160	Trade	2026.09.25 08:25:12   deal performed [#82 buy 1.1 DE30 at 25455.76]
+CS	0	16:23:15.160	Trade	2026.09.25 08:25:12   order performed buy 1.1 at 25455.76 [#122 buy stop 1.1 DE30 at 25454.68]
+CS	0	16:23:15.160	Trade	2026.09.25 08:25:12   order canceled [#123 sell stop 1.1 DE30 at 25374.95]
+CS	0	16:23:15.160	CycleORB (DE30,M5)	2026.09.25 08:25:12   CTrade::OrderSend: cancel #123 [done]
+CS	0	16:23:15.160	CycleORB (DE30,M5)	2026.09.25 08:25:12   [CycleORB] DELETE order #123 magic=26110301 (LON OCO)
+CS	0	16:23:15.223	Trade	2026.09.25 14:04:37   stop loss triggered #122 buy 1.1 DE30 25455.76 sl: 25378.57 tp: 25644.96 [#124 sell 1.1 DE30 at 25378.57]
+CS	0	16:23:15.223	Trades	2026.09.25 14:04:37   deal #83 sell 1.1 DE30 at 25378.39 done (based on order #124)
+CS	0	16:23:15.223	Trade	2026.09.25 14:04:37   deal performed [#83 sell 1.1 DE30 at 25378.39]
+CS	0	16:23:15.223	Trade	2026.09.25 14:04:37   order performed sell 1.1 at 25378.39 [#124 sell 1.1 DE30 at 25378.57]
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:00   [CycleORB] RANGE LON 2026.09.28 07:15 hi=25495.04 lo=25392.73 range=10231pt atr%=37.1 spread=84.0pt (live 84pt) cost%=0.8 buffer=512pt risk=103.47
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:00   buy stop 0.8 DE30 at 25500.16 sl: 25392.73 tp: 25768.74 (25495.54 / 25496.38)
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 25500.16 sl: 25392.73 tp: 25768.74 [done]
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @25500.16 sl=25392.73 tp=25768.74 magic=26110301 retcode=10009
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:00   sell stop 0.8 DE30 at 25387.61 sl: 25495.04 tp: 25119.04 (25495.54 / 25496.38)
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 25387.61 sl: 25495.04 tp: 25119.04 [done]
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @25387.61 sl=25495.04 tp=25119.04 magic=26110301 retcode=10009
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:11   order [#125 buy stop 0.8 DE30 at 25500.16] triggered
+CS	0	16:23:15.308	Trades	2026.09.28 08:15:11   deal #84 buy 0.8 DE30 at 25500.17 done (based on order #125)
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:11   deal performed [#84 buy 0.8 DE30 at 25500.17]
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:11   order performed buy 0.8 at 25500.17 [#125 buy stop 0.8 DE30 at 25500.16]
+CS	0	16:23:15.308	Trade	2026.09.28 08:15:11   order canceled [#126 sell stop 0.8 DE30 at 25387.61]
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:11   CTrade::OrderSend: cancel #126 [done]
+CS	0	16:23:15.308	CycleORB (DE30,M5)	2026.09.28 08:15:11   [CycleORB] DELETE order #126 magic=26110301 (LON OCO)
+CS	0	16:23:15.321	Trade	2026.09.28 09:08:41   stop loss triggered #125 buy 0.8 DE30 25500.17 sl: 25392.73 tp: 25768.74 [#127 sell 0.8 DE30 at 25392.73]
+CS	0	16:23:15.321	Trades	2026.09.28 09:08:41   deal #85 sell 0.8 DE30 at 25391.88 done (based on order #127)
+CS	0	16:23:15.321	Trade	2026.09.28 09:08:41   deal performed [#85 sell 0.8 DE30 at 25391.88]
+CS	0	16:23:15.321	Trade	2026.09.28 09:08:41   order performed sell 0.8 at 25391.88 [#127 sell 0.8 DE30 at 25392.73]
+CS	0	16:23:15.436	CycleORB (DE30,M5)	2026.09.29 08:15:00   [CycleORB] SKIP LON 2026.09.29 07:15 hi=25487.63 lo=25341.88 range=14575pt atr%=53.0 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:15.535	CycleORB (DE30,M5)	2026.09.30 08:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:15.681	CycleORB (DE30,M5)	2026.10.01 00:00:03   [CycleORB] CYCLE_END 202609 capital=10347.09 realized=116.15 floating=0.00 pnl=1.12% peak=3.92% state=ACTIVE 
+CS	0	16:23:15.681	CycleORB (DE30,M5)	2026.10.01 00:00:03   [CycleORB] CYCLE_BEGIN 202610 capital=10463.24 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	16:23:15.708	CycleORB (DE30,M5)	2026.10.01 08:15:00   [CycleORB] SKIP LON 2026.10.01 07:15 hi=25003.53 lo=24822.93 range=18060pt atr%=59.8 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:15.849	CycleORB (DE30,M5)	2026.10.02 08:15:00   [CycleORB] SKIP LON 2026.10.02 07:15 hi=25197.78 lo=24997.28 range=20050pt atr%=65.6 spread=84.0pt (live 84pt) cost%=0.4 (range/ATR outside band)
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:00   [CycleORB] RANGE LON 2026.10.05 07:15 hi=25266.51 lo=25153.51 range=11300pt atr%=37.4 spread=84.0pt (live 84pt) cost%=0.7 buffer=565pt risk=104.63
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:00   buy stop 0.7 DE30 at 25272.16 sl: 25153.51 tp: 25568.79 (25258.84 / 25259.68)
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:00   CTrade::OrderSend: buy stop 0.70 DE30 at 25272.16 sl: 25153.51 tp: 25568.79 [done]
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.70 @25272.16 sl=25153.51 tp=25568.79 magic=26110301 retcode=10009
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:00   sell stop 0.7 DE30 at 25147.86 sl: 25266.51 tp: 24851.24 (25258.84 / 25259.68)
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:00   CTrade::OrderSend: sell stop 0.70 DE30 at 25147.86 sl: 25266.51 tp: 24851.24 [done]
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.70 @25147.86 sl=25266.51 tp=24851.24 magic=26110301 retcode=10009
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:45   order [#128 buy stop 0.7 DE30 at 25272.16] triggered
+CS	0	16:23:15.977	Trades	2026.10.05 08:15:45   deal #86 buy 0.7 DE30 at 25272.22 done (based on order #128)
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:45   deal performed [#86 buy 0.7 DE30 at 25272.22]
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:45   order performed buy 0.7 at 25272.22 [#128 buy stop 0.7 DE30 at 25272.16]
+CS	0	16:23:15.977	Trade	2026.10.05 08:15:45   order canceled [#129 sell stop 0.7 DE30 at 25147.86]
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:45   CTrade::OrderSend: cancel #129 [done]
+CS	0	16:23:15.977	CycleORB (DE30,M5)	2026.10.05 08:15:45   [CycleORB] DELETE order #129 magic=26110301 (LON OCO)
+CS	0	16:23:15.988	Trade	2026.10.05 08:45:58   stop loss triggered #128 buy 0.7 DE30 25272.22 sl: 25153.51 tp: 25568.79 [#130 sell 0.7 DE30 at 25153.51]
+CS	0	16:23:15.988	Trades	2026.10.05 08:45:58   deal #87 sell 0.7 DE30 at 25153.18 done (based on order #130)
+CS	0	16:23:15.988	Trade	2026.10.05 08:45:58   deal performed [#87 sell 0.7 DE30 at 25153.18]
+CS	0	16:23:15.988	Trade	2026.10.05 08:45:58   order performed sell 0.7 at 25153.18 [#130 sell 0.7 DE30 at 25153.51]
+CS	0	16:23:16.093	CycleORB (DE30,M5)	2026.10.06 08:15:00   [CycleORB] SKIP LON 2026.10.06 07:15 hi=25483.58 lo=25382.83 range=10075pt atr%=35.1 spread=84.0pt (live 84pt) cost%=0.8 volpct=27.4 (H1 vol below regime floor)
+CS	0	16:23:16.182	CycleORB (DE30,M5)	2026.10.07 08:15:00   [CycleORB] SKIP LON 2026.10.07 07:15 hi=25291.10 lo=25192.60 range=9850pt atr%=32.9 spread=84.0pt (live 84pt) cost%=0.9 volpct=6.8 (H1 vol below regime floor)
+CS	0	16:23:16.286	CycleORB (DE30,M5)	2026.10.08 08:15:00   [CycleORB] SKIP LON 2026.10.08 07:15 hi=24965.22 lo=24834.13 range=13109pt atr%=43.5 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:16.393	CycleORB (DE30,M5)	2026.10.09 08:15:00   [CycleORB] SKIP LON 2026.10.09 07:15 hi=25057.75 lo=24949.90 range=10785pt atr%=35.9 spread=84.0pt (live 84pt) cost%=0.8 volpct=31.6 (H1 vol below regime floor)
+CS	0	16:23:16.482	CycleORB (DE30,M5)	2026.10.12 08:15:00   [CycleORB] SKIP LON 2026.10.12 07:15 hi=25263.92 lo=25188.46 range=7546pt atr%=28.4 spread=84.0pt (live 84pt) cost%=1.1 volpct=2.8 (H1 vol below regime floor)
+CS	0	16:23:16.580	CycleORB (DE30,M5)	2026.10.13 08:15:00   [CycleORB] SKIP LON 2026.10.13 07:15 hi=25428.23 lo=25312.66 range=11557pt atr%=44.7 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:16.669	CycleORB (DE30,M5)	2026.10.14 08:15:00   [CycleORB] SKIP LON 2026.10.14 07:15 hi=25374.86 lo=25273.24 range=10162pt atr%=37.6 spread=84.0pt (live 84pt) cost%=0.8 volpct=10.4 (H1 vol below regime floor)
+CS	0	16:23:16.789	CycleORB (DE30,M5)	2026.10.15 08:15:00   [CycleORB] SKIP LON 2026.10.15 07:15 hi=25302.04 lo=25186.10 range=11594pt atr%=42.9 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:16.924	CycleORB (DE30,M5)	2026.10.16 08:15:00   [CycleORB] RANGE LON 2026.10.16 07:15 hi=25609.45 lo=25514.12 range=9533pt atr%=34.3 spread=84.0pt (live 84pt) cost%=0.9 buffer=477pt risk=104.63
+CS	0	16:23:16.924	Trade	2026.10.16 08:15:00   buy stop 0.9 DE30 at 25614.22 sl: 25514.12 tp: 25864.47 (25598.45 / 25599.29)
+CS	0	16:23:16.924	CycleORB (DE30,M5)	2026.10.16 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 25614.22 sl: 25514.12 tp: 25864.47 [done]
+CS	0	16:23:16.924	CycleORB (DE30,M5)	2026.10.16 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @25614.22 sl=25514.12 tp=25864.47 magic=26110301 retcode=10009
+CS	0	16:23:16.924	Trade	2026.10.16 08:15:00   sell stop 0.9 DE30 at 25509.35 sl: 25609.45 tp: 25259.10 (25598.45 / 25599.29)
+CS	0	16:23:16.924	CycleORB (DE30,M5)	2026.10.16 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 25509.35 sl: 25609.45 tp: 25259.10 [done]
+CS	0	16:23:16.924	CycleORB (DE30,M5)	2026.10.16 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @25509.35 sl=25609.45 tp=25259.10 magic=26110301 retcode=10009
+CS	0	16:23:16.927	Trade	2026.10.16 08:25:46   order [#131 buy stop 0.9 DE30 at 25614.22] triggered
+CS	0	16:23:16.927	Trades	2026.10.16 08:25:46   deal #88 buy 0.9 DE30 at 25614.39 done (based on order #131)
+CS	0	16:23:16.927	Trade	2026.10.16 08:25:46   deal performed [#88 buy 0.9 DE30 at 25614.39]
+CS	0	16:23:16.927	Trade	2026.10.16 08:25:46   order performed buy 0.9 at 25614.39 [#131 buy stop 0.9 DE30 at 25614.22]
+CS	0	16:23:16.927	Trade	2026.10.16 08:25:46   order canceled [#132 sell stop 0.9 DE30 at 25509.35]
+CS	0	16:23:16.927	CycleORB (DE30,M5)	2026.10.16 08:25:46   CTrade::OrderSend: cancel #132 [done]
+CS	0	16:23:16.927	CycleORB (DE30,M5)	2026.10.16 08:25:46   [CycleORB] DELETE order #132 magic=26110301 (LON OCO)
+CS	0	16:23:17.009	Trade	2026.10.16 15:00:00   market sell 0.9 DE30, close #131 (25666.45 / 25667.29)
+CS	0	16:23:17.009	Trades	2026.10.16 15:00:00   deal #89 sell 0.9 DE30 at 25666.45 done (based on order #133)
+CS	0	16:23:17.009	Trade	2026.10.16 15:00:00   deal performed [#89 sell 0.9 DE30 at 25666.45]
+CS	0	16:23:17.009	Trade	2026.10.16 15:00:00   order performed sell 0.9 at 25666.45 [#133 sell 0.9 DE30 at 25666.45]
+CS	0	16:23:17.009	CycleORB (DE30,M5)	2026.10.16 15:00:00   CTrade::OrderSend: market sell 0.90 position #131 DE30 [done at 25666.45]
+CS	0	16:23:17.009	CycleORB (DE30,M5)	2026.10.16 15:00:00   [CycleORB] CLOSE position #131 magic=26110301 (LON time exit)
+CS	0	16:23:17.067	CycleORB (DE30,M5)	2026.10.19 08:15:00   [CycleORB] SKIP LON 2026.10.19 07:15 hi=25452.71 lo=25319.94 range=13277pt atr%=55.5 spread=84.0pt (live 84pt) cost%=0.6 (range/ATR outside band)
+CS	0	16:23:17.179	CycleORB (DE30,M5)	2026.10.20 08:15:00   [CycleORB] SKIP LON 2026.10.20 07:15 hi=25161.08 lo=25062.15 range=9893pt atr%=40.6 spread=84.0pt (live 84pt) cost%=0.8 (range/ATR outside band)
+CS	0	16:23:17.285	CycleORB (DE30,M5)	2026.10.21 08:15:00   [CycleORB] RANGE LON 2026.10.21 07:15 hi=25342.73 lo=25252.17 range=9056pt atr%=33.3 spread=84.0pt (live 84pt) cost%=0.9 buffer=453pt risk=104.63
+CS	0	16:23:17.285	Trade	2026.10.21 08:15:00   buy stop 0.9 DE30 at 25347.26 sl: 25252.17 tp: 25584.99 (25339.79 / 25340.63)
+CS	0	16:23:17.285	CycleORB (DE30,M5)	2026.10.21 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 25347.26 sl: 25252.17 tp: 25584.99 [done]
+CS	0	16:23:17.285	CycleORB (DE30,M5)	2026.10.21 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @25347.26 sl=25252.17 tp=25584.99 magic=26110301 retcode=10009
+CS	0	16:23:17.285	Trade	2026.10.21 08:15:00   sell stop 0.9 DE30 at 25247.64 sl: 25342.73 tp: 25009.92 (25339.79 / 25340.63)
+CS	0	16:23:17.285	CycleORB (DE30,M5)	2026.10.21 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 25247.64 sl: 25342.73 tp: 25009.92 [done]
+CS	0	16:23:17.285	CycleORB (DE30,M5)	2026.10.21 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @25247.64 sl=25342.73 tp=25009.92 magic=26110301 retcode=10009
+CS	0	16:23:17.286	Trade	2026.10.21 08:20:20   order [#134 buy stop 0.9 DE30 at 25347.26] triggered
+CS	0	16:23:17.286	Trades	2026.10.21 08:20:20   deal #90 buy 0.9 DE30 at 25347.42 done (based on order #134)
+CS	0	16:23:17.286	Trade	2026.10.21 08:20:20   deal performed [#90 buy 0.9 DE30 at 25347.42]
+CS	0	16:23:17.286	Trade	2026.10.21 08:20:20   order performed buy 0.9 at 25347.42 [#134 buy stop 0.9 DE30 at 25347.26]
+CS	0	16:23:17.286	Trade	2026.10.21 08:20:20   order canceled [#135 sell stop 0.9 DE30 at 25247.64]
+CS	0	16:23:17.286	CycleORB (DE30,M5)	2026.10.21 08:20:20   CTrade::OrderSend: cancel #135 [done]
+CS	0	16:23:17.286	CycleORB (DE30,M5)	2026.10.21 08:20:20   [CycleORB] DELETE order #135 magic=26110301 (LON OCO)
+CS	0	16:23:17.342	Trade	2026.10.21 12:55:02   take profit triggered #134 buy 0.9 DE30 25347.42 sl: 25252.17 tp: 25584.99 [#136 sell 0.9 DE30 at 25584.99]
+CS	0	16:23:17.342	Trades	2026.10.21 12:55:02   deal #91 sell 0.9 DE30 at 25585.89 done (based on order #136)
+CS	0	16:23:17.342	Trade	2026.10.21 12:55:02   deal performed [#91 sell 0.9 DE30 at 25585.89]
+CS	0	16:23:17.342	Trade	2026.10.21 12:55:02   order performed sell 0.9 at 25585.89 [#136 sell 0.9 DE30 at 25584.99]
+CS	0	16:23:17.429	CycleORB (DE30,M5)	2026.10.22 08:15:00   [CycleORB] RANGE LON 2026.10.22 07:15 hi=25419.68 lo=25319.16 range=10052pt atr%=34.6 spread=84.0pt (live 84pt) cost%=0.8 buffer=503pt risk=104.63
+CS	0	16:23:17.429	Trade	2026.10.22 08:15:00   buy stop 0.8 DE30 at 25424.71 sl: 25319.16 tp: 25688.59 (25353.29 / 25354.13)
+CS	0	16:23:17.429	CycleORB (DE30,M5)	2026.10.22 08:15:00   CTrade::OrderSend: buy stop 0.80 DE30 at 25424.71 sl: 25319.16 tp: 25688.59 [done]
+CS	0	16:23:17.429	CycleORB (DE30,M5)	2026.10.22 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.80 @25424.71 sl=25319.16 tp=25688.59 magic=26110301 retcode=10009
+CS	0	16:23:17.429	Trade	2026.10.22 08:15:00   sell stop 0.8 DE30 at 25314.13 sl: 25419.68 tp: 25050.26 (25353.29 / 25354.13)
+CS	0	16:23:17.429	CycleORB (DE30,M5)	2026.10.22 08:15:00   CTrade::OrderSend: sell stop 0.80 DE30 at 25314.13 sl: 25419.68 tp: 25050.26 [done]
+CS	0	16:23:17.429	CycleORB (DE30,M5)	2026.10.22 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.80 @25314.13 sl=25419.68 tp=25050.26 magic=26110301 retcode=10009
+CS	0	16:23:17.449	Trade	2026.10.22 09:50:05   order [#138 sell stop 0.8 DE30 at 25314.13] triggered
+CS	0	16:23:17.449	Trades	2026.10.22 09:50:05   deal #92 sell 0.8 DE30 at 25311.66 done (based on order #138)
+CS	0	16:23:17.449	Trade	2026.10.22 09:50:05   deal performed [#92 sell 0.8 DE30 at 25311.66]
+CS	0	16:23:17.449	Trade	2026.10.22 09:50:05   order performed sell 0.8 at 25311.66 [#138 sell stop 0.8 DE30 at 25314.13]
+CS	0	16:23:17.449	Trade	2026.10.22 09:50:05   order canceled [#137 buy stop 0.8 DE30 at 25424.71]
+CS	0	16:23:17.450	CycleORB (DE30,M5)	2026.10.22 09:50:05   CTrade::OrderSend: cancel #137 [done]
+CS	0	16:23:17.450	CycleORB (DE30,M5)	2026.10.22 09:50:05   [CycleORB] DELETE order #137 magic=26110301 (LON OCO)
+CS	0	16:23:17.459	Trade	2026.10.22 10:36:00   stop loss triggered #138 sell 0.8 DE30 25311.66 sl: 25419.68 tp: 25050.26 [#139 buy 0.8 DE30 at 25419.68]
+CS	0	16:23:17.459	Trades	2026.10.22 10:36:00   deal #93 buy 0.8 DE30 at 25420.68 done (based on order #139)
+CS	0	16:23:17.459	Trade	2026.10.22 10:36:00   deal performed [#93 buy 0.8 DE30 at 25420.68]
+CS	0	16:23:17.459	Trade	2026.10.22 10:36:00   order performed buy 0.8 at 25420.68 [#139 buy 0.8 DE30 at 25419.68]
+CS	0	16:23:17.567	CycleORB (DE30,M5)	2026.10.23 08:15:00   [CycleORB] RANGE LON 2026.10.23 07:15 hi=25289.02 lo=25195.19 range=9383pt atr%=32.2 spread=84.0pt (live 84pt) cost%=0.9 buffer=469pt risk=104.63
+CS	0	16:23:17.567	Trade	2026.10.23 08:15:00   buy stop 0.9 DE30 at 25293.71 sl: 25195.19 tp: 25540.01 (25258.77 / 25259.61)
+CS	0	16:23:17.567	CycleORB (DE30,M5)	2026.10.23 08:15:00   CTrade::OrderSend: buy stop 0.90 DE30 at 25293.71 sl: 25195.19 tp: 25540.01 [done]
+CS	0	16:23:17.567	CycleORB (DE30,M5)	2026.10.23 08:15:00   [CycleORB] PLACE BUY_STOP lots=0.90 @25293.71 sl=25195.19 tp=25540.01 magic=26110301 retcode=10009
+CS	0	16:23:17.567	Trade	2026.10.23 08:15:00   sell stop 0.9 DE30 at 25190.50 sl: 25289.02 tp: 24944.20 (25258.77 / 25259.61)
+CS	0	16:23:17.567	CycleORB (DE30,M5)	2026.10.23 08:15:00   CTrade::OrderSend: sell stop 0.90 DE30 at 25190.50 sl: 25289.02 tp: 24944.20 [done]
+CS	0	16:23:17.567	CycleORB (DE30,M5)	2026.10.23 08:15:00   [CycleORB] PLACE SELL_STOP lots=0.90 @25190.50 sl=25289.02 tp=24944.20 magic=26110301 retcode=10009
+CS	0	16:23:17.568	Trade	2026.10.23 08:20:06   order [#140 buy stop 0.9 DE30 at 25293.71] triggered
+CS	0	16:23:17.568	Trades	2026.10.23 08:20:06   deal #94 buy 0.9 DE30 at 25293.78 done (based on order #140)
+CS	0	16:23:17.568	Trade	2026.10.23 08:20:06   deal performed [#94 buy 0.9 DE30 at 25293.78]
+CS	0	16:23:17.568	Trade	2026.10.23 08:20:06   order performed buy 0.9 at 25293.78 [#140 buy stop 0.9 DE30 at 25293.71]
+CS	0	16:23:17.568	Trade	2026.10.23 08:20:06   order canceled [#141 sell stop 0.9 DE30 at 25190.50]
+CS	0	16:23:17.568	CycleORB (DE30,M5)	2026.10.23 08:20:06   CTrade::OrderSend: cancel #141 [done]
+CS	0	16:23:17.568	CycleORB (DE30,M5)	2026.10.23 08:20:06   [CycleORB] DELETE order #141 magic=26110301 (LON OCO)
+CS	0	16:23:17.577	Trade	2026.10.23 09:00:25   stop loss triggered #140 buy 0.9 DE30 25293.78 sl: 25195.19 tp: 25540.01 [#142 sell 0.9 DE30 at 25195.19]
+CS	0	16:23:17.577	Trades	2026.10.23 09:00:25   deal #95 sell 0.9 DE30 at 25194.77 done (based on order #142)
+CS	0	16:23:17.577	Trade	2026.10.23 09:00:25   deal performed [#95 sell 0.9 DE30 at 25194.77]
+CS	0	16:23:17.577	Trade	2026.10.23 09:00:25   order performed sell 0.9 at 25194.77 [#142 sell 0.9 DE30 at 25195.19]
+CS	0	16:23:17.704	CycleORB (DE30,M5)	2026.10.26 09:15:00   [CycleORB] SKIP LON 2026.10.26 08:15 hi=25408.91 lo=25289.74 range=11917pt atr%=42.8 spread=84.0pt (live 84pt) cost%=0.7 (range/ATR outside band)
+CS	0	16:23:17.865	CycleORB (DE30,M5)	2026.10.27 09:15:00   [CycleORB] SKIP LON 2026.10.27 08:15 hi=25416.39 lo=25336.57 range=7982pt atr%=27.4 spread=84.0pt (live 84pt) cost%=1.1 volpct=10.2 (H1 vol below regime floor)
+CS	0	16:23:17.976	CycleORB (DE30,M5)	2026.10.28 09:15:00   [CycleORB] SKIP LON 2026.10.28 08:15 hi=25587.93 lo=25523.93 range=6400pt atr%=20.6 spread=84.0pt (live 84pt) cost%=1.3 volpct=18.0 (H1 vol below regime floor)
+CS	0	16:23:18.091	CycleORB (DE30,M5)	2026.10.29 09:15:00   [CycleORB] SKIP LON 2026.10.29 08:15 hi=25941.10 lo=25774.73 range=16637pt atr%=50.3 spread=84.0pt (live 84pt) cost%=0.5 (range/ATR outside band)
+CS	0	16:23:18.217	CycleORB (DE30,M5)	2026.10.30 09:15:00   [CycleORB] SKIP LON: last trading day of month
+CS	0	16:23:18.295	Tester	final balance 10466.01 USD
+CS	0	16:23:18.295	CycleORB (DE30,M5)	2026.10.30 20:59:59   [CycleORB] CYCLE_PARTIAL 202610 capital=10463.24 realized=2.77 floating=0.00 pnl=0.03% peak=1.99% state=ACTIVE 
+CS	0	16:23:18.333	Tester	DE30,M5: 22121954 ticks, 35758 bars generated. Environment synchronized in 0:00:02.521. Test passed in 0:00:18.645 (including ticks preprocessing 0:00:03.922).
+CS	0	16:23:18.333	Tester	DE30,M5: total time from login to stop testing 0:00:21.166 (including 0:00:03.538 for history data synchronization)
+CS	0	16:23:18.333	Tester	46658157 total ticks for all symbols
+CS	0	16:23:18.333	Tester	DE30: generate 22121954 ticks in 0:00:01.969, passed to tester 22121955 ticks
+CS	0	16:23:18.333	Tester	EURUSD: generate 24580820 ticks in 0:00:01.953, passed to tester 24536204 ticks
+CS	0	16:23:18.333	Tester	1141 Mb memory used including 36 Mb of history data, 960 Mb of tick data
+CS	0	16:23:18.333	Tester	log file "C:\Users\emili\AppData\Roaming\MetaQuotes\Tester\D0E8209F77C8CF37AD8BF550E51FF075\Agent-127.0.0.1-3000\logs\20261102.log" written
+CS	0	16:23:18.333	Tester	test Experts\CycleORB\CycleORB.ex5 on DE30,M5 thread finished
+CS	0	16:23:18.716	127.0.0.1	tester forced to close
+CS	0	16:23:18.716	127.0.0.1	prepare for shutdown
+CS	0	16:23:18.716	127.0.0.1	stop immediately
+CS	0	16:23:18.716	127.0.0.1	shutdown finished
+CS	0	16:23:18.971	Server	MetaTester 5 stopped

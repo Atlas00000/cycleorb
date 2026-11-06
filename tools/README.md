@@ -1,0 +1,64 @@
+# CycleORB tools (AI OS phase P0)
+
+Python 3.10+, standard library only. Run everything from this folder.
+
+| File | Task | Purpose |
+| --- | --- | --- |
+| `corb_parse.py` | AOS-P0-T02 | Journal adapter: Strategy Tester journal → one folder per run in `../tester/aos/runs/<run_id>/` (`meta.json`, `events.csv`, `decisions.csv`) |
+| `corb_metrics.py` | AOS-P0-T02 | Unified Edge Framework metrics with the CycleORB overrides (pure functions) |
+| `corb_bench.py` | AOS-P0-T02 / T01 | Scoring engine: health vector, Stage 1 zone, lifecycle, gates, sizing, Monte Carlo |
+| `aos_assets.json` | AOS-P0-T01 | Which run is each asset's baseline, and its operating risk `f` |
+| `aos_baseline.json` | AOS-P0-T01 | **Frozen baseline** (the numbers every AI OS layer must beat or hold), with provenance and `events.csv` hashes |
+| `aos_compare.py` | AOS-P0-T04 | Variant vs baseline by `event_id`: deltas, skip precision, fire retention, accept / reject per `doc/ai_OS.md` §3 |
+| `aos_tape.py` | AOS-P1-T07 | `collect` EA ledgers into run folders, `check` P1 exit criteria, `build` the pooled feature tape (`../tester/aos/tape/`) |
+| `aos_health.py` | AOS-P3-T07 | Month-end lifecycle replay (W20 / W40 / W80 EF, E, ΔD, state, size) and `edge_framework.md` §6.2 triggers; `--ea` shows the EA's own `health_state` for the following month |
+| `aos_gate_wf.py` | AOS-P4 | Pooled learned-gate walk-forward (ridge / shallow GBT, anchored monthly, per-asset in-sample threshold, random-skip benchmark, size mode, controls). Needs numpy, pandas, scikit-learn. 2026-11-06 verdict: shelved |
+| `aos_portfolio.py` + `aos_portfolio_streams.json` | AOS-P6-T05 | Portfolio replay of the per-asset streams on one account (heat cap, Europe-open bucket throttle, MC-2, daily correlations). Re-run when an asset or a risk input changes |
+| `tests/` | — | Generic fixtures FX-01…16, CycleORB fixtures CO-FX-01…04, compare behaviour |
+
+## EA ledger (AI OS P1, CycleORB ≥ v1.10)
+
+- With `InpAosLedger=true` the EA writes `%APPDATA%\MetaQuotes\Terminal\Common\Files\CycleORB\CORB_<magicBase>_<symbol>_<tag>_{decisions,events,shadow}.csv`. In the tester, `tag` = `tester_<deposit>[_<InpAosRunTag>]`; live, `live`.
+- `InpAosRunTag` is appended to the parser's `run_id`, so a tagged run gets its own folder next to its baseline.
+- The event calendar is `Common\Files\CycleORB\events.csv`. Refresh it with the script `Scripts\CycleORB\CycleORB_ExportCalendar` (headless: `terminal64.exe /config:"<CycleORB>\tester\aos\export_calendar.ini"` with the terminal closed).
+
+```powershell
+python corb_parse.py "..\..\..\..\Tester\logs\20261106.log" --version 1.10
+python aos_tape.py collect --tag P1obs
+python aos_tape.py check   --tag P1obs
+python aos_tape.py build   --tag P1obs
+```
+
+## Workflow
+
+```powershell
+# 1. Parse a tester journal (the terminal writes Tester\logs\YYYYMMDD.log; filter by version and symbol if needed)
+python corb_parse.py "..\..\..\..\Tester\logs\20261106.log" --version 1.09
+
+# 2. Score one run, or every asset in the spec
+python corb_bench.py ..\tester\aos\runs\<run_id> --f 0.01
+python corb_bench.py --assets aos_assets.json
+
+# 3. Re-freeze the baseline (only when a baseline run changes, e.g. AOS-P0-T03)
+python corb_bench.py --assets aos_assets.json --out aos_baseline.json --freeze
+
+# 4. Judge an AI OS variant against its baseline (same symbol, window and deposit)
+python aos_compare.py --pair ..\tester\aos\runs\<base> ..\tester\aos\runs\<variant> [--pair ...] [--control <base> <variant>]
+
+# 5. Tests
+python -m unittest discover -s tests -v
+```
+
+## Definitions
+
+- **`event_id`** = `<magic>-<YYYYMMDD>` of the setup day (one setup-day = one event, `edge_framework.md` §2.2).
+- **`pnl_R`** = signed (exit fill − entry fill) / |planned entry − initial stop|. Fills are bid/ask, so spread is included.
+- **`c_spread_R` / `c_slip_R`**: spread in R (already inside `pnl_R`) and the slippage prior (0.5 × spread per market leg) that becomes `Leak`.
+- **`pnl_ccy_est`**: account-currency P&L reconstructed from price × lots × one conversion factor per run, solved against the final balance (`meta.json: usd_per_price_lot`).
+- **Skip precision**: withheld events (in the baseline, not in the variant) must have mean R < 0 and BM ≤ 0. Resized-down events must have mean R below the baseline E.
+
+## Limits
+
+- Comparisons are only valid between runs with the same symbol, window and deposit. A different deposit changes lots and lot-minimum skips (`CO-FX-03`).
+- The journal adapter relies on the EA's log lines (`RANGE`, `SKIP`, `PLACE`, deal lines). Changing those messages in the EA requires updating `corb_parse.py`. The native ledger (AOS-P1-T01) will replace it.
+- Monte Carlo values carry about ±0.5 pp of seed noise.

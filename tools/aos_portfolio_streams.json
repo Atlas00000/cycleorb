@@ -1,0 +1,12 @@
+{
+ "comment": "AOS-P6 portfolio replay: the run that represents each asset under its AOS-P3-REC preset (guards + DE40 2 % compress cap). bucket = correlation bucket (Europe open).",
+ "runs_root": "../tester/aos/runs",
+ "streams": {
+  "EURUSD-NY": {"run_id": "v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G"},
+  "EURUSD-LON0700": {"run_id": "v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G"},
+  "DE40": {"run_id": "v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3T06", "bucket": "EUOPEN"},
+  "JP225": {"run_id": "v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G"},
+  "UK100": {"run_id": "v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G", "bucket": "EUOPEN"},
+  "US500": {"run_id": "v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G"}
+ }
+}

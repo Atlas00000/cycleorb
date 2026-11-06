@@ -1,0 +1,1041 @@
+﻿CS	0	00:09:21.554	Startup	MetaTester 5 build 6230, 25 Sep 2026
+CS	0	00:09:21.555	Startup	Windows 11 build 26300, 12 x Intel Core i7-10750H  @ 2.60GHz, AVX2, 8 / 23 Gb memory, 153 / 952 Gb disk, UAC, GMT+1
+CS	0	00:09:21.556	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	00:09:21.558	Startup	cloud network mode is off
+CS	0	00:09:21.558	Startup	initialization finished
+CS	0	00:09:21.776	127.0.0.1	login (build 6230)
+CS	0	00:09:21.788	Network	17744 bytes of account info loaded
+CS	0	00:09:21.788	Network	1478 bytes of tester parameters loaded
+CS	0	00:09:21.788	Network	20676 bytes of input parameters loaded
+CS	0	00:09:21.789	Network	10030 bytes of symbols list loaded (1045 symbols)
+CS	0	00:09:21.789	Tester	expert file added: Experts\CycleORB\CycleORB.ex5. 63735 bytes loaded
+CS	0	00:09:21.793	Tester	8423 Mb available, 104 blocks set for ticks generating
+CS	0	00:09:21.793	Tester	initial deposit 10000.00 USD, leverage 1:500
+CS	0	00:09:21.793	Tester	successfully initialized
+CS	0	00:09:21.793	Network	75 Kb of total initialization data received
+CS	0	00:09:21.793	Tester	Intel Core i7-10750H  @ 2.60GHz, 24358 MB
+CS	0	00:09:21.798	Symbols	EURUSD: symbol to be synchronized
+CS	0	00:09:21.799	Symbols	EURUSD: symbol synchronized, 3800 bytes of symbol info received
+CS	0	00:09:21.810	History	EURUSD: load 27 bytes of history data to synchronize in 0:00:00.003
+CS	0	00:09:21.810	History	EURUSD: history synchronized from 1989.01.02 to 2026.10.30
+CS	0	00:09:21.812	Ticks	EURUSD: ticks synchronization started
+CS	0	00:09:22.812	Ticks	EURUSD: load 34 bytes of tick data to synchronize in 0:00:01.000
+CS	0	00:09:22.812	Ticks	EURUSD: history ticks synchronized from 2025.06.04 to 2026.10.30
+CS	0	00:09:22.858	History	EURUSD,M5: history cache allocated for 136218 bars and contains 98572 bars from 2025.01.01 22:00 to 2026.04.30 23:55
+CS	0	00:09:22.858	History	EURUSD,M5: history begins from 2025.01.01 22:00
+CS	0	00:09:22.878	Tester	EURUSD,M5 (YWO-Trade): generating based on real ticks
+CS	0	00:09:22.879	Tester	EURUSD,M5: testing of Experts\CycleORB\CycleORB.ex5 from 2026.05.01 00:00 to 2026.10.31 00:00 started with inputs:
+CS	0	00:09:22.879	Tester	  Server time=
+CS	0	00:09:22.879	Tester	  InpServerTZ=1
+CS	0	00:09:22.879	Tester	  InpServerFixedOffsetH=0
+CS	0	00:09:22.879	Tester	  London setup (London local time)=
+CS	0	00:09:22.879	Tester	  InpLonEnable=false
+CS	0	00:09:22.879	Tester	  InpLonRangeStart=08:00
+CS	0	00:09:22.879	Tester	  InpLonRangeMinutes=30
+CS	0	00:09:22.879	Tester	  InpLonEntryEnd=11:00
+CS	0	00:09:22.879	Tester	  InpLonExit=16:00
+CS	0	00:09:22.879	Tester	  New York setup (New York local time)=
+CS	0	00:09:22.879	Tester	  InpNYEnable=true
+CS	0	00:09:22.879	Tester	  InpNYRangeStart=08:00
+CS	0	00:09:22.879	Tester	  InpNYRangeMinutes=30
+CS	0	00:09:22.879	Tester	  InpNYEntryEnd=11:30
+CS	0	00:09:22.879	Tester	  InpNYExit=15:00
+CS	0	00:09:22.879	Tester	  Entry / exit=
+CS	0	00:09:22.879	Tester	  InpStopMode=0
+CS	0	00:09:22.879	Tester	  InpTargetR=2.0
+CS	0	00:09:22.879	Tester	  InpBufferSpreadMult=2.0
+CS	0	00:09:22.879	Tester	  InpBufferRangePct=5.0
+CS	0	00:09:22.879	Tester	  Filters=
+CS	0	00:09:22.879	Tester	  InpATRPeriod=14
+CS	0	00:09:22.879	Tester	  InpMinRangeATRPct=17.5
+CS	0	00:09:22.879	Tester	  InpMaxRangeATRPct=35.0
+CS	0	00:09:22.879	Tester	  InpMaxCostRangePct=10.0
+CS	0	00:09:22.879	Tester	  InpCommissionPoints=0
+CS	0	00:09:22.879	Tester	  Monthly cycle=
+CS	0	00:09:22.879	Tester	  InpCycleCapital=0.0
+CS	0	00:09:22.879	Tester	  InpSoftHaltPct=30.0
+CS	0	00:09:22.879	Tester	  InpHardFlattenPct=38.0
+CS	0	00:09:22.879	Tester	  InpRatchetArmPct=20.0
+CS	0	00:09:22.879	Tester	  InpRatchetFloorPct=10.0
+CS	0	00:09:22.879	Tester	  InpRatchetTrail=0.5
+CS	0	00:09:22.879	Tester	  InpRiskDivisor=8.0
+CS	0	00:09:22.879	Tester	  InpMaxRiskPct=1.0
+CS	0	00:09:22.879	Tester	  InpNoEntryLastDay=true
+CS	0	00:09:22.879	Tester	  Execution=
+CS	0	00:09:22.879	Tester	  InpMagicBase=26110200
+CS	0	00:09:22.879	Tester	  InpSlippagePoints=10
+CS	0	00:09:22.879	Tester	  InpMaxLot=50.0
+CS	0	00:09:22.936	History	EURUSD,Daily: history cache allocated for 546 bars and contains 415 bars from 2025.01.01 00:00 to 2026.04.30 00:00
+CS	0	00:09:22.936	History	EURUSD,Daily: history begins from 2025.01.01 00:00
+CS	0	00:09:22.936	CycleORB (EURUSD,M5)	2026.05.01 00:00:00   [CycleORB] Clock 2026: UK DST 2026.03.29 -> 2026.10.25 | US DST 2026.03.08 -> 2026.11.01 | server offset now +0h
+CS	0	00:09:22.936	CycleORB (EURUSD,M5)	2026.05.01 00:00:00   [CycleORB] CYCLE_BEGIN 202605 capital=10000.00 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:22.936	CycleORB (EURUSD,M5)	2026.05.01 00:00:00   [CycleORB] Init OK EURUSD | magics LON=26110201 NY=26110202 | stop=CORB_STOP_OPPOSITE TP=2.0R | soft=30% hard=38% ratchet arm=20% floor=10% trail=0.50
+CS	0	00:09:24.790	Ticks	EURUSD : real ticks begin from 2025.06.04 00:00:00
+CS	0	00:09:24.878	History	EURUSD,M1: history cache allocated for 679992 bars and contains 491763 bars from 2025.01.01 22:00 to 2026.04.30 23:59
+CS	0	00:09:24.885	History	EURUSD,M1: 751 bars from 2026.05.01 00:00 to 2026.05.01 12:30 added
+CS	0	00:09:24.885	History	EURUSD,M1: history begins from 2025.01.01 22:00
+CS	0	00:09:24.887	CycleORB (EURUSD,M5)	2026.05.01 12:30:00   [CycleORB] SKIP NY 2026.05.01 12:00 hi=1.17687 lo=1.17479 range=208pt atr%=37.4 cost%=3.4 (range/ATR outside band)
+CS	0	00:09:24.943	CycleORB (EURUSD,M5)	2026.05.04 12:30:00   [CycleORB] RANGE NY 2026.05.04 12:00 hi=1.17096 lo=1.16917 range=179pt atr%=31.9 cost%=3.4 buffer=12pt risk=100.00
+CS	0	00:09:24.943	Trade	2026.05.04 12:30:00   buy stop 0.52 EURUSD at 1.17108 sl: 1.16917 tp: 1.17490 (1.17082 / 1.17088)
+CS	0	00:09:24.943	CycleORB (EURUSD,M5)	2026.05.04 12:30:00   CTrade::OrderSend: buy stop 0.52 EURUSD at 1.17108 sl: 1.16917 tp: 1.17490 [done]
+CS	0	00:09:24.943	CycleORB (EURUSD,M5)	2026.05.04 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.52 @1.17108 sl=1.16917 tp=1.17490 magic=26110202 retcode=10009
+CS	0	00:09:24.943	Trade	2026.05.04 12:30:00   sell stop 0.52 EURUSD at 1.16905 sl: 1.17096 tp: 1.16523 (1.17082 / 1.17088)
+CS	0	00:09:24.943	CycleORB (EURUSD,M5)	2026.05.04 12:30:00   CTrade::OrderSend: sell stop 0.52 EURUSD at 1.16905 sl: 1.17096 tp: 1.16523 [done]
+CS	0	00:09:24.943	CycleORB (EURUSD,M5)	2026.05.04 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.52 @1.16905 sl=1.17096 tp=1.16523 magic=26110202 retcode=10009
+CS	0	00:09:24.944	Trade	2026.05.04 12:38:10   order [#2 buy stop 0.52 EURUSD at 1.17108] triggered
+CS	0	00:09:24.944	Trades	2026.05.04 12:38:10   deal #2 buy 0.52 EURUSD at 1.17109 done (based on order #2)
+CS	0	00:09:24.944	Trade	2026.05.04 12:38:10   deal performed [#2 buy 0.52 EURUSD at 1.17109]
+CS	0	00:09:24.944	Trade	2026.05.04 12:38:10   order performed buy 0.52 at 1.17109 [#2 buy stop 0.52 EURUSD at 1.17108]
+CS	0	00:09:24.944	Trade	2026.05.04 12:38:10   order canceled [#3 sell stop 0.52 EURUSD at 1.16905]
+CS	0	00:09:24.944	CycleORB (EURUSD,M5)	2026.05.04 12:38:10   CTrade::OrderSend: cancel #3 [done]
+CS	0	00:09:24.944	CycleORB (EURUSD,M5)	2026.05.04 12:38:10   [CycleORB] DELETE order #3 magic=26110202 (NY OCO)
+CS	0	00:09:24.967	Trade	2026.05.04 16:07:54   stop loss triggered #2 buy 0.52 EURUSD 1.17109 sl: 1.16917 tp: 1.17490 [#4 sell 0.52 EURUSD at 1.16917]
+CS	0	00:09:24.967	Trades	2026.05.04 16:07:54   deal #3 sell 0.52 EURUSD at 1.16917 done (based on order #4)
+CS	0	00:09:24.967	Trade	2026.05.04 16:07:54   deal performed [#3 sell 0.52 EURUSD at 1.16917]
+CS	0	00:09:24.967	Trade	2026.05.04 16:07:54   order performed sell 0.52 at 1.16917 [#4 sell 0.52 EURUSD at 1.16917]
+CS	0	00:09:24.997	CycleORB (EURUSD,M5)	2026.05.05 12:30:00   [CycleORB] RANGE NY 2026.05.05 12:00 hi=1.16974 lo=1.16849 range=125pt atr%=23.2 cost%=4.8 buffer=12pt risk=100.00
+CS	0	00:09:24.997	Trade	2026.05.05 12:30:00   buy stop 0.72 EURUSD at 1.16986 sl: 1.16849 tp: 1.17260 (1.16960 / 1.16966)
+CS	0	00:09:24.997	CycleORB (EURUSD,M5)	2026.05.05 12:30:00   CTrade::OrderSend: buy stop 0.72 EURUSD at 1.16986 sl: 1.16849 tp: 1.17260 [done]
+CS	0	00:09:24.997	CycleORB (EURUSD,M5)	2026.05.05 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.72 @1.16986 sl=1.16849 tp=1.17260 magic=26110202 retcode=10009
+CS	0	00:09:24.997	Trade	2026.05.05 12:30:00   sell stop 0.72 EURUSD at 1.16837 sl: 1.16974 tp: 1.16563 (1.16960 / 1.16966)
+CS	0	00:09:24.997	CycleORB (EURUSD,M5)	2026.05.05 12:30:00   CTrade::OrderSend: sell stop 0.72 EURUSD at 1.16837 sl: 1.16974 tp: 1.16563 [done]
+CS	0	00:09:24.997	CycleORB (EURUSD,M5)	2026.05.05 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.72 @1.16837 sl=1.16974 tp=1.16563 magic=26110202 retcode=10009
+CS	0	00:09:24.999	Trade	2026.05.05 13:05:49   order [#5 buy stop 0.72 EURUSD at 1.16986] triggered
+CS	0	00:09:24.999	Trades	2026.05.05 13:05:49   deal #4 buy 0.72 EURUSD at 1.16988 done (based on order #5)
+CS	0	00:09:24.999	Trade	2026.05.05 13:05:49   deal performed [#4 buy 0.72 EURUSD at 1.16988]
+CS	0	00:09:24.999	Trade	2026.05.05 13:05:49   order performed buy 0.72 at 1.16988 [#5 buy stop 0.72 EURUSD at 1.16986]
+CS	0	00:09:24.999	Trade	2026.05.05 13:05:49   order canceled [#6 sell stop 0.72 EURUSD at 1.16837]
+CS	0	00:09:24.999	CycleORB (EURUSD,M5)	2026.05.05 13:05:49   CTrade::OrderSend: cancel #6 [done]
+CS	0	00:09:24.999	CycleORB (EURUSD,M5)	2026.05.05 13:05:49   [CycleORB] DELETE order #6 magic=26110202 (NY OCO)
+CS	0	00:09:25.025	Trade	2026.05.05 19:00:00   market sell 0.72 EURUSD, close #5 (1.17000 / 1.17006)
+CS	0	00:09:25.025	Trades	2026.05.05 19:00:00   deal #5 sell 0.72 EURUSD at 1.17000 done (based on order #7)
+CS	0	00:09:25.025	Trade	2026.05.05 19:00:00   deal performed [#5 sell 0.72 EURUSD at 1.17000]
+CS	0	00:09:25.025	Trade	2026.05.05 19:00:00   order performed sell 0.72 at 1.17000 [#7 sell 0.72 EURUSD at 1.17000]
+CS	0	00:09:25.025	CycleORB (EURUSD,M5)	2026.05.05 19:00:00   CTrade::OrderSend: market sell 0.72 position #5 EURUSD [done at 1.17000]
+CS	0	00:09:25.025	CycleORB (EURUSD,M5)	2026.05.05 19:00:00   [CycleORB] CLOSE position #5 magic=26110202 (NY time exit)
+CS	0	00:09:25.062	CycleORB (EURUSD,M5)	2026.05.06 12:30:00   [CycleORB] RANGE NY 2026.05.06 12:00 hi=1.17699 lo=1.17513 range=186pt atr%=34.0 cost%=4.3 buffer=16pt risk=100.00
+CS	0	00:09:25.062	Trade	2026.05.06 12:30:00   buy stop 0.49 EURUSD at 1.17715 sl: 1.17513 tp: 1.18119 (1.17602 / 1.17610)
+CS	0	00:09:25.062	CycleORB (EURUSD,M5)	2026.05.06 12:30:00   CTrade::OrderSend: buy stop 0.49 EURUSD at 1.17715 sl: 1.17513 tp: 1.18119 [done]
+CS	0	00:09:25.062	CycleORB (EURUSD,M5)	2026.05.06 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.49 @1.17715 sl=1.17513 tp=1.18119 magic=26110202 retcode=10009
+CS	0	00:09:25.062	Trade	2026.05.06 12:30:00   sell stop 0.49 EURUSD at 1.17497 sl: 1.17699 tp: 1.17093 (1.17602 / 1.17610)
+CS	0	00:09:25.062	CycleORB (EURUSD,M5)	2026.05.06 12:30:00   CTrade::OrderSend: sell stop 0.49 EURUSD at 1.17497 sl: 1.17699 tp: 1.17093 [done]
+CS	0	00:09:25.062	CycleORB (EURUSD,M5)	2026.05.06 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.49 @1.17497 sl=1.17699 tp=1.17093 magic=26110202 retcode=10009
+CS	0	00:09:25.066	Trade	2026.05.06 13:06:23   order [#9 sell stop 0.49 EURUSD at 1.17497] triggered
+CS	0	00:09:25.066	Trades	2026.05.06 13:06:23   deal #6 sell 0.49 EURUSD at 1.17497 done (based on order #9)
+CS	0	00:09:25.066	Trade	2026.05.06 13:06:23   deal performed [#6 sell 0.49 EURUSD at 1.17497]
+CS	0	00:09:25.066	Trade	2026.05.06 13:06:23   order performed sell 0.49 at 1.17497 [#9 sell stop 0.49 EURUSD at 1.17497]
+CS	0	00:09:25.066	Trade	2026.05.06 13:06:23   order canceled [#8 buy stop 0.49 EURUSD at 1.17715]
+CS	0	00:09:25.066	CycleORB (EURUSD,M5)	2026.05.06 13:06:23   CTrade::OrderSend: cancel #8 [done]
+CS	0	00:09:25.066	CycleORB (EURUSD,M5)	2026.05.06 13:06:23   [CycleORB] DELETE order #8 magic=26110202 (NY OCO)
+CS	0	00:09:25.098	Trade	2026.05.06 19:00:00   market buy 0.49 EURUSD, close #9 (1.17491 / 1.17498)
+CS	0	00:09:25.098	Trades	2026.05.06 19:00:00   deal #7 buy 0.49 EURUSD at 1.17498 done (based on order #10)
+CS	0	00:09:25.098	Trade	2026.05.06 19:00:00   deal performed [#7 buy 0.49 EURUSD at 1.17498]
+CS	0	00:09:25.098	Trade	2026.05.06 19:00:00   order performed buy 0.49 at 1.17498 [#10 buy 0.49 EURUSD at 1.17498]
+CS	0	00:09:25.098	CycleORB (EURUSD,M5)	2026.05.06 19:00:00   CTrade::OrderSend: market buy 0.49 position #9 EURUSD [done at 1.17498]
+CS	0	00:09:25.098	CycleORB (EURUSD,M5)	2026.05.06 19:00:00   [CycleORB] CLOSE position #9 magic=26110202 (NY time exit)
+CS	0	00:09:25.126	CycleORB (EURUSD,M5)	2026.05.07 12:30:00   [CycleORB] SKIP NY 2026.05.07 12:00 hi=1.17731 lo=1.17663 range=68pt atr%=12.0 cost%=82.4 (range/ATR outside band)
+CS	0	00:09:25.174	CycleORB (EURUSD,M5)	2026.05.08 12:30:00   [CycleORB] SKIP NY 2026.05.08 12:00 hi=1.17668 lo=1.17591 range=77pt atr%=13.7 cost%=110.4 (range/ATR outside band)
+CS	0	00:09:25.212	CycleORB (EURUSD,M5)	2026.05.11 12:30:00   [CycleORB] RANGE NY 2026.05.11 12:00 hi=1.17743 lo=1.17641 range=102pt atr%=18.3 cost%=5.9 buffer=12pt risk=100.00
+CS	0	00:09:25.212	Trade	2026.05.11 12:30:00   buy stop 0.87 EURUSD at 1.17755 sl: 1.17641 tp: 1.17983 (1.17715 / 1.17721)
+CS	0	00:09:25.212	CycleORB (EURUSD,M5)	2026.05.11 12:30:00   CTrade::OrderSend: buy stop 0.87 EURUSD at 1.17755 sl: 1.17641 tp: 1.17983 [done]
+CS	0	00:09:25.212	CycleORB (EURUSD,M5)	2026.05.11 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.87 @1.17755 sl=1.17641 tp=1.17983 magic=26110202 retcode=10009
+CS	0	00:09:25.212	Trade	2026.05.11 12:30:00   sell stop 0.87 EURUSD at 1.17629 sl: 1.17743 tp: 1.17401 (1.17715 / 1.17721)
+CS	0	00:09:25.212	CycleORB (EURUSD,M5)	2026.05.11 12:30:00   CTrade::OrderSend: sell stop 0.87 EURUSD at 1.17629 sl: 1.17743 tp: 1.17401 [done]
+CS	0	00:09:25.212	CycleORB (EURUSD,M5)	2026.05.11 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.87 @1.17629 sl=1.17743 tp=1.17401 magic=26110202 retcode=10009
+CS	0	00:09:25.214	Trade	2026.05.11 13:00:01   order [#11 buy stop 0.87 EURUSD at 1.17755] triggered
+CS	0	00:09:25.214	Trades	2026.05.11 13:00:01   deal #8 buy 0.87 EURUSD at 1.17755 done (based on order #11)
+CS	0	00:09:25.214	Trade	2026.05.11 13:00:01   deal performed [#8 buy 0.87 EURUSD at 1.17755]
+CS	0	00:09:25.214	Trade	2026.05.11 13:00:01   order performed buy 0.87 at 1.17755 [#11 buy stop 0.87 EURUSD at 1.17755]
+CS	0	00:09:25.214	Trade	2026.05.11 13:00:01   order canceled [#12 sell stop 0.87 EURUSD at 1.17629]
+CS	0	00:09:25.214	CycleORB (EURUSD,M5)	2026.05.11 13:00:01   CTrade::OrderSend: cancel #12 [done]
+CS	0	00:09:25.214	CycleORB (EURUSD,M5)	2026.05.11 13:00:01   [CycleORB] DELETE order #12 magic=26110202 (NY OCO)
+CS	0	00:09:25.234	Trade	2026.05.11 19:00:00   market sell 0.87 EURUSD, close #11 (1.17746 / 1.17752)
+CS	0	00:09:25.234	Trades	2026.05.11 19:00:00   deal #9 sell 0.87 EURUSD at 1.17746 done (based on order #13)
+CS	0	00:09:25.234	Trade	2026.05.11 19:00:00   deal performed [#9 sell 0.87 EURUSD at 1.17746]
+CS	0	00:09:25.234	Trade	2026.05.11 19:00:00   order performed sell 0.87 at 1.17746 [#13 sell 0.87 EURUSD at 1.17746]
+CS	0	00:09:25.234	CycleORB (EURUSD,M5)	2026.05.11 19:00:00   CTrade::OrderSend: market sell 0.87 position #11 EURUSD [done at 1.17746]
+CS	0	00:09:25.234	CycleORB (EURUSD,M5)	2026.05.11 19:00:00   [CycleORB] CLOSE position #11 magic=26110202 (NY time exit)
+CS	0	00:09:25.247	CycleORB (EURUSD,M5)	2026.05.12 12:30:00   [CycleORB] SKIP NY 2026.05.12 12:00 hi=1.17442 lo=1.17376 range=66pt atr%=12.0 cost%=9.1 (range/ATR outside band)
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:00   [CycleORB] RANGE NY 2026.05.13 12:00 hi=1.17157 lo=1.17031 range=126pt atr%=22.2 cost%=9.5 buffer=24pt risk=100.00
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:00   buy stop 0.66 EURUSD at 1.17181 sl: 1.17031 tp: 1.17481 (1.17033 / 1.17045)
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:00   CTrade::OrderSend: buy stop 0.66 EURUSD at 1.17181 sl: 1.17031 tp: 1.17481 [done]
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.66 @1.17181 sl=1.17031 tp=1.17481 magic=26110202 retcode=10009
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:00   sell stop 0.66 EURUSD at 1.17007 sl: 1.17157 tp: 1.16707 (1.17033 / 1.17045)
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:00   CTrade::OrderSend: sell stop 0.66 EURUSD at 1.17007 sl: 1.17157 tp: 1.16707 [done]
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.66 @1.17007 sl=1.17157 tp=1.16707 magic=26110202 retcode=10009
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:01   order [#15 sell stop 0.66 EURUSD at 1.17007] triggered
+CS	0	00:09:25.266	Trades	2026.05.13 12:30:01   deal #10 sell 0.66 EURUSD at 1.16984 done (based on order #15)
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:01   deal performed [#10 sell 0.66 EURUSD at 1.16984]
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:01   order performed sell 0.66 at 1.16984 [#15 sell stop 0.66 EURUSD at 1.17007]
+CS	0	00:09:25.266	Trade	2026.05.13 12:30:01   order canceled [#14 buy stop 0.66 EURUSD at 1.17181]
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:01   CTrade::OrderSend: cancel #14 [done]
+CS	0	00:09:25.266	CycleORB (EURUSD,M5)	2026.05.13 12:30:01   [CycleORB] DELETE order #14 magic=26110202 (NY OCO)
+CS	0	00:09:25.275	Trade	2026.05.13 15:36:24   stop loss triggered #15 sell 0.66 EURUSD 1.16984 sl: 1.17157 tp: 1.16707 [#16 buy 0.66 EURUSD at 1.17157]
+CS	0	00:09:25.275	Trades	2026.05.13 15:36:24   deal #11 buy 0.66 EURUSD at 1.17158 done (based on order #16)
+CS	0	00:09:25.275	Trade	2026.05.13 15:36:24   deal performed [#11 buy 0.66 EURUSD at 1.17158]
+CS	0	00:09:25.275	Trade	2026.05.13 15:36:24   order performed buy 0.66 at 1.17158 [#16 buy 0.66 EURUSD at 1.17157]
+CS	0	00:09:25.288	CycleORB (EURUSD,M5)	2026.05.14 12:30:00   [CycleORB] SKIP NY 2026.05.14 12:00 hi=1.17052 lo=1.16992 range=60pt atr%=10.6 cost%=26.7 (range/ATR outside band)
+CS	0	00:09:25.312	CycleORB (EURUSD,M5)	2026.05.15 12:30:01   [CycleORB] SKIP NY 2026.05.15 12:00 hi=1.16319 lo=1.16259 range=60pt atr%=10.5 cost%=11.7 (range/ATR outside band)
+CS	0	00:09:25.334	CycleORB (EURUSD,M5)	2026.05.18 12:30:00   [CycleORB] SKIP NY 2026.05.18 12:00 hi=1.16489 lo=1.16407 range=82pt atr%=16.1 cost%=8.5 (range/ATR outside band)
+CS	0	00:09:25.359	CycleORB (EURUSD,M5)	2026.05.19 12:30:00   [CycleORB] SKIP NY 2026.05.19 12:00 hi=1.16236 lo=1.16149 range=87pt atr%=17.4 cost%=8.0 (range/ATR outside band)
+CS	0	00:09:25.380	CycleORB (EURUSD,M5)	2026.05.20 12:30:00   [CycleORB] SKIP NY 2026.05.20 12:00 hi=1.16040 lo=1.15955 range=85pt atr%=16.3 cost%=7.1 (range/ATR outside band)
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:30:00   [CycleORB] RANGE NY 2026.05.21 12:00 hi=1.16031 lo=1.15931 range=100pt atr%=19.0 cost%=7.0 buffer=14pt risk=100.00
+CS	0	00:09:25.405	Trade	2026.05.21 12:30:00   buy stop 0.87 EURUSD at 1.16045 sl: 1.15931 tp: 1.16273 (1.15946 / 1.15953)
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:30:00   CTrade::OrderSend: buy stop 0.87 EURUSD at 1.16045 sl: 1.15931 tp: 1.16273 [done]
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.87 @1.16045 sl=1.15931 tp=1.16273 magic=26110202 retcode=10009
+CS	0	00:09:25.405	Trade	2026.05.21 12:30:00   sell stop 0.87 EURUSD at 1.15917 sl: 1.16031 tp: 1.15689 (1.15946 / 1.15953)
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:30:00   CTrade::OrderSend: sell stop 0.87 EURUSD at 1.15917 sl: 1.16031 tp: 1.15689 [done]
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.87 @1.15917 sl=1.16031 tp=1.15689 magic=26110202 retcode=10009
+CS	0	00:09:25.405	Trade	2026.05.21 12:34:42   order [#17 buy stop 0.87 EURUSD at 1.16045] triggered
+CS	0	00:09:25.405	Trades	2026.05.21 12:34:42   deal #12 buy 0.87 EURUSD at 1.16045 done (based on order #17)
+CS	0	00:09:25.405	Trade	2026.05.21 12:34:42   deal performed [#12 buy 0.87 EURUSD at 1.16045]
+CS	0	00:09:25.405	Trade	2026.05.21 12:34:42   order performed buy 0.87 at 1.16045 [#17 buy stop 0.87 EURUSD at 1.16045]
+CS	0	00:09:25.405	Trade	2026.05.21 12:34:42   order canceled [#18 sell stop 0.87 EURUSD at 1.15917]
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:34:42   CTrade::OrderSend: cancel #18 [done]
+CS	0	00:09:25.405	CycleORB (EURUSD,M5)	2026.05.21 12:34:42   [CycleORB] DELETE order #18 magic=26110202 (NY OCO)
+CS	0	00:09:25.407	Trade	2026.05.21 13:08:34   stop loss triggered #17 buy 0.87 EURUSD 1.16045 sl: 1.15931 tp: 1.16273 [#19 sell 0.87 EURUSD at 1.15931]
+CS	0	00:09:25.407	Trades	2026.05.21 13:08:34   deal #13 sell 0.87 EURUSD at 1.15931 done (based on order #19)
+CS	0	00:09:25.407	Trade	2026.05.21 13:08:34   deal performed [#13 sell 0.87 EURUSD at 1.15931]
+CS	0	00:09:25.407	Trade	2026.05.21 13:08:34   order performed sell 0.87 at 1.15931 [#19 sell 0.87 EURUSD at 1.15931]
+CS	0	00:09:25.431	CycleORB (EURUSD,M5)	2026.05.22 12:30:00   [CycleORB] RANGE NY 2026.05.22 12:00 hi=1.16068 lo=1.15942 range=126pt atr%=23.7 cost%=5.6 buffer=14pt risk=100.00
+CS	0	00:09:25.431	Trade	2026.05.22 12:30:00   buy stop 0.71 EURUSD at 1.16082 sl: 1.15942 tp: 1.16362 (1.15983 / 1.15990)
+CS	0	00:09:25.431	CycleORB (EURUSD,M5)	2026.05.22 12:30:00   CTrade::OrderSend: buy stop 0.71 EURUSD at 1.16082 sl: 1.15942 tp: 1.16362 [done]
+CS	0	00:09:25.431	CycleORB (EURUSD,M5)	2026.05.22 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.71 @1.16082 sl=1.15942 tp=1.16362 magic=26110202 retcode=10009
+CS	0	00:09:25.431	Trade	2026.05.22 12:30:00   sell stop 0.71 EURUSD at 1.15928 sl: 1.16068 tp: 1.15648 (1.15983 / 1.15990)
+CS	0	00:09:25.431	CycleORB (EURUSD,M5)	2026.05.22 12:30:00   CTrade::OrderSend: sell stop 0.71 EURUSD at 1.15928 sl: 1.16068 tp: 1.15648 [done]
+CS	0	00:09:25.431	CycleORB (EURUSD,M5)	2026.05.22 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.71 @1.15928 sl=1.16068 tp=1.15648 magic=26110202 retcode=10009
+CS	0	00:09:25.432	Trade	2026.05.22 13:04:15   order [#20 buy stop 0.71 EURUSD at 1.16082] triggered
+CS	0	00:09:25.432	Trades	2026.05.22 13:04:15   deal #14 buy 0.71 EURUSD at 1.16083 done (based on order #20)
+CS	0	00:09:25.432	Trade	2026.05.22 13:04:15   deal performed [#14 buy 0.71 EURUSD at 1.16083]
+CS	0	00:09:25.432	Trade	2026.05.22 13:04:15   order performed buy 0.71 at 1.16083 [#20 buy stop 0.71 EURUSD at 1.16082]
+CS	0	00:09:25.432	Trade	2026.05.22 13:04:15   order canceled [#21 sell stop 0.71 EURUSD at 1.15928]
+CS	0	00:09:25.432	CycleORB (EURUSD,M5)	2026.05.22 13:04:15   CTrade::OrderSend: cancel #21 [done]
+CS	0	00:09:25.432	CycleORB (EURUSD,M5)	2026.05.22 13:04:15   [CycleORB] DELETE order #21 magic=26110202 (NY OCO)
+CS	0	00:09:25.435	Trade	2026.05.22 14:00:56   stop loss triggered #20 buy 0.71 EURUSD 1.16083 sl: 1.15942 tp: 1.16362 [#22 sell 0.71 EURUSD at 1.15942]
+CS	0	00:09:25.435	Trades	2026.05.22 14:00:56   deal #15 sell 0.71 EURUSD at 1.15939 done (based on order #22)
+CS	0	00:09:25.435	Trade	2026.05.22 14:00:56   deal performed [#15 sell 0.71 EURUSD at 1.15939]
+CS	0	00:09:25.435	Trade	2026.05.22 14:00:56   order performed sell 0.71 at 1.15939 [#22 sell 0.71 EURUSD at 1.15942]
+CS	0	00:09:25.451	CycleORB (EURUSD,M5)	2026.05.25 12:30:00   [CycleORB] SKIP NY 2026.05.25 12:00 hi=1.16468 lo=1.16423 range=45pt atr%=9.3 cost%=13.3 (range/ATR outside band)
+CS	0	00:09:25.465	CycleORB (EURUSD,M5)	2026.05.26 12:30:00   [CycleORB] SKIP NY 2026.05.26 12:00 hi=1.16359 lo=1.16309 range=50pt atr%=10.9 cost%=10.0 (range/ATR outside band)
+CS	0	00:09:25.484	CycleORB (EURUSD,M5)	2026.05.27 12:30:00   [CycleORB] SKIP NY 2026.05.27 12:00 hi=1.16598 lo=1.16343 range=255pt atr%=56.6 cost%=2.0 (range/ATR outside band)
+CS	0	00:09:25.510	CycleORB (EURUSD,M5)	2026.05.28 12:30:00   [CycleORB] SKIP NY 2026.05.28 12:00 hi=1.16255 lo=1.16155 range=100pt atr%=22.0 cost%=14.0 (cost too high vs range)
+CS	0	00:09:25.539	CycleORB (EURUSD,M5)	2026.05.29 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:25.554	CycleORB (EURUSD,M5)	2026.06.01 00:00:01   [CycleORB] CYCLE_END 202605 capital=10000.00 realized=-415.78 floating=0.00 pnl=-4.16% peak=0.35% state=ACTIVE 
+CS	0	00:09:25.554	CycleORB (EURUSD,M5)	2026.06.01 00:00:01   [CycleORB] CYCLE_BEGIN 202606 capital=9584.22 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:25.563	CycleORB (EURUSD,M5)	2026.06.01 12:30:00   [CycleORB] SKIP NY 2026.06.01 12:00 hi=1.16500 lo=1.16453 range=47pt atr%=10.6 cost%=10.6 (range/ATR outside band)
+CS	0	00:09:25.586	CycleORB (EURUSD,M5)	2026.06.02 12:30:00   [CycleORB] SKIP NY 2026.06.02 12:00 hi=1.16538 lo=1.16472 range=66pt atr%=14.6 cost%=6.1 (range/ATR outside band)
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:00   [CycleORB] RANGE NY 2026.06.03 12:00 hi=1.16183 lo=1.16067 range=116pt atr%=24.5 cost%=4.3 buffer=10pt risk=95.84
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:00   buy stop 0.76 EURUSD at 1.16193 sl: 1.16067 tp: 1.16445 (1.16068 / 1.16073)
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:00   CTrade::OrderSend: buy stop 0.76 EURUSD at 1.16193 sl: 1.16067 tp: 1.16445 [done]
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.76 @1.16193 sl=1.16067 tp=1.16445 magic=26110202 retcode=10009
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:00   sell stop 0.76 EURUSD at 1.16057 sl: 1.16183 tp: 1.15805 (1.16068 / 1.16073)
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:00   CTrade::OrderSend: sell stop 0.76 EURUSD at 1.16057 sl: 1.16183 tp: 1.15805 [done]
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.76 @1.16057 sl=1.16183 tp=1.15805 magic=26110202 retcode=10009
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:19   order [#24 sell stop 0.76 EURUSD at 1.16057] triggered
+CS	0	00:09:25.604	Trades	2026.06.03 12:30:19   deal #16 sell 0.76 EURUSD at 1.16056 done (based on order #24)
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:19   deal performed [#16 sell 0.76 EURUSD at 1.16056]
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:19   order performed sell 0.76 at 1.16056 [#24 sell stop 0.76 EURUSD at 1.16057]
+CS	0	00:09:25.604	Trade	2026.06.03 12:30:19   order canceled [#23 buy stop 0.76 EURUSD at 1.16193]
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:19   CTrade::OrderSend: cancel #23 [done]
+CS	0	00:09:25.604	CycleORB (EURUSD,M5)	2026.06.03 12:30:19   [CycleORB] DELETE order #23 magic=26110202 (NY OCO)
+CS	0	00:09:25.624	Trade	2026.06.03 19:00:00   market buy 0.76 EURUSD, close #24 (1.15982 / 1.15987)
+CS	0	00:09:25.624	Trades	2026.06.03 19:00:00   deal #17 buy 0.76 EURUSD at 1.15987 done (based on order #25)
+CS	0	00:09:25.624	Trade	2026.06.03 19:00:00   deal performed [#17 buy 0.76 EURUSD at 1.15987]
+CS	0	00:09:25.624	Trade	2026.06.03 19:00:00   order performed buy 0.76 at 1.15987 [#25 buy 0.76 EURUSD at 1.15987]
+CS	0	00:09:25.624	CycleORB (EURUSD,M5)	2026.06.03 19:00:00   CTrade::OrderSend: market buy 0.76 position #24 EURUSD [done at 1.15987]
+CS	0	00:09:25.624	CycleORB (EURUSD,M5)	2026.06.03 19:00:00   [CycleORB] CLOSE position #24 magic=26110202 (NY time exit)
+CS	0	00:09:25.639	CycleORB (EURUSD,M5)	2026.06.04 12:30:00   [CycleORB] RANGE NY 2026.06.04 12:00 hi=1.16449 lo=1.16343 range=106pt atr%=22.9 cost%=7.5 buffer=16pt risk=95.84
+CS	0	00:09:25.639	Trade	2026.06.04 12:30:00   buy stop 0.78 EURUSD at 1.16465 sl: 1.16343 tp: 1.16709 (1.16381 / 1.16389)
+CS	0	00:09:25.639	CycleORB (EURUSD,M5)	2026.06.04 12:30:00   CTrade::OrderSend: buy stop 0.78 EURUSD at 1.16465 sl: 1.16343 tp: 1.16709 [done]
+CS	0	00:09:25.639	CycleORB (EURUSD,M5)	2026.06.04 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.78 @1.16465 sl=1.16343 tp=1.16709 magic=26110202 retcode=10009
+CS	0	00:09:25.639	Trade	2026.06.04 12:30:00   sell stop 0.78 EURUSD at 1.16327 sl: 1.16449 tp: 1.16083 (1.16381 / 1.16389)
+CS	0	00:09:25.639	CycleORB (EURUSD,M5)	2026.06.04 12:30:00   CTrade::OrderSend: sell stop 0.78 EURUSD at 1.16327 sl: 1.16449 tp: 1.16083 [done]
+CS	0	00:09:25.639	CycleORB (EURUSD,M5)	2026.06.04 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.78 @1.16327 sl=1.16449 tp=1.16083 magic=26110202 retcode=10009
+CS	0	00:09:25.644	Trade	2026.06.04 14:10:02   order [#27 sell stop 0.78 EURUSD at 1.16327] triggered
+CS	0	00:09:25.644	Trades	2026.06.04 14:10:02   deal #18 sell 0.78 EURUSD at 1.16327 done (based on order #27)
+CS	0	00:09:25.644	Trade	2026.06.04 14:10:02   deal performed [#18 sell 0.78 EURUSD at 1.16327]
+CS	0	00:09:25.644	Trade	2026.06.04 14:10:02   order performed sell 0.78 at 1.16327 [#27 sell stop 0.78 EURUSD at 1.16327]
+CS	0	00:09:25.644	Trade	2026.06.04 14:10:02   order canceled [#26 buy stop 0.78 EURUSD at 1.16465]
+CS	0	00:09:25.644	CycleORB (EURUSD,M5)	2026.06.04 14:10:02   CTrade::OrderSend: cancel #26 [done]
+CS	0	00:09:25.644	CycleORB (EURUSD,M5)	2026.06.04 14:10:02   [CycleORB] DELETE order #26 magic=26110202 (NY OCO)
+CS	0	00:09:25.653	Trade	2026.06.04 19:00:00   market buy 0.78 EURUSD, close #27 (1.16148 / 1.16153)
+CS	0	00:09:25.653	Trades	2026.06.04 19:00:00   deal #19 buy 0.78 EURUSD at 1.16153 done (based on order #28)
+CS	0	00:09:25.653	Trade	2026.06.04 19:00:00   deal performed [#19 buy 0.78 EURUSD at 1.16153]
+CS	0	00:09:25.653	Trade	2026.06.04 19:00:00   order performed buy 0.78 at 1.16153 [#28 buy 0.78 EURUSD at 1.16153]
+CS	0	00:09:25.653	CycleORB (EURUSD,M5)	2026.06.04 19:00:00   CTrade::OrderSend: market buy 0.78 position #27 EURUSD [done at 1.16153]
+CS	0	00:09:25.653	CycleORB (EURUSD,M5)	2026.06.04 19:00:00   [CycleORB] CLOSE position #27 magic=26110202 (NY time exit)
+CS	0	00:09:25.667	CycleORB (EURUSD,M5)	2026.06.05 12:30:00   [CycleORB] SKIP NY 2026.06.05 12:00 hi=1.16427 lo=1.16344 range=83pt atr%=18.4 cost%=24.1 (cost too high vs range)
+CS	0	00:09:25.703	CycleORB (EURUSD,M5)	2026.06.08 12:30:00   [CycleORB] SKIP NY 2026.06.08 12:00 hi=1.15433 lo=1.15362 range=71pt atr%=15.2 cost%=7.0 (range/ATR outside band)
+CS	0	00:09:25.728	CycleORB (EURUSD,M5)	2026.06.09 12:30:00   [CycleORB] SKIP NY 2026.06.09 12:00 hi=1.15747 lo=1.15690 range=57pt atr%=11.8 cost%=10.5 (range/ATR outside band)
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:00   [CycleORB] RANGE NY 2026.06.10 12:00 hi=1.15466 lo=1.15359 range=107pt atr%=22.0 cost%=7.5 buffer=16pt risk=95.84
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:00   buy stop 0.77 EURUSD at 1.15482 sl: 1.15359 tp: 1.15728 (1.15463 / 1.15471)
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:00   CTrade::OrderSend: buy stop 0.77 EURUSD at 1.15482 sl: 1.15359 tp: 1.15728 [done]
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.77 @1.15482 sl=1.15359 tp=1.15728 magic=26110202 retcode=10009
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:00   sell stop 0.77 EURUSD at 1.15343 sl: 1.15466 tp: 1.15097 (1.15463 / 1.15471)
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:00   CTrade::OrderSend: sell stop 0.77 EURUSD at 1.15343 sl: 1.15466 tp: 1.15097 [done]
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.77 @1.15343 sl=1.15466 tp=1.15097 magic=26110202 retcode=10009
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:01   order [#29 buy stop 0.77 EURUSD at 1.15482] triggered
+CS	0	00:09:25.764	Trades	2026.06.10 12:30:01   deal #20 buy 0.77 EURUSD at 1.15518 done (based on order #29)
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:01   deal performed [#20 buy 0.77 EURUSD at 1.15518]
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:01   order performed buy 0.77 at 1.15518 [#29 buy stop 0.77 EURUSD at 1.15482]
+CS	0	00:09:25.764	Trade	2026.06.10 12:30:01   order canceled [#30 sell stop 0.77 EURUSD at 1.15343]
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:01   CTrade::OrderSend: cancel #30 [done]
+CS	0	00:09:25.764	CycleORB (EURUSD,M5)	2026.06.10 12:30:01   [CycleORB] DELETE order #30 magic=26110202 (NY OCO)
+CS	0	00:09:25.772	Trade	2026.06.10 13:49:01   take profit triggered #29 buy 0.77 EURUSD 1.15518 sl: 1.15359 tp: 1.15728 [#31 sell 0.77 EURUSD at 1.15728]
+CS	0	00:09:25.772	Trades	2026.06.10 13:49:01   deal #21 sell 0.77 EURUSD at 1.15728 done (based on order #31)
+CS	0	00:09:25.772	Trade	2026.06.10 13:49:01   deal performed [#21 sell 0.77 EURUSD at 1.15728]
+CS	0	00:09:25.772	Trade	2026.06.10 13:49:01   order performed sell 0.77 at 1.15728 [#31 sell 0.77 EURUSD at 1.15728]
+CS	0	00:09:25.804	CycleORB (EURUSD,M5)	2026.06.11 12:30:00   [CycleORB] SKIP NY 2026.06.11 12:00 hi=1.15401 lo=1.15162 range=239pt atr%=47.5 cost%=5.9 (range/ATR outside band)
+CS	0	00:09:25.850	CycleORB (EURUSD,M5)	2026.06.12 12:30:00   [CycleORB] RANGE NY 2026.06.12 12:00 hi=1.15722 lo=1.15612 range=110pt atr%=20.2 cost%=4.5 buffer=10pt risk=95.84
+CS	0	00:09:25.850	Trade	2026.06.12 12:30:00   buy stop 0.79 EURUSD at 1.15732 sl: 1.15612 tp: 1.15972 (1.15613 / 1.15618)
+CS	0	00:09:25.850	CycleORB (EURUSD,M5)	2026.06.12 12:30:00   CTrade::OrderSend: buy stop 0.79 EURUSD at 1.15732 sl: 1.15612 tp: 1.15972 [done]
+CS	0	00:09:25.850	CycleORB (EURUSD,M5)	2026.06.12 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.79 @1.15732 sl=1.15612 tp=1.15972 magic=26110202 retcode=10009
+CS	0	00:09:25.850	Trade	2026.06.12 12:30:00   sell stop 0.79 EURUSD at 1.15602 sl: 1.15722 tp: 1.15362 (1.15613 / 1.15618)
+CS	0	00:09:25.850	CycleORB (EURUSD,M5)	2026.06.12 12:30:00   CTrade::OrderSend: sell stop 0.79 EURUSD at 1.15602 sl: 1.15722 tp: 1.15362 [done]
+CS	0	00:09:25.850	CycleORB (EURUSD,M5)	2026.06.12 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.79 @1.15602 sl=1.15722 tp=1.15362 magic=26110202 retcode=10009
+CS	0	00:09:25.851	Trade	2026.06.12 12:47:29   order [#33 sell stop 0.79 EURUSD at 1.15602] triggered
+CS	0	00:09:25.851	Trades	2026.06.12 12:47:29   deal #22 sell 0.79 EURUSD at 1.15601 done (based on order #33)
+CS	0	00:09:25.851	Trade	2026.06.12 12:47:29   deal performed [#22 sell 0.79 EURUSD at 1.15601]
+CS	0	00:09:25.851	Trade	2026.06.12 12:47:29   order performed sell 0.79 at 1.15601 [#33 sell stop 0.79 EURUSD at 1.15602]
+CS	0	00:09:25.851	Trade	2026.06.12 12:47:29   order canceled [#32 buy stop 0.79 EURUSD at 1.15732]
+CS	0	00:09:25.851	CycleORB (EURUSD,M5)	2026.06.12 12:47:29   CTrade::OrderSend: cancel #32 [done]
+CS	0	00:09:25.851	CycleORB (EURUSD,M5)	2026.06.12 12:47:29   [CycleORB] DELETE order #32 magic=26110202 (NY OCO)
+CS	0	00:09:25.853	Trade	2026.06.12 13:19:35   stop loss triggered #33 sell 0.79 EURUSD 1.15601 sl: 1.15722 tp: 1.15362 [#34 buy 0.79 EURUSD at 1.15722]
+CS	0	00:09:25.853	Trades	2026.06.12 13:19:35   deal #23 buy 0.79 EURUSD at 1.15722 done (based on order #34)
+CS	0	00:09:25.853	Trade	2026.06.12 13:19:35   deal performed [#23 buy 0.79 EURUSD at 1.15722]
+CS	0	00:09:25.853	Trade	2026.06.12 13:19:35   order performed buy 0.79 at 1.15722 [#34 buy 0.79 EURUSD at 1.15722]
+CS	0	00:09:25.896	CycleORB (EURUSD,M5)	2026.06.15 12:30:00   [CycleORB] SKIP NY 2026.06.15 12:00 hi=1.16120 lo=1.16041 range=79pt atr%=15.2 cost%=6.3 (range/ATR outside band)
+CS	0	00:09:25.948	CycleORB (EURUSD,M5)	2026.06.16 12:30:00   [CycleORB] SKIP NY 2026.06.16 12:00 hi=1.15991 lo=1.15912 range=79pt atr%=15.7 cost%=7.6 (range/ATR outside band)
+CS	0	00:09:26.019	CycleORB (EURUSD,M5)	2026.06.17 12:30:00   [CycleORB] SKIP NY 2026.06.17 12:00 hi=1.15979 lo=1.15903 range=76pt atr%=14.4 cost%=11.8 (range/ATR outside band)
+CS	0	00:09:26.136	CycleORB (EURUSD,M5)	2026.06.18 12:30:00   [CycleORB] SKIP NY 2026.06.18 12:00 hi=1.14815 lo=1.14531 range=284pt atr%=48.5 cost%=1.4 (range/ATR outside band)
+CS	0	00:09:26.216	CycleORB (EURUSD,M5)	2026.06.19 12:30:00   [CycleORB] SKIP NY 2026.06.19 12:00 hi=1.14682 lo=1.14609 range=73pt atr%=12.0 cost%=8.2 (range/ATR outside band)
+CS	0	00:09:26.278	CycleORB (EURUSD,M5)	2026.06.22 12:30:00   [CycleORB] RANGE NY 2026.06.22 12:00 hi=1.14617 lo=1.14475 range=142pt atr%=23.5 cost%=3.5 buffer=10pt risk=95.84
+CS	0	00:09:26.278	Trade	2026.06.22 12:30:00   buy stop 0.63 EURUSD at 1.14627 sl: 1.14475 tp: 1.14931 (1.14596 / 1.14601)
+CS	0	00:09:26.278	CycleORB (EURUSD,M5)	2026.06.22 12:30:00   CTrade::OrderSend: buy stop 0.63 EURUSD at 1.14627 sl: 1.14475 tp: 1.14931 [done]
+CS	0	00:09:26.278	CycleORB (EURUSD,M5)	2026.06.22 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.63 @1.14627 sl=1.14475 tp=1.14931 magic=26110202 retcode=10009
+CS	0	00:09:26.278	Trade	2026.06.22 12:30:00   sell stop 0.63 EURUSD at 1.14465 sl: 1.14617 tp: 1.14161 (1.14596 / 1.14601)
+CS	0	00:09:26.278	CycleORB (EURUSD,M5)	2026.06.22 12:30:00   CTrade::OrderSend: sell stop 0.63 EURUSD at 1.14465 sl: 1.14617 tp: 1.14161 [done]
+CS	0	00:09:26.278	CycleORB (EURUSD,M5)	2026.06.22 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.63 @1.14465 sl=1.14617 tp=1.14161 magic=26110202 retcode=10009
+CS	0	00:09:26.282	Trade	2026.06.22 13:00:25   order [#36 sell stop 0.63 EURUSD at 1.14465] triggered
+CS	0	00:09:26.282	Trades	2026.06.22 13:00:25   deal #24 sell 0.63 EURUSD at 1.14465 done (based on order #36)
+CS	0	00:09:26.282	Trade	2026.06.22 13:00:25   deal performed [#24 sell 0.63 EURUSD at 1.14465]
+CS	0	00:09:26.282	Trade	2026.06.22 13:00:25   order performed sell 0.63 at 1.14465 [#36 sell stop 0.63 EURUSD at 1.14465]
+CS	0	00:09:26.282	Trade	2026.06.22 13:00:25   order canceled [#35 buy stop 0.63 EURUSD at 1.14627]
+CS	0	00:09:26.282	CycleORB (EURUSD,M5)	2026.06.22 13:00:25   CTrade::OrderSend: cancel #35 [done]
+CS	0	00:09:26.282	CycleORB (EURUSD,M5)	2026.06.22 13:00:25   [CycleORB] DELETE order #35 magic=26110202 (NY OCO)
+CS	0	00:09:26.345	Trade	2026.06.22 19:00:00   market buy 0.63 EURUSD, close #36 (1.14242 / 1.14247)
+CS	0	00:09:26.345	Trades	2026.06.22 19:00:00   deal #25 buy 0.63 EURUSD at 1.14247 done (based on order #37)
+CS	0	00:09:26.345	Trade	2026.06.22 19:00:00   deal performed [#25 buy 0.63 EURUSD at 1.14247]
+CS	0	00:09:26.345	Trade	2026.06.22 19:00:00   order performed buy 0.63 at 1.14247 [#37 buy 0.63 EURUSD at 1.14247]
+CS	0	00:09:26.345	CycleORB (EURUSD,M5)	2026.06.22 19:00:00   CTrade::OrderSend: market buy 0.63 position #36 EURUSD [done at 1.14247]
+CS	0	00:09:26.345	CycleORB (EURUSD,M5)	2026.06.22 19:00:00   [CycleORB] CLOSE position #36 magic=26110202 (NY time exit)
+CS	0	00:09:26.386	CycleORB (EURUSD,M5)	2026.06.23 12:30:00   [CycleORB] RANGE NY 2026.06.23 12:00 hi=1.13945 lo=1.13823 range=122pt atr%=22.1 cost%=4.9 buffer=12pt risk=95.84
+CS	0	00:09:26.386	Trade	2026.06.23 12:30:00   buy stop 0.71 EURUSD at 1.13957 sl: 1.13823 tp: 1.14225 (1.13839 / 1.13845)
+CS	0	00:09:26.386	CycleORB (EURUSD,M5)	2026.06.23 12:30:00   CTrade::OrderSend: buy stop 0.71 EURUSD at 1.13957 sl: 1.13823 tp: 1.14225 [done]
+CS	0	00:09:26.386	CycleORB (EURUSD,M5)	2026.06.23 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.71 @1.13957 sl=1.13823 tp=1.14225 magic=26110202 retcode=10009
+CS	0	00:09:26.386	Trade	2026.06.23 12:30:00   sell stop 0.71 EURUSD at 1.13811 sl: 1.13945 tp: 1.13543 (1.13839 / 1.13845)
+CS	0	00:09:26.386	CycleORB (EURUSD,M5)	2026.06.23 12:30:00   CTrade::OrderSend: sell stop 0.71 EURUSD at 1.13811 sl: 1.13945 tp: 1.13543 [done]
+CS	0	00:09:26.386	CycleORB (EURUSD,M5)	2026.06.23 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.71 @1.13811 sl=1.13945 tp=1.13543 magic=26110202 retcode=10009
+CS	0	00:09:26.395	Trade	2026.06.23 13:34:31   order [#38 buy stop 0.71 EURUSD at 1.13957] triggered
+CS	0	00:09:26.395	Trades	2026.06.23 13:34:31   deal #26 buy 0.71 EURUSD at 1.13957 done (based on order #38)
+CS	0	00:09:26.395	Trade	2026.06.23 13:34:31   deal performed [#26 buy 0.71 EURUSD at 1.13957]
+CS	0	00:09:26.395	Trade	2026.06.23 13:34:31   order performed buy 0.71 at 1.13957 [#38 buy stop 0.71 EURUSD at 1.13957]
+CS	0	00:09:26.395	Trade	2026.06.23 13:34:31   order canceled [#39 sell stop 0.71 EURUSD at 1.13811]
+CS	0	00:09:26.395	CycleORB (EURUSD,M5)	2026.06.23 13:34:31   CTrade::OrderSend: cancel #39 [done]
+CS	0	00:09:26.395	CycleORB (EURUSD,M5)	2026.06.23 13:34:31   [CycleORB] DELETE order #39 magic=26110202 (NY OCO)
+CS	0	00:09:26.406	Trade	2026.06.23 14:18:10   stop loss triggered #38 buy 0.71 EURUSD 1.13957 sl: 1.13823 tp: 1.14225 [#40 sell 0.71 EURUSD at 1.13823]
+CS	0	00:09:26.406	Trades	2026.06.23 14:18:10   deal #27 sell 0.71 EURUSD at 1.13823 done (based on order #40)
+CS	0	00:09:26.406	Trade	2026.06.23 14:18:10   deal performed [#27 sell 0.71 EURUSD at 1.13823]
+CS	0	00:09:26.406	Trade	2026.06.23 14:18:10   order performed sell 0.71 at 1.13823 [#40 sell 0.71 EURUSD at 1.13823]
+CS	0	00:09:26.466	CycleORB (EURUSD,M5)	2026.06.24 12:30:00   [CycleORB] SKIP NY 2026.06.24 12:00 hi=1.13460 lo=1.13371 range=89pt atr%=15.2 cost%=5.6 (range/ATR outside band)
+CS	0	00:09:26.529	CycleORB (EURUSD,M5)	2026.06.25 12:30:00   [CycleORB] SKIP NY 2026.06.25 12:00 hi=1.13427 lo=1.13361 range=66pt atr%=11.2 cost%=19.7 (range/ATR outside band)
+CS	0	00:09:26.603	CycleORB (EURUSD,M5)	2026.06.26 12:30:00   [CycleORB] SKIP NY 2026.06.26 12:00 hi=1.14062 lo=1.13973 range=89pt atr%=15.1 cost%=6.7 (range/ATR outside band)
+CS	0	00:09:26.668	CycleORB (EURUSD,M5)	2026.06.29 12:30:00   [CycleORB] SKIP NY 2026.06.29 12:00 hi=1.14088 lo=1.14004 range=84pt atr%=15.0 cost%=6.0 (range/ATR outside band)
+CS	0	00:09:26.732	CycleORB (EURUSD,M5)	2026.06.30 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:26.768	CycleORB (EURUSD,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_END 202606 capital=9584.22 realized=296.47 floating=0.00 pnl=3.09% peak=4.41% state=ACTIVE 
+CS	0	00:09:26.768	CycleORB (EURUSD,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_BEGIN 202607 capital=9880.69 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:26.795	CycleORB (EURUSD,M5)	2026.07.01 12:30:00   [CycleORB] SKIP NY 2026.07.01 12:00 hi=1.13877 lo=1.13804 range=73pt atr%=12.7 cost%=8.2 (range/ATR outside band)
+CS	0	00:09:26.873	CycleORB (EURUSD,M5)	2026.07.02 12:30:00   [CycleORB] SKIP NY 2026.07.02 12:00 hi=1.14046 lo=1.13952 range=94pt atr%=16.1 cost%=12.8 (range/ATR outside band)
+CS	0	00:09:26.969	CycleORB (EURUSD,M5)	2026.07.03 12:30:00   [CycleORB] SKIP NY 2026.07.03 12:00 hi=1.14527 lo=1.14460 range=67pt atr%=10.8 cost%=9.0 (range/ATR outside band)
+CS	0	00:09:27.028	CycleORB (EURUSD,M5)	2026.07.06 12:30:00   [CycleORB] SKIP NY 2026.07.06 12:00 hi=1.14197 lo=1.14139 range=58pt atr%=11.6 cost%=6.9 (range/ATR outside band)
+CS	0	00:09:27.079	CycleORB (EURUSD,M5)	2026.07.07 12:30:00   [CycleORB] RANGE NY 2026.07.07 12:00 hi=1.14417 lo=1.14307 range=110pt atr%=22.7 cost%=5.5 buffer=12pt risk=98.81
+CS	0	00:09:27.079	Trade	2026.07.07 12:30:00   buy stop 0.8 EURUSD at 1.14429 sl: 1.14307 tp: 1.14673 (1.14404 / 1.14410)
+CS	0	00:09:27.079	CycleORB (EURUSD,M5)	2026.07.07 12:30:00   CTrade::OrderSend: buy stop 0.80 EURUSD at 1.14429 sl: 1.14307 tp: 1.14673 [done]
+CS	0	00:09:27.079	CycleORB (EURUSD,M5)	2026.07.07 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.80 @1.14429 sl=1.14307 tp=1.14673 magic=26110202 retcode=10009
+CS	0	00:09:27.079	Trade	2026.07.07 12:30:00   sell stop 0.8 EURUSD at 1.14295 sl: 1.14417 tp: 1.14051 (1.14404 / 1.14410)
+CS	0	00:09:27.079	CycleORB (EURUSD,M5)	2026.07.07 12:30:00   CTrade::OrderSend: sell stop 0.80 EURUSD at 1.14295 sl: 1.14417 tp: 1.14051 [done]
+CS	0	00:09:27.079	CycleORB (EURUSD,M5)	2026.07.07 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.80 @1.14295 sl=1.14417 tp=1.14051 magic=26110202 retcode=10009
+CS	0	00:09:27.091	Trade	2026.07.07 14:03:47   order [#42 sell stop 0.8 EURUSD at 1.14295] triggered
+CS	0	00:09:27.091	Trades	2026.07.07 14:03:47   deal #28 sell 0.8 EURUSD at 1.14295 done (based on order #42)
+CS	0	00:09:27.091	Trade	2026.07.07 14:03:47   deal performed [#28 sell 0.8 EURUSD at 1.14295]
+CS	0	00:09:27.091	Trade	2026.07.07 14:03:47   order performed sell 0.8 at 1.14295 [#42 sell stop 0.8 EURUSD at 1.14295]
+CS	0	00:09:27.091	Trade	2026.07.07 14:03:47   order canceled [#41 buy stop 0.8 EURUSD at 1.14429]
+CS	0	00:09:27.091	CycleORB (EURUSD,M5)	2026.07.07 14:03:47   CTrade::OrderSend: cancel #41 [done]
+CS	0	00:09:27.091	CycleORB (EURUSD,M5)	2026.07.07 14:03:47   [CycleORB] DELETE order #41 magic=26110202 (NY OCO)
+CS	0	00:09:27.121	Trade	2026.07.07 19:00:00   market buy 0.8 EURUSD, close #42 (1.14183 / 1.14188)
+CS	0	00:09:27.121	Trades	2026.07.07 19:00:00   deal #29 buy 0.8 EURUSD at 1.14188 done (based on order #43)
+CS	0	00:09:27.121	Trade	2026.07.07 19:00:00   deal performed [#29 buy 0.8 EURUSD at 1.14188]
+CS	0	00:09:27.121	Trade	2026.07.07 19:00:00   order performed buy 0.8 at 1.14188 [#43 buy 0.8 EURUSD at 1.14188]
+CS	0	00:09:27.121	CycleORB (EURUSD,M5)	2026.07.07 19:00:00   CTrade::OrderSend: market buy 0.80 position #42 EURUSD [done at 1.14188]
+CS	0	00:09:27.121	CycleORB (EURUSD,M5)	2026.07.07 19:00:00   [CycleORB] CLOSE position #42 magic=26110202 (NY time exit)
+CS	0	00:09:27.175	CycleORB (EURUSD,M5)	2026.07.08 12:30:00   [CycleORB] RANGE NY 2026.07.08 12:00 hi=1.14066 lo=1.13973 range=93pt atr%=18.3 cost%=5.4 buffer=10pt risk=98.81
+CS	0	00:09:27.175	Trade	2026.07.08 12:30:00   buy stop 0.95 EURUSD at 1.14076 sl: 1.13973 tp: 1.14282 (1.14047 / 1.14052)
+CS	0	00:09:27.175	CycleORB (EURUSD,M5)	2026.07.08 12:30:00   CTrade::OrderSend: buy stop 0.95 EURUSD at 1.14076 sl: 1.13973 tp: 1.14282 [done]
+CS	0	00:09:27.175	CycleORB (EURUSD,M5)	2026.07.08 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.95 @1.14076 sl=1.13973 tp=1.14282 magic=26110202 retcode=10009
+CS	0	00:09:27.175	Trade	2026.07.08 12:30:00   sell stop 0.95 EURUSD at 1.13963 sl: 1.14066 tp: 1.13757 (1.14047 / 1.14052)
+CS	0	00:09:27.175	CycleORB (EURUSD,M5)	2026.07.08 12:30:00   CTrade::OrderSend: sell stop 0.95 EURUSD at 1.13963 sl: 1.14066 tp: 1.13757 [done]
+CS	0	00:09:27.175	CycleORB (EURUSD,M5)	2026.07.08 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.95 @1.13963 sl=1.14066 tp=1.13757 magic=26110202 retcode=10009
+CS	0	00:09:27.180	Trade	2026.07.08 12:56:53   order [#45 sell stop 0.95 EURUSD at 1.13963] triggered
+CS	0	00:09:27.180	Trades	2026.07.08 12:56:53   deal #30 sell 0.95 EURUSD at 1.13963 done (based on order #45)
+CS	0	00:09:27.180	Trade	2026.07.08 12:56:53   deal performed [#30 sell 0.95 EURUSD at 1.13963]
+CS	0	00:09:27.180	Trade	2026.07.08 12:56:53   order performed sell 0.95 at 1.13963 [#45 sell stop 0.95 EURUSD at 1.13963]
+CS	0	00:09:27.180	Trade	2026.07.08 12:56:53   order canceled [#44 buy stop 0.95 EURUSD at 1.14076]
+CS	0	00:09:27.180	CycleORB (EURUSD,M5)	2026.07.08 12:56:53   CTrade::OrderSend: cancel #44 [done]
+CS	0	00:09:27.180	CycleORB (EURUSD,M5)	2026.07.08 12:56:53   [CycleORB] DELETE order #44 magic=26110202 (NY OCO)
+CS	0	00:09:27.186	Trade	2026.07.08 13:29:02   stop loss triggered #45 sell 0.95 EURUSD 1.13963 sl: 1.14066 tp: 1.13757 [#46 buy 0.95 EURUSD at 1.14066]
+CS	0	00:09:27.186	Trades	2026.07.08 13:29:02   deal #31 buy 0.95 EURUSD at 1.14066 done (based on order #46)
+CS	0	00:09:27.186	Trade	2026.07.08 13:29:02   deal performed [#31 buy 0.95 EURUSD at 1.14066]
+CS	0	00:09:27.186	Trade	2026.07.08 13:29:02   order performed buy 0.95 at 1.14066 [#46 buy 0.95 EURUSD at 1.14066]
+CS	0	00:09:27.244	CycleORB (EURUSD,M5)	2026.07.09 12:30:00   [CycleORB] SKIP NY 2026.07.09 12:00 hi=1.14357 lo=1.14294 range=63pt atr%=12.6 cost%=9.5 (range/ATR outside band)
+CS	0	00:09:27.303	CycleORB (EURUSD,M5)	2026.07.10 12:30:00   [CycleORB] RANGE NY 2026.07.10 12:00 hi=1.14417 lo=1.14264 range=153pt atr%=32.3 cost%=3.3 buffer=10pt risk=98.81
+CS	0	00:09:27.303	Trade	2026.07.10 12:30:00   buy stop 0.6 EURUSD at 1.14427 sl: 1.14264 tp: 1.14753 (1.14287 / 1.14292)
+CS	0	00:09:27.303	CycleORB (EURUSD,M5)	2026.07.10 12:30:00   CTrade::OrderSend: buy stop 0.60 EURUSD at 1.14427 sl: 1.14264 tp: 1.14753 [done]
+CS	0	00:09:27.303	CycleORB (EURUSD,M5)	2026.07.10 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.60 @1.14427 sl=1.14264 tp=1.14753 magic=26110202 retcode=10009
+CS	0	00:09:27.303	Trade	2026.07.10 12:30:00   sell stop 0.6 EURUSD at 1.14254 sl: 1.14417 tp: 1.13928 (1.14287 / 1.14292)
+CS	0	00:09:27.303	CycleORB (EURUSD,M5)	2026.07.10 12:30:00   CTrade::OrderSend: sell stop 0.60 EURUSD at 1.14254 sl: 1.14417 tp: 1.13928 [done]
+CS	0	00:09:27.303	CycleORB (EURUSD,M5)	2026.07.10 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.60 @1.14254 sl=1.14417 tp=1.13928 magic=26110202 retcode=10009
+CS	0	00:09:27.304	Trade	2026.07.10 12:34:10   order [#48 sell stop 0.6 EURUSD at 1.14254] triggered
+CS	0	00:09:27.304	Trades	2026.07.10 12:34:10   deal #32 sell 0.6 EURUSD at 1.14254 done (based on order #48)
+CS	0	00:09:27.304	Trade	2026.07.10 12:34:10   deal performed [#32 sell 0.6 EURUSD at 1.14254]
+CS	0	00:09:27.304	Trade	2026.07.10 12:34:10   order performed sell 0.6 at 1.14254 [#48 sell stop 0.6 EURUSD at 1.14254]
+CS	0	00:09:27.304	Trade	2026.07.10 12:34:10   order canceled [#47 buy stop 0.6 EURUSD at 1.14427]
+CS	0	00:09:27.304	CycleORB (EURUSD,M5)	2026.07.10 12:34:10   CTrade::OrderSend: cancel #47 [done]
+CS	0	00:09:27.304	CycleORB (EURUSD,M5)	2026.07.10 12:34:10   [CycleORB] DELETE order #47 magic=26110202 (NY OCO)
+CS	0	00:09:27.360	Trade	2026.07.10 19:00:00   market buy 0.6 EURUSD, close #48 (1.14163 / 1.14168)
+CS	0	00:09:27.360	Trades	2026.07.10 19:00:00   deal #33 buy 0.6 EURUSD at 1.14168 done (based on order #49)
+CS	0	00:09:27.360	Trade	2026.07.10 19:00:00   deal performed [#33 buy 0.6 EURUSD at 1.14168]
+CS	0	00:09:27.360	Trade	2026.07.10 19:00:00   order performed buy 0.6 at 1.14168 [#49 buy 0.6 EURUSD at 1.14168]
+CS	0	00:09:27.360	CycleORB (EURUSD,M5)	2026.07.10 19:00:00   CTrade::OrderSend: market buy 0.60 position #48 EURUSD [done at 1.14168]
+CS	0	00:09:27.360	CycleORB (EURUSD,M5)	2026.07.10 19:00:00   [CycleORB] CLOSE position #48 magic=26110202 (NY time exit)
+CS	0	00:09:27.413	CycleORB (EURUSD,M5)	2026.07.13 12:30:00   [CycleORB] RANGE NY 2026.07.13 12:00 hi=1.14304 lo=1.14202 range=102pt atr%=22.9 cost%=4.9 buffer=10pt risk=98.81
+CS	0	00:09:27.413	Trade	2026.07.13 12:30:00   buy stop 0.88 EURUSD at 1.14314 sl: 1.14202 tp: 1.14538 (1.14239 / 1.14244)
+CS	0	00:09:27.413	CycleORB (EURUSD,M5)	2026.07.13 12:30:00   CTrade::OrderSend: buy stop 0.88 EURUSD at 1.14314 sl: 1.14202 tp: 1.14538 [done]
+CS	0	00:09:27.413	CycleORB (EURUSD,M5)	2026.07.13 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.88 @1.14314 sl=1.14202 tp=1.14538 magic=26110202 retcode=10009
+CS	0	00:09:27.413	Trade	2026.07.13 12:30:00   sell stop 0.88 EURUSD at 1.14192 sl: 1.14304 tp: 1.13968 (1.14239 / 1.14244)
+CS	0	00:09:27.413	CycleORB (EURUSD,M5)	2026.07.13 12:30:00   CTrade::OrderSend: sell stop 0.88 EURUSD at 1.14192 sl: 1.14304 tp: 1.13968 [done]
+CS	0	00:09:27.413	CycleORB (EURUSD,M5)	2026.07.13 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.88 @1.14192 sl=1.14304 tp=1.13968 magic=26110202 retcode=10009
+CS	0	00:09:27.417	Trade	2026.07.13 13:00:00   order [#50 buy stop 0.88 EURUSD at 1.14314] triggered
+CS	0	00:09:27.417	Trades	2026.07.13 13:00:00   deal #34 buy 0.88 EURUSD at 1.14314 done (based on order #50)
+CS	0	00:09:27.417	Trade	2026.07.13 13:00:00   deal performed [#34 buy 0.88 EURUSD at 1.14314]
+CS	0	00:09:27.417	Trade	2026.07.13 13:00:00   order performed buy 0.88 at 1.14314 [#50 buy stop 0.88 EURUSD at 1.14314]
+CS	0	00:09:27.417	Trade	2026.07.13 13:00:00   order canceled [#51 sell stop 0.88 EURUSD at 1.14192]
+CS	0	00:09:27.417	CycleORB (EURUSD,M5)	2026.07.13 13:00:00   CTrade::OrderSend: cancel #51 [done]
+CS	0	00:09:27.417	CycleORB (EURUSD,M5)	2026.07.13 13:00:00   [CycleORB] DELETE order #51 magic=26110202 (NY OCO)
+CS	0	00:09:27.423	Trade	2026.07.13 13:42:42   stop loss triggered #50 buy 0.88 EURUSD 1.14314 sl: 1.14202 tp: 1.14538 [#52 sell 0.88 EURUSD at 1.14202]
+CS	0	00:09:27.423	Trades	2026.07.13 13:42:42   deal #35 sell 0.88 EURUSD at 1.14202 done (based on order #52)
+CS	0	00:09:27.423	Trade	2026.07.13 13:42:42   deal performed [#35 sell 0.88 EURUSD at 1.14202]
+CS	0	00:09:27.423	Trade	2026.07.13 13:42:42   order performed sell 0.88 at 1.14202 [#52 sell 0.88 EURUSD at 1.14202]
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:00   [CycleORB] RANGE NY 2026.07.14 12:00 hi=1.14150 lo=1.14036 range=114pt atr%=26.0 cost%=8.8 buffer=20pt risk=98.81
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:00   buy stop 0.73 EURUSD at 1.14170 sl: 1.14036 tp: 1.14438 (1.14133 / 1.14143)
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:00   CTrade::OrderSend: buy stop 0.73 EURUSD at 1.14170 sl: 1.14036 tp: 1.14438 [done]
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.73 @1.14170 sl=1.14036 tp=1.14438 magic=26110202 retcode=10009
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:00   sell stop 0.73 EURUSD at 1.14016 sl: 1.14150 tp: 1.13748 (1.14133 / 1.14143)
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:00   CTrade::OrderSend: sell stop 0.73 EURUSD at 1.14016 sl: 1.14150 tp: 1.13748 [done]
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.73 @1.14016 sl=1.14150 tp=1.13748 magic=26110202 retcode=10009
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:01   order [#53 buy stop 0.73 EURUSD at 1.14170] triggered
+CS	0	00:09:27.489	Trades	2026.07.14 12:30:01   deal #36 buy 0.73 EURUSD at 1.14202 done (based on order #53)
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:01   deal performed [#36 buy 0.73 EURUSD at 1.14202]
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:01   order performed buy 0.73 at 1.14202 [#53 buy stop 0.73 EURUSD at 1.14170]
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:01   order canceled [#54 sell stop 0.73 EURUSD at 1.14016]
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:01   CTrade::OrderSend: cancel #54 [done]
+CS	0	00:09:27.489	CycleORB (EURUSD,M5)	2026.07.14 12:30:01   [CycleORB] DELETE order #54 magic=26110202 (NY OCO)
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:03   take profit triggered #53 buy 0.73 EURUSD 1.14202 sl: 1.14036 tp: 1.14438 [#55 sell 0.73 EURUSD at 1.14438]
+CS	0	00:09:27.489	Trades	2026.07.14 12:30:03   deal #37 sell 0.73 EURUSD at 1.14468 done (based on order #55)
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:03   deal performed [#37 sell 0.73 EURUSD at 1.14468]
+CS	0	00:09:27.489	Trade	2026.07.14 12:30:03   order performed sell 0.73 at 1.14468 [#55 sell 0.73 EURUSD at 1.14438]
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:00   [CycleORB] RANGE NY 2026.07.15 12:00 hi=1.14150 lo=1.14057 range=93pt atr%=19.0 cost%=8.6 buffer=16pt risk=98.81
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:00   buy stop 0.9 EURUSD at 1.14166 sl: 1.14057 tp: 1.14384 (1.14139 / 1.14147)
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:00   CTrade::OrderSend: buy stop 0.90 EURUSD at 1.14166 sl: 1.14057 tp: 1.14384 [done]
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.90 @1.14166 sl=1.14057 tp=1.14384 magic=26110202 retcode=10009
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:00   sell stop 0.9 EURUSD at 1.14041 sl: 1.14150 tp: 1.13823 (1.14139 / 1.14147)
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:00   CTrade::OrderSend: sell stop 0.90 EURUSD at 1.14041 sl: 1.14150 tp: 1.13823 [done]
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.90 @1.14041 sl=1.14150 tp=1.13823 magic=26110202 retcode=10009
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:01   order [#56 buy stop 0.9 EURUSD at 1.14166] triggered
+CS	0	00:09:27.574	Trades	2026.07.15 12:30:01   deal #38 buy 0.9 EURUSD at 1.14174 done (based on order #56)
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:01   deal performed [#38 buy 0.9 EURUSD at 1.14174]
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:01   order performed buy 0.9 at 1.14174 [#56 buy stop 0.9 EURUSD at 1.14166]
+CS	0	00:09:27.574	Trade	2026.07.15 12:30:01   order canceled [#57 sell stop 0.9 EURUSD at 1.14041]
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:01   CTrade::OrderSend: cancel #57 [done]
+CS	0	00:09:27.574	CycleORB (EURUSD,M5)	2026.07.15 12:30:01   [CycleORB] DELETE order #57 magic=26110202 (NY OCO)
+CS	0	00:09:27.601	Trade	2026.07.15 14:44:26   take profit triggered #56 buy 0.9 EURUSD 1.14174 sl: 1.14057 tp: 1.14384 [#58 sell 0.9 EURUSD at 1.14384]
+CS	0	00:09:27.601	Trades	2026.07.15 14:44:26   deal #39 sell 0.9 EURUSD at 1.14384 done (based on order #58)
+CS	0	00:09:27.601	Trade	2026.07.15 14:44:26   deal performed [#39 sell 0.9 EURUSD at 1.14384]
+CS	0	00:09:27.601	Trade	2026.07.15 14:44:26   order performed sell 0.9 at 1.14384 [#58 sell 0.9 EURUSD at 1.14384]
+CS	0	00:09:27.651	CycleORB (EURUSD,M5)	2026.07.16 12:30:00   [CycleORB] SKIP NY 2026.07.16 12:00 hi=1.14705 lo=1.14595 range=110pt atr%=21.6 cost%=14.5 (cost too high vs range)
+CS	0	00:09:27.710	CycleORB (EURUSD,M5)	2026.07.17 12:30:00   [CycleORB] SKIP NY 2026.07.17 12:00 hi=1.14351 lo=1.14298 range=53pt atr%=10.5 cost%=7.5 (range/ATR outside band)
+CS	0	00:09:27.769	CycleORB (EURUSD,M5)	2026.07.20 12:30:00   [CycleORB] RANGE NY 2026.07.20 12:00 hi=1.14299 lo=1.14169 range=130pt atr%=30.4 cost%=3.1 buffer=8pt risk=98.81
+CS	0	00:09:27.769	Trade	2026.07.20 12:30:00   buy stop 0.71 EURUSD at 1.14307 sl: 1.14169 tp: 1.14583 (1.14191 / 1.14195)
+CS	0	00:09:27.769	CycleORB (EURUSD,M5)	2026.07.20 12:30:00   CTrade::OrderSend: buy stop 0.71 EURUSD at 1.14307 sl: 1.14169 tp: 1.14583 [done]
+CS	0	00:09:27.769	CycleORB (EURUSD,M5)	2026.07.20 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.71 @1.14307 sl=1.14169 tp=1.14583 magic=26110202 retcode=10009
+CS	0	00:09:27.769	Trade	2026.07.20 12:30:00   sell stop 0.71 EURUSD at 1.14161 sl: 1.14299 tp: 1.13885 (1.14191 / 1.14195)
+CS	0	00:09:27.769	CycleORB (EURUSD,M5)	2026.07.20 12:30:00   CTrade::OrderSend: sell stop 0.71 EURUSD at 1.14161 sl: 1.14299 tp: 1.13885 [done]
+CS	0	00:09:27.769	CycleORB (EURUSD,M5)	2026.07.20 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.71 @1.14161 sl=1.14299 tp=1.13885 magic=26110202 retcode=10009
+CS	0	00:09:27.777	Trade	2026.07.20 13:37:36   order [#60 sell stop 0.71 EURUSD at 1.14161] triggered
+CS	0	00:09:27.777	Trades	2026.07.20 13:37:36   deal #40 sell 0.71 EURUSD at 1.14161 done (based on order #60)
+CS	0	00:09:27.777	Trade	2026.07.20 13:37:36   deal performed [#40 sell 0.71 EURUSD at 1.14161]
+CS	0	00:09:27.777	Trade	2026.07.20 13:37:36   order performed sell 0.71 at 1.14161 [#60 sell stop 0.71 EURUSD at 1.14161]
+CS	0	00:09:27.777	Trade	2026.07.20 13:37:36   order canceled [#59 buy stop 0.71 EURUSD at 1.14307]
+CS	0	00:09:27.777	CycleORB (EURUSD,M5)	2026.07.20 13:37:36   CTrade::OrderSend: cancel #59 [done]
+CS	0	00:09:27.777	CycleORB (EURUSD,M5)	2026.07.20 13:37:36   [CycleORB] DELETE order #59 magic=26110202 (NY OCO)
+CS	0	00:09:27.810	Trade	2026.07.20 19:00:00   market buy 0.71 EURUSD, close #60 (1.14152 / 1.14157)
+CS	0	00:09:27.810	Trades	2026.07.20 19:00:00   deal #41 buy 0.71 EURUSD at 1.14157 done (based on order #61)
+CS	0	00:09:27.810	Trade	2026.07.20 19:00:00   deal performed [#41 buy 0.71 EURUSD at 1.14157]
+CS	0	00:09:27.810	Trade	2026.07.20 19:00:00   order performed buy 0.71 at 1.14157 [#61 buy 0.71 EURUSD at 1.14157]
+CS	0	00:09:27.810	CycleORB (EURUSD,M5)	2026.07.20 19:00:00   CTrade::OrderSend: market buy 0.71 position #60 EURUSD [done at 1.14157]
+CS	0	00:09:27.810	CycleORB (EURUSD,M5)	2026.07.20 19:00:00   [CycleORB] CLOSE position #60 magic=26110202 (NY time exit)
+CS	0	00:09:27.835	CycleORB (EURUSD,M5)	2026.07.21 12:30:00   [CycleORB] SKIP NY 2026.07.21 12:00 hi=1.14203 lo=1.14146 range=57pt atr%=13.2 cost%=7.0 (range/ATR outside band)
+CS	0	00:09:27.878	CycleORB (EURUSD,M5)	2026.07.22 12:30:00   [CycleORB] SKIP NY 2026.07.22 12:00 hi=1.14114 lo=1.14064 range=50pt atr%=11.1 cost%=8.0 (range/ATR outside band)
+CS	0	00:09:27.928	CycleORB (EURUSD,M5)	2026.07.23 12:30:00   [CycleORB] RANGE NY 2026.07.23 12:00 hi=1.13955 lo=1.13807 range=148pt atr%=33.7 cost%=6.1 buffer=18pt risk=98.81
+CS	0	00:09:27.928	Trade	2026.07.23 12:30:00   buy stop 0.59 EURUSD at 1.13973 sl: 1.13807 tp: 1.14305 (1.13842 / 1.13851)
+CS	0	00:09:27.928	CycleORB (EURUSD,M5)	2026.07.23 12:30:00   CTrade::OrderSend: buy stop 0.59 EURUSD at 1.13973 sl: 1.13807 tp: 1.14305 [done]
+CS	0	00:09:27.928	CycleORB (EURUSD,M5)	2026.07.23 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.59 @1.13973 sl=1.13807 tp=1.14305 magic=26110202 retcode=10009
+CS	0	00:09:27.929	Trade	2026.07.23 12:30:00   sell stop 0.59 EURUSD at 1.13789 sl: 1.13955 tp: 1.13457 (1.13842 / 1.13851)
+CS	0	00:09:27.929	CycleORB (EURUSD,M5)	2026.07.23 12:30:00   CTrade::OrderSend: sell stop 0.59 EURUSD at 1.13789 sl: 1.13955 tp: 1.13457 [done]
+CS	0	00:09:27.929	CycleORB (EURUSD,M5)	2026.07.23 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.59 @1.13789 sl=1.13955 tp=1.13457 magic=26110202 retcode=10009
+CS	0	00:09:27.931	Trade	2026.07.23 12:42:39   order [#63 sell stop 0.59 EURUSD at 1.13789] triggered
+CS	0	00:09:27.931	Trades	2026.07.23 12:42:39   deal #42 sell 0.59 EURUSD at 1.13789 done (based on order #63)
+CS	0	00:09:27.931	Trade	2026.07.23 12:42:39   deal performed [#42 sell 0.59 EURUSD at 1.13789]
+CS	0	00:09:27.931	Trade	2026.07.23 12:42:39   order performed sell 0.59 at 1.13789 [#63 sell stop 0.59 EURUSD at 1.13789]
+CS	0	00:09:27.931	Trade	2026.07.23 12:42:39   order canceled [#62 buy stop 0.59 EURUSD at 1.13973]
+CS	0	00:09:27.931	CycleORB (EURUSD,M5)	2026.07.23 12:42:39   CTrade::OrderSend: cancel #62 [done]
+CS	0	00:09:27.931	CycleORB (EURUSD,M5)	2026.07.23 12:42:39   [CycleORB] DELETE order #62 magic=26110202 (NY OCO)
+CS	0	00:09:27.989	Trade	2026.07.23 19:00:00   market buy 0.59 EURUSD, close #63 (1.13759 / 1.13763)
+CS	0	00:09:27.989	Trades	2026.07.23 19:00:00   deal #43 buy 0.59 EURUSD at 1.13763 done (based on order #64)
+CS	0	00:09:27.989	Trade	2026.07.23 19:00:00   deal performed [#43 buy 0.59 EURUSD at 1.13763]
+CS	0	00:09:27.989	Trade	2026.07.23 19:00:00   order performed buy 0.59 at 1.13763 [#64 buy 0.59 EURUSD at 1.13763]
+CS	0	00:09:27.989	CycleORB (EURUSD,M5)	2026.07.23 19:00:00   CTrade::OrderSend: market buy 0.59 position #63 EURUSD [done at 1.13763]
+CS	0	00:09:27.989	CycleORB (EURUSD,M5)	2026.07.23 19:00:00   [CycleORB] CLOSE position #63 magic=26110202 (NY time exit)
+CS	0	00:09:28.020	CycleORB (EURUSD,M5)	2026.07.24 12:30:00   [CycleORB] SKIP NY 2026.07.24 12:00 hi=1.13781 lo=1.13716 range=65pt atr%=14.3 cost%=6.2 (range/ATR outside band)
+CS	0	00:09:28.076	CycleORB (EURUSD,M5)	2026.07.27 12:30:00   [CycleORB] SKIP NY 2026.07.27 12:00 hi=1.13902 lo=1.13830 range=72pt atr%=15.5 cost%=9.7 (range/ATR outside band)
+CS	0	00:09:28.122	CycleORB (EURUSD,M5)	2026.07.28 12:30:00   [CycleORB] SKIP NY 2026.07.28 12:00 hi=1.13673 lo=1.13615 range=58pt atr%=12.4 cost%=8.6 (range/ATR outside band)
+CS	0	00:09:28.170	CycleORB (EURUSD,M5)	2026.07.29 12:30:00   [CycleORB] SKIP NY 2026.07.29 12:00 hi=1.13828 lo=1.13743 range=85pt atr%=17.4 cost%=4.7 (range/ATR outside band)
+CS	0	00:09:28.264	CycleORB (EURUSD,M5)	2026.07.30 12:30:00   [CycleORB] SKIP NY 2026.07.30 12:00 hi=1.14811 lo=1.14741 range=70pt atr%=13.7 cost%=11.4 (range/ATR outside band)
+CS	0	00:09:28.368	CycleORB (EURUSD,M5)	2026.07.31 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:28.431	CycleORB (EURUSD,M5)	2026.08.02 21:00:05   [CycleORB] CYCLE_END 202607 capital=9880.69 realized=342.15 floating=0.00 pnl=3.46% peak=4.24% state=ACTIVE 
+CS	0	00:09:28.431	CycleORB (EURUSD,M5)	2026.08.02 21:00:05   [CycleORB] CYCLE_BEGIN 202608 capital=10222.84 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:28.478	CycleORB (EURUSD,M5)	2026.08.03 12:30:00   [CycleORB] SKIP NY 2026.08.03 12:00 hi=1.15350 lo=1.15287 range=63pt atr%=11.8 cost%=6.3 (range/ATR outside band)
+CS	0	00:09:28.533	CycleORB (EURUSD,M5)	2026.08.04 12:30:00   [CycleORB] SKIP NY 2026.08.04 12:00 hi=1.15184 lo=1.15131 range=53pt atr%=9.6 cost%=9.4 (range/ATR outside band)
+CS	0	00:09:28.593	CycleORB (EURUSD,M5)	2026.08.05 12:30:00   [CycleORB] SKIP NY 2026.08.05 12:00 hi=1.15569 lo=1.15508 range=61pt atr%=10.8 cost%=9.8 (range/ATR outside band)
+CS	0	00:09:28.655	CycleORB (EURUSD,M5)	2026.08.06 12:30:00   [CycleORB] SKIP NY 2026.08.06 12:00 hi=1.15453 lo=1.15388 range=65pt atr%=11.7 cost%=7.7 (range/ATR outside band)
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:00   [CycleORB] RANGE NY 2026.08.07 12:00 hi=1.15375 lo=1.15261 range=114pt atr%=20.3 cost%=7.9 buffer=18pt risk=102.23
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:00   buy stop 0.77 EURUSD at 1.15393 sl: 1.15261 tp: 1.15657 (1.15275 / 1.15284)
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:00   CTrade::OrderSend: buy stop 0.77 EURUSD at 1.15393 sl: 1.15261 tp: 1.15657 [done]
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.77 @1.15393 sl=1.15261 tp=1.15657 magic=26110202 retcode=10009
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:00   sell stop 0.77 EURUSD at 1.15243 sl: 1.15375 tp: 1.14979 (1.15275 / 1.15284)
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:00   CTrade::OrderSend: sell stop 0.77 EURUSD at 1.15243 sl: 1.15375 tp: 1.14979 [done]
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.77 @1.15243 sl=1.15375 tp=1.14979 magic=26110202 retcode=10009
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:01   order [#65 buy stop 0.77 EURUSD at 1.15393] triggered
+CS	0	00:09:28.708	Trades	2026.08.07 12:30:01   deal #44 buy 0.77 EURUSD at 1.15416 done (based on order #65)
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:01   deal performed [#44 buy 0.77 EURUSD at 1.15416]
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:01   order performed buy 0.77 at 1.15416 [#65 buy stop 0.77 EURUSD at 1.15393]
+CS	0	00:09:28.708	Trade	2026.08.07 12:30:01   order canceled [#66 sell stop 0.77 EURUSD at 1.15243]
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:01   CTrade::OrderSend: cancel #66 [done]
+CS	0	00:09:28.708	CycleORB (EURUSD,M5)	2026.08.07 12:30:01   [CycleORB] DELETE order #66 magic=26110202 (NY OCO)
+CS	0	00:09:28.709	Trade	2026.08.07 12:30:09   take profit triggered #65 buy 0.77 EURUSD 1.15416 sl: 1.15261 tp: 1.15657 [#67 sell 0.77 EURUSD at 1.15657]
+CS	0	00:09:28.709	Trades	2026.08.07 12:30:09   deal #45 sell 0.77 EURUSD at 1.15658 done (based on order #67)
+CS	0	00:09:28.709	Trade	2026.08.07 12:30:09   deal performed [#45 sell 0.77 EURUSD at 1.15658]
+CS	0	00:09:28.709	Trade	2026.08.07 12:30:09   order performed sell 0.77 at 1.15658 [#67 sell 0.77 EURUSD at 1.15657]
+CS	0	00:09:28.780	CycleORB (EURUSD,M5)	2026.08.10 12:30:00   [CycleORB] SKIP NY 2026.08.10 12:00 hi=1.15548 lo=1.15465 range=83pt atr%=15.1 cost%=7.2 (range/ATR outside band)
+CS	0	00:09:28.827	CycleORB (EURUSD,M5)	2026.08.11 12:30:00   [CycleORB] SKIP NY 2026.08.11 12:00 hi=1.15401 lo=1.15335 range=66pt atr%=12.3 cost%=9.1 (range/ATR outside band)
+CS	0	00:09:28.861	CycleORB (EURUSD,M5)	2026.08.12 12:30:00   [CycleORB] SKIP NY 2026.08.12 12:00 hi=1.15478 lo=1.15409 range=69pt atr%=13.2 cost%=30.4 (range/ATR outside band)
+CS	0	00:09:28.917	CycleORB (EURUSD,M5)	2026.08.13 12:30:00   [CycleORB] SKIP NY 2026.08.13 12:00 hi=1.15346 lo=1.15298 range=48pt atr%=9.3 cost%=16.7 (range/ATR outside band)
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   [CycleORB] RANGE NY 2026.08.14 12:00 hi=1.15713 lo=1.15623 range=90pt atr%=18.0 cost%=8.9 buffer=16pt risk=102.23
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   buy stop 0.96 EURUSD at 1.15729 sl: 1.15623 tp: 1.15941 (1.15699 / 1.15707)
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   CTrade::OrderSend: buy stop 0.96 EURUSD at 1.15729 sl: 1.15623 tp: 1.15941 [done]
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.96 @1.15729 sl=1.15623 tp=1.15941 magic=26110202 retcode=10009
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   sell stop 0.96 EURUSD at 1.15607 sl: 1.15713 tp: 1.15395 (1.15699 / 1.15707)
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   CTrade::OrderSend: sell stop 0.96 EURUSD at 1.15607 sl: 1.15713 tp: 1.15395 [done]
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.96 @1.15607 sl=1.15713 tp=1.15395 magic=26110202 retcode=10009
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   order [#68 buy stop 0.96 EURUSD at 1.15729] triggered
+CS	0	00:09:28.966	Trades	2026.08.14 12:30:00   deal #46 buy 0.96 EURUSD at 1.15731 done (based on order #68)
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   deal performed [#46 buy 0.96 EURUSD at 1.15731]
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   order performed buy 0.96 at 1.15731 [#68 buy stop 0.96 EURUSD at 1.15729]
+CS	0	00:09:28.966	Trade	2026.08.14 12:30:00   order canceled [#69 sell stop 0.96 EURUSD at 1.15607]
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   CTrade::OrderSend: cancel #69 [done]
+CS	0	00:09:28.966	CycleORB (EURUSD,M5)	2026.08.14 12:30:00   [CycleORB] DELETE order #69 magic=26110202 (NY OCO)
+CS	0	00:09:28.974	Trade	2026.08.14 13:03:16   stop loss triggered #68 buy 0.96 EURUSD 1.15731 sl: 1.15623 tp: 1.15941 [#70 sell 0.96 EURUSD at 1.15623]
+CS	0	00:09:28.974	Trades	2026.08.14 13:03:16   deal #47 sell 0.96 EURUSD at 1.15623 done (based on order #70)
+CS	0	00:09:28.974	Trade	2026.08.14 13:03:16   deal performed [#47 sell 0.96 EURUSD at 1.15623]
+CS	0	00:09:28.974	Trade	2026.08.14 13:03:16   order performed sell 0.96 at 1.15623 [#70 sell 0.96 EURUSD at 1.15623]
+CS	0	00:09:29.027	CycleORB (EURUSD,M5)	2026.08.17 12:30:00   [CycleORB] RANGE NY 2026.08.17 12:00 hi=1.15960 lo=1.15868 range=92pt atr%=22.7 cost%=8.7 buffer=16pt risk=102.23
+CS	0	00:09:29.028	Trade	2026.08.17 12:30:00   buy stop 0.94 EURUSD at 1.15976 sl: 1.15868 tp: 1.16192 (1.15904 / 1.15912)
+CS	0	00:09:29.028	CycleORB (EURUSD,M5)	2026.08.17 12:30:00   CTrade::OrderSend: buy stop 0.94 EURUSD at 1.15976 sl: 1.15868 tp: 1.16192 [done]
+CS	0	00:09:29.028	CycleORB (EURUSD,M5)	2026.08.17 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.94 @1.15976 sl=1.15868 tp=1.16192 magic=26110202 retcode=10009
+CS	0	00:09:29.028	Trade	2026.08.17 12:30:00   sell stop 0.94 EURUSD at 1.15852 sl: 1.15960 tp: 1.15636 (1.15904 / 1.15912)
+CS	0	00:09:29.028	CycleORB (EURUSD,M5)	2026.08.17 12:30:00   CTrade::OrderSend: sell stop 0.94 EURUSD at 1.15852 sl: 1.15960 tp: 1.15636 [done]
+CS	0	00:09:29.028	CycleORB (EURUSD,M5)	2026.08.17 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.94 @1.15852 sl=1.15960 tp=1.15636 magic=26110202 retcode=10009
+CS	0	00:09:29.030	Trade	2026.08.17 12:59:21   order [#71 buy stop 0.94 EURUSD at 1.15976] triggered
+CS	0	00:09:29.030	Trades	2026.08.17 12:59:21   deal #48 buy 0.94 EURUSD at 1.15977 done (based on order #71)
+CS	0	00:09:29.030	Trade	2026.08.17 12:59:21   deal performed [#48 buy 0.94 EURUSD at 1.15977]
+CS	0	00:09:29.030	Trade	2026.08.17 12:59:21   order performed buy 0.94 at 1.15977 [#71 buy stop 0.94 EURUSD at 1.15976]
+CS	0	00:09:29.030	Trade	2026.08.17 12:59:21   order canceled [#72 sell stop 0.94 EURUSD at 1.15852]
+CS	0	00:09:29.030	CycleORB (EURUSD,M5)	2026.08.17 12:59:21   CTrade::OrderSend: cancel #72 [done]
+CS	0	00:09:29.030	CycleORB (EURUSD,M5)	2026.08.17 12:59:21   [CycleORB] DELETE order #72 magic=26110202 (NY OCO)
+CS	0	00:09:29.043	Trade	2026.08.17 14:38:58   stop loss triggered #71 buy 0.94 EURUSD 1.15977 sl: 1.15868 tp: 1.16192 [#73 sell 0.94 EURUSD at 1.15868]
+CS	0	00:09:29.043	Trades	2026.08.17 14:38:58   deal #49 sell 0.94 EURUSD at 1.15868 done (based on order #73)
+CS	0	00:09:29.043	Trade	2026.08.17 14:38:58   deal performed [#49 sell 0.94 EURUSD at 1.15868]
+CS	0	00:09:29.043	Trade	2026.08.17 14:38:58   order performed sell 0.94 at 1.15868 [#73 sell 0.94 EURUSD at 1.15868]
+CS	0	00:09:29.079	CycleORB (EURUSD,M5)	2026.08.18 12:30:00   [CycleORB] SKIP NY 2026.08.18 12:00 hi=1.15791 lo=1.15735 range=56pt atr%=15.2 cost%=12.5 (range/ATR outside band)
+CS	0	00:09:29.127	CycleORB (EURUSD,M5)	2026.08.19 12:30:00   [CycleORB] RANGE NY 2026.08.19 12:00 hi=1.16100 lo=1.16021 range=79pt atr%=22.2 cost%=7.6 buffer=12pt risk=102.23
+CS	0	00:09:29.127	Trade	2026.08.19 12:30:00   buy stop 1.12 EURUSD at 1.16112 sl: 1.16021 tp: 1.16294 (1.16063 / 1.16069)
+CS	0	00:09:29.127	CycleORB (EURUSD,M5)	2026.08.19 12:30:00   CTrade::OrderSend: buy stop 1.12 EURUSD at 1.16112 sl: 1.16021 tp: 1.16294 [done]
+CS	0	00:09:29.127	CycleORB (EURUSD,M5)	2026.08.19 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.12 @1.16112 sl=1.16021 tp=1.16294 magic=26110202 retcode=10009
+CS	0	00:09:29.127	Trade	2026.08.19 12:30:00   sell stop 1.12 EURUSD at 1.16009 sl: 1.16100 tp: 1.15827 (1.16063 / 1.16069)
+CS	0	00:09:29.127	CycleORB (EURUSD,M5)	2026.08.19 12:30:00   CTrade::OrderSend: sell stop 1.12 EURUSD at 1.16009 sl: 1.16100 tp: 1.15827 [done]
+CS	0	00:09:29.127	CycleORB (EURUSD,M5)	2026.08.19 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.12 @1.16009 sl=1.16100 tp=1.15827 magic=26110202 retcode=10009
+CS	0	00:09:29.128	Trade	2026.08.19 12:33:39   order [#74 buy stop 1.12 EURUSD at 1.16112] triggered
+CS	0	00:09:29.128	Trades	2026.08.19 12:33:39   deal #50 buy 1.12 EURUSD at 1.16112 done (based on order #74)
+CS	0	00:09:29.128	Trade	2026.08.19 12:33:39   deal performed [#50 buy 1.12 EURUSD at 1.16112]
+CS	0	00:09:29.128	Trade	2026.08.19 12:33:39   order performed buy 1.12 at 1.16112 [#74 buy stop 1.12 EURUSD at 1.16112]
+CS	0	00:09:29.128	Trade	2026.08.19 12:33:39   order canceled [#75 sell stop 1.12 EURUSD at 1.16009]
+CS	0	00:09:29.128	CycleORB (EURUSD,M5)	2026.08.19 12:33:39   CTrade::OrderSend: cancel #75 [done]
+CS	0	00:09:29.128	CycleORB (EURUSD,M5)	2026.08.19 12:33:39   [CycleORB] DELETE order #75 magic=26110202 (NY OCO)
+CS	0	00:09:29.131	Trade	2026.08.19 12:37:54   take profit triggered #74 buy 1.12 EURUSD 1.16112 sl: 1.16021 tp: 1.16294 [#76 sell 1.12 EURUSD at 1.16294]
+CS	0	00:09:29.131	Trades	2026.08.19 12:37:54   deal #51 sell 1.12 EURUSD at 1.16294 done (based on order #76)
+CS	0	00:09:29.131	Trade	2026.08.19 12:37:54   deal performed [#51 sell 1.12 EURUSD at 1.16294]
+CS	0	00:09:29.131	Trade	2026.08.19 12:37:54   order performed sell 1.12 at 1.16294 [#76 sell 1.12 EURUSD at 1.16294]
+CS	0	00:09:29.215	CycleORB (EURUSD,M5)	2026.08.20 12:30:00   [CycleORB] RANGE NY 2026.08.20 12:00 hi=1.16899 lo=1.16775 range=124pt atr%=31.4 cost%=8.9 buffer=22pt risk=102.23
+CS	0	00:09:29.215	Trade	2026.08.20 12:30:00   buy stop 0.7 EURUSD at 1.16921 sl: 1.16775 tp: 1.17213 (1.16859 / 1.16870)
+CS	0	00:09:29.215	CycleORB (EURUSD,M5)	2026.08.20 12:30:00   CTrade::OrderSend: buy stop 0.70 EURUSD at 1.16921 sl: 1.16775 tp: 1.17213 [done]
+CS	0	00:09:29.215	CycleORB (EURUSD,M5)	2026.08.20 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.70 @1.16921 sl=1.16775 tp=1.17213 magic=26110202 retcode=10009
+CS	0	00:09:29.215	Trade	2026.08.20 12:30:00   sell stop 0.7 EURUSD at 1.16753 sl: 1.16899 tp: 1.16461 (1.16859 / 1.16870)
+CS	0	00:09:29.215	CycleORB (EURUSD,M5)	2026.08.20 12:30:00   CTrade::OrderSend: sell stop 0.70 EURUSD at 1.16753 sl: 1.16899 tp: 1.16461 [done]
+CS	0	00:09:29.215	CycleORB (EURUSD,M5)	2026.08.20 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.70 @1.16753 sl=1.16899 tp=1.16461 magic=26110202 retcode=10009
+CS	0	00:09:29.221	Trade	2026.08.20 13:01:22   order [#77 buy stop 0.7 EURUSD at 1.16921] triggered
+CS	0	00:09:29.221	Trades	2026.08.20 13:01:22   deal #52 buy 0.7 EURUSD at 1.16921 done (based on order #77)
+CS	0	00:09:29.221	Trade	2026.08.20 13:01:22   deal performed [#52 buy 0.7 EURUSD at 1.16921]
+CS	0	00:09:29.221	Trade	2026.08.20 13:01:22   order performed buy 0.7 at 1.16921 [#77 buy stop 0.7 EURUSD at 1.16921]
+CS	0	00:09:29.221	Trade	2026.08.20 13:01:22   order canceled [#78 sell stop 0.7 EURUSD at 1.16753]
+CS	0	00:09:29.221	CycleORB (EURUSD,M5)	2026.08.20 13:01:22   CTrade::OrderSend: cancel #78 [done]
+CS	0	00:09:29.221	CycleORB (EURUSD,M5)	2026.08.20 13:01:22   [CycleORB] DELETE order #78 magic=26110202 (NY OCO)
+CS	0	00:09:29.231	Trade	2026.08.20 13:47:22   stop loss triggered #77 buy 0.7 EURUSD 1.16921 sl: 1.16775 tp: 1.17213 [#79 sell 0.7 EURUSD at 1.16775]
+CS	0	00:09:29.231	Trades	2026.08.20 13:47:22   deal #53 sell 0.7 EURUSD at 1.16775 done (based on order #79)
+CS	0	00:09:29.231	Trade	2026.08.20 13:47:22   deal performed [#53 sell 0.7 EURUSD at 1.16775]
+CS	0	00:09:29.231	Trade	2026.08.20 13:47:22   order performed sell 0.7 at 1.16775 [#79 sell 0.7 EURUSD at 1.16775]
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:00   [CycleORB] RANGE NY 2026.08.21 12:00 hi=1.17028 lo=1.16942 range=86pt atr%=21.4 cost%=7.0 buffer=12pt risk=102.23
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:00   buy stop 1.04 EURUSD at 1.17040 sl: 1.16942 tp: 1.17236 (1.16944 / 1.16950)
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:00   CTrade::OrderSend: buy stop 1.04 EURUSD at 1.17040 sl: 1.16942 tp: 1.17236 [done]
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.04 @1.17040 sl=1.16942 tp=1.17236 magic=26110202 retcode=10009
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:00   sell stop 1.04 EURUSD at 1.16930 sl: 1.17028 tp: 1.16734 (1.16944 / 1.16950)
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:00   CTrade::OrderSend: sell stop 1.04 EURUSD at 1.16930 sl: 1.17028 tp: 1.16734 [done]
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.04 @1.16930 sl=1.17028 tp=1.16734 magic=26110202 retcode=10009
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:10   order [#81 sell stop 1.04 EURUSD at 1.16930] triggered
+CS	0	00:09:29.305	Trades	2026.08.21 12:30:10   deal #54 sell 1.04 EURUSD at 1.16929 done (based on order #81)
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:10   deal performed [#54 sell 1.04 EURUSD at 1.16929]
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:10   order performed sell 1.04 at 1.16929 [#81 sell stop 1.04 EURUSD at 1.16930]
+CS	0	00:09:29.305	Trade	2026.08.21 12:30:10   order canceled [#80 buy stop 1.04 EURUSD at 1.17040]
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:10   CTrade::OrderSend: cancel #80 [done]
+CS	0	00:09:29.305	CycleORB (EURUSD,M5)	2026.08.21 12:30:10   [CycleORB] DELETE order #80 magic=26110202 (NY OCO)
+CS	0	00:09:29.326	Trade	2026.08.21 14:29:58   take profit triggered #81 sell 1.04 EURUSD 1.16929 sl: 1.17028 tp: 1.16734 [#82 buy 1.04 EURUSD at 1.16734]
+CS	0	00:09:29.326	Trades	2026.08.21 14:29:58   deal #55 buy 1.04 EURUSD at 1.16734 done (based on order #82)
+CS	0	00:09:29.326	Trade	2026.08.21 14:29:58   deal performed [#55 buy 1.04 EURUSD at 1.16734]
+CS	0	00:09:29.326	Trade	2026.08.21 14:29:58   order performed buy 1.04 at 1.16734 [#82 buy 1.04 EURUSD at 1.16734]
+CS	0	00:09:29.379	CycleORB (EURUSD,M5)	2026.08.24 12:30:00   [CycleORB] RANGE NY 2026.08.24 12:00 hi=1.16732 lo=1.16616 range=116pt atr%=29.6 cost%=6.0 buffer=14pt risk=102.23
+CS	0	00:09:29.379	Trade	2026.08.24 12:30:00   buy stop 0.78 EURUSD at 1.16746 sl: 1.16616 tp: 1.17006 (1.16729 / 1.16736)
+CS	0	00:09:29.379	CycleORB (EURUSD,M5)	2026.08.24 12:30:00   CTrade::OrderSend: buy stop 0.78 EURUSD at 1.16746 sl: 1.16616 tp: 1.17006 [done]
+CS	0	00:09:29.379	CycleORB (EURUSD,M5)	2026.08.24 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.78 @1.16746 sl=1.16616 tp=1.17006 magic=26110202 retcode=10009
+CS	0	00:09:29.379	Trade	2026.08.24 12:30:00   sell stop 0.78 EURUSD at 1.16602 sl: 1.16732 tp: 1.16342 (1.16729 / 1.16736)
+CS	0	00:09:29.379	CycleORB (EURUSD,M5)	2026.08.24 12:30:00   CTrade::OrderSend: sell stop 0.78 EURUSD at 1.16602 sl: 1.16732 tp: 1.16342 [done]
+CS	0	00:09:29.379	CycleORB (EURUSD,M5)	2026.08.24 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.78 @1.16602 sl=1.16732 tp=1.16342 magic=26110202 retcode=10009
+CS	0	00:09:29.386	Trade	2026.08.24 13:16:48   order [#83 buy stop 0.78 EURUSD at 1.16746] triggered
+CS	0	00:09:29.386	Trades	2026.08.24 13:16:48   deal #56 buy 0.78 EURUSD at 1.16746 done (based on order #83)
+CS	0	00:09:29.386	Trade	2026.08.24 13:16:48   deal performed [#56 buy 0.78 EURUSD at 1.16746]
+CS	0	00:09:29.386	Trade	2026.08.24 13:16:48   order performed buy 0.78 at 1.16746 [#83 buy stop 0.78 EURUSD at 1.16746]
+CS	0	00:09:29.386	Trade	2026.08.24 13:16:48   order canceled [#84 sell stop 0.78 EURUSD at 1.16602]
+CS	0	00:09:29.386	CycleORB (EURUSD,M5)	2026.08.24 13:16:48   CTrade::OrderSend: cancel #84 [done]
+CS	0	00:09:29.386	CycleORB (EURUSD,M5)	2026.08.24 13:16:48   [CycleORB] DELETE order #84 magic=26110202 (NY OCO)
+CS	0	00:09:29.420	Trade	2026.08.24 17:05:51   stop loss triggered #83 buy 0.78 EURUSD 1.16746 sl: 1.16616 tp: 1.17006 [#85 sell 0.78 EURUSD at 1.16616]
+CS	0	00:09:29.420	Trades	2026.08.24 17:05:51   deal #57 sell 0.78 EURUSD at 1.16616 done (based on order #85)
+CS	0	00:09:29.420	Trade	2026.08.24 17:05:51   deal performed [#57 sell 0.78 EURUSD at 1.16616]
+CS	0	00:09:29.420	Trade	2026.08.24 17:05:51   order performed sell 0.78 at 1.16616 [#85 sell 0.78 EURUSD at 1.16616]
+CS	0	00:09:29.461	CycleORB (EURUSD,M5)	2026.08.25 12:30:00   [CycleORB] SKIP NY 2026.08.25 12:00 hi=1.16642 lo=1.16593 range=49pt atr%=13.2 cost%=16.3 (range/ATR outside band)
+CS	0	00:09:29.511	CycleORB (EURUSD,M5)	2026.08.26 12:30:00   [CycleORB] SKIP NY 2026.08.26 12:00 hi=1.16744 lo=1.16678 range=66pt atr%=17.4 cost%=28.8 (range/ATR outside band)
+CS	0	00:09:29.564	CycleORB (EURUSD,M5)	2026.08.27 12:30:00   [CycleORB] SKIP NY 2026.08.27 12:00 hi=1.16455 lo=1.16407 range=48pt atr%=12.4 cost%=18.8 (range/ATR outside band)
+CS	0	00:09:29.614	CycleORB (EURUSD,M5)	2026.08.28 12:30:00   [CycleORB] SKIP NY 2026.08.28 12:00 hi=1.16458 lo=1.16415 range=43pt atr%=11.0 cost%=16.3 (range/ATR outside band)
+CS	0	00:09:29.749	CycleORB (EURUSD,M5)	2026.08.31 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:29.789	CycleORB (EURUSD,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_END 202608 capital=10222.84 realized=183.24 floating=0.00 pnl=1.79% peak=2.78% state=ACTIVE 
+CS	0	00:09:29.789	CycleORB (EURUSD,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_BEGIN 202609 capital=10406.08 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:29.825	CycleORB (EURUSD,M5)	2026.09.01 12:30:00   [CycleORB] SKIP NY 2026.09.01 12:00 hi=1.15943 lo=1.15880 range=63pt atr%=16.1 cost%=9.5 (range/ATR outside band)
+CS	0	00:09:29.898	CycleORB (EURUSD,M5)	2026.09.02 12:30:00   [CycleORB] RANGE NY 2026.09.02 12:00 hi=1.15854 lo=1.15763 range=91pt atr%=22.2 cost%=7.7 buffer=14pt risk=104.06
+CS	0	00:09:29.898	Trade	2026.09.02 12:30:00   buy stop 0.99 EURUSD at 1.15868 sl: 1.15763 tp: 1.16078 (1.15820 / 1.15827)
+CS	0	00:09:29.898	CycleORB (EURUSD,M5)	2026.09.02 12:30:00   CTrade::OrderSend: buy stop 0.99 EURUSD at 1.15868 sl: 1.15763 tp: 1.16078 [done]
+CS	0	00:09:29.898	CycleORB (EURUSD,M5)	2026.09.02 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.99 @1.15868 sl=1.15763 tp=1.16078 magic=26110202 retcode=10009
+CS	0	00:09:29.898	Trade	2026.09.02 12:30:00   sell stop 0.99 EURUSD at 1.15749 sl: 1.15854 tp: 1.15539 (1.15820 / 1.15827)
+CS	0	00:09:29.898	CycleORB (EURUSD,M5)	2026.09.02 12:30:00   CTrade::OrderSend: sell stop 0.99 EURUSD at 1.15749 sl: 1.15854 tp: 1.15539 [done]
+CS	0	00:09:29.898	CycleORB (EURUSD,M5)	2026.09.02 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.99 @1.15749 sl=1.15854 tp=1.15539 magic=26110202 retcode=10009
+CS	0	00:09:29.907	Trade	2026.09.02 13:22:06   order [#86 buy stop 0.99 EURUSD at 1.15868] triggered
+CS	0	00:09:29.907	Trades	2026.09.02 13:22:06   deal #58 buy 0.99 EURUSD at 1.15868 done (based on order #86)
+CS	0	00:09:29.907	Trade	2026.09.02 13:22:06   deal performed [#58 buy 0.99 EURUSD at 1.15868]
+CS	0	00:09:29.907	Trade	2026.09.02 13:22:06   order performed buy 0.99 at 1.15868 [#86 buy stop 0.99 EURUSD at 1.15868]
+CS	0	00:09:29.907	Trade	2026.09.02 13:22:06   order canceled [#87 sell stop 0.99 EURUSD at 1.15749]
+CS	0	00:09:29.907	CycleORB (EURUSD,M5)	2026.09.02 13:22:06   CTrade::OrderSend: cancel #87 [done]
+CS	0	00:09:29.907	CycleORB (EURUSD,M5)	2026.09.02 13:22:06   [CycleORB] DELETE order #87 magic=26110202 (NY OCO)
+CS	0	00:09:29.910	Trade	2026.09.02 13:27:04   take profit triggered #86 buy 0.99 EURUSD 1.15868 sl: 1.15763 tp: 1.16078 [#88 sell 0.99 EURUSD at 1.16078]
+CS	0	00:09:29.910	Trades	2026.09.02 13:27:04   deal #59 sell 0.99 EURUSD at 1.16078 done (based on order #88)
+CS	0	00:09:29.910	Trade	2026.09.02 13:27:04   deal performed [#59 sell 0.99 EURUSD at 1.16078]
+CS	0	00:09:29.910	Trade	2026.09.02 13:27:04   order performed sell 0.99 at 1.16078 [#88 sell 0.99 EURUSD at 1.16078]
+CS	0	00:09:29.975	CycleORB (EURUSD,M5)	2026.09.03 12:30:00   [CycleORB] SKIP NY 2026.09.03 12:00 hi=1.16167 lo=1.16081 range=86pt atr%=21.0 cost%=11.6 (cost too high vs range)
+CS	0	00:09:30.039	CycleORB (EURUSD,M5)	2026.09.04 12:30:00   [CycleORB] SKIP NY 2026.09.04 12:00 hi=1.16268 lo=1.16200 range=68pt atr%=15.6 cost%=45.6 (range/ATR outside band)
+CS	0	00:09:30.113	CycleORB (EURUSD,M5)	2026.09.07 12:30:00   [CycleORB] SKIP NY 2026.09.07 12:00 hi=1.16267 lo=1.16206 range=61pt atr%=16.6 cost%=11.5 (range/ATR outside band)
+CS	0	00:09:30.153	CycleORB (EURUSD,M5)	2026.09.08 12:30:00   [CycleORB] SKIP NY 2026.09.08 12:00 hi=1.16167 lo=1.16104 range=63pt atr%=17.6 cost%=11.1 (cost too high vs range)
+CS	0	00:09:30.207	CycleORB (EURUSD,M5)	2026.09.09 12:30:00   [CycleORB] RANGE NY 2026.09.09 12:00 hi=1.16540 lo=1.16454 range=86pt atr%=23.7 cost%=8.1 buffer=14pt risk=104.06
+CS	0	00:09:30.207	Trade	2026.09.09 12:30:00   buy stop 1.04 EURUSD at 1.16554 sl: 1.16454 tp: 1.16754 (1.16465 / 1.16472)
+CS	0	00:09:30.207	CycleORB (EURUSD,M5)	2026.09.09 12:30:00   CTrade::OrderSend: buy stop 1.04 EURUSD at 1.16554 sl: 1.16454 tp: 1.16754 [done]
+CS	0	00:09:30.207	CycleORB (EURUSD,M5)	2026.09.09 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.04 @1.16554 sl=1.16454 tp=1.16754 magic=26110202 retcode=10009
+CS	0	00:09:30.207	Trade	2026.09.09 12:30:00   sell stop 1.04 EURUSD at 1.16440 sl: 1.16540 tp: 1.16240 (1.16465 / 1.16472)
+CS	0	00:09:30.207	CycleORB (EURUSD,M5)	2026.09.09 12:30:00   CTrade::OrderSend: sell stop 1.04 EURUSD at 1.16440 sl: 1.16540 tp: 1.16240 [done]
+CS	0	00:09:30.207	CycleORB (EURUSD,M5)	2026.09.09 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.04 @1.16440 sl=1.16540 tp=1.16240 magic=26110202 retcode=10009
+CS	0	00:09:30.209	Trade	2026.09.09 12:49:29   order [#90 sell stop 1.04 EURUSD at 1.16440] triggered
+CS	0	00:09:30.209	Trades	2026.09.09 12:49:29   deal #60 sell 1.04 EURUSD at 1.16440 done (based on order #90)
+CS	0	00:09:30.209	Trade	2026.09.09 12:49:29   deal performed [#60 sell 1.04 EURUSD at 1.16440]
+CS	0	00:09:30.209	Trade	2026.09.09 12:49:29   order performed sell 1.04 at 1.16440 [#90 sell stop 1.04 EURUSD at 1.16440]
+CS	0	00:09:30.209	Trade	2026.09.09 12:49:29   order canceled [#89 buy stop 1.04 EURUSD at 1.16554]
+CS	0	00:09:30.209	CycleORB (EURUSD,M5)	2026.09.09 12:49:29   CTrade::OrderSend: cancel #89 [done]
+CS	0	00:09:30.209	CycleORB (EURUSD,M5)	2026.09.09 12:49:29   [CycleORB] DELETE order #89 magic=26110202 (NY OCO)
+CS	0	00:09:30.241	Trade	2026.09.09 15:12:08   take profit triggered #90 sell 1.04 EURUSD 1.16440 sl: 1.16540 tp: 1.16240 [#91 buy 1.04 EURUSD at 1.16240]
+CS	0	00:09:30.241	Trades	2026.09.09 15:12:08   deal #61 buy 1.04 EURUSD at 1.16240 done (based on order #91)
+CS	0	00:09:30.241	Trade	2026.09.09 15:12:08   deal performed [#61 buy 1.04 EURUSD at 1.16240]
+CS	0	00:09:30.241	Trade	2026.09.09 15:12:08   order performed buy 1.04 at 1.16240 [#91 buy 1.04 EURUSD at 1.16240]
+CS	0	00:09:30.282	CycleORB (EURUSD,M5)	2026.09.10 12:30:00   [CycleORB] SKIP NY 2026.09.10 12:00 hi=1.16244 lo=1.16097 range=147pt atr%=40.4 cost%=8.8 (range/ATR outside band)
+CS	0	00:09:30.356	CycleORB (EURUSD,M5)	2026.09.11 12:30:00   [CycleORB] SKIP NY 2026.09.11 12:00 hi=1.15971 lo=1.15906 range=65pt atr%=17.1 cost%=30.8 (range/ATR outside band)
+CS	0	00:09:30.445	CycleORB (EURUSD,M5)	2026.09.14 12:30:00   [CycleORB] RANGE NY 2026.09.14 12:00 hi=1.15518 lo=1.15401 range=117pt atr%=31.0 cost%=5.1 buffer=12pt risk=104.06
+CS	0	00:09:30.445	Trade	2026.09.14 12:30:00   buy stop 0.8 EURUSD at 1.15530 sl: 1.15401 tp: 1.15788 (1.15408 / 1.15414)
+CS	0	00:09:30.445	CycleORB (EURUSD,M5)	2026.09.14 12:30:00   CTrade::OrderSend: buy stop 0.80 EURUSD at 1.15530 sl: 1.15401 tp: 1.15788 [done]
+CS	0	00:09:30.446	CycleORB (EURUSD,M5)	2026.09.14 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.80 @1.15530 sl=1.15401 tp=1.15788 magic=26110202 retcode=10009
+CS	0	00:09:30.446	Trade	2026.09.14 12:30:00   sell stop 0.8 EURUSD at 1.15389 sl: 1.15518 tp: 1.15131 (1.15408 / 1.15414)
+CS	0	00:09:30.446	CycleORB (EURUSD,M5)	2026.09.14 12:30:00   CTrade::OrderSend: sell stop 0.80 EURUSD at 1.15389 sl: 1.15518 tp: 1.15131 [done]
+CS	0	00:09:30.446	CycleORB (EURUSD,M5)	2026.09.14 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.80 @1.15389 sl=1.15518 tp=1.15131 magic=26110202 retcode=10009
+CS	0	00:09:30.446	Trade	2026.09.14 12:33:06   order [#93 sell stop 0.8 EURUSD at 1.15389] triggered
+CS	0	00:09:30.446	Trades	2026.09.14 12:33:06   deal #62 sell 0.8 EURUSD at 1.15389 done (based on order #93)
+CS	0	00:09:30.446	Trade	2026.09.14 12:33:06   deal performed [#62 sell 0.8 EURUSD at 1.15389]
+CS	0	00:09:30.446	Trade	2026.09.14 12:33:06   order performed sell 0.8 at 1.15389 [#93 sell stop 0.8 EURUSD at 1.15389]
+CS	0	00:09:30.446	Trade	2026.09.14 12:33:06   order canceled [#92 buy stop 0.8 EURUSD at 1.15530]
+CS	0	00:09:30.446	CycleORB (EURUSD,M5)	2026.09.14 12:33:06   CTrade::OrderSend: cancel #92 [done]
+CS	0	00:09:30.446	CycleORB (EURUSD,M5)	2026.09.14 12:33:06   [CycleORB] DELETE order #92 magic=26110202 (NY OCO)
+CS	0	00:09:30.498	Trade	2026.09.14 16:10:37   stop loss triggered #93 sell 0.8 EURUSD 1.15389 sl: 1.15518 tp: 1.15131 [#94 buy 0.8 EURUSD at 1.15518]
+CS	0	00:09:30.498	Trades	2026.09.14 16:10:37   deal #63 buy 0.8 EURUSD at 1.15518 done (based on order #94)
+CS	0	00:09:30.498	Trade	2026.09.14 16:10:37   deal performed [#63 buy 0.8 EURUSD at 1.15518]
+CS	0	00:09:30.498	Trade	2026.09.14 16:10:37   order performed buy 0.8 at 1.15518 [#94 buy 0.8 EURUSD at 1.15518]
+CS	0	00:09:30.545	CycleORB (EURUSD,M5)	2026.09.15 12:30:00   [CycleORB] SKIP NY 2026.09.15 12:00 hi=1.15419 lo=1.15380 range=39pt atr%=10.5 cost%=17.9 (range/ATR outside band)
+CS	0	00:09:30.599	CycleORB (EURUSD,M5)	2026.09.16 12:30:00   [CycleORB] SKIP NY 2026.09.16 12:00 hi=1.15382 lo=1.15296 range=86pt atr%=22.7 cost%=10.5 (cost too high vs range)
+CS	0	00:09:30.677	CycleORB (EURUSD,M5)	2026.09.17 12:30:00   [CycleORB] SKIP NY 2026.09.17 12:00 hi=1.14955 lo=1.14716 range=239pt atr%=56.3 cost%=4.2 (range/ATR outside band)
+CS	0	00:09:30.733	CycleORB (EURUSD,M5)	2026.09.18 12:30:00   [CycleORB] RANGE NY 2026.09.18 12:00 hi=1.14642 lo=1.14546 range=96pt atr%=22.5 cost%=6.3 buffer=12pt risk=104.06
+CS	0	00:09:30.733	Trade	2026.09.18 12:30:00   buy stop 0.96 EURUSD at 1.14654 sl: 1.14546 tp: 1.14870 (1.14570 / 1.14576)
+CS	0	00:09:30.733	CycleORB (EURUSD,M5)	2026.09.18 12:30:00   CTrade::OrderSend: buy stop 0.96 EURUSD at 1.14654 sl: 1.14546 tp: 1.14870 [done]
+CS	0	00:09:30.733	CycleORB (EURUSD,M5)	2026.09.18 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.96 @1.14654 sl=1.14546 tp=1.14870 magic=26110202 retcode=10009
+CS	0	00:09:30.733	Trade	2026.09.18 12:30:00   sell stop 0.96 EURUSD at 1.14534 sl: 1.14642 tp: 1.14318 (1.14570 / 1.14576)
+CS	0	00:09:30.733	CycleORB (EURUSD,M5)	2026.09.18 12:30:00   CTrade::OrderSend: sell stop 0.96 EURUSD at 1.14534 sl: 1.14642 tp: 1.14318 [done]
+CS	0	00:09:30.733	CycleORB (EURUSD,M5)	2026.09.18 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.96 @1.14534 sl=1.14642 tp=1.14318 magic=26110202 retcode=10009
+CS	0	00:09:30.735	Trade	2026.09.18 12:46:35   order [#95 buy stop 0.96 EURUSD at 1.14654] triggered
+CS	0	00:09:30.735	Trades	2026.09.18 12:46:35   deal #64 buy 0.96 EURUSD at 1.14654 done (based on order #95)
+CS	0	00:09:30.735	Trade	2026.09.18 12:46:35   deal performed [#64 buy 0.96 EURUSD at 1.14654]
+CS	0	00:09:30.735	Trade	2026.09.18 12:46:35   order performed buy 0.96 at 1.14654 [#95 buy stop 0.96 EURUSD at 1.14654]
+CS	0	00:09:30.735	Trade	2026.09.18 12:46:35   order canceled [#96 sell stop 0.96 EURUSD at 1.14534]
+CS	0	00:09:30.735	CycleORB (EURUSD,M5)	2026.09.18 12:46:35   CTrade::OrderSend: cancel #96 [done]
+CS	0	00:09:30.735	CycleORB (EURUSD,M5)	2026.09.18 12:46:35   [CycleORB] DELETE order #96 magic=26110202 (NY OCO)
+CS	0	00:09:30.781	Trade	2026.09.18 19:00:00   market sell 0.96 EURUSD, close #95 (1.14831 / 1.14837)
+CS	0	00:09:30.781	Trades	2026.09.18 19:00:00   deal #65 sell 0.96 EURUSD at 1.14831 done (based on order #97)
+CS	0	00:09:30.781	Trade	2026.09.18 19:00:00   deal performed [#65 sell 0.96 EURUSD at 1.14831]
+CS	0	00:09:30.781	Trade	2026.09.18 19:00:00   order performed sell 0.96 at 1.14831 [#97 sell 0.96 EURUSD at 1.14831]
+CS	0	00:09:30.781	CycleORB (EURUSD,M5)	2026.09.18 19:00:00   CTrade::OrderSend: market sell 0.96 position #95 EURUSD [done at 1.14831]
+CS	0	00:09:30.781	CycleORB (EURUSD,M5)	2026.09.18 19:00:00   [CycleORB] CLOSE position #95 magic=26110202 (NY time exit)
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:30:00   [CycleORB] RANGE NY 2026.09.21 12:00 hi=1.14954 lo=1.14863 range=91pt atr%=23.5 cost%=6.6 buffer=12pt risk=104.06
+CS	0	00:09:30.812	Trade	2026.09.21 12:30:00   buy stop 1.01 EURUSD at 1.14966 sl: 1.14863 tp: 1.15172 (1.14873 / 1.14879)
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:30:00   CTrade::OrderSend: buy stop 1.01 EURUSD at 1.14966 sl: 1.14863 tp: 1.15172 [done]
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.01 @1.14966 sl=1.14863 tp=1.15172 magic=26110202 retcode=10009
+CS	0	00:09:30.812	Trade	2026.09.21 12:30:00   sell stop 1.01 EURUSD at 1.14851 sl: 1.14954 tp: 1.14645 (1.14873 / 1.14879)
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:30:00   CTrade::OrderSend: sell stop 1.01 EURUSD at 1.14851 sl: 1.14954 tp: 1.14645 [done]
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.01 @1.14851 sl=1.14954 tp=1.14645 magic=26110202 retcode=10009
+CS	0	00:09:30.812	Trade	2026.09.21 12:38:35   order [#99 sell stop 1.01 EURUSD at 1.14851] triggered
+CS	0	00:09:30.812	Trades	2026.09.21 12:38:35   deal #66 sell 1.01 EURUSD at 1.14851 done (based on order #99)
+CS	0	00:09:30.812	Trade	2026.09.21 12:38:35   deal performed [#66 sell 1.01 EURUSD at 1.14851]
+CS	0	00:09:30.812	Trade	2026.09.21 12:38:35   order performed sell 1.01 at 1.14851 [#99 sell stop 1.01 EURUSD at 1.14851]
+CS	0	00:09:30.812	Trade	2026.09.21 12:38:35   order canceled [#98 buy stop 1.01 EURUSD at 1.14966]
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:38:35   CTrade::OrderSend: cancel #98 [done]
+CS	0	00:09:30.812	CycleORB (EURUSD,M5)	2026.09.21 12:38:35   [CycleORB] DELETE order #98 magic=26110202 (NY OCO)
+CS	0	00:09:30.846	Trade	2026.09.21 18:31:17   take profit triggered #99 sell 1.01 EURUSD 1.14851 sl: 1.14954 tp: 1.14645 [#100 buy 1.01 EURUSD at 1.14645]
+CS	0	00:09:30.846	Trades	2026.09.21 18:31:17   deal #67 buy 1.01 EURUSD at 1.14645 done (based on order #100)
+CS	0	00:09:30.846	Trade	2026.09.21 18:31:17   deal performed [#67 buy 1.01 EURUSD at 1.14645]
+CS	0	00:09:30.846	Trade	2026.09.21 18:31:17   order performed buy 1.01 at 1.14645 [#100 buy 1.01 EURUSD at 1.14645]
+CS	0	00:09:30.889	CycleORB (EURUSD,M5)	2026.09.22 12:30:00   [CycleORB] SKIP NY 2026.09.22 12:00 hi=1.14665 lo=1.14618 range=47pt atr%=12.5 cost%=10.6 (range/ATR outside band)
+CS	0	00:09:30.958	CycleORB (EURUSD,M5)	2026.09.23 12:30:00   [CycleORB] RANGE NY 2026.09.23 12:00 hi=1.14123 lo=1.14029 range=94pt atr%=23.3 cost%=6.4 buffer=12pt risk=104.06
+CS	0	00:09:30.958	Trade	2026.09.23 12:30:00   buy stop 0.98 EURUSD at 1.14135 sl: 1.14029 tp: 1.14347 (1.14032 / 1.14038)
+CS	0	00:09:30.958	CycleORB (EURUSD,M5)	2026.09.23 12:30:00   CTrade::OrderSend: buy stop 0.98 EURUSD at 1.14135 sl: 1.14029 tp: 1.14347 [done]
+CS	0	00:09:30.958	CycleORB (EURUSD,M5)	2026.09.23 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.98 @1.14135 sl=1.14029 tp=1.14347 magic=26110202 retcode=10009
+CS	0	00:09:30.958	Trade	2026.09.23 12:30:00   sell stop 0.98 EURUSD at 1.14017 sl: 1.14123 tp: 1.13805 (1.14032 / 1.14038)
+CS	0	00:09:30.958	CycleORB (EURUSD,M5)	2026.09.23 12:30:00   CTrade::OrderSend: sell stop 0.98 EURUSD at 1.14017 sl: 1.14123 tp: 1.13805 [done]
+CS	0	00:09:30.958	CycleORB (EURUSD,M5)	2026.09.23 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.98 @1.14017 sl=1.14123 tp=1.13805 magic=26110202 retcode=10009
+CS	0	00:09:30.959	Trade	2026.09.23 12:30:38   order [#102 sell stop 0.98 EURUSD at 1.14017] triggered
+CS	0	00:09:30.959	Trades	2026.09.23 12:30:38   deal #68 sell 0.98 EURUSD at 1.14017 done (based on order #102)
+CS	0	00:09:30.959	Trade	2026.09.23 12:30:38   deal performed [#68 sell 0.98 EURUSD at 1.14017]
+CS	0	00:09:30.959	Trade	2026.09.23 12:30:38   order performed sell 0.98 at 1.14017 [#102 sell stop 0.98 EURUSD at 1.14017]
+CS	0	00:09:30.959	Trade	2026.09.23 12:30:38   order canceled [#101 buy stop 0.98 EURUSD at 1.14135]
+CS	0	00:09:30.959	CycleORB (EURUSD,M5)	2026.09.23 12:30:38   CTrade::OrderSend: cancel #101 [done]
+CS	0	00:09:30.959	CycleORB (EURUSD,M5)	2026.09.23 12:30:38   [CycleORB] DELETE order #101 magic=26110202 (NY OCO)
+CS	0	00:09:30.967	Trade	2026.09.23 13:28:01   stop loss triggered #102 sell 0.98 EURUSD 1.14017 sl: 1.14123 tp: 1.13805 [#103 buy 0.98 EURUSD at 1.14123]
+CS	0	00:09:30.967	Trades	2026.09.23 13:28:01   deal #69 buy 0.98 EURUSD at 1.14123 done (based on order #103)
+CS	0	00:09:30.967	Trade	2026.09.23 13:28:01   deal performed [#69 buy 0.98 EURUSD at 1.14123]
+CS	0	00:09:30.967	Trade	2026.09.23 13:28:01   order performed buy 0.98 at 1.14123 [#103 buy 0.98 EURUSD at 1.14123]
+CS	0	00:09:31.044	CycleORB (EURUSD,M5)	2026.09.24 12:30:00   [CycleORB] SKIP NY 2026.09.24 12:00 hi=1.13713 lo=1.13641 range=72pt atr%=16.4 cost%=16.7 (range/ATR outside band)
+CS	0	00:09:31.127	CycleORB (EURUSD,M5)	2026.09.25 12:30:00   [CycleORB] RANGE NY 2026.09.25 12:00 hi=1.14083 lo=1.13996 range=87pt atr%=19.4 cost%=6.9 buffer=12pt risk=104.06
+CS	0	00:09:31.127	Trade	2026.09.25 12:30:00   buy stop 1.05 EURUSD at 1.14095 sl: 1.13996 tp: 1.14293 (1.14053 / 1.14059)
+CS	0	00:09:31.127	CycleORB (EURUSD,M5)	2026.09.25 12:30:00   CTrade::OrderSend: buy stop 1.05 EURUSD at 1.14095 sl: 1.13996 tp: 1.14293 [done]
+CS	0	00:09:31.127	CycleORB (EURUSD,M5)	2026.09.25 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.05 @1.14095 sl=1.13996 tp=1.14293 magic=26110202 retcode=10009
+CS	0	00:09:31.127	Trade	2026.09.25 12:30:00   sell stop 1.05 EURUSD at 1.13984 sl: 1.14083 tp: 1.13786 (1.14053 / 1.14059)
+CS	0	00:09:31.127	CycleORB (EURUSD,M5)	2026.09.25 12:30:00   CTrade::OrderSend: sell stop 1.05 EURUSD at 1.13984 sl: 1.14083 tp: 1.13786 [done]
+CS	0	00:09:31.127	CycleORB (EURUSD,M5)	2026.09.25 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.05 @1.13984 sl=1.14083 tp=1.13786 magic=26110202 retcode=10009
+CS	0	00:09:31.129	Trade	2026.09.25 12:45:58   order [#105 sell stop 1.05 EURUSD at 1.13984] triggered
+CS	0	00:09:31.129	Trades	2026.09.25 12:45:58   deal #70 sell 1.05 EURUSD at 1.13984 done (based on order #105)
+CS	0	00:09:31.129	Trade	2026.09.25 12:45:58   deal performed [#70 sell 1.05 EURUSD at 1.13984]
+CS	0	00:09:31.129	Trade	2026.09.25 12:45:58   order performed sell 1.05 at 1.13984 [#105 sell stop 1.05 EURUSD at 1.13984]
+CS	0	00:09:31.129	Trade	2026.09.25 12:45:58   order canceled [#104 buy stop 1.05 EURUSD at 1.14095]
+CS	0	00:09:31.129	CycleORB (EURUSD,M5)	2026.09.25 12:45:58   CTrade::OrderSend: cancel #104 [done]
+CS	0	00:09:31.129	CycleORB (EURUSD,M5)	2026.09.25 12:45:58   [CycleORB] DELETE order #104 magic=26110202 (NY OCO)
+CS	0	00:09:31.167	Trade	2026.09.25 16:02:35   stop loss triggered #105 sell 1.05 EURUSD 1.13984 sl: 1.14083 tp: 1.13786 [#106 buy 1.05 EURUSD at 1.14083]
+CS	0	00:09:31.167	Trades	2026.09.25 16:02:35   deal #71 buy 1.05 EURUSD at 1.14083 done (based on order #106)
+CS	0	00:09:31.167	Trade	2026.09.25 16:02:35   deal performed [#71 buy 1.05 EURUSD at 1.14083]
+CS	0	00:09:31.167	Trade	2026.09.25 16:02:35   order performed buy 1.05 at 1.14083 [#106 buy 1.05 EURUSD at 1.14083]
+CS	0	00:09:31.223	CycleORB (EURUSD,M5)	2026.09.28 12:30:00   [CycleORB] RANGE NY 2026.09.28 12:00 hi=1.13805 lo=1.13721 range=84pt atr%=19.5 cost%=8.3 buffer=14pt risk=104.06
+CS	0	00:09:31.223	Trade	2026.09.28 12:30:00   buy stop 1.06 EURUSD at 1.13819 sl: 1.13721 tp: 1.14015 (1.13736 / 1.13743)
+CS	0	00:09:31.223	CycleORB (EURUSD,M5)	2026.09.28 12:30:00   CTrade::OrderSend: buy stop 1.06 EURUSD at 1.13819 sl: 1.13721 tp: 1.14015 [done]
+CS	0	00:09:31.223	CycleORB (EURUSD,M5)	2026.09.28 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.06 @1.13819 sl=1.13721 tp=1.14015 magic=26110202 retcode=10009
+CS	0	00:09:31.223	Trade	2026.09.28 12:30:00   sell stop 1.06 EURUSD at 1.13707 sl: 1.13805 tp: 1.13511 (1.13736 / 1.13743)
+CS	0	00:09:31.223	CycleORB (EURUSD,M5)	2026.09.28 12:30:00   CTrade::OrderSend: sell stop 1.06 EURUSD at 1.13707 sl: 1.13805 tp: 1.13511 [done]
+CS	0	00:09:31.224	CycleORB (EURUSD,M5)	2026.09.28 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.06 @1.13707 sl=1.13805 tp=1.13511 magic=26110202 retcode=10009
+CS	0	00:09:31.225	Trade	2026.09.28 12:41:00   order [#108 sell stop 1.06 EURUSD at 1.13707] triggered
+CS	0	00:09:31.225	Trades	2026.09.28 12:41:00   deal #72 sell 1.06 EURUSD at 1.13707 done (based on order #108)
+CS	0	00:09:31.225	Trade	2026.09.28 12:41:00   deal performed [#72 sell 1.06 EURUSD at 1.13707]
+CS	0	00:09:31.225	Trade	2026.09.28 12:41:00   order performed sell 1.06 at 1.13707 [#108 sell stop 1.06 EURUSD at 1.13707]
+CS	0	00:09:31.225	Trade	2026.09.28 12:41:00   order canceled [#107 buy stop 1.06 EURUSD at 1.13819]
+CS	0	00:09:31.225	CycleORB (EURUSD,M5)	2026.09.28 12:41:00   CTrade::OrderSend: cancel #107 [done]
+CS	0	00:09:31.225	CycleORB (EURUSD,M5)	2026.09.28 12:41:00   [CycleORB] DELETE order #107 magic=26110202 (NY OCO)
+CS	0	00:09:31.261	Trade	2026.09.28 16:26:34   stop loss triggered #108 sell 1.06 EURUSD 1.13707 sl: 1.13805 tp: 1.13511 [#109 buy 1.06 EURUSD at 1.13805]
+CS	0	00:09:31.261	Trades	2026.09.28 16:26:34   deal #73 buy 1.06 EURUSD at 1.13805 done (based on order #109)
+CS	0	00:09:31.261	Trade	2026.09.28 16:26:34   deal performed [#73 buy 1.06 EURUSD at 1.13805]
+CS	0	00:09:31.261	Trade	2026.09.28 16:26:34   order performed buy 1.06 at 1.13805 [#109 buy 1.06 EURUSD at 1.13805]
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:30:00   [CycleORB] RANGE NY 2026.09.29 12:00 hi=1.13578 lo=1.13493 range=85pt atr%=20.1 cost%=8.2 buffer=14pt risk=104.06
+CS	0	00:09:31.317	Trade	2026.09.29 12:30:00   buy stop 1.05 EURUSD at 1.13592 sl: 1.13493 tp: 1.13790 (1.13521 / 1.13528)
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:30:00   CTrade::OrderSend: buy stop 1.05 EURUSD at 1.13592 sl: 1.13493 tp: 1.13790 [done]
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.05 @1.13592 sl=1.13493 tp=1.13790 magic=26110202 retcode=10009
+CS	0	00:09:31.317	Trade	2026.09.29 12:30:00   sell stop 1.05 EURUSD at 1.13479 sl: 1.13578 tp: 1.13281 (1.13521 / 1.13528)
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:30:00   CTrade::OrderSend: sell stop 1.05 EURUSD at 1.13479 sl: 1.13578 tp: 1.13281 [done]
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.05 @1.13479 sl=1.13578 tp=1.13281 magic=26110202 retcode=10009
+CS	0	00:09:31.317	Trade	2026.09.29 12:35:16   order [#111 sell stop 1.05 EURUSD at 1.13479] triggered
+CS	0	00:09:31.317	Trades	2026.09.29 12:35:16   deal #74 sell 1.05 EURUSD at 1.13479 done (based on order #111)
+CS	0	00:09:31.317	Trade	2026.09.29 12:35:16   deal performed [#74 sell 1.05 EURUSD at 1.13479]
+CS	0	00:09:31.317	Trade	2026.09.29 12:35:16   order performed sell 1.05 at 1.13479 [#111 sell stop 1.05 EURUSD at 1.13479]
+CS	0	00:09:31.317	Trade	2026.09.29 12:35:16   order canceled [#110 buy stop 1.05 EURUSD at 1.13592]
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:35:16   CTrade::OrderSend: cancel #110 [done]
+CS	0	00:09:31.317	CycleORB (EURUSD,M5)	2026.09.29 12:35:16   [CycleORB] DELETE order #110 magic=26110202 (NY OCO)
+CS	0	00:09:31.345	Trade	2026.09.29 15:26:56   take profit triggered #111 sell 1.05 EURUSD 1.13479 sl: 1.13578 tp: 1.13281 [#112 buy 1.05 EURUSD at 1.13281]
+CS	0	00:09:31.345	Trades	2026.09.29 15:26:56   deal #75 buy 1.05 EURUSD at 1.13281 done (based on order #112)
+CS	0	00:09:31.345	Trade	2026.09.29 15:26:56   deal performed [#75 buy 1.05 EURUSD at 1.13281]
+CS	0	00:09:31.345	Trade	2026.09.29 15:26:56   order performed buy 1.05 at 1.13281 [#112 buy 1.05 EURUSD at 1.13281]
+CS	0	00:09:31.405	CycleORB (EURUSD,M5)	2026.09.30 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:31.467	CycleORB (EURUSD,M5)	2026.10.01 00:00:00   [CycleORB] CYCLE_END 202609 capital=10406.08 realized=586.87 floating=0.00 pnl=5.64% peak=6.85% state=ACTIVE 
+CS	0	00:09:31.467	CycleORB (EURUSD,M5)	2026.10.01 00:00:00   [CycleORB] CYCLE_BEGIN 202610 capital=10992.95 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	00:09:31.510	CycleORB (EURUSD,M5)	2026.10.01 12:30:00   [CycleORB] SKIP NY 2026.10.01 12:00 hi=1.13070 lo=1.12899 range=171pt atr%=38.1 cost%=2.9 (range/ATR outside band)
+CS	0	00:09:31.634	CycleORB (EURUSD,M5)	2026.10.02 12:30:00   [CycleORB] SKIP NY 2026.10.02 12:00 hi=1.12341 lo=1.12206 range=135pt atr%=26.0 cost%=11.1 (cost too high vs range)
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:00   [CycleORB] RANGE NY 2026.10.05 12:00 hi=1.12103 lo=1.11984 range=119pt atr%=25.2 cost%=5.0 buffer=12pt risk=109.93
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:00   buy stop 0.83 EURUSD at 1.12115 sl: 1.11984 tp: 1.12377 (1.12102 / 1.12108)
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:00   CTrade::OrderSend: buy stop 0.83 EURUSD at 1.12115 sl: 1.11984 tp: 1.12377 [done]
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.83 @1.12115 sl=1.11984 tp=1.12377 magic=26110202 retcode=10009
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:00   sell stop 0.83 EURUSD at 1.11972 sl: 1.12103 tp: 1.11710 (1.12102 / 1.12108)
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:00   CTrade::OrderSend: sell stop 0.83 EURUSD at 1.11972 sl: 1.12103 tp: 1.11710 [done]
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.83 @1.11972 sl=1.12103 tp=1.11710 magic=26110202 retcode=10009
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:47   order [#113 buy stop 0.83 EURUSD at 1.12115] triggered
+CS	0	00:09:31.772	Trades	2026.10.05 12:30:47   deal #76 buy 0.83 EURUSD at 1.12115 done (based on order #113)
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:47   deal performed [#76 buy 0.83 EURUSD at 1.12115]
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:47   order performed buy 0.83 at 1.12115 [#113 buy stop 0.83 EURUSD at 1.12115]
+CS	0	00:09:31.772	Trade	2026.10.05 12:30:47   order canceled [#114 sell stop 0.83 EURUSD at 1.11972]
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:47   CTrade::OrderSend: cancel #114 [done]
+CS	0	00:09:31.772	CycleORB (EURUSD,M5)	2026.10.05 12:30:47   [CycleORB] DELETE order #114 magic=26110202 (NY OCO)
+CS	0	00:09:31.787	Trade	2026.10.05 13:31:23   stop loss triggered #113 buy 0.83 EURUSD 1.12115 sl: 1.11984 tp: 1.12377 [#115 sell 0.83 EURUSD at 1.11984]
+CS	0	00:09:31.787	Trades	2026.10.05 13:31:23   deal #77 sell 0.83 EURUSD at 1.11984 done (based on order #115)
+CS	0	00:09:31.787	Trade	2026.10.05 13:31:23   deal performed [#77 sell 0.83 EURUSD at 1.11984]
+CS	0	00:09:31.787	Trade	2026.10.05 13:31:23   order performed sell 0.83 at 1.11984 [#115 sell 0.83 EURUSD at 1.11984]
+CS	0	00:09:31.885	CycleORB (EURUSD,M5)	2026.10.06 12:30:00   [CycleORB] RANGE NY 2026.10.06 12:00 hi=1.12765 lo=1.12621 range=144pt atr%=28.1 cost%=4.9 buffer=14pt risk=109.93
+CS	0	00:09:31.885	Trade	2026.10.06 12:30:00   buy stop 0.69 EURUSD at 1.12779 sl: 1.12621 tp: 1.13095 (1.12627 / 1.12634)
+CS	0	00:09:31.885	CycleORB (EURUSD,M5)	2026.10.06 12:30:00   CTrade::OrderSend: buy stop 0.69 EURUSD at 1.12779 sl: 1.12621 tp: 1.13095 [done]
+CS	0	00:09:31.885	CycleORB (EURUSD,M5)	2026.10.06 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.69 @1.12779 sl=1.12621 tp=1.13095 magic=26110202 retcode=10009
+CS	0	00:09:31.885	Trade	2026.10.06 12:30:00   sell stop 0.69 EURUSD at 1.12607 sl: 1.12765 tp: 1.12291 (1.12627 / 1.12634)
+CS	0	00:09:31.885	CycleORB (EURUSD,M5)	2026.10.06 12:30:00   CTrade::OrderSend: sell stop 0.69 EURUSD at 1.12607 sl: 1.12765 tp: 1.12291 [done]
+CS	0	00:09:31.885	CycleORB (EURUSD,M5)	2026.10.06 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.69 @1.12607 sl=1.12765 tp=1.12291 magic=26110202 retcode=10009
+CS	0	00:09:31.888	Trade	2026.10.06 12:44:08   order [#117 sell stop 0.69 EURUSD at 1.12607] triggered
+CS	0	00:09:31.888	Trades	2026.10.06 12:44:08   deal #78 sell 0.69 EURUSD at 1.12607 done (based on order #117)
+CS	0	00:09:31.888	Trade	2026.10.06 12:44:08   deal performed [#78 sell 0.69 EURUSD at 1.12607]
+CS	0	00:09:31.888	Trade	2026.10.06 12:44:08   order performed sell 0.69 at 1.12607 [#117 sell stop 0.69 EURUSD at 1.12607]
+CS	0	00:09:31.888	Trade	2026.10.06 12:44:08   order canceled [#116 buy stop 0.69 EURUSD at 1.12779]
+CS	0	00:09:31.888	CycleORB (EURUSD,M5)	2026.10.06 12:44:08   CTrade::OrderSend: cancel #116 [done]
+CS	0	00:09:31.888	CycleORB (EURUSD,M5)	2026.10.06 12:44:08   [CycleORB] DELETE order #116 magic=26110202 (NY OCO)
+CS	0	00:09:31.950	Trade	2026.10.06 19:00:00   market buy 0.69 EURUSD, close #117 (1.12607 / 1.12614)
+CS	0	00:09:31.950	Trades	2026.10.06 19:00:00   deal #79 buy 0.69 EURUSD at 1.12614 done (based on order #118)
+CS	0	00:09:31.950	Trade	2026.10.06 19:00:00   deal performed [#79 buy 0.69 EURUSD at 1.12614]
+CS	0	00:09:31.950	Trade	2026.10.06 19:00:00   order performed buy 0.69 at 1.12614 [#118 buy 0.69 EURUSD at 1.12614]
+CS	0	00:09:31.950	CycleORB (EURUSD,M5)	2026.10.06 19:00:00   CTrade::OrderSend: market buy 0.69 position #117 EURUSD [done at 1.12614]
+CS	0	00:09:31.950	CycleORB (EURUSD,M5)	2026.10.06 19:00:00   [CycleORB] CLOSE position #117 magic=26110202 (NY time exit)
+CS	0	00:09:32.009	CycleORB (EURUSD,M5)	2026.10.07 12:30:00   [CycleORB] SKIP NY 2026.10.07 12:00 hi=1.11879 lo=1.11643 range=236pt atr%=42.2 cost%=2.5 (range/ATR outside band)
+CS	0	00:09:32.143	CycleORB (EURUSD,M5)	2026.10.08 12:30:00   [CycleORB] SKIP NY 2026.10.08 12:00 hi=1.11991 lo=1.11768 range=223pt atr%=37.2 cost%=3.6 (range/ATR outside band)
+CS	0	00:09:32.236	CycleORB (EURUSD,M5)	2026.10.09 12:30:00   [CycleORB] RANGE NY 2026.10.09 12:00 hi=1.12119 lo=1.12010 range=109pt atr%=18.0 cost%=6.4 buffer=14pt risk=109.93
+CS	0	00:09:32.236	Trade	2026.10.09 12:30:00   buy stop 0.89 EURUSD at 1.12133 sl: 1.12010 tp: 1.12379 (1.12035 / 1.12042)
+CS	0	00:09:32.236	CycleORB (EURUSD,M5)	2026.10.09 12:30:00   CTrade::OrderSend: buy stop 0.89 EURUSD at 1.12133 sl: 1.12010 tp: 1.12379 [done]
+CS	0	00:09:32.236	CycleORB (EURUSD,M5)	2026.10.09 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.89 @1.12133 sl=1.12010 tp=1.12379 magic=26110202 retcode=10009
+CS	0	00:09:32.236	Trade	2026.10.09 12:30:00   sell stop 0.89 EURUSD at 1.11996 sl: 1.12119 tp: 1.11750 (1.12035 / 1.12042)
+CS	0	00:09:32.236	CycleORB (EURUSD,M5)	2026.10.09 12:30:00   CTrade::OrderSend: sell stop 0.89 EURUSD at 1.11996 sl: 1.12119 tp: 1.11750 [done]
+CS	0	00:09:32.236	CycleORB (EURUSD,M5)	2026.10.09 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.89 @1.11996 sl=1.12119 tp=1.11750 magic=26110202 retcode=10009
+CS	0	00:09:32.238	Trade	2026.10.09 12:35:01   order [#120 sell stop 0.89 EURUSD at 1.11996] triggered
+CS	0	00:09:32.238	Trades	2026.10.09 12:35:01   deal #80 sell 0.89 EURUSD at 1.11996 done (based on order #120)
+CS	0	00:09:32.238	Trade	2026.10.09 12:35:01   deal performed [#80 sell 0.89 EURUSD at 1.11996]
+CS	0	00:09:32.238	Trade	2026.10.09 12:35:01   order performed sell 0.89 at 1.11996 [#120 sell stop 0.89 EURUSD at 1.11996]
+CS	0	00:09:32.238	Trade	2026.10.09 12:35:01   order canceled [#119 buy stop 0.89 EURUSD at 1.12133]
+CS	0	00:09:32.238	CycleORB (EURUSD,M5)	2026.10.09 12:35:01   CTrade::OrderSend: cancel #119 [done]
+CS	0	00:09:32.238	CycleORB (EURUSD,M5)	2026.10.09 12:35:01   [CycleORB] DELETE order #119 magic=26110202 (NY OCO)
+CS	0	00:09:32.296	Trade	2026.10.09 19:00:00   market buy 0.89 EURUSD, close #120 (1.12019 / 1.12025)
+CS	0	00:09:32.296	Trades	2026.10.09 19:00:00   deal #81 buy 0.89 EURUSD at 1.12025 done (based on order #121)
+CS	0	00:09:32.296	Trade	2026.10.09 19:00:00   deal performed [#81 buy 0.89 EURUSD at 1.12025]
+CS	0	00:09:32.296	Trade	2026.10.09 19:00:00   order performed buy 0.89 at 1.12025 [#121 buy 0.89 EURUSD at 1.12025]
+CS	0	00:09:32.296	CycleORB (EURUSD,M5)	2026.10.09 19:00:00   CTrade::OrderSend: market buy 0.89 position #120 EURUSD [done at 1.12025]
+CS	0	00:09:32.296	CycleORB (EURUSD,M5)	2026.10.09 19:00:00   [CycleORB] CLOSE position #120 magic=26110202 (NY time exit)
+CS	0	00:09:32.336	CycleORB (EURUSD,M5)	2026.10.12 12:30:00   [CycleORB] SKIP NY 2026.10.12 12:00 hi=1.11834 lo=1.11753 range=81pt atr%=14.1 cost%=8.6 (range/ATR outside band)
+CS	0	00:09:32.382	CycleORB (EURUSD,M5)	2026.10.13 12:30:00   [CycleORB] SKIP NY 2026.10.13 12:00 hi=1.11942 lo=1.11858 range=84pt atr%=14.2 cost%=8.3 (range/ATR outside band)
+CS	0	00:09:32.436	CycleORB (EURUSD,M5)	2026.10.14 12:30:00   [CycleORB] SKIP NY 2026.10.14 12:00 hi=1.11984 lo=1.11906 range=78pt atr%=12.7 cost%=14.1 (range/ATR outside band)
+CS	0	00:09:32.563	CycleORB (EURUSD,M5)	2026.10.15 12:30:00   [CycleORB] SKIP NY 2026.10.15 12:00 hi=1.12118 lo=1.12035 range=83pt atr%=12.6 cost%=9.6 (range/ATR outside band)
+CS	0	00:09:32.664	CycleORB (EURUSD,M5)	2026.10.16 12:30:00   [CycleORB] RANGE NY 2026.10.16 12:00 hi=1.12592 lo=1.12477 range=115pt atr%=17.5 cost%=5.2 buffer=12pt risk=109.93
+CS	0	00:09:32.664	Trade	2026.10.16 12:30:00   buy stop 0.86 EURUSD at 1.12604 sl: 1.12477 tp: 1.12858 (1.12493 / 1.12499)
+CS	0	00:09:32.664	CycleORB (EURUSD,M5)	2026.10.16 12:30:00   CTrade::OrderSend: buy stop 0.86 EURUSD at 1.12604 sl: 1.12477 tp: 1.12858 [done]
+CS	0	00:09:32.664	CycleORB (EURUSD,M5)	2026.10.16 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.86 @1.12604 sl=1.12477 tp=1.12858 magic=26110202 retcode=10009
+CS	0	00:09:32.664	Trade	2026.10.16 12:30:00   sell stop 0.86 EURUSD at 1.12465 sl: 1.12592 tp: 1.12211 (1.12493 / 1.12499)
+CS	0	00:09:32.664	CycleORB (EURUSD,M5)	2026.10.16 12:30:00   CTrade::OrderSend: sell stop 0.86 EURUSD at 1.12465 sl: 1.12592 tp: 1.12211 [done]
+CS	0	00:09:32.664	CycleORB (EURUSD,M5)	2026.10.16 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.86 @1.12465 sl=1.12592 tp=1.12211 magic=26110202 retcode=10009
+CS	0	00:09:32.666	Trade	2026.10.16 12:37:56   order [#123 sell stop 0.86 EURUSD at 1.12465] triggered
+CS	0	00:09:32.666	Trades	2026.10.16 12:37:56   deal #82 sell 0.86 EURUSD at 1.12464 done (based on order #123)
+CS	0	00:09:32.666	Trade	2026.10.16 12:37:56   deal performed [#82 sell 0.86 EURUSD at 1.12464]
+CS	0	00:09:32.666	Trade	2026.10.16 12:37:56   order performed sell 0.86 at 1.12464 [#123 sell stop 0.86 EURUSD at 1.12465]
+CS	0	00:09:32.666	Trade	2026.10.16 12:37:56   order canceled [#122 buy stop 0.86 EURUSD at 1.12604]
+CS	0	00:09:32.666	CycleORB (EURUSD,M5)	2026.10.16 12:37:56   CTrade::OrderSend: cancel #122 [done]
+CS	0	00:09:32.666	CycleORB (EURUSD,M5)	2026.10.16 12:37:56   [CycleORB] DELETE order #122 magic=26110202 (NY OCO)
+CS	0	00:09:32.682	Trade	2026.10.16 14:00:02   stop loss triggered #123 sell 0.86 EURUSD 1.12464 sl: 1.12592 tp: 1.12211 [#124 buy 0.86 EURUSD at 1.12592]
+CS	0	00:09:32.682	Trades	2026.10.16 14:00:02   deal #83 buy 0.86 EURUSD at 1.12592 done (based on order #124)
+CS	0	00:09:32.682	Trade	2026.10.16 14:00:02   deal performed [#83 buy 0.86 EURUSD at 1.12592]
+CS	0	00:09:32.682	Trade	2026.10.16 14:00:02   order performed buy 0.86 at 1.12592 [#124 buy 0.86 EURUSD at 1.12592]
+CS	0	00:09:32.766	CycleORB (EURUSD,M5)	2026.10.19 12:30:00   [CycleORB] SKIP NY 2026.10.19 12:00 hi=1.12286 lo=1.12192 range=94pt atr%=15.3 cost%=7.4 (range/ATR outside band)
+CS	0	00:09:32.832	CycleORB (EURUSD,M5)	2026.10.20 12:30:00   [CycleORB] RANGE NY 2026.10.20 12:00 hi=1.12247 lo=1.12106 range=141pt atr%=23.5 cost%=5.7 buffer=16pt risk=109.93
+CS	0	00:09:32.832	Trade	2026.10.20 12:30:00   buy stop 0.7 EURUSD at 1.12263 sl: 1.12106 tp: 1.12577 (1.12238 / 1.12246)
+CS	0	00:09:32.832	CycleORB (EURUSD,M5)	2026.10.20 12:30:00   CTrade::OrderSend: buy stop 0.70 EURUSD at 1.12263 sl: 1.12106 tp: 1.12577 [done]
+CS	0	00:09:32.832	CycleORB (EURUSD,M5)	2026.10.20 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.70 @1.12263 sl=1.12106 tp=1.12577 magic=26110202 retcode=10009
+CS	0	00:09:32.832	Trade	2026.10.20 12:30:00   sell stop 0.7 EURUSD at 1.12090 sl: 1.12247 tp: 1.11776 (1.12238 / 1.12246)
+CS	0	00:09:32.832	CycleORB (EURUSD,M5)	2026.10.20 12:30:00   CTrade::OrderSend: sell stop 0.70 EURUSD at 1.12090 sl: 1.12247 tp: 1.11776 [done]
+CS	0	00:09:32.832	CycleORB (EURUSD,M5)	2026.10.20 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.70 @1.12090 sl=1.12247 tp=1.11776 magic=26110202 retcode=10009
+CS	0	00:09:32.833	Trade	2026.10.20 12:32:01   order [#125 buy stop 0.7 EURUSD at 1.12263] triggered
+CS	0	00:09:32.833	Trades	2026.10.20 12:32:01   deal #84 buy 0.7 EURUSD at 1.12263 done (based on order #125)
+CS	0	00:09:32.833	Trade	2026.10.20 12:32:01   deal performed [#84 buy 0.7 EURUSD at 1.12263]
+CS	0	00:09:32.833	Trade	2026.10.20 12:32:01   order performed buy 0.7 at 1.12263 [#125 buy stop 0.7 EURUSD at 1.12263]
+CS	0	00:09:32.833	Trade	2026.10.20 12:32:01   order canceled [#126 sell stop 0.7 EURUSD at 1.12090]
+CS	0	00:09:32.833	CycleORB (EURUSD,M5)	2026.10.20 12:32:01   CTrade::OrderSend: cancel #126 [done]
+CS	0	00:09:32.833	CycleORB (EURUSD,M5)	2026.10.20 12:32:01   [CycleORB] DELETE order #126 magic=26110202 (NY OCO)
+CS	0	00:09:32.863	Trade	2026.10.20 14:28:43   take profit triggered #125 buy 0.7 EURUSD 1.12263 sl: 1.12106 tp: 1.12577 [#127 sell 0.7 EURUSD at 1.12577]
+CS	0	00:09:32.863	Trades	2026.10.20 14:28:43   deal #85 sell 0.7 EURUSD at 1.12577 done (based on order #127)
+CS	0	00:09:32.863	Trade	2026.10.20 14:28:43   deal performed [#85 sell 0.7 EURUSD at 1.12577]
+CS	0	00:09:32.863	Trade	2026.10.20 14:28:43   order performed sell 0.7 at 1.12577 [#127 sell 0.7 EURUSD at 1.12577]
+CS	0	00:09:32.915	CycleORB (EURUSD,M5)	2026.10.21 12:30:00   [CycleORB] SKIP NY 2026.10.21 12:00 hi=1.12352 lo=1.12286 range=66pt atr%=10.4 cost%=10.6 (range/ATR outside band)
+CS	0	00:09:32.988	CycleORB (EURUSD,M5)	2026.10.22 12:30:00   [CycleORB] RANGE NY 2026.10.22 12:00 hi=1.12095 lo=1.11978 range=117pt atr%=20.0 cost%=6.8 buffer=16pt risk=109.93
+CS	0	00:09:32.988	Trade	2026.10.22 12:30:00   buy stop 0.82 EURUSD at 1.12111 sl: 1.11978 tp: 1.12377 (1.12036 / 1.12044)
+CS	0	00:09:32.988	CycleORB (EURUSD,M5)	2026.10.22 12:30:00   CTrade::OrderSend: buy stop 0.82 EURUSD at 1.12111 sl: 1.11978 tp: 1.12377 [done]
+CS	0	00:09:32.988	CycleORB (EURUSD,M5)	2026.10.22 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.82 @1.12111 sl=1.11978 tp=1.12377 magic=26110202 retcode=10009
+CS	0	00:09:32.988	Trade	2026.10.22 12:30:00   sell stop 0.82 EURUSD at 1.11962 sl: 1.12095 tp: 1.11696 (1.12036 / 1.12044)
+CS	0	00:09:32.988	CycleORB (EURUSD,M5)	2026.10.22 12:30:00   CTrade::OrderSend: sell stop 0.82 EURUSD at 1.11962 sl: 1.12095 tp: 1.11696 [done]
+CS	0	00:09:32.988	CycleORB (EURUSD,M5)	2026.10.22 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.82 @1.11962 sl=1.12095 tp=1.11696 magic=26110202 retcode=10009
+CS	0	00:09:33.001	Trade	2026.10.22 13:35:57   order [#129 sell stop 0.82 EURUSD at 1.11962] triggered
+CS	0	00:09:33.001	Trades	2026.10.22 13:35:57   deal #86 sell 0.82 EURUSD at 1.11962 done (based on order #129)
+CS	0	00:09:33.001	Trade	2026.10.22 13:35:57   deal performed [#86 sell 0.82 EURUSD at 1.11962]
+CS	0	00:09:33.001	Trade	2026.10.22 13:35:57   order performed sell 0.82 at 1.11962 [#129 sell stop 0.82 EURUSD at 1.11962]
+CS	0	00:09:33.001	Trade	2026.10.22 13:35:57   order canceled [#128 buy stop 0.82 EURUSD at 1.12111]
+CS	0	00:09:33.001	CycleORB (EURUSD,M5)	2026.10.22 13:35:57   CTrade::OrderSend: cancel #128 [done]
+CS	0	00:09:33.001	CycleORB (EURUSD,M5)	2026.10.22 13:35:57   [CycleORB] DELETE order #128 magic=26110202 (NY OCO)
+CS	0	00:09:33.030	Trade	2026.10.22 15:50:02   stop loss triggered #129 sell 0.82 EURUSD 1.11962 sl: 1.12095 tp: 1.11696 [#130 buy 0.82 EURUSD at 1.12095]
+CS	0	00:09:33.030	Trades	2026.10.22 15:50:02   deal #87 buy 0.82 EURUSD at 1.12096 done (based on order #130)
+CS	0	00:09:33.030	Trade	2026.10.22 15:50:02   deal performed [#87 buy 0.82 EURUSD at 1.12096]
+CS	0	00:09:33.030	Trade	2026.10.22 15:50:02   order performed buy 0.82 at 1.12096 [#130 buy 0.82 EURUSD at 1.12095]
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:30:00   [CycleORB] RANGE NY 2026.10.23 12:00 hi=1.11985 lo=1.11880 range=105pt atr%=18.1 cost%=4.8 buffer=10pt risk=109.93
+CS	0	00:09:33.086	Trade	2026.10.23 12:30:00   buy stop 0.95 EURUSD at 1.11995 sl: 1.11880 tp: 1.12225 (1.11971 / 1.11976)
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:30:00   CTrade::OrderSend: buy stop 0.95 EURUSD at 1.11995 sl: 1.11880 tp: 1.12225 [done]
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.95 @1.11995 sl=1.11880 tp=1.12225 magic=26110202 retcode=10009
+CS	0	00:09:33.086	Trade	2026.10.23 12:30:00   sell stop 0.95 EURUSD at 1.11870 sl: 1.11985 tp: 1.11640 (1.11971 / 1.11976)
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:30:00   CTrade::OrderSend: sell stop 0.95 EURUSD at 1.11870 sl: 1.11985 tp: 1.11640 [done]
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.95 @1.11870 sl=1.11985 tp=1.11640 magic=26110202 retcode=10009
+CS	0	00:09:33.086	Trade	2026.10.23 12:34:34   order [#131 buy stop 0.95 EURUSD at 1.11995] triggered
+CS	0	00:09:33.086	Trades	2026.10.23 12:34:34   deal #88 buy 0.95 EURUSD at 1.11995 done (based on order #131)
+CS	0	00:09:33.086	Trade	2026.10.23 12:34:34   deal performed [#88 buy 0.95 EURUSD at 1.11995]
+CS	0	00:09:33.086	Trade	2026.10.23 12:34:34   order performed buy 0.95 at 1.11995 [#131 buy stop 0.95 EURUSD at 1.11995]
+CS	0	00:09:33.086	Trade	2026.10.23 12:34:34   order canceled [#132 sell stop 0.95 EURUSD at 1.11870]
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:34:34   CTrade::OrderSend: cancel #132 [done]
+CS	0	00:09:33.086	CycleORB (EURUSD,M5)	2026.10.23 12:34:34   [CycleORB] DELETE order #132 magic=26110202 (NY OCO)
+CS	0	00:09:33.148	Trade	2026.10.23 19:00:00   market sell 0.95 EURUSD, close #131 (1.11928 / 1.11934)
+CS	0	00:09:33.148	Trades	2026.10.23 19:00:00   deal #89 sell 0.95 EURUSD at 1.11928 done (based on order #133)
+CS	0	00:09:33.148	Trade	2026.10.23 19:00:00   deal performed [#89 sell 0.95 EURUSD at 1.11928]
+CS	0	00:09:33.148	Trade	2026.10.23 19:00:00   order performed sell 0.95 at 1.11928 [#133 sell 0.95 EURUSD at 1.11928]
+CS	0	00:09:33.148	CycleORB (EURUSD,M5)	2026.10.23 19:00:00   CTrade::OrderSend: market sell 0.95 position #131 EURUSD [done at 1.11928]
+CS	0	00:09:33.148	CycleORB (EURUSD,M5)	2026.10.23 19:00:00   [CycleORB] CLOSE position #131 magic=26110202 (NY time exit)
+CS	0	00:09:33.186	CycleORB (EURUSD,M5)	2026.10.26 12:30:00   [CycleORB] RANGE NY 2026.10.26 12:00 hi=1.11973 lo=1.11871 range=102pt atr%=19.6 cost%=5.9 buffer=12pt risk=109.93
+CS	0	00:09:33.186	Trade	2026.10.26 12:30:00   buy stop 0.96 EURUSD at 1.11985 sl: 1.11871 tp: 1.12213 (1.11960 / 1.11966)
+CS	0	00:09:33.186	CycleORB (EURUSD,M5)	2026.10.26 12:30:00   CTrade::OrderSend: buy stop 0.96 EURUSD at 1.11985 sl: 1.11871 tp: 1.12213 [done]
+CS	0	00:09:33.186	CycleORB (EURUSD,M5)	2026.10.26 12:30:00   [CycleORB] PLACE BUY_STOP lots=0.96 @1.11985 sl=1.11871 tp=1.12213 magic=26110202 retcode=10009
+CS	0	00:09:33.186	Trade	2026.10.26 12:30:00   sell stop 0.96 EURUSD at 1.11859 sl: 1.11973 tp: 1.11631 (1.11960 / 1.11966)
+CS	0	00:09:33.186	CycleORB (EURUSD,M5)	2026.10.26 12:30:00   CTrade::OrderSend: sell stop 0.96 EURUSD at 1.11859 sl: 1.11973 tp: 1.11631 [done]
+CS	0	00:09:33.186	CycleORB (EURUSD,M5)	2026.10.26 12:30:00   [CycleORB] PLACE SELL_STOP lots=0.96 @1.11859 sl=1.11973 tp=1.11631 magic=26110202 retcode=10009
+CS	0	00:09:33.191	Trade	2026.10.26 13:14:49   order [#135 sell stop 0.96 EURUSD at 1.11859] triggered
+CS	0	00:09:33.191	Trades	2026.10.26 13:14:49   deal #90 sell 0.96 EURUSD at 1.11858 done (based on order #135)
+CS	0	00:09:33.191	Trade	2026.10.26 13:14:49   deal performed [#90 sell 0.96 EURUSD at 1.11858]
+CS	0	00:09:33.191	Trade	2026.10.26 13:14:49   order performed sell 0.96 at 1.11858 [#135 sell stop 0.96 EURUSD at 1.11859]
+CS	0	00:09:33.191	Trade	2026.10.26 13:14:49   order canceled [#134 buy stop 0.96 EURUSD at 1.11985]
+CS	0	00:09:33.191	CycleORB (EURUSD,M5)	2026.10.26 13:14:49   CTrade::OrderSend: cancel #134 [done]
+CS	0	00:09:33.191	CycleORB (EURUSD,M5)	2026.10.26 13:14:49   [CycleORB] DELETE order #134 magic=26110202 (NY OCO)
+CS	0	00:09:33.233	Trade	2026.10.26 19:00:00   market buy 0.96 EURUSD, close #135 (1.11826 / 1.11831)
+CS	0	00:09:33.233	Trades	2026.10.26 19:00:00   deal #91 buy 0.96 EURUSD at 1.11831 done (based on order #136)
+CS	0	00:09:33.233	Trade	2026.10.26 19:00:00   deal performed [#91 buy 0.96 EURUSD at 1.11831]
+CS	0	00:09:33.233	Trade	2026.10.26 19:00:00   order performed buy 0.96 at 1.11831 [#136 buy 0.96 EURUSD at 1.11831]
+CS	0	00:09:33.233	CycleORB (EURUSD,M5)	2026.10.26 19:00:00   CTrade::OrderSend: market buy 0.96 position #135 EURUSD [done at 1.11831]
+CS	0	00:09:33.233	CycleORB (EURUSD,M5)	2026.10.26 19:00:00   [CycleORB] CLOSE position #135 magic=26110202 (NY time exit)
+CS	0	00:09:33.271	CycleORB (EURUSD,M5)	2026.10.27 12:30:00   [CycleORB] RANGE NY 2026.10.27 12:00 hi=1.11534 lo=1.11441 range=93pt atr%=17.9 cost%=7.5 buffer=14pt risk=109.93
+CS	0	00:09:33.271	Trade	2026.10.27 12:30:00   buy stop 1.02 EURUSD at 1.11548 sl: 1.11441 tp: 1.11762 (1.11528 / 1.11535)
+CS	0	00:09:33.271	CycleORB (EURUSD,M5)	2026.10.27 12:30:00   CTrade::OrderSend: buy stop 1.02 EURUSD at 1.11548 sl: 1.11441 tp: 1.11762 [done]
+CS	0	00:09:33.271	CycleORB (EURUSD,M5)	2026.10.27 12:30:00   [CycleORB] PLACE BUY_STOP lots=1.02 @1.11548 sl=1.11441 tp=1.11762 magic=26110202 retcode=10009
+CS	0	00:09:33.272	Trade	2026.10.27 12:30:00   sell stop 1.02 EURUSD at 1.11427 sl: 1.11534 tp: 1.11213 (1.11528 / 1.11535)
+CS	0	00:09:33.272	CycleORB (EURUSD,M5)	2026.10.27 12:30:00   CTrade::OrderSend: sell stop 1.02 EURUSD at 1.11427 sl: 1.11534 tp: 1.11213 [done]
+CS	0	00:09:33.272	CycleORB (EURUSD,M5)	2026.10.27 12:30:00   [CycleORB] PLACE SELL_STOP lots=1.02 @1.11427 sl=1.11534 tp=1.11213 magic=26110202 retcode=10009
+CS	0	00:09:33.272	Trade	2026.10.27 12:32:18   order [#137 buy stop 1.02 EURUSD at 1.11548] triggered
+CS	0	00:09:33.272	Trades	2026.10.27 12:32:18   deal #92 buy 1.02 EURUSD at 1.11548 done (based on order #137)
+CS	0	00:09:33.272	Trade	2026.10.27 12:32:18   deal performed [#92 buy 1.02 EURUSD at 1.11548]
+CS	0	00:09:33.272	Trade	2026.10.27 12:32:18   order performed buy 1.02 at 1.11548 [#137 buy stop 1.02 EURUSD at 1.11548]
+CS	0	00:09:33.272	Trade	2026.10.27 12:32:18   order canceled [#138 sell stop 1.02 EURUSD at 1.11427]
+CS	0	00:09:33.272	CycleORB (EURUSD,M5)	2026.10.27 12:32:18   CTrade::OrderSend: cancel #138 [done]
+CS	0	00:09:33.272	CycleORB (EURUSD,M5)	2026.10.27 12:32:18   [CycleORB] DELETE order #138 magic=26110202 (NY OCO)
+CS	0	00:09:33.280	Trade	2026.10.27 13:28:21   stop loss triggered #137 buy 1.02 EURUSD 1.11548 sl: 1.11441 tp: 1.11762 [#139 sell 1.02 EURUSD at 1.11441]
+CS	0	00:09:33.280	Trades	2026.10.27 13:28:21   deal #93 sell 1.02 EURUSD at 1.11441 done (based on order #139)
+CS	0	00:09:33.280	Trade	2026.10.27 13:28:21   deal performed [#93 sell 1.02 EURUSD at 1.11441]
+CS	0	00:09:33.280	Trade	2026.10.27 13:28:21   order performed sell 1.02 at 1.11441 [#139 sell 1.02 EURUSD at 1.11441]
+CS	0	00:09:33.335	CycleORB (EURUSD,M5)	2026.10.28 12:30:00   [CycleORB] SKIP NY 2026.10.28 12:00 hi=1.11366 lo=1.11290 range=76pt atr%=13.9 cost%=9.2 (range/ATR outside band)
+CS	0	00:09:33.428	CycleORB (EURUSD,M5)	2026.10.29 12:30:00   [CycleORB] SKIP NY 2026.10.29 12:00 hi=1.11424 lo=1.11357 range=67pt atr%=12.4 cost%=13.4 (range/ATR outside band)
+CS	0	00:09:33.532	CycleORB (EURUSD,M5)	2026.10.30 12:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	00:09:33.582	Tester	final balance 10706.55 USD
+CS	0	00:09:33.582	CycleORB (EURUSD,M5)	2026.10.30 20:59:58   [CycleORB] CYCLE_PARTIAL 202610 capital=10992.95 realized=-286.40 floating=0.00 pnl=-2.61% peak=0.28% state=ACTIVE 
+CS	0	00:09:33.598	Tester	EURUSD,M5: 24707622 ticks, 37682 bars generated. Environment synchronized in 0:00:01.021. Test passed in 0:00:10.800 (including ticks preprocessing 0:00:01.844).
+CS	0	00:09:33.598	Tester	EURUSD,M5: total time from login to stop testing 0:00:11.821 (including 0:00:01.021 for history data synchronization)
+CS	0	00:09:33.598	Tester	655 Mb memory used including 47 Mb of history data, 512 Mb of tick data
+CS	0	00:09:33.598	Tester	log file "C:\Users\emili\AppData\Roaming\MetaQuotes\Tester\D0E8209F77C8CF37AD8BF550E51FF075\Agent-127.0.0.1-3000\logs\20261102.log" written
+CS	0	00:09:33.600	Tester	test Experts\CycleORB\CycleORB.ex5 on EURUSD,M5 thread finished
+CS	0	00:09:33.967	127.0.0.1	tester forced to close
+CS	0	00:09:33.967	127.0.0.1	prepare for shutdown
+CS	0	00:09:33.967	127.0.0.1	stop immediately
+CS	0	00:09:33.967	127.0.0.1	shutdown finished
+CS	0	00:09:34.211	Server	MetaTester 5 stopped

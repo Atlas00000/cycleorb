@@ -1,0 +1,1123 @@
+CS	0	15:22:39.729	Startup	MetaTester 5 build 6230, 25 Sep 2026
+CS	0	15:22:39.735	Startup	Windows 11 build 26300, 12 x Intel Core i7-10750H  @ 2.60GHz, AVX2, 5 / 23 Gb memory, 150 / 952 Gb disk, UAC, GMT+1
+CS	0	15:22:39.742	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	15:22:39.744	Startup	cloud network mode is off
+CS	0	15:22:39.744	Startup	initialization finished
+CS	0	15:22:39.773	127.0.0.1	login (build 6230)
+CS	0	15:22:39.781	Network	17744 bytes of account info loaded
+CS	0	15:22:39.781	Network	1478 bytes of tester parameters loaded
+CS	0	15:22:39.781	Network	22212 bytes of input parameters loaded
+CS	0	15:22:39.784	Network	10030 bytes of symbols list loaded (1045 symbols)
+CS	0	15:22:39.784	Tester	expert file added: Experts\CycleORB\CycleORB.ex5. 67609 bytes loaded
+CS	0	15:22:39.791	Tester	5346 Mb available, 66 blocks set for ticks generating
+CS	0	15:22:39.791	Tester	initial deposit 10000.00 USD, leverage 1:500
+CS	0	15:22:39.791	Tester	successfully initialized
+CS	0	15:22:39.791	Network	79 Kb of total initialization data received
+CS	0	15:22:39.791	Tester	Intel Core i7-10750H  @ 2.60GHz, 24358 MB
+CS	0	15:22:39.801	Symbols	NVDA: symbol to be synchronized
+CS	0	15:22:39.803	Symbols	NVDA: symbol synchronized, 3720 bytes of symbol info received
+CS	0	15:22:39.911	History	NVDA: load 23 bytes of history data to synchronize in 0:00:00.000
+CS	0	15:22:39.911	History	NVDA: history synchronized from 2026.01.14 to 2026.10.30
+CS	0	15:22:39.913	Ticks	NVDA: ticks synchronization started
+CS	0	15:22:40.921	Ticks	NVDA: load 30 bytes of tick data to synchronize in 0:00:01.000
+CS	0	15:22:40.921	Ticks	NVDA: history ticks synchronized from 2026.02.04 to 2026.10.30
+CS	0	15:22:40.925	History	NVDA,M5: history cache allocated for 43317 bars and contains 5637 bars from 2026.01.14 19:00 to 2026.04.30 19:55
+CS	0	15:22:40.925	History	NVDA,M5: history begins from 2026.01.14 19:00
+CS	0	15:22:40.938	Tester	NVDA,M5 (YWO-Trade): generating based on real ticks
+CS	0	15:22:40.938	Tester	NVDA,M5: testing of Experts\CycleORB\CycleORB.ex5 from 2026.05.01 00:00 to 2026.10.31 00:00 started with inputs:
+CS	0	15:22:40.938	Tester	  Server time=
+CS	0	15:22:40.938	Tester	  InpServerTZ=1
+CS	0	15:22:40.938	Tester	  InpServerFixedOffsetH=0
+CS	0	15:22:40.938	Tester	  London setup (London local time)=
+CS	0	15:22:40.938	Tester	  InpLonEnable=false
+CS	0	15:22:40.938	Tester	  InpLonRangeStart=08:00
+CS	0	15:22:40.938	Tester	  InpLonRangeMinutes=30
+CS	0	15:22:40.938	Tester	  InpLonEntryEnd=11:00
+CS	0	15:22:40.938	Tester	  InpLonExit=16:00
+CS	0	15:22:40.938	Tester	  New York setup (New York local time)=
+CS	0	15:22:40.938	Tester	  InpNYEnable=true
+CS	0	15:22:40.938	Tester	  InpNYRangeStart=09:30
+CS	0	15:22:40.938	Tester	  InpNYRangeMinutes=30
+CS	0	15:22:40.938	Tester	  InpNYEntryEnd=13:30
+CS	0	15:22:40.938	Tester	  InpNYExit=15:50
+CS	0	15:22:40.938	Tester	  Entry / exit=
+CS	0	15:22:40.938	Tester	  InpStopMode=0
+CS	0	15:22:40.938	Tester	  InpTargetR=1.5
+CS	0	15:22:40.938	Tester	  InpBufferSpreadMult=1.0
+CS	0	15:22:40.938	Tester	  InpBufferRangePct=5.0
+CS	0	15:22:40.938	Tester	  Filters=
+CS	0	15:22:40.938	Tester	  InpATRPeriod=14
+CS	0	15:22:40.938	Tester	  InpMinRangeATRPct=40.0
+CS	0	15:22:40.938	Tester	  InpMaxRangeATRPct=1000.0
+CS	0	15:22:40.938	Tester	  InpMaxCostRangePct=10.0
+CS	0	15:22:40.938	Tester	  InpCommissionPoints=0
+CS	0	15:22:40.938	Tester	  InpMinVolPct=0.0
+CS	0	15:22:40.938	Tester	  InpVolATRPeriod=20
+CS	0	15:22:40.938	Tester	  InpVolLookback=200
+CS	0	15:22:40.938	Tester	  Monthly cycle=
+CS	0	15:22:40.938	Tester	  InpCycleCapital=0.0
+CS	0	15:22:40.938	Tester	  InpSoftHaltPct=30.0
+CS	0	15:22:40.938	Tester	  InpHardFlattenPct=38.0
+CS	0	15:22:40.938	Tester	  InpRatchetArmPct=20.0
+CS	0	15:22:40.938	Tester	  InpRatchetFloorPct=10.0
+CS	0	15:22:40.938	Tester	  InpRatchetTrail=0.5
+CS	0	15:22:40.938	Tester	  InpRiskDivisor=8.0
+CS	0	15:22:40.938	Tester	  InpMaxRiskPct=1.0
+CS	0	15:22:40.938	Tester	  InpNoEntryLastDay=true
+CS	0	15:22:40.938	Tester	  Execution=
+CS	0	15:22:40.938	Tester	  InpMagicBase=26110400
+CS	0	15:22:40.938	Tester	  InpSlippagePoints=50
+CS	0	15:22:40.938	Tester	  InpMaxLot=100.0
+CS	0	15:22:40.949	CycleORB (NVDA,M5)	2026.05.01 00:00:00   [CycleORB] WARNING built and defaulted for EURUSD, running on NVDA
+CS	0	15:22:40.952	History	NVDA,Daily: history cache allocated for 204 bars and contains 73 bars from 2026.01.14 00:00 to 2026.04.30 00:00
+CS	0	15:22:40.952	History	NVDA,Daily: history begins from 2026.01.14 00:00
+CS	0	15:22:40.952	CycleORB (NVDA,M5)	2026.05.01 00:00:00   [CycleORB] Clock 2026: UK DST 2026.03.29 -> 2026.10.25 | US DST 2026.03.08 -> 2026.11.01 | server offset now +0h
+CS	0	15:22:40.952	CycleORB (NVDA,M5)	2026.05.01 00:00:00   [CycleORB] CYCLE_BEGIN 202605 capital=10000.00 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:40.952	CycleORB (NVDA,M5)	2026.05.01 00:00:00   [CycleORB] Init OK NVDA | magics LON=26110401 NY=26110402 | stop=CORB_STOP_OPPOSITE TP=1.5R | volpct>=0.0 | soft=30% hard=38% ratchet arm=20% floor=10% trail=0.50
+CS	0	15:22:41.694	Ticks	NVDA : real ticks begin from 2026.02.04 00:00:00
+CS	0	15:22:41.700	CycleORB (NVDA,M5)	2026.05.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.707	History	NVDA,M1: history cache allocated for 216564 bars and contains 28164 bars from 2026.01.14 19:03 to 2026.04.30 19:59
+CS	0	15:22:41.714	History	NVDA,M1: 61 bars from 2026.05.01 13:30 to 2026.05.01 14:30 added
+CS	0	15:22:41.714	History	NVDA,M1: history begins from 2026.01.14 19:03
+CS	0	15:22:41.714	CycleORB (NVDA,M5)	2026.05.01 14:30:00   [CycleORB] RANGE NY 2026.05.01 13:30 hi=202.88 lo=199.02 range=386pt atr%=62.0 spread=19.6pt (live 22pt) cost%=5.1 buffer=20pt risk=100.00
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:00   buy stop 24.63 NVDA at 203.08 sl: 199.02 tp: 209.17 (199.18 / 199.40)
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:00   CTrade::OrderSend: buy stop 24.63 NVDA at 203.08 sl: 199.02 tp: 209.17 [done]
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:00   [CycleORB] PLACE BUY_STOP lots=24.63 @203.08 sl=199.02 tp=209.17 magic=26110402 retcode=10009
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:00   sell stop 24.63 NVDA at 198.82 sl: 202.88 tp: 192.73 (199.18 / 199.40)
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:00   CTrade::OrderSend: sell stop 24.63 NVDA at 198.82 sl: 202.88 tp: 192.73 [done]
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:00   [CycleORB] PLACE SELL_STOP lots=24.63 @198.82 sl=202.88 tp=192.73 magic=26110402 retcode=10009
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:32   order [#3 sell stop 24.63 NVDA at 198.82] triggered
+CS	0	15:22:41.715	Trades	2026.05.01 14:30:32   deal #2 sell 24.63 NVDA at 198.74 done (based on order #3)
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:32   deal performed [#2 sell 24.63 NVDA at 198.74]
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:32   order performed sell 24.63 at 198.74 [#3 sell stop 24.63 NVDA at 198.82]
+CS	0	15:22:41.715	Trade	2026.05.01 14:30:32   order canceled [#2 buy stop 24.63 NVDA at 203.08]
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:32   CTrade::OrderSend: cancel #2 [done]
+CS	0	15:22:41.715	CycleORB (NVDA,M5)	2026.05.01 14:30:32   [CycleORB] DELETE order #2 magic=26110402 (NY OCO)
+CS	0	15:22:41.764	Trade	2026.05.01 19:50:00   market buy 24.63 NVDA, close #3 (199.06 / 199.27)
+CS	0	15:22:41.764	Trades	2026.05.01 19:50:00   deal #3 buy 24.63 NVDA at 199.27 done (based on order #4)
+CS	0	15:22:41.764	Trade	2026.05.01 19:50:00   deal performed [#3 buy 24.63 NVDA at 199.27]
+CS	0	15:22:41.764	Trade	2026.05.01 19:50:00   order performed buy 24.63 at 199.27 [#4 buy 24.63 NVDA at 199.27]
+CS	0	15:22:41.765	CycleORB (NVDA,M5)	2026.05.01 19:50:00   CTrade::OrderSend: market buy 24.63 position #3 NVDA [done at 199.27]
+CS	0	15:22:41.765	CycleORB (NVDA,M5)	2026.05.01 19:50:00   [CycleORB] CLOSE position #3 magic=26110402 (NY time exit)
+CS	0	15:22:41.774	CycleORB (NVDA,M5)	2026.05.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.776	CycleORB (NVDA,M5)	2026.05.04 14:30:00   [CycleORB] RANGE NY 2026.05.04 13:30 hi=201.63 lo=197.53 range=410pt atr%=64.4 spread=19.4pt (live 20pt) cost%=4.7 buffer=20pt risk=100.00
+CS	0	15:22:41.776	Trade	2026.05.04 14:30:00   buy stop 23.2 NVDA at 201.84 sl: 197.53 tp: 208.31 (197.26 / 197.46)
+CS	0	15:22:41.776	CycleORB (NVDA,M5)	2026.05.04 14:30:00   CTrade::OrderSend: buy stop 23.20 NVDA at 201.84 sl: 197.53 tp: 208.31 [done]
+CS	0	15:22:41.776	CycleORB (NVDA,M5)	2026.05.04 14:30:00   [CycleORB] PLACE BUY_STOP lots=23.20 @201.84 sl=197.53 tp=208.31 magic=26110402 retcode=10009
+CS	0	15:22:41.776	CycleORB (NVDA,M5)	2026.05.04 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:41.796	Trade	2026.05.04 17:30:00   order canceled [#5 buy stop 23.2 NVDA at 201.84]
+CS	0	15:22:41.796	CycleORB (NVDA,M5)	2026.05.04 17:30:00   CTrade::OrderSend: cancel #5 [done]
+CS	0	15:22:41.796	CycleORB (NVDA,M5)	2026.05.04 17:30:00   [CycleORB] DELETE order #5 magic=26110402 (NY entry window closed)
+CS	0	15:22:41.807	CycleORB (NVDA,M5)	2026.05.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.810	CycleORB (NVDA,M5)	2026.05.05 14:30:00   [CycleORB] SKIP NY 2026.05.05 13:30 hi=200.12 lo=198.00 range=212pt atr%=33.3 spread=19.6pt (live 21pt) cost%=9.2 (range/ATR outside band)
+CS	0	15:22:41.841	CycleORB (NVDA,M5)	2026.05.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.848	CycleORB (NVDA,M5)	2026.05.06 14:30:00   [CycleORB] RANGE NY 2026.05.06 13:30 hi=204.50 lo=198.34 range=616pt atr%=97.2 spread=19.6pt (live 27pt) cost%=3.2 buffer=31pt risk=100.00
+CS	0	15:22:41.848	Trade	2026.05.06 14:30:00   buy stop 15.45 NVDA at 204.81 sl: 198.34 tp: 214.52 (203.83 / 204.10)
+CS	0	15:22:41.848	CycleORB (NVDA,M5)	2026.05.06 14:30:00   CTrade::OrderSend: buy stop 15.45 NVDA at 204.81 sl: 198.34 tp: 214.52 [done]
+CS	0	15:22:41.848	CycleORB (NVDA,M5)	2026.05.06 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.45 @204.81 sl=198.34 tp=214.52 magic=26110402 retcode=10009
+CS	0	15:22:41.848	Trade	2026.05.06 14:30:00   sell stop 15.45 NVDA at 198.03 sl: 204.50 tp: 188.33 (203.83 / 204.10)
+CS	0	15:22:41.848	CycleORB (NVDA,M5)	2026.05.06 14:30:00   CTrade::OrderSend: sell stop 15.45 NVDA at 198.03 sl: 204.50 tp: 188.33 [done]
+CS	0	15:22:41.848	CycleORB (NVDA,M5)	2026.05.06 14:30:00   [CycleORB] PLACE SELL_STOP lots=15.45 @198.03 sl=204.50 tp=188.33 magic=26110402 retcode=10009
+CS	0	15:22:41.849	Trade	2026.05.06 14:32:15   order [#6 buy stop 15.45 NVDA at 204.81] triggered
+CS	0	15:22:41.849	Trades	2026.05.06 14:32:15   deal #4 buy 15.45 NVDA at 204.82 done (based on order #6)
+CS	0	15:22:41.849	Trade	2026.05.06 14:32:15   deal performed [#4 buy 15.45 NVDA at 204.82]
+CS	0	15:22:41.849	Trade	2026.05.06 14:32:15   order performed buy 15.45 at 204.82 [#6 buy stop 15.45 NVDA at 204.81]
+CS	0	15:22:41.849	Trade	2026.05.06 14:32:15   order canceled [#7 sell stop 15.45 NVDA at 198.03]
+CS	0	15:22:41.849	CycleORB (NVDA,M5)	2026.05.06 14:32:15   CTrade::OrderSend: cancel #7 [done]
+CS	0	15:22:41.849	CycleORB (NVDA,M5)	2026.05.06 14:32:15   [CycleORB] DELETE order #7 magic=26110402 (NY OCO)
+CS	0	15:22:41.891	Trade	2026.05.06 19:50:00   market sell 15.45 NVDA, close #6 (207.30 / 207.50)
+CS	0	15:22:41.891	Trades	2026.05.06 19:50:00   deal #5 sell 15.45 NVDA at 207.30 done (based on order #8)
+CS	0	15:22:41.891	Trade	2026.05.06 19:50:00   deal performed [#5 sell 15.45 NVDA at 207.30]
+CS	0	15:22:41.891	Trade	2026.05.06 19:50:00   order performed sell 15.45 at 207.30 [#8 sell 15.45 NVDA at 207.30]
+CS	0	15:22:41.891	CycleORB (NVDA,M5)	2026.05.06 19:50:00   CTrade::OrderSend: market sell 15.45 position #6 NVDA [done at 207.30]
+CS	0	15:22:41.891	CycleORB (NVDA,M5)	2026.05.06 19:50:00   [CycleORB] CLOSE position #6 magic=26110402 (NY time exit)
+CS	0	15:22:41.897	CycleORB (NVDA,M5)	2026.05.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.899	CycleORB (NVDA,M5)	2026.05.07 14:30:00   [CycleORB] RANGE NY 2026.05.07 13:30 hi=210.39 lo=206.39 range=400pt atr%=58.0 spread=19.7pt (live 25pt) cost%=4.9 buffer=20pt risk=100.00
+CS	0	15:22:41.899	CycleORB (NVDA,M5)	2026.05.07 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:41.899	Trade	2026.05.07 14:30:00   sell stop 23.8 NVDA at 206.19 sl: 210.39 tp: 199.89 (213.01 / 213.26)
+CS	0	15:22:41.899	CycleORB (NVDA,M5)	2026.05.07 14:30:00   CTrade::OrderSend: sell stop 23.80 NVDA at 206.19 sl: 210.39 tp: 199.89 [done]
+CS	0	15:22:41.899	CycleORB (NVDA,M5)	2026.05.07 14:30:00   [CycleORB] PLACE SELL_STOP lots=23.80 @206.19 sl=210.39 tp=199.89 magic=26110402 retcode=10009
+CS	0	15:22:41.919	Trade	2026.05.07 17:30:00   order canceled [#9 sell stop 23.8 NVDA at 206.19]
+CS	0	15:22:41.919	CycleORB (NVDA,M5)	2026.05.07 17:30:00   CTrade::OrderSend: cancel #9 [done]
+CS	0	15:22:41.919	CycleORB (NVDA,M5)	2026.05.07 17:30:00   [CycleORB] DELETE order #9 magic=26110402 (NY entry window closed)
+CS	0	15:22:41.935	CycleORB (NVDA,M5)	2026.05.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.938	CycleORB (NVDA,M5)	2026.05.08 14:30:00   [CycleORB] RANGE NY 2026.05.08 13:30 hi=217.64 lo=213.24 range=440pt atr%=61.1 spread=19.6pt (live 26pt) cost%=4.5 buffer=22pt risk=100.00
+CS	0	15:22:41.938	Trade	2026.05.08 14:30:00   buy stop 21.64 NVDA at 217.86 sl: 213.24 tp: 224.79 (215.20 / 215.46)
+CS	0	15:22:41.938	CycleORB (NVDA,M5)	2026.05.08 14:30:00   CTrade::OrderSend: buy stop 21.64 NVDA at 217.86 sl: 213.24 tp: 224.79 [done]
+CS	0	15:22:41.938	CycleORB (NVDA,M5)	2026.05.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.64 @217.86 sl=213.24 tp=224.79 magic=26110402 retcode=10009
+CS	0	15:22:41.938	Trade	2026.05.08 14:30:00   sell stop 21.64 NVDA at 213.02 sl: 217.64 tp: 206.09 (215.20 / 215.46)
+CS	0	15:22:41.938	CycleORB (NVDA,M5)	2026.05.08 14:30:00   CTrade::OrderSend: sell stop 21.64 NVDA at 213.02 sl: 217.64 tp: 206.09 [done]
+CS	0	15:22:41.938	CycleORB (NVDA,M5)	2026.05.08 14:30:00   [CycleORB] PLACE SELL_STOP lots=21.64 @213.02 sl=217.64 tp=206.09 magic=26110402 retcode=10009
+CS	0	15:22:41.965	Trade	2026.05.08 17:30:00   order canceled [#11 sell stop 21.64 NVDA at 213.02]
+CS	0	15:22:41.965	CycleORB (NVDA,M5)	2026.05.08 17:30:00   CTrade::OrderSend: cancel #11 [done]
+CS	0	15:22:41.965	CycleORB (NVDA,M5)	2026.05.08 17:30:00   [CycleORB] DELETE order #11 magic=26110402 (NY entry window closed)
+CS	0	15:22:41.965	Trade	2026.05.08 17:30:00   order canceled [#10 buy stop 21.64 NVDA at 217.86]
+CS	0	15:22:41.965	CycleORB (NVDA,M5)	2026.05.08 17:30:00   CTrade::OrderSend: cancel #10 [done]
+CS	0	15:22:41.965	CycleORB (NVDA,M5)	2026.05.08 17:30:00   [CycleORB] DELETE order #10 magic=26110402 (NY entry window closed)
+CS	0	15:22:41.977	CycleORB (NVDA,M5)	2026.05.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:41.980	CycleORB (NVDA,M5)	2026.05.11 14:30:00   [CycleORB] RANGE NY 2026.05.11 13:30 hi=220.79 lo=214.31 range=648pt atr%=88.3 spread=19.7pt (live 23pt) cost%=3.0 buffer=32pt risk=100.00
+CS	0	15:22:41.980	Trade	2026.05.11 14:30:00   buy stop 14.7 NVDA at 221.11 sl: 214.31 tp: 231.31 (217.87 / 218.10)
+CS	0	15:22:41.980	CycleORB (NVDA,M5)	2026.05.11 14:30:00   CTrade::OrderSend: buy stop 14.70 NVDA at 221.11 sl: 214.31 tp: 231.31 [done]
+CS	0	15:22:41.980	CycleORB (NVDA,M5)	2026.05.11 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.70 @221.11 sl=214.31 tp=231.31 magic=26110402 retcode=10009
+CS	0	15:22:41.980	Trade	2026.05.11 14:30:00   sell stop 14.7 NVDA at 213.99 sl: 220.79 tp: 203.79 (217.87 / 218.10)
+CS	0	15:22:41.980	CycleORB (NVDA,M5)	2026.05.11 14:30:00   CTrade::OrderSend: sell stop 14.70 NVDA at 213.99 sl: 220.79 tp: 203.79 [done]
+CS	0	15:22:41.980	CycleORB (NVDA,M5)	2026.05.11 14:30:00   [CycleORB] PLACE SELL_STOP lots=14.70 @213.99 sl=220.79 tp=203.79 magic=26110402 retcode=10009
+CS	0	15:22:41.983	Trade	2026.05.11 14:51:49   order [#12 buy stop 14.7 NVDA at 221.11] triggered
+CS	0	15:22:41.983	Trades	2026.05.11 14:51:49   deal #6 buy 14.7 NVDA at 221.12 done (based on order #12)
+CS	0	15:22:41.983	Trade	2026.05.11 14:51:49   deal performed [#6 buy 14.7 NVDA at 221.12]
+CS	0	15:22:41.983	Trade	2026.05.11 14:51:49   order performed buy 14.7 at 221.12 [#12 buy stop 14.7 NVDA at 221.11]
+CS	0	15:22:41.983	Trade	2026.05.11 14:51:49   order canceled [#13 sell stop 14.7 NVDA at 213.99]
+CS	0	15:22:41.983	CycleORB (NVDA,M5)	2026.05.11 14:51:49   CTrade::OrderSend: cancel #13 [done]
+CS	0	15:22:41.983	CycleORB (NVDA,M5)	2026.05.11 14:51:49   [CycleORB] DELETE order #13 magic=26110402 (NY OCO)
+CS	0	15:22:42.018	Trade	2026.05.11 19:50:00   market sell 14.7 NVDA, close #12 (219.19 / 219.45)
+CS	0	15:22:42.018	Trades	2026.05.11 19:50:00   deal #7 sell 14.7 NVDA at 219.19 done (based on order #14)
+CS	0	15:22:42.018	Trade	2026.05.11 19:50:00   deal performed [#7 sell 14.7 NVDA at 219.19]
+CS	0	15:22:42.018	Trade	2026.05.11 19:50:00   order performed sell 14.7 at 219.19 [#14 sell 14.7 NVDA at 219.19]
+CS	0	15:22:42.018	CycleORB (NVDA,M5)	2026.05.11 19:50:00   CTrade::OrderSend: market sell 14.70 position #12 NVDA [done at 219.19]
+CS	0	15:22:42.018	CycleORB (NVDA,M5)	2026.05.11 19:50:00   [CycleORB] CLOSE position #12 magic=26110402 (NY time exit)
+CS	0	15:22:42.024	CycleORB (NVDA,M5)	2026.05.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.027	CycleORB (NVDA,M5)	2026.05.12 14:30:00   [CycleORB] RANGE NY 2026.05.12 13:30 hi=223.55 lo=216.95 range=660pt atr%=86.4 spread=30.0pt (live 37pt) cost%=4.5 buffer=33pt risk=100.00
+CS	0	15:22:42.027	Trade	2026.05.12 14:30:00   buy stop 14.43 NVDA at 223.88 sl: 216.95 tp: 234.28 (218.69 / 219.06)
+CS	0	15:22:42.027	CycleORB (NVDA,M5)	2026.05.12 14:30:00   CTrade::OrderSend: buy stop 14.43 NVDA at 223.88 sl: 216.95 tp: 234.28 [done]
+CS	0	15:22:42.027	CycleORB (NVDA,M5)	2026.05.12 14:30:00   [CycleORB] PLACE BUY_STOP lots=14.43 @223.88 sl=216.95 tp=234.28 magic=26110402 retcode=10009
+CS	0	15:22:42.027	Trade	2026.05.12 14:30:00   sell stop 14.43 NVDA at 216.62 sl: 223.55 tp: 206.23 (218.69 / 219.06)
+CS	0	15:22:42.027	CycleORB (NVDA,M5)	2026.05.12 14:30:00   CTrade::OrderSend: sell stop 14.43 NVDA at 216.62 sl: 223.55 tp: 206.23 [done]
+CS	0	15:22:42.027	CycleORB (NVDA,M5)	2026.05.12 14:30:00   [CycleORB] PLACE SELL_STOP lots=14.43 @216.62 sl=223.55 tp=206.23 magic=26110402 retcode=10009
+CS	0	15:22:42.033	Trade	2026.05.12 15:15:35   order [#16 sell stop 14.43 NVDA at 216.62] triggered
+CS	0	15:22:42.033	Trades	2026.05.12 15:15:35   deal #8 sell 14.43 NVDA at 216.58 done (based on order #16)
+CS	0	15:22:42.033	Trade	2026.05.12 15:15:35   deal performed [#8 sell 14.43 NVDA at 216.58]
+CS	0	15:22:42.033	Trade	2026.05.12 15:15:35   order performed sell 14.43 at 216.58 [#16 sell stop 14.43 NVDA at 216.62]
+CS	0	15:22:42.033	Trade	2026.05.12 15:15:35   order canceled [#15 buy stop 14.43 NVDA at 223.88]
+CS	0	15:22:42.033	CycleORB (NVDA,M5)	2026.05.12 15:15:35   CTrade::OrderSend: cancel #15 [done]
+CS	0	15:22:42.033	CycleORB (NVDA,M5)	2026.05.12 15:15:35   [CycleORB] DELETE order #15 magic=26110402 (NY OCO)
+CS	0	15:22:42.069	Trade	2026.05.12 19:50:00   market buy 14.43 NVDA, close #16 (220.53 / 220.90)
+CS	0	15:22:42.069	Trades	2026.05.12 19:50:00   deal #9 buy 14.43 NVDA at 220.90 done (based on order #17)
+CS	0	15:22:42.069	Trade	2026.05.12 19:50:00   deal performed [#9 buy 14.43 NVDA at 220.90]
+CS	0	15:22:42.069	Trade	2026.05.12 19:50:00   order performed buy 14.43 at 220.90 [#17 buy 14.43 NVDA at 220.90]
+CS	0	15:22:42.069	CycleORB (NVDA,M5)	2026.05.12 19:50:00   CTrade::OrderSend: market buy 14.43 position #16 NVDA [done at 220.90]
+CS	0	15:22:42.069	CycleORB (NVDA,M5)	2026.05.12 19:50:00   [CycleORB] CLOSE position #16 magic=26110402 (NY time exit)
+CS	0	15:22:42.077	CycleORB (NVDA,M5)	2026.05.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.082	CycleORB (NVDA,M5)	2026.05.13 14:30:00   [CycleORB] RANGE NY 2026.05.13 13:30 hi=226.96 lo=221.41 range=555pt atr%=69.0 spread=29.7pt (live 33pt) cost%=5.4 buffer=30pt risk=100.00
+CS	0	15:22:42.082	Trade	2026.05.13 14:30:00   buy stop 17.09 NVDA at 227.26 sl: 221.41 tp: 236.03 (224.31 / 224.64)
+CS	0	15:22:42.082	CycleORB (NVDA,M5)	2026.05.13 14:30:00   CTrade::OrderSend: buy stop 17.09 NVDA at 227.26 sl: 221.41 tp: 236.03 [done]
+CS	0	15:22:42.082	CycleORB (NVDA,M5)	2026.05.13 14:30:00   [CycleORB] PLACE BUY_STOP lots=17.09 @227.26 sl=221.41 tp=236.03 magic=26110402 retcode=10009
+CS	0	15:22:42.082	Trade	2026.05.13 14:30:00   sell stop 17.09 NVDA at 221.11 sl: 226.96 tp: 212.34 (224.31 / 224.64)
+CS	0	15:22:42.082	CycleORB (NVDA,M5)	2026.05.13 14:30:00   CTrade::OrderSend: sell stop 17.09 NVDA at 221.11 sl: 226.96 tp: 212.34 [done]
+CS	0	15:22:42.082	CycleORB (NVDA,M5)	2026.05.13 14:30:00   [CycleORB] PLACE SELL_STOP lots=17.09 @221.11 sl=226.96 tp=212.34 magic=26110402 retcode=10009
+CS	0	15:22:42.088	Trade	2026.05.13 15:07:01   order [#18 buy stop 17.09 NVDA at 227.26] triggered
+CS	0	15:22:42.088	Trades	2026.05.13 15:07:01   deal #10 buy 17.09 NVDA at 227.27 done (based on order #18)
+CS	0	15:22:42.088	Trade	2026.05.13 15:07:01   deal performed [#10 buy 17.09 NVDA at 227.27]
+CS	0	15:22:42.088	Trade	2026.05.13 15:07:01   order performed buy 17.09 at 227.27 [#18 buy stop 17.09 NVDA at 227.26]
+CS	0	15:22:42.088	Trade	2026.05.13 15:07:01   order canceled [#19 sell stop 17.09 NVDA at 221.11]
+CS	0	15:22:42.088	CycleORB (NVDA,M5)	2026.05.13 15:07:01   CTrade::OrderSend: cancel #19 [done]
+CS	0	15:22:42.088	CycleORB (NVDA,M5)	2026.05.13 15:07:01   [CycleORB] DELETE order #19 magic=26110402 (NY OCO)
+CS	0	15:22:42.120	Trade	2026.05.13 19:50:00   market sell 17.09 NVDA, close #18 (225.86 / 226.26)
+CS	0	15:22:42.120	Trades	2026.05.13 19:50:00   deal #11 sell 17.09 NVDA at 225.86 done (based on order #20)
+CS	0	15:22:42.120	Trade	2026.05.13 19:50:00   deal performed [#11 sell 17.09 NVDA at 225.86]
+CS	0	15:22:42.120	Trade	2026.05.13 19:50:00   order performed sell 17.09 at 225.86 [#20 sell 17.09 NVDA at 225.86]
+CS	0	15:22:42.120	CycleORB (NVDA,M5)	2026.05.13 19:50:00   CTrade::OrderSend: market sell 17.09 position #18 NVDA [done at 225.86]
+CS	0	15:22:42.120	CycleORB (NVDA,M5)	2026.05.13 19:50:00   [CycleORB] CLOSE position #18 magic=26110402 (NY time exit)
+CS	0	15:22:42.125	CycleORB (NVDA,M5)	2026.05.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:00   [CycleORB] RANGE NY 2026.05.14 13:30 hi=233.11 lo=229.65 range=346pt atr%=42.8 spread=29.7pt (live 39pt) cost%=8.6 buffer=30pt risk=100.00
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:00   buy stop 26.59 NVDA at 233.41 sl: 229.65 tp: 239.05 (232.82 / 233.21)
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:00   CTrade::OrderSend: buy stop 26.59 NVDA at 233.41 sl: 229.65 tp: 239.05 [done]
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=26.59 @233.41 sl=229.65 tp=239.05 magic=26110402 retcode=10009
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:00   sell stop 26.59 NVDA at 229.35 sl: 233.11 tp: 223.71 (232.82 / 233.21)
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:00   CTrade::OrderSend: sell stop 26.59 NVDA at 229.35 sl: 233.11 tp: 223.71 [done]
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:00   [CycleORB] PLACE SELL_STOP lots=26.59 @229.35 sl=233.11 tp=223.71 magic=26110402 retcode=10009
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:01   order [#21 buy stop 26.59 NVDA at 233.41] triggered
+CS	0	15:22:42.129	Trades	2026.05.14 14:30:01   deal #12 buy 26.59 NVDA at 233.62 done (based on order #21)
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:01   deal performed [#12 buy 26.59 NVDA at 233.62]
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:01   order performed buy 26.59 at 233.62 [#21 buy stop 26.59 NVDA at 233.41]
+CS	0	15:22:42.129	Trade	2026.05.14 14:30:01   order canceled [#22 sell stop 26.59 NVDA at 229.35]
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:01   CTrade::OrderSend: cancel #22 [done]
+CS	0	15:22:42.129	CycleORB (NVDA,M5)	2026.05.14 14:30:01   [CycleORB] DELETE order #22 magic=26110402 (NY OCO)
+CS	0	15:22:42.184	Trade	2026.05.14 19:50:00   market sell 26.59 NVDA, close #21 (235.52 / 235.83)
+CS	0	15:22:42.184	Trades	2026.05.14 19:50:00   deal #13 sell 26.59 NVDA at 235.52 done (based on order #23)
+CS	0	15:22:42.184	Trade	2026.05.14 19:50:00   deal performed [#13 sell 26.59 NVDA at 235.52]
+CS	0	15:22:42.184	Trade	2026.05.14 19:50:00   order performed sell 26.59 at 235.52 [#23 sell 26.59 NVDA at 235.52]
+CS	0	15:22:42.184	CycleORB (NVDA,M5)	2026.05.14 19:50:00   CTrade::OrderSend: market sell 26.59 position #21 NVDA [done at 235.52]
+CS	0	15:22:42.184	CycleORB (NVDA,M5)	2026.05.14 19:50:00   [CycleORB] CLOSE position #21 magic=26110402 (NY time exit)
+CS	0	15:22:42.193	CycleORB (NVDA,M5)	2026.05.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.198	CycleORB (NVDA,M5)	2026.05.15 14:30:00   [CycleORB] RANGE NY 2026.05.15 13:30 hi=229.10 lo=224.12 range=498pt atr%=62.0 spread=29.7pt (live 38pt) cost%=6.0 buffer=30pt risk=100.00
+CS	0	15:22:42.198	Trade	2026.05.15 14:30:00   buy stop 18.93 NVDA at 229.40 sl: 224.12 tp: 237.32 (226.45 / 226.83)
+CS	0	15:22:42.198	CycleORB (NVDA,M5)	2026.05.15 14:30:00   CTrade::OrderSend: buy stop 18.93 NVDA at 229.40 sl: 224.12 tp: 237.32 [done]
+CS	0	15:22:42.198	CycleORB (NVDA,M5)	2026.05.15 14:30:00   [CycleORB] PLACE BUY_STOP lots=18.93 @229.40 sl=224.12 tp=237.32 magic=26110402 retcode=10009
+CS	0	15:22:42.198	Trade	2026.05.15 14:30:00   sell stop 18.93 NVDA at 223.82 sl: 229.10 tp: 215.90 (226.45 / 226.83)
+CS	0	15:22:42.198	CycleORB (NVDA,M5)	2026.05.15 14:30:00   CTrade::OrderSend: sell stop 18.93 NVDA at 223.82 sl: 229.10 tp: 215.90 [done]
+CS	0	15:22:42.198	CycleORB (NVDA,M5)	2026.05.15 14:30:00   [CycleORB] PLACE SELL_STOP lots=18.93 @223.82 sl=229.10 tp=215.90 magic=26110402 retcode=10009
+CS	0	15:22:42.227	Trade	2026.05.15 17:28:27   order [#24 buy stop 18.93 NVDA at 229.40] triggered
+CS	0	15:22:42.227	Trades	2026.05.15 17:28:27   deal #14 buy 18.93 NVDA at 229.40 done (based on order #24)
+CS	0	15:22:42.227	Trade	2026.05.15 17:28:27   deal performed [#14 buy 18.93 NVDA at 229.40]
+CS	0	15:22:42.227	Trade	2026.05.15 17:28:27   order performed buy 18.93 at 229.40 [#24 buy stop 18.93 NVDA at 229.40]
+CS	0	15:22:42.227	Trade	2026.05.15 17:28:27   order canceled [#25 sell stop 18.93 NVDA at 223.82]
+CS	0	15:22:42.227	CycleORB (NVDA,M5)	2026.05.15 17:28:27   CTrade::OrderSend: cancel #25 [done]
+CS	0	15:22:42.227	CycleORB (NVDA,M5)	2026.05.15 17:28:27   [CycleORB] DELETE order #25 magic=26110402 (NY OCO)
+CS	0	15:22:42.250	Trade	2026.05.15 19:50:00   market sell 18.93 NVDA, close #24 (226.52 / 226.83)
+CS	0	15:22:42.250	Trades	2026.05.15 19:50:00   deal #15 sell 18.93 NVDA at 226.52 done (based on order #26)
+CS	0	15:22:42.250	Trade	2026.05.15 19:50:00   deal performed [#15 sell 18.93 NVDA at 226.52]
+CS	0	15:22:42.250	Trade	2026.05.15 19:50:00   order performed sell 18.93 at 226.52 [#26 sell 18.93 NVDA at 226.52]
+CS	0	15:22:42.250	CycleORB (NVDA,M5)	2026.05.15 19:50:00   CTrade::OrderSend: market sell 18.93 position #24 NVDA [done at 226.52]
+CS	0	15:22:42.250	CycleORB (NVDA,M5)	2026.05.15 19:50:00   [CycleORB] CLOSE position #24 magic=26110402 (NY time exit)
+CS	0	15:22:42.258	CycleORB (NVDA,M5)	2026.05.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.262	CycleORB (NVDA,M5)	2026.05.18 14:30:00   [CycleORB] RANGE NY 2026.05.18 13:30 hi=229.32 lo=223.39 range=593pt atr%=72.6 spread=30.1pt (live 33pt) cost%=5.1 buffer=30pt risk=100.00
+CS	0	15:22:42.262	Trade	2026.05.18 14:30:00   buy stop 16.05 NVDA at 229.62 sl: 223.39 tp: 238.97 (222.71 / 223.04)
+CS	0	15:22:42.262	CycleORB (NVDA,M5)	2026.05.18 14:30:00   CTrade::OrderSend: buy stop 16.05 NVDA at 229.62 sl: 223.39 tp: 238.97 [done]
+CS	0	15:22:42.262	CycleORB (NVDA,M5)	2026.05.18 14:30:00   [CycleORB] PLACE BUY_STOP lots=16.05 @229.62 sl=223.39 tp=238.97 magic=26110402 retcode=10009
+CS	0	15:22:42.262	CycleORB (NVDA,M5)	2026.05.18 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:42.285	Trade	2026.05.18 17:30:00   order canceled [#27 buy stop 16.05 NVDA at 229.62]
+CS	0	15:22:42.285	CycleORB (NVDA,M5)	2026.05.18 17:30:00   CTrade::OrderSend: cancel #27 [done]
+CS	0	15:22:42.285	CycleORB (NVDA,M5)	2026.05.18 17:30:00   [CycleORB] DELETE order #27 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.305	CycleORB (NVDA,M5)	2026.05.19 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.308	CycleORB (NVDA,M5)	2026.05.19 14:30:00   [CycleORB] RANGE NY 2026.05.19 13:30 hi=223.13 lo=219.35 range=378pt atr%=45.2 spread=30.4pt (live 34pt) cost%=8.0 buffer=30pt risk=100.00
+CS	0	15:22:42.308	Trade	2026.05.19 14:30:00   buy stop 24.5 NVDA at 223.43 sl: 219.35 tp: 229.55 (218.42 / 218.76)
+CS	0	15:22:42.308	CycleORB (NVDA,M5)	2026.05.19 14:30:00   CTrade::OrderSend: buy stop 24.50 NVDA at 223.43 sl: 219.35 tp: 229.55 [done]
+CS	0	15:22:42.308	CycleORB (NVDA,M5)	2026.05.19 14:30:00   [CycleORB] PLACE BUY_STOP lots=24.50 @223.43 sl=219.35 tp=229.55 magic=26110402 retcode=10009
+CS	0	15:22:42.308	CycleORB (NVDA,M5)	2026.05.19 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:42.325	Trade	2026.05.19 16:45:31   order [#28 buy stop 24.5 NVDA at 223.43] triggered
+CS	0	15:22:42.325	Trades	2026.05.19 16:45:31   deal #16 buy 24.5 NVDA at 223.43 done (based on order #28)
+CS	0	15:22:42.325	Trade	2026.05.19 16:45:31   deal performed [#16 buy 24.5 NVDA at 223.43]
+CS	0	15:22:42.325	Trade	2026.05.19 16:45:31   order performed buy 24.5 at 223.43 [#28 buy stop 24.5 NVDA at 223.43]
+CS	0	15:22:42.351	Trade	2026.05.19 19:50:00   market sell 24.5 NVDA, close #28 (220.79 / 221.14)
+CS	0	15:22:42.351	Trades	2026.05.19 19:50:00   deal #17 sell 24.5 NVDA at 220.79 done (based on order #29)
+CS	0	15:22:42.351	Trade	2026.05.19 19:50:00   deal performed [#17 sell 24.5 NVDA at 220.79]
+CS	0	15:22:42.351	Trade	2026.05.19 19:50:00   order performed sell 24.5 at 220.79 [#29 sell 24.5 NVDA at 220.79]
+CS	0	15:22:42.351	CycleORB (NVDA,M5)	2026.05.19 19:50:00   CTrade::OrderSend: market sell 24.50 position #28 NVDA [done at 220.79]
+CS	0	15:22:42.351	CycleORB (NVDA,M5)	2026.05.19 19:50:00   [CycleORB] CLOSE position #28 magic=26110402 (NY time exit)
+CS	0	15:22:42.360	CycleORB (NVDA,M5)	2026.05.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.366	CycleORB (NVDA,M5)	2026.05.20 14:30:00   [CycleORB] SKIP NY 2026.05.20 13:30 hi=222.29 lo=220.34 range=195pt atr%=23.1 spread=29.6pt (live 32pt) cost%=15.2 (range/ATR outside band)
+CS	0	15:22:42.392	CycleORB (NVDA,M5)	2026.05.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.395	CycleORB (NVDA,M5)	2026.05.21 14:30:00   [CycleORB] RANGE NY 2026.05.21 13:30 hi=227.18 lo=220.24 range=694pt atr%=86.4 spread=30.3pt (live 39pt) cost%=4.4 buffer=35pt risk=100.00
+CS	0	15:22:42.395	Trade	2026.05.21 14:30:00   buy stop 13.71 NVDA at 227.53 sl: 220.24 tp: 238.46 (218.73 / 219.12)
+CS	0	15:22:42.395	CycleORB (NVDA,M5)	2026.05.21 14:30:00   CTrade::OrderSend: buy stop 13.71 NVDA at 227.53 sl: 220.24 tp: 238.46 [done]
+CS	0	15:22:42.395	CycleORB (NVDA,M5)	2026.05.21 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.71 @227.53 sl=220.24 tp=238.46 magic=26110402 retcode=10009
+CS	0	15:22:42.395	CycleORB (NVDA,M5)	2026.05.21 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:42.416	Trade	2026.05.21 17:30:00   order canceled [#30 buy stop 13.71 NVDA at 227.53]
+CS	0	15:22:42.416	CycleORB (NVDA,M5)	2026.05.21 17:30:00   CTrade::OrderSend: cancel #30 [done]
+CS	0	15:22:42.416	CycleORB (NVDA,M5)	2026.05.21 17:30:00   [CycleORB] DELETE order #30 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.432	CycleORB (NVDA,M5)	2026.05.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.436	CycleORB (NVDA,M5)	2026.05.22 14:30:00   [CycleORB] RANGE NY 2026.05.22 13:30 hi=220.62 lo=217.05 range=357pt atr%=43.1 spread=29.5pt (live 32pt) cost%=8.3 buffer=29pt risk=100.00
+CS	0	15:22:42.436	Trade	2026.05.22 14:30:00   buy stop 25.9 NVDA at 220.91 sl: 217.05 tp: 226.70 (216.15 / 216.47)
+CS	0	15:22:42.436	CycleORB (NVDA,M5)	2026.05.22 14:30:00   CTrade::OrderSend: buy stop 25.90 NVDA at 220.91 sl: 217.05 tp: 226.70 [done]
+CS	0	15:22:42.436	CycleORB (NVDA,M5)	2026.05.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=25.90 @220.91 sl=217.05 tp=226.70 magic=26110402 retcode=10009
+CS	0	15:22:42.436	CycleORB (NVDA,M5)	2026.05.22 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:42.455	Trade	2026.05.22 17:30:00   order canceled [#31 buy stop 25.9 NVDA at 220.91]
+CS	0	15:22:42.455	CycleORB (NVDA,M5)	2026.05.22 17:30:00   CTrade::OrderSend: cancel #31 [done]
+CS	0	15:22:42.455	CycleORB (NVDA,M5)	2026.05.22 17:30:00   [CycleORB] DELETE order #31 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.469	CycleORB (NVDA,M5)	2026.05.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.473	CycleORB (NVDA,M5)	2026.05.26 14:30:00   [CycleORB] SKIP NY 2026.05.26 13:30 hi=217.29 lo=214.66 range=263pt atr%=32.1 spread=29.3pt (live 31pt) cost%=11.1 (range/ATR outside band)
+CS	0	15:22:42.502	CycleORB (NVDA,M5)	2026.05.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.505	CycleORB (NVDA,M5)	2026.05.27 14:30:00   [CycleORB] SKIP NY 2026.05.27 13:30 hi=213.12 lo=210.13 range=299pt atr%=35.9 spread=29.5pt (live 36pt) cost%=9.9 (range/ATR outside band)
+CS	0	15:22:42.527	CycleORB (NVDA,M5)	2026.05.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.530	CycleORB (NVDA,M5)	2026.05.28 14:30:00   [CycleORB] SKIP NY 2026.05.28 13:30 hi=214.07 lo=211.55 range=252pt atr%=31.8 spread=29.5pt (live 35pt) cost%=11.7 (range/ATR outside band)
+CS	0	15:22:42.552	CycleORB (NVDA,M5)	2026.05.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.555	CycleORB (NVDA,M5)	2026.05.29 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:42.579	CycleORB (NVDA,M5)	2026.06.01 13:30:30   [CycleORB] CYCLE_END 202605 capital=10000.00 realized=-158.22 floating=0.00 pnl=-1.58% peak=0.41% state=ACTIVE 
+CS	0	15:22:42.579	CycleORB (NVDA,M5)	2026.06.01 13:30:30   [CycleORB] CYCLE_BEGIN 202606 capital=9841.78 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:42.584	CycleORB (NVDA,M5)	2026.06.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.589	CycleORB (NVDA,M5)	2026.06.01 14:30:00   [CycleORB] RANGE NY 2026.06.01 13:30 hi=220.66 lo=215.93 range=473pt atr%=61.9 spread=29.7pt (live 33pt) cost%=6.3 buffer=30pt risk=98.42
+CS	0	15:22:42.589	CycleORB (NVDA,M5)	2026.06.01 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:42.589	Trade	2026.06.01 14:30:00   sell stop 19.56 NVDA at 215.63 sl: 220.66 tp: 208.08 (221.17 / 221.50)
+CS	0	15:22:42.589	CycleORB (NVDA,M5)	2026.06.01 14:30:00   CTrade::OrderSend: sell stop 19.56 NVDA at 215.63 sl: 220.66 tp: 208.08 [done]
+CS	0	15:22:42.589	CycleORB (NVDA,M5)	2026.06.01 14:30:00   [CycleORB] PLACE SELL_STOP lots=19.56 @215.63 sl=220.66 tp=208.08 magic=26110402 retcode=10009
+CS	0	15:22:42.605	Trade	2026.06.01 17:30:00   order canceled [#32 sell stop 19.56 NVDA at 215.63]
+CS	0	15:22:42.605	CycleORB (NVDA,M5)	2026.06.01 17:30:00   CTrade::OrderSend: cancel #32 [done]
+CS	0	15:22:42.605	CycleORB (NVDA,M5)	2026.06.01 17:30:00   [CycleORB] DELETE order #32 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.618	CycleORB (NVDA,M5)	2026.06.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.621	CycleORB (NVDA,M5)	2026.06.02 14:30:00   [CycleORB] RANGE NY 2026.06.02 13:30 hi=232.12 lo=224.87 range=725pt atr%=90.4 spread=29.5pt (live 34pt) cost%=4.1 buffer=36pt risk=98.42
+CS	0	15:22:42.621	Trade	2026.06.02 14:30:00   buy stop 12.93 NVDA at 232.48 sl: 224.87 tp: 243.89 (228.38 / 228.72)
+CS	0	15:22:42.621	CycleORB (NVDA,M5)	2026.06.02 14:30:00   CTrade::OrderSend: buy stop 12.93 NVDA at 232.48 sl: 224.87 tp: 243.89 [done]
+CS	0	15:22:42.621	CycleORB (NVDA,M5)	2026.06.02 14:30:00   [CycleORB] PLACE BUY_STOP lots=12.93 @232.48 sl=224.87 tp=243.89 magic=26110402 retcode=10009
+CS	0	15:22:42.621	Trade	2026.06.02 14:30:00   sell stop 12.93 NVDA at 224.51 sl: 232.12 tp: 213.09 (228.38 / 228.72)
+CS	0	15:22:42.621	CycleORB (NVDA,M5)	2026.06.02 14:30:00   CTrade::OrderSend: sell stop 12.93 NVDA at 224.51 sl: 232.12 tp: 213.09 [done]
+CS	0	15:22:42.621	CycleORB (NVDA,M5)	2026.06.02 14:30:00   [CycleORB] PLACE SELL_STOP lots=12.93 @224.51 sl=232.12 tp=213.09 magic=26110402 retcode=10009
+CS	0	15:22:42.634	Trade	2026.06.02 16:20:41   order [#34 sell stop 12.93 NVDA at 224.51] triggered
+CS	0	15:22:42.634	Trades	2026.06.02 16:20:41   deal #18 sell 12.93 NVDA at 224.46 done (based on order #34)
+CS	0	15:22:42.634	Trade	2026.06.02 16:20:41   deal performed [#18 sell 12.93 NVDA at 224.46]
+CS	0	15:22:42.634	Trade	2026.06.02 16:20:41   order performed sell 12.93 at 224.46 [#34 sell stop 12.93 NVDA at 224.51]
+CS	0	15:22:42.634	Trade	2026.06.02 16:20:41   order canceled [#33 buy stop 12.93 NVDA at 232.48]
+CS	0	15:22:42.634	CycleORB (NVDA,M5)	2026.06.02 16:20:41   CTrade::OrderSend: cancel #33 [done]
+CS	0	15:22:42.634	CycleORB (NVDA,M5)	2026.06.02 16:20:41   [CycleORB] DELETE order #33 magic=26110402 (NY OCO)
+CS	0	15:22:42.654	Trade	2026.06.02 19:50:00   market buy 12.93 NVDA, close #34 (221.70 / 222.04)
+CS	0	15:22:42.654	Trades	2026.06.02 19:50:00   deal #19 buy 12.93 NVDA at 222.04 done (based on order #35)
+CS	0	15:22:42.654	Trade	2026.06.02 19:50:00   deal performed [#19 buy 12.93 NVDA at 222.04]
+CS	0	15:22:42.654	Trade	2026.06.02 19:50:00   order performed buy 12.93 at 222.04 [#35 buy 12.93 NVDA at 222.04]
+CS	0	15:22:42.654	CycleORB (NVDA,M5)	2026.06.02 19:50:00   CTrade::OrderSend: market buy 12.93 position #34 NVDA [done at 222.04]
+CS	0	15:22:42.654	CycleORB (NVDA,M5)	2026.06.02 19:50:00   [CycleORB] CLOSE position #34 magic=26110402 (NY time exit)
+CS	0	15:22:42.660	CycleORB (NVDA,M5)	2026.06.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:30:00   [CycleORB] RANGE NY 2026.06.03 13:30 hi=222.64 lo=215.87 range=677pt atr%=82.8 spread=29.4pt (live 39pt) cost%=4.3 buffer=34pt risk=98.42
+CS	0	15:22:42.664	Trade	2026.06.03 14:30:00   buy stop 13.84 NVDA at 222.98 sl: 215.87 tp: 233.64 (215.99 / 216.38)
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:30:00   CTrade::OrderSend: buy stop 13.84 NVDA at 222.98 sl: 215.87 tp: 233.64 [done]
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:30:00   [CycleORB] PLACE BUY_STOP lots=13.84 @222.98 sl=215.87 tp=233.64 magic=26110402 retcode=10009
+CS	0	15:22:42.664	Trade	2026.06.03 14:30:00   sell stop 13.84 NVDA at 215.53 sl: 222.64 tp: 204.87 (215.99 / 216.38)
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:30:00   CTrade::OrderSend: sell stop 13.84 NVDA at 215.53 sl: 222.64 tp: 204.87 [done]
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:30:00   [CycleORB] PLACE SELL_STOP lots=13.84 @215.53 sl=222.64 tp=204.87 magic=26110402 retcode=10009
+CS	0	15:22:42.664	Trade	2026.06.03 14:31:28   order [#37 sell stop 13.84 NVDA at 215.53] triggered
+CS	0	15:22:42.664	Trades	2026.06.03 14:31:28   deal #20 sell 13.84 NVDA at 215.51 done (based on order #37)
+CS	0	15:22:42.664	Trade	2026.06.03 14:31:28   deal performed [#20 sell 13.84 NVDA at 215.51]
+CS	0	15:22:42.664	Trade	2026.06.03 14:31:28   order performed sell 13.84 at 215.51 [#37 sell stop 13.84 NVDA at 215.53]
+CS	0	15:22:42.664	Trade	2026.06.03 14:31:28   order canceled [#36 buy stop 13.84 NVDA at 222.98]
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:31:28   CTrade::OrderSend: cancel #36 [done]
+CS	0	15:22:42.664	CycleORB (NVDA,M5)	2026.06.03 14:31:28   [CycleORB] DELETE order #36 magic=26110402 (NY OCO)
+CS	0	15:22:42.706	Trade	2026.06.03 19:50:00   market buy 13.84 NVDA, close #37 (215.40 / 215.69)
+CS	0	15:22:42.706	Trades	2026.06.03 19:50:00   deal #21 buy 13.84 NVDA at 215.69 done (based on order #38)
+CS	0	15:22:42.706	Trade	2026.06.03 19:50:00   deal performed [#21 buy 13.84 NVDA at 215.69]
+CS	0	15:22:42.706	Trade	2026.06.03 19:50:00   order performed buy 13.84 at 215.69 [#38 buy 13.84 NVDA at 215.69]
+CS	0	15:22:42.706	CycleORB (NVDA,M5)	2026.06.03 19:50:00   CTrade::OrderSend: market buy 13.84 position #37 NVDA [done at 215.69]
+CS	0	15:22:42.706	CycleORB (NVDA,M5)	2026.06.03 19:50:00   [CycleORB] CLOSE position #37 magic=26110402 (NY time exit)
+CS	0	15:22:42.712	CycleORB (NVDA,M5)	2026.06.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.715	CycleORB (NVDA,M5)	2026.06.04 14:30:00   [CycleORB] RANGE NY 2026.06.04 13:30 hi=215.56 lo=211.96 range=360pt atr%=43.5 spread=29.9pt (live 34pt) cost%=8.3 buffer=30pt risk=98.42
+CS	0	15:22:42.715	Trade	2026.06.04 14:30:00   buy stop 25.23 NVDA at 215.86 sl: 211.96 tp: 221.71 (213.27 / 213.61)
+CS	0	15:22:42.715	CycleORB (NVDA,M5)	2026.06.04 14:30:00   CTrade::OrderSend: buy stop 25.23 NVDA at 215.86 sl: 211.96 tp: 221.71 [done]
+CS	0	15:22:42.715	CycleORB (NVDA,M5)	2026.06.04 14:30:00   [CycleORB] PLACE BUY_STOP lots=25.23 @215.86 sl=211.96 tp=221.71 magic=26110402 retcode=10009
+CS	0	15:22:42.715	Trade	2026.06.04 14:30:00   sell stop 25.23 NVDA at 211.66 sl: 215.56 tp: 205.81 (213.27 / 213.61)
+CS	0	15:22:42.715	CycleORB (NVDA,M5)	2026.06.04 14:30:00   CTrade::OrderSend: sell stop 25.23 NVDA at 211.66 sl: 215.56 tp: 205.81 [done]
+CS	0	15:22:42.715	CycleORB (NVDA,M5)	2026.06.04 14:30:00   [CycleORB] PLACE SELL_STOP lots=25.23 @211.66 sl=215.56 tp=205.81 magic=26110402 retcode=10009
+CS	0	15:22:42.722	Trade	2026.06.04 15:05:44   order [#39 buy stop 25.23 NVDA at 215.86] triggered
+CS	0	15:22:42.722	Trades	2026.06.04 15:05:44   deal #22 buy 25.23 NVDA at 215.87 done (based on order #39)
+CS	0	15:22:42.722	Trade	2026.06.04 15:05:44   deal performed [#22 buy 25.23 NVDA at 215.87]
+CS	0	15:22:42.722	Trade	2026.06.04 15:05:44   order performed buy 25.23 at 215.87 [#39 buy stop 25.23 NVDA at 215.86]
+CS	0	15:22:42.722	Trade	2026.06.04 15:05:44   order canceled [#40 sell stop 25.23 NVDA at 211.66]
+CS	0	15:22:42.722	CycleORB (NVDA,M5)	2026.06.04 15:05:44   CTrade::OrderSend: cancel #40 [done]
+CS	0	15:22:42.722	CycleORB (NVDA,M5)	2026.06.04 15:05:44   [CycleORB] DELETE order #40 magic=26110402 (NY OCO)
+CS	0	15:22:42.764	Trade	2026.06.04 19:50:00   market sell 25.23 NVDA, close #39 (219.59 / 219.90)
+CS	0	15:22:42.764	Trades	2026.06.04 19:50:00   deal #23 sell 25.23 NVDA at 219.59 done (based on order #41)
+CS	0	15:22:42.764	Trade	2026.06.04 19:50:00   deal performed [#23 sell 25.23 NVDA at 219.59]
+CS	0	15:22:42.764	Trade	2026.06.04 19:50:00   order performed sell 25.23 at 219.59 [#41 sell 25.23 NVDA at 219.59]
+CS	0	15:22:42.764	CycleORB (NVDA,M5)	2026.06.04 19:50:00   CTrade::OrderSend: market sell 25.23 position #39 NVDA [done at 219.59]
+CS	0	15:22:42.764	CycleORB (NVDA,M5)	2026.06.04 19:50:00   [CycleORB] CLOSE position #39 magic=26110402 (NY time exit)
+CS	0	15:22:42.771	CycleORB (NVDA,M5)	2026.06.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.774	CycleORB (NVDA,M5)	2026.06.05 14:30:00   [CycleORB] SKIP NY 2026.06.05 13:30 hi=214.33 lo=211.80 range=253pt atr%=30.6 spread=29.5pt (live 33pt) cost%=11.7 (range/ATR outside band)
+CS	0	15:22:42.809	CycleORB (NVDA,M5)	2026.06.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.812	CycleORB (NVDA,M5)	2026.06.08 14:30:00   [CycleORB] RANGE NY 2026.06.08 13:30 hi=210.18 lo=206.03 range=415pt atr%=49.0 spread=29.6pt (live 32pt) cost%=7.1 buffer=30pt risk=98.42
+CS	0	15:22:42.812	Trade	2026.06.08 14:30:00   buy stop 22.11 NVDA at 210.48 sl: 206.03 tp: 217.15 (207.62 / 207.94)
+CS	0	15:22:42.812	CycleORB (NVDA,M5)	2026.06.08 14:30:00   CTrade::OrderSend: buy stop 22.11 NVDA at 210.48 sl: 206.03 tp: 217.15 [done]
+CS	0	15:22:42.812	CycleORB (NVDA,M5)	2026.06.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=22.11 @210.48 sl=206.03 tp=217.15 magic=26110402 retcode=10009
+CS	0	15:22:42.812	Trade	2026.06.08 14:30:00   sell stop 22.11 NVDA at 205.73 sl: 210.18 tp: 199.05 (207.62 / 207.94)
+CS	0	15:22:42.812	CycleORB (NVDA,M5)	2026.06.08 14:30:00   CTrade::OrderSend: sell stop 22.11 NVDA at 205.73 sl: 210.18 tp: 199.05 [done]
+CS	0	15:22:42.812	CycleORB (NVDA,M5)	2026.06.08 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.11 @205.73 sl=210.18 tp=199.05 magic=26110402 retcode=10009
+CS	0	15:22:42.834	Trade	2026.06.08 17:30:00   order canceled [#43 sell stop 22.11 NVDA at 205.73]
+CS	0	15:22:42.834	CycleORB (NVDA,M5)	2026.06.08 17:30:00   CTrade::OrderSend: cancel #43 [done]
+CS	0	15:22:42.834	CycleORB (NVDA,M5)	2026.06.08 17:30:00   [CycleORB] DELETE order #43 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.834	Trade	2026.06.08 17:30:00   order canceled [#42 buy stop 22.11 NVDA at 210.48]
+CS	0	15:22:42.834	CycleORB (NVDA,M5)	2026.06.08 17:30:00   CTrade::OrderSend: cancel #42 [done]
+CS	0	15:22:42.834	CycleORB (NVDA,M5)	2026.06.08 17:30:00   [CycleORB] DELETE order #42 magic=26110402 (NY entry window closed)
+CS	0	15:22:42.849	CycleORB (NVDA,M5)	2026.06.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.852	CycleORB (NVDA,M5)	2026.06.09 14:30:00   [CycleORB] SKIP NY 2026.06.09 13:30 hi=211.22 lo=208.62 range=260pt atr%=32.4 spread=29.4pt (live 33pt) cost%=11.3 (range/ATR outside band)
+CS	0	15:22:42.892	CycleORB (NVDA,M5)	2026.06.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.896	CycleORB (NVDA,M5)	2026.06.10 14:30:00   [CycleORB] SKIP NY 2026.06.10 13:30 hi=207.04 lo=204.63 range=241pt atr%=28.6 spread=29.5pt (live 39pt) cost%=12.3 (range/ATR outside band)
+CS	0	15:22:42.939	CycleORB (NVDA,M5)	2026.06.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.942	CycleORB (NVDA,M5)	2026.06.11 14:30:00   [CycleORB] SKIP NY 2026.06.11 13:30 hi=203.42 lo=200.92 range=250pt atr%=29.2 spread=29.5pt (live 35pt) cost%=11.8 (range/ATR outside band)
+CS	0	15:22:42.971	CycleORB (NVDA,M5)	2026.06.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:42.973	CycleORB (NVDA,M5)	2026.06.12 14:30:00   [CycleORB] SKIP NY 2026.06.12 13:30 hi=206.10 lo=203.25 range=285pt atr%=34.2 spread=29.6pt (live 33pt) cost%=10.4 (range/ATR outside band)
+CS	0	15:22:43.001	CycleORB (NVDA,M5)	2026.06.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.005	CycleORB (NVDA,M5)	2026.06.15 14:30:00   [CycleORB] SKIP NY 2026.06.15 13:30 hi=210.80 lo=208.56 range=224pt atr%=27.4 spread=29.7pt (live 30pt) cost%=13.3 (range/ATR outside band)
+CS	0	15:22:43.032	CycleORB (NVDA,M5)	2026.06.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.035	CycleORB (NVDA,M5)	2026.06.16 14:30:00   [CycleORB] SKIP NY 2026.06.16 13:30 hi=210.56 lo=208.48 range=208pt atr%=25.2 spread=29.7pt (live 31pt) cost%=14.3 (range/ATR outside band)
+CS	0	15:22:43.059	CycleORB (NVDA,M5)	2026.06.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.062	CycleORB (NVDA,M5)	2026.06.17 14:30:00   [CycleORB] SKIP NY 2026.06.17 13:30 hi=209.05 lo=206.98 range=207pt atr%=25.2 spread=29.4pt (live 33pt) cost%=14.2 (range/ATR outside band)
+CS	0	15:22:43.089	CycleORB (NVDA,M5)	2026.06.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.092	CycleORB (NVDA,M5)	2026.06.18 14:30:00   [CycleORB] SKIP NY 2026.06.18 13:30 hi=208.18 lo=206.32 range=186pt atr%=22.3 spread=29.5pt (live 31pt) cost%=15.9 (range/ATR outside band)
+CS	0	15:22:43.114	CycleORB (NVDA,M5)	2026.06.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.116	CycleORB (NVDA,M5)	2026.06.22 14:30:00   [CycleORB] SKIP NY 2026.06.22 13:30 hi=213.80 lo=210.61 range=319pt atr%=38.1 spread=29.3pt (live 30pt) cost%=9.2 (range/ATR outside band)
+CS	0	15:22:43.140	CycleORB (NVDA,M5)	2026.06.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.142	CycleORB (NVDA,M5)	2026.06.23 14:30:00   [CycleORB] RANGE NY 2026.06.23 13:30 hi=203.63 lo=199.90 range=373pt atr%=47.3 spread=29.5pt (live 31pt) cost%=7.9 buffer=29pt risk=98.42
+CS	0	15:22:43.142	Trade	2026.06.23 14:30:00   buy stop 24.48 NVDA at 203.92 sl: 199.90 tp: 209.95 (202.94 / 203.25)
+CS	0	15:22:43.142	CycleORB (NVDA,M5)	2026.06.23 14:30:00   CTrade::OrderSend: buy stop 24.48 NVDA at 203.92 sl: 199.90 tp: 209.95 [done]
+CS	0	15:22:43.142	CycleORB (NVDA,M5)	2026.06.23 14:30:00   [CycleORB] PLACE BUY_STOP lots=24.48 @203.92 sl=199.90 tp=209.95 magic=26110402 retcode=10009
+CS	0	15:22:43.142	Trade	2026.06.23 14:30:00   sell stop 24.48 NVDA at 199.61 sl: 203.63 tp: 193.58 (202.94 / 203.25)
+CS	0	15:22:43.142	CycleORB (NVDA,M5)	2026.06.23 14:30:00   CTrade::OrderSend: sell stop 24.48 NVDA at 199.61 sl: 203.63 tp: 193.58 [done]
+CS	0	15:22:43.142	CycleORB (NVDA,M5)	2026.06.23 14:30:00   [CycleORB] PLACE SELL_STOP lots=24.48 @199.61 sl=203.63 tp=193.58 magic=26110402 retcode=10009
+CS	0	15:22:43.165	Trade	2026.06.23 17:30:00   order canceled [#45 sell stop 24.48 NVDA at 199.61]
+CS	0	15:22:43.165	CycleORB (NVDA,M5)	2026.06.23 17:30:00   CTrade::OrderSend: cancel #45 [done]
+CS	0	15:22:43.165	CycleORB (NVDA,M5)	2026.06.23 17:30:00   [CycleORB] DELETE order #45 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.165	Trade	2026.06.23 17:30:00   order canceled [#44 buy stop 24.48 NVDA at 203.92]
+CS	0	15:22:43.165	CycleORB (NVDA,M5)	2026.06.23 17:30:00   CTrade::OrderSend: cancel #44 [done]
+CS	0	15:22:43.165	CycleORB (NVDA,M5)	2026.06.23 17:30:00   [CycleORB] DELETE order #44 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.178	CycleORB (NVDA,M5)	2026.06.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.180	CycleORB (NVDA,M5)	2026.06.24 14:30:00   [CycleORB] SKIP NY 2026.06.24 13:30 hi=201.46 lo=199.53 range=193pt atr%=25.1 spread=29.8pt (live 35pt) cost%=15.5 (range/ATR outside band)
+CS	0	15:22:43.206	CycleORB (NVDA,M5)	2026.06.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.209	CycleORB (NVDA,M5)	2026.06.25 14:30:00   [CycleORB] RANGE NY 2026.06.25 13:30 hi=200.52 lo=191.99 range=853pt atr%=114.2 spread=29.4pt (live 34pt) cost%=3.5 buffer=43pt risk=98.42
+CS	0	15:22:43.209	Trade	2026.06.25 14:30:00   buy stop 10.98 NVDA at 200.95 sl: 191.99 tp: 214.39 (194.33 / 194.67)
+CS	0	15:22:43.209	CycleORB (NVDA,M5)	2026.06.25 14:30:00   CTrade::OrderSend: buy stop 10.98 NVDA at 200.95 sl: 191.99 tp: 214.39 [done]
+CS	0	15:22:43.209	CycleORB (NVDA,M5)	2026.06.25 14:30:00   [CycleORB] PLACE BUY_STOP lots=10.98 @200.95 sl=191.99 tp=214.39 magic=26110402 retcode=10009
+CS	0	15:22:43.209	Trade	2026.06.25 14:30:00   sell stop 10.98 NVDA at 191.56 sl: 200.52 tp: 178.12 (194.33 / 194.67)
+CS	0	15:22:43.209	CycleORB (NVDA,M5)	2026.06.25 14:30:00   CTrade::OrderSend: sell stop 10.98 NVDA at 191.56 sl: 200.52 tp: 178.12 [done]
+CS	0	15:22:43.209	CycleORB (NVDA,M5)	2026.06.25 14:30:00   [CycleORB] PLACE SELL_STOP lots=10.98 @191.56 sl=200.52 tp=178.12 magic=26110402 retcode=10009
+CS	0	15:22:43.231	Trade	2026.06.25 17:30:00   order canceled [#47 sell stop 10.98 NVDA at 191.56]
+CS	0	15:22:43.231	CycleORB (NVDA,M5)	2026.06.25 17:30:00   CTrade::OrderSend: cancel #47 [done]
+CS	0	15:22:43.231	CycleORB (NVDA,M5)	2026.06.25 17:30:00   [CycleORB] DELETE order #47 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.231	Trade	2026.06.25 17:30:00   order canceled [#46 buy stop 10.98 NVDA at 200.95]
+CS	0	15:22:43.231	CycleORB (NVDA,M5)	2026.06.25 17:30:00   CTrade::OrderSend: cancel #46 [done]
+CS	0	15:22:43.231	CycleORB (NVDA,M5)	2026.06.25 17:30:00   [CycleORB] DELETE order #46 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.246	CycleORB (NVDA,M5)	2026.06.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.250	CycleORB (NVDA,M5)	2026.06.26 14:30:00   [CycleORB] SKIP NY 2026.06.26 13:30 hi=193.91 lo=191.06 range=285pt atr%=38.9 spread=29.5pt (live 32pt) cost%=10.4 (range/ATR outside band)
+CS	0	15:22:43.276	CycleORB (NVDA,M5)	2026.06.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.279	CycleORB (NVDA,M5)	2026.06.29 14:30:00   [CycleORB] RANGE NY 2026.06.29 13:30 hi=195.98 lo=191.73 range=425pt atr%=64.3 spread=29.7pt (live 32pt) cost%=7.0 buffer=30pt risk=98.42
+CS	0	15:22:43.279	Trade	2026.06.29 14:30:00   buy stop 21.63 NVDA at 196.28 sl: 191.73 tp: 203.11 (192.57 / 192.89)
+CS	0	15:22:43.279	CycleORB (NVDA,M5)	2026.06.29 14:30:00   CTrade::OrderSend: buy stop 21.63 NVDA at 196.28 sl: 191.73 tp: 203.11 [done]
+CS	0	15:22:43.279	CycleORB (NVDA,M5)	2026.06.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.63 @196.28 sl=191.73 tp=203.11 magic=26110402 retcode=10009
+CS	0	15:22:43.279	Trade	2026.06.29 14:30:00   sell stop 21.63 NVDA at 191.43 sl: 195.98 tp: 184.61 (192.57 / 192.89)
+CS	0	15:22:43.279	CycleORB (NVDA,M5)	2026.06.29 14:30:00   CTrade::OrderSend: sell stop 21.63 NVDA at 191.43 sl: 195.98 tp: 184.61 [done]
+CS	0	15:22:43.279	CycleORB (NVDA,M5)	2026.06.29 14:30:00   [CycleORB] PLACE SELL_STOP lots=21.63 @191.43 sl=195.98 tp=184.61 magic=26110402 retcode=10009
+CS	0	15:22:43.297	Trade	2026.06.29 17:30:00   order canceled [#49 sell stop 21.63 NVDA at 191.43]
+CS	0	15:22:43.297	CycleORB (NVDA,M5)	2026.06.29 17:30:00   CTrade::OrderSend: cancel #49 [done]
+CS	0	15:22:43.297	CycleORB (NVDA,M5)	2026.06.29 17:30:00   [CycleORB] DELETE order #49 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.297	Trade	2026.06.29 17:30:00   order canceled [#48 buy stop 21.63 NVDA at 196.28]
+CS	0	15:22:43.297	CycleORB (NVDA,M5)	2026.06.29 17:30:00   CTrade::OrderSend: cancel #48 [done]
+CS	0	15:22:43.297	CycleORB (NVDA,M5)	2026.06.29 17:30:00   [CycleORB] DELETE order #48 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.307	CycleORB (NVDA,M5)	2026.06.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.309	CycleORB (NVDA,M5)	2026.06.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:43.330	CycleORB (NVDA,M5)	2026.07.01 13:30:30   [CycleORB] CYCLE_END 202606 capital=9841.78 realized=122.66 floating=0.00 pnl=1.25% peak=1.72% state=ACTIVE 
+CS	0	15:22:43.330	CycleORB (NVDA,M5)	2026.07.01 13:30:30   [CycleORB] CYCLE_BEGIN 202607 capital=9964.44 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:43.332	CycleORB (NVDA,M5)	2026.07.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.334	CycleORB (NVDA,M5)	2026.07.01 14:30:00   [CycleORB] SKIP NY 2026.07.01 13:30 hi=195.53 lo=193.26 range=227pt atr%=36.3 spread=29.4pt (live 31pt) cost%=13.0 (range/ATR outside band)
+CS	0	15:22:43.356	CycleORB (NVDA,M5)	2026.07.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.358	CycleORB (NVDA,M5)	2026.07.02 14:30:00   [CycleORB] SKIP NY 2026.07.02 13:30 hi=198.76 lo=196.98 range=178pt atr%=28.9 spread=30.0pt (live 34pt) cost%=16.9 (range/ATR outside band)
+CS	0	15:22:43.382	CycleORB (NVDA,M5)	2026.07.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.385	CycleORB (NVDA,M5)	2026.07.06 14:30:00   [CycleORB] SKIP NY 2026.07.06 13:30 hi=196.35 lo=193.75 range=260pt atr%=41.5 spread=29.7pt (live 32pt) cost%=11.4 (cost too high vs range)
+CS	0	15:22:43.410	CycleORB (NVDA,M5)	2026.07.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.413	CycleORB (NVDA,M5)	2026.07.07 14:30:00   [CycleORB] SKIP NY 2026.07.07 13:30 hi=193.07 lo=191.28 range=179pt atr%=28.6 spread=29.1pt (live 30pt) cost%=16.3 (range/ATR outside band)
+CS	0	15:22:43.441	CycleORB (NVDA,M5)	2026.07.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.444	CycleORB (NVDA,M5)	2026.07.08 14:30:00   [CycleORB] RANGE NY 2026.07.08 13:30 hi=199.71 lo=195.36 range=435pt atr%=69.6 spread=29.8pt (live 33pt) cost%=6.9 buffer=30pt risk=99.64
+CS	0	15:22:43.444	Trade	2026.07.08 14:30:00   buy stop 21.42 NVDA at 200.01 sl: 195.36 tp: 206.98 (196.84 / 197.17)
+CS	0	15:22:43.444	CycleORB (NVDA,M5)	2026.07.08 14:30:00   CTrade::OrderSend: buy stop 21.42 NVDA at 200.01 sl: 195.36 tp: 206.98 [done]
+CS	0	15:22:43.444	CycleORB (NVDA,M5)	2026.07.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.42 @200.01 sl=195.36 tp=206.98 magic=26110402 retcode=10009
+CS	0	15:22:43.444	Trade	2026.07.08 14:30:00   sell stop 21.42 NVDA at 195.06 sl: 199.71 tp: 188.08 (196.84 / 197.17)
+CS	0	15:22:43.444	CycleORB (NVDA,M5)	2026.07.08 14:30:00   CTrade::OrderSend: sell stop 21.42 NVDA at 195.06 sl: 199.71 tp: 188.08 [done]
+CS	0	15:22:43.444	CycleORB (NVDA,M5)	2026.07.08 14:30:00   [CycleORB] PLACE SELL_STOP lots=21.42 @195.06 sl=199.71 tp=188.08 magic=26110402 retcode=10009
+CS	0	15:22:43.460	Trade	2026.07.08 16:21:25   order [#50 buy stop 21.42 NVDA at 200.01] triggered
+CS	0	15:22:43.460	Trades	2026.07.08 16:21:25   deal #24 buy 21.42 NVDA at 200.06 done (based on order #50)
+CS	0	15:22:43.460	Trade	2026.07.08 16:21:25   deal performed [#24 buy 21.42 NVDA at 200.06]
+CS	0	15:22:43.460	Trade	2026.07.08 16:21:25   order performed buy 21.42 at 200.06 [#50 buy stop 21.42 NVDA at 200.01]
+CS	0	15:22:43.460	Trade	2026.07.08 16:21:25   order canceled [#51 sell stop 21.42 NVDA at 195.06]
+CS	0	15:22:43.460	CycleORB (NVDA,M5)	2026.07.08 16:21:25   CTrade::OrderSend: cancel #51 [done]
+CS	0	15:22:43.460	CycleORB (NVDA,M5)	2026.07.08 16:21:25   [CycleORB] DELETE order #51 magic=26110402 (NY OCO)
+CS	0	15:22:43.484	Trade	2026.07.08 19:50:00   market sell 21.42 NVDA, close #50 (204.07 / 204.37)
+CS	0	15:22:43.484	Trades	2026.07.08 19:50:00   deal #25 sell 21.42 NVDA at 204.07 done (based on order #52)
+CS	0	15:22:43.484	Trade	2026.07.08 19:50:00   deal performed [#25 sell 21.42 NVDA at 204.07]
+CS	0	15:22:43.484	Trade	2026.07.08 19:50:00   order performed sell 21.42 at 204.07 [#52 sell 21.42 NVDA at 204.07]
+CS	0	15:22:43.485	CycleORB (NVDA,M5)	2026.07.08 19:50:00   CTrade::OrderSend: market sell 21.42 position #50 NVDA [done at 204.07]
+CS	0	15:22:43.485	CycleORB (NVDA,M5)	2026.07.08 19:50:00   [CycleORB] CLOSE position #50 magic=26110402 (NY time exit)
+CS	0	15:22:43.491	CycleORB (NVDA,M5)	2026.07.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.494	CycleORB (NVDA,M5)	2026.07.09 14:30:00   [CycleORB] SKIP NY 2026.07.09 13:30 hi=203.87 lo=201.17 range=270pt atr%=41.1 spread=29.3pt (live 32pt) cost%=10.9 (cost too high vs range)
+CS	0	15:22:43.515	CycleORB (NVDA,M5)	2026.07.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:00   [CycleORB] RANGE NY 2026.07.10 13:30 hi=207.28 lo=202.75 range=453pt atr%=69.0 spread=29.8pt (live 32pt) cost%=6.6 buffer=30pt risk=99.64
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:00   buy stop 20.63 NVDA at 207.58 sl: 202.75 tp: 214.83 (207.13 / 207.45)
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:00   CTrade::OrderSend: buy stop 20.63 NVDA at 207.58 sl: 202.75 tp: 214.83 [done]
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:00   [CycleORB] PLACE BUY_STOP lots=20.63 @207.58 sl=202.75 tp=214.83 magic=26110402 retcode=10009
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:00   sell stop 20.63 NVDA at 202.45 sl: 207.28 tp: 195.20 (207.13 / 207.45)
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:00   CTrade::OrderSend: sell stop 20.63 NVDA at 202.45 sl: 207.28 tp: 195.20 [done]
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:00   [CycleORB] PLACE SELL_STOP lots=20.63 @202.45 sl=207.28 tp=195.20 magic=26110402 retcode=10009
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:38   order [#53 buy stop 20.63 NVDA at 207.58] triggered
+CS	0	15:22:43.518	Trades	2026.07.10 14:30:38   deal #26 buy 20.63 NVDA at 207.58 done (based on order #53)
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:38   deal performed [#26 buy 20.63 NVDA at 207.58]
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:38   order performed buy 20.63 at 207.58 [#53 buy stop 20.63 NVDA at 207.58]
+CS	0	15:22:43.518	Trade	2026.07.10 14:30:38   order canceled [#54 sell stop 20.63 NVDA at 202.45]
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:38   CTrade::OrderSend: cancel #54 [done]
+CS	0	15:22:43.518	CycleORB (NVDA,M5)	2026.07.10 14:30:38   [CycleORB] DELETE order #54 magic=26110402 (NY OCO)
+CS	0	15:22:43.555	Trade	2026.07.10 19:50:00   market sell 20.63 NVDA, close #53 (209.72 / 210.05)
+CS	0	15:22:43.555	Trades	2026.07.10 19:50:00   deal #27 sell 20.63 NVDA at 209.72 done (based on order #55)
+CS	0	15:22:43.555	Trade	2026.07.10 19:50:00   deal performed [#27 sell 20.63 NVDA at 209.72]
+CS	0	15:22:43.555	Trade	2026.07.10 19:50:00   order performed sell 20.63 at 209.72 [#55 sell 20.63 NVDA at 209.72]
+CS	0	15:22:43.555	CycleORB (NVDA,M5)	2026.07.10 19:50:00   CTrade::OrderSend: market sell 20.63 position #53 NVDA [done at 209.72]
+CS	0	15:22:43.555	CycleORB (NVDA,M5)	2026.07.10 19:50:00   [CycleORB] CLOSE position #53 magic=26110402 (NY time exit)
+CS	0	15:22:43.560	CycleORB (NVDA,M5)	2026.07.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.563	CycleORB (NVDA,M5)	2026.07.13 14:30:00   [CycleORB] RANGE NY 2026.07.13 13:30 hi=210.38 lo=206.86 range=352pt atr%=52.9 spread=29.9pt (live 31pt) cost%=8.5 buffer=30pt risk=99.64
+CS	0	15:22:43.563	Trade	2026.07.13 14:30:00   buy stop 26.08 NVDA at 210.68 sl: 206.86 tp: 216.41 (208.49 / 208.80)
+CS	0	15:22:43.563	CycleORB (NVDA,M5)	2026.07.13 14:30:00   CTrade::OrderSend: buy stop 26.08 NVDA at 210.68 sl: 206.86 tp: 216.41 [done]
+CS	0	15:22:43.563	CycleORB (NVDA,M5)	2026.07.13 14:30:00   [CycleORB] PLACE BUY_STOP lots=26.08 @210.68 sl=206.86 tp=216.41 magic=26110402 retcode=10009
+CS	0	15:22:43.563	Trade	2026.07.13 14:30:00   sell stop 26.08 NVDA at 206.56 sl: 210.38 tp: 200.83 (208.49 / 208.80)
+CS	0	15:22:43.563	CycleORB (NVDA,M5)	2026.07.13 14:30:00   CTrade::OrderSend: sell stop 26.08 NVDA at 206.56 sl: 210.38 tp: 200.83 [done]
+CS	0	15:22:43.563	CycleORB (NVDA,M5)	2026.07.13 14:30:00   [CycleORB] PLACE SELL_STOP lots=26.08 @206.56 sl=210.38 tp=200.83 magic=26110402 retcode=10009
+CS	0	15:22:43.565	Trade	2026.07.13 14:55:04   order [#57 sell stop 26.08 NVDA at 206.56] triggered
+CS	0	15:22:43.565	Trades	2026.07.13 14:55:04   deal #28 sell 26.08 NVDA at 206.56 done (based on order #57)
+CS	0	15:22:43.565	Trade	2026.07.13 14:55:04   deal performed [#28 sell 26.08 NVDA at 206.56]
+CS	0	15:22:43.565	Trade	2026.07.13 14:55:04   order performed sell 26.08 at 206.56 [#57 sell stop 26.08 NVDA at 206.56]
+CS	0	15:22:43.565	Trade	2026.07.13 14:55:04   order canceled [#56 buy stop 26.08 NVDA at 210.68]
+CS	0	15:22:43.565	CycleORB (NVDA,M5)	2026.07.13 14:55:04   CTrade::OrderSend: cancel #56 [done]
+CS	0	15:22:43.565	CycleORB (NVDA,M5)	2026.07.13 14:55:04   [CycleORB] DELETE order #56 magic=26110402 (NY OCO)
+CS	0	15:22:43.601	Trade	2026.07.13 19:50:00   market buy 26.08 NVDA, close #57 (203.87 / 204.19)
+CS	0	15:22:43.601	Trades	2026.07.13 19:50:00   deal #29 buy 26.08 NVDA at 204.19 done (based on order #58)
+CS	0	15:22:43.601	Trade	2026.07.13 19:50:00   deal performed [#29 buy 26.08 NVDA at 204.19]
+CS	0	15:22:43.601	Trade	2026.07.13 19:50:00   order performed buy 26.08 at 204.19 [#58 buy 26.08 NVDA at 204.19]
+CS	0	15:22:43.601	CycleORB (NVDA,M5)	2026.07.13 19:50:00   CTrade::OrderSend: market buy 26.08 position #57 NVDA [done at 204.19]
+CS	0	15:22:43.601	CycleORB (NVDA,M5)	2026.07.13 19:50:00   [CycleORB] CLOSE position #57 magic=26110402 (NY time exit)
+CS	0	15:22:43.608	CycleORB (NVDA,M5)	2026.07.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.611	CycleORB (NVDA,M5)	2026.07.14 14:30:00   [CycleORB] RANGE NY 2026.07.14 13:30 hi=206.75 lo=203.65 range=310pt atr%=46.0 spread=29.8pt (live 34pt) cost%=9.6 buffer=30pt risk=99.64
+CS	0	15:22:43.611	Trade	2026.07.14 14:30:00   buy stop 29.3 NVDA at 207.05 sl: 203.65 tp: 212.15 (205.36 / 205.70)
+CS	0	15:22:43.611	CycleORB (NVDA,M5)	2026.07.14 14:30:00   CTrade::OrderSend: buy stop 29.30 NVDA at 207.05 sl: 203.65 tp: 212.15 [done]
+CS	0	15:22:43.611	CycleORB (NVDA,M5)	2026.07.14 14:30:00   [CycleORB] PLACE BUY_STOP lots=29.30 @207.05 sl=203.65 tp=212.15 magic=26110402 retcode=10009
+CS	0	15:22:43.611	Trade	2026.07.14 14:30:00   sell stop 29.3 NVDA at 203.35 sl: 206.75 tp: 198.25 (205.36 / 205.70)
+CS	0	15:22:43.611	CycleORB (NVDA,M5)	2026.07.14 14:30:00   CTrade::OrderSend: sell stop 29.30 NVDA at 203.35 sl: 206.75 tp: 198.25 [done]
+CS	0	15:22:43.611	CycleORB (NVDA,M5)	2026.07.14 14:30:00   [CycleORB] PLACE SELL_STOP lots=29.30 @203.35 sl=206.75 tp=198.25 magic=26110402 retcode=10009
+CS	0	15:22:43.612	Trade	2026.07.14 14:34:12   order [#59 buy stop 29.3 NVDA at 207.05] triggered
+CS	0	15:22:43.613	Trades	2026.07.14 14:34:12   deal #30 buy 29.3 NVDA at 207.65 done (based on order #59)
+CS	0	15:22:43.613	Trade	2026.07.14 14:34:12   deal performed [#30 buy 29.3 NVDA at 207.65]
+CS	0	15:22:43.613	Trade	2026.07.14 14:34:12   order performed buy 29.3 at 207.65 [#59 buy stop 29.3 NVDA at 207.05]
+CS	0	15:22:43.613	Trade	2026.07.14 14:34:12   order canceled [#60 sell stop 29.3 NVDA at 203.35]
+CS	0	15:22:43.613	CycleORB (NVDA,M5)	2026.07.14 14:34:12   CTrade::OrderSend: cancel #60 [done]
+CS	0	15:22:43.613	CycleORB (NVDA,M5)	2026.07.14 14:34:12   [CycleORB] DELETE order #60 magic=26110402 (NY OCO)
+CS	0	15:22:43.645	Trade	2026.07.14 18:35:00   take profit triggered #59 buy 29.3 NVDA 207.65 sl: 203.65 tp: 212.15 [#61 sell 29.3 NVDA at 212.15]
+CS	0	15:22:43.645	Trades	2026.07.14 18:35:00   deal #31 sell 29.3 NVDA at 212.15 done (based on order #61)
+CS	0	15:22:43.645	Trade	2026.07.14 18:35:00   deal performed [#31 sell 29.3 NVDA at 212.15]
+CS	0	15:22:43.645	Trade	2026.07.14 18:35:00   order performed sell 29.3 at 212.15 [#61 sell 29.3 NVDA at 212.15]
+CS	0	15:22:43.655	CycleORB (NVDA,M5)	2026.07.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:00   [CycleORB] RANGE NY 2026.07.15 13:30 hi=213.65 lo=210.56 range=309pt atr%=45.6 spread=30.0pt (live 33pt) cost%=9.7 buffer=30pt risk=99.64
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:00   buy stop 29.39 NVDA at 213.95 sl: 210.56 tp: 219.03 (210.54 / 210.87)
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:00   CTrade::OrderSend: buy stop 29.39 NVDA at 213.95 sl: 210.56 tp: 219.03 [done]
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:00   [CycleORB] PLACE BUY_STOP lots=29.39 @213.95 sl=210.56 tp=219.03 magic=26110402 retcode=10009
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:00   sell stop 29.39 NVDA at 210.26 sl: 213.65 tp: 205.17 (210.54 / 210.87)
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:00   CTrade::OrderSend: sell stop 29.39 NVDA at 210.26 sl: 213.65 tp: 205.17 [done]
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:00   [CycleORB] PLACE SELL_STOP lots=29.39 @210.26 sl=213.65 tp=205.17 magic=26110402 retcode=10009
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:46   order [#63 sell stop 29.39 NVDA at 210.26] triggered
+CS	0	15:22:43.657	Trades	2026.07.15 14:30:46   deal #32 sell 29.39 NVDA at 210.25 done (based on order #63)
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:46   deal performed [#32 sell 29.39 NVDA at 210.25]
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:46   order performed sell 29.39 at 210.25 [#63 sell stop 29.39 NVDA at 210.26]
+CS	0	15:22:43.657	Trade	2026.07.15 14:30:46   order canceled [#62 buy stop 29.39 NVDA at 213.95]
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:46   CTrade::OrderSend: cancel #62 [done]
+CS	0	15:22:43.657	CycleORB (NVDA,M5)	2026.07.15 14:30:46   [CycleORB] DELETE order #62 magic=26110402 (NY OCO)
+CS	0	15:22:43.699	Trade	2026.07.15 19:50:00   market buy 29.39 NVDA, close #63 (211.29 / 211.67)
+CS	0	15:22:43.699	Trades	2026.07.15 19:50:00   deal #33 buy 29.39 NVDA at 211.67 done (based on order #64)
+CS	0	15:22:43.699	Trade	2026.07.15 19:50:00   deal performed [#33 buy 29.39 NVDA at 211.67]
+CS	0	15:22:43.699	Trade	2026.07.15 19:50:00   order performed buy 29.39 at 211.67 [#64 buy 29.39 NVDA at 211.67]
+CS	0	15:22:43.699	CycleORB (NVDA,M5)	2026.07.15 19:50:00   CTrade::OrderSend: market buy 29.39 position #63 NVDA [done at 211.67]
+CS	0	15:22:43.699	CycleORB (NVDA,M5)	2026.07.15 19:50:00   [CycleORB] CLOSE position #63 magic=26110402 (NY time exit)
+CS	0	15:22:43.705	CycleORB (NVDA,M5)	2026.07.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.709	CycleORB (NVDA,M5)	2026.07.16 14:30:00   [CycleORB] RANGE NY 2026.07.16 13:30 hi=210.86 lo=207.00 range=386pt atr%=55.4 spread=29.9pt (live 33pt) cost%=7.8 buffer=30pt risk=99.64
+CS	0	15:22:43.709	Trade	2026.07.16 14:30:00   buy stop 23.95 NVDA at 211.16 sl: 207.00 tp: 217.40 (208.77 / 209.10)
+CS	0	15:22:43.709	CycleORB (NVDA,M5)	2026.07.16 14:30:00   CTrade::OrderSend: buy stop 23.95 NVDA at 211.16 sl: 207.00 tp: 217.40 [done]
+CS	0	15:22:43.709	CycleORB (NVDA,M5)	2026.07.16 14:30:00   [CycleORB] PLACE BUY_STOP lots=23.95 @211.16 sl=207.00 tp=217.40 magic=26110402 retcode=10009
+CS	0	15:22:43.709	Trade	2026.07.16 14:30:00   sell stop 23.95 NVDA at 206.70 sl: 210.86 tp: 200.46 (208.77 / 209.10)
+CS	0	15:22:43.709	CycleORB (NVDA,M5)	2026.07.16 14:30:00   CTrade::OrderSend: sell stop 23.95 NVDA at 206.70 sl: 210.86 tp: 200.46 [done]
+CS	0	15:22:43.709	CycleORB (NVDA,M5)	2026.07.16 14:30:00   [CycleORB] PLACE SELL_STOP lots=23.95 @206.70 sl=210.86 tp=200.46 magic=26110402 retcode=10009
+CS	0	15:22:43.714	Trade	2026.07.16 14:50:55   order [#66 sell stop 23.95 NVDA at 206.70] triggered
+CS	0	15:22:43.714	Trades	2026.07.16 14:50:55   deal #34 sell 23.95 NVDA at 206.70 done (based on order #66)
+CS	0	15:22:43.714	Trade	2026.07.16 14:50:55   deal performed [#34 sell 23.95 NVDA at 206.70]
+CS	0	15:22:43.714	Trade	2026.07.16 14:50:55   order performed sell 23.95 at 206.70 [#66 sell stop 23.95 NVDA at 206.70]
+CS	0	15:22:43.714	Trade	2026.07.16 14:50:55   order canceled [#65 buy stop 23.95 NVDA at 211.16]
+CS	0	15:22:43.714	CycleORB (NVDA,M5)	2026.07.16 14:50:55   CTrade::OrderSend: cancel #65 [done]
+CS	0	15:22:43.714	CycleORB (NVDA,M5)	2026.07.16 14:50:55   [CycleORB] DELETE order #65 magic=26110402 (NY OCO)
+CS	0	15:22:43.750	Trade	2026.07.16 19:50:00   market buy 23.95 NVDA, close #66 (205.95 / 206.27)
+CS	0	15:22:43.750	Trades	2026.07.16 19:50:00   deal #35 buy 23.95 NVDA at 206.27 done (based on order #67)
+CS	0	15:22:43.750	Trade	2026.07.16 19:50:00   deal performed [#35 buy 23.95 NVDA at 206.27]
+CS	0	15:22:43.750	Trade	2026.07.16 19:50:00   order performed buy 23.95 at 206.27 [#67 buy 23.95 NVDA at 206.27]
+CS	0	15:22:43.750	CycleORB (NVDA,M5)	2026.07.16 19:50:00   CTrade::OrderSend: market buy 23.95 position #66 NVDA [done at 206.27]
+CS	0	15:22:43.750	CycleORB (NVDA,M5)	2026.07.16 19:50:00   [CycleORB] CLOSE position #66 magic=26110402 (NY time exit)
+CS	0	15:22:43.755	CycleORB (NVDA,M5)	2026.07.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.758	CycleORB (NVDA,M5)	2026.07.17 14:30:00   [CycleORB] RANGE NY 2026.07.17 13:30 hi=202.60 lo=197.79 range=481pt atr%=70.4 spread=29.6pt (live 34pt) cost%=6.1 buffer=30pt risk=99.64
+CS	0	15:22:43.758	CycleORB (NVDA,M5)	2026.07.17 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:43.758	Trade	2026.07.17 14:30:00   sell stop 19.49 NVDA at 197.49 sl: 202.60 tp: 189.83 (203.68 / 204.02)
+CS	0	15:22:43.758	CycleORB (NVDA,M5)	2026.07.17 14:30:00   CTrade::OrderSend: sell stop 19.49 NVDA at 197.49 sl: 202.60 tp: 189.83 [done]
+CS	0	15:22:43.758	CycleORB (NVDA,M5)	2026.07.17 14:30:00   [CycleORB] PLACE SELL_STOP lots=19.49 @197.49 sl=202.60 tp=189.83 magic=26110402 retcode=10009
+CS	0	15:22:43.781	Trade	2026.07.17 17:30:00   order canceled [#68 sell stop 19.49 NVDA at 197.49]
+CS	0	15:22:43.781	CycleORB (NVDA,M5)	2026.07.17 17:30:00   CTrade::OrderSend: cancel #68 [done]
+CS	0	15:22:43.781	CycleORB (NVDA,M5)	2026.07.17 17:30:00   [CycleORB] DELETE order #68 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.794	CycleORB (NVDA,M5)	2026.07.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.797	CycleORB (NVDA,M5)	2026.07.20 14:30:00   [CycleORB] SKIP NY 2026.07.20 13:30 hi=207.56 lo=204.94 range=262pt atr%=36.4 spread=30.0pt (live 34pt) cost%=11.5 (range/ATR outside band)
+CS	0	15:22:43.818	CycleORB (NVDA,M5)	2026.07.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.821	CycleORB (NVDA,M5)	2026.07.21 14:30:00   [CycleORB] RANGE NY 2026.07.21 13:30 hi=208.21 lo=204.67 range=354pt atr%=49.6 spread=30.0pt (live 34pt) cost%=8.5 buffer=30pt risk=99.64
+CS	0	15:22:43.821	Trade	2026.07.21 14:30:00   buy stop 25.94 NVDA at 208.51 sl: 204.67 tp: 214.27 (205.18 / 205.52)
+CS	0	15:22:43.821	CycleORB (NVDA,M5)	2026.07.21 14:30:00   CTrade::OrderSend: buy stop 25.94 NVDA at 208.51 sl: 204.67 tp: 214.27 [done]
+CS	0	15:22:43.821	CycleORB (NVDA,M5)	2026.07.21 14:30:00   [CycleORB] PLACE BUY_STOP lots=25.94 @208.51 sl=204.67 tp=214.27 magic=26110402 retcode=10009
+CS	0	15:22:43.821	Trade	2026.07.21 14:30:00   sell stop 25.94 NVDA at 204.37 sl: 208.21 tp: 198.61 (205.18 / 205.52)
+CS	0	15:22:43.821	CycleORB (NVDA,M5)	2026.07.21 14:30:00   CTrade::OrderSend: sell stop 25.94 NVDA at 204.37 sl: 208.21 tp: 198.61 [done]
+CS	0	15:22:43.821	CycleORB (NVDA,M5)	2026.07.21 14:30:00   [CycleORB] PLACE SELL_STOP lots=25.94 @204.37 sl=208.21 tp=198.61 magic=26110402 retcode=10009
+CS	0	15:22:43.838	Trade	2026.07.21 17:30:00   order canceled [#70 sell stop 25.94 NVDA at 204.37]
+CS	0	15:22:43.838	CycleORB (NVDA,M5)	2026.07.21 17:30:00   CTrade::OrderSend: cancel #70 [done]
+CS	0	15:22:43.838	CycleORB (NVDA,M5)	2026.07.21 17:30:00   [CycleORB] DELETE order #70 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.838	Trade	2026.07.21 17:30:00   order canceled [#69 buy stop 25.94 NVDA at 208.51]
+CS	0	15:22:43.838	CycleORB (NVDA,M5)	2026.07.21 17:30:00   CTrade::OrderSend: cancel #69 [done]
+CS	0	15:22:43.838	CycleORB (NVDA,M5)	2026.07.21 17:30:00   [CycleORB] DELETE order #69 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.849	CycleORB (NVDA,M5)	2026.07.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.851	CycleORB (NVDA,M5)	2026.07.22 14:30:00   [CycleORB] RANGE NY 2026.07.22 13:30 hi=208.07 lo=204.79 range=328pt atr%=46.2 spread=29.8pt (live 29pt) cost%=9.1 buffer=30pt risk=99.64
+CS	0	15:22:43.851	Trade	2026.07.22 14:30:00   buy stop 27.83 NVDA at 208.37 sl: 204.79 tp: 213.74 (206.64 / 206.93)
+CS	0	15:22:43.851	CycleORB (NVDA,M5)	2026.07.22 14:30:00   CTrade::OrderSend: buy stop 27.83 NVDA at 208.37 sl: 204.79 tp: 213.74 [done]
+CS	0	15:22:43.851	CycleORB (NVDA,M5)	2026.07.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=27.83 @208.37 sl=204.79 tp=213.74 magic=26110402 retcode=10009
+CS	0	15:22:43.851	Trade	2026.07.22 14:30:00   sell stop 27.83 NVDA at 204.49 sl: 208.07 tp: 199.12 (206.64 / 206.93)
+CS	0	15:22:43.851	CycleORB (NVDA,M5)	2026.07.22 14:30:00   CTrade::OrderSend: sell stop 27.83 NVDA at 204.49 sl: 208.07 tp: 199.12 [done]
+CS	0	15:22:43.851	CycleORB (NVDA,M5)	2026.07.22 14:30:00   [CycleORB] PLACE SELL_STOP lots=27.83 @204.49 sl=208.07 tp=199.12 magic=26110402 retcode=10009
+CS	0	15:22:43.853	Trade	2026.07.22 14:53:26   order [#71 buy stop 27.83 NVDA at 208.37] triggered
+CS	0	15:22:43.853	Trades	2026.07.22 14:53:26   deal #36 buy 27.83 NVDA at 208.38 done (based on order #71)
+CS	0	15:22:43.853	Trade	2026.07.22 14:53:26   deal performed [#36 buy 27.83 NVDA at 208.38]
+CS	0	15:22:43.853	Trade	2026.07.22 14:53:26   order performed buy 27.83 at 208.38 [#71 buy stop 27.83 NVDA at 208.37]
+CS	0	15:22:43.853	Trade	2026.07.22 14:53:26   order canceled [#72 sell stop 27.83 NVDA at 204.49]
+CS	0	15:22:43.853	CycleORB (NVDA,M5)	2026.07.22 14:53:26   CTrade::OrderSend: cancel #72 [done]
+CS	0	15:22:43.853	CycleORB (NVDA,M5)	2026.07.22 14:53:26   [CycleORB] DELETE order #72 magic=26110402 (NY OCO)
+CS	0	15:22:43.862	Trade	2026.07.22 16:15:22   take profit triggered #71 buy 27.83 NVDA 208.38 sl: 204.79 tp: 213.74 [#73 sell 27.83 NVDA at 213.74]
+CS	0	15:22:43.862	Trades	2026.07.22 16:15:22   deal #37 sell 27.83 NVDA at 213.74 done (based on order #73)
+CS	0	15:22:43.862	Trade	2026.07.22 16:15:22   deal performed [#37 sell 27.83 NVDA at 213.74]
+CS	0	15:22:43.862	Trade	2026.07.22 16:15:22   order performed sell 27.83 at 213.74 [#73 sell 27.83 NVDA at 213.74]
+CS	0	15:22:43.874	CycleORB (NVDA,M5)	2026.07.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.876	CycleORB (NVDA,M5)	2026.07.23 14:30:00   [CycleORB] SKIP NY 2026.07.23 13:30 hi=210.71 lo=208.27 range=244pt atr%=33.4 spread=29.7pt (live 35pt) cost%=12.2 (range/ATR outside band)
+CS	0	15:22:43.902	CycleORB (NVDA,M5)	2026.07.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.906	CycleORB (NVDA,M5)	2026.07.24 14:30:00   [CycleORB] SKIP NY 2026.07.24 13:30 hi=208.41 lo=205.52 range=289pt atr%=40.2 spread=30.1pt (live 35pt) cost%=10.4 (cost too high vs range)
+CS	0	15:22:43.941	CycleORB (NVDA,M5)	2026.07.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.943	CycleORB (NVDA,M5)	2026.07.27 14:30:00   [CycleORB] RANGE NY 2026.07.27 13:30 hi=207.29 lo=201.04 range=625pt atr%=84.0 spread=29.6pt (live 34pt) cost%=4.7 buffer=31pt risk=99.64
+CS	0	15:22:43.943	Trade	2026.07.27 14:30:00   buy stop 15.18 NVDA at 207.60 sl: 201.04 tp: 217.44 (198.82 / 199.16)
+CS	0	15:22:43.943	CycleORB (NVDA,M5)	2026.07.27 14:30:00   CTrade::OrderSend: buy stop 15.18 NVDA at 207.60 sl: 201.04 tp: 217.44 [done]
+CS	0	15:22:43.943	CycleORB (NVDA,M5)	2026.07.27 14:30:00   [CycleORB] PLACE BUY_STOP lots=15.18 @207.60 sl=201.04 tp=217.44 magic=26110402 retcode=10009
+CS	0	15:22:43.943	CycleORB (NVDA,M5)	2026.07.27 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:43.969	Trade	2026.07.27 17:30:00   order canceled [#74 buy stop 15.18 NVDA at 207.60]
+CS	0	15:22:43.969	CycleORB (NVDA,M5)	2026.07.27 17:30:00   CTrade::OrderSend: cancel #74 [done]
+CS	0	15:22:43.969	CycleORB (NVDA,M5)	2026.07.27 17:30:00   [CycleORB] DELETE order #74 magic=26110402 (NY entry window closed)
+CS	0	15:22:43.982	CycleORB (NVDA,M5)	2026.07.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:43.983	CycleORB (NVDA,M5)	2026.07.28 14:30:00   [CycleORB] SKIP NY 2026.07.28 13:30 hi=195.24 lo=192.64 range=260pt atr%=33.4 spread=29.8pt (live 31pt) cost%=11.5 (range/ATR outside band)
+CS	0	15:22:44.008	CycleORB (NVDA,M5)	2026.07.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.010	CycleORB (NVDA,M5)	2026.07.29 14:30:00   [CycleORB] RANGE NY 2026.07.29 13:30 hi=196.90 lo=192.52 range=438pt atr%=58.3 spread=30.4pt (live 32pt) cost%=6.9 buffer=30pt risk=99.64
+CS	0	15:22:44.010	Trade	2026.07.29 14:30:00   buy stop 21.29 NVDA at 197.20 sl: 192.52 tp: 204.22 (191.48 / 191.80)
+CS	0	15:22:44.010	CycleORB (NVDA,M5)	2026.07.29 14:30:00   CTrade::OrderSend: buy stop 21.29 NVDA at 197.20 sl: 192.52 tp: 204.22 [done]
+CS	0	15:22:44.010	CycleORB (NVDA,M5)	2026.07.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.29 @197.20 sl=192.52 tp=204.22 magic=26110402 retcode=10009
+CS	0	15:22:44.010	CycleORB (NVDA,M5)	2026.07.29 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:44.028	Trade	2026.07.29 17:30:00   order canceled [#75 buy stop 21.29 NVDA at 197.20]
+CS	0	15:22:44.028	CycleORB (NVDA,M5)	2026.07.29 17:30:00   CTrade::OrderSend: cancel #75 [done]
+CS	0	15:22:44.028	CycleORB (NVDA,M5)	2026.07.29 17:30:00   [CycleORB] DELETE order #75 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.045	CycleORB (NVDA,M5)	2026.07.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.047	CycleORB (NVDA,M5)	2026.07.30 14:30:00   [CycleORB] RANGE NY 2026.07.30 13:30 hi=195.43 lo=191.37 range=406pt atr%=53.2 spread=29.8pt (live 33pt) cost%=7.3 buffer=30pt risk=99.64
+CS	0	15:22:44.047	CycleORB (NVDA,M5)	2026.07.30 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:44.047	Trade	2026.07.30 14:30:00   sell stop 22.85 NVDA at 191.07 sl: 195.43 tp: 184.53 (196.66 / 196.99)
+CS	0	15:22:44.047	CycleORB (NVDA,M5)	2026.07.30 14:30:00   CTrade::OrderSend: sell stop 22.85 NVDA at 191.07 sl: 195.43 tp: 184.53 [done]
+CS	0	15:22:44.047	CycleORB (NVDA,M5)	2026.07.30 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.85 @191.07 sl=195.43 tp=184.53 magic=26110402 retcode=10009
+CS	0	15:22:44.061	Trade	2026.07.30 17:30:00   order canceled [#76 sell stop 22.85 NVDA at 191.07]
+CS	0	15:22:44.061	CycleORB (NVDA,M5)	2026.07.30 17:30:00   CTrade::OrderSend: cancel #76 [done]
+CS	0	15:22:44.061	CycleORB (NVDA,M5)	2026.07.30 17:30:00   [CycleORB] DELETE order #76 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.074	CycleORB (NVDA,M5)	2026.07.31 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.076	CycleORB (NVDA,M5)	2026.07.31 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:44.097	CycleORB (NVDA,M5)	2026.08.03 13:30:30   [CycleORB] CYCLE_END 202607 capital=9964.44 realized=441.44 floating=0.00 pnl=4.43% peak=4.44% state=ACTIVE 
+CS	0	15:22:44.097	CycleORB (NVDA,M5)	2026.08.03 13:30:30   [CycleORB] CYCLE_BEGIN 202608 capital=10405.88 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:44.099	CycleORB (NVDA,M5)	2026.08.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.101	CycleORB (NVDA,M5)	2026.08.03 14:30:00   [CycleORB] RANGE NY 2026.08.03 13:30 hi=202.18 lo=197.93 range=425pt atr%=56.6 spread=30.3pt (live 32pt) cost%=7.1 buffer=30pt risk=104.06
+CS	0	15:22:44.101	CycleORB (NVDA,M5)	2026.08.03 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:44.101	Trade	2026.08.03 14:30:00   sell stop 22.87 NVDA at 197.63 sl: 202.18 tp: 190.80 (205.23 / 205.55)
+CS	0	15:22:44.101	CycleORB (NVDA,M5)	2026.08.03 14:30:00   CTrade::OrderSend: sell stop 22.87 NVDA at 197.63 sl: 202.18 tp: 190.80 [done]
+CS	0	15:22:44.101	CycleORB (NVDA,M5)	2026.08.03 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.87 @197.63 sl=202.18 tp=190.80 magic=26110402 retcode=10009
+CS	0	15:22:44.117	Trade	2026.08.03 17:30:00   order canceled [#77 sell stop 22.87 NVDA at 197.63]
+CS	0	15:22:44.117	CycleORB (NVDA,M5)	2026.08.03 17:30:00   CTrade::OrderSend: cancel #77 [done]
+CS	0	15:22:44.117	CycleORB (NVDA,M5)	2026.08.03 17:30:00   [CycleORB] DELETE order #77 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.127	CycleORB (NVDA,M5)	2026.08.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.130	CycleORB (NVDA,M5)	2026.08.04 14:30:00   [CycleORB] SKIP NY 2026.08.04 13:30 hi=211.99 lo=209.05 range=294pt atr%=38.5 spread=29.6pt (live 32pt) cost%=10.1 (range/ATR outside band)
+CS	0	15:22:44.152	CycleORB (NVDA,M5)	2026.08.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.155	CycleORB (NVDA,M5)	2026.08.05 14:30:00   [CycleORB] RANGE NY 2026.08.05 13:30 hi=221.59 lo=217.27 range=432pt atr%=57.3 spread=29.7pt (live 32pt) cost%=6.9 buffer=30pt risk=104.06
+CS	0	15:22:44.155	Trade	2026.08.05 14:30:00   buy stop 22.52 NVDA at 221.89 sl: 217.27 tp: 228.82 (220.56 / 220.88)
+CS	0	15:22:44.155	CycleORB (NVDA,M5)	2026.08.05 14:30:00   CTrade::OrderSend: buy stop 22.52 NVDA at 221.89 sl: 217.27 tp: 228.82 [done]
+CS	0	15:22:44.155	CycleORB (NVDA,M5)	2026.08.05 14:30:00   [CycleORB] PLACE BUY_STOP lots=22.52 @221.89 sl=217.27 tp=228.82 magic=26110402 retcode=10009
+CS	0	15:22:44.155	Trade	2026.08.05 14:30:00   sell stop 22.52 NVDA at 216.97 sl: 221.59 tp: 210.04 (220.56 / 220.88)
+CS	0	15:22:44.155	CycleORB (NVDA,M5)	2026.08.05 14:30:00   CTrade::OrderSend: sell stop 22.52 NVDA at 216.97 sl: 221.59 tp: 210.04 [done]
+CS	0	15:22:44.155	CycleORB (NVDA,M5)	2026.08.05 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.52 @216.97 sl=221.59 tp=210.04 magic=26110402 retcode=10009
+CS	0	15:22:44.176	Trade	2026.08.05 17:30:00   order canceled [#79 sell stop 22.52 NVDA at 216.97]
+CS	0	15:22:44.176	CycleORB (NVDA,M5)	2026.08.05 17:30:00   CTrade::OrderSend: cancel #79 [done]
+CS	0	15:22:44.176	CycleORB (NVDA,M5)	2026.08.05 17:30:00   [CycleORB] DELETE order #79 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.176	Trade	2026.08.05 17:30:00   order canceled [#78 buy stop 22.52 NVDA at 221.89]
+CS	0	15:22:44.176	CycleORB (NVDA,M5)	2026.08.05 17:30:00   CTrade::OrderSend: cancel #78 [done]
+CS	0	15:22:44.176	CycleORB (NVDA,M5)	2026.08.05 17:30:00   [CycleORB] DELETE order #78 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.188	CycleORB (NVDA,M5)	2026.08.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:00   [CycleORB] RANGE NY 2026.08.06 13:30 hi=223.45 lo=219.86 range=359pt atr%=46.1 spread=29.7pt (live 31pt) cost%=8.3 buffer=30pt risk=104.06
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:00   buy stop 26.75 NVDA at 223.75 sl: 219.86 tp: 229.58 (219.67 / 219.98)
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:00   CTrade::OrderSend: buy stop 26.75 NVDA at 223.75 sl: 219.86 tp: 229.58 [done]
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:00   [CycleORB] PLACE BUY_STOP lots=26.75 @223.75 sl=219.86 tp=229.58 magic=26110402 retcode=10009
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:00   sell stop 26.75 NVDA at 219.56 sl: 223.45 tp: 213.73 (219.67 / 219.98)
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:00   CTrade::OrderSend: sell stop 26.75 NVDA at 219.56 sl: 223.45 tp: 213.73 [done]
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:00   [CycleORB] PLACE SELL_STOP lots=26.75 @219.56 sl=223.45 tp=213.73 magic=26110402 retcode=10009
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:40   order [#81 sell stop 26.75 NVDA at 219.56] triggered
+CS	0	15:22:44.190	Trades	2026.08.06 14:30:40   deal #38 sell 26.75 NVDA at 219.52 done (based on order #81)
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:40   deal performed [#38 sell 26.75 NVDA at 219.52]
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:40   order performed sell 26.75 at 219.52 [#81 sell stop 26.75 NVDA at 219.56]
+CS	0	15:22:44.190	Trade	2026.08.06 14:30:40   order canceled [#80 buy stop 26.75 NVDA at 223.75]
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:40   CTrade::OrderSend: cancel #80 [done]
+CS	0	15:22:44.190	CycleORB (NVDA,M5)	2026.08.06 14:30:40   [CycleORB] DELETE order #80 magic=26110402 (NY OCO)
+CS	0	15:22:44.233	Trade	2026.08.06 19:50:00   market buy 26.75 NVDA, close #81 (218.89 / 219.45)
+CS	0	15:22:44.233	Trades	2026.08.06 19:50:00   deal #39 buy 26.75 NVDA at 219.45 done (based on order #82)
+CS	0	15:22:44.234	Trade	2026.08.06 19:50:00   deal performed [#39 buy 26.75 NVDA at 219.45]
+CS	0	15:22:44.234	Trade	2026.08.06 19:50:00   order performed buy 26.75 at 219.45 [#82 buy 26.75 NVDA at 219.45]
+CS	0	15:22:44.234	CycleORB (NVDA,M5)	2026.08.06 19:50:00   CTrade::OrderSend: market buy 26.75 position #81 NVDA [done at 219.45]
+CS	0	15:22:44.234	CycleORB (NVDA,M5)	2026.08.06 19:50:00   [CycleORB] CLOSE position #81 magic=26110402 (NY time exit)
+CS	0	15:22:44.238	CycleORB (NVDA,M5)	2026.08.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.241	CycleORB (NVDA,M5)	2026.08.07 14:30:00   [CycleORB] SKIP NY 2026.08.07 13:30 hi=223.03 lo=220.40 range=263pt atr%=34.7 spread=29.6pt (live 30pt) cost%=11.2 (range/ATR outside band)
+CS	0	15:22:44.263	CycleORB (NVDA,M5)	2026.08.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.265	CycleORB (NVDA,M5)	2026.08.10 14:30:00   [CycleORB] SKIP NY 2026.08.10 13:30 hi=223.95 lo=221.61 range=234pt atr%=30.7 spread=29.4pt (live 30pt) cost%=12.6 (range/ATR outside band)
+CS	0	15:22:44.291	CycleORB (NVDA,M5)	2026.08.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.294	CycleORB (NVDA,M5)	2026.08.11 14:30:00   [CycleORB] SKIP NY 2026.08.11 13:30 hi=221.70 lo=218.68 range=302pt atr%=38.8 spread=29.8pt (live 32pt) cost%=9.9 (range/ATR outside band)
+CS	0	15:22:44.321	CycleORB (NVDA,M5)	2026.08.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.323	CycleORB (NVDA,M5)	2026.08.12 14:30:00   [CycleORB] RANGE NY 2026.08.12 13:30 hi=223.67 lo=220.13 range=354pt atr%=47.2 spread=29.7pt (live 31pt) cost%=8.4 buffer=30pt risk=104.06
+CS	0	15:22:44.323	CycleORB (NVDA,M5)	2026.08.12 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:44.323	Trade	2026.08.12 14:30:00   sell stop 27.09 NVDA at 219.83 sl: 223.67 tp: 214.07 (224.30 / 224.61)
+CS	0	15:22:44.323	CycleORB (NVDA,M5)	2026.08.12 14:30:00   CTrade::OrderSend: sell stop 27.09 NVDA at 219.83 sl: 223.67 tp: 214.07 [done]
+CS	0	15:22:44.323	CycleORB (NVDA,M5)	2026.08.12 14:30:00   [CycleORB] PLACE SELL_STOP lots=27.09 @219.83 sl=223.67 tp=214.07 magic=26110402 retcode=10009
+CS	0	15:22:44.337	Trade	2026.08.12 17:30:00   order canceled [#83 sell stop 27.09 NVDA at 219.83]
+CS	0	15:22:44.337	CycleORB (NVDA,M5)	2026.08.12 17:30:00   CTrade::OrderSend: cancel #83 [done]
+CS	0	15:22:44.337	CycleORB (NVDA,M5)	2026.08.12 17:30:00   [CycleORB] DELETE order #83 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.346	CycleORB (NVDA,M5)	2026.08.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.348	CycleORB (NVDA,M5)	2026.08.13 14:30:00   [CycleORB] SKIP NY 2026.08.13 13:30 hi=227.04 lo=224.03 range=301pt atr%=39.5 spread=29.5pt (live 31pt) cost%=9.8 (range/ATR outside band)
+CS	0	15:22:44.368	CycleORB (NVDA,M5)	2026.08.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.371	CycleORB (NVDA,M5)	2026.08.14 14:30:00   [CycleORB] SKIP NY 2026.08.14 13:30 hi=227.33 lo=224.88 range=245pt atr%=33.3 spread=29.9pt (live 31pt) cost%=12.2 (range/ATR outside band)
+CS	0	15:22:44.387	CycleORB (NVDA,M5)	2026.08.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.389	CycleORB (NVDA,M5)	2026.08.17 14:30:00   [CycleORB] SKIP NY 2026.08.17 13:30 hi=226.93 lo=224.87 range=206pt atr%=30.7 spread=29.2pt (live 29pt) cost%=14.2 (range/ATR outside band)
+CS	0	15:22:44.406	CycleORB (NVDA,M5)	2026.08.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.410	CycleORB (NVDA,M5)	2026.08.18 14:30:00   [CycleORB] SKIP NY 2026.08.18 13:30 hi=221.50 lo=219.18 range=232pt atr%=35.7 spread=29.4pt (live 29pt) cost%=12.7 (range/ATR outside band)
+CS	0	15:22:44.427	CycleORB (NVDA,M5)	2026.08.19 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.430	CycleORB (NVDA,M5)	2026.08.19 14:30:00   [CycleORB] RANGE NY 2026.08.19 13:30 hi=222.14 lo=217.75 range=439pt atr%=68.0 spread=29.6pt (live 30pt) cost%=6.8 buffer=30pt risk=104.06
+CS	0	15:22:44.430	Trade	2026.08.19 14:30:00   buy stop 22.18 NVDA at 222.44 sl: 217.75 tp: 229.48 (218.02 / 218.32)
+CS	0	15:22:44.430	CycleORB (NVDA,M5)	2026.08.19 14:30:00   CTrade::OrderSend: buy stop 22.18 NVDA at 222.44 sl: 217.75 tp: 229.48 [done]
+CS	0	15:22:44.430	CycleORB (NVDA,M5)	2026.08.19 14:30:00   [CycleORB] PLACE BUY_STOP lots=22.18 @222.44 sl=217.75 tp=229.48 magic=26110402 retcode=10009
+CS	0	15:22:44.430	Trade	2026.08.19 14:30:00   sell stop 22.18 NVDA at 217.45 sl: 222.14 tp: 210.42 (218.02 / 218.32)
+CS	0	15:22:44.430	CycleORB (NVDA,M5)	2026.08.19 14:30:00   CTrade::OrderSend: sell stop 22.18 NVDA at 217.45 sl: 222.14 tp: 210.42 [done]
+CS	0	15:22:44.430	CycleORB (NVDA,M5)	2026.08.19 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.18 @217.45 sl=222.14 tp=210.42 magic=26110402 retcode=10009
+CS	0	15:22:44.448	Trade	2026.08.19 17:30:00   order canceled [#85 sell stop 22.18 NVDA at 217.45]
+CS	0	15:22:44.448	CycleORB (NVDA,M5)	2026.08.19 17:30:00   CTrade::OrderSend: cancel #85 [done]
+CS	0	15:22:44.448	CycleORB (NVDA,M5)	2026.08.19 17:30:00   [CycleORB] DELETE order #85 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.448	Trade	2026.08.19 17:30:00   order canceled [#84 buy stop 22.18 NVDA at 222.44]
+CS	0	15:22:44.448	CycleORB (NVDA,M5)	2026.08.19 17:30:00   CTrade::OrderSend: cancel #84 [done]
+CS	0	15:22:44.448	CycleORB (NVDA,M5)	2026.08.19 17:30:00   [CycleORB] DELETE order #84 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.458	CycleORB (NVDA,M5)	2026.08.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.460	CycleORB (NVDA,M5)	2026.08.20 14:30:00   [CycleORB] SKIP NY 2026.08.20 13:30 hi=219.67 lo=216.87 range=280pt atr%=44.2 spread=30.0pt (live 32pt) cost%=10.7 (cost too high vs range)
+CS	0	15:22:44.477	CycleORB (NVDA,M5)	2026.08.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.480	CycleORB (NVDA,M5)	2026.08.21 14:30:00   [CycleORB] SKIP NY 2026.08.21 13:30 hi=218.57 lo=215.75 range=282pt atr%=45.9 spread=29.6pt (live 30pt) cost%=10.5 (cost too high vs range)
+CS	0	15:22:44.500	CycleORB (NVDA,M5)	2026.08.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.501	CycleORB (NVDA,M5)	2026.08.24 14:30:00   [CycleORB] RANGE NY 2026.08.24 13:30 hi=214.46 lo=208.89 range=557pt atr%=98.1 spread=29.5pt (live 31pt) cost%=5.3 buffer=29pt risk=104.06
+CS	0	15:22:44.501	Trade	2026.08.24 14:30:00   buy stop 17.75 NVDA at 214.75 sl: 208.89 tp: 223.54 (209.19 / 209.50)
+CS	0	15:22:44.501	CycleORB (NVDA,M5)	2026.08.24 14:30:00   CTrade::OrderSend: buy stop 17.75 NVDA at 214.75 sl: 208.89 tp: 223.54 [done]
+CS	0	15:22:44.501	CycleORB (NVDA,M5)	2026.08.24 14:30:00   [CycleORB] PLACE BUY_STOP lots=17.75 @214.75 sl=208.89 tp=223.54 magic=26110402 retcode=10009
+CS	0	15:22:44.501	Trade	2026.08.24 14:30:00   sell stop 17.75 NVDA at 208.60 sl: 214.46 tp: 199.81 (209.19 / 209.50)
+CS	0	15:22:44.501	CycleORB (NVDA,M5)	2026.08.24 14:30:00   CTrade::OrderSend: sell stop 17.75 NVDA at 208.60 sl: 214.46 tp: 199.81 [done]
+CS	0	15:22:44.501	CycleORB (NVDA,M5)	2026.08.24 14:30:00   [CycleORB] PLACE SELL_STOP lots=17.75 @208.60 sl=214.46 tp=199.81 magic=26110402 retcode=10009
+CS	0	15:22:44.517	Trade	2026.08.24 17:30:00   order canceled [#87 sell stop 17.75 NVDA at 208.60]
+CS	0	15:22:44.517	CycleORB (NVDA,M5)	2026.08.24 17:30:00   CTrade::OrderSend: cancel #87 [done]
+CS	0	15:22:44.517	CycleORB (NVDA,M5)	2026.08.24 17:30:00   [CycleORB] DELETE order #87 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.517	Trade	2026.08.24 17:30:00   order canceled [#86 buy stop 17.75 NVDA at 214.75]
+CS	0	15:22:44.517	CycleORB (NVDA,M5)	2026.08.24 17:30:00   CTrade::OrderSend: cancel #86 [done]
+CS	0	15:22:44.517	CycleORB (NVDA,M5)	2026.08.24 17:30:00   [CycleORB] DELETE order #86 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.526	CycleORB (NVDA,M5)	2026.08.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.529	CycleORB (NVDA,M5)	2026.08.25 14:30:00   [CycleORB] RANGE NY 2026.08.25 13:30 hi=214.57 lo=209.94 range=463pt atr%=80.9 spread=29.3pt (live 31pt) cost%=6.3 buffer=29pt risk=104.06
+CS	0	15:22:44.529	Trade	2026.08.25 14:30:00   buy stop 21.15 NVDA at 214.86 sl: 209.94 tp: 222.24 (211.64 / 211.95)
+CS	0	15:22:44.529	CycleORB (NVDA,M5)	2026.08.25 14:30:00   CTrade::OrderSend: buy stop 21.15 NVDA at 214.86 sl: 209.94 tp: 222.24 [done]
+CS	0	15:22:44.529	CycleORB (NVDA,M5)	2026.08.25 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.15 @214.86 sl=209.94 tp=222.24 magic=26110402 retcode=10009
+CS	0	15:22:44.529	Trade	2026.08.25 14:30:00   sell stop 21.15 NVDA at 209.65 sl: 214.57 tp: 202.27 (211.64 / 211.95)
+CS	0	15:22:44.529	CycleORB (NVDA,M5)	2026.08.25 14:30:00   CTrade::OrderSend: sell stop 21.15 NVDA at 209.65 sl: 214.57 tp: 202.27 [done]
+CS	0	15:22:44.529	CycleORB (NVDA,M5)	2026.08.25 14:30:00   [CycleORB] PLACE SELL_STOP lots=21.15 @209.65 sl=214.57 tp=202.27 magic=26110402 retcode=10009
+CS	0	15:22:44.545	Trade	2026.08.25 17:30:00   order canceled [#89 sell stop 21.15 NVDA at 209.65]
+CS	0	15:22:44.545	CycleORB (NVDA,M5)	2026.08.25 17:30:00   CTrade::OrderSend: cancel #89 [done]
+CS	0	15:22:44.545	CycleORB (NVDA,M5)	2026.08.25 17:30:00   [CycleORB] DELETE order #89 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.545	Trade	2026.08.25 17:30:00   order canceled [#88 buy stop 21.15 NVDA at 214.86]
+CS	0	15:22:44.545	CycleORB (NVDA,M5)	2026.08.25 17:30:00   CTrade::OrderSend: cancel #88 [done]
+CS	0	15:22:44.545	CycleORB (NVDA,M5)	2026.08.25 17:30:00   [CycleORB] DELETE order #88 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.556	CycleORB (NVDA,M5)	2026.08.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.558	CycleORB (NVDA,M5)	2026.08.26 14:30:00   [CycleORB] SKIP NY 2026.08.26 13:30 hi=213.45 lo=210.60 range=285pt atr%=52.4 spread=29.5pt (live 32pt) cost%=10.4 (cost too high vs range)
+CS	0	15:22:44.578	CycleORB (NVDA,M5)	2026.08.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   [CycleORB] RANGE NY 2026.08.27 13:30 hi=225.62 lo=220.79 range=483pt atr%=91.1 spread=29.9pt (live 32pt) cost%=6.2 buffer=30pt risk=104.06
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   buy stop 20.28 NVDA at 225.92 sl: 220.79 tp: 233.61 (225.55 / 225.87)
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   CTrade::OrderSend: buy stop 20.28 NVDA at 225.92 sl: 220.79 tp: 233.61 [done]
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   [CycleORB] PLACE BUY_STOP lots=20.28 @225.92 sl=220.79 tp=233.61 magic=26110402 retcode=10009
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   sell stop 20.28 NVDA at 220.49 sl: 225.62 tp: 212.80 (225.55 / 225.87)
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   CTrade::OrderSend: sell stop 20.28 NVDA at 220.49 sl: 225.62 tp: 212.80 [done]
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   [CycleORB] PLACE SELL_STOP lots=20.28 @220.49 sl=225.62 tp=212.80 magic=26110402 retcode=10009
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   order [#90 buy stop 20.28 NVDA at 225.92] triggered
+CS	0	15:22:44.581	Trades	2026.08.27 14:30:00   deal #40 buy 20.28 NVDA at 225.96 done (based on order #90)
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   deal performed [#40 buy 20.28 NVDA at 225.96]
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   order performed buy 20.28 at 225.96 [#90 buy stop 20.28 NVDA at 225.92]
+CS	0	15:22:44.581	Trade	2026.08.27 14:30:00   order canceled [#91 sell stop 20.28 NVDA at 220.49]
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   CTrade::OrderSend: cancel #91 [done]
+CS	0	15:22:44.581	CycleORB (NVDA,M5)	2026.08.27 14:30:00   [CycleORB] DELETE order #91 magic=26110402 (NY OCO)
+CS	0	15:22:44.624	Trade	2026.08.27 19:50:00   market sell 20.28 NVDA, close #90 (228.10 / 228.40)
+CS	0	15:22:44.624	Trades	2026.08.27 19:50:00   deal #41 sell 20.28 NVDA at 228.10 done (based on order #92)
+CS	0	15:22:44.624	Trade	2026.08.27 19:50:00   deal performed [#41 sell 20.28 NVDA at 228.10]
+CS	0	15:22:44.624	Trade	2026.08.27 19:50:00   order performed sell 20.28 at 228.10 [#92 sell 20.28 NVDA at 228.10]
+CS	0	15:22:44.624	CycleORB (NVDA,M5)	2026.08.27 19:50:00   CTrade::OrderSend: market sell 20.28 position #90 NVDA [done at 228.10]
+CS	0	15:22:44.624	CycleORB (NVDA,M5)	2026.08.27 19:50:00   [CycleORB] CLOSE position #90 magic=26110402 (NY time exit)
+CS	0	15:22:44.629	CycleORB (NVDA,M5)	2026.08.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.632	CycleORB (NVDA,M5)	2026.08.28 14:30:00   [CycleORB] RANGE NY 2026.08.28 13:30 hi=229.10 lo=224.50 range=460pt atr%=72.3 spread=29.6pt (live 31pt) cost%=6.4 buffer=30pt risk=104.06
+CS	0	15:22:44.632	Trade	2026.08.28 14:30:00   buy stop 21.23 NVDA at 229.40 sl: 224.50 tp: 236.75 (224.95 / 225.26)
+CS	0	15:22:44.632	CycleORB (NVDA,M5)	2026.08.28 14:30:00   CTrade::OrderSend: buy stop 21.23 NVDA at 229.40 sl: 224.50 tp: 236.75 [done]
+CS	0	15:22:44.632	CycleORB (NVDA,M5)	2026.08.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.23 @229.40 sl=224.50 tp=236.75 magic=26110402 retcode=10009
+CS	0	15:22:44.632	Trade	2026.08.28 14:30:00   sell stop 21.23 NVDA at 224.20 sl: 229.10 tp: 216.85 (224.95 / 225.26)
+CS	0	15:22:44.632	CycleORB (NVDA,M5)	2026.08.28 14:30:00   CTrade::OrderSend: sell stop 21.23 NVDA at 224.20 sl: 229.10 tp: 216.85 [done]
+CS	0	15:22:44.632	CycleORB (NVDA,M5)	2026.08.28 14:30:00   [CycleORB] PLACE SELL_STOP lots=21.23 @224.20 sl=229.10 tp=216.85 magic=26110402 retcode=10009
+CS	0	15:22:44.637	Trade	2026.08.28 15:12:09   order [#94 sell stop 21.23 NVDA at 224.20] triggered
+CS	0	15:22:44.637	Trades	2026.08.28 15:12:09   deal #42 sell 21.23 NVDA at 224.17 done (based on order #94)
+CS	0	15:22:44.637	Trade	2026.08.28 15:12:09   deal performed [#42 sell 21.23 NVDA at 224.17]
+CS	0	15:22:44.637	Trade	2026.08.28 15:12:09   order performed sell 21.23 at 224.17 [#94 sell stop 21.23 NVDA at 224.20]
+CS	0	15:22:44.637	Trade	2026.08.28 15:12:09   order canceled [#93 buy stop 21.23 NVDA at 229.40]
+CS	0	15:22:44.637	CycleORB (NVDA,M5)	2026.08.28 15:12:09   CTrade::OrderSend: cancel #93 [done]
+CS	0	15:22:44.637	CycleORB (NVDA,M5)	2026.08.28 15:12:09   [CycleORB] DELETE order #93 magic=26110402 (NY OCO)
+CS	0	15:22:44.678	Trade	2026.08.28 19:50:00   market buy 21.23 NVDA, close #94 (217.25 / 217.56)
+CS	0	15:22:44.678	Trades	2026.08.28 19:50:00   deal #43 buy 21.23 NVDA at 217.56 done (based on order #95)
+CS	0	15:22:44.678	Trade	2026.08.28 19:50:00   deal performed [#43 buy 21.23 NVDA at 217.56]
+CS	0	15:22:44.678	Trade	2026.08.28 19:50:00   order performed buy 21.23 at 217.56 [#95 buy 21.23 NVDA at 217.56]
+CS	0	15:22:44.678	CycleORB (NVDA,M5)	2026.08.28 19:50:00   CTrade::OrderSend: market buy 21.23 position #94 NVDA [done at 217.56]
+CS	0	15:22:44.678	CycleORB (NVDA,M5)	2026.08.28 19:50:00   [CycleORB] CLOSE position #94 magic=26110402 (NY time exit)
+CS	0	15:22:44.684	CycleORB (NVDA,M5)	2026.08.31 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.686	CycleORB (NVDA,M5)	2026.08.31 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:44.702	CycleORB (NVDA,M5)	2026.09.01 13:30:30   [CycleORB] CYCLE_END 202608 capital=10405.88 realized=185.60 floating=0.00 pnl=1.78% peak=1.91% state=ACTIVE 
+CS	0	15:22:44.702	CycleORB (NVDA,M5)	2026.09.01 13:30:30   [CycleORB] CYCLE_BEGIN 202609 capital=10591.48 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:44.705	CycleORB (NVDA,M5)	2026.09.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.706	CycleORB (NVDA,M5)	2026.09.01 14:30:00   [CycleORB] SKIP NY 2026.09.01 13:30 hi=217.25 lo=214.94 range=231pt atr%=34.5 spread=29.5pt (live 31pt) cost%=12.8 (range/ATR outside band)
+CS	0	15:22:44.726	CycleORB (NVDA,M5)	2026.09.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.728	CycleORB (NVDA,M5)	2026.09.02 14:30:00   [CycleORB] RANGE NY 2026.09.02 13:30 hi=221.33 lo=218.29 range=304pt atr%=46.3 spread=29.3pt (live 31pt) cost%=9.6 buffer=29pt risk=105.91
+CS	0	15:22:44.728	CycleORB (NVDA,M5)	2026.09.02 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:44.728	Trade	2026.09.02 14:30:00   sell stop 31.8 NVDA at 218.00 sl: 221.33 tp: 213.01 (222.67 / 222.98)
+CS	0	15:22:44.728	CycleORB (NVDA,M5)	2026.09.02 14:30:00   CTrade::OrderSend: sell stop 31.80 NVDA at 218.00 sl: 221.33 tp: 213.01 [done]
+CS	0	15:22:44.729	CycleORB (NVDA,M5)	2026.09.02 14:30:00   [CycleORB] PLACE SELL_STOP lots=31.80 @218.00 sl=221.33 tp=213.01 magic=26110402 retcode=10009
+CS	0	15:22:44.748	Trade	2026.09.02 17:30:00   order canceled [#96 sell stop 31.8 NVDA at 218.00]
+CS	0	15:22:44.748	CycleORB (NVDA,M5)	2026.09.02 17:30:00   CTrade::OrderSend: cancel #96 [done]
+CS	0	15:22:44.748	CycleORB (NVDA,M5)	2026.09.02 17:30:00   [CycleORB] DELETE order #96 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.758	CycleORB (NVDA,M5)	2026.09.03 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.761	CycleORB (NVDA,M5)	2026.09.03 14:30:00   [CycleORB] RANGE NY 2026.09.03 13:30 hi=228.92 lo=224.58 range=434pt atr%=61.4 spread=29.7pt (live 32pt) cost%=6.8 buffer=30pt risk=105.91
+CS	0	15:22:44.761	Trade	2026.09.03 14:30:00   buy stop 22.82 NVDA at 229.22 sl: 224.58 tp: 236.18 (227.24 / 227.56)
+CS	0	15:22:44.761	CycleORB (NVDA,M5)	2026.09.03 14:30:00   CTrade::OrderSend: buy stop 22.82 NVDA at 229.22 sl: 224.58 tp: 236.18 [done]
+CS	0	15:22:44.761	CycleORB (NVDA,M5)	2026.09.03 14:30:00   [CycleORB] PLACE BUY_STOP lots=22.82 @229.22 sl=224.58 tp=236.18 magic=26110402 retcode=10009
+CS	0	15:22:44.761	Trade	2026.09.03 14:30:00   sell stop 22.82 NVDA at 224.28 sl: 228.92 tp: 217.32 (227.24 / 227.56)
+CS	0	15:22:44.761	CycleORB (NVDA,M5)	2026.09.03 14:30:00   CTrade::OrderSend: sell stop 22.82 NVDA at 224.28 sl: 228.92 tp: 217.32 [done]
+CS	0	15:22:44.761	CycleORB (NVDA,M5)	2026.09.03 14:30:00   [CycleORB] PLACE SELL_STOP lots=22.82 @224.28 sl=228.92 tp=217.32 magic=26110402 retcode=10009
+CS	0	15:22:44.780	Trade	2026.09.03 17:30:00   order canceled [#98 sell stop 22.82 NVDA at 224.28]
+CS	0	15:22:44.780	CycleORB (NVDA,M5)	2026.09.03 17:30:00   CTrade::OrderSend: cancel #98 [done]
+CS	0	15:22:44.780	CycleORB (NVDA,M5)	2026.09.03 17:30:00   [CycleORB] DELETE order #98 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.780	Trade	2026.09.03 17:30:00   order canceled [#97 buy stop 22.82 NVDA at 229.22]
+CS	0	15:22:44.780	CycleORB (NVDA,M5)	2026.09.03 17:30:00   CTrade::OrderSend: cancel #97 [done]
+CS	0	15:22:44.780	CycleORB (NVDA,M5)	2026.09.03 17:30:00   [CycleORB] DELETE order #97 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.790	CycleORB (NVDA,M5)	2026.09.04 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.794	CycleORB (NVDA,M5)	2026.09.04 14:30:00   [CycleORB] RANGE NY 2026.09.04 13:30 hi=234.50 lo=229.70 range=480pt atr%=65.8 spread=29.3pt (live 29pt) cost%=6.1 buffer=29pt risk=105.91
+CS	0	15:22:44.794	CycleORB (NVDA,M5)	2026.09.04 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:44.794	Trade	2026.09.04 14:30:00   sell stop 20.8 NVDA at 229.41 sl: 234.50 tp: 221.77 (234.58 / 234.87)
+CS	0	15:22:44.794	CycleORB (NVDA,M5)	2026.09.04 14:30:00   CTrade::OrderSend: sell stop 20.80 NVDA at 229.41 sl: 234.50 tp: 221.77 [done]
+CS	0	15:22:44.794	CycleORB (NVDA,M5)	2026.09.04 14:30:00   [CycleORB] PLACE SELL_STOP lots=20.80 @229.41 sl=234.50 tp=221.77 magic=26110402 retcode=10009
+CS	0	15:22:44.813	Trade	2026.09.04 17:30:00   order canceled [#99 sell stop 20.8 NVDA at 229.41]
+CS	0	15:22:44.813	CycleORB (NVDA,M5)	2026.09.04 17:30:00   CTrade::OrderSend: cancel #99 [done]
+CS	0	15:22:44.813	CycleORB (NVDA,M5)	2026.09.04 17:30:00   [CycleORB] DELETE order #99 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.825	CycleORB (NVDA,M5)	2026.09.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.827	CycleORB (NVDA,M5)	2026.09.08 14:30:00   [CycleORB] RANGE NY 2026.09.08 13:30 hi=233.50 lo=228.89 range=461pt atr%=61.2 spread=29.5pt (live 31pt) cost%=6.4 buffer=29pt risk=105.91
+CS	0	15:22:44.827	Trade	2026.09.08 14:30:00   buy stop 21.61 NVDA at 233.79 sl: 228.89 tp: 241.14 (227.80 / 228.11)
+CS	0	15:22:44.827	CycleORB (NVDA,M5)	2026.09.08 14:30:00   CTrade::OrderSend: buy stop 21.61 NVDA at 233.79 sl: 228.89 tp: 241.14 [done]
+CS	0	15:22:44.827	CycleORB (NVDA,M5)	2026.09.08 14:30:00   [CycleORB] PLACE BUY_STOP lots=21.61 @233.79 sl=228.89 tp=241.14 magic=26110402 retcode=10009
+CS	0	15:22:44.827	CycleORB (NVDA,M5)	2026.09.08 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:44.840	Trade	2026.09.08 17:30:01   order canceled [#100 buy stop 21.61 NVDA at 233.79]
+CS	0	15:22:44.840	CycleORB (NVDA,M5)	2026.09.08 17:30:01   CTrade::OrderSend: cancel #100 [done]
+CS	0	15:22:44.840	CycleORB (NVDA,M5)	2026.09.08 17:30:01   [CycleORB] DELETE order #100 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.850	CycleORB (NVDA,M5)	2026.09.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.852	CycleORB (NVDA,M5)	2026.09.09 14:30:00   [CycleORB] SKIP NY 2026.09.09 13:30 hi=225.99 lo=224.26 range=173pt atr%=22.5 spread=29.6pt (live 29pt) cost%=17.1 (range/ATR outside band)
+CS	0	15:22:44.868	CycleORB (NVDA,M5)	2026.09.10 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.870	CycleORB (NVDA,M5)	2026.09.10 14:30:00   [CycleORB] RANGE NY 2026.09.10 13:30 hi=220.83 lo=217.03 range=380pt atr%=50.7 spread=29.3pt (live 30pt) cost%=7.7 buffer=29pt risk=105.91
+CS	0	15:22:44.870	Trade	2026.09.10 14:30:00   buy stop 25.89 NVDA at 221.12 sl: 217.03 tp: 227.26 (218.07 / 218.37)
+CS	0	15:22:44.870	CycleORB (NVDA,M5)	2026.09.10 14:30:00   CTrade::OrderSend: buy stop 25.89 NVDA at 221.12 sl: 217.03 tp: 227.26 [done]
+CS	0	15:22:44.870	CycleORB (NVDA,M5)	2026.09.10 14:30:00   [CycleORB] PLACE BUY_STOP lots=25.89 @221.12 sl=217.03 tp=227.26 magic=26110402 retcode=10009
+CS	0	15:22:44.870	Trade	2026.09.10 14:30:00   sell stop 25.89 NVDA at 216.74 sl: 220.83 tp: 210.61 (218.07 / 218.37)
+CS	0	15:22:44.870	CycleORB (NVDA,M5)	2026.09.10 14:30:00   CTrade::OrderSend: sell stop 25.89 NVDA at 216.74 sl: 220.83 tp: 210.61 [done]
+CS	0	15:22:44.870	CycleORB (NVDA,M5)	2026.09.10 14:30:00   [CycleORB] PLACE SELL_STOP lots=25.89 @216.74 sl=220.83 tp=210.61 magic=26110402 retcode=10009
+CS	0	15:22:44.887	Trade	2026.09.10 17:30:00   order canceled [#102 sell stop 25.89 NVDA at 216.74]
+CS	0	15:22:44.887	CycleORB (NVDA,M5)	2026.09.10 17:30:00   CTrade::OrderSend: cancel #102 [done]
+CS	0	15:22:44.887	CycleORB (NVDA,M5)	2026.09.10 17:30:00   [CycleORB] DELETE order #102 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.887	Trade	2026.09.10 17:30:00   order canceled [#101 buy stop 25.89 NVDA at 221.12]
+CS	0	15:22:44.887	CycleORB (NVDA,M5)	2026.09.10 17:30:00   CTrade::OrderSend: cancel #101 [done]
+CS	0	15:22:44.887	CycleORB (NVDA,M5)	2026.09.10 17:30:00   [CycleORB] DELETE order #101 magic=26110402 (NY entry window closed)
+CS	0	15:22:44.897	CycleORB (NVDA,M5)	2026.09.11 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.900	CycleORB (NVDA,M5)	2026.09.11 14:30:00   [CycleORB] SKIP NY 2026.09.11 13:30 hi=221.56 lo=218.91 range=265pt atr%=34.6 spread=29.7pt (live 31pt) cost%=11.2 (range/ATR outside band)
+CS	0	15:22:44.919	CycleORB (NVDA,M5)	2026.09.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.921	CycleORB (NVDA,M5)	2026.09.14 14:30:00   [CycleORB] SKIP NY 2026.09.14 13:30 hi=211.40 lo=208.79 range=261pt atr%=34.2 spread=29.0pt (live 30pt) cost%=11.1 (range/ATR outside band)
+CS	0	15:22:44.940	CycleORB (NVDA,M5)	2026.09.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.941	CycleORB (NVDA,M5)	2026.09.15 14:30:00   [CycleORB] SKIP NY 2026.09.15 13:30 hi=213.78 lo=212.40 range=138pt atr%=17.7 spread=29.2pt (live 30pt) cost%=21.1 (range/ATR outside band)
+CS	0	15:22:44.960	CycleORB (NVDA,M5)	2026.09.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.961	CycleORB (NVDA,M5)	2026.09.16 14:30:00   [CycleORB] SKIP NY 2026.09.16 13:30 hi=215.00 lo=213.16 range=184pt atr%=24.4 spread=29.2pt (live 30pt) cost%=15.9 (range/ATR outside band)
+CS	0	15:22:44.982	CycleORB (NVDA,M5)	2026.09.17 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.982	CycleORB (NVDA,M5)	2026.09.17 14:30:00   [CycleORB] SKIP NY 2026.09.17 13:30 hi=219.03 lo=216.98 range=205pt atr%=27.0 spread=29.2pt (live 30pt) cost%=14.3 (range/ATR outside band)
+CS	0	15:22:44.996	CycleORB (NVDA,M5)	2026.09.18 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:44.998	CycleORB (NVDA,M5)	2026.09.18 14:30:00   [CycleORB] SKIP NY 2026.09.18 13:30 hi=219.88 lo=217.85 range=203pt atr%=31.2 spread=29.1pt (live 31pt) cost%=14.4 (range/ATR outside band)
+CS	0	15:22:45.011	CycleORB (NVDA,M5)	2026.09.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.013	CycleORB (NVDA,M5)	2026.09.21 14:30:00   [CycleORB] RANGE NY 2026.09.21 13:30 hi=224.77 lo=221.09 range=368pt atr%=61.8 spread=29.7pt (live 30pt) cost%=8.1 buffer=30pt risk=105.91
+CS	0	15:22:45.013	Trade	2026.09.21 14:30:00   buy stop 26.61 NVDA at 225.07 sl: 221.09 tp: 231.04 (223.48 / 223.78)
+CS	0	15:22:45.013	CycleORB (NVDA,M5)	2026.09.21 14:30:00   CTrade::OrderSend: buy stop 26.61 NVDA at 225.07 sl: 221.09 tp: 231.04 [done]
+CS	0	15:22:45.013	CycleORB (NVDA,M5)	2026.09.21 14:30:00   [CycleORB] PLACE BUY_STOP lots=26.61 @225.07 sl=221.09 tp=231.04 magic=26110402 retcode=10009
+CS	0	15:22:45.013	Trade	2026.09.21 14:30:00   sell stop 26.61 NVDA at 220.79 sl: 224.77 tp: 214.82 (223.48 / 223.78)
+CS	0	15:22:45.013	CycleORB (NVDA,M5)	2026.09.21 14:30:00   CTrade::OrderSend: sell stop 26.61 NVDA at 220.79 sl: 224.77 tp: 214.82 [done]
+CS	0	15:22:45.013	CycleORB (NVDA,M5)	2026.09.21 14:30:00   [CycleORB] PLACE SELL_STOP lots=26.61 @220.79 sl=224.77 tp=214.82 magic=26110402 retcode=10009
+CS	0	15:22:45.015	Trade	2026.09.21 14:58:00   order [#103 buy stop 26.61 NVDA at 225.07] triggered
+CS	0	15:22:45.015	Trades	2026.09.21 14:58:00   deal #44 buy 26.61 NVDA at 225.07 done (based on order #103)
+CS	0	15:22:45.015	Trade	2026.09.21 14:58:00   deal performed [#44 buy 26.61 NVDA at 225.07]
+CS	0	15:22:45.015	Trade	2026.09.21 14:58:00   order performed buy 26.61 at 225.07 [#103 buy stop 26.61 NVDA at 225.07]
+CS	0	15:22:45.015	Trade	2026.09.21 14:58:00   order canceled [#104 sell stop 26.61 NVDA at 220.79]
+CS	0	15:22:45.015	CycleORB (NVDA,M5)	2026.09.21 14:58:00   CTrade::OrderSend: cancel #104 [done]
+CS	0	15:22:45.015	CycleORB (NVDA,M5)	2026.09.21 14:58:00   [CycleORB] DELETE order #104 magic=26110402 (NY OCO)
+CS	0	15:22:45.035	Trade	2026.09.21 19:50:00   market sell 26.61 NVDA, close #103 (227.18 / 227.51)
+CS	0	15:22:45.035	Trades	2026.09.21 19:50:00   deal #45 sell 26.61 NVDA at 227.18 done (based on order #105)
+CS	0	15:22:45.035	Trade	2026.09.21 19:50:00   deal performed [#45 sell 26.61 NVDA at 227.18]
+CS	0	15:22:45.035	Trade	2026.09.21 19:50:00   order performed sell 26.61 at 227.18 [#105 sell 26.61 NVDA at 227.18]
+CS	0	15:22:45.035	CycleORB (NVDA,M5)	2026.09.21 19:50:00   CTrade::OrderSend: market sell 26.61 position #103 NVDA [done at 227.18]
+CS	0	15:22:45.035	CycleORB (NVDA,M5)	2026.09.21 19:50:00   [CycleORB] CLOSE position #103 magic=26110402 (NY time exit)
+CS	0	15:22:45.039	CycleORB (NVDA,M5)	2026.09.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.041	CycleORB (NVDA,M5)	2026.09.22 14:30:01   [CycleORB] SKIP NY 2026.09.22 13:30 hi=229.41 lo=227.03 range=238pt atr%=38.9 spread=29.4pt (live 30pt) cost%=12.3 (range/ATR outside band)
+CS	0	15:22:45.055	CycleORB (NVDA,M5)	2026.09.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.057	CycleORB (NVDA,M5)	2026.09.23 14:30:00   [CycleORB] SKIP NY 2026.09.23 13:30 hi=228.77 lo=227.44 range=133pt atr%=22.5 spread=29.5pt (live 32pt) cost%=22.2 (range/ATR outside band)
+CS	0	15:22:45.072	CycleORB (NVDA,M5)	2026.09.24 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.074	CycleORB (NVDA,M5)	2026.09.24 14:30:00   [CycleORB] SKIP NY 2026.09.24 13:30 hi=223.06 lo=220.93 range=213pt atr%=38.7 spread=29.8pt (live 31pt) cost%=14.0 (range/ATR outside band)
+CS	0	15:22:45.092	CycleORB (NVDA,M5)	2026.09.25 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.094	CycleORB (NVDA,M5)	2026.09.25 14:30:00   [CycleORB] SKIP NY 2026.09.25 13:30 hi=226.76 lo=224.53 range=223pt atr%=41.5 spread=29.4pt (live 31pt) cost%=13.2 (cost too high vs range)
+CS	0	15:22:45.112	CycleORB (NVDA,M5)	2026.09.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.114	CycleORB (NVDA,M5)	2026.09.28 14:30:00   [CycleORB] RANGE NY 2026.09.28 13:30 hi=233.01 lo=229.97 range=304pt atr%=58.6 spread=29.5pt (live 32pt) cost%=9.7 buffer=30pt risk=105.91
+CS	0	15:22:45.114	Trade	2026.09.28 14:30:00   buy stop 31.71 NVDA at 233.31 sl: 229.97 tp: 238.32 (231.08 / 231.40)
+CS	0	15:22:45.114	CycleORB (NVDA,M5)	2026.09.28 14:30:00   CTrade::OrderSend: buy stop 31.71 NVDA at 233.31 sl: 229.97 tp: 238.32 [done]
+CS	0	15:22:45.114	CycleORB (NVDA,M5)	2026.09.28 14:30:00   [CycleORB] PLACE BUY_STOP lots=31.71 @233.31 sl=229.97 tp=238.32 magic=26110402 retcode=10009
+CS	0	15:22:45.114	Trade	2026.09.28 14:30:00   sell stop 31.71 NVDA at 229.67 sl: 233.01 tp: 224.66 (231.08 / 231.40)
+CS	0	15:22:45.114	CycleORB (NVDA,M5)	2026.09.28 14:30:00   CTrade::OrderSend: sell stop 31.71 NVDA at 229.67 sl: 233.01 tp: 224.66 [done]
+CS	0	15:22:45.114	CycleORB (NVDA,M5)	2026.09.28 14:30:00   [CycleORB] PLACE SELL_STOP lots=31.71 @229.67 sl=233.01 tp=224.66 magic=26110402 retcode=10009
+CS	0	15:22:45.116	Trade	2026.09.28 14:45:07   order [#107 sell stop 31.71 NVDA at 229.67] triggered
+CS	0	15:22:45.116	Trades	2026.09.28 14:45:07   deal #46 sell 31.71 NVDA at 229.67 done (based on order #107)
+CS	0	15:22:45.116	Trade	2026.09.28 14:45:07   deal performed [#46 sell 31.71 NVDA at 229.67]
+CS	0	15:22:45.116	Trade	2026.09.28 14:45:07   order performed sell 31.71 at 229.67 [#107 sell stop 31.71 NVDA at 229.67]
+CS	0	15:22:45.116	Trade	2026.09.28 14:45:07   order canceled [#106 buy stop 31.71 NVDA at 233.31]
+CS	0	15:22:45.116	CycleORB (NVDA,M5)	2026.09.28 14:45:07   CTrade::OrderSend: cancel #106 [done]
+CS	0	15:22:45.116	CycleORB (NVDA,M5)	2026.09.28 14:45:07   [CycleORB] DELETE order #106 magic=26110402 (NY OCO)
+CS	0	15:22:45.148	Trade	2026.09.28 19:50:00   market buy 31.71 NVDA, close #107 (228.45 / 228.84)
+CS	0	15:22:45.148	Trades	2026.09.28 19:50:00   deal #47 buy 31.71 NVDA at 228.84 done (based on order #108)
+CS	0	15:22:45.148	Trade	2026.09.28 19:50:00   deal performed [#47 buy 31.71 NVDA at 228.84]
+CS	0	15:22:45.148	Trade	2026.09.28 19:50:00   order performed buy 31.71 at 228.84 [#108 buy 31.71 NVDA at 228.84]
+CS	0	15:22:45.149	CycleORB (NVDA,M5)	2026.09.28 19:50:00   CTrade::OrderSend: market buy 31.71 position #107 NVDA [done at 228.84]
+CS	0	15:22:45.149	CycleORB (NVDA,M5)	2026.09.28 19:50:00   [CycleORB] CLOSE position #107 magic=26110402 (NY time exit)
+CS	0	15:22:45.152	CycleORB (NVDA,M5)	2026.09.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.154	CycleORB (NVDA,M5)	2026.09.29 14:30:00   [CycleORB] RANGE NY 2026.09.29 13:30 hi=232.63 lo=229.41 range=322pt atr%=62.8 spread=30.0pt (live 30pt) cost%=9.3 buffer=30pt risk=105.91
+CS	0	15:22:45.154	Trade	2026.09.29 14:30:00   buy stop 30.08 NVDA at 232.93 sl: 229.41 tp: 238.21 (230.33 / 230.63)
+CS	0	15:22:45.154	CycleORB (NVDA,M5)	2026.09.29 14:30:00   CTrade::OrderSend: buy stop 30.08 NVDA at 232.93 sl: 229.41 tp: 238.21 [done]
+CS	0	15:22:45.154	CycleORB (NVDA,M5)	2026.09.29 14:30:00   [CycleORB] PLACE BUY_STOP lots=30.08 @232.93 sl=229.41 tp=238.21 magic=26110402 retcode=10009
+CS	0	15:22:45.154	Trade	2026.09.29 14:30:00   sell stop 30.08 NVDA at 229.11 sl: 232.63 tp: 223.83 (230.33 / 230.63)
+CS	0	15:22:45.154	CycleORB (NVDA,M5)	2026.09.29 14:30:00   CTrade::OrderSend: sell stop 30.08 NVDA at 229.11 sl: 232.63 tp: 223.83 [done]
+CS	0	15:22:45.154	CycleORB (NVDA,M5)	2026.09.29 14:30:00   [CycleORB] PLACE SELL_STOP lots=30.08 @229.11 sl=232.63 tp=223.83 magic=26110402 retcode=10009
+CS	0	15:22:45.168	Trade	2026.09.29 17:01:05   order [#110 sell stop 30.08 NVDA at 229.11] triggered
+CS	0	15:22:45.168	Trades	2026.09.29 17:01:05   deal #48 sell 30.08 NVDA at 229.11 done (based on order #110)
+CS	0	15:22:45.168	Trade	2026.09.29 17:01:05   deal performed [#48 sell 30.08 NVDA at 229.11]
+CS	0	15:22:45.168	Trade	2026.09.29 17:01:05   order performed sell 30.08 at 229.11 [#110 sell stop 30.08 NVDA at 229.11]
+CS	0	15:22:45.168	Trade	2026.09.29 17:01:05   order canceled [#109 buy stop 30.08 NVDA at 232.93]
+CS	0	15:22:45.168	CycleORB (NVDA,M5)	2026.09.29 17:01:05   CTrade::OrderSend: cancel #109 [done]
+CS	0	15:22:45.168	CycleORB (NVDA,M5)	2026.09.29 17:01:05   [CycleORB] DELETE order #109 magic=26110402 (NY OCO)
+CS	0	15:22:45.183	Trade	2026.09.29 19:50:00   market buy 30.08 NVDA, close #110 (227.75 / 228.07)
+CS	0	15:22:45.183	Trades	2026.09.29 19:50:00   deal #49 buy 30.08 NVDA at 228.07 done (based on order #111)
+CS	0	15:22:45.183	Trade	2026.09.29 19:50:00   deal performed [#49 buy 30.08 NVDA at 228.07]
+CS	0	15:22:45.183	Trade	2026.09.29 19:50:00   order performed buy 30.08 at 228.07 [#111 buy 30.08 NVDA at 228.07]
+CS	0	15:22:45.183	CycleORB (NVDA,M5)	2026.09.29 19:50:00   CTrade::OrderSend: market buy 30.08 position #110 NVDA [done at 228.07]
+CS	0	15:22:45.183	CycleORB (NVDA,M5)	2026.09.29 19:50:00   [CycleORB] CLOSE position #110 magic=26110402 (NY time exit)
+CS	0	15:22:45.188	CycleORB (NVDA,M5)	2026.09.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.190	CycleORB (NVDA,M5)	2026.09.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:45.204	CycleORB (NVDA,M5)	2026.10.01 13:30:30   [CycleORB] CYCLE_END 202609 capital=10591.48 realized=113.75 floating=0.00 pnl=1.07% peak=1.14% state=ACTIVE 
+CS	0	15:22:45.204	CycleORB (NVDA,M5)	2026.10.01 13:30:30   [CycleORB] CYCLE_BEGIN 202610 capital=10705.23 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:22:45.207	CycleORB (NVDA,M5)	2026.10.01 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.208	CycleORB (NVDA,M5)	2026.10.01 14:30:00   [CycleORB] RANGE NY 2026.10.01 13:30 hi=231.76 lo=228.24 range=352pt atr%=67.0 spread=30.0pt (live 32pt) cost%=8.5 buffer=30pt risk=107.05
+CS	0	15:22:45.209	Trade	2026.10.01 14:30:00   buy stop 28.02 NVDA at 232.06 sl: 228.24 tp: 237.79 (229.68 / 230.00)
+CS	0	15:22:45.209	CycleORB (NVDA,M5)	2026.10.01 14:30:00   CTrade::OrderSend: buy stop 28.02 NVDA at 232.06 sl: 228.24 tp: 237.79 [done]
+CS	0	15:22:45.209	CycleORB (NVDA,M5)	2026.10.01 14:30:00   [CycleORB] PLACE BUY_STOP lots=28.02 @232.06 sl=228.24 tp=237.79 magic=26110402 retcode=10009
+CS	0	15:22:45.209	Trade	2026.10.01 14:30:00   sell stop 28.02 NVDA at 227.94 sl: 231.76 tp: 222.21 (229.68 / 230.00)
+CS	0	15:22:45.209	CycleORB (NVDA,M5)	2026.10.01 14:30:00   CTrade::OrderSend: sell stop 28.02 NVDA at 227.94 sl: 231.76 tp: 222.21 [done]
+CS	0	15:22:45.209	CycleORB (NVDA,M5)	2026.10.01 14:30:00   [CycleORB] PLACE SELL_STOP lots=28.02 @227.94 sl=231.76 tp=222.21 magic=26110402 retcode=10009
+CS	0	15:22:45.227	Trade	2026.10.01 17:30:00   order canceled [#113 sell stop 28.02 NVDA at 227.94]
+CS	0	15:22:45.227	CycleORB (NVDA,M5)	2026.10.01 17:30:00   CTrade::OrderSend: cancel #113 [done]
+CS	0	15:22:45.227	CycleORB (NVDA,M5)	2026.10.01 17:30:00   [CycleORB] DELETE order #113 magic=26110402 (NY entry window closed)
+CS	0	15:22:45.227	Trade	2026.10.01 17:30:00   order canceled [#112 buy stop 28.02 NVDA at 232.06]
+CS	0	15:22:45.227	CycleORB (NVDA,M5)	2026.10.01 17:30:00   CTrade::OrderSend: cancel #112 [done]
+CS	0	15:22:45.227	CycleORB (NVDA,M5)	2026.10.01 17:30:00   [CycleORB] DELETE order #112 magic=26110402 (NY entry window closed)
+CS	0	15:22:45.237	CycleORB (NVDA,M5)	2026.10.02 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.239	CycleORB (NVDA,M5)	2026.10.02 14:30:00   [CycleORB] RANGE NY 2026.10.02 13:30 hi=237.41 lo=234.37 range=304pt atr%=57.6 spread=29.2pt (live 30pt) cost%=9.6 buffer=29pt risk=107.05
+CS	0	15:22:45.239	Trade	2026.10.02 14:30:00   buy stop 32.14 NVDA at 237.70 sl: 234.37 tp: 242.69 (237.28 / 237.58)
+CS	0	15:22:45.239	CycleORB (NVDA,M5)	2026.10.02 14:30:00   CTrade::OrderSend: buy stop 32.14 NVDA at 237.70 sl: 234.37 tp: 242.69 [done]
+CS	0	15:22:45.239	CycleORB (NVDA,M5)	2026.10.02 14:30:00   [CycleORB] PLACE BUY_STOP lots=32.14 @237.70 sl=234.37 tp=242.69 magic=26110402 retcode=10009
+CS	0	15:22:45.239	Trade	2026.10.02 14:30:00   sell stop 32.14 NVDA at 234.08 sl: 237.41 tp: 229.09 (237.28 / 237.58)
+CS	0	15:22:45.240	CycleORB (NVDA,M5)	2026.10.02 14:30:00   CTrade::OrderSend: sell stop 32.14 NVDA at 234.08 sl: 237.41 tp: 229.09 [done]
+CS	0	15:22:45.240	CycleORB (NVDA,M5)	2026.10.02 14:30:00   [CycleORB] PLACE SELL_STOP lots=32.14 @234.08 sl=237.41 tp=229.09 magic=26110402 retcode=10009
+CS	0	15:22:45.254	Trade	2026.10.02 17:27:25   order [#115 sell stop 32.14 NVDA at 234.08] triggered
+CS	0	15:22:45.254	Trades	2026.10.02 17:27:25   deal #50 sell 32.14 NVDA at 234.08 done (based on order #115)
+CS	0	15:22:45.254	Trade	2026.10.02 17:27:25   deal performed [#50 sell 32.14 NVDA at 234.08]
+CS	0	15:22:45.254	Trade	2026.10.02 17:27:25   order performed sell 32.14 at 234.08 [#115 sell stop 32.14 NVDA at 234.08]
+CS	0	15:22:45.254	Trade	2026.10.02 17:27:25   order canceled [#114 buy stop 32.14 NVDA at 237.70]
+CS	0	15:22:45.254	CycleORB (NVDA,M5)	2026.10.02 17:27:25   CTrade::OrderSend: cancel #114 [done]
+CS	0	15:22:45.254	CycleORB (NVDA,M5)	2026.10.02 17:27:25   [CycleORB] DELETE order #114 magic=26110402 (NY OCO)
+CS	0	15:22:45.263	Trade	2026.10.02 19:50:00   market buy 32.14 NVDA, close #115 (234.31 / 234.69)
+CS	0	15:22:45.263	Trades	2026.10.02 19:50:00   deal #51 buy 32.14 NVDA at 234.69 done (based on order #116)
+CS	0	15:22:45.263	Trade	2026.10.02 19:50:00   deal performed [#51 buy 32.14 NVDA at 234.69]
+CS	0	15:22:45.263	Trade	2026.10.02 19:50:00   order performed buy 32.14 at 234.69 [#116 buy 32.14 NVDA at 234.69]
+CS	0	15:22:45.263	CycleORB (NVDA,M5)	2026.10.02 19:50:00   CTrade::OrderSend: market buy 32.14 position #115 NVDA [done at 234.69]
+CS	0	15:22:45.263	CycleORB (NVDA,M5)	2026.10.02 19:50:00   [CycleORB] CLOSE position #115 magic=26110402 (NY time exit)
+CS	0	15:22:45.267	CycleORB (NVDA,M5)	2026.10.05 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.268	CycleORB (NVDA,M5)	2026.10.05 14:30:00   [CycleORB] SKIP NY 2026.10.05 13:30 hi=237.71 lo=234.95 range=276pt atr%=54.0 spread=29.3pt (live 29pt) cost%=10.6 (cost too high vs range)
+CS	0	15:22:45.284	CycleORB (NVDA,M5)	2026.10.06 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.286	CycleORB (NVDA,M5)	2026.10.06 14:30:00   [CycleORB] SKIP NY 2026.10.06 13:30 hi=243.20 lo=240.60 range=260pt atr%=48.7 spread=29.2pt (live 30pt) cost%=11.2 (cost too high vs range)
+CS	0	15:22:45.301	CycleORB (NVDA,M5)	2026.10.07 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.302	CycleORB (NVDA,M5)	2026.10.07 14:30:00   [CycleORB] SKIP NY 2026.10.07 13:30 hi=238.73 lo=237.11 range=162pt atr%=30.3 spread=29.5pt (live 29pt) cost%=18.2 (range/ATR outside band)
+CS	0	15:22:45.318	CycleORB (NVDA,M5)	2026.10.08 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.320	CycleORB (NVDA,M5)	2026.10.08 14:30:00   [CycleORB] SKIP NY 2026.10.08 13:30 hi=234.65 lo=233.56 range=109pt atr%=21.3 spread=29.1pt (live 31pt) cost%=26.7 (range/ATR outside band)
+CS	0	15:22:45.345	CycleORB (NVDA,M5)	2026.10.09 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.347	CycleORB (NVDA,M5)	2026.10.09 14:30:01   [CycleORB] SKIP NY 2026.10.09 13:30 hi=232.61 lo=230.50 range=211pt atr%=39.7 spread=29.1pt (live 29pt) cost%=13.8 (range/ATR outside band)
+CS	0	15:22:45.364	CycleORB (NVDA,M5)	2026.10.12 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.366	CycleORB (NVDA,M5)	2026.10.12 14:30:01   [CycleORB] SKIP NY 2026.10.12 13:30 hi=228.68 lo=226.78 range=190pt atr%=37.5 spread=29.4pt (live 31pt) cost%=15.5 (range/ATR outside band)
+CS	0	15:22:45.380	CycleORB (NVDA,M5)	2026.10.13 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.382	CycleORB (NVDA,M5)	2026.10.13 14:30:01   [CycleORB] SKIP NY 2026.10.13 13:30 hi=225.48 lo=222.89 range=259pt atr%=50.1 spread=29.3pt (live 31pt) cost%=11.3 (cost too high vs range)
+CS	0	15:22:45.399	CycleORB (NVDA,M5)	2026.10.14 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.401	CycleORB (NVDA,M5)	2026.10.14 14:30:00   [CycleORB] SKIP NY 2026.10.14 13:30 hi=225.84 lo=224.07 range=177pt atr%=33.9 spread=29.3pt (live 30pt) cost%=16.6 (range/ATR outside band)
+CS	0	15:22:45.429	CycleORB (NVDA,M5)	2026.10.15 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.432	CycleORB (NVDA,M5)	2026.10.15 14:30:00   [CycleORB] RANGE NY 2026.10.15 13:30 hi=215.80 lo=212.70 range=310pt atr%=55.9 spread=29.2pt (live 31pt) cost%=9.4 buffer=29pt risk=107.05
+CS	0	15:22:45.432	CycleORB (NVDA,M5)	2026.10.15 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:45.432	Trade	2026.10.15 14:30:00   sell stop 31.57 NVDA at 212.41 sl: 215.80 tp: 207.33 (215.94 / 216.25)
+CS	0	15:22:45.432	CycleORB (NVDA,M5)	2026.10.15 14:30:00   CTrade::OrderSend: sell stop 31.57 NVDA at 212.41 sl: 215.80 tp: 207.33 [done]
+CS	0	15:22:45.432	CycleORB (NVDA,M5)	2026.10.15 14:30:00   [CycleORB] PLACE SELL_STOP lots=31.57 @212.41 sl=215.80 tp=207.33 magic=26110402 retcode=10009
+CS	0	15:22:45.450	Trade	2026.10.15 17:30:00   order canceled [#117 sell stop 31.57 NVDA at 212.41]
+CS	0	15:22:45.450	CycleORB (NVDA,M5)	2026.10.15 17:30:00   CTrade::OrderSend: cancel #117 [done]
+CS	0	15:22:45.450	CycleORB (NVDA,M5)	2026.10.15 17:30:00   [CycleORB] DELETE order #117 magic=26110402 (NY entry window closed)
+CS	0	15:22:45.461	CycleORB (NVDA,M5)	2026.10.16 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.463	CycleORB (NVDA,M5)	2026.10.16 14:30:00   [CycleORB] SKIP NY 2026.10.16 13:30 hi=216.61 lo=214.88 range=173pt atr%=29.4 spread=29.5pt (live 32pt) cost%=17.1 (range/ATR outside band)
+CS	0	15:22:45.486	CycleORB (NVDA,M5)	2026.10.19 14:10:35   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.487	CycleORB (NVDA,M5)	2026.10.19 14:30:00   [CycleORB] SKIP NY: only -1 M1 bars in range window
+CS	0	15:22:45.502	CycleORB (NVDA,M5)	2026.10.20 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.506	CycleORB (NVDA,M5)	2026.10.20 14:30:00   [CycleORB] RANGE NY 2026.10.20 13:30 hi=215.72 lo=212.62 range=310pt atr%=54.6 spread=29.9pt (live 33pt) cost%=9.7 buffer=30pt risk=107.05
+CS	0	15:22:45.506	CycleORB (NVDA,M5)	2026.10.20 14:30:00   [CycleORB] SKIP NY BUY: price already at/through entry
+CS	0	15:22:45.506	Trade	2026.10.20 14:30:00   sell stop 31.48 NVDA at 212.32 sl: 215.72 tp: 207.22 (217.87 / 218.20)
+CS	0	15:22:45.506	CycleORB (NVDA,M5)	2026.10.20 14:30:00   CTrade::OrderSend: sell stop 31.48 NVDA at 212.32 sl: 215.72 tp: 207.22 [done]
+CS	0	15:22:45.506	CycleORB (NVDA,M5)	2026.10.20 14:30:00   [CycleORB] PLACE SELL_STOP lots=31.48 @212.32 sl=215.72 tp=207.22 magic=26110402 retcode=10009
+CS	0	15:22:45.520	Trade	2026.10.20 17:30:00   order canceled [#118 sell stop 31.48 NVDA at 212.32]
+CS	0	15:22:45.520	CycleORB (NVDA,M5)	2026.10.20 17:30:00   CTrade::OrderSend: cancel #118 [done]
+CS	0	15:22:45.520	CycleORB (NVDA,M5)	2026.10.20 17:30:00   [CycleORB] DELETE order #118 magic=26110402 (NY entry window closed)
+CS	0	15:22:45.529	CycleORB (NVDA,M5)	2026.10.21 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.533	CycleORB (NVDA,M5)	2026.10.21 14:30:00   [CycleORB] SKIP NY 2026.10.21 13:30 hi=221.90 lo=219.38 range=252pt atr%=44.1 spread=29.6pt (live 38pt) cost%=11.8 (cost too high vs range)
+CS	0	15:22:45.552	CycleORB (NVDA,M5)	2026.10.22 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.555	CycleORB (NVDA,M5)	2026.10.22 14:30:00   [CycleORB] RANGE NY 2026.10.22 13:30 hi=218.71 lo=215.52 range=319pt atr%=54.5 spread=29.7pt (live 29pt) cost%=9.3 buffer=30pt risk=107.05
+CS	0	15:22:45.555	Trade	2026.10.22 14:30:00   buy stop 30.67 NVDA at 219.01 sl: 215.52 tp: 224.24 (214.93 / 215.22)
+CS	0	15:22:45.555	CycleORB (NVDA,M5)	2026.10.22 14:30:00   CTrade::OrderSend: buy stop 30.67 NVDA at 219.01 sl: 215.52 tp: 224.24 [done]
+CS	0	15:22:45.555	CycleORB (NVDA,M5)	2026.10.22 14:30:00   [CycleORB] PLACE BUY_STOP lots=30.67 @219.01 sl=215.52 tp=224.24 magic=26110402 retcode=10009
+CS	0	15:22:45.555	CycleORB (NVDA,M5)	2026.10.22 14:30:00   [CycleORB] SKIP NY SELL: price already at/through entry
+CS	0	15:22:45.573	Trade	2026.10.22 17:30:00   order canceled [#119 buy stop 30.67 NVDA at 219.01]
+CS	0	15:22:45.573	CycleORB (NVDA,M5)	2026.10.22 17:30:00   CTrade::OrderSend: cancel #119 [done]
+CS	0	15:22:45.573	CycleORB (NVDA,M5)	2026.10.22 17:30:00   [CycleORB] DELETE order #119 magic=26110402 (NY entry window closed)
+CS	0	15:22:45.591	CycleORB (NVDA,M5)	2026.10.23 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:00   [CycleORB] RANGE NY 2026.10.23 13:30 hi=212.81 lo=209.85 range=296pt atr%=48.4 spread=29.6pt (live 32pt) cost%=10.0 buffer=30pt risk=107.05
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:00   buy stop 32.83 NVDA at 213.11 sl: 209.85 tp: 218.00 (212.73 / 213.05)
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:00   CTrade::OrderSend: buy stop 32.83 NVDA at 213.11 sl: 209.85 tp: 218.00 [done]
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:00   [CycleORB] PLACE BUY_STOP lots=32.83 @213.11 sl=209.85 tp=218.00 magic=26110402 retcode=10009
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:00   sell stop 32.83 NVDA at 209.55 sl: 212.81 tp: 204.66 (212.73 / 213.05)
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:00   CTrade::OrderSend: sell stop 32.83 NVDA at 209.55 sl: 212.81 tp: 204.66 [done]
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:00   [CycleORB] PLACE SELL_STOP lots=32.83 @209.55 sl=212.81 tp=204.66 magic=26110402 retcode=10009
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:02   order [#120 buy stop 32.83 NVDA at 213.11] triggered
+CS	0	15:22:45.593	Trades	2026.10.23 14:30:02   deal #52 buy 32.83 NVDA at 213.11 done (based on order #120)
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:02   deal performed [#52 buy 32.83 NVDA at 213.11]
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:02   order performed buy 32.83 at 213.11 [#120 buy stop 32.83 NVDA at 213.11]
+CS	0	15:22:45.593	Trade	2026.10.23 14:30:02   order canceled [#121 sell stop 32.83 NVDA at 209.55]
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:02   CTrade::OrderSend: cancel #121 [done]
+CS	0	15:22:45.593	CycleORB (NVDA,M5)	2026.10.23 14:30:02   [CycleORB] DELETE order #121 magic=26110402 (NY OCO)
+CS	0	15:22:45.627	Trade	2026.10.23 19:50:00   market sell 32.83 NVDA, close #120 (211.35 / 211.65)
+CS	0	15:22:45.627	Trades	2026.10.23 19:50:00   deal #53 sell 32.83 NVDA at 211.35 done (based on order #122)
+CS	0	15:22:45.627	Trade	2026.10.23 19:50:00   deal performed [#53 sell 32.83 NVDA at 211.35]
+CS	0	15:22:45.627	Trade	2026.10.23 19:50:00   order performed sell 32.83 at 211.35 [#122 sell 32.83 NVDA at 211.35]
+CS	0	15:22:45.627	CycleORB (NVDA,M5)	2026.10.23 19:50:00   CTrade::OrderSend: market sell 32.83 position #120 NVDA [done at 211.35]
+CS	0	15:22:45.627	CycleORB (NVDA,M5)	2026.10.23 19:50:00   [CycleORB] CLOSE position #120 magic=26110402 (NY time exit)
+CS	0	15:22:45.632	CycleORB (NVDA,M5)	2026.10.26 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.634	CycleORB (NVDA,M5)	2026.10.26 14:30:00   [CycleORB] SKIP NY 2026.10.26 13:30 hi=215.82 lo=212.90 range=292pt atr%=49.1 spread=29.8pt (live 31pt) cost%=10.2 (cost too high vs range)
+CS	0	15:22:45.652	CycleORB (NVDA,M5)	2026.10.27 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.654	CycleORB (NVDA,M5)	2026.10.27 14:30:00   [CycleORB] SKIP NY 2026.10.27 13:30 hi=218.33 lo=215.74 range=259pt atr%=42.5 spread=29.4pt (live 32pt) cost%=11.4 (cost too high vs range)
+CS	0	15:22:45.671	CycleORB (NVDA,M5)	2026.10.28 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.673	CycleORB (NVDA,M5)	2026.10.28 14:30:00   [CycleORB] SKIP NY 2026.10.28 13:30 hi=219.67 lo=217.11 range=256pt atr%=41.6 spread=29.3pt (live 30pt) cost%=11.4 (cost too high vs range)
+CS	0	15:22:45.693	CycleORB (NVDA,M5)	2026.10.29 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.696	CycleORB (NVDA,M5)	2026.10.29 14:30:00   [CycleORB] SKIP NY 2026.10.29 13:30 hi=214.53 lo=211.92 range=261pt atr%=43.5 spread=29.6pt (live 32pt) cost%=11.3 (cost too high vs range)
+CS	0	15:22:45.717	CycleORB (NVDA,M5)	2026.10.30 14:00:00   [CycleORB] WAIT NY: trade session closed at range end, placing when it opens (until entry end)
+CS	0	15:22:45.721	CycleORB (NVDA,M5)	2026.10.30 14:30:00   [CycleORB] SKIP NY: last trading day of month
+CS	0	15:22:45.748	Tester	final balance 10627.84 USD
+CS	0	15:22:45.748	CycleORB (NVDA,M5)	2026.10.30 19:59:50   [CycleORB] CYCLE_PARTIAL 202610 capital=10705.23 realized=-77.39 floating=0.00 pnl=-0.72% peak=0.10% state=ACTIVE 
+CS	0	15:22:45.760	Tester	NVDA,M5: 6843776 ticks, 9894 bars generated. Environment synchronized in 0:00:01.026. Test passed in 0:00:04.960 (including ticks preprocessing 0:00:00.750).
+CS	0	15:22:45.760	Tester	NVDA,M5: total time from login to stop testing 0:00:05.986 (including 0:00:01.026 for history data synchronization)
+CS	0	15:22:45.760	Tester	204 Mb memory used including 15 Mb of history data, 192 Mb of tick data
+CS	0	15:22:45.760	Tester	log file "C:\Users\emili\AppData\Roaming\MetaQuotes\Tester\D0E8209F77C8CF37AD8BF550E51FF075\Agent-127.0.0.1-3000\logs\20261103.log" written
+CS	0	15:22:45.763	Tester	test Experts\CycleORB\CycleORB.ex5 on NVDA,M5 thread finished
+CS	0	15:22:46.319	127.0.0.1	tester forced to close
+CS	0	15:22:46.320	127.0.0.1	prepare for shutdown
+CS	0	15:22:46.320	127.0.0.1	stop immediately
+CS	0	15:22:46.320	127.0.0.1	shutdown finished
+CS	0	15:22:46.593	Server	MetaTester 5 stopped

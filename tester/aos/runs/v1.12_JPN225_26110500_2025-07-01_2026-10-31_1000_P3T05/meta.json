@@ -1,0 +1,232 @@
+{
+ "run_id": "v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3T05",
+ "symbol": "JPN225",
+ "version": "1.12",
+ "magic_base": 26110500,
+ "window": [
+  "2025-07-01",
+  "2026-10-31"
+ ],
+ "deposit": 1000.0,
+ "final": 1222.24,
+ "point": 0.01,
+ "usd_per_price_lot": 0.006417279807952866,
+ "n_events": 102,
+ "armed_days": 126,
+ "sides_armed": 252,
+ "sides_lot_min": 0,
+ "counters": {
+  "skip_atr_band_low": 88,
+  "skip_vol_floor": 73,
+  "skip_atr_band_high": 43,
+  "skip_last_day": 16
+ },
+ "closefail_dates": {},
+ "cycles": [
+  {
+   "kind": "END",
+   "month": "202507",
+   "capital": 1000.0,
+   "realized": 54.31,
+   "pnl_pct": 5.43,
+   "peak_pct": 5.43
+  },
+  {
+   "kind": "END",
+   "month": "202508",
+   "capital": 1054.31,
+   "realized": 0.99,
+   "pnl_pct": 0.09,
+   "peak_pct": 0.52
+  },
+  {
+   "kind": "END",
+   "month": "202509",
+   "capital": 1055.3,
+   "realized": -10.62,
+   "pnl_pct": -1.01,
+   "peak_pct": 0.72
+  },
+  {
+   "kind": "END",
+   "month": "202510",
+   "capital": 1044.68,
+   "realized": 0.54,
+   "pnl_pct": 0.05,
+   "peak_pct": 1.12
+  },
+  {
+   "kind": "END",
+   "month": "202511",
+   "capital": 1045.22,
+   "realized": 17.67,
+   "pnl_pct": 1.69,
+   "peak_pct": 2.79
+  },
+  {
+   "kind": "END",
+   "month": "202512",
+   "capital": 1062.89,
+   "realized": 5.55,
+   "pnl_pct": 0.52,
+   "peak_pct": 1.9
+  },
+  {
+   "kind": "END",
+   "month": "202601",
+   "capital": 1068.44,
+   "realized": 4.78,
+   "pnl_pct": 0.45,
+   "peak_pct": 1.11
+  },
+  {
+   "kind": "END",
+   "month": "202602",
+   "capital": 1073.22,
+   "realized": 34.6,
+   "pnl_pct": 3.22,
+   "peak_pct": 4.14
+  },
+  {
+   "kind": "END",
+   "month": "202603",
+   "capital": 1107.82,
+   "realized": 10.75,
+   "pnl_pct": 0.97,
+   "peak_pct": 3.44
+  },
+  {
+   "kind": "END",
+   "month": "202604",
+   "capital": 1118.57,
+   "realized": 8.04,
+   "pnl_pct": 0.72,
+   "peak_pct": 1.35
+  },
+  {
+   "kind": "END",
+   "month": "202605",
+   "capital": 1126.61,
+   "realized": 37.02,
+   "pnl_pct": 3.29,
+   "peak_pct": 3.42
+  },
+  {
+   "kind": "END",
+   "month": "202606",
+   "capital": 1163.63,
+   "realized": 42.47,
+   "pnl_pct": 3.65,
+   "peak_pct": 4.0
+  },
+  {
+   "kind": "END",
+   "month": "202607",
+   "capital": 1206.1,
+   "realized": 16.06,
+   "pnl_pct": 1.33,
+   "peak_pct": 1.33
+  },
+  {
+   "kind": "END",
+   "month": "202608",
+   "capital": 1222.16,
+   "realized": -13.52,
+   "pnl_pct": -1.11,
+   "peak_pct": 0.1
+  },
+  {
+   "kind": "END",
+   "month": "202609",
+   "capital": 1208.64,
+   "realized": -6.41,
+   "pnl_pct": -0.53,
+   "peak_pct": 0.6
+  },
+  {
+   "kind": "PARTIAL",
+   "month": "202610",
+   "capital": 1202.23,
+   "realized": 20.01,
+   "pnl_pct": 1.66,
+   "peak_pct": 3.93
+  }
+ ],
+ "inputs": {
+  "InpServerTZ": "1",
+  "InpServerFixedOffsetH": "0",
+  "InpLonEnable": "false",
+  "InpLonRangeStart": "08:00",
+  "InpLonRangeMinutes": "30",
+  "InpLonEntryEnd": "11:00",
+  "InpLonExit": "16:00",
+  "InpNYEnable": "false",
+  "InpNYRangeStart": "08:00",
+  "InpNYRangeMinutes": "30",
+  "InpNYEntryEnd": "11:30",
+  "InpNYExit": "15:00",
+  "InpTkyEnable": "true",
+  "InpTkyRangeStart": "09:00",
+  "InpTkyRangeMinutes": "60",
+  "InpTkyEntryEnd": "11:30",
+  "InpTkyExit": "15:25",
+  "InpStopMode": "0",
+  "InpTargetR": "1.75",
+  "InpBufferSpreadMult": "2.0",
+  "InpBufferRangePct": "5.0",
+  "InpATRPeriod": "14",
+  "InpMinRangeATRPct": "25.0",
+  "InpMaxRangeATRPct": "60.0",
+  "InpMaxCostRangePct": "10.0",
+  "InpCommissionPoints": "0",
+  "InpMinVolPct": "33.0",
+  "InpVolATRPeriod": "20",
+  "InpVolLookback": "500",
+  "InpTrendSideOnly": "false",
+  "InpTrendMAPeriod": "20",
+  "InpSkipDates": "",
+  "InpCycleCapital": "0.0",
+  "InpSoftHaltPct": "30.0",
+  "InpHardFlattenPct": "38.0",
+  "InpRatchetArmPct": "20.0",
+  "InpRatchetFloorPct": "10.0",
+  "InpRatchetTrail": "0.5",
+  "InpRiskDivisor": "8.0",
+  "InpMaxRiskPct": "1.0",
+  "InpNoEntryLastDay": "true",
+  "InpAosLedger": "true",
+  "InpAosRunTag": "P3T05",
+  "InpAosEventCcy": "JPY,USD",
+  "InpAosCtxSymbols": "SPX500,USDJPY",
+  "InpAosCtxHours": "8",
+  "InpAosLongGate": "0",
+  "InpAosShortGate": "0",
+  "InpAosCtxGateATR": "0.5",
+  "InpAosEventNames": "",
+  "InpAosEventWindow": "0",
+  "InpAosEventSizeMult": "1.0",
+  "InpAosCancelBeforeMin": "0",
+  "InpAosCellAtrMin": "0.0",
+  "InpAosCellAtrMax": "0.0",
+  "InpAosCellMult": "1.0",
+  "InpAosCalendarKill": "false",
+  "InpAosSlipAbortR": "0.0",
+  "InpAosLotGuardPct": "0.0",
+  "InpAosDdLimitPct": "0.0",
+  "InpAosClockRefuse": "false",
+  "InpAosHealthSizing": "true",
+  "InpAosHealthBaseE": "0.203",
+  "InpAosHealthLeakPP": "0.8",
+  "InpAosCompressRiskPct": "0.0",
+  "InpMagicBase": "26110500",
+  "InpSlippagePoints": "3000",
+  "InpMaxLot": "100.0"
+ },
+ "setups": [
+  "TKY"
+ ],
+ "source": {
+  "journal": "C:\\Users\\emili\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\Tester\\logs\\20261106.log",
+  "journal_sha256_16": "3a9dbf19b9ee1100"
+ }
+}

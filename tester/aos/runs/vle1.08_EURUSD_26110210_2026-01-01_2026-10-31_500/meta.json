@@ -1,0 +1,159 @@
+{
+ "run_id": "vle1.08_EURUSD_26110210_2026-01-01_2026-10-31_500",
+ "symbol": "EURUSD",
+ "version": "<=1.08",
+ "magic_base": 26110210,
+ "window": [
+  "2026-01-01",
+  "2026-10-31"
+ ],
+ "deposit": 500.0,
+ "final": 546.14,
+ "point": 1e-05,
+ "usd_per_price_lot": 100000.00000000463,
+ "n_events": 124,
+ "armed_days": 148,
+ "sides_armed": 296,
+ "sides_lot_min": 34,
+ "counters": {
+  "skip_atr_band_low": 57,
+  "skip_lot_min": 34,
+  "skip_last_day": 10,
+  "skip_atr_band_high": 1
+ },
+ "closefail_dates": {},
+ "cycles": [
+  {
+   "kind": "END",
+   "month": "202601",
+   "capital": 500.0,
+   "realized": -12.23,
+   "pnl_pct": -2.45,
+   "peak_pct": 0.33
+  },
+  {
+   "kind": "END",
+   "month": "202602",
+   "capital": 487.77,
+   "realized": -5.31,
+   "pnl_pct": -1.09,
+   "peak_pct": 0.65
+  },
+  {
+   "kind": "END",
+   "month": "202603",
+   "capital": 482.46,
+   "realized": -1.03,
+   "pnl_pct": -0.21,
+   "peak_pct": 1.36
+  },
+  {
+   "kind": "END",
+   "month": "202604",
+   "capital": 481.43,
+   "realized": 4.63,
+   "pnl_pct": 0.96,
+   "peak_pct": 1.17
+  },
+  {
+   "kind": "END",
+   "month": "202605",
+   "capital": 486.06,
+   "realized": 8.61,
+   "pnl_pct": 1.77,
+   "peak_pct": 2.58
+  },
+  {
+   "kind": "END",
+   "month": "202606",
+   "capital": 494.67,
+   "realized": -2.01,
+   "pnl_pct": -0.41,
+   "peak_pct": 0.38
+  },
+  {
+   "kind": "END",
+   "month": "202607",
+   "capital": 492.66,
+   "realized": 24.58,
+   "pnl_pct": 4.99,
+   "peak_pct": 5.54
+  },
+  {
+   "kind": "END",
+   "month": "202608",
+   "capital": 517.24,
+   "realized": 0.74,
+   "pnl_pct": 0.14,
+   "peak_pct": 1.18
+  },
+  {
+   "kind": "END",
+   "month": "202609",
+   "capital": 517.98,
+   "realized": 4.2,
+   "pnl_pct": 0.81,
+   "peak_pct": 1.59
+  },
+  {
+   "kind": "PARTIAL",
+   "month": "202610",
+   "capital": 522.18,
+   "realized": 23.96,
+   "pnl_pct": 4.59,
+   "peak_pct": 5.06
+  }
+ ],
+ "inputs": {
+  "InpServerTZ": "1",
+  "InpServerFixedOffsetH": "0",
+  "InpLonEnable": "true",
+  "InpLonRangeStart": "07:00",
+  "InpLonRangeMinutes": "60",
+  "InpLonEntryEnd": "11:00",
+  "InpLonExit": "14:00",
+  "InpNYEnable": "false",
+  "InpNYRangeStart": "08:00",
+  "InpNYRangeMinutes": "30",
+  "InpNYEntryEnd": "11:30",
+  "InpNYExit": "15:00",
+  "InpTkyEnable": "false",
+  "InpTkyRangeStart": "09:00",
+  "InpTkyRangeMinutes": "60",
+  "InpTkyEntryEnd": "11:30",
+  "InpTkyExit": "15:25",
+  "InpStopMode": "0",
+  "InpTargetR": "3.0",
+  "InpBufferSpreadMult": "2.0",
+  "InpBufferRangePct": "10.0",
+  "InpATRPeriod": "14",
+  "InpMinRangeATRPct": "18.0",
+  "InpMaxRangeATRPct": "100.0",
+  "InpMaxCostRangePct": "20.0",
+  "InpCommissionPoints": "0",
+  "InpMinVolPct": "0.0",
+  "InpVolATRPeriod": "20",
+  "InpVolLookback": "500",
+  "InpTrendSideOnly": "false",
+  "InpTrendMAPeriod": "20",
+  "InpCycleCapital": "0.0",
+  "InpSoftHaltPct": "30.0",
+  "InpHardFlattenPct": "38.0",
+  "InpRatchetArmPct": "20.0",
+  "InpRatchetFloorPct": "10.0",
+  "InpRatchetTrail": "0.5",
+  "InpRiskDivisor": "8.0",
+  "InpMaxRiskPct": "0.5",
+  "InpNoEntryLastDay": "true",
+  "InpMagicBase": "26110210",
+  "InpSlippagePoints": "10",
+  "InpMaxLot": "50.0"
+ },
+ "setups": [
+  "LON"
+ ],
+ "source": {
+  "journal": "C:\\Users\\emili\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\Tester\\logs\\20261105.log",
+  "journal_sha256_16": "2054fb3ed78e18b4"
+ }
+}

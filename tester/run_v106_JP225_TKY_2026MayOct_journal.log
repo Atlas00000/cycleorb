@@ -1,0 +1,1244 @@
+﻿CS	0	15:53:35.075	Tester	JPN225,M5: testing of Experts\CycleORB\CycleORB.ex5 from 2026.05.01 00:00 to 2026.10.31 00:00 started with inputs:
+CS	0	15:53:35.075	Tester	  Server time=
+CS	0	15:53:35.075	Tester	  InpServerTZ=1
+CS	0	15:53:35.075	Tester	  InpServerFixedOffsetH=0
+CS	0	15:53:35.075	Tester	  London setup (London local time)=
+CS	0	15:53:35.076	Tester	  InpLonEnable=false
+CS	0	15:53:35.076	Tester	  InpLonRangeStart=08:00
+CS	0	15:53:35.076	Tester	  InpLonRangeMinutes=30
+CS	0	15:53:35.076	Tester	  InpLonEntryEnd=11:00
+CS	0	15:53:35.076	Tester	  InpLonExit=16:00
+CS	0	15:53:35.076	Tester	  New York setup (New York local time)=
+CS	0	15:53:35.076	Tester	  InpNYEnable=false
+CS	0	15:53:35.076	Tester	  InpNYRangeStart=08:00
+CS	0	15:53:35.076	Tester	  InpNYRangeMinutes=30
+CS	0	15:53:35.076	Tester	  InpNYEntryEnd=11:30
+CS	0	15:53:35.076	Tester	  InpNYExit=15:00
+CS	0	15:53:35.076	Tester	  Tokyo setup (Tokyo local time, JST = UTC+9, no DST)=
+CS	0	15:53:35.076	Tester	  InpTkyEnable=true
+CS	0	15:53:35.076	Tester	  InpTkyRangeStart=09:00
+CS	0	15:53:35.076	Tester	  InpTkyRangeMinutes=60
+CS	0	15:53:35.076	Tester	  InpTkyEntryEnd=11:30
+CS	0	15:53:35.076	Tester	  InpTkyExit=15:25
+CS	0	15:53:35.076	Tester	  Entry / exit=
+CS	0	15:53:35.076	Tester	  InpStopMode=0
+CS	0	15:53:35.076	Tester	  InpTargetR=1.75
+CS	0	15:53:35.076	Tester	  InpBufferSpreadMult=2.0
+CS	0	15:53:35.076	Tester	  InpBufferRangePct=5.0
+CS	0	15:53:35.076	Tester	  Filters=
+CS	0	15:53:35.076	Tester	  InpATRPeriod=14
+CS	0	15:53:35.076	Tester	  InpMinRangeATRPct=25.0
+CS	0	15:53:35.076	Tester	  InpMaxRangeATRPct=60.0
+CS	0	15:53:35.076	Tester	  InpMaxCostRangePct=10.0
+CS	0	15:53:35.076	Tester	  InpCommissionPoints=0
+CS	0	15:53:35.076	Tester	  InpMinVolPct=33.0
+CS	0	15:53:35.076	Tester	  InpVolATRPeriod=20
+CS	0	15:53:35.076	Tester	  InpVolLookback=500
+CS	0	15:53:35.076	Tester	  InpTrendSideOnly=false
+CS	0	15:53:35.076	Tester	  InpTrendMAPeriod=20
+CS	0	15:53:35.076	Tester	  Monthly cycle=
+CS	0	15:53:35.076	Tester	  InpCycleCapital=0.0
+CS	0	15:53:35.076	Tester	  InpSoftHaltPct=30.0
+CS	0	15:53:35.076	Tester	  InpHardFlattenPct=38.0
+CS	0	15:53:35.076	Tester	  InpRatchetArmPct=20.0
+CS	0	15:53:35.076	Tester	  InpRatchetFloorPct=10.0
+CS	0	15:53:35.076	Tester	  InpRatchetTrail=0.5
+CS	0	15:53:35.076	Tester	  InpRiskDivisor=8.0
+CS	0	15:53:35.076	Tester	  InpMaxRiskPct=1.0
+CS	0	15:53:35.076	Tester	  InpNoEntryLastDay=true
+CS	0	15:53:35.076	Tester	  Execution=
+CS	0	15:53:35.076	Tester	  InpMagicBase=26110500
+CS	0	15:53:35.076	Tester	  InpSlippagePoints=3000
+CS	0	15:53:35.076	Tester	  InpMaxLot=100.0
+CS	0	15:53:35.089	CycleORB (JPN225,M5)	2026.05.01 00:00:00   [CycleORB] WARNING built and defaulted for EURUSD, running on JPN225
+CS	0	15:53:35.161	History	JPN225,Daily: history cache allocated for 545 bars and contains 414 bars from 2025.01.01 00:00 to 2026.04.30 00:00
+CS	0	15:53:35.161	History	JPN225,Daily: history begins from 2025.01.01 00:00
+CS	0	15:53:35.250	History	JPN225,H1: history cache allocated for 10961 bars and contains 7824 bars from 2025.01.01 23:00 to 2026.04.30 23:00
+CS	0	15:53:35.250	History	JPN225,H1: history begins from 2025.01.01 23:00
+CS	0	15:53:35.250	CycleORB (JPN225,M5)	2026.05.01 00:00:00   [CycleORB] Clock 2026: UK DST 2026.03.29 -> 2026.10.25 | US DST 2026.03.08 -> 2026.11.01 | server offset now +0h
+CS	0	15:53:35.250	CycleORB (JPN225,M5)	2026.05.01 00:00:00   [CycleORB] CYCLE_BEGIN 202605 capital=10000.00 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:53:35.250	CycleORB (JPN225,M5)	2026.05.01 00:00:00   [CycleORB] Init OK JPN225 | magics LON=26110501 NY=26110502 TKY=26110503 | stop=CORB_STOP_OPPOSITE TP=1.75R | volpct>=33.0 | trendside=off(SMA20) | soft=30% hard=38% ratchet arm=20% floor=10% trail=0.50
+CS	0	15:53:42.895	Ticks	JPN225 : real ticks begin from 2025.06.04 00:00:00
+CS	0	15:53:43.133	History	JPN225,M1: history cache allocated for 655878 bars and contains 467649 bars from 2025.01.01 23:01 to 2026.04.30 23:59
+CS	0	15:53:43.167	History	JPN225,M1: 61 bars from 2026.05.01 00:00 to 2026.05.01 01:00 added
+CS	0	15:53:43.167	History	JPN225,M1: history begins from 2025.01.01 23:01
+CS	0	15:53:43.172	CycleORB (JPN225,M5)	2026.05.01 01:00:00   [CycleORB] RANGE TKY 2026.05.01 00:00 hi=59690.25 lo=59358.75 range=33150pt atr%=30.1 spread=1000.0pt (live 1000pt) cost%=3.0 buffer=2000pt risk=100.00 trend=0
+CS	0	15:53:43.172	Symbols	USDJPY: symbol to be synchronized
+CS	0	15:53:43.173	Symbols	USDJPY: symbol synchronized, 3800 bytes of symbol info received
+CS	0	15:53:43.182	History	USDJPY: load 27 bytes of history data to synchronize in 0:00:00.001
+CS	0	15:53:43.182	History	USDJPY: history synchronized from 2023.01.02 to 2026.10.30
+CS	0	15:53:43.183	Ticks	USDJPY: ticks synchronization started
+CS	0	15:53:44.768	Ticks	USDJPY: load 10.33 Mb of tick data to synchronize in 0:00:01.578
+CS	0	15:53:44.769	Ticks	USDJPY: history ticks synchronized from 2026.05.01 to 2026.10.30
+CS	0	15:53:44.795	Trade	2026.05.01 01:00:00   buy stop 44.6 JPN225 at 59710.25 sl: 59358.75 tp: 60325.38 (59507.50 / 59517.50)
+CS	0	15:53:44.795	CycleORB (JPN225,M5)	2026.05.01 01:00:00   CTrade::OrderSend: buy stop 44.60 JPN225 at 59710.25 sl: 59358.75 tp: 60325.38 [done]
+CS	0	15:53:44.795	CycleORB (JPN225,M5)	2026.05.01 01:00:00   [CycleORB] PLACE BUY_STOP lots=44.60 @59710.25 sl=59358.75 tp=60325.38 magic=26110503 retcode=10009
+CS	0	15:53:44.795	Trade	2026.05.01 01:00:00   sell stop 44.6 JPN225 at 59338.75 sl: 59690.25 tp: 58723.63 (59507.50 / 59517.50)
+CS	0	15:53:44.795	CycleORB (JPN225,M5)	2026.05.01 01:00:00   CTrade::OrderSend: sell stop 44.60 JPN225 at 59338.75 sl: 59690.25 tp: 58723.63 [done]
+CS	0	15:53:44.795	CycleORB (JPN225,M5)	2026.05.01 01:00:00   [CycleORB] PLACE SELL_STOP lots=44.60 @59338.75 sl=59690.25 tp=58723.63 magic=26110503 retcode=10009
+CS	0	15:53:47.026	Ticks	USDJPY : real ticks begin from 2026.05.01 00:00:00
+CS	0	15:53:47.130	Trade	2026.05.01 02:05:34   order [#2 buy stop 44.6 JPN225 at 59710.25] triggered
+CS	0	15:53:47.130	Trades	2026.05.01 02:05:34   deal #2 buy 44.6 JPN225 at 59712.00 done (based on order #2)
+CS	0	15:53:47.130	Trade	2026.05.01 02:05:34   deal performed [#2 buy 44.6 JPN225 at 59712.00]
+CS	0	15:53:47.130	Trade	2026.05.01 02:05:34   order performed buy 44.6 at 59712.00 [#2 buy stop 44.6 JPN225 at 59710.25]
+CS	0	15:53:47.130	Trade	2026.05.01 02:05:34   order canceled [#3 sell stop 44.6 JPN225 at 59338.75]
+CS	0	15:53:47.130	CycleORB (JPN225,M5)	2026.05.01 02:05:34   CTrade::OrderSend: cancel #3 [done]
+CS	0	15:53:47.130	CycleORB (JPN225,M5)	2026.05.01 02:05:34   [CycleORB] DELETE order #3 magic=26110503 (TKY OCO)
+CS	0	15:53:47.204	Trade	2026.05.01 06:25:00   market sell 44.6 JPN225, close #2 (59487.50 / 59501.50)
+CS	0	15:53:47.204	Trades	2026.05.01 06:25:00   deal #3 sell 44.6 JPN225 at 59487.50 done (based on order #4)
+CS	0	15:53:47.204	Trade	2026.05.01 06:25:00   deal performed [#3 sell 44.6 JPN225 at 59487.50]
+CS	0	15:53:47.204	Trade	2026.05.01 06:25:00   order performed sell 44.6 at 59487.50 [#4 sell 44.6 JPN225 at 59487.50]
+CS	0	15:53:47.205	CycleORB (JPN225,M5)	2026.05.01 06:25:00   CTrade::OrderSend: market sell 44.60 position #2 JPN225 [done at 59487.50]
+CS	0	15:53:47.205	CycleORB (JPN225,M5)	2026.05.01 06:25:00   [CycleORB] CLOSE position #2 magic=26110503 (TKY time exit)
+CS	0	15:53:47.393	CycleORB (JPN225,M5)	2026.05.04 01:00:00   [CycleORB] RANGE TKY 2026.05.04 00:00 hi=59694.75 lo=59307.50 range=38725pt atr%=36.8 spread=1000.0pt (live 1000pt) cost%=2.6 buffer=2000pt risk=100.00 trend=0
+CS	0	15:53:47.393	Trade	2026.05.04 01:00:00   buy stop 38.6 JPN225 at 59714.75 sl: 59307.50 tp: 60427.44 (59667.50 / 59677.50)
+CS	0	15:53:47.393	CycleORB (JPN225,M5)	2026.05.04 01:00:00   CTrade::OrderSend: buy stop 38.60 JPN225 at 59714.75 sl: 59307.50 tp: 60427.44 [done]
+CS	0	15:53:47.393	CycleORB (JPN225,M5)	2026.05.04 01:00:00   [CycleORB] PLACE BUY_STOP lots=38.60 @59714.75 sl=59307.50 tp=60427.44 magic=26110503 retcode=10009
+CS	0	15:53:47.393	Trade	2026.05.04 01:00:00   sell stop 38.6 JPN225 at 59287.50 sl: 59694.75 tp: 58574.81 (59667.50 / 59677.50)
+CS	0	15:53:47.393	CycleORB (JPN225,M5)	2026.05.04 01:00:00   CTrade::OrderSend: sell stop 38.60 JPN225 at 59287.50 sl: 59694.75 tp: 58574.81 [done]
+CS	0	15:53:47.393	CycleORB (JPN225,M5)	2026.05.04 01:00:00   [CycleORB] PLACE SELL_STOP lots=38.60 @59287.50 sl=59694.75 tp=58574.81 magic=26110503 retcode=10009
+CS	0	15:53:47.398	Trade	2026.05.04 01:14:16   order [#5 buy stop 38.6 JPN225 at 59714.75] triggered
+CS	0	15:53:47.398	Trades	2026.05.04 01:14:16   deal #4 buy 38.6 JPN225 at 59716.25 done (based on order #5)
+CS	0	15:53:47.398	Trade	2026.05.04 01:14:16   deal performed [#4 buy 38.6 JPN225 at 59716.25]
+CS	0	15:53:47.398	Trade	2026.05.04 01:14:16   order performed buy 38.6 at 59716.25 [#5 buy stop 38.6 JPN225 at 59714.75]
+CS	0	15:53:47.398	Trade	2026.05.04 01:14:16   order canceled [#6 sell stop 38.6 JPN225 at 59287.50]
+CS	0	15:53:47.398	CycleORB (JPN225,M5)	2026.05.04 01:14:16   CTrade::OrderSend: cancel #6 [done]
+CS	0	15:53:47.398	CycleORB (JPN225,M5)	2026.05.04 01:14:16   [CycleORB] DELETE order #6 magic=26110503 (TKY OCO)
+CS	0	15:53:47.489	Trade	2026.05.04 06:25:00   market sell 38.6 JPN225, close #5 (59902.00 / 59916.00)
+CS	0	15:53:47.489	Trades	2026.05.04 06:25:00   deal #5 sell 38.6 JPN225 at 59902.00 done (based on order #7)
+CS	0	15:53:47.489	Trade	2026.05.04 06:25:00   deal performed [#5 sell 38.6 JPN225 at 59902.00]
+CS	0	15:53:47.489	Trade	2026.05.04 06:25:00   order performed sell 38.6 at 59902.00 [#7 sell 38.6 JPN225 at 59902.00]
+CS	0	15:53:47.489	CycleORB (JPN225,M5)	2026.05.04 06:25:00   CTrade::OrderSend: market sell 38.60 position #5 JPN225 [done at 59902.00]
+CS	0	15:53:47.489	CycleORB (JPN225,M5)	2026.05.04 06:25:00   [CycleORB] CLOSE position #5 magic=26110503 (TKY time exit)
+CS	0	15:53:47.785	CycleORB (JPN225,M5)	2026.05.05 01:00:00   [CycleORB] SKIP TKY 2026.05.05 00:00 hi=59495.00 lo=59268.50 range=22650pt atr%=22.4 spread=1000.0pt (live 1000pt) cost%=4.4 (range/ATR outside band)
+CS	0	15:53:48.073	CycleORB (JPN225,M5)	2026.05.06 01:00:00   [CycleORB] SKIP TKY 2026.05.06 00:00 hi=61391.50 lo=60936.00 range=45550pt atr%=42.1 spread=1000.0pt (live 1000pt) cost%=2.2 volpct=19.0 (H1 vol below regime floor)
+CS	0	15:53:48.398	CycleORB (JPN225,M5)	2026.05.07 01:00:00   [CycleORB] RANGE TKY 2026.05.07 00:00 hi=62189.25 lo=61807.50 range=38175pt atr%=33.9 spread=1000.0pt (live 1000pt) cost%=2.6 buffer=2000pt risk=100.00 trend=0
+CS	0	15:53:48.398	Trade	2026.05.07 01:00:00   buy stop 38.9 JPN225 at 62209.25 sl: 61807.50 tp: 62912.31 (62176.75 / 62186.75)
+CS	0	15:53:48.398	CycleORB (JPN225,M5)	2026.05.07 01:00:00   CTrade::OrderSend: buy stop 38.90 JPN225 at 62209.25 sl: 61807.50 tp: 62912.31 [done]
+CS	0	15:53:48.398	CycleORB (JPN225,M5)	2026.05.07 01:00:00   [CycleORB] PLACE BUY_STOP lots=38.90 @62209.25 sl=61807.50 tp=62912.31 magic=26110503 retcode=10009
+CS	0	15:53:48.398	Trade	2026.05.07 01:00:00   sell stop 38.9 JPN225 at 61787.50 sl: 62189.25 tp: 61084.44 (62176.75 / 62186.75)
+CS	0	15:53:48.398	CycleORB (JPN225,M5)	2026.05.07 01:00:00   CTrade::OrderSend: sell stop 38.90 JPN225 at 61787.50 sl: 62189.25 tp: 61084.44 [done]
+CS	0	15:53:48.398	CycleORB (JPN225,M5)	2026.05.07 01:00:00   [CycleORB] PLACE SELL_STOP lots=38.90 @61787.50 sl=62189.25 tp=61084.44 magic=26110503 retcode=10009
+CS	0	15:53:48.400	Trade	2026.05.07 01:06:48   order [#8 buy stop 38.9 JPN225 at 62209.25] triggered
+CS	0	15:53:48.400	Trades	2026.05.07 01:06:48   deal #6 buy 38.9 JPN225 at 62211.25 done (based on order #8)
+CS	0	15:53:48.400	Trade	2026.05.07 01:06:48   deal performed [#6 buy 38.9 JPN225 at 62211.25]
+CS	0	15:53:48.400	Trade	2026.05.07 01:06:48   order performed buy 38.9 at 62211.25 [#8 buy stop 38.9 JPN225 at 62209.25]
+CS	0	15:53:48.400	Trade	2026.05.07 01:06:48   order canceled [#9 sell stop 38.9 JPN225 at 61787.50]
+CS	0	15:53:48.400	CycleORB (JPN225,M5)	2026.05.07 01:06:48   CTrade::OrderSend: cancel #9 [done]
+CS	0	15:53:48.400	CycleORB (JPN225,M5)	2026.05.07 01:06:48   [CycleORB] DELETE order #9 magic=26110503 (TKY OCO)
+CS	0	15:53:48.434	Trade	2026.05.07 02:21:09   take profit triggered #8 buy 38.9 JPN225 62211.25 sl: 61807.50 tp: 62912.31 [#10 sell 38.9 JPN225 at 62912.31]
+CS	0	15:53:48.434	Trades	2026.05.07 02:21:09   deal #7 sell 38.9 JPN225 at 62912.50 done (based on order #10)
+CS	0	15:53:48.434	Trade	2026.05.07 02:21:09   deal performed [#7 sell 38.9 JPN225 at 62912.50]
+CS	0	15:53:48.434	Trade	2026.05.07 02:21:09   order performed sell 38.9 at 62912.50 [#10 sell 38.9 JPN225 at 62912.31]
+CS	0	15:53:48.740	CycleORB (JPN225,M5)	2026.05.08 01:00:00   [CycleORB] RANGE TKY 2026.05.08 00:00 hi=62708.50 lo=62296.25 range=41225pt atr%=36.3 spread=1000.0pt (live 1000pt) cost%=2.4 buffer=2061pt risk=100.00 trend=0
+CS	0	15:53:48.740	Trade	2026.05.08 01:00:00   buy stop 36.2 JPN225 at 62729.11 sl: 62296.25 tp: 63486.62 (62590.75 / 62600.75)
+CS	0	15:53:48.740	CycleORB (JPN225,M5)	2026.05.08 01:00:00   CTrade::OrderSend: buy stop 36.20 JPN225 at 62729.11 sl: 62296.25 tp: 63486.62 [done]
+CS	0	15:53:48.740	CycleORB (JPN225,M5)	2026.05.08 01:00:00   [CycleORB] PLACE BUY_STOP lots=36.20 @62729.11 sl=62296.25 tp=63486.62 magic=26110503 retcode=10009
+CS	0	15:53:48.740	Trade	2026.05.08 01:00:00   sell stop 36.2 JPN225 at 62275.64 sl: 62708.50 tp: 61518.13 (62590.75 / 62600.75)
+CS	0	15:53:48.740	CycleORB (JPN225,M5)	2026.05.08 01:00:00   CTrade::OrderSend: sell stop 36.20 JPN225 at 62275.64 sl: 62708.50 tp: 61518.13 [done]
+CS	0	15:53:48.740	CycleORB (JPN225,M5)	2026.05.08 01:00:00   [CycleORB] PLACE SELL_STOP lots=36.20 @62275.64 sl=62708.50 tp=61518.13 magic=26110503 retcode=10009
+CS	0	15:53:48.747	Trade	2026.05.08 01:11:25   order [#11 buy stop 36.2 JPN225 at 62729.11] triggered
+CS	0	15:53:48.747	Trades	2026.05.08 01:11:25   deal #8 buy 36.2 JPN225 at 62729.25 done (based on order #11)
+CS	0	15:53:48.747	Trade	2026.05.08 01:11:25   deal performed [#8 buy 36.2 JPN225 at 62729.25]
+CS	0	15:53:48.747	Trade	2026.05.08 01:11:25   order performed buy 36.2 at 62729.25 [#11 buy stop 36.2 JPN225 at 62729.11]
+CS	0	15:53:48.747	Trade	2026.05.08 01:11:25   order canceled [#12 sell stop 36.2 JPN225 at 62275.64]
+CS	0	15:53:48.747	CycleORB (JPN225,M5)	2026.05.08 01:11:25   CTrade::OrderSend: cancel #12 [done]
+CS	0	15:53:48.747	CycleORB (JPN225,M5)	2026.05.08 01:11:25   [CycleORB] DELETE order #12 magic=26110503 (TKY OCO)
+CS	0	15:53:48.770	Trade	2026.05.08 02:12:23   stop loss triggered #11 buy 36.2 JPN225 62729.25 sl: 62296.25 tp: 63486.62 [#13 sell 36.2 JPN225 at 62296.25]
+CS	0	15:53:48.770	Trades	2026.05.08 02:12:23   deal #9 sell 36.2 JPN225 at 62294.50 done (based on order #13)
+CS	0	15:53:48.770	Trade	2026.05.08 02:12:23   deal performed [#9 sell 36.2 JPN225 at 62294.50]
+CS	0	15:53:48.770	Trade	2026.05.08 02:12:23   order performed sell 36.2 at 62294.50 [#13 sell 36.2 JPN225 at 62296.25]
+CS	0	15:53:48.998	CycleORB (JPN225,M5)	2026.05.11 01:00:00   [CycleORB] RANGE TKY 2026.05.11 00:00 hi=63464.50 lo=62989.25 range=47525pt atr%=43.6 spread=1000.0pt (live 1000pt) cost%=2.1 buffer=2376pt risk=100.00 trend=0
+CS	0	15:53:48.998	Trade	2026.05.11 01:00:00   buy stop 31.4 JPN225 at 63488.26 sl: 62989.25 tp: 64361.53 (63013.50 / 63023.50)
+CS	0	15:53:48.998	CycleORB (JPN225,M5)	2026.05.11 01:00:00   CTrade::OrderSend: buy stop 31.40 JPN225 at 63488.26 sl: 62989.25 tp: 64361.53 [done]
+CS	0	15:53:48.998	CycleORB (JPN225,M5)	2026.05.11 01:00:00   [CycleORB] PLACE BUY_STOP lots=31.40 @63488.26 sl=62989.25 tp=64361.53 magic=26110503 retcode=10009
+CS	0	15:53:48.998	Trade	2026.05.11 01:00:00   sell stop 31.4 JPN225 at 62965.49 sl: 63464.50 tp: 62092.22 (63013.50 / 63023.50)
+CS	0	15:53:48.998	CycleORB (JPN225,M5)	2026.05.11 01:00:00   CTrade::OrderSend: sell stop 31.40 JPN225 at 62965.49 sl: 63464.50 tp: 62092.22 [done]
+CS	0	15:53:48.998	CycleORB (JPN225,M5)	2026.05.11 01:00:00   [CycleORB] PLACE SELL_STOP lots=31.40 @62965.49 sl=63464.50 tp=62092.22 magic=26110503 retcode=10009
+CS	0	15:53:49.000	Trade	2026.05.11 01:00:24   order [#15 sell stop 31.4 JPN225 at 62965.49] triggered
+CS	0	15:53:49.000	Trades	2026.05.11 01:00:24   deal #10 sell 31.4 JPN225 at 62964.00 done (based on order #15)
+CS	0	15:53:49.000	Trade	2026.05.11 01:00:24   deal performed [#10 sell 31.4 JPN225 at 62964.00]
+CS	0	15:53:49.000	Trade	2026.05.11 01:00:24   order performed sell 31.4 at 62964.00 [#15 sell stop 31.4 JPN225 at 62965.49]
+CS	0	15:53:49.000	Trade	2026.05.11 01:00:24   order canceled [#14 buy stop 31.4 JPN225 at 63488.26]
+CS	0	15:53:49.000	CycleORB (JPN225,M5)	2026.05.11 01:00:24   CTrade::OrderSend: cancel #14 [done]
+CS	0	15:53:49.000	CycleORB (JPN225,M5)	2026.05.11 01:00:24   [CycleORB] DELETE order #14 magic=26110503 (TKY OCO)
+CS	0	15:53:49.125	Trade	2026.05.11 06:25:00   market buy 31.4 JPN225, close #15 (62447.75 / 62457.75)
+CS	0	15:53:49.125	Trades	2026.05.11 06:25:00   deal #11 buy 31.4 JPN225 at 62457.75 done (based on order #16)
+CS	0	15:53:49.125	Trade	2026.05.11 06:25:00   deal performed [#11 buy 31.4 JPN225 at 62457.75]
+CS	0	15:53:49.125	Trade	2026.05.11 06:25:00   order performed buy 31.4 at 62457.75 [#16 buy 31.4 JPN225 at 62457.75]
+CS	0	15:53:49.125	CycleORB (JPN225,M5)	2026.05.11 06:25:00   CTrade::OrderSend: market buy 31.40 position #15 JPN225 [done at 62457.75]
+CS	0	15:53:49.125	CycleORB (JPN225,M5)	2026.05.11 06:25:00   [CycleORB] CLOSE position #15 magic=26110503 (TKY time exit)
+CS	0	15:53:49.266	CycleORB (JPN225,M5)	2026.05.12 01:00:00   [CycleORB] SKIP TKY 2026.05.12 00:00 hi=63202.50 lo=62742.75 range=45975pt atr%=41.3 spread=1000.0pt (live 1000pt) cost%=2.2 volpct=28.0 (H1 vol below regime floor)
+CS	0	15:53:49.472	CycleORB (JPN225,M5)	2026.05.13 01:00:00   [CycleORB] RANGE TKY 2026.05.13 00:00 hi=62720.75 lo=62223.25 range=49750pt atr%=41.9 spread=1000.0pt (live 1000pt) cost%=2.0 buffer=2488pt risk=100.00 trend=0
+CS	0	15:53:49.472	Trade	2026.05.13 01:00:00   buy stop 30.2 JPN225 at 62745.63 sl: 62223.25 tp: 63659.79 (62430.00 / 62440.00)
+CS	0	15:53:49.472	CycleORB (JPN225,M5)	2026.05.13 01:00:00   CTrade::OrderSend: buy stop 30.20 JPN225 at 62745.63 sl: 62223.25 tp: 63659.79 [done]
+CS	0	15:53:49.472	CycleORB (JPN225,M5)	2026.05.13 01:00:00   [CycleORB] PLACE BUY_STOP lots=30.20 @62745.63 sl=62223.25 tp=63659.79 magic=26110503 retcode=10009
+CS	0	15:53:49.472	Trade	2026.05.13 01:00:00   sell stop 30.2 JPN225 at 62198.38 sl: 62720.75 tp: 61284.23 (62430.00 / 62440.00)
+CS	0	15:53:49.472	CycleORB (JPN225,M5)	2026.05.13 01:00:00   CTrade::OrderSend: sell stop 30.20 JPN225 at 62198.38 sl: 62720.75 tp: 61284.23 [done]
+CS	0	15:53:49.472	CycleORB (JPN225,M5)	2026.05.13 01:00:00   [CycleORB] PLACE SELL_STOP lots=30.20 @62198.38 sl=62720.75 tp=61284.23 magic=26110503 retcode=10009
+CS	0	15:53:49.479	Trade	2026.05.13 01:25:31   order [#17 buy stop 30.2 JPN225 at 62745.63] triggered
+CS	0	15:53:49.480	Trades	2026.05.13 01:25:31   deal #12 buy 30.2 JPN225 at 62748.50 done (based on order #17)
+CS	0	15:53:49.480	Trade	2026.05.13 01:25:31   deal performed [#12 buy 30.2 JPN225 at 62748.50]
+CS	0	15:53:49.480	Trade	2026.05.13 01:25:31   order performed buy 30.2 at 62748.50 [#17 buy stop 30.2 JPN225 at 62745.63]
+CS	0	15:53:49.480	Trade	2026.05.13 01:25:31   order canceled [#18 sell stop 30.2 JPN225 at 62198.38]
+CS	0	15:53:49.480	CycleORB (JPN225,M5)	2026.05.13 01:25:31   CTrade::OrderSend: cancel #18 [done]
+CS	0	15:53:49.480	CycleORB (JPN225,M5)	2026.05.13 01:25:31   [CycleORB] DELETE order #18 magic=26110503 (TKY OCO)
+CS	0	15:53:49.579	Trade	2026.05.13 06:25:00   market sell 30.2 JPN225, close #17 (63215.50 / 63229.50)
+CS	0	15:53:49.579	Trades	2026.05.13 06:25:00   deal #13 sell 30.2 JPN225 at 63215.50 done (based on order #19)
+CS	0	15:53:49.579	Trade	2026.05.13 06:25:00   deal performed [#13 sell 30.2 JPN225 at 63215.50]
+CS	0	15:53:49.579	Trade	2026.05.13 06:25:00   order performed sell 30.2 at 63215.50 [#19 sell 30.2 JPN225 at 63215.50]
+CS	0	15:53:49.579	CycleORB (JPN225,M5)	2026.05.13 06:25:00   CTrade::OrderSend: market sell 30.20 position #17 JPN225 [done at 63215.50]
+CS	0	15:53:49.579	CycleORB (JPN225,M5)	2026.05.13 06:25:00   [CycleORB] CLOSE position #17 magic=26110503 (TKY time exit)
+CS	0	15:53:49.685	CycleORB (JPN225,M5)	2026.05.14 01:00:00   [CycleORB] SKIP TKY 2026.05.14 00:00 hi=63787.75 lo=63418.75 range=36900pt atr%=30.8 spread=1000.0pt (live 1000pt) cost%=2.7 volpct=24.0 (H1 vol below regime floor)
+CS	0	15:53:49.827	CycleORB (JPN225,M5)	2026.05.15 01:00:00   [CycleORB] SKIP TKY 2026.05.15 00:00 hi=63203.50 lo=62356.00 range=84750pt atr%=72.0 spread=1000.0pt (live 1000pt) cost%=1.2 (range/ATR outside band)
+CS	0	15:53:50.039	CycleORB (JPN225,M5)	2026.05.18 01:00:00   [CycleORB] SKIP TKY 2026.05.18 00:00 hi=61743.25 lo=60831.50 range=91175pt atr%=74.2 spread=1000.0pt (live 1000pt) cost%=1.1 (range/ATR outside band)
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:00   [CycleORB] RANGE TKY 2026.05.19 00:00 hi=61457.50 lo=60829.00 range=62850pt atr%=49.0 spread=1000.0pt (live 1000pt) cost%=1.6 buffer=3142pt risk=100.00 trend=0
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:00   buy stop 24 JPN225 at 61488.93 sl: 60829.00 tp: 62643.81 (60885.75 / 60895.75)
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:00   CTrade::OrderSend: buy stop 24.00 JPN225 at 61488.93 sl: 60829.00 tp: 62643.81 [done]
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.00 @61488.93 sl=60829.00 tp=62643.81 magic=26110503 retcode=10009
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:00   sell stop 24 JPN225 at 60797.58 sl: 61457.50 tp: 59642.72 (60885.75 / 60895.75)
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:00   CTrade::OrderSend: sell stop 24.00 JPN225 at 60797.58 sl: 61457.50 tp: 59642.72 [done]
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.00 @60797.58 sl=61457.50 tp=59642.72 magic=26110503 retcode=10009
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:08   order [#21 sell stop 24 JPN225 at 60797.58] triggered
+CS	0	15:53:50.217	Trades	2026.05.19 01:00:08   deal #14 sell 24 JPN225 at 60794.00 done (based on order #21)
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:08   deal performed [#14 sell 24 JPN225 at 60794.00]
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:08   order performed sell 24 at 60794.00 [#21 sell stop 24 JPN225 at 60797.58]
+CS	0	15:53:50.217	Trade	2026.05.19 01:00:08   order canceled [#20 buy stop 24 JPN225 at 61488.93]
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:08   CTrade::OrderSend: cancel #20 [done]
+CS	0	15:53:50.217	CycleORB (JPN225,M5)	2026.05.19 01:00:08   [CycleORB] DELETE order #20 magic=26110503 (TKY OCO)
+CS	0	15:53:50.336	Trade	2026.05.19 06:25:00   market buy 24 JPN225, close #21 (60495.75 / 60509.75)
+CS	0	15:53:50.336	Trades	2026.05.19 06:25:00   deal #15 buy 24 JPN225 at 60509.75 done (based on order #22)
+CS	0	15:53:50.336	Trade	2026.05.19 06:25:00   deal performed [#15 buy 24 JPN225 at 60509.75]
+CS	0	15:53:50.336	Trade	2026.05.19 06:25:00   order performed buy 24 at 60509.75 [#22 buy 24 JPN225 at 60509.75]
+CS	0	15:53:50.336	CycleORB (JPN225,M5)	2026.05.19 06:25:00   CTrade::OrderSend: market buy 24.00 position #21 JPN225 [done at 60509.75]
+CS	0	15:53:50.336	CycleORB (JPN225,M5)	2026.05.19 06:25:00   [CycleORB] CLOSE position #21 magic=26110503 (TKY time exit)
+CS	0	15:53:50.474	CycleORB (JPN225,M5)	2026.05.20 01:00:00   [CycleORB] SKIP TKY 2026.05.20 00:00 hi=60426.50 lo=59280.75 range=114575pt atr%=84.3 spread=1000.0pt (live 1000pt) cost%=0.9 (range/ATR outside band)
+CS	0	15:53:50.644	CycleORB (JPN225,M5)	2026.05.21 01:00:00   [CycleORB] RANGE TKY 2026.05.21 00:00 hi=61733.93 lo=61199.37 range=53456pt atr%=36.8 spread=1000.0pt (live 1000pt) cost%=1.9 buffer=2673pt risk=100.00 trend=0
+CS	0	15:53:50.644	Trade	2026.05.21 01:00:00   buy stop 28.3 JPN225 at 61760.66 sl: 61199.37 tp: 62742.92 (61636.25 / 61646.25)
+CS	0	15:53:50.644	CycleORB (JPN225,M5)	2026.05.21 01:00:00   CTrade::OrderSend: buy stop 28.30 JPN225 at 61760.66 sl: 61199.37 tp: 62742.92 [done]
+CS	0	15:53:50.644	CycleORB (JPN225,M5)	2026.05.21 01:00:00   [CycleORB] PLACE BUY_STOP lots=28.30 @61760.66 sl=61199.37 tp=62742.92 magic=26110503 retcode=10009
+CS	0	15:53:50.644	Trade	2026.05.21 01:00:00   sell stop 28.3 JPN225 at 61172.64 sl: 61733.93 tp: 60190.38 (61636.25 / 61646.25)
+CS	0	15:53:50.644	CycleORB (JPN225,M5)	2026.05.21 01:00:00   CTrade::OrderSend: sell stop 28.30 JPN225 at 61172.64 sl: 61733.93 tp: 60190.38 [done]
+CS	0	15:53:50.644	CycleORB (JPN225,M5)	2026.05.21 01:00:00   [CycleORB] PLACE SELL_STOP lots=28.30 @61172.64 sl=61733.93 tp=60190.38 magic=26110503 retcode=10009
+CS	0	15:53:50.645	Trade	2026.05.21 01:01:35   order [#23 buy stop 28.3 JPN225 at 61760.66] triggered
+CS	0	15:53:50.645	Trades	2026.05.21 01:01:35   deal #16 buy 28.3 JPN225 at 61769.64 done (based on order #23)
+CS	0	15:53:50.645	Trade	2026.05.21 01:01:35   deal performed [#16 buy 28.3 JPN225 at 61769.64]
+CS	0	15:53:50.645	Trade	2026.05.21 01:01:35   order performed buy 28.3 at 61769.64 [#23 buy stop 28.3 JPN225 at 61760.66]
+CS	0	15:53:50.645	Trade	2026.05.21 01:01:35   order canceled [#24 sell stop 28.3 JPN225 at 61172.64]
+CS	0	15:53:50.645	CycleORB (JPN225,M5)	2026.05.21 01:01:35   CTrade::OrderSend: cancel #24 [done]
+CS	0	15:53:50.645	CycleORB (JPN225,M5)	2026.05.21 01:01:35   [CycleORB] DELETE order #24 magic=26110503 (TKY OCO)
+CS	0	15:53:50.763	Trade	2026.05.21 06:25:00   market sell 28.3 JPN225, close #23 (61656.03 / 61670.03)
+CS	0	15:53:50.763	Trades	2026.05.21 06:25:00   deal #17 sell 28.3 JPN225 at 61656.03 done (based on order #25)
+CS	0	15:53:50.763	Trade	2026.05.21 06:25:00   deal performed [#17 sell 28.3 JPN225 at 61656.03]
+CS	0	15:53:50.763	Trade	2026.05.21 06:25:00   order performed sell 28.3 at 61656.03 [#25 sell 28.3 JPN225 at 61656.03]
+CS	0	15:53:50.763	CycleORB (JPN225,M5)	2026.05.21 06:25:00   CTrade::OrderSend: market sell 28.30 position #23 JPN225 [done at 61656.03]
+CS	0	15:53:50.763	CycleORB (JPN225,M5)	2026.05.21 06:25:00   [CycleORB] CLOSE position #23 magic=26110503 (TKY time exit)
+CS	0	15:53:50.889	CycleORB (JPN225,M5)	2026.05.22 01:00:00   [CycleORB] RANGE TKY 2026.05.22 00:00 hi=62915.60 lo=62323.03 range=59257pt atr%=41.8 spread=1000.0pt (live 1000pt) cost%=1.7 buffer=2963pt risk=100.00 trend=0
+CS	0	15:53:50.889	Trade	2026.05.22 01:00:00   buy stop 25.5 JPN225 at 62945.23 sl: 62323.03 tp: 64034.08 (62876.76 / 62886.76)
+CS	0	15:53:50.889	CycleORB (JPN225,M5)	2026.05.22 01:00:00   CTrade::OrderSend: buy stop 25.50 JPN225 at 62945.23 sl: 62323.03 tp: 64034.08 [done]
+CS	0	15:53:50.889	CycleORB (JPN225,M5)	2026.05.22 01:00:00   [CycleORB] PLACE BUY_STOP lots=25.50 @62945.23 sl=62323.03 tp=64034.08 magic=26110503 retcode=10009
+CS	0	15:53:50.889	Trade	2026.05.22 01:00:00   sell stop 25.5 JPN225 at 62293.40 sl: 62915.60 tp: 61204.55 (62876.76 / 62886.76)
+CS	0	15:53:50.889	CycleORB (JPN225,M5)	2026.05.22 01:00:00   CTrade::OrderSend: sell stop 25.50 JPN225 at 62293.40 sl: 62915.60 tp: 61204.55 [done]
+CS	0	15:53:50.889	CycleORB (JPN225,M5)	2026.05.22 01:00:00   [CycleORB] PLACE SELL_STOP lots=25.50 @62293.40 sl=62915.60 tp=61204.55 magic=26110503 retcode=10009
+CS	0	15:53:50.891	Trade	2026.05.22 01:06:08   order [#26 buy stop 25.5 JPN225 at 62945.23] triggered
+CS	0	15:53:50.891	Trades	2026.05.22 01:06:08   deal #18 buy 25.5 JPN225 at 62946.75 done (based on order #26)
+CS	0	15:53:50.891	Trade	2026.05.22 01:06:08   deal performed [#18 buy 25.5 JPN225 at 62946.75]
+CS	0	15:53:50.891	Trade	2026.05.22 01:06:08   order performed buy 25.5 at 62946.75 [#26 buy stop 25.5 JPN225 at 62945.23]
+CS	0	15:53:50.891	Trade	2026.05.22 01:06:08   order canceled [#27 sell stop 25.5 JPN225 at 62293.40]
+CS	0	15:53:50.891	CycleORB (JPN225,M5)	2026.05.22 01:06:08   CTrade::OrderSend: cancel #27 [done]
+CS	0	15:53:50.891	CycleORB (JPN225,M5)	2026.05.22 01:06:08   [CycleORB] DELETE order #27 magic=26110503 (TKY OCO)
+CS	0	15:53:50.982	Trade	2026.05.22 06:25:00   market sell 25.5 JPN225, close #26 (63337.42 / 63351.42)
+CS	0	15:53:50.982	Trades	2026.05.22 06:25:00   deal #19 sell 25.5 JPN225 at 63337.42 done (based on order #28)
+CS	0	15:53:50.982	Trade	2026.05.22 06:25:00   deal performed [#19 sell 25.5 JPN225 at 63337.42]
+CS	0	15:53:50.982	Trade	2026.05.22 06:25:00   order performed sell 25.5 at 63337.42 [#28 sell 25.5 JPN225 at 63337.42]
+CS	0	15:53:50.983	CycleORB (JPN225,M5)	2026.05.22 06:25:00   CTrade::OrderSend: market sell 25.50 position #26 JPN225 [done at 63337.42]
+CS	0	15:53:50.983	CycleORB (JPN225,M5)	2026.05.22 06:25:00   [CycleORB] CLOSE position #26 magic=26110503 (TKY time exit)
+CS	0	15:53:51.109	CycleORB (JPN225,M5)	2026.05.25 01:00:00   [CycleORB] SKIP TKY 2026.05.25 00:00 hi=65265.06 lo=63812.55 range=145251pt atr%=105.6 spread=1000.0pt (live 1000pt) cost%=0.7 (range/ATR outside band)
+CS	0	15:53:51.209	CycleORB (JPN225,M5)	2026.05.26 01:00:00   [CycleORB] SKIP TKY 2026.05.26 00:00 hi=65346.50 lo=64591.59 range=75491pt atr%=54.5 spread=1000.0pt (live 1000pt) cost%=1.3 volpct=21.0 (H1 vol below regime floor)
+CS	0	15:53:51.390	CycleORB (JPN225,M5)	2026.05.27 01:00:00   [CycleORB] SKIP TKY 2026.05.27 00:00 hi=66471.27 lo=65576.84 range=89443pt atr%=61.1 spread=1000.0pt (live 1000pt) cost%=1.1 (range/ATR outside band)
+CS	0	15:53:51.617	CycleORB (JPN225,M5)	2026.05.28 01:00:00   [CycleORB] RANGE TKY 2026.05.28 00:00 hi=65154.28 lo=64469.30 range=68498pt atr%=45.3 spread=1000.0pt (live 1000pt) cost%=1.5 buffer=3425pt risk=100.00 trend=0
+CS	0	15:53:51.617	Trade	2026.05.28 01:00:00   buy stop 22.1 JPN225 at 65188.53 sl: 64469.30 tp: 66447.18 (65124.87 / 65134.87)
+CS	0	15:53:51.617	CycleORB (JPN225,M5)	2026.05.28 01:00:00   CTrade::OrderSend: buy stop 22.10 JPN225 at 65188.53 sl: 64469.30 tp: 66447.18 [done]
+CS	0	15:53:51.617	CycleORB (JPN225,M5)	2026.05.28 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.10 @65188.53 sl=64469.30 tp=66447.18 magic=26110503 retcode=10009
+CS	0	15:53:51.617	Trade	2026.05.28 01:00:00   sell stop 22.1 JPN225 at 64435.05 sl: 65154.28 tp: 63176.40 (65124.87 / 65134.87)
+CS	0	15:53:51.617	CycleORB (JPN225,M5)	2026.05.28 01:00:00   CTrade::OrderSend: sell stop 22.10 JPN225 at 64435.05 sl: 65154.28 tp: 63176.40 [done]
+CS	0	15:53:51.617	CycleORB (JPN225,M5)	2026.05.28 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.10 @64435.05 sl=65154.28 tp=63176.40 magic=26110503 retcode=10009
+CS	0	15:53:51.657	Trade	2026.05.28 02:30:00   order canceled [#30 sell stop 22.1 JPN225 at 64435.05]
+CS	0	15:53:51.657	CycleORB (JPN225,M5)	2026.05.28 02:30:00   CTrade::OrderSend: cancel #30 [done]
+CS	0	15:53:51.657	CycleORB (JPN225,M5)	2026.05.28 02:30:00   [CycleORB] DELETE order #30 magic=26110503 (TKY entry window closed)
+CS	0	15:53:51.657	Trade	2026.05.28 02:30:00   order canceled [#29 buy stop 22.1 JPN225 at 65188.53]
+CS	0	15:53:51.657	CycleORB (JPN225,M5)	2026.05.28 02:30:00   CTrade::OrderSend: cancel #29 [done]
+CS	0	15:53:51.657	CycleORB (JPN225,M5)	2026.05.28 02:30:00   [CycleORB] DELETE order #29 magic=26110503 (TKY entry window closed)
+CS	0	15:53:51.905	CycleORB (JPN225,M5)	2026.05.29 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:53:52.227	CycleORB (JPN225,M5)	2026.06.01 00:00:00   [CycleORB] CYCLE_END 202605 capital=10000.00 realized=332.23 floating=0.00 pnl=3.32% peak=3.46% state=ACTIVE 
+CS	0	15:53:52.227	CycleORB (JPN225,M5)	2026.06.01 00:00:00   [CycleORB] CYCLE_BEGIN 202606 capital=10332.23 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:53:52.240	CycleORB (JPN225,M5)	2026.06.01 01:00:00   [CycleORB] RANGE TKY 2026.06.01 00:00 hi=66943.94 lo=66297.12 range=64682pt atr%=43.7 spread=1000.0pt (live 1000pt) cost%=1.5 buffer=3234pt risk=103.32 trend=0
+CS	0	15:53:52.240	Trade	2026.06.01 01:00:00   buy stop 24.2 JPN225 at 66976.28 sl: 66297.12 tp: 68164.81 (66797.55 / 66807.55)
+CS	0	15:53:52.240	CycleORB (JPN225,M5)	2026.06.01 01:00:00   CTrade::OrderSend: buy stop 24.20 JPN225 at 66976.28 sl: 66297.12 tp: 68164.81 [done]
+CS	0	15:53:52.240	CycleORB (JPN225,M5)	2026.06.01 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.20 @66976.28 sl=66297.12 tp=68164.81 magic=26110503 retcode=10009
+CS	0	15:53:52.240	Trade	2026.06.01 01:00:00   sell stop 24.2 JPN225 at 66264.78 sl: 66943.94 tp: 65076.25 (66797.55 / 66807.55)
+CS	0	15:53:52.240	CycleORB (JPN225,M5)	2026.06.01 01:00:00   CTrade::OrderSend: sell stop 24.20 JPN225 at 66264.78 sl: 66943.94 tp: 65076.25 [done]
+CS	0	15:53:52.240	CycleORB (JPN225,M5)	2026.06.01 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.20 @66264.78 sl=66943.94 tp=65076.25 magic=26110503 retcode=10009
+CS	0	15:53:52.244	Trade	2026.06.01 01:09:49   order [#31 buy stop 24.2 JPN225 at 66976.28] triggered
+CS	0	15:53:52.244	Trades	2026.06.01 01:09:49   deal #20 buy 24.2 JPN225 at 66980.25 done (based on order #31)
+CS	0	15:53:52.244	Trade	2026.06.01 01:09:49   deal performed [#20 buy 24.2 JPN225 at 66980.25]
+CS	0	15:53:52.244	Trade	2026.06.01 01:09:49   order performed buy 24.2 at 66980.25 [#31 buy stop 24.2 JPN225 at 66976.28]
+CS	0	15:53:52.244	Trade	2026.06.01 01:09:49   order canceled [#32 sell stop 24.2 JPN225 at 66264.78]
+CS	0	15:53:52.244	CycleORB (JPN225,M5)	2026.06.01 01:09:49   CTrade::OrderSend: cancel #32 [done]
+CS	0	15:53:52.244	CycleORB (JPN225,M5)	2026.06.01 01:09:49   [CycleORB] DELETE order #32 magic=26110503 (TKY OCO)
+CS	0	15:53:52.426	Trade	2026.06.01 06:25:00   market sell 24.2 JPN225, close #31 (66983.23 / 66997.23)
+CS	0	15:53:52.426	Trades	2026.06.01 06:25:00   deal #21 sell 24.2 JPN225 at 66983.23 done (based on order #33)
+CS	0	15:53:52.426	Trade	2026.06.01 06:25:00   deal performed [#21 sell 24.2 JPN225 at 66983.23]
+CS	0	15:53:52.426	Trade	2026.06.01 06:25:00   order performed sell 24.2 at 66983.23 [#33 sell 24.2 JPN225 at 66983.23]
+CS	0	15:53:52.428	CycleORB (JPN225,M5)	2026.06.01 06:25:00   CTrade::OrderSend: market sell 24.20 position #31 JPN225 [done at 66983.23]
+CS	0	15:53:52.428	CycleORB (JPN225,M5)	2026.06.01 06:25:00   [CycleORB] CLOSE position #31 magic=26110503 (TKY time exit)
+CS	0	15:53:52.616	CycleORB (JPN225,M5)	2026.06.02 01:00:00   [CycleORB] SKIP TKY 2026.06.02 00:00 hi=67157.66 lo=65984.02 range=117364pt atr%=83.6 spread=1000.0pt (live 1000pt) cost%=0.9 (range/ATR outside band)
+CS	0	15:53:52.869	CycleORB (JPN225,M5)	2026.06.03 01:00:00   [CycleORB] RANGE TKY 2026.06.03 00:00 hi=68233.91 lo=67405.99 range=82792pt atr%=54.2 spread=1000.0pt (live 1000pt) cost%=1.2 buffer=4140pt risk=103.32 trend=0
+CS	0	15:53:52.869	Trade	2026.06.03 01:00:00   buy stop 19 JPN225 at 68275.31 sl: 67405.99 tp: 69796.62 (68232.26 / 68242.26)
+CS	0	15:53:52.869	CycleORB (JPN225,M5)	2026.06.03 01:00:00   CTrade::OrderSend: buy stop 19.00 JPN225 at 68275.31 sl: 67405.99 tp: 69796.62 [done]
+CS	0	15:53:52.869	CycleORB (JPN225,M5)	2026.06.03 01:00:00   [CycleORB] PLACE BUY_STOP lots=19.00 @68275.31 sl=67405.99 tp=69796.62 magic=26110503 retcode=10009
+CS	0	15:53:52.869	Trade	2026.06.03 01:00:00   sell stop 19 JPN225 at 67364.59 sl: 68233.91 tp: 65843.28 (68232.26 / 68242.26)
+CS	0	15:53:52.869	CycleORB (JPN225,M5)	2026.06.03 01:00:00   CTrade::OrderSend: sell stop 19.00 JPN225 at 67364.59 sl: 68233.91 tp: 65843.28 [done]
+CS	0	15:53:52.869	CycleORB (JPN225,M5)	2026.06.03 01:00:00   [CycleORB] PLACE SELL_STOP lots=19.00 @67364.59 sl=68233.91 tp=65843.28 magic=26110503 retcode=10009
+CS	0	15:53:52.874	Trade	2026.06.03 01:05:42   order [#34 buy stop 19 JPN225 at 68275.31] triggered
+CS	0	15:53:52.874	Trades	2026.06.03 01:05:42   deal #22 buy 19 JPN225 at 68275.51 done (based on order #34)
+CS	0	15:53:52.874	Trade	2026.06.03 01:05:42   deal performed [#22 buy 19 JPN225 at 68275.51]
+CS	0	15:53:52.874	Trade	2026.06.03 01:05:42   order performed buy 19 at 68275.51 [#34 buy stop 19 JPN225 at 68275.31]
+CS	0	15:53:52.874	Trade	2026.06.03 01:05:42   order canceled [#35 sell stop 19 JPN225 at 67364.59]
+CS	0	15:53:52.874	CycleORB (JPN225,M5)	2026.06.03 01:05:42   CTrade::OrderSend: cancel #35 [done]
+CS	0	15:53:52.874	CycleORB (JPN225,M5)	2026.06.03 01:05:42   [CycleORB] DELETE order #35 magic=26110503 (TKY OCO)
+CS	0	15:53:53.150	Trade	2026.06.03 06:25:00   market sell 19 JPN225, close #34 (68478.55 / 68492.55)
+CS	0	15:53:53.150	Trades	2026.06.03 06:25:00   deal #23 sell 19 JPN225 at 68478.55 done (based on order #36)
+CS	0	15:53:53.150	Trade	2026.06.03 06:25:00   deal performed [#23 sell 19 JPN225 at 68478.55]
+CS	0	15:53:53.150	Trade	2026.06.03 06:25:00   order performed sell 19 at 68478.55 [#36 sell 19 JPN225 at 68478.55]
+CS	0	15:53:53.151	CycleORB (JPN225,M5)	2026.06.03 06:25:00   CTrade::OrderSend: market sell 19.00 position #34 JPN225 [done at 68478.55]
+CS	0	15:53:53.151	CycleORB (JPN225,M5)	2026.06.03 06:25:00   [CycleORB] CLOSE position #34 magic=26110503 (TKY time exit)
+CS	0	15:53:53.393	CycleORB (JPN225,M5)	2026.06.04 01:00:00   [CycleORB] RANGE TKY 2026.06.04 00:00 hi=67878.52 lo=67235.79 range=64273pt atr%=41.7 spread=1000.0pt (live 1000pt) cost%=1.6 buffer=3214pt risk=103.32 trend=0
+CS	0	15:53:53.393	Trade	2026.06.04 01:00:00   buy stop 24.4 JPN225 at 67910.66 sl: 67235.79 tp: 69091.68 (67266.39 / 67276.39)
+CS	0	15:53:53.393	CycleORB (JPN225,M5)	2026.06.04 01:00:00   CTrade::OrderSend: buy stop 24.40 JPN225 at 67910.66 sl: 67235.79 tp: 69091.68 [done]
+CS	0	15:53:53.393	CycleORB (JPN225,M5)	2026.06.04 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.40 @67910.66 sl=67235.79 tp=69091.68 magic=26110503 retcode=10009
+CS	0	15:53:53.393	Trade	2026.06.04 01:00:00   sell stop 24.4 JPN225 at 67203.65 sl: 67878.52 tp: 66022.63 (67266.39 / 67276.39)
+CS	0	15:53:53.393	CycleORB (JPN225,M5)	2026.06.04 01:00:00   CTrade::OrderSend: sell stop 24.40 JPN225 at 67203.65 sl: 67878.52 tp: 66022.63 [done]
+CS	0	15:53:53.393	CycleORB (JPN225,M5)	2026.06.04 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.40 @67203.65 sl=67878.52 tp=66022.63 magic=26110503 retcode=10009
+CS	0	15:53:53.394	Trade	2026.06.04 01:02:29   order [#38 sell stop 24.4 JPN225 at 67203.65] triggered
+CS	0	15:53:53.394	Trades	2026.06.04 01:02:29   deal #24 sell 24.4 JPN225 at 67202.91 done (based on order #38)
+CS	0	15:53:53.394	Trade	2026.06.04 01:02:29   deal performed [#24 sell 24.4 JPN225 at 67202.91]
+CS	0	15:53:53.394	Trade	2026.06.04 01:02:29   order performed sell 24.4 at 67202.91 [#38 sell stop 24.4 JPN225 at 67203.65]
+CS	0	15:53:53.394	Trade	2026.06.04 01:02:29   order canceled [#37 buy stop 24.4 JPN225 at 67910.66]
+CS	0	15:53:53.394	CycleORB (JPN225,M5)	2026.06.04 01:02:29   CTrade::OrderSend: cancel #37 [done]
+CS	0	15:53:53.394	CycleORB (JPN225,M5)	2026.06.04 01:02:29   [CycleORB] DELETE order #37 magic=26110503 (TKY OCO)
+CS	0	15:53:53.557	Trade	2026.06.04 06:25:00   market buy 24.4 JPN225, close #38 (67335.37 / 67345.37)
+CS	0	15:53:53.557	Trades	2026.06.04 06:25:00   deal #25 buy 24.4 JPN225 at 67345.37 done (based on order #39)
+CS	0	15:53:53.557	Trade	2026.06.04 06:25:00   deal performed [#25 buy 24.4 JPN225 at 67345.37]
+CS	0	15:53:53.557	Trade	2026.06.04 06:25:00   order performed buy 24.4 at 67345.37 [#39 buy 24.4 JPN225 at 67345.37]
+CS	0	15:53:53.557	CycleORB (JPN225,M5)	2026.06.04 06:25:00   CTrade::OrderSend: market buy 24.40 position #38 JPN225 [done at 67345.37]
+CS	0	15:53:53.557	CycleORB (JPN225,M5)	2026.06.04 06:25:00   [CycleORB] CLOSE position #38 magic=26110503 (TKY time exit)
+CS	0	15:53:53.818	CycleORB (JPN225,M5)	2026.06.05 01:00:00   [CycleORB] RANGE TKY 2026.06.05 00:00 hi=66983.46 lo=66146.78 range=83668pt atr%=55.7 spread=1000.0pt (live 1000pt) cost%=1.2 buffer=4183pt risk=103.32 trend=0
+CS	0	15:53:53.819	Trade	2026.06.05 01:00:00   buy stop 18.7 JPN225 at 67025.29 sl: 66146.78 tp: 68562.68 (66296.18 / 66306.18)
+CS	0	15:53:53.819	CycleORB (JPN225,M5)	2026.06.05 01:00:00   CTrade::OrderSend: buy stop 18.70 JPN225 at 67025.29 sl: 66146.78 tp: 68562.68 [done]
+CS	0	15:53:53.819	CycleORB (JPN225,M5)	2026.06.05 01:00:00   [CycleORB] PLACE BUY_STOP lots=18.70 @67025.29 sl=66146.78 tp=68562.68 magic=26110503 retcode=10009
+CS	0	15:53:53.819	Trade	2026.06.05 01:00:00   sell stop 18.7 JPN225 at 66104.95 sl: 66983.46 tp: 64567.56 (66296.18 / 66306.18)
+CS	0	15:53:53.819	CycleORB (JPN225,M5)	2026.06.05 01:00:00   CTrade::OrderSend: sell stop 18.70 JPN225 at 66104.95 sl: 66983.46 tp: 64567.56 [done]
+CS	0	15:53:53.819	CycleORB (JPN225,M5)	2026.06.05 01:00:00   [CycleORB] PLACE SELL_STOP lots=18.70 @66104.95 sl=66983.46 tp=64567.56 magic=26110503 retcode=10009
+CS	0	15:53:53.825	Trade	2026.06.05 01:09:14   order [#41 sell stop 18.7 JPN225 at 66104.95] triggered
+CS	0	15:53:53.825	Trades	2026.06.05 01:09:14   deal #26 sell 18.7 JPN225 at 66104.92 done (based on order #41)
+CS	0	15:53:53.825	Trade	2026.06.05 01:09:14   deal performed [#26 sell 18.7 JPN225 at 66104.92]
+CS	0	15:53:53.825	Trade	2026.06.05 01:09:14   order performed sell 18.7 at 66104.92 [#41 sell stop 18.7 JPN225 at 66104.95]
+CS	0	15:53:53.825	Trade	2026.06.05 01:09:14   order canceled [#40 buy stop 18.7 JPN225 at 67025.29]
+CS	0	15:53:53.825	CycleORB (JPN225,M5)	2026.06.05 01:09:14   CTrade::OrderSend: cancel #40 [done]
+CS	0	15:53:53.825	CycleORB (JPN225,M5)	2026.06.05 01:09:14   [CycleORB] DELETE order #40 magic=26110503 (TKY OCO)
+CS	0	15:53:54.037	Trade	2026.06.05 06:25:00   market buy 18.7 JPN225, close #41 (66609.58 / 66623.58)
+CS	0	15:53:54.037	Trades	2026.06.05 06:25:00   deal #27 buy 18.7 JPN225 at 66623.58 done (based on order #42)
+CS	0	15:53:54.037	Trade	2026.06.05 06:25:00   deal performed [#27 buy 18.7 JPN225 at 66623.58]
+CS	0	15:53:54.037	Trade	2026.06.05 06:25:00   order performed buy 18.7 at 66623.58 [#42 buy 18.7 JPN225 at 66623.58]
+CS	0	15:53:54.037	CycleORB (JPN225,M5)	2026.06.05 06:25:00   CTrade::OrderSend: market buy 18.70 position #41 JPN225 [done at 66623.58]
+CS	0	15:53:54.037	CycleORB (JPN225,M5)	2026.06.05 06:25:00   [CycleORB] CLOSE position #41 magic=26110503 (TKY time exit)
+CS	0	15:53:54.329	CycleORB (JPN225,M5)	2026.06.08 01:00:00   [CycleORB] SKIP TKY 2026.06.08 00:00 hi=64731.43 lo=63555.66 range=117577pt atr%=75.4 spread=1000.0pt (live 1000pt) cost%=0.9 (range/ATR outside band)
+CS	0	15:53:54.746	CycleORB (JPN225,M5)	2026.06.09 01:00:00   [CycleORB] SKIP TKY 2026.06.09 00:00 hi=65147.42 lo=63914.11 range=123331pt atr%=75.5 spread=1000.0pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:53:55.044	CycleORB (JPN225,M5)	2026.06.10 01:00:00   [CycleORB] RANGE TKY 2026.06.10 00:00 hi=65086.88 lo=64377.39 range=70949pt atr%=39.7 spread=1000.0pt (live 1000pt) cost%=1.4 buffer=3547pt risk=103.32 trend=0
+CS	0	15:53:55.044	Trade	2026.06.10 01:00:00   buy stop 22.2 JPN225 at 65122.35 sl: 64377.39 tp: 66426.03 (64836.54 / 64846.54)
+CS	0	15:53:55.044	CycleORB (JPN225,M5)	2026.06.10 01:00:00   CTrade::OrderSend: buy stop 22.20 JPN225 at 65122.35 sl: 64377.39 tp: 66426.03 [done]
+CS	0	15:53:55.044	CycleORB (JPN225,M5)	2026.06.10 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.20 @65122.35 sl=64377.39 tp=66426.03 magic=26110503 retcode=10009
+CS	0	15:53:55.044	Trade	2026.06.10 01:00:00   sell stop 22.2 JPN225 at 64341.92 sl: 65086.88 tp: 63038.24 (64836.54 / 64846.54)
+CS	0	15:53:55.044	CycleORB (JPN225,M5)	2026.06.10 01:00:00   CTrade::OrderSend: sell stop 22.20 JPN225 at 64341.92 sl: 65086.88 tp: 63038.24 [done]
+CS	0	15:53:55.044	CycleORB (JPN225,M5)	2026.06.10 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.20 @64341.92 sl=65086.88 tp=63038.24 magic=26110503 retcode=10009
+CS	0	15:53:55.083	Trade	2026.06.10 02:30:00   order canceled [#44 sell stop 22.2 JPN225 at 64341.92]
+CS	0	15:53:55.083	CycleORB (JPN225,M5)	2026.06.10 02:30:00   CTrade::OrderSend: cancel #44 [done]
+CS	0	15:53:55.083	CycleORB (JPN225,M5)	2026.06.10 02:30:00   [CycleORB] DELETE order #44 magic=26110503 (TKY entry window closed)
+CS	0	15:53:55.083	Trade	2026.06.10 02:30:00   order canceled [#43 buy stop 22.2 JPN225 at 65122.35]
+CS	0	15:53:55.083	CycleORB (JPN225,M5)	2026.06.10 02:30:00   CTrade::OrderSend: cancel #43 [done]
+CS	0	15:53:55.083	CycleORB (JPN225,M5)	2026.06.10 02:30:00   [CycleORB] DELETE order #43 magic=26110503 (TKY entry window closed)
+CS	0	15:53:55.340	CycleORB (JPN225,M5)	2026.06.11 01:00:00   [CycleORB] SKIP TKY 2026.06.11 00:00 hi=63633.29 lo=62329.13 range=130416pt atr%=70.9 spread=1000.0pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:53:55.610	CycleORB (JPN225,M5)	2026.06.12 01:00:00   [CycleORB] RANGE TKY 2026.06.12 00:00 hi=67038.04 lo=66369.67 range=66837pt atr%=32.5 spread=1000.0pt (live 1000pt) cost%=1.5 buffer=3342pt risk=103.32 trend=0
+CS	0	15:53:55.610	Trade	2026.06.12 01:00:00   buy stop 23.5 JPN225 at 67071.46 sl: 66369.67 tp: 68299.59 (66756.18 / 66766.18)
+CS	0	15:53:55.610	CycleORB (JPN225,M5)	2026.06.12 01:00:00   CTrade::OrderSend: buy stop 23.50 JPN225 at 67071.46 sl: 66369.67 tp: 68299.59 [done]
+CS	0	15:53:55.610	CycleORB (JPN225,M5)	2026.06.12 01:00:00   [CycleORB] PLACE BUY_STOP lots=23.50 @67071.46 sl=66369.67 tp=68299.59 magic=26110503 retcode=10009
+CS	0	15:53:55.610	Trade	2026.06.12 01:00:00   sell stop 23.5 JPN225 at 66336.25 sl: 67038.04 tp: 65108.12 (66756.18 / 66766.18)
+CS	0	15:53:55.610	CycleORB (JPN225,M5)	2026.06.12 01:00:00   CTrade::OrderSend: sell stop 23.50 JPN225 at 66336.25 sl: 67038.04 tp: 65108.12 [done]
+CS	0	15:53:55.610	CycleORB (JPN225,M5)	2026.06.12 01:00:00   [CycleORB] PLACE SELL_STOP lots=23.50 @66336.25 sl=67038.04 tp=65108.12 magic=26110503 retcode=10009
+CS	0	15:53:55.618	Trade	2026.06.12 01:18:07   order [#46 sell stop 23.5 JPN225 at 66336.25] triggered
+CS	0	15:53:55.618	Trades	2026.06.12 01:18:07   deal #28 sell 23.5 JPN225 at 66335.89 done (based on order #46)
+CS	0	15:53:55.618	Trade	2026.06.12 01:18:07   deal performed [#28 sell 23.5 JPN225 at 66335.89]
+CS	0	15:53:55.618	Trade	2026.06.12 01:18:07   order performed sell 23.5 at 66335.89 [#46 sell stop 23.5 JPN225 at 66336.25]
+CS	0	15:53:55.618	Trade	2026.06.12 01:18:07   order canceled [#45 buy stop 23.5 JPN225 at 67071.46]
+CS	0	15:53:55.618	CycleORB (JPN225,M5)	2026.06.12 01:18:07   CTrade::OrderSend: cancel #45 [done]
+CS	0	15:53:55.618	CycleORB (JPN225,M5)	2026.06.12 01:18:07   [CycleORB] DELETE order #45 magic=26110503 (TKY OCO)
+CS	0	15:53:55.815	Trade	2026.06.12 06:25:00   market buy 23.5 JPN225, close #46 (66043.71 / 66053.71)
+CS	0	15:53:55.815	Trades	2026.06.12 06:25:00   deal #29 buy 23.5 JPN225 at 66053.71 done (based on order #47)
+CS	0	15:53:55.815	Trade	2026.06.12 06:25:00   deal performed [#29 buy 23.5 JPN225 at 66053.71]
+CS	0	15:53:55.815	Trade	2026.06.12 06:25:00   order performed buy 23.5 at 66053.71 [#47 buy 23.5 JPN225 at 66053.71]
+CS	0	15:53:55.815	CycleORB (JPN225,M5)	2026.06.12 06:25:00   CTrade::OrderSend: market buy 23.50 position #46 JPN225 [done at 66053.71]
+CS	0	15:53:55.815	CycleORB (JPN225,M5)	2026.06.12 06:25:00   [CycleORB] CLOSE position #46 magic=26110503 (TKY time exit)
+CS	0	15:53:56.050	CycleORB (JPN225,M5)	2026.06.15 01:00:00   [CycleORB] RANGE TKY 2026.06.15 00:00 hi=69408.20 lo=68390.19 range=101801pt atr%=51.1 spread=1000.0pt (live 1000pt) cost%=1.0 buffer=5090pt risk=103.32 trend=0
+CS	0	15:53:56.050	Trade	2026.06.15 01:00:00   buy stop 15.4 JPN225 at 69459.10 sl: 68390.19 tp: 71329.69 (69382.79 / 69392.79)
+CS	0	15:53:56.050	CycleORB (JPN225,M5)	2026.06.15 01:00:00   CTrade::OrderSend: buy stop 15.40 JPN225 at 69459.10 sl: 68390.19 tp: 71329.69 [done]
+CS	0	15:53:56.050	CycleORB (JPN225,M5)	2026.06.15 01:00:00   [CycleORB] PLACE BUY_STOP lots=15.40 @69459.10 sl=68390.19 tp=71329.69 magic=26110503 retcode=10009
+CS	0	15:53:56.050	Trade	2026.06.15 01:00:00   sell stop 15.4 JPN225 at 68339.29 sl: 69408.20 tp: 66468.70 (69382.79 / 69392.79)
+CS	0	15:53:56.050	CycleORB (JPN225,M5)	2026.06.15 01:00:00   CTrade::OrderSend: sell stop 15.40 JPN225 at 68339.29 sl: 69408.20 tp: 66468.70 [done]
+CS	0	15:53:56.050	CycleORB (JPN225,M5)	2026.06.15 01:00:00   [CycleORB] PLACE SELL_STOP lots=15.40 @68339.29 sl=69408.20 tp=66468.70 magic=26110503 retcode=10009
+CS	0	15:53:56.056	Trade	2026.06.15 01:11:39   order [#48 buy stop 15.4 JPN225 at 69459.10] triggered
+CS	0	15:53:56.056	Trades	2026.06.15 01:11:39   deal #30 buy 15.4 JPN225 at 69464.79 done (based on order #48)
+CS	0	15:53:56.056	Trade	2026.06.15 01:11:39   deal performed [#30 buy 15.4 JPN225 at 69464.79]
+CS	0	15:53:56.056	Trade	2026.06.15 01:11:39   order performed buy 15.4 at 69464.79 [#48 buy stop 15.4 JPN225 at 69459.10]
+CS	0	15:53:56.056	Trade	2026.06.15 01:11:39   order canceled [#49 sell stop 15.4 JPN225 at 68339.29]
+CS	0	15:53:56.056	CycleORB (JPN225,M5)	2026.06.15 01:11:39   CTrade::OrderSend: cancel #49 [done]
+CS	0	15:53:56.056	CycleORB (JPN225,M5)	2026.06.15 01:11:39   [CycleORB] DELETE order #49 magic=26110503 (TKY OCO)
+CS	0	15:53:56.221	Trade	2026.06.15 06:25:00   market sell 15.4 JPN225, close #48 (69353.39 / 69367.39)
+CS	0	15:53:56.221	Trades	2026.06.15 06:25:00   deal #31 sell 15.4 JPN225 at 69353.39 done (based on order #50)
+CS	0	15:53:56.221	Trade	2026.06.15 06:25:00   deal performed [#31 sell 15.4 JPN225 at 69353.39]
+CS	0	15:53:56.221	Trade	2026.06.15 06:25:00   order performed sell 15.4 at 69353.39 [#50 sell 15.4 JPN225 at 69353.39]
+CS	0	15:53:56.221	CycleORB (JPN225,M5)	2026.06.15 06:25:00   CTrade::OrderSend: market sell 15.40 position #48 JPN225 [done at 69353.39]
+CS	0	15:53:56.221	CycleORB (JPN225,M5)	2026.06.15 06:25:00   [CycleORB] CLOSE position #48 magic=26110503 (TKY time exit)
+CS	0	15:53:56.391	CycleORB (JPN225,M5)	2026.06.16 01:00:00   [CycleORB] SKIP TKY 2026.06.16 00:00 hi=69584.49 lo=69104.46 range=48003pt atr%=23.8 spread=1000.0pt (live 1000pt) cost%=2.1 (range/ATR outside band)
+CS	0	15:53:56.624	CycleORB (JPN225,M5)	2026.06.17 01:00:00   [CycleORB] SKIP TKY 2026.06.17 00:00 hi=69638.76 lo=68752.83 range=88593pt atr%=43.1 spread=1000.0pt (live 1000pt) cost%=1.1 volpct=31.6 (H1 vol below regime floor)
+CS	0	15:53:56.873	CycleORB (JPN225,M5)	2026.06.18 01:00:00   [CycleORB] RANGE TKY 2026.06.18 00:00 hi=71382.03 lo=70329.97 range=105206pt atr%=49.7 spread=1000.0pt (live 1000pt) cost%=1.0 buffer=5260pt risk=103.32 trend=0
+CS	0	15:53:56.873	Trade	2026.06.18 01:00:00   buy stop 15 JPN225 at 71434.63 sl: 70329.97 tp: 73367.79 (70950.29 / 70960.29)
+CS	0	15:53:56.873	CycleORB (JPN225,M5)	2026.06.18 01:00:00   CTrade::OrderSend: buy stop 15.00 JPN225 at 71434.63 sl: 70329.97 tp: 73367.79 [done]
+CS	0	15:53:56.873	CycleORB (JPN225,M5)	2026.06.18 01:00:00   [CycleORB] PLACE BUY_STOP lots=15.00 @71434.63 sl=70329.97 tp=73367.79 magic=26110503 retcode=10009
+CS	0	15:53:56.873	Trade	2026.06.18 01:00:00   sell stop 15 JPN225 at 70277.37 sl: 71382.03 tp: 68344.21 (70950.29 / 70960.29)
+CS	0	15:53:56.873	CycleORB (JPN225,M5)	2026.06.18 01:00:00   CTrade::OrderSend: sell stop 15.00 JPN225 at 70277.37 sl: 71382.03 tp: 68344.21 [done]
+CS	0	15:53:56.873	CycleORB (JPN225,M5)	2026.06.18 01:00:00   [CycleORB] PLACE SELL_STOP lots=15.00 @70277.37 sl=71382.03 tp=68344.21 magic=26110503 retcode=10009
+CS	0	15:53:56.912	Trade	2026.06.18 02:30:00   order canceled [#52 sell stop 15 JPN225 at 70277.37]
+CS	0	15:53:56.912	CycleORB (JPN225,M5)	2026.06.18 02:30:00   CTrade::OrderSend: cancel #52 [done]
+CS	0	15:53:56.912	CycleORB (JPN225,M5)	2026.06.18 02:30:00   [CycleORB] DELETE order #52 magic=26110503 (TKY entry window closed)
+CS	0	15:53:56.912	Trade	2026.06.18 02:30:00   order canceled [#51 buy stop 15 JPN225 at 71434.63]
+CS	0	15:53:56.912	CycleORB (JPN225,M5)	2026.06.18 02:30:00   CTrade::OrderSend: cancel #51 [done]
+CS	0	15:53:56.912	CycleORB (JPN225,M5)	2026.06.18 02:30:00   [CycleORB] DELETE order #51 magic=26110503 (TKY entry window closed)
+CS	0	15:53:57.172	CycleORB (JPN225,M5)	2026.06.19 01:00:00   [CycleORB] RANGE TKY 2026.06.19 00:00 hi=72129.27 lo=71298.89 range=83038pt atr%=39.6 spread=1000.0pt (live 1000pt) cost%=1.2 buffer=4152pt risk=103.32 trend=0
+CS	0	15:53:57.172	Trade	2026.06.19 01:00:00   buy stop 19 JPN225 at 72170.79 sl: 71298.89 tp: 73696.61 (71629.26 / 71639.26)
+CS	0	15:53:57.172	CycleORB (JPN225,M5)	2026.06.19 01:00:00   CTrade::OrderSend: buy stop 19.00 JPN225 at 72170.79 sl: 71298.89 tp: 73696.61 [done]
+CS	0	15:53:57.172	CycleORB (JPN225,M5)	2026.06.19 01:00:00   [CycleORB] PLACE BUY_STOP lots=19.00 @72170.79 sl=71298.89 tp=73696.61 magic=26110503 retcode=10009
+CS	0	15:53:57.172	Trade	2026.06.19 01:00:00   sell stop 19 JPN225 at 71257.37 sl: 72129.27 tp: 69731.54 (71629.26 / 71639.26)
+CS	0	15:53:57.172	CycleORB (JPN225,M5)	2026.06.19 01:00:00   CTrade::OrderSend: sell stop 19.00 JPN225 at 71257.37 sl: 72129.27 tp: 69731.54 [done]
+CS	0	15:53:57.172	CycleORB (JPN225,M5)	2026.06.19 01:00:00   [CycleORB] PLACE SELL_STOP lots=19.00 @71257.37 sl=72129.27 tp=69731.54 magic=26110503 retcode=10009
+CS	0	15:53:57.208	Trade	2026.06.19 02:30:00   order canceled [#54 sell stop 19 JPN225 at 71257.37]
+CS	0	15:53:57.208	CycleORB (JPN225,M5)	2026.06.19 02:30:00   CTrade::OrderSend: cancel #54 [done]
+CS	0	15:53:57.208	CycleORB (JPN225,M5)	2026.06.19 02:30:00   [CycleORB] DELETE order #54 magic=26110503 (TKY entry window closed)
+CS	0	15:53:57.208	Trade	2026.06.19 02:30:00   order canceled [#53 buy stop 19 JPN225 at 72170.79]
+CS	0	15:53:57.208	CycleORB (JPN225,M5)	2026.06.19 02:30:00   CTrade::OrderSend: cancel #53 [done]
+CS	0	15:53:57.208	CycleORB (JPN225,M5)	2026.06.19 02:30:00   [CycleORB] DELETE order #53 magic=26110503 (TKY entry window closed)
+CS	0	15:53:57.392	CycleORB (JPN225,M5)	2026.06.22 01:00:00   [CycleORB] SKIP TKY 2026.06.22 00:00 hi=72498.47 lo=71240.28 range=125819pt atr%=60.9 spread=1000.0pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:53:57.641	CycleORB (JPN225,M5)	2026.06.23 01:00:00   [CycleORB] RANGE TKY 2026.06.23 00:00 hi=72599.75 lo=71708.94 range=89081pt atr%=45.0 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4454pt risk=103.32 trend=0
+CS	0	15:53:57.641	Trade	2026.06.23 01:00:00   buy stop 17.8 JPN225 at 72644.29 sl: 71708.94 tp: 74281.15 (72028.04 / 72038.04)
+CS	0	15:53:57.641	CycleORB (JPN225,M5)	2026.06.23 01:00:00   CTrade::OrderSend: buy stop 17.80 JPN225 at 72644.29 sl: 71708.94 tp: 74281.15 [done]
+CS	0	15:53:57.641	CycleORB (JPN225,M5)	2026.06.23 01:00:00   [CycleORB] PLACE BUY_STOP lots=17.80 @72644.29 sl=71708.94 tp=74281.15 magic=26110503 retcode=10009
+CS	0	15:53:57.641	Trade	2026.06.23 01:00:00   sell stop 17.8 JPN225 at 71664.40 sl: 72599.75 tp: 70027.54 (72028.04 / 72038.04)
+CS	0	15:53:57.641	CycleORB (JPN225,M5)	2026.06.23 01:00:00   CTrade::OrderSend: sell stop 17.80 JPN225 at 71664.40 sl: 72599.75 tp: 70027.54 [done]
+CS	0	15:53:57.641	CycleORB (JPN225,M5)	2026.06.23 01:00:00   [CycleORB] PLACE SELL_STOP lots=17.80 @71664.40 sl=72599.75 tp=70027.54 magic=26110503 retcode=10009
+CS	0	15:53:57.656	Trade	2026.06.23 01:47:19   order [#56 sell stop 17.8 JPN225 at 71664.40] triggered
+CS	0	15:53:57.656	Trades	2026.06.23 01:47:19   deal #32 sell 17.8 JPN225 at 71663.00 done (based on order #56)
+CS	0	15:53:57.656	Trade	2026.06.23 01:47:19   deal performed [#32 sell 17.8 JPN225 at 71663.00]
+CS	0	15:53:57.656	Trade	2026.06.23 01:47:19   order performed sell 17.8 at 71663.00 [#56 sell stop 17.8 JPN225 at 71664.40]
+CS	0	15:53:57.656	Trade	2026.06.23 01:47:19   order canceled [#55 buy stop 17.8 JPN225 at 72644.29]
+CS	0	15:53:57.656	CycleORB (JPN225,M5)	2026.06.23 01:47:19   CTrade::OrderSend: cancel #55 [done]
+CS	0	15:53:57.656	CycleORB (JPN225,M5)	2026.06.23 01:47:19   [CycleORB] DELETE order #55 magic=26110503 (TKY OCO)
+CS	0	15:53:57.758	Trade	2026.06.23 05:58:34   take profit triggered #56 sell 17.8 JPN225 71663.00 sl: 72599.75 tp: 70027.54 [#57 buy 17.8 JPN225 at 70027.54]
+CS	0	15:53:57.758	Trades	2026.06.23 05:58:34   deal #33 buy 17.8 JPN225 at 70026.62 done (based on order #57)
+CS	0	15:53:57.758	Trade	2026.06.23 05:58:34   deal performed [#33 buy 17.8 JPN225 at 70026.62]
+CS	0	15:53:57.758	Trade	2026.06.23 05:58:34   order performed buy 17.8 at 70026.62 [#57 buy 17.8 JPN225 at 70027.54]
+CS	0	15:53:57.937	CycleORB (JPN225,M5)	2026.06.24 01:00:00   [CycleORB] RANGE TKY 2026.06.24 00:00 hi=70181.59 lo=69253.03 range=92856pt atr%=41.5 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4643pt risk=103.32 trend=0
+CS	0	15:53:57.937	Trade	2026.06.24 01:00:00   buy stop 17.1 JPN225 at 70228.02 sl: 69253.03 tp: 71934.25 (69511.73 / 69521.73)
+CS	0	15:53:57.937	CycleORB (JPN225,M5)	2026.06.24 01:00:00   CTrade::OrderSend: buy stop 17.10 JPN225 at 70228.02 sl: 69253.03 tp: 71934.25 [done]
+CS	0	15:53:57.937	CycleORB (JPN225,M5)	2026.06.24 01:00:00   [CycleORB] PLACE BUY_STOP lots=17.10 @70228.02 sl=69253.03 tp=71934.25 magic=26110503 retcode=10009
+CS	0	15:53:57.937	Trade	2026.06.24 01:00:00   sell stop 17.1 JPN225 at 69206.60 sl: 70181.59 tp: 67500.37 (69511.73 / 69521.73)
+CS	0	15:53:57.937	CycleORB (JPN225,M5)	2026.06.24 01:00:00   CTrade::OrderSend: sell stop 17.10 JPN225 at 69206.60 sl: 70181.59 tp: 67500.37 [done]
+CS	0	15:53:57.937	CycleORB (JPN225,M5)	2026.06.24 01:00:00   [CycleORB] PLACE SELL_STOP lots=17.10 @69206.60 sl=70181.59 tp=67500.37 magic=26110503 retcode=10009
+CS	0	15:53:57.943	Trade	2026.06.24 01:18:10   order [#59 sell stop 17.1 JPN225 at 69206.60] triggered
+CS	0	15:53:57.943	Trades	2026.06.24 01:18:10   deal #34 sell 17.1 JPN225 at 69205.89 done (based on order #59)
+CS	0	15:53:57.943	Trade	2026.06.24 01:18:10   deal performed [#34 sell 17.1 JPN225 at 69205.89]
+CS	0	15:53:57.943	Trade	2026.06.24 01:18:10   order performed sell 17.1 at 69205.89 [#59 sell stop 17.1 JPN225 at 69206.60]
+CS	0	15:53:57.943	Trade	2026.06.24 01:18:10   order canceled [#58 buy stop 17.1 JPN225 at 70228.02]
+CS	0	15:53:57.943	CycleORB (JPN225,M5)	2026.06.24 01:18:10   CTrade::OrderSend: cancel #58 [done]
+CS	0	15:53:57.943	CycleORB (JPN225,M5)	2026.06.24 01:18:10   [CycleORB] DELETE order #58 magic=26110503 (TKY OCO)
+CS	0	15:53:58.086	Trade	2026.06.24 06:25:00   market buy 17.1 JPN225, close #59 (69236.48 / 69246.48)
+CS	0	15:53:58.086	Trades	2026.06.24 06:25:00   deal #35 buy 17.1 JPN225 at 69246.48 done (based on order #60)
+CS	0	15:53:58.086	Trade	2026.06.24 06:25:00   deal performed [#35 buy 17.1 JPN225 at 69246.48]
+CS	0	15:53:58.086	Trade	2026.06.24 06:25:00   order performed buy 17.1 at 69246.48 [#60 buy 17.1 JPN225 at 69246.48]
+CS	0	15:53:58.086	CycleORB (JPN225,M5)	2026.06.24 06:25:00   CTrade::OrderSend: market buy 17.10 position #59 JPN225 [done at 69246.48]
+CS	0	15:53:58.086	CycleORB (JPN225,M5)	2026.06.24 06:25:00   [CycleORB] CLOSE position #59 magic=26110503 (TKY time exit)
+CS	0	15:53:58.325	CycleORB (JPN225,M5)	2026.06.25 01:00:00   [CycleORB] RANGE TKY 2026.06.25 00:00 hi=71337.77 lo=70655.85 range=68192pt atr%=30.1 spread=1000.0pt (live 1000pt) cost%=1.5 buffer=3410pt risk=103.32 trend=0
+CS	0	15:53:58.325	Trade	2026.06.25 01:00:00   buy stop 23.3 JPN225 at 71371.87 sl: 70655.85 tp: 72624.90 (71046.77 / 71056.77)
+CS	0	15:53:58.325	CycleORB (JPN225,M5)	2026.06.25 01:00:00   CTrade::OrderSend: buy stop 23.30 JPN225 at 71371.87 sl: 70655.85 tp: 72624.90 [done]
+CS	0	15:53:58.325	CycleORB (JPN225,M5)	2026.06.25 01:00:00   [CycleORB] PLACE BUY_STOP lots=23.30 @71371.87 sl=70655.85 tp=72624.90 magic=26110503 retcode=10009
+CS	0	15:53:58.325	Trade	2026.06.25 01:00:00   sell stop 23.3 JPN225 at 70621.75 sl: 71337.77 tp: 69368.71 (71046.77 / 71056.77)
+CS	0	15:53:58.325	CycleORB (JPN225,M5)	2026.06.25 01:00:00   CTrade::OrderSend: sell stop 23.30 JPN225 at 70621.75 sl: 71337.77 tp: 69368.71 [done]
+CS	0	15:53:58.325	CycleORB (JPN225,M5)	2026.06.25 01:00:00   [CycleORB] PLACE SELL_STOP lots=23.30 @70621.75 sl=71337.77 tp=69368.71 magic=26110503 retcode=10009
+CS	0	15:53:58.346	Trade	2026.06.25 01:34:53   order [#61 buy stop 23.3 JPN225 at 71371.87] triggered
+CS	0	15:53:58.346	Trades	2026.06.25 01:34:53   deal #36 buy 23.3 JPN225 at 71373.23 done (based on order #61)
+CS	0	15:53:58.346	Trade	2026.06.25 01:34:53   deal performed [#36 buy 23.3 JPN225 at 71373.23]
+CS	0	15:53:58.346	Trade	2026.06.25 01:34:53   order performed buy 23.3 at 71373.23 [#61 buy stop 23.3 JPN225 at 71371.87]
+CS	0	15:53:58.346	Trade	2026.06.25 01:34:53   order canceled [#62 sell stop 23.3 JPN225 at 70621.75]
+CS	0	15:53:58.346	CycleORB (JPN225,M5)	2026.06.25 01:34:53   CTrade::OrderSend: cancel #62 [done]
+CS	0	15:53:58.346	CycleORB (JPN225,M5)	2026.06.25 01:34:53   [CycleORB] DELETE order #62 magic=26110503 (TKY OCO)
+CS	0	15:53:58.510	Trade	2026.06.25 06:25:00   market sell 23.3 JPN225, close #61 (72512.81 / 72522.81)
+CS	0	15:53:58.510	Trades	2026.06.25 06:25:00   deal #37 sell 23.3 JPN225 at 72512.81 done (based on order #63)
+CS	0	15:53:58.510	Trade	2026.06.25 06:25:00   deal performed [#37 sell 23.3 JPN225 at 72512.81]
+CS	0	15:53:58.510	Trade	2026.06.25 06:25:00   order performed sell 23.3 at 72512.81 [#63 sell 23.3 JPN225 at 72512.81]
+CS	0	15:53:58.511	CycleORB (JPN225,M5)	2026.06.25 06:25:00   CTrade::OrderSend: market sell 23.30 position #61 JPN225 [done at 72512.81]
+CS	0	15:53:58.511	CycleORB (JPN225,M5)	2026.06.25 06:25:00   [CycleORB] CLOSE position #61 magic=26110503 (TKY time exit)
+CS	0	15:53:58.694	CycleORB (JPN225,M5)	2026.06.26 01:00:00   [CycleORB] RANGE TKY 2026.06.26 00:00 hi=71300.80 lo=70071.24 range=122956pt atr%=56.1 spread=1000.0pt (live 1000pt) cost%=0.8 buffer=6148pt risk=103.32 trend=0
+CS	0	15:53:58.695	Trade	2026.06.26 01:00:00   buy stop 12.9 JPN225 at 71362.28 sl: 70071.24 tp: 73621.60 (70234.17 / 70244.17)
+CS	0	15:53:58.695	CycleORB (JPN225,M5)	2026.06.26 01:00:00   CTrade::OrderSend: buy stop 12.90 JPN225 at 71362.28 sl: 70071.24 tp: 73621.60 [done]
+CS	0	15:53:58.695	CycleORB (JPN225,M5)	2026.06.26 01:00:00   [CycleORB] PLACE BUY_STOP lots=12.90 @71362.28 sl=70071.24 tp=73621.60 magic=26110503 retcode=10009
+CS	0	15:53:58.695	Trade	2026.06.26 01:00:00   sell stop 12.9 JPN225 at 70009.76 sl: 71300.80 tp: 67750.44 (70234.17 / 70244.17)
+CS	0	15:53:58.695	CycleORB (JPN225,M5)	2026.06.26 01:00:00   CTrade::OrderSend: sell stop 12.90 JPN225 at 70009.76 sl: 71300.80 tp: 67750.44 [done]
+CS	0	15:53:58.695	CycleORB (JPN225,M5)	2026.06.26 01:00:00   [CycleORB] PLACE SELL_STOP lots=12.90 @70009.76 sl=71300.80 tp=67750.44 magic=26110503 retcode=10009
+CS	0	15:53:58.705	Trade	2026.06.26 01:33:05   order [#65 sell stop 12.9 JPN225 at 70009.76] triggered
+CS	0	15:53:58.705	Trades	2026.06.26 01:33:05   deal #38 sell 12.9 JPN225 at 70007.06 done (based on order #65)
+CS	0	15:53:58.705	Trade	2026.06.26 01:33:05   deal performed [#38 sell 12.9 JPN225 at 70007.06]
+CS	0	15:53:58.705	Trade	2026.06.26 01:33:05   order performed sell 12.9 at 70007.06 [#65 sell stop 12.9 JPN225 at 70009.76]
+CS	0	15:53:58.705	Trade	2026.06.26 01:33:05   order canceled [#64 buy stop 12.9 JPN225 at 71362.28]
+CS	0	15:53:58.705	CycleORB (JPN225,M5)	2026.06.26 01:33:05   CTrade::OrderSend: cancel #64 [done]
+CS	0	15:53:58.705	CycleORB (JPN225,M5)	2026.06.26 01:33:05   [CycleORB] DELETE order #64 magic=26110503 (TKY OCO)
+CS	0	15:53:58.828	Trade	2026.06.26 06:25:00   market buy 12.9 JPN225, close #65 (69130.01 / 69140.01)
+CS	0	15:53:58.828	Trades	2026.06.26 06:25:00   deal #39 buy 12.9 JPN225 at 69140.01 done (based on order #66)
+CS	0	15:53:58.828	Trade	2026.06.26 06:25:00   deal performed [#39 buy 12.9 JPN225 at 69140.01]
+CS	0	15:53:58.828	Trade	2026.06.26 06:25:00   order performed buy 12.9 at 69140.01 [#66 buy 12.9 JPN225 at 69140.01]
+CS	0	15:53:58.828	CycleORB (JPN225,M5)	2026.06.26 06:25:00   CTrade::OrderSend: market buy 12.90 position #65 JPN225 [done at 69140.01]
+CS	0	15:53:58.828	CycleORB (JPN225,M5)	2026.06.26 06:25:00   [CycleORB] CLOSE position #65 magic=26110503 (TKY time exit)
+CS	0	15:53:59.021	CycleORB (JPN225,M5)	2026.06.29 01:00:00   [CycleORB] SKIP TKY 2026.06.29 00:00 hi=69659.62 lo=68022.73 range=163689pt atr%=85.7 spread=1000.0pt (live 1000pt) cost%=0.6 (range/ATR outside band)
+CS	0	15:53:59.265	CycleORB (JPN225,M5)	2026.06.30 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:53:59.476	CycleORB (JPN225,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_END 202606 capital=10332.23 realized=381.98 floating=0.00 pnl=3.70% peak=4.06% state=ACTIVE 
+CS	0	15:53:59.476	CycleORB (JPN225,M5)	2026.07.01 00:00:00   [CycleORB] CYCLE_BEGIN 202607 capital=10714.21 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:53:59.490	CycleORB (JPN225,M5)	2026.07.01 01:00:00   [CycleORB] SKIP TKY 2026.07.01 00:00 hi=71964.46 lo=71131.85 range=83261pt atr%=41.2 spread=1000.0pt (live 1000pt) cost%=1.2 volpct=23.8 (H1 vol below regime floor)
+CS	0	15:53:59.813	CycleORB (JPN225,M5)	2026.07.02 01:00:00   [CycleORB] RANGE TKY 2026.07.02 00:00 hi=69374.39 lo=68686.90 range=68749pt atr%=32.2 spread=1000.0pt (live 1000pt) cost%=1.5 buffer=3437pt risk=107.14 trend=0
+CS	0	15:53:59.813	Trade	2026.07.02 01:00:00   buy stop 24.1 JPN225 at 69408.76 sl: 68686.90 tp: 70672.02 (69044.85 / 69054.85)
+CS	0	15:53:59.813	CycleORB (JPN225,M5)	2026.07.02 01:00:00   CTrade::OrderSend: buy stop 24.10 JPN225 at 69408.76 sl: 68686.90 tp: 70672.02 [done]
+CS	0	15:53:59.813	CycleORB (JPN225,M5)	2026.07.02 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.10 @69408.76 sl=68686.90 tp=70672.02 magic=26110503 retcode=10009
+CS	0	15:53:59.813	Trade	2026.07.02 01:00:00   sell stop 24.1 JPN225 at 68652.53 sl: 69374.39 tp: 67389.27 (69044.85 / 69054.85)
+CS	0	15:53:59.813	CycleORB (JPN225,M5)	2026.07.02 01:00:00   CTrade::OrderSend: sell stop 24.10 JPN225 at 68652.53 sl: 69374.39 tp: 67389.27 [done]
+CS	0	15:53:59.813	CycleORB (JPN225,M5)	2026.07.02 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.10 @68652.53 sl=69374.39 tp=67389.27 magic=26110503 retcode=10009
+CS	0	15:53:59.816	Trade	2026.07.02 01:10:44   order [#67 buy stop 24.1 JPN225 at 69408.76] triggered
+CS	0	15:53:59.816	Trades	2026.07.02 01:10:44   deal #40 buy 24.1 JPN225 at 69409.44 done (based on order #67)
+CS	0	15:53:59.816	Trade	2026.07.02 01:10:44   deal performed [#40 buy 24.1 JPN225 at 69409.44]
+CS	0	15:53:59.816	Trade	2026.07.02 01:10:44   order performed buy 24.1 at 69409.44 [#67 buy stop 24.1 JPN225 at 69408.76]
+CS	0	15:53:59.816	Trade	2026.07.02 01:10:44   order canceled [#68 sell stop 24.1 JPN225 at 68652.53]
+CS	0	15:53:59.816	CycleORB (JPN225,M5)	2026.07.02 01:10:44   CTrade::OrderSend: cancel #68 [done]
+CS	0	15:53:59.816	CycleORB (JPN225,M5)	2026.07.02 01:10:44   [CycleORB] DELETE order #68 magic=26110503 (TKY OCO)
+CS	0	15:54:00.106	Trade	2026.07.02 06:25:00   market sell 24.1 JPN225, close #67 (68764.65 / 68778.65)
+CS	0	15:54:00.106	Trades	2026.07.02 06:25:00   deal #41 sell 24.1 JPN225 at 68764.65 done (based on order #69)
+CS	0	15:54:00.106	Trade	2026.07.02 06:25:00   deal performed [#41 sell 24.1 JPN225 at 68764.65]
+CS	0	15:54:00.106	Trade	2026.07.02 06:25:00   order performed sell 24.1 at 68764.65 [#69 sell 24.1 JPN225 at 68764.65]
+CS	0	15:54:00.108	CycleORB (JPN225,M5)	2026.07.02 06:25:00   CTrade::OrderSend: market sell 24.10 position #67 JPN225 [done at 68764.65]
+CS	0	15:54:00.108	CycleORB (JPN225,M5)	2026.07.02 06:25:00   [CycleORB] CLOSE position #67 magic=26110503 (TKY time exit)
+CS	0	15:54:00.316	CycleORB (JPN225,M5)	2026.07.03 01:00:00   [CycleORB] RANGE TKY 2026.07.03 00:00 hi=68503.05 lo=67609.55 range=89350pt atr%=40.3 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4468pt risk=107.14 trend=0
+CS	0	15:54:00.316	Trade	2026.07.03 01:00:00   buy stop 18.4 JPN225 at 68547.73 sl: 67609.55 tp: 70189.54 (68121.25 / 68131.25)
+CS	0	15:54:00.316	CycleORB (JPN225,M5)	2026.07.03 01:00:00   CTrade::OrderSend: buy stop 18.40 JPN225 at 68547.73 sl: 67609.55 tp: 70189.54 [done]
+CS	0	15:54:00.316	CycleORB (JPN225,M5)	2026.07.03 01:00:00   [CycleORB] PLACE BUY_STOP lots=18.40 @68547.73 sl=67609.55 tp=70189.54 magic=26110503 retcode=10009
+CS	0	15:54:00.316	Trade	2026.07.03 01:00:00   sell stop 18.4 JPN225 at 67564.88 sl: 68503.05 tp: 65923.08 (68121.25 / 68131.25)
+CS	0	15:54:00.316	CycleORB (JPN225,M5)	2026.07.03 01:00:00   CTrade::OrderSend: sell stop 18.40 JPN225 at 67564.88 sl: 68503.05 tp: 65923.08 [done]
+CS	0	15:54:00.316	CycleORB (JPN225,M5)	2026.07.03 01:00:00   [CycleORB] PLACE SELL_STOP lots=18.40 @67564.88 sl=68503.05 tp=65923.08 magic=26110503 retcode=10009
+CS	0	15:54:00.319	Trade	2026.07.03 01:04:49   order [#70 buy stop 18.4 JPN225 at 68547.73] triggered
+CS	0	15:54:00.319	Trades	2026.07.03 01:04:49   deal #42 buy 18.4 JPN225 at 68557.78 done (based on order #70)
+CS	0	15:54:00.319	Trade	2026.07.03 01:04:49   deal performed [#42 buy 18.4 JPN225 at 68557.78]
+CS	0	15:54:00.319	Trade	2026.07.03 01:04:49   order performed buy 18.4 at 68557.78 [#70 buy stop 18.4 JPN225 at 68547.73]
+CS	0	15:54:00.319	Trade	2026.07.03 01:04:49   order canceled [#71 sell stop 18.4 JPN225 at 67564.88]
+CS	0	15:54:00.319	CycleORB (JPN225,M5)	2026.07.03 01:04:49   CTrade::OrderSend: cancel #71 [done]
+CS	0	15:54:00.319	CycleORB (JPN225,M5)	2026.07.03 01:04:49   [CycleORB] DELETE order #71 magic=26110503 (TKY OCO)
+CS	0	15:54:00.466	Trade	2026.07.03 06:25:00   market sell 18.4 JPN225, close #70 (69738.64 / 69748.64)
+CS	0	15:54:00.466	Trades	2026.07.03 06:25:00   deal #43 sell 18.4 JPN225 at 69738.64 done (based on order #72)
+CS	0	15:54:00.466	Trade	2026.07.03 06:25:00   deal performed [#43 sell 18.4 JPN225 at 69738.64]
+CS	0	15:54:00.466	Trade	2026.07.03 06:25:00   order performed sell 18.4 at 69738.64 [#72 sell 18.4 JPN225 at 69738.64]
+CS	0	15:54:00.466	CycleORB (JPN225,M5)	2026.07.03 06:25:00   CTrade::OrderSend: market sell 18.40 position #70 JPN225 [done at 69738.64]
+CS	0	15:54:00.466	CycleORB (JPN225,M5)	2026.07.03 06:25:00   [CycleORB] CLOSE position #70 magic=26110503 (TKY time exit)
+CS	0	15:54:00.579	CycleORB (JPN225,M5)	2026.07.06 01:00:00   [CycleORB] SKIP TKY 2026.07.06 00:00 hi=70384.68 lo=69270.88 range=111380pt atr%=51.8 spread=1000.0pt (live 1000pt) cost%=0.9 volpct=21.2 (H1 vol below regime floor)
+CS	0	15:54:00.818	CycleORB (JPN225,M5)	2026.07.07 01:00:00   [CycleORB] SKIP TKY 2026.07.07 00:00 hi=69958.95 lo=69145.73 range=81322pt atr%=37.7 spread=1000.0pt (live 1000pt) cost%=1.2 volpct=13.6 (H1 vol below regime floor)
+CS	0	15:54:01.190	CycleORB (JPN225,M5)	2026.07.08 01:00:00   [CycleORB] SKIP TKY 2026.07.08 00:00 hi=68420.50 lo=66946.36 range=147414pt atr%=64.0 spread=1000.0pt (live 1000pt) cost%=0.7 (range/ATR outside band)
+CS	0	15:54:01.454	CycleORB (JPN225,M5)	2026.07.09 01:00:00   [CycleORB] RANGE TKY 2026.07.09 00:00 hi=68315.64 lo=67578.18 range=73746pt atr%=31.3 spread=1000.0pt (live 1000pt) cost%=1.4 buffer=3687pt risk=107.14 trend=0
+CS	0	15:54:01.454	Trade	2026.07.09 01:00:00   buy stop 22.5 JPN225 at 68352.51 sl: 67578.18 tp: 69707.59 (68002.52 / 68012.52)
+CS	0	15:54:01.454	CycleORB (JPN225,M5)	2026.07.09 01:00:00   CTrade::OrderSend: buy stop 22.50 JPN225 at 68352.51 sl: 67578.18 tp: 69707.59 [done]
+CS	0	15:54:01.454	CycleORB (JPN225,M5)	2026.07.09 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.50 @68352.51 sl=67578.18 tp=69707.59 magic=26110503 retcode=10009
+CS	0	15:54:01.454	Trade	2026.07.09 01:00:00   sell stop 22.5 JPN225 at 67541.31 sl: 68315.64 tp: 66186.23 (68002.52 / 68012.52)
+CS	0	15:54:01.454	CycleORB (JPN225,M5)	2026.07.09 01:00:00   CTrade::OrderSend: sell stop 22.50 JPN225 at 67541.31 sl: 68315.64 tp: 66186.23 [done]
+CS	0	15:54:01.454	CycleORB (JPN225,M5)	2026.07.09 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.50 @67541.31 sl=68315.64 tp=66186.23 magic=26110503 retcode=10009
+CS	0	15:54:01.458	Trade	2026.07.09 01:09:33   order [#73 buy stop 22.5 JPN225 at 68352.51] triggered
+CS	0	15:54:01.458	Trades	2026.07.09 01:09:33   deal #44 buy 22.5 JPN225 at 68355.62 done (based on order #73)
+CS	0	15:54:01.458	Trade	2026.07.09 01:09:33   deal performed [#44 buy 22.5 JPN225 at 68355.62]
+CS	0	15:54:01.458	Trade	2026.07.09 01:09:33   order performed buy 22.5 at 68355.62 [#73 buy stop 22.5 JPN225 at 68352.51]
+CS	0	15:54:01.458	Trade	2026.07.09 01:09:33   order canceled [#74 sell stop 22.5 JPN225 at 67541.31]
+CS	0	15:54:01.458	CycleORB (JPN225,M5)	2026.07.09 01:09:33   CTrade::OrderSend: cancel #74 [done]
+CS	0	15:54:01.458	CycleORB (JPN225,M5)	2026.07.09 01:09:33   [CycleORB] DELETE order #74 magic=26110503 (TKY OCO)
+CS	0	15:54:01.513	Trade	2026.07.09 03:17:56   stop loss triggered #73 buy 22.5 JPN225 68355.62 sl: 67578.18 tp: 69707.59 [#75 sell 22.5 JPN225 at 67578.18]
+CS	0	15:54:01.513	Trades	2026.07.09 03:17:56   deal #45 sell 22.5 JPN225 at 67575.81 done (based on order #75)
+CS	0	15:54:01.513	Trade	2026.07.09 03:17:56   deal performed [#45 sell 22.5 JPN225 at 67575.81]
+CS	0	15:54:01.513	Trade	2026.07.09 03:17:56   order performed sell 22.5 at 67575.81 [#75 sell 22.5 JPN225 at 67578.18]
+CS	0	15:54:01.748	CycleORB (JPN225,M5)	2026.07.10 01:00:00   [CycleORB] SKIP TKY 2026.07.10 00:00 hi=69190.19 lo=68488.43 range=70176pt atr%=32.3 spread=1000.0pt (live 1000pt) cost%=1.4 volpct=26.2 (H1 vol below regime floor)
+CS	0	15:54:02.015	CycleORB (JPN225,M5)	2026.07.13 01:00:00   [CycleORB] SKIP TKY 2026.07.13 00:00 hi=69071.81 lo=67926.88 range=114493pt atr%=58.0 spread=1000.0pt (live 1000pt) cost%=0.9 volpct=32.8 (H1 vol below regime floor)
+CS	0	15:54:02.277	CycleORB (JPN225,M5)	2026.07.14 01:00:00   [CycleORB] RANGE TKY 2026.07.14 00:00 hi=67388.49 lo=66253.38 range=113511pt atr%=57.4 spread=1000.0pt (live 1000pt) cost%=0.9 buffer=5676pt risk=107.14 trend=0
+CS	0	15:54:02.277	Trade	2026.07.14 01:00:00   buy stop 14.5 JPN225 at 67445.25 sl: 66253.38 tp: 69531.02 (67329.61 / 67339.61)
+CS	0	15:54:02.277	CycleORB (JPN225,M5)	2026.07.14 01:00:00   CTrade::OrderSend: buy stop 14.50 JPN225 at 67445.25 sl: 66253.38 tp: 69531.02 [done]
+CS	0	15:54:02.277	CycleORB (JPN225,M5)	2026.07.14 01:00:00   [CycleORB] PLACE BUY_STOP lots=14.50 @67445.25 sl=66253.38 tp=69531.02 magic=26110503 retcode=10009
+CS	0	15:54:02.277	Trade	2026.07.14 01:00:00   sell stop 14.5 JPN225 at 66196.62 sl: 67388.49 tp: 64110.85 (67329.61 / 67339.61)
+CS	0	15:54:02.277	CycleORB (JPN225,M5)	2026.07.14 01:00:00   CTrade::OrderSend: sell stop 14.50 JPN225 at 66196.62 sl: 67388.49 tp: 64110.85 [done]
+CS	0	15:54:02.277	CycleORB (JPN225,M5)	2026.07.14 01:00:00   [CycleORB] PLACE SELL_STOP lots=14.50 @66196.62 sl=67388.49 tp=64110.85 magic=26110503 retcode=10009
+CS	0	15:54:02.279	Trade	2026.07.14 01:05:07   order [#76 buy stop 14.5 JPN225 at 67445.25] triggered
+CS	0	15:54:02.279	Trades	2026.07.14 01:05:07   deal #46 buy 14.5 JPN225 at 67445.41 done (based on order #76)
+CS	0	15:54:02.279	Trade	2026.07.14 01:05:07   deal performed [#46 buy 14.5 JPN225 at 67445.41]
+CS	0	15:54:02.279	Trade	2026.07.14 01:05:07   order performed buy 14.5 at 67445.41 [#76 buy stop 14.5 JPN225 at 67445.25]
+CS	0	15:54:02.279	Trade	2026.07.14 01:05:07   order canceled [#77 sell stop 14.5 JPN225 at 66196.62]
+CS	0	15:54:02.279	CycleORB (JPN225,M5)	2026.07.14 01:05:07   CTrade::OrderSend: cancel #77 [done]
+CS	0	15:54:02.279	CycleORB (JPN225,M5)	2026.07.14 01:05:07   [CycleORB] DELETE order #77 magic=26110503 (TKY OCO)
+CS	0	15:54:02.421	Trade	2026.07.14 06:25:00   market sell 14.5 JPN225, close #76 (67700.67 / 67714.67)
+CS	0	15:54:02.421	Trades	2026.07.14 06:25:00   deal #47 sell 14.5 JPN225 at 67700.67 done (based on order #78)
+CS	0	15:54:02.421	Trade	2026.07.14 06:25:00   deal performed [#47 sell 14.5 JPN225 at 67700.67]
+CS	0	15:54:02.421	Trade	2026.07.14 06:25:00   order performed sell 14.5 at 67700.67 [#78 sell 14.5 JPN225 at 67700.67]
+CS	0	15:54:02.421	CycleORB (JPN225,M5)	2026.07.14 06:25:00   CTrade::OrderSend: market sell 14.50 position #76 JPN225 [done at 67700.67]
+CS	0	15:54:02.421	CycleORB (JPN225,M5)	2026.07.14 06:25:00   [CycleORB] CLOSE position #76 magic=26110503 (TKY time exit)
+CS	0	15:54:02.579	CycleORB (JPN225,M5)	2026.07.15 01:00:00   [CycleORB] SKIP TKY 2026.07.15 00:00 hi=68757.36 lo=68035.84 range=72152pt atr%=34.3 spread=1000.0pt (live 1000pt) cost%=1.4 volpct=26.8 (H1 vol below regime floor)
+CS	0	15:54:02.792	CycleORB (JPN225,M5)	2026.07.16 01:00:00   [CycleORB] RANGE TKY 2026.07.16 00:00 hi=67717.11 lo=66519.00 range=119811pt atr%=58.7 spread=1000.0pt (live 1000pt) cost%=0.8 buffer=5991pt risk=107.14 trend=0
+CS	0	15:54:02.793	Trade	2026.07.16 01:00:00   buy stop 13.8 JPN225 at 67777.02 sl: 66519.00 tp: 69978.56 (66669.62 / 66679.62)
+CS	0	15:54:02.793	CycleORB (JPN225,M5)	2026.07.16 01:00:00   CTrade::OrderSend: buy stop 13.80 JPN225 at 67777.02 sl: 66519.00 tp: 69978.56 [done]
+CS	0	15:54:02.793	CycleORB (JPN225,M5)	2026.07.16 01:00:00   [CycleORB] PLACE BUY_STOP lots=13.80 @67777.02 sl=66519.00 tp=69978.56 magic=26110503 retcode=10009
+CS	0	15:54:02.793	Trade	2026.07.16 01:00:00   sell stop 13.8 JPN225 at 66459.09 sl: 67717.11 tp: 64257.55 (66669.62 / 66679.62)
+CS	0	15:54:02.793	CycleORB (JPN225,M5)	2026.07.16 01:00:00   CTrade::OrderSend: sell stop 13.80 JPN225 at 66459.09 sl: 67717.11 tp: 64257.55 [done]
+CS	0	15:54:02.793	CycleORB (JPN225,M5)	2026.07.16 01:00:00   [CycleORB] PLACE SELL_STOP lots=13.80 @66459.09 sl=67717.11 tp=64257.55 magic=26110503 retcode=10009
+CS	0	15:54:02.826	Trade	2026.07.16 02:30:00   order canceled [#80 sell stop 13.8 JPN225 at 66459.09]
+CS	0	15:54:02.826	CycleORB (JPN225,M5)	2026.07.16 02:30:00   CTrade::OrderSend: cancel #80 [done]
+CS	0	15:54:02.826	CycleORB (JPN225,M5)	2026.07.16 02:30:00   [CycleORB] DELETE order #80 magic=26110503 (TKY entry window closed)
+CS	0	15:54:02.826	Trade	2026.07.16 02:30:00   order canceled [#79 buy stop 13.8 JPN225 at 67777.02]
+CS	0	15:54:02.826	CycleORB (JPN225,M5)	2026.07.16 02:30:00   CTrade::OrderSend: cancel #79 [done]
+CS	0	15:54:02.826	CycleORB (JPN225,M5)	2026.07.16 02:30:00   [CycleORB] DELETE order #79 magic=26110503 (TKY entry window closed)
+CS	0	15:54:03.049	CycleORB (JPN225,M5)	2026.07.17 01:00:00   [CycleORB] SKIP TKY 2026.07.17 00:00 hi=65677.08 lo=64117.58 range=155950pt atr%=75.4 spread=1000.0pt (live 1000pt) cost%=0.6 (range/ATR outside band)
+CS	0	15:54:03.266	CycleORB (JPN225,M5)	2026.07.20 01:00:00   [CycleORB] RANGE TKY 2026.07.20 00:00 hi=65302.28 lo=64575.71 range=72657pt atr%=37.5 spread=1000.0pt (live 1000pt) cost%=1.4 buffer=3633pt risk=107.14 trend=0
+CS	0	15:54:03.266	Trade	2026.07.20 01:00:00   buy stop 22.7 JPN225 at 65338.61 sl: 64575.71 tp: 66673.69 (64704.56 / 64714.56)
+CS	0	15:54:03.266	CycleORB (JPN225,M5)	2026.07.20 01:00:00   CTrade::OrderSend: buy stop 22.70 JPN225 at 65338.61 sl: 64575.71 tp: 66673.69 [done]
+CS	0	15:54:03.266	CycleORB (JPN225,M5)	2026.07.20 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.70 @65338.61 sl=64575.71 tp=66673.69 magic=26110503 retcode=10009
+CS	0	15:54:03.266	Trade	2026.07.20 01:00:00   sell stop 22.7 JPN225 at 64539.38 sl: 65302.28 tp: 63204.30 (64704.56 / 64714.56)
+CS	0	15:54:03.266	CycleORB (JPN225,M5)	2026.07.20 01:00:00   CTrade::OrderSend: sell stop 22.70 JPN225 at 64539.38 sl: 65302.28 tp: 63204.30 [done]
+CS	0	15:54:03.266	CycleORB (JPN225,M5)	2026.07.20 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.70 @64539.38 sl=65302.28 tp=63204.30 magic=26110503 retcode=10009
+CS	0	15:54:03.298	Trade	2026.07.20 02:21:06   order [#82 sell stop 22.7 JPN225 at 64539.38] triggered
+CS	0	15:54:03.298	Trades	2026.07.20 02:21:06   deal #48 sell 22.7 JPN225 at 64538.39 done (based on order #82)
+CS	0	15:54:03.298	Trade	2026.07.20 02:21:06   deal performed [#48 sell 22.7 JPN225 at 64538.39]
+CS	0	15:54:03.298	Trade	2026.07.20 02:21:06   order performed sell 22.7 at 64538.39 [#82 sell stop 22.7 JPN225 at 64539.38]
+CS	0	15:54:03.298	Trade	2026.07.20 02:21:06   order canceled [#81 buy stop 22.7 JPN225 at 65338.61]
+CS	0	15:54:03.298	CycleORB (JPN225,M5)	2026.07.20 02:21:06   CTrade::OrderSend: cancel #81 [done]
+CS	0	15:54:03.298	CycleORB (JPN225,M5)	2026.07.20 02:21:06   [CycleORB] DELETE order #81 magic=26110503 (TKY OCO)
+CS	0	15:54:03.432	Trade	2026.07.20 06:25:00   market buy 22.7 JPN225, close #82 (64666.75 / 64676.75)
+CS	0	15:54:03.432	Trades	2026.07.20 06:25:00   deal #49 buy 22.7 JPN225 at 64676.75 done (based on order #83)
+CS	0	15:54:03.432	Trade	2026.07.20 06:25:00   deal performed [#49 buy 22.7 JPN225 at 64676.75]
+CS	0	15:54:03.432	Trade	2026.07.20 06:25:00   order performed buy 22.7 at 64676.75 [#83 buy 22.7 JPN225 at 64676.75]
+CS	0	15:54:03.432	CycleORB (JPN225,M5)	2026.07.20 06:25:00   CTrade::OrderSend: market buy 22.70 position #82 JPN225 [done at 64676.75]
+CS	0	15:54:03.432	CycleORB (JPN225,M5)	2026.07.20 06:25:00   [CycleORB] CLOSE position #82 magic=26110503 (TKY time exit)
+CS	0	15:54:03.666	CycleORB (JPN225,M5)	2026.07.21 01:00:00   [CycleORB] RANGE TKY 2026.07.21 00:00 hi=65145.11 lo=64211.45 range=93366pt atr%=49.9 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4668pt risk=107.14 trend=0
+CS	0	15:54:03.666	Trade	2026.07.21 01:00:00   buy stop 17.7 JPN225 at 65191.79 sl: 64211.45 tp: 66907.39 (64843.73 / 64853.73)
+CS	0	15:54:03.666	CycleORB (JPN225,M5)	2026.07.21 01:00:00   CTrade::OrderSend: buy stop 17.70 JPN225 at 65191.79 sl: 64211.45 tp: 66907.39 [done]
+CS	0	15:54:03.666	CycleORB (JPN225,M5)	2026.07.21 01:00:00   [CycleORB] PLACE BUY_STOP lots=17.70 @65191.79 sl=64211.45 tp=66907.39 magic=26110503 retcode=10009
+CS	0	15:54:03.666	Trade	2026.07.21 01:00:00   sell stop 17.7 JPN225 at 64164.77 sl: 65145.11 tp: 62449.17 (64843.73 / 64853.73)
+CS	0	15:54:03.666	CycleORB (JPN225,M5)	2026.07.21 01:00:00   CTrade::OrderSend: sell stop 17.70 JPN225 at 64164.77 sl: 65145.11 tp: 62449.17 [done]
+CS	0	15:54:03.666	CycleORB (JPN225,M5)	2026.07.21 01:00:00   [CycleORB] PLACE SELL_STOP lots=17.70 @64164.77 sl=65145.11 tp=62449.17 magic=26110503 retcode=10009
+CS	0	15:54:03.671	Trade	2026.07.21 01:14:43   order [#84 buy stop 17.7 JPN225 at 65191.79] triggered
+CS	0	15:54:03.671	Trades	2026.07.21 01:14:43   deal #50 buy 17.7 JPN225 at 65195.45 done (based on order #84)
+CS	0	15:54:03.671	Trade	2026.07.21 01:14:43   deal performed [#50 buy 17.7 JPN225 at 65195.45]
+CS	0	15:54:03.671	Trade	2026.07.21 01:14:43   order performed buy 17.7 at 65195.45 [#84 buy stop 17.7 JPN225 at 65191.79]
+CS	0	15:54:03.671	Trade	2026.07.21 01:14:43   order canceled [#85 sell stop 17.7 JPN225 at 64164.77]
+CS	0	15:54:03.671	CycleORB (JPN225,M5)	2026.07.21 01:14:43   CTrade::OrderSend: cancel #85 [done]
+CS	0	15:54:03.671	CycleORB (JPN225,M5)	2026.07.21 01:14:43   [CycleORB] DELETE order #85 magic=26110503 (TKY OCO)
+CS	0	15:54:03.830	Trade	2026.07.21 06:25:00   market sell 17.7 JPN225, close #84 (66037.85 / 66047.85)
+CS	0	15:54:03.830	Trades	2026.07.21 06:25:00   deal #51 sell 17.7 JPN225 at 66037.85 done (based on order #86)
+CS	0	15:54:03.830	Trade	2026.07.21 06:25:00   deal performed [#51 sell 17.7 JPN225 at 66037.85]
+CS	0	15:54:03.830	Trade	2026.07.21 06:25:00   order performed sell 17.7 at 66037.85 [#86 sell 17.7 JPN225 at 66037.85]
+CS	0	15:54:03.830	CycleORB (JPN225,M5)	2026.07.21 06:25:00   CTrade::OrderSend: market sell 17.70 position #84 JPN225 [done at 66037.85]
+CS	0	15:54:03.830	CycleORB (JPN225,M5)	2026.07.21 06:25:00   [CycleORB] CLOSE position #84 magic=26110503 (TKY time exit)
+CS	0	15:54:03.986	CycleORB (JPN225,M5)	2026.07.22 01:00:00   [CycleORB] SKIP TKY 2026.07.22 00:00 hi=67592.97 lo=67135.50 range=45747pt atr%=22.3 spread=1000.0pt (live 1000pt) cost%=2.2 (range/ATR outside band)
+CS	0	15:54:04.204	CycleORB (JPN225,M5)	2026.07.23 01:00:00   [CycleORB] SKIP TKY 2026.07.23 00:00 hi=66951.41 lo=66410.06 range=54135pt atr%=26.0 spread=1000.0pt (live 1000pt) cost%=1.8 volpct=17.6 (H1 vol below regime floor)
+CS	0	15:54:04.423	CycleORB (JPN225,M5)	2026.07.24 01:00:00   [CycleORB] SKIP TKY 2026.07.24 00:00 hi=65647.56 lo=64480.79 range=116677pt atr%=57.4 spread=1000.0pt (live 1000pt) cost%=0.9 volpct=30.4 (H1 vol below regime floor)
+CS	0	15:54:04.714	CycleORB (JPN225,M5)	2026.07.27 01:00:00   [CycleORB] RANGE TKY 2026.07.27 00:00 hi=65341.76 lo=64409.67 range=93209pt atr%=49.7 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4660pt risk=107.14 trend=0
+CS	0	15:54:04.714	Trade	2026.07.27 01:00:00   buy stop 17.9 JPN225 at 65388.36 sl: 64409.67 tp: 67101.07 (64448.56 / 64458.56)
+CS	0	15:54:04.714	CycleORB (JPN225,M5)	2026.07.27 01:00:00   CTrade::OrderSend: buy stop 17.90 JPN225 at 65388.36 sl: 64409.67 tp: 67101.07 [done]
+CS	0	15:54:04.714	CycleORB (JPN225,M5)	2026.07.27 01:00:00   [CycleORB] PLACE BUY_STOP lots=17.90 @65388.36 sl=64409.67 tp=67101.07 magic=26110503 retcode=10009
+CS	0	15:54:04.714	Trade	2026.07.27 01:00:00   sell stop 17.9 JPN225 at 64363.07 sl: 65341.76 tp: 62650.36 (64448.56 / 64458.56)
+CS	0	15:54:04.714	CycleORB (JPN225,M5)	2026.07.27 01:00:00   CTrade::OrderSend: sell stop 17.90 JPN225 at 64363.07 sl: 65341.76 tp: 62650.36 [done]
+CS	0	15:54:04.714	CycleORB (JPN225,M5)	2026.07.27 01:00:00   [CycleORB] PLACE SELL_STOP lots=17.90 @64363.07 sl=65341.76 tp=62650.36 magic=26110503 retcode=10009
+CS	0	15:54:04.716	Trade	2026.07.27 01:04:01   order [#88 sell stop 17.9 JPN225 at 64363.07] triggered
+CS	0	15:54:04.716	Trades	2026.07.27 01:04:01   deal #52 sell 17.9 JPN225 at 64358.74 done (based on order #88)
+CS	0	15:54:04.716	Trade	2026.07.27 01:04:01   deal performed [#52 sell 17.9 JPN225 at 64358.74]
+CS	0	15:54:04.716	Trade	2026.07.27 01:04:01   order performed sell 17.9 at 64358.74 [#88 sell stop 17.9 JPN225 at 64363.07]
+CS	0	15:54:04.716	Trade	2026.07.27 01:04:01   order canceled [#87 buy stop 17.9 JPN225 at 65388.36]
+CS	0	15:54:04.716	CycleORB (JPN225,M5)	2026.07.27 01:04:01   CTrade::OrderSend: cancel #87 [done]
+CS	0	15:54:04.716	CycleORB (JPN225,M5)	2026.07.27 01:04:01   [CycleORB] DELETE order #87 magic=26110503 (TKY OCO)
+CS	0	15:54:04.874	Trade	2026.07.27 06:25:00   market buy 17.9 JPN225, close #88 (64948.44 / 64962.44)
+CS	0	15:54:04.874	Trades	2026.07.27 06:25:00   deal #53 buy 17.9 JPN225 at 64962.44 done (based on order #89)
+CS	0	15:54:04.874	Trade	2026.07.27 06:25:00   deal performed [#53 buy 17.9 JPN225 at 64962.44]
+CS	0	15:54:04.874	Trade	2026.07.27 06:25:00   order performed buy 17.9 at 64962.44 [#89 buy 17.9 JPN225 at 64962.44]
+CS	0	15:54:04.874	CycleORB (JPN225,M5)	2026.07.27 06:25:00   CTrade::OrderSend: market buy 17.90 position #88 JPN225 [done at 64962.44]
+CS	0	15:54:04.874	CycleORB (JPN225,M5)	2026.07.27 06:25:00   [CycleORB] CLOSE position #88 magic=26110503 (TKY time exit)
+CS	0	15:54:05.037	CycleORB (JPN225,M5)	2026.07.28 01:00:00   [CycleORB] SKIP TKY 2026.07.28 00:00 hi=63567.04 lo=62128.42 range=143862pt atr%=74.5 spread=1000.0pt (live 1000pt) cost%=0.7 (range/ATR outside band)
+CS	0	15:54:05.274	CycleORB (JPN225,M5)	2026.07.29 01:00:00   [CycleORB] RANGE TKY 2026.07.29 00:00 hi=63161.54 lo=62361.63 range=79991pt atr%=40.1 spread=1000.0pt (live 1000pt) cost%=1.3 buffer=4000pt risk=107.14 trend=0
+CS	0	15:54:05.274	Trade	2026.07.29 01:00:00   buy stop 20.8 JPN225 at 63201.54 sl: 62361.63 tp: 64671.38 (62409.93 / 62419.93)
+CS	0	15:54:05.274	CycleORB (JPN225,M5)	2026.07.29 01:00:00   CTrade::OrderSend: buy stop 20.80 JPN225 at 63201.54 sl: 62361.63 tp: 64671.38 [done]
+CS	0	15:54:05.274	CycleORB (JPN225,M5)	2026.07.29 01:00:00   [CycleORB] PLACE BUY_STOP lots=20.80 @63201.54 sl=62361.63 tp=64671.38 magic=26110503 retcode=10009
+CS	0	15:54:05.274	Trade	2026.07.29 01:00:00   sell stop 20.8 JPN225 at 62321.63 sl: 63161.54 tp: 60851.79 (62409.93 / 62419.93)
+CS	0	15:54:05.274	CycleORB (JPN225,M5)	2026.07.29 01:00:00   CTrade::OrderSend: sell stop 20.80 JPN225 at 62321.63 sl: 63161.54 tp: 60851.79 [done]
+CS	0	15:54:05.274	CycleORB (JPN225,M5)	2026.07.29 01:00:00   [CycleORB] PLACE SELL_STOP lots=20.80 @62321.63 sl=63161.54 tp=60851.79 magic=26110503 retcode=10009
+CS	0	15:54:05.276	Trade	2026.07.29 01:07:31   order [#91 sell stop 20.8 JPN225 at 62321.63] triggered
+CS	0	15:54:05.276	Trades	2026.07.29 01:07:31   deal #54 sell 20.8 JPN225 at 62321.40 done (based on order #91)
+CS	0	15:54:05.276	Trade	2026.07.29 01:07:31   deal performed [#54 sell 20.8 JPN225 at 62321.40]
+CS	0	15:54:05.276	Trade	2026.07.29 01:07:31   order performed sell 20.8 at 62321.40 [#91 sell stop 20.8 JPN225 at 62321.63]
+CS	0	15:54:05.276	Trade	2026.07.29 01:07:31   order canceled [#90 buy stop 20.8 JPN225 at 63201.54]
+CS	0	15:54:05.276	CycleORB (JPN225,M5)	2026.07.29 01:07:31   CTrade::OrderSend: cancel #90 [done]
+CS	0	15:54:05.276	CycleORB (JPN225,M5)	2026.07.29 01:07:31   [CycleORB] DELETE order #90 magic=26110503 (TKY OCO)
+CS	0	15:54:05.346	Trade	2026.07.29 03:41:02   take profit triggered #91 sell 20.8 JPN225 62321.40 sl: 63161.54 tp: 60851.79 [#92 buy 20.8 JPN225 at 60851.79]
+CS	0	15:54:05.346	Trades	2026.07.29 03:41:02   deal #55 buy 20.8 JPN225 at 60845.06 done (based on order #92)
+CS	0	15:54:05.346	Trade	2026.07.29 03:41:02   deal performed [#55 buy 20.8 JPN225 at 60845.06]
+CS	0	15:54:05.346	Trade	2026.07.29 03:41:02   order performed buy 20.8 at 60845.06 [#92 buy 20.8 JPN225 at 60851.79]
+CS	0	15:54:05.583	CycleORB (JPN225,M5)	2026.07.30 01:00:00   [CycleORB] SKIP TKY 2026.07.30 00:00 hi=62486.55 lo=61233.09 range=125346pt atr%=62.7 spread=1000.0pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:54:05.799	CycleORB (JPN225,M5)	2026.07.31 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:54:06.079	CycleORB (JPN225,M5)	2026.08.02 22:05:01   [CycleORB] CYCLE_END 202607 capital=10714.21 realized=147.91 floating=0.00 pnl=1.38% peak=1.38% state=ACTIVE 
+CS	0	15:54:06.079	CycleORB (JPN225,M5)	2026.08.02 22:05:01   [CycleORB] CYCLE_BEGIN 202608 capital=10862.12 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:54:06.121	CycleORB (JPN225,M5)	2026.08.03 01:00:00   [CycleORB] RANGE TKY 2026.08.03 00:00 hi=63712.04 lo=62818.55 range=89349pt atr%=43.7 spread=1000.0pt (live 1000pt) cost%=1.1 buffer=4467pt risk=108.62 trend=0
+CS	0	15:54:06.121	Trade	2026.08.03 01:00:00   buy stop 18 JPN225 at 63756.71 sl: 62818.55 tp: 65398.49 (63051.25 / 63061.25)
+CS	0	15:54:06.121	CycleORB (JPN225,M5)	2026.08.03 01:00:00   CTrade::OrderSend: buy stop 18.00 JPN225 at 63756.71 sl: 62818.55 tp: 65398.49 [done]
+CS	0	15:54:06.121	CycleORB (JPN225,M5)	2026.08.03 01:00:00   [CycleORB] PLACE BUY_STOP lots=18.00 @63756.71 sl=62818.55 tp=65398.49 magic=26110503 retcode=10009
+CS	0	15:54:06.121	Trade	2026.08.03 01:00:00   sell stop 18 JPN225 at 62773.88 sl: 63712.04 tp: 61132.10 (63051.25 / 63061.25)
+CS	0	15:54:06.121	CycleORB (JPN225,M5)	2026.08.03 01:00:00   CTrade::OrderSend: sell stop 18.00 JPN225 at 62773.88 sl: 63712.04 tp: 61132.10 [done]
+CS	0	15:54:06.121	CycleORB (JPN225,M5)	2026.08.03 01:00:00   [CycleORB] PLACE SELL_STOP lots=18.00 @62773.88 sl=63712.04 tp=61132.10 magic=26110503 retcode=10009
+CS	0	15:54:06.125	Trade	2026.08.03 01:13:53   order [#94 sell stop 18 JPN225 at 62773.88] triggered
+CS	0	15:54:06.125	Trades	2026.08.03 01:13:53   deal #56 sell 18 JPN225 at 62772.88 done (based on order #94)
+CS	0	15:54:06.125	Trade	2026.08.03 01:13:53   deal performed [#56 sell 18 JPN225 at 62772.88]
+CS	0	15:54:06.125	Trade	2026.08.03 01:13:53   order performed sell 18 at 62772.88 [#94 sell stop 18 JPN225 at 62773.88]
+CS	0	15:54:06.125	Trade	2026.08.03 01:13:53   order canceled [#93 buy stop 18 JPN225 at 63756.71]
+CS	0	15:54:06.125	CycleORB (JPN225,M5)	2026.08.03 01:13:53   CTrade::OrderSend: cancel #93 [done]
+CS	0	15:54:06.125	CycleORB (JPN225,M5)	2026.08.03 01:13:53   [CycleORB] DELETE order #93 magic=26110503 (TKY OCO)
+CS	0	15:54:06.194	Trade	2026.08.03 03:46:10   stop loss triggered #94 sell 18 JPN225 62772.88 sl: 63712.04 tp: 61132.10 [#95 buy 18 JPN225 at 63712.04]
+CS	0	15:54:06.194	Trades	2026.08.03 03:46:10   deal #57 buy 18 JPN225 at 63712.76 done (based on order #95)
+CS	0	15:54:06.194	Trade	2026.08.03 03:46:10   deal performed [#57 buy 18 JPN225 at 63712.76]
+CS	0	15:54:06.194	Trade	2026.08.03 03:46:10   order performed buy 18 at 63712.76 [#95 buy 18 JPN225 at 63712.04]
+CS	0	15:54:06.397	CycleORB (JPN225,M5)	2026.08.04 01:00:00   [CycleORB] SKIP TKY 2026.08.04 00:00 hi=64253.48 lo=62945.92 range=130756pt atr%=65.7 spread=1000.0pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:54:06.607	CycleORB (JPN225,M5)	2026.08.05 01:00:00   [CycleORB] SKIP TKY 2026.08.05 00:00 hi=66157.53 lo=65453.83 range=70370pt atr%=32.5 spread=1000.0pt (live 1000pt) cost%=1.4 volpct=8.0 (H1 vol below regime floor)
+CS	0	15:54:06.839	CycleORB (JPN225,M5)	2026.08.06 01:00:00   [CycleORB] SKIP TKY 2026.08.06 00:00 hi=65700.14 lo=65163.34 range=53680pt atr%=24.8 spread=1000.0pt (live 1000pt) cost%=1.9 (range/ATR outside band)
+CS	0	15:54:07.062	CycleORB (JPN225,M5)	2026.08.07 01:00:00   [CycleORB] SKIP TKY 2026.08.07 00:00 hi=65916.29 lo=65075.35 range=84094pt atr%=41.3 spread=1000.0pt (live 1000pt) cost%=1.2 volpct=13.8 (H1 vol below regime floor)
+CS	0	15:54:07.338	CycleORB (JPN225,M5)	2026.08.10 01:00:00   [CycleORB] SKIP TKY 2026.08.10 00:00 hi=66687.02 lo=66028.66 range=65836pt atr%=34.5 spread=1000.0pt (live 1000pt) cost%=1.5 volpct=4.2 (H1 vol below regime floor)
+CS	0	15:54:07.578	CycleORB (JPN225,M5)	2026.08.11 01:00:00   [CycleORB] SKIP TKY 2026.08.11 00:00 hi=66770.87 lo=66260.79 range=51008pt atr%=26.7 spread=1000.0pt (live 1000pt) cost%=2.0 volpct=0.8 (H1 vol below regime floor)
+CS	0	15:54:07.760	CycleORB (JPN225,M5)	2026.08.12 01:00:00   [CycleORB] SKIP TKY 2026.08.12 00:00 hi=67160.27 lo=66728.97 range=43130pt atr%=22.7 spread=1000.0pt (live 1000pt) cost%=2.3 (range/ATR outside band)
+CS	0	15:54:07.958	CycleORB (JPN225,M5)	2026.08.13 01:00:00   [CycleORB] SKIP TKY 2026.08.13 00:00 hi=68803.47 lo=68179.85 range=62362pt atr%=32.6 spread=1000.0pt (live 1000pt) cost%=1.6 volpct=5.8 (H1 vol below regime floor)
+CS	0	15:54:08.159	CycleORB (JPN225,M5)	2026.08.14 01:00:00   [CycleORB] SKIP TKY 2026.08.14 00:00 hi=69621.81 lo=69180.67 range=44114pt atr%=23.4 spread=1000.0pt (live 1000pt) cost%=2.3 (range/ATR outside band)
+CS	0	15:54:08.400	CycleORB (JPN225,M5)	2026.08.17 01:00:00   [CycleORB] SKIP TKY 2026.08.17 00:00 hi=69109.57 lo=68532.99 range=57658pt atr%=36.7 spread=1000.0pt (live 1000pt) cost%=1.7 volpct=0.6 (H1 vol below regime floor)
+CS	0	15:54:08.632	CycleORB (JPN225,M5)	2026.08.18 01:00:00   [CycleORB] SKIP TKY 2026.08.18 00:00 hi=69086.65 lo=68570.58 range=51607pt atr%=35.9 spread=1000.0pt (live 1000pt) cost%=1.9 volpct=4.8 (H1 vol below regime floor)
+CS	0	15:54:08.886	CycleORB (JPN225,M5)	2026.08.19 01:00:00   [CycleORB] SKIP TKY 2026.08.19 00:00 hi=66005.64 lo=65315.14 range=69050pt atr%=43.5 spread=1000.0pt (live 1000pt) cost%=1.4 volpct=30.6 (H1 vol below regime floor)
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:00   [CycleORB] RANGE TKY 2026.08.20 00:00 hi=66240.11 lo=65633.80 range=60631pt atr%=39.0 spread=1000.0pt (live 1000pt) cost%=1.6 buffer=3032pt risk=108.62 trend=0
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:00   buy stop 27 JPN225 at 66270.43 sl: 65633.80 tp: 67384.53 (66228.48 / 66238.48)
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:00   CTrade::OrderSend: buy stop 27.00 JPN225 at 66270.43 sl: 65633.80 tp: 67384.53 [done]
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:00   [CycleORB] PLACE BUY_STOP lots=27.00 @66270.43 sl=65633.80 tp=67384.53 magic=26110503 retcode=10009
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:00   sell stop 27 JPN225 at 65603.48 sl: 66240.11 tp: 64489.38 (66228.48 / 66238.48)
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:00   CTrade::OrderSend: sell stop 27.00 JPN225 at 65603.48 sl: 66240.11 tp: 64489.38 [done]
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:00   [CycleORB] PLACE SELL_STOP lots=27.00 @65603.48 sl=66240.11 tp=64489.38 magic=26110503 retcode=10009
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:57   order [#96 buy stop 27 JPN225 at 66270.43] triggered
+CS	0	15:54:09.102	Trades	2026.08.20 01:00:57   deal #58 buy 27 JPN225 at 66271.38 done (based on order #96)
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:57   deal performed [#58 buy 27 JPN225 at 66271.38]
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:57   order performed buy 27 at 66271.38 [#96 buy stop 27 JPN225 at 66270.43]
+CS	0	15:54:09.102	Trade	2026.08.20 01:00:57   order canceled [#97 sell stop 27 JPN225 at 65603.48]
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:57   CTrade::OrderSend: cancel #97 [done]
+CS	0	15:54:09.102	CycleORB (JPN225,M5)	2026.08.20 01:00:57   [CycleORB] DELETE order #97 magic=26110503 (TKY OCO)
+CS	0	15:54:09.242	Trade	2026.08.20 06:25:00   market sell 27 JPN225, close #96 (66153.32 / 66163.32)
+CS	0	15:54:09.242	Trades	2026.08.20 06:25:00   deal #59 sell 27 JPN225 at 66153.32 done (based on order #98)
+CS	0	15:54:09.242	Trade	2026.08.20 06:25:00   deal performed [#59 sell 27 JPN225 at 66153.32]
+CS	0	15:54:09.242	Trade	2026.08.20 06:25:00   order performed sell 27 at 66153.32 [#98 sell 27 JPN225 at 66153.32]
+CS	0	15:54:09.242	CycleORB (JPN225,M5)	2026.08.20 06:25:00   CTrade::OrderSend: market sell 27.00 position #96 JPN225 [done at 66153.32]
+CS	0	15:54:09.242	CycleORB (JPN225,M5)	2026.08.20 06:25:00   [CycleORB] CLOSE position #96 magic=26110503 (TKY time exit)
+CS	0	15:54:09.423	CycleORB (JPN225,M5)	2026.08.21 01:00:00   [CycleORB] RANGE TKY 2026.08.21 00:00 hi=65926.61 lo=65190.38 range=73623pt atr%=50.7 spread=1000.0pt (live 1000pt) cost%=1.4 buffer=3681pt risk=108.62 trend=0
+CS	0	15:54:09.423	Trade	2026.08.21 01:00:00   buy stop 22.3 JPN225 at 65963.42 sl: 65190.38 tp: 67316.24 (65437.17 / 65447.17)
+CS	0	15:54:09.423	CycleORB (JPN225,M5)	2026.08.21 01:00:00   CTrade::OrderSend: buy stop 22.30 JPN225 at 65963.42 sl: 65190.38 tp: 67316.24 [done]
+CS	0	15:54:09.423	CycleORB (JPN225,M5)	2026.08.21 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.30 @65963.42 sl=65190.38 tp=67316.24 magic=26110503 retcode=10009
+CS	0	15:54:09.423	Trade	2026.08.21 01:00:00   sell stop 22.3 JPN225 at 65153.57 sl: 65926.61 tp: 63800.75 (65437.17 / 65447.17)
+CS	0	15:54:09.423	CycleORB (JPN225,M5)	2026.08.21 01:00:00   CTrade::OrderSend: sell stop 22.30 JPN225 at 65153.57 sl: 65926.61 tp: 63800.75 [done]
+CS	0	15:54:09.423	CycleORB (JPN225,M5)	2026.08.21 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.30 @65153.57 sl=65926.61 tp=63800.75 magic=26110503 retcode=10009
+CS	0	15:54:09.453	Trade	2026.08.21 02:18:01   order [#99 buy stop 22.3 JPN225 at 65963.42] triggered
+CS	0	15:54:09.453	Trades	2026.08.21 02:18:01   deal #60 buy 22.3 JPN225 at 65964.40 done (based on order #99)
+CS	0	15:54:09.453	Trade	2026.08.21 02:18:01   deal performed [#60 buy 22.3 JPN225 at 65964.40]
+CS	0	15:54:09.453	Trade	2026.08.21 02:18:01   order performed buy 22.3 at 65964.40 [#99 buy stop 22.3 JPN225 at 65963.42]
+CS	0	15:54:09.453	Trade	2026.08.21 02:18:01   order canceled [#100 sell stop 22.3 JPN225 at 65153.57]
+CS	0	15:54:09.453	CycleORB (JPN225,M5)	2026.08.21 02:18:01   CTrade::OrderSend: cancel #100 [done]
+CS	0	15:54:09.453	CycleORB (JPN225,M5)	2026.08.21 02:18:01   [CycleORB] DELETE order #100 magic=26110503 (TKY OCO)
+CS	0	15:54:09.554	Trade	2026.08.21 06:25:00   market sell 22.3 JPN225, close #99 (66010.13 / 66020.13)
+CS	0	15:54:09.554	Trades	2026.08.21 06:25:00   deal #61 sell 22.3 JPN225 at 66010.13 done (based on order #101)
+CS	0	15:54:09.554	Trade	2026.08.21 06:25:00   deal performed [#61 sell 22.3 JPN225 at 66010.13]
+CS	0	15:54:09.554	Trade	2026.08.21 06:25:00   order performed sell 22.3 at 66010.13 [#101 sell 22.3 JPN225 at 66010.13]
+CS	0	15:54:09.554	CycleORB (JPN225,M5)	2026.08.21 06:25:00   CTrade::OrderSend: market sell 22.30 position #99 JPN225 [done at 66010.13]
+CS	0	15:54:09.554	CycleORB (JPN225,M5)	2026.08.21 06:25:00   [CycleORB] CLOSE position #99 magic=26110503 (TKY time exit)
+CS	0	15:54:09.738	CycleORB (JPN225,M5)	2026.08.24 01:00:00   [CycleORB] SKIP TKY 2026.08.24 00:00 hi=66239.69 lo=65630.81 range=60888pt atr%=44.4 spread=1021.7pt (live 1000pt) cost%=1.7 volpct=29.6 (H1 vol below regime floor)
+CS	0	15:54:10.006	CycleORB (JPN225,M5)	2026.08.25 01:00:00   [CycleORB] SKIP TKY 2026.08.25 00:00 hi=65297.65 lo=64599.27 range=69838pt atr%=52.7 spread=1021.7pt (live 1000pt) cost%=1.5 volpct=32.8 (H1 vol below regime floor)
+CS	0	15:54:10.254	CycleORB (JPN225,M5)	2026.08.26 01:00:00   [CycleORB] SKIP TKY 2026.08.26 00:00 hi=65733.50 lo=65379.62 range=35388pt atr%=24.8 spread=1021.7pt (live 1000pt) cost%=2.9 (range/ATR outside band)
+CS	0	15:54:10.522	CycleORB (JPN225,M5)	2026.08.27 01:00:00   [CycleORB] SKIP TKY 2026.08.27 00:00 hi=67081.11 lo=65856.94 range=122417pt atr%=83.7 spread=1021.7pt (live 1000pt) cost%=0.8 (range/ATR outside band)
+CS	0	15:54:10.823	CycleORB (JPN225,M5)	2026.08.28 01:00:00   [CycleORB] SKIP TKY 2026.08.28 00:00 hi=66577.15 lo=66016.50 range=56065pt atr%=37.9 spread=1021.7pt (live 1000pt) cost%=1.8 volpct=28.8 (H1 vol below regime floor)
+CS	0	15:54:11.144	CycleORB (JPN225,M5)	2026.08.31 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:54:11.371	CycleORB (JPN225,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_END 202608 capital=10862.12 realized=-121.77 floating=0.00 pnl=-1.12% peak=0.10% state=ACTIVE 
+CS	0	15:54:11.371	CycleORB (JPN225,M5)	2026.09.01 00:00:00   [CycleORB] CYCLE_BEGIN 202609 capital=10740.35 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:54:11.381	CycleORB (JPN225,M5)	2026.09.01 01:00:00   [CycleORB] SKIP TKY 2026.09.01 00:00 hi=66018.79 lo=65557.89 range=46090pt atr%=32.2 spread=1021.7pt (live 1000pt) cost%=2.2 volpct=14.0 (H1 vol below regime floor)
+CS	0	15:54:11.622	CycleORB (JPN225,M5)	2026.09.02 01:00:00   [CycleORB] RANGE TKY 2026.09.02 00:00 hi=64900.93 lo=64364.17 range=53676pt atr%=34.7 spread=1021.7pt (live 1000pt) cost%=1.9 buffer=2684pt risk=107.40 trend=0
+CS	0	15:54:11.622	Trade	2026.09.02 01:00:00   buy stop 30.5 JPN225 at 64927.77 sl: 64364.17 tp: 65914.07 (64475.28 / 64485.28)
+CS	0	15:54:11.622	CycleORB (JPN225,M5)	2026.09.02 01:00:00   CTrade::OrderSend: buy stop 30.50 JPN225 at 64927.77 sl: 64364.17 tp: 65914.07 [done]
+CS	0	15:54:11.622	CycleORB (JPN225,M5)	2026.09.02 01:00:00   [CycleORB] PLACE BUY_STOP lots=30.50 @64927.77 sl=64364.17 tp=65914.07 magic=26110503 retcode=10009
+CS	0	15:54:11.622	Trade	2026.09.02 01:00:00   sell stop 30.5 JPN225 at 64337.33 sl: 64900.93 tp: 63351.03 (64475.28 / 64485.28)
+CS	0	15:54:11.622	CycleORB (JPN225,M5)	2026.09.02 01:00:00   CTrade::OrderSend: sell stop 30.50 JPN225 at 64337.33 sl: 64900.93 tp: 63351.03 [done]
+CS	0	15:54:11.622	CycleORB (JPN225,M5)	2026.09.02 01:00:00   [CycleORB] PLACE SELL_STOP lots=30.50 @64337.33 sl=64900.93 tp=63351.03 magic=26110503 retcode=10009
+CS	0	15:54:11.636	Trade	2026.09.02 01:41:29   order [#103 sell stop 30.5 JPN225 at 64337.33] triggered
+CS	0	15:54:11.636	Trades	2026.09.02 01:41:29   deal #62 sell 30.5 JPN225 at 64336.75 done (based on order #103)
+CS	0	15:54:11.636	Trade	2026.09.02 01:41:29   deal performed [#62 sell 30.5 JPN225 at 64336.75]
+CS	0	15:54:11.636	Trade	2026.09.02 01:41:29   order performed sell 30.5 at 64336.75 [#103 sell stop 30.5 JPN225 at 64337.33]
+CS	0	15:54:11.636	Trade	2026.09.02 01:41:29   order canceled [#102 buy stop 30.5 JPN225 at 64927.77]
+CS	0	15:54:11.636	CycleORB (JPN225,M5)	2026.09.02 01:41:29   CTrade::OrderSend: cancel #102 [done]
+CS	0	15:54:11.636	CycleORB (JPN225,M5)	2026.09.02 01:41:29   [CycleORB] DELETE order #102 magic=26110503 (TKY OCO)
+CS	0	15:54:11.765	Trade	2026.09.02 06:25:00   market buy 30.5 JPN225, close #103 (64246.19 / 64256.19)
+CS	0	15:54:11.765	Trades	2026.09.02 06:25:00   deal #63 buy 30.5 JPN225 at 64256.19 done (based on order #104)
+CS	0	15:54:11.765	Trade	2026.09.02 06:25:00   deal performed [#63 buy 30.5 JPN225 at 64256.19]
+CS	0	15:54:11.765	Trade	2026.09.02 06:25:00   order performed buy 30.5 at 64256.19 [#104 buy 30.5 JPN225 at 64256.19]
+CS	0	15:54:11.765	CycleORB (JPN225,M5)	2026.09.02 06:25:00   CTrade::OrderSend: market buy 30.50 position #103 JPN225 [done at 64256.19]
+CS	0	15:54:11.765	CycleORB (JPN225,M5)	2026.09.02 06:25:00   [CycleORB] CLOSE position #103 magic=26110503 (TKY time exit)
+CS	0	15:54:11.949	CycleORB (JPN225,M5)	2026.09.03 01:00:00   [CycleORB] RANGE TKY 2026.09.03 00:00 hi=64685.92 lo=64120.53 range=56539pt atr%=36.2 spread=1021.7pt (live 1000pt) cost%=1.8 buffer=2827pt risk=107.40 trend=0
+CS	0	15:54:11.949	Trade	2026.09.03 01:00:00   buy stop 28.7 JPN225 at 64714.19 sl: 64120.53 tp: 65753.10 (64230.10 / 64240.10)
+CS	0	15:54:11.949	CycleORB (JPN225,M5)	2026.09.03 01:00:00   CTrade::OrderSend: buy stop 28.70 JPN225 at 64714.19 sl: 64120.53 tp: 65753.10 [done]
+CS	0	15:54:11.949	CycleORB (JPN225,M5)	2026.09.03 01:00:00   [CycleORB] PLACE BUY_STOP lots=28.70 @64714.19 sl=64120.53 tp=65753.10 magic=26110503 retcode=10009
+CS	0	15:54:11.949	Trade	2026.09.03 01:00:00   sell stop 28.7 JPN225 at 64092.26 sl: 64685.92 tp: 63053.36 (64230.10 / 64240.10)
+CS	0	15:54:11.949	CycleORB (JPN225,M5)	2026.09.03 01:00:00   CTrade::OrderSend: sell stop 28.70 JPN225 at 64092.26 sl: 64685.92 tp: 63053.36 [done]
+CS	0	15:54:11.949	CycleORB (JPN225,M5)	2026.09.03 01:00:00   [CycleORB] PLACE SELL_STOP lots=28.70 @64092.26 sl=64685.92 tp=63053.36 magic=26110503 retcode=10009
+CS	0	15:54:11.981	Trade	2026.09.03 02:30:00   order canceled [#106 sell stop 28.7 JPN225 at 64092.26]
+CS	0	15:54:11.981	CycleORB (JPN225,M5)	2026.09.03 02:30:00   CTrade::OrderSend: cancel #106 [done]
+CS	0	15:54:11.981	CycleORB (JPN225,M5)	2026.09.03 02:30:00   [CycleORB] DELETE order #106 magic=26110503 (TKY entry window closed)
+CS	0	15:54:11.981	Trade	2026.09.03 02:30:00   order canceled [#105 buy stop 28.7 JPN225 at 64714.19]
+CS	0	15:54:11.981	CycleORB (JPN225,M5)	2026.09.03 02:30:00   CTrade::OrderSend: cancel #105 [done]
+CS	0	15:54:11.982	CycleORB (JPN225,M5)	2026.09.03 02:30:00   [CycleORB] DELETE order #105 magic=26110503 (TKY entry window closed)
+CS	0	15:54:12.235	CycleORB (JPN225,M5)	2026.09.04 01:00:00   [CycleORB] RANGE TKY 2026.09.04 00:00 hi=64852.88 lo=64275.17 range=57771pt atr%=41.0 spread=1021.7pt (live 1000pt) cost%=1.8 buffer=2889pt risk=107.40 trend=0
+CS	0	15:54:12.235	Trade	2026.09.04 01:00:00   buy stop 27.5 JPN225 at 64881.77 sl: 64275.17 tp: 65943.32 (64725.78 / 64735.78)
+CS	0	15:54:12.235	CycleORB (JPN225,M5)	2026.09.04 01:00:00   CTrade::OrderSend: buy stop 27.50 JPN225 at 64881.77 sl: 64275.17 tp: 65943.32 [done]
+CS	0	15:54:12.235	CycleORB (JPN225,M5)	2026.09.04 01:00:00   [CycleORB] PLACE BUY_STOP lots=27.50 @64881.77 sl=64275.17 tp=65943.32 magic=26110503 retcode=10009
+CS	0	15:54:12.235	Trade	2026.09.04 01:00:00   sell stop 27.5 JPN225 at 64246.28 sl: 64852.88 tp: 63184.73 (64725.78 / 64735.78)
+CS	0	15:54:12.235	CycleORB (JPN225,M5)	2026.09.04 01:00:00   CTrade::OrderSend: sell stop 27.50 JPN225 at 64246.28 sl: 64852.88 tp: 63184.73 [done]
+CS	0	15:54:12.235	CycleORB (JPN225,M5)	2026.09.04 01:00:00   [CycleORB] PLACE SELL_STOP lots=27.50 @64246.28 sl=64852.88 tp=63184.73 magic=26110503 retcode=10009
+CS	0	15:54:12.267	Trade	2026.09.04 02:30:00   order canceled [#108 sell stop 27.5 JPN225 at 64246.28]
+CS	0	15:54:12.267	CycleORB (JPN225,M5)	2026.09.04 02:30:00   CTrade::OrderSend: cancel #108 [done]
+CS	0	15:54:12.267	CycleORB (JPN225,M5)	2026.09.04 02:30:00   [CycleORB] DELETE order #108 magic=26110503 (TKY entry window closed)
+CS	0	15:54:12.267	Trade	2026.09.04 02:30:00   order canceled [#107 buy stop 27.5 JPN225 at 64881.77]
+CS	0	15:54:12.267	CycleORB (JPN225,M5)	2026.09.04 02:30:00   CTrade::OrderSend: cancel #107 [done]
+CS	0	15:54:12.267	CycleORB (JPN225,M5)	2026.09.04 02:30:00   [CycleORB] DELETE order #107 magic=26110503 (TKY entry window closed)
+CS	0	15:54:12.510	CycleORB (JPN225,M5)	2026.09.07 01:00:00   [CycleORB] RANGE TKY 2026.09.07 00:00 hi=66385.68 lo=65883.67 range=50201pt atr%=37.6 spread=1021.7pt (live 1000pt) cost%=2.0 buffer=2510pt risk=107.40 trend=0
+CS	0	15:54:12.510	Trade	2026.09.07 01:00:00   buy stop 31.7 JPN225 at 66410.78 sl: 65883.67 tp: 67333.22 (66122.39 / 66132.39)
+CS	0	15:54:12.510	CycleORB (JPN225,M5)	2026.09.07 01:00:00   CTrade::OrderSend: buy stop 31.70 JPN225 at 66410.78 sl: 65883.67 tp: 67333.22 [done]
+CS	0	15:54:12.510	CycleORB (JPN225,M5)	2026.09.07 01:00:00   [CycleORB] PLACE BUY_STOP lots=31.70 @66410.78 sl=65883.67 tp=67333.22 magic=26110503 retcode=10009
+CS	0	15:54:12.510	Trade	2026.09.07 01:00:00   sell stop 31.7 JPN225 at 65858.57 sl: 66385.68 tp: 64936.13 (66122.39 / 66132.39)
+CS	0	15:54:12.510	CycleORB (JPN225,M5)	2026.09.07 01:00:00   CTrade::OrderSend: sell stop 31.70 JPN225 at 65858.57 sl: 66385.68 tp: 64936.13 [done]
+CS	0	15:54:12.510	CycleORB (JPN225,M5)	2026.09.07 01:00:00   [CycleORB] PLACE SELL_STOP lots=31.70 @65858.57 sl=66385.68 tp=64936.13 magic=26110503 retcode=10009
+CS	0	15:54:12.515	Trade	2026.09.07 01:14:42   order [#109 buy stop 31.7 JPN225 at 66410.78] triggered
+CS	0	15:54:12.515	Trades	2026.09.07 01:14:42   deal #64 buy 31.7 JPN225 at 66414.32 done (based on order #109)
+CS	0	15:54:12.515	Trade	2026.09.07 01:14:42   deal performed [#64 buy 31.7 JPN225 at 66414.32]
+CS	0	15:54:12.515	Trade	2026.09.07 01:14:42   order performed buy 31.7 at 66414.32 [#109 buy stop 31.7 JPN225 at 66410.78]
+CS	0	15:54:12.515	Trade	2026.09.07 01:14:42   order canceled [#110 sell stop 31.7 JPN225 at 65858.57]
+CS	0	15:54:12.515	CycleORB (JPN225,M5)	2026.09.07 01:14:42   CTrade::OrderSend: cancel #110 [done]
+CS	0	15:54:12.515	CycleORB (JPN225,M5)	2026.09.07 01:14:42   [CycleORB] DELETE order #110 magic=26110503 (TKY OCO)
+CS	0	15:54:12.644	Trade	2026.09.07 06:25:00   market sell 31.7 JPN225, close #109 (66298.82 / 66308.82)
+CS	0	15:54:12.644	Trades	2026.09.07 06:25:00   deal #65 sell 31.7 JPN225 at 66298.82 done (based on order #111)
+CS	0	15:54:12.644	Trade	2026.09.07 06:25:00   deal performed [#65 sell 31.7 JPN225 at 66298.82]
+CS	0	15:54:12.644	Trade	2026.09.07 06:25:00   order performed sell 31.7 at 66298.82 [#111 sell 31.7 JPN225 at 66298.82]
+CS	0	15:54:12.645	CycleORB (JPN225,M5)	2026.09.07 06:25:00   CTrade::OrderSend: market sell 31.70 position #109 JPN225 [done at 66298.82]
+CS	0	15:54:12.645	CycleORB (JPN225,M5)	2026.09.07 06:25:00   [CycleORB] CLOSE position #109 magic=26110503 (TKY time exit)
+CS	0	15:54:12.772	CycleORB (JPN225,M5)	2026.09.08 01:00:00   [CycleORB] SKIP TKY 2026.09.08 00:00 hi=66772.98 lo=65724.94 range=104804pt atr%=80.3 spread=1021.7pt (live 1000pt) cost%=1.0 (range/ATR outside band)
+CS	0	15:54:13.005	CycleORB (JPN225,M5)	2026.09.09 01:00:00   [CycleORB] RANGE TKY 2026.09.09 00:00 hi=65704.80 lo=64936.97 range=76783pt atr%=54.2 spread=1021.7pt (live 1000pt) cost%=1.3 buffer=3839pt risk=107.40 trend=0
+CS	0	15:54:13.005	Trade	2026.09.09 01:00:00   buy stop 20.4 JPN225 at 65743.19 sl: 64936.97 tp: 67154.08 (65570.76 / 65580.76)
+CS	0	15:54:13.005	CycleORB (JPN225,M5)	2026.09.09 01:00:00   CTrade::OrderSend: buy stop 20.40 JPN225 at 65743.19 sl: 64936.97 tp: 67154.08 [done]
+CS	0	15:54:13.005	CycleORB (JPN225,M5)	2026.09.09 01:00:00   [CycleORB] PLACE BUY_STOP lots=20.40 @65743.19 sl=64936.97 tp=67154.08 magic=26110503 retcode=10009
+CS	0	15:54:13.005	Trade	2026.09.09 01:00:00   sell stop 20.4 JPN225 at 64898.58 sl: 65704.80 tp: 63487.70 (65570.76 / 65580.76)
+CS	0	15:54:13.005	CycleORB (JPN225,M5)	2026.09.09 01:00:00   CTrade::OrderSend: sell stop 20.40 JPN225 at 64898.58 sl: 65704.80 tp: 63487.70 [done]
+CS	0	15:54:13.005	CycleORB (JPN225,M5)	2026.09.09 01:00:00   [CycleORB] PLACE SELL_STOP lots=20.40 @64898.58 sl=65704.80 tp=63487.70 magic=26110503 retcode=10009
+CS	0	15:54:13.012	Trade	2026.09.09 01:14:48   order [#112 buy stop 20.4 JPN225 at 65743.19] triggered
+CS	0	15:54:13.012	Trades	2026.09.09 01:14:48   deal #66 buy 20.4 JPN225 at 65743.67 done (based on order #112)
+CS	0	15:54:13.012	Trade	2026.09.09 01:14:48   deal performed [#66 buy 20.4 JPN225 at 65743.67]
+CS	0	15:54:13.012	Trade	2026.09.09 01:14:48   order performed buy 20.4 at 65743.67 [#112 buy stop 20.4 JPN225 at 65743.19]
+CS	0	15:54:13.012	Trade	2026.09.09 01:14:48   order canceled [#113 sell stop 20.4 JPN225 at 64898.58]
+CS	0	15:54:13.012	CycleORB (JPN225,M5)	2026.09.09 01:14:48   CTrade::OrderSend: cancel #113 [done]
+CS	0	15:54:13.012	CycleORB (JPN225,M5)	2026.09.09 01:14:48   [CycleORB] DELETE order #113 magic=26110503 (TKY OCO)
+CS	0	15:54:13.138	Trade	2026.09.09 06:25:00   market sell 20.4 JPN225, close #112 (65116.26 / 65126.26)
+CS	0	15:54:13.138	Trades	2026.09.09 06:25:00   deal #67 sell 20.4 JPN225 at 65116.26 done (based on order #114)
+CS	0	15:54:13.138	Trade	2026.09.09 06:25:00   deal performed [#67 sell 20.4 JPN225 at 65116.26]
+CS	0	15:54:13.138	Trade	2026.09.09 06:25:00   order performed sell 20.4 at 65116.26 [#114 sell 20.4 JPN225 at 65116.26]
+CS	0	15:54:13.138	CycleORB (JPN225,M5)	2026.09.09 06:25:00   CTrade::OrderSend: market sell 20.40 position #112 JPN225 [done at 65116.26]
+CS	0	15:54:13.138	CycleORB (JPN225,M5)	2026.09.09 06:25:00   [CycleORB] CLOSE position #112 magic=26110503 (TKY time exit)
+CS	0	15:54:13.329	CycleORB (JPN225,M5)	2026.09.10 01:00:00   [CycleORB] RANGE TKY 2026.09.10 00:00 hi=64798.77 lo=64256.14 range=54263pt atr%=37.8 spread=1021.7pt (live 1000pt) cost%=1.9 buffer=2713pt risk=107.40 trend=0
+CS	0	15:54:13.329	Trade	2026.09.10 01:00:00   buy stop 28.9 JPN225 at 64825.90 sl: 64256.14 tp: 65822.98 (64376.07 / 64386.07)
+CS	0	15:54:13.329	CycleORB (JPN225,M5)	2026.09.10 01:00:00   CTrade::OrderSend: buy stop 28.90 JPN225 at 64825.90 sl: 64256.14 tp: 65822.98 [done]
+CS	0	15:54:13.329	CycleORB (JPN225,M5)	2026.09.10 01:00:00   [CycleORB] PLACE BUY_STOP lots=28.90 @64825.90 sl=64256.14 tp=65822.98 magic=26110503 retcode=10009
+CS	0	15:54:13.329	Trade	2026.09.10 01:00:00   sell stop 28.9 JPN225 at 64229.01 sl: 64798.77 tp: 63231.93 (64376.07 / 64386.07)
+CS	0	15:54:13.329	CycleORB (JPN225,M5)	2026.09.10 01:00:00   CTrade::OrderSend: sell stop 28.90 JPN225 at 64229.01 sl: 64798.77 tp: 63231.93 [done]
+CS	0	15:54:13.329	CycleORB (JPN225,M5)	2026.09.10 01:00:00   [CycleORB] PLACE SELL_STOP lots=28.90 @64229.01 sl=64798.77 tp=63231.93 magic=26110503 retcode=10009
+CS	0	15:54:13.342	Trade	2026.09.10 01:33:49   order [#116 sell stop 28.9 JPN225 at 64229.01] triggered
+CS	0	15:54:13.342	Trades	2026.09.10 01:33:49   deal #68 sell 28.9 JPN225 at 64225.62 done (based on order #116)
+CS	0	15:54:13.342	Trade	2026.09.10 01:33:49   deal performed [#68 sell 28.9 JPN225 at 64225.62]
+CS	0	15:54:13.342	Trade	2026.09.10 01:33:49   order performed sell 28.9 at 64225.62 [#116 sell stop 28.9 JPN225 at 64229.01]
+CS	0	15:54:13.342	Trade	2026.09.10 01:33:49   order canceled [#115 buy stop 28.9 JPN225 at 64825.90]
+CS	0	15:54:13.342	CycleORB (JPN225,M5)	2026.09.10 01:33:49   CTrade::OrderSend: cancel #115 [done]
+CS	0	15:54:13.342	CycleORB (JPN225,M5)	2026.09.10 01:33:49   [CycleORB] DELETE order #115 magic=26110503 (TKY OCO)
+CS	0	15:54:13.421	Trade	2026.09.10 04:24:23   stop loss triggered #116 sell 28.9 JPN225 64225.62 sl: 64798.77 tp: 63231.93 [#117 buy 28.9 JPN225 at 64798.77]
+CS	0	15:54:13.421	Trades	2026.09.10 04:24:23   deal #69 buy 28.9 JPN225 at 64810.83 done (based on order #117)
+CS	0	15:54:13.421	Trade	2026.09.10 04:24:23   deal performed [#69 buy 28.9 JPN225 at 64810.83]
+CS	0	15:54:13.421	Trade	2026.09.10 04:24:23   order performed buy 28.9 at 64810.83 [#117 buy 28.9 JPN225 at 64798.77]
+CS	0	15:54:13.637	CycleORB (JPN225,M5)	2026.09.11 01:00:00   [CycleORB] RANGE TKY 2026.09.11 00:00 hi=63647.89 lo=63052.74 range=59515pt atr%=40.6 spread=1021.7pt (live 1000pt) cost%=1.7 buffer=2976pt risk=107.40 trend=0
+CS	0	15:54:13.637	Trade	2026.09.11 01:00:00   buy stop 26.5 JPN225 at 63677.65 sl: 63052.74 tp: 64771.24 (63625.97 / 63635.97)
+CS	0	15:54:13.637	CycleORB (JPN225,M5)	2026.09.11 01:00:00   CTrade::OrderSend: buy stop 26.50 JPN225 at 63677.65 sl: 63052.74 tp: 64771.24 [done]
+CS	0	15:54:13.637	CycleORB (JPN225,M5)	2026.09.11 01:00:00   [CycleORB] PLACE BUY_STOP lots=26.50 @63677.65 sl=63052.74 tp=64771.24 magic=26110503 retcode=10009
+CS	0	15:54:13.637	Trade	2026.09.11 01:00:00   sell stop 26.5 JPN225 at 63022.98 sl: 63647.89 tp: 61929.39 (63625.97 / 63635.97)
+CS	0	15:54:13.637	CycleORB (JPN225,M5)	2026.09.11 01:00:00   CTrade::OrderSend: sell stop 26.50 JPN225 at 63022.98 sl: 63647.89 tp: 61929.39 [done]
+CS	0	15:54:13.637	CycleORB (JPN225,M5)	2026.09.11 01:00:00   [CycleORB] PLACE SELL_STOP lots=26.50 @63022.98 sl=63647.89 tp=61929.39 magic=26110503 retcode=10009
+CS	0	15:54:13.671	Trade	2026.09.11 02:30:00   order canceled [#119 sell stop 26.5 JPN225 at 63022.98]
+CS	0	15:54:13.671	CycleORB (JPN225,M5)	2026.09.11 02:30:00   CTrade::OrderSend: cancel #119 [done]
+CS	0	15:54:13.671	CycleORB (JPN225,M5)	2026.09.11 02:30:00   [CycleORB] DELETE order #119 magic=26110503 (TKY entry window closed)
+CS	0	15:54:13.671	Trade	2026.09.11 02:30:00   order canceled [#118 buy stop 26.5 JPN225 at 63677.65]
+CS	0	15:54:13.671	CycleORB (JPN225,M5)	2026.09.11 02:30:00   CTrade::OrderSend: cancel #118 [done]
+CS	0	15:54:13.671	CycleORB (JPN225,M5)	2026.09.11 02:30:00   [CycleORB] DELETE order #118 magic=26110503 (TKY entry window closed)
+CS	0	15:54:13.887	CycleORB (JPN225,M5)	2026.09.14 01:00:00   [CycleORB] RANGE TKY 2026.09.14 00:00 hi=63278.95 lo=62693.45 range=58550pt atr%=39.5 spread=1021.7pt (live 1000pt) cost%=1.7 buffer=2928pt risk=107.40 trend=0
+CS	0	15:54:13.887	Trade	2026.09.14 01:00:00   buy stop 26.8 JPN225 at 63308.23 sl: 62693.45 tp: 64384.10 (62928.18 / 62938.18)
+CS	0	15:54:13.887	CycleORB (JPN225,M5)	2026.09.14 01:00:00   CTrade::OrderSend: buy stop 26.80 JPN225 at 63308.23 sl: 62693.45 tp: 64384.10 [done]
+CS	0	15:54:13.887	CycleORB (JPN225,M5)	2026.09.14 01:00:00   [CycleORB] PLACE BUY_STOP lots=26.80 @63308.23 sl=62693.45 tp=64384.10 magic=26110503 retcode=10009
+CS	0	15:54:13.887	Trade	2026.09.14 01:00:00   sell stop 26.8 JPN225 at 62664.17 sl: 63278.95 tp: 61588.31 (62928.18 / 62938.18)
+CS	0	15:54:13.887	CycleORB (JPN225,M5)	2026.09.14 01:00:00   CTrade::OrderSend: sell stop 26.80 JPN225 at 62664.17 sl: 63278.95 tp: 61588.31 [done]
+CS	0	15:54:13.887	CycleORB (JPN225,M5)	2026.09.14 01:00:00   [CycleORB] PLACE SELL_STOP lots=26.80 @62664.17 sl=63278.95 tp=61588.31 magic=26110503 retcode=10009
+CS	0	15:54:13.909	Trade	2026.09.14 01:57:21   order [#120 buy stop 26.8 JPN225 at 63308.23] triggered
+CS	0	15:54:13.909	Trades	2026.09.14 01:57:21   deal #70 buy 26.8 JPN225 at 63308.48 done (based on order #120)
+CS	0	15:54:13.909	Trade	2026.09.14 01:57:21   deal performed [#70 buy 26.8 JPN225 at 63308.48]
+CS	0	15:54:13.909	Trade	2026.09.14 01:57:21   order performed buy 26.8 at 63308.48 [#120 buy stop 26.8 JPN225 at 63308.23]
+CS	0	15:54:13.909	Trade	2026.09.14 01:57:21   order canceled [#121 sell stop 26.8 JPN225 at 62664.17]
+CS	0	15:54:13.909	CycleORB (JPN225,M5)	2026.09.14 01:57:21   CTrade::OrderSend: cancel #121 [done]
+CS	0	15:54:13.909	CycleORB (JPN225,M5)	2026.09.14 01:57:21   [CycleORB] DELETE order #121 magic=26110503 (TKY OCO)
+CS	0	15:54:14.022	Trade	2026.09.14 06:25:00   market sell 26.8 JPN225, close #120 (63639.77 / 63649.77)
+CS	0	15:54:14.022	Trades	2026.09.14 06:25:00   deal #71 sell 26.8 JPN225 at 63639.77 done (based on order #122)
+CS	0	15:54:14.022	Trade	2026.09.14 06:25:00   deal performed [#71 sell 26.8 JPN225 at 63639.77]
+CS	0	15:54:14.022	Trade	2026.09.14 06:25:00   order performed sell 26.8 at 63639.77 [#122 sell 26.8 JPN225 at 63639.77]
+CS	0	15:54:14.022	CycleORB (JPN225,M5)	2026.09.14 06:25:00   CTrade::OrderSend: market sell 26.80 position #120 JPN225 [done at 63639.77]
+CS	0	15:54:14.022	CycleORB (JPN225,M5)	2026.09.14 06:25:00   [CycleORB] CLOSE position #120 magic=26110503 (TKY time exit)
+CS	0	15:54:14.181	CycleORB (JPN225,M5)	2026.09.15 01:00:00   [CycleORB] SKIP TKY 2026.09.15 00:00 hi=63819.05 lo=62924.24 range=89481pt atr%=60.8 spread=1021.7pt (live 1000pt) cost%=1.1 (range/ATR outside band)
+CS	0	15:54:14.426	CycleORB (JPN225,M5)	2026.09.16 01:00:00   [CycleORB] SKIP TKY 2026.09.16 00:00 hi=63678.87 lo=63257.67 range=42120pt atr%=28.4 spread=1021.7pt (live 1000pt) cost%=2.4 volpct=21.6 (H1 vol below regime floor)
+CS	0	15:54:14.676	CycleORB (JPN225,M5)	2026.09.17 01:00:00   [CycleORB] RANGE TKY 2026.09.17 00:00 hi=64752.30 lo=63947.07 range=80523pt atr%=54.7 spread=1021.7pt (live 1000pt) cost%=1.3 buffer=4026pt risk=107.40 trend=0
+CS	0	15:54:14.676	Trade	2026.09.17 01:00:00   buy stop 19.8 JPN225 at 64792.56 sl: 63947.07 tp: 66272.17 (64057.43 / 64067.43)
+CS	0	15:54:14.676	CycleORB (JPN225,M5)	2026.09.17 01:00:00   CTrade::OrderSend: buy stop 19.80 JPN225 at 64792.56 sl: 63947.07 tp: 66272.17 [done]
+CS	0	15:54:14.676	CycleORB (JPN225,M5)	2026.09.17 01:00:00   [CycleORB] PLACE BUY_STOP lots=19.80 @64792.56 sl=63947.07 tp=66272.17 magic=26110503 retcode=10009
+CS	0	15:54:14.676	Trade	2026.09.17 01:00:00   sell stop 19.8 JPN225 at 63906.81 sl: 64752.30 tp: 62427.20 (64057.43 / 64067.43)
+CS	0	15:54:14.676	CycleORB (JPN225,M5)	2026.09.17 01:00:00   CTrade::OrderSend: sell stop 19.80 JPN225 at 63906.81 sl: 64752.30 tp: 62427.20 [done]
+CS	0	15:54:14.676	CycleORB (JPN225,M5)	2026.09.17 01:00:00   [CycleORB] PLACE SELL_STOP lots=19.80 @63906.81 sl=64752.30 tp=62427.20 magic=26110503 retcode=10009
+CS	0	15:54:14.706	Trade	2026.09.17 02:02:41   order [#124 sell stop 19.8 JPN225 at 63906.81] triggered
+CS	0	15:54:14.706	Trades	2026.09.17 02:02:41   deal #72 sell 19.8 JPN225 at 63906.74 done (based on order #124)
+CS	0	15:54:14.706	Trade	2026.09.17 02:02:41   deal performed [#72 sell 19.8 JPN225 at 63906.74]
+CS	0	15:54:14.706	Trade	2026.09.17 02:02:41   order performed sell 19.8 at 63906.74 [#124 sell stop 19.8 JPN225 at 63906.81]
+CS	0	15:54:14.706	Trade	2026.09.17 02:02:41   order canceled [#123 buy stop 19.8 JPN225 at 64792.56]
+CS	0	15:54:14.706	CycleORB (JPN225,M5)	2026.09.17 02:02:41   CTrade::OrderSend: cancel #123 [done]
+CS	0	15:54:14.706	CycleORB (JPN225,M5)	2026.09.17 02:02:41   [CycleORB] DELETE order #123 magic=26110503 (TKY OCO)
+CS	0	15:54:14.827	Trade	2026.09.17 06:25:00   market buy 19.8 JPN225, close #124 (64090.66 / 64100.66)
+CS	0	15:54:14.827	Trades	2026.09.17 06:25:00   deal #73 buy 19.8 JPN225 at 64100.66 done (based on order #125)
+CS	0	15:54:14.827	Trade	2026.09.17 06:25:00   deal performed [#73 buy 19.8 JPN225 at 64100.66]
+CS	0	15:54:14.827	Trade	2026.09.17 06:25:00   order performed buy 19.8 at 64100.66 [#125 buy 19.8 JPN225 at 64100.66]
+CS	0	15:54:14.827	CycleORB (JPN225,M5)	2026.09.17 06:25:00   CTrade::OrderSend: market buy 19.80 position #124 JPN225 [done at 64100.66]
+CS	0	15:54:14.827	CycleORB (JPN225,M5)	2026.09.17 06:25:00   [CycleORB] CLOSE position #124 magic=26110503 (TKY time exit)
+CS	0	15:54:15.011	CycleORB (JPN225,M5)	2026.09.18 01:00:00   [CycleORB] SKIP TKY 2026.09.18 00:00 hi=64912.66 lo=64566.33 range=34633pt atr%=24.1 spread=1021.7pt (live 1000pt) cost%=2.9 (range/ATR outside band)
+CS	0	15:54:15.261	CycleORB (JPN225,M5)	2026.09.21 01:00:00   [CycleORB] SKIP TKY 2026.09.21 00:00 hi=65501.13 lo=65057.95 range=44318pt atr%=31.4 spread=1021.7pt (live 1000pt) cost%=2.3 volpct=13.8 (H1 vol below regime floor)
+CS	0	15:54:15.482	CycleORB (JPN225,M5)	2026.09.22 01:00:00   [CycleORB] SKIP TKY 2026.09.22 00:00 hi=67137.46 lo=66716.73 range=42073pt atr%=29.7 spread=1021.7pt (live 1000pt) cost%=2.4 volpct=1.0 (H1 vol below regime floor)
+CS	0	15:54:15.690	CycleORB (JPN225,M5)	2026.09.23 01:00:00   [CycleORB] SKIP TKY 2026.09.23 00:00 hi=67292.31 lo=66816.30 range=47601pt atr%=32.6 spread=1021.7pt (live 1000pt) cost%=2.1 volpct=12.2 (H1 vol below regime floor)
+CS	0	15:54:15.916	CycleORB (JPN225,M5)	2026.09.24 01:00:00   [CycleORB] SKIP TKY 2026.09.24 00:00 hi=66217.52 lo=65627.16 range=59036pt atr%=39.2 spread=1021.7pt (live 1000pt) cost%=1.7 volpct=7.2 (H1 vol below regime floor)
+CS	0	15:54:16.179	CycleORB (JPN225,M5)	2026.09.25 01:00:00   [CycleORB] RANGE TKY 2026.09.25 00:00 hi=65919.23 lo=65560.56 range=35867pt atr%=25.0 spread=1021.7pt (live 1000pt) cost%=2.8 buffer=2043pt risk=107.40 trend=0
+CS	0	15:54:16.179	Trade	2026.09.25 01:00:00   buy stop 44.9 JPN225 at 65939.66 sl: 65560.56 tp: 66603.09 (65707.81 / 65717.81)
+CS	0	15:54:16.179	CycleORB (JPN225,M5)	2026.09.25 01:00:00   CTrade::OrderSend: buy stop 44.90 JPN225 at 65939.66 sl: 65560.56 tp: 66603.09 [done]
+CS	0	15:54:16.179	CycleORB (JPN225,M5)	2026.09.25 01:00:00   [CycleORB] PLACE BUY_STOP lots=44.90 @65939.66 sl=65560.56 tp=66603.09 magic=26110503 retcode=10009
+CS	0	15:54:16.179	Trade	2026.09.25 01:00:00   sell stop 44.9 JPN225 at 65540.13 sl: 65919.23 tp: 64876.71 (65707.81 / 65717.81)
+CS	0	15:54:16.179	CycleORB (JPN225,M5)	2026.09.25 01:00:00   CTrade::OrderSend: sell stop 44.90 JPN225 at 65540.13 sl: 65919.23 tp: 64876.71 [done]
+CS	0	15:54:16.179	CycleORB (JPN225,M5)	2026.09.25 01:00:00   [CycleORB] PLACE SELL_STOP lots=44.90 @65540.13 sl=65919.23 tp=64876.71 magic=26110503 retcode=10009
+CS	0	15:54:16.183	Trade	2026.09.25 01:08:58   order [#126 buy stop 44.9 JPN225 at 65939.66] triggered
+CS	0	15:54:16.183	Trades	2026.09.25 01:08:58   deal #74 buy 44.9 JPN225 at 65943.79 done (based on order #126)
+CS	0	15:54:16.183	Trade	2026.09.25 01:08:58   deal performed [#74 buy 44.9 JPN225 at 65943.79]
+CS	0	15:54:16.183	Trade	2026.09.25 01:08:58   order performed buy 44.9 at 65943.79 [#126 buy stop 44.9 JPN225 at 65939.66]
+CS	0	15:54:16.183	Trade	2026.09.25 01:08:58   order canceled [#127 sell stop 44.9 JPN225 at 65540.13]
+CS	0	15:54:16.183	CycleORB (JPN225,M5)	2026.09.25 01:08:58   CTrade::OrderSend: cancel #127 [done]
+CS	0	15:54:16.183	CycleORB (JPN225,M5)	2026.09.25 01:08:58   [CycleORB] DELETE order #127 magic=26110503 (TKY OCO)
+CS	0	15:54:16.321	Trade	2026.09.25 06:25:00   market sell 44.9 JPN225, close #126 (66374.63 / 66384.63)
+CS	0	15:54:16.321	Trades	2026.09.25 06:25:00   deal #75 sell 44.9 JPN225 at 66374.63 done (based on order #128)
+CS	0	15:54:16.321	Trade	2026.09.25 06:25:00   deal performed [#75 sell 44.9 JPN225 at 66374.63]
+CS	0	15:54:16.321	Trade	2026.09.25 06:25:00   order performed sell 44.9 at 66374.63 [#128 sell 44.9 JPN225 at 66374.63]
+CS	0	15:54:16.321	CycleORB (JPN225,M5)	2026.09.25 06:25:00   CTrade::OrderSend: market sell 44.90 position #126 JPN225 [done at 66374.63]
+CS	0	15:54:16.321	CycleORB (JPN225,M5)	2026.09.25 06:25:00   [CycleORB] CLOSE position #126 magic=26110503 (TKY time exit)
+CS	0	15:54:16.535	CycleORB (JPN225,M5)	2026.09.28 01:00:00   [CycleORB] SKIP TKY 2026.09.28 00:00 hi=67008.85 lo=66411.86 range=59699pt atr%=46.6 spread=1021.7pt (live 1000pt) cost%=1.7 volpct=22.4 (H1 vol below regime floor)
+CS	0	15:54:16.797	CycleORB (JPN225,M5)	2026.09.29 01:00:00   [CycleORB] RANGE TKY 2026.09.29 00:00 hi=65773.41 lo=65187.35 range=58606pt atr%=46.1 spread=1021.7pt (live 1000pt) cost%=1.7 buffer=2930pt risk=107.40 trend=0
+CS	0	15:54:16.797	Trade	2026.09.29 01:00:00   buy stop 27.4 JPN225 at 65802.71 sl: 65187.35 tp: 66879.59 (65213.74 / 65223.74)
+CS	0	15:54:16.797	CycleORB (JPN225,M5)	2026.09.29 01:00:00   CTrade::OrderSend: buy stop 27.40 JPN225 at 65802.71 sl: 65187.35 tp: 66879.59 [done]
+CS	0	15:54:16.797	CycleORB (JPN225,M5)	2026.09.29 01:00:00   [CycleORB] PLACE BUY_STOP lots=27.40 @65802.71 sl=65187.35 tp=66879.59 magic=26110503 retcode=10009
+CS	0	15:54:16.797	Trade	2026.09.29 01:00:00   sell stop 27.4 JPN225 at 65158.05 sl: 65773.41 tp: 64081.17 (65213.74 / 65223.74)
+CS	0	15:54:16.797	CycleORB (JPN225,M5)	2026.09.29 01:00:00   CTrade::OrderSend: sell stop 27.40 JPN225 at 65158.05 sl: 65773.41 tp: 64081.17 [done]
+CS	0	15:54:16.797	CycleORB (JPN225,M5)	2026.09.29 01:00:00   [CycleORB] PLACE SELL_STOP lots=27.40 @65158.05 sl=65773.41 tp=64081.17 magic=26110503 retcode=10009
+CS	0	15:54:16.798	Trade	2026.09.29 01:06:14   order [#130 sell stop 27.4 JPN225 at 65158.05] triggered
+CS	0	15:54:16.798	Trades	2026.09.29 01:06:14   deal #76 sell 27.4 JPN225 at 65153.91 done (based on order #130)
+CS	0	15:54:16.798	Trade	2026.09.29 01:06:14   deal performed [#76 sell 27.4 JPN225 at 65153.91]
+CS	0	15:54:16.798	Trade	2026.09.29 01:06:14   order performed sell 27.4 at 65153.91 [#130 sell stop 27.4 JPN225 at 65158.05]
+CS	0	15:54:16.798	Trade	2026.09.29 01:06:14   order canceled [#129 buy stop 27.4 JPN225 at 65802.71]
+CS	0	15:54:16.798	CycleORB (JPN225,M5)	2026.09.29 01:06:14   CTrade::OrderSend: cancel #129 [done]
+CS	0	15:54:16.798	CycleORB (JPN225,M5)	2026.09.29 01:06:14   [CycleORB] DELETE order #129 magic=26110503 (TKY OCO)
+CS	0	15:54:16.925	Trade	2026.09.29 06:25:00   market buy 27.4 JPN225, close #130 (65208.09 / 65218.09)
+CS	0	15:54:16.925	Trades	2026.09.29 06:25:00   deal #77 buy 27.4 JPN225 at 65218.09 done (based on order #131)
+CS	0	15:54:16.925	Trade	2026.09.29 06:25:00   deal performed [#77 buy 27.4 JPN225 at 65218.09]
+CS	0	15:54:16.925	Trade	2026.09.29 06:25:00   order performed buy 27.4 at 65218.09 [#131 buy 27.4 JPN225 at 65218.09]
+CS	0	15:54:16.925	CycleORB (JPN225,M5)	2026.09.29 06:25:00   CTrade::OrderSend: market buy 27.40 position #130 JPN225 [done at 65218.09]
+CS	0	15:54:16.925	CycleORB (JPN225,M5)	2026.09.29 06:25:00   [CycleORB] CLOSE position #130 magic=26110503 (TKY time exit)
+CS	0	15:54:17.123	CycleORB (JPN225,M5)	2026.09.30 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:54:17.442	CycleORB (JPN225,M5)	2026.10.01 00:00:00   [CycleORB] CYCLE_END 202609 capital=10740.35 realized=-57.88 floating=0.00 pnl=-0.54% peak=0.61% state=ACTIVE 
+CS	0	15:54:17.442	CycleORB (JPN225,M5)	2026.10.01 00:00:00   [CycleORB] CYCLE_BEGIN 202610 capital=10682.47 realized=0.00 floating=0.00 pnl=0.00% peak=0.00% state=ACTIVE 
+CS	0	15:54:17.460	CycleORB (JPN225,M5)	2026.10.01 01:00:00   [CycleORB] RANGE TKY 2026.10.01 00:00 hi=67737.87 lo=67081.32 range=65655pt atr%=50.3 spread=1021.7pt (live 1000pt) cost%=1.6 buffer=3283pt risk=106.82 trend=0
+CS	0	15:54:17.460	Trade	2026.10.01 01:00:00   buy stop 24.5 JPN225 at 67770.70 sl: 67081.32 tp: 68977.11 (67732.75 / 67742.75)
+CS	0	15:54:17.460	CycleORB (JPN225,M5)	2026.10.01 01:00:00   CTrade::OrderSend: buy stop 24.50 JPN225 at 67770.70 sl: 67081.32 tp: 68977.11 [done]
+CS	0	15:54:17.460	CycleORB (JPN225,M5)	2026.10.01 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.50 @67770.70 sl=67081.32 tp=68977.11 magic=26110503 retcode=10009
+CS	0	15:54:17.460	Trade	2026.10.01 01:00:00   sell stop 24.5 JPN225 at 67048.49 sl: 67737.87 tp: 65842.08 (67732.75 / 67742.75)
+CS	0	15:54:17.460	CycleORB (JPN225,M5)	2026.10.01 01:00:00   CTrade::OrderSend: sell stop 24.50 JPN225 at 67048.49 sl: 67737.87 tp: 65842.08 [done]
+CS	0	15:54:17.460	CycleORB (JPN225,M5)	2026.10.01 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.50 @67048.49 sl=67737.87 tp=65842.08 magic=26110503 retcode=10009
+CS	0	15:54:17.461	Trade	2026.10.01 01:01:38   order [#132 buy stop 24.5 JPN225 at 67770.70] triggered
+CS	0	15:54:17.461	Trades	2026.10.01 01:01:38   deal #78 buy 24.5 JPN225 at 67775.26 done (based on order #132)
+CS	0	15:54:17.461	Trade	2026.10.01 01:01:38   deal performed [#78 buy 24.5 JPN225 at 67775.26]
+CS	0	15:54:17.461	Trade	2026.10.01 01:01:38   order performed buy 24.5 at 67775.26 [#132 buy stop 24.5 JPN225 at 67770.70]
+CS	0	15:54:17.461	Trade	2026.10.01 01:01:38   order canceled [#133 sell stop 24.5 JPN225 at 67048.49]
+CS	0	15:54:17.461	CycleORB (JPN225,M5)	2026.10.01 01:01:38   CTrade::OrderSend: cancel #133 [done]
+CS	0	15:54:17.461	CycleORB (JPN225,M5)	2026.10.01 01:01:38   [CycleORB] DELETE order #133 magic=26110503 (TKY OCO)
+CS	0	15:54:17.602	Trade	2026.10.01 05:54:16   take profit triggered #132 buy 24.5 JPN225 67775.26 sl: 67081.32 tp: 68977.11 [#134 sell 24.5 JPN225 at 68977.11]
+CS	0	15:54:17.602	Trades	2026.10.01 05:54:16   deal #79 sell 24.5 JPN225 at 68977.12 done (based on order #134)
+CS	0	15:54:17.602	Trade	2026.10.01 05:54:16   deal performed [#79 sell 24.5 JPN225 at 68977.12]
+CS	0	15:54:17.602	Trade	2026.10.01 05:54:16   order performed sell 24.5 at 68977.12 [#134 sell 24.5 JPN225 at 68977.11]
+CS	0	15:54:17.802	CycleORB (JPN225,M5)	2026.10.02 01:00:00   [CycleORB] RANGE TKY 2026.10.02 00:00 hi=68724.13 lo=68144.24 range=57989pt atr%=42.5 spread=1021.7pt (live 1000pt) cost%=1.8 buffer=2899pt risk=106.82 trend=0
+CS	0	15:54:17.802	Trade	2026.10.02 01:00:00   buy stop 27.7 JPN225 at 68753.12 sl: 68144.24 tp: 69818.66 (68433.62 / 68443.62)
+CS	0	15:54:17.802	CycleORB (JPN225,M5)	2026.10.02 01:00:00   CTrade::OrderSend: buy stop 27.70 JPN225 at 68753.12 sl: 68144.24 tp: 69818.66 [done]
+CS	0	15:54:17.802	CycleORB (JPN225,M5)	2026.10.02 01:00:00   [CycleORB] PLACE BUY_STOP lots=27.70 @68753.12 sl=68144.24 tp=69818.66 magic=26110503 retcode=10009
+CS	0	15:54:17.802	Trade	2026.10.02 01:00:00   sell stop 27.7 JPN225 at 68115.25 sl: 68724.13 tp: 67049.71 (68433.62 / 68443.62)
+CS	0	15:54:17.802	CycleORB (JPN225,M5)	2026.10.02 01:00:00   CTrade::OrderSend: sell stop 27.70 JPN225 at 68115.25 sl: 68724.13 tp: 67049.71 [done]
+CS	0	15:54:17.802	CycleORB (JPN225,M5)	2026.10.02 01:00:00   [CycleORB] PLACE SELL_STOP lots=27.70 @68115.25 sl=68724.13 tp=67049.71 magic=26110503 retcode=10009
+CS	0	15:54:17.817	Trade	2026.10.02 01:46:09   order [#136 sell stop 27.7 JPN225 at 68115.25] triggered
+CS	0	15:54:17.817	Trades	2026.10.02 01:46:09   deal #80 sell 27.7 JPN225 at 68114.50 done (based on order #136)
+CS	0	15:54:17.817	Trade	2026.10.02 01:46:09   deal performed [#80 sell 27.7 JPN225 at 68114.50]
+CS	0	15:54:17.817	Trade	2026.10.02 01:46:09   order performed sell 27.7 at 68114.50 [#136 sell stop 27.7 JPN225 at 68115.25]
+CS	0	15:54:17.817	Trade	2026.10.02 01:46:09   order canceled [#135 buy stop 27.7 JPN225 at 68753.12]
+CS	0	15:54:17.817	CycleORB (JPN225,M5)	2026.10.02 01:46:09   CTrade::OrderSend: cancel #135 [done]
+CS	0	15:54:17.817	CycleORB (JPN225,M5)	2026.10.02 01:46:09   [CycleORB] DELETE order #135 magic=26110503 (TKY OCO)
+CS	0	15:54:17.924	Trade	2026.10.02 06:25:00   market buy 27.7 JPN225, close #136 (68184.94 / 68194.94)
+CS	0	15:54:17.924	Trades	2026.10.02 06:25:00   deal #81 buy 27.7 JPN225 at 68194.94 done (based on order #137)
+CS	0	15:54:17.924	Trade	2026.10.02 06:25:00   deal performed [#81 buy 27.7 JPN225 at 68194.94]
+CS	0	15:54:17.924	Trade	2026.10.02 06:25:00   order performed buy 27.7 at 68194.94 [#137 buy 27.7 JPN225 at 68194.94]
+CS	0	15:54:17.925	CycleORB (JPN225,M5)	2026.10.02 06:25:00   CTrade::OrderSend: market buy 27.70 position #136 JPN225 [done at 68194.94]
+CS	0	15:54:17.925	CycleORB (JPN225,M5)	2026.10.02 06:25:00   [CycleORB] CLOSE position #136 magic=26110503 (TKY time exit)
+CS	0	15:54:18.136	CycleORB (JPN225,M5)	2026.10.05 01:00:00   [CycleORB] RANGE TKY 2026.10.05 00:00 hi=69918.74 lo=69370.01 range=54873pt atr%=42.3 spread=1021.7pt (live 1000pt) cost%=1.9 buffer=2744pt risk=106.82 trend=0
+CS	0	15:54:18.136	Trade	2026.10.05 01:00:00   buy stop 29.2 JPN225 at 69946.18 sl: 69370.01 tp: 70954.48 (69834.79 / 69844.79)
+CS	0	15:54:18.136	CycleORB (JPN225,M5)	2026.10.05 01:00:00   CTrade::OrderSend: buy stop 29.20 JPN225 at 69946.18 sl: 69370.01 tp: 70954.48 [done]
+CS	0	15:54:18.136	CycleORB (JPN225,M5)	2026.10.05 01:00:00   [CycleORB] PLACE BUY_STOP lots=29.20 @69946.18 sl=69370.01 tp=70954.48 magic=26110503 retcode=10009
+CS	0	15:54:18.136	Trade	2026.10.05 01:00:00   sell stop 29.2 JPN225 at 69342.57 sl: 69918.74 tp: 68334.27 (69834.79 / 69844.79)
+CS	0	15:54:18.136	CycleORB (JPN225,M5)	2026.10.05 01:00:00   CTrade::OrderSend: sell stop 29.20 JPN225 at 69342.57 sl: 69918.74 tp: 68334.27 [done]
+CS	0	15:54:18.136	CycleORB (JPN225,M5)	2026.10.05 01:00:00   [CycleORB] PLACE SELL_STOP lots=29.20 @69342.57 sl=69918.74 tp=68334.27 magic=26110503 retcode=10009
+CS	0	15:54:18.149	Trade	2026.10.05 01:27:09   order [#138 buy stop 29.2 JPN225 at 69946.18] triggered
+CS	0	15:54:18.149	Trades	2026.10.05 01:27:09   deal #82 buy 29.2 JPN225 at 69953.88 done (based on order #138)
+CS	0	15:54:18.149	Trade	2026.10.05 01:27:09   deal performed [#82 buy 29.2 JPN225 at 69953.88]
+CS	0	15:54:18.149	Trade	2026.10.05 01:27:09   order performed buy 29.2 at 69953.88 [#138 buy stop 29.2 JPN225 at 69946.18]
+CS	0	15:54:18.149	Trade	2026.10.05 01:27:09   order canceled [#139 sell stop 29.2 JPN225 at 69342.57]
+CS	0	15:54:18.149	CycleORB (JPN225,M5)	2026.10.05 01:27:09   CTrade::OrderSend: cancel #139 [done]
+CS	0	15:54:18.149	CycleORB (JPN225,M5)	2026.10.05 01:27:09   [CycleORB] DELETE order #139 magic=26110503 (TKY OCO)
+CS	0	15:54:18.280	Trade	2026.10.05 06:25:00   market sell 29.2 JPN225, close #138 (69945.18 / 69955.18)
+CS	0	15:54:18.280	Trades	2026.10.05 06:25:00   deal #83 sell 29.2 JPN225 at 69945.18 done (based on order #140)
+CS	0	15:54:18.280	Trade	2026.10.05 06:25:00   deal performed [#83 sell 29.2 JPN225 at 69945.18]
+CS	0	15:54:18.280	Trade	2026.10.05 06:25:00   order performed sell 29.2 at 69945.18 [#140 sell 29.2 JPN225 at 69945.18]
+CS	0	15:54:18.280	CycleORB (JPN225,M5)	2026.10.05 06:25:00   CTrade::OrderSend: market sell 29.20 position #138 JPN225 [done at 69945.18]
+CS	0	15:54:18.280	CycleORB (JPN225,M5)	2026.10.05 06:25:00   [CycleORB] CLOSE position #138 magic=26110503 (TKY time exit)
+CS	0	15:54:18.487	CycleORB (JPN225,M5)	2026.10.06 01:00:00   [CycleORB] SKIP TKY 2026.10.06 00:00 hi=70343.64 lo=69787.77 range=55587pt atr%=44.4 spread=1021.7pt (live 1000pt) cost%=1.8 volpct=13.4 (H1 vol below regime floor)
+CS	0	15:54:18.730	CycleORB (JPN225,M5)	2026.10.07 01:00:00   [CycleORB] SKIP TKY 2026.10.07 00:00 hi=70786.34 lo=70426.23 range=36011pt atr%=27.2 spread=1021.7pt (live 1000pt) cost%=2.8 volpct=8.8 (H1 vol below regime floor)
+CS	0	15:54:18.952	CycleORB (JPN225,M5)	2026.10.08 01:00:00   [CycleORB] SKIP TKY 2026.10.08 00:00 hi=69936.18 lo=69161.26 range=77492pt atr%=58.5 spread=1021.7pt (live 1000pt) cost%=1.3 volpct=25.0 (H1 vol below regime floor)
+CS	0	15:54:19.192	CycleORB (JPN225,M5)	2026.10.09 01:00:00   [CycleORB] RANGE TKY 2026.10.09 00:00 hi=68657.81 lo=68123.85 range=53396pt atr%=38.3 spread=1021.7pt (live 1000pt) cost%=1.9 buffer=2670pt risk=106.82 trend=0
+CS	0	15:54:19.192	Trade	2026.10.09 01:00:00   buy stop 30 JPN225 at 68684.51 sl: 68123.85 tp: 69665.66 (68310.28 / 68320.28)
+CS	0	15:54:19.192	CycleORB (JPN225,M5)	2026.10.09 01:00:00   CTrade::OrderSend: buy stop 30.00 JPN225 at 68684.51 sl: 68123.85 tp: 69665.66 [done]
+CS	0	15:54:19.192	CycleORB (JPN225,M5)	2026.10.09 01:00:00   [CycleORB] PLACE BUY_STOP lots=30.00 @68684.51 sl=68123.85 tp=69665.66 magic=26110503 retcode=10009
+CS	0	15:54:19.192	Trade	2026.10.09 01:00:00   sell stop 30 JPN225 at 68097.15 sl: 68657.81 tp: 67115.99 (68310.28 / 68320.28)
+CS	0	15:54:19.192	CycleORB (JPN225,M5)	2026.10.09 01:00:00   CTrade::OrderSend: sell stop 30.00 JPN225 at 68097.15 sl: 68657.81 tp: 67115.99 [done]
+CS	0	15:54:19.192	CycleORB (JPN225,M5)	2026.10.09 01:00:00   [CycleORB] PLACE SELL_STOP lots=30.00 @68097.15 sl=68657.81 tp=67115.99 magic=26110503 retcode=10009
+CS	0	15:54:19.226	Trade	2026.10.09 02:30:00   order canceled [#142 sell stop 30 JPN225 at 68097.15]
+CS	0	15:54:19.226	CycleORB (JPN225,M5)	2026.10.09 02:30:00   CTrade::OrderSend: cancel #142 [done]
+CS	0	15:54:19.226	CycleORB (JPN225,M5)	2026.10.09 02:30:00   [CycleORB] DELETE order #142 magic=26110503 (TKY entry window closed)
+CS	0	15:54:19.226	Trade	2026.10.09 02:30:00   order canceled [#141 buy stop 30 JPN225 at 68684.51]
+CS	0	15:54:19.226	CycleORB (JPN225,M5)	2026.10.09 02:30:00   CTrade::OrderSend: cancel #141 [done]
+CS	0	15:54:19.226	CycleORB (JPN225,M5)	2026.10.09 02:30:00   [CycleORB] DELETE order #141 magic=26110503 (TKY entry window closed)
+CS	0	15:54:19.446	CycleORB (JPN225,M5)	2026.10.12 01:00:00   [CycleORB] SKIP TKY 2026.10.12 00:00 hi=69183.04 lo=68871.07 range=31197pt atr%=23.4 spread=1021.7pt (live 1000pt) cost%=3.3 (range/ATR outside band)
+CS	0	15:54:19.676	CycleORB (JPN225,M5)	2026.10.13 01:00:00   [CycleORB] SKIP TKY 2026.10.13 00:00 hi=67914.95 lo=67388.51 range=52644pt atr%=39.1 spread=1021.7pt (live 1000pt) cost%=1.9 volpct=6.8 (H1 vol below regime floor)
+CS	0	15:54:19.962	CycleORB (JPN225,M5)	2026.10.14 01:00:00   [CycleORB] SKIP TKY 2026.10.14 00:00 hi=68144.68 lo=67806.20 range=33848pt atr%=24.4 spread=1021.7pt (live 1000pt) cost%=3.0 (range/ATR outside band)
+CS	0	15:54:20.196	CycleORB (JPN225,M5)	2026.10.15 01:00:00   [CycleORB] SKIP TKY 2026.10.15 00:00 hi=66123.51 lo=65119.14 range=100437pt atr%=68.7 spread=1021.7pt (live 1000pt) cost%=1.0 (range/ATR outside band)
+CS	0	15:54:20.442	CycleORB (JPN225,M5)	2026.10.16 01:00:00   [CycleORB] RANGE TKY 2026.10.16 00:00 hi=65608.63 lo=64946.30 range=66233pt atr%=44.6 spread=1021.7pt (live 1000pt) cost%=1.5 buffer=3312pt risk=106.82 trend=0
+CS	0	15:54:20.442	Trade	2026.10.16 01:00:00   buy stop 24.3 JPN225 at 65641.75 sl: 64946.30 tp: 66858.79 (65500.95 / 65510.95)
+CS	0	15:54:20.442	CycleORB (JPN225,M5)	2026.10.16 01:00:00   CTrade::OrderSend: buy stop 24.30 JPN225 at 65641.75 sl: 64946.30 tp: 66858.79 [done]
+CS	0	15:54:20.442	CycleORB (JPN225,M5)	2026.10.16 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.30 @65641.75 sl=64946.30 tp=66858.79 magic=26110503 retcode=10009
+CS	0	15:54:20.442	Trade	2026.10.16 01:00:00   sell stop 24.3 JPN225 at 64913.18 sl: 65608.63 tp: 63696.14 (65500.95 / 65510.95)
+CS	0	15:54:20.442	CycleORB (JPN225,M5)	2026.10.16 01:00:00   CTrade::OrderSend: sell stop 24.30 JPN225 at 64913.18 sl: 65608.63 tp: 63696.14 [done]
+CS	0	15:54:20.442	CycleORB (JPN225,M5)	2026.10.16 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.30 @64913.18 sl=65608.63 tp=63696.14 magic=26110503 retcode=10009
+CS	0	15:54:20.447	Trade	2026.10.16 01:14:42   order [#143 buy stop 24.3 JPN225 at 65641.75] triggered
+CS	0	15:54:20.447	Trades	2026.10.16 01:14:42   deal #84 buy 24.3 JPN225 at 65648.49 done (based on order #143)
+CS	0	15:54:20.447	Trade	2026.10.16 01:14:42   deal performed [#84 buy 24.3 JPN225 at 65648.49]
+CS	0	15:54:20.447	Trade	2026.10.16 01:14:42   order performed buy 24.3 at 65648.49 [#143 buy stop 24.3 JPN225 at 65641.75]
+CS	0	15:54:20.447	Trade	2026.10.16 01:14:42   order canceled [#144 sell stop 24.3 JPN225 at 64913.18]
+CS	0	15:54:20.447	CycleORB (JPN225,M5)	2026.10.16 01:14:42   CTrade::OrderSend: cancel #144 [done]
+CS	0	15:54:20.447	CycleORB (JPN225,M5)	2026.10.16 01:14:42   [CycleORB] DELETE order #144 magic=26110503 (TKY OCO)
+CS	0	15:54:20.566	Trade	2026.10.16 06:25:00   market sell 24.3 JPN225, close #143 (65378.51 / 65388.51)
+CS	0	15:54:20.566	Trades	2026.10.16 06:25:00   deal #85 sell 24.3 JPN225 at 65378.51 done (based on order #145)
+CS	0	15:54:20.566	Trade	2026.10.16 06:25:00   deal performed [#85 sell 24.3 JPN225 at 65378.51]
+CS	0	15:54:20.566	Trade	2026.10.16 06:25:00   order performed sell 24.3 at 65378.51 [#145 sell 24.3 JPN225 at 65378.51]
+CS	0	15:54:20.566	CycleORB (JPN225,M5)	2026.10.16 06:25:00   CTrade::OrderSend: market sell 24.30 position #143 JPN225 [done at 65378.51]
+CS	0	15:54:20.566	CycleORB (JPN225,M5)	2026.10.16 06:25:00   [CycleORB] CLOSE position #143 magic=26110503 (TKY time exit)
+CS	0	15:54:20.800	CycleORB (JPN225,M5)	2026.10.19 01:00:00   [CycleORB] RANGE TKY 2026.10.19 00:00 hi=64365.55 lo=63764.89 range=60066pt atr%=41.5 spread=1021.7pt (live 1000pt) cost%=1.7 buffer=3003pt risk=106.82 trend=0
+CS	0	15:54:20.800	Trade	2026.10.19 01:00:00   buy stop 26.7 JPN225 at 64395.58 sl: 63764.89 tp: 65499.29 (64030.00 / 64040.00)
+CS	0	15:54:20.800	CycleORB (JPN225,M5)	2026.10.19 01:00:00   CTrade::OrderSend: buy stop 26.70 JPN225 at 64395.58 sl: 63764.89 tp: 65499.29 [done]
+CS	0	15:54:20.800	CycleORB (JPN225,M5)	2026.10.19 01:00:00   [CycleORB] PLACE BUY_STOP lots=26.70 @64395.58 sl=63764.89 tp=65499.29 magic=26110503 retcode=10009
+CS	0	15:54:20.800	Trade	2026.10.19 01:00:00   sell stop 26.7 JPN225 at 63734.86 sl: 64365.55 tp: 62631.15 (64030.00 / 64040.00)
+CS	0	15:54:20.800	CycleORB (JPN225,M5)	2026.10.19 01:00:00   CTrade::OrderSend: sell stop 26.70 JPN225 at 63734.86 sl: 64365.55 tp: 62631.15 [done]
+CS	0	15:54:20.800	CycleORB (JPN225,M5)	2026.10.19 01:00:00   [CycleORB] PLACE SELL_STOP lots=26.70 @63734.86 sl=64365.55 tp=62631.15 magic=26110503 retcode=10009
+CS	0	15:54:20.805	Trade	2026.10.19 01:09:06   order [#146 buy stop 26.7 JPN225 at 64395.58] triggered
+CS	0	15:54:20.805	Trades	2026.10.19 01:09:06   deal #86 buy 26.7 JPN225 at 64396.43 done (based on order #146)
+CS	0	15:54:20.805	Trade	2026.10.19 01:09:06   deal performed [#86 buy 26.7 JPN225 at 64396.43]
+CS	0	15:54:20.805	Trade	2026.10.19 01:09:06   order performed buy 26.7 at 64396.43 [#146 buy stop 26.7 JPN225 at 64395.58]
+CS	0	15:54:20.805	Trade	2026.10.19 01:09:06   order canceled [#147 sell stop 26.7 JPN225 at 63734.86]
+CS	0	15:54:20.805	CycleORB (JPN225,M5)	2026.10.19 01:09:06   CTrade::OrderSend: cancel #147 [done]
+CS	0	15:54:20.806	CycleORB (JPN225,M5)	2026.10.19 01:09:06   [CycleORB] DELETE order #147 magic=26110503 (TKY OCO)
+CS	0	15:54:20.993	Trade	2026.10.19 06:25:00   market sell 26.7 JPN225, close #146 (64883.10 / 64893.10)
+CS	0	15:54:20.993	Trades	2026.10.19 06:25:00   deal #87 sell 26.7 JPN225 at 64883.10 done (based on order #148)
+CS	0	15:54:20.993	Trade	2026.10.19 06:25:00   deal performed [#87 sell 26.7 JPN225 at 64883.10]
+CS	0	15:54:20.993	Trade	2026.10.19 06:25:00   order performed sell 26.7 at 64883.10 [#148 sell 26.7 JPN225 at 64883.10]
+CS	0	15:54:20.994	CycleORB (JPN225,M5)	2026.10.19 06:25:00   CTrade::OrderSend: market sell 26.70 position #146 JPN225 [done at 64883.10]
+CS	0	15:54:20.994	CycleORB (JPN225,M5)	2026.10.19 06:25:00   [CycleORB] CLOSE position #146 magic=26110503 (TKY time exit)
+CS	0	15:54:21.209	CycleORB (JPN225,M5)	2026.10.20 01:00:00   [CycleORB] RANGE TKY 2026.10.20 00:00 hi=64734.01 lo=64011.22 range=72279pt atr%=51.4 spread=1021.7pt (live 1000pt) cost%=1.4 buffer=3614pt risk=106.82 trend=0
+CS	0	15:54:21.209	Trade	2026.10.20 01:00:00   buy stop 22.3 JPN225 at 64770.15 sl: 64011.22 tp: 66098.28 (64141.87 / 64151.87)
+CS	0	15:54:21.209	CycleORB (JPN225,M5)	2026.10.20 01:00:00   CTrade::OrderSend: buy stop 22.30 JPN225 at 64770.15 sl: 64011.22 tp: 66098.28 [done]
+CS	0	15:54:21.209	CycleORB (JPN225,M5)	2026.10.20 01:00:00   [CycleORB] PLACE BUY_STOP lots=22.30 @64770.15 sl=64011.22 tp=66098.28 magic=26110503 retcode=10009
+CS	0	15:54:21.209	Trade	2026.10.20 01:00:00   sell stop 22.3 JPN225 at 63975.08 sl: 64734.01 tp: 62646.95 (64141.87 / 64151.87)
+CS	0	15:54:21.209	CycleORB (JPN225,M5)	2026.10.20 01:00:00   CTrade::OrderSend: sell stop 22.30 JPN225 at 63975.08 sl: 64734.01 tp: 62646.95 [done]
+CS	0	15:54:21.209	CycleORB (JPN225,M5)	2026.10.20 01:00:00   [CycleORB] PLACE SELL_STOP lots=22.30 @63975.08 sl=64734.01 tp=62646.95 magic=26110503 retcode=10009
+CS	0	15:54:21.214	Trade	2026.10.20 01:12:26   order [#150 sell stop 22.3 JPN225 at 63975.08] triggered
+CS	0	15:54:21.214	Trades	2026.10.20 01:12:26   deal #88 sell 22.3 JPN225 at 63974.42 done (based on order #150)
+CS	0	15:54:21.214	Trade	2026.10.20 01:12:26   deal performed [#88 sell 22.3 JPN225 at 63974.42]
+CS	0	15:54:21.214	Trade	2026.10.20 01:12:26   order performed sell 22.3 at 63974.42 [#150 sell stop 22.3 JPN225 at 63975.08]
+CS	0	15:54:21.214	Trade	2026.10.20 01:12:26   order canceled [#149 buy stop 22.3 JPN225 at 64770.15]
+CS	0	15:54:21.214	CycleORB (JPN225,M5)	2026.10.20 01:12:26   CTrade::OrderSend: cancel #149 [done]
+CS	0	15:54:21.214	CycleORB (JPN225,M5)	2026.10.20 01:12:26   [CycleORB] DELETE order #149 magic=26110503 (TKY OCO)
+CS	0	15:54:21.374	Trade	2026.10.20 06:25:00   market buy 22.3 JPN225, close #150 (64027.03 / 64037.03)
+CS	0	15:54:21.374	Trades	2026.10.20 06:25:00   deal #89 buy 22.3 JPN225 at 64037.03 done (based on order #151)
+CS	0	15:54:21.374	Trade	2026.10.20 06:25:00   deal performed [#89 buy 22.3 JPN225 at 64037.03]
+CS	0	15:54:21.374	Trade	2026.10.20 06:25:00   order performed buy 22.3 at 64037.03 [#151 buy 22.3 JPN225 at 64037.03]
+CS	0	15:54:21.374	CycleORB (JPN225,M5)	2026.10.20 06:25:00   CTrade::OrderSend: market buy 22.30 position #150 JPN225 [done at 64037.03]
+CS	0	15:54:21.374	CycleORB (JPN225,M5)	2026.10.20 06:25:00   [CycleORB] CLOSE position #150 magic=26110503 (TKY time exit)
+CS	0	15:54:21.585	CycleORB (JPN225,M5)	2026.10.21 01:00:00   [CycleORB] RANGE TKY 2026.10.21 00:00 hi=65371.68 lo=64725.63 range=64605pt atr%=42.9 spread=1021.7pt (live 1000pt) cost%=1.6 buffer=3230pt risk=106.82 trend=0
+CS	0	15:54:21.585	Trade	2026.10.21 01:00:00   buy stop 24.9 JPN225 at 65403.98 sl: 64725.63 tp: 66591.09 (64743.60 / 64753.60)
+CS	0	15:54:21.585	CycleORB (JPN225,M5)	2026.10.21 01:00:00   CTrade::OrderSend: buy stop 24.90 JPN225 at 65403.98 sl: 64725.63 tp: 66591.09 [done]
+CS	0	15:54:21.585	CycleORB (JPN225,M5)	2026.10.21 01:00:00   [CycleORB] PLACE BUY_STOP lots=24.90 @65403.98 sl=64725.63 tp=66591.09 magic=26110503 retcode=10009
+CS	0	15:54:21.585	Trade	2026.10.21 01:00:00   sell stop 24.9 JPN225 at 64693.33 sl: 65371.68 tp: 63506.22 (64743.60 / 64753.60)
+CS	0	15:54:21.585	CycleORB (JPN225,M5)	2026.10.21 01:00:00   CTrade::OrderSend: sell stop 24.90 JPN225 at 64693.33 sl: 65371.68 tp: 63506.22 [done]
+CS	0	15:54:21.585	CycleORB (JPN225,M5)	2026.10.21 01:00:00   [CycleORB] PLACE SELL_STOP lots=24.90 @64693.33 sl=65371.68 tp=63506.22 magic=26110503 retcode=10009
+CS	0	15:54:21.588	Trade	2026.10.21 01:05:18   order [#153 sell stop 24.9 JPN225 at 64693.33] triggered
+CS	0	15:54:21.588	Trades	2026.10.21 01:05:18   deal #90 sell 24.9 JPN225 at 64692.61 done (based on order #153)
+CS	0	15:54:21.588	Trade	2026.10.21 01:05:18   deal performed [#90 sell 24.9 JPN225 at 64692.61]
+CS	0	15:54:21.588	Trade	2026.10.21 01:05:18   order performed sell 24.9 at 64692.61 [#153 sell stop 24.9 JPN225 at 64693.33]
+CS	0	15:54:21.588	Trade	2026.10.21 01:05:18   order canceled [#152 buy stop 24.9 JPN225 at 65403.98]
+CS	0	15:54:21.588	CycleORB (JPN225,M5)	2026.10.21 01:05:18   CTrade::OrderSend: cancel #152 [done]
+CS	0	15:54:21.588	CycleORB (JPN225,M5)	2026.10.21 01:05:18   [CycleORB] DELETE order #152 magic=26110503 (TKY OCO)
+CS	0	15:54:21.719	Trade	2026.10.21 06:25:00   market buy 24.9 JPN225, close #153 (64647.66 / 64657.66)
+CS	0	15:54:21.719	Trades	2026.10.21 06:25:00   deal #91 buy 24.9 JPN225 at 64657.66 done (based on order #154)
+CS	0	15:54:21.719	Trade	2026.10.21 06:25:00   deal performed [#91 buy 24.9 JPN225 at 64657.66]
+CS	0	15:54:21.719	Trade	2026.10.21 06:25:00   order performed buy 24.9 at 64657.66 [#154 buy 24.9 JPN225 at 64657.66]
+CS	0	15:54:21.719	CycleORB (JPN225,M5)	2026.10.21 06:25:00   CTrade::OrderSend: market buy 24.90 position #153 JPN225 [done at 64657.66]
+CS	0	15:54:21.719	CycleORB (JPN225,M5)	2026.10.21 06:25:00   [CycleORB] CLOSE position #153 magic=26110503 (TKY time exit)
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:00:00   [CycleORB] RANGE TKY 2026.10.22 00:00 hi=64835.68 lo=64286.72 range=54896pt atr%=35.6 spread=1021.7pt (live 1000pt) cost%=1.9 buffer=2745pt risk=106.82 trend=0
+CS	0	15:54:21.927	Trade	2026.10.22 01:00:00   buy stop 29.3 JPN225 at 64863.13 sl: 64286.72 tp: 65871.85 (64363.36 / 64373.36)
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:00:00   CTrade::OrderSend: buy stop 29.30 JPN225 at 64863.13 sl: 64286.72 tp: 65871.85 [done]
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:00:00   [CycleORB] PLACE BUY_STOP lots=29.30 @64863.13 sl=64286.72 tp=65871.85 magic=26110503 retcode=10009
+CS	0	15:54:21.927	Trade	2026.10.22 01:00:00   sell stop 29.3 JPN225 at 64259.27 sl: 64835.68 tp: 63250.55 (64363.36 / 64373.36)
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:00:00   CTrade::OrderSend: sell stop 29.30 JPN225 at 64259.27 sl: 64835.68 tp: 63250.55 [done]
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:00:00   [CycleORB] PLACE SELL_STOP lots=29.30 @64259.27 sl=64835.68 tp=63250.55 magic=26110503 retcode=10009
+CS	0	15:54:21.927	Trade	2026.10.22 01:01:18   order [#156 sell stop 29.3 JPN225 at 64259.27] triggered
+CS	0	15:54:21.927	Trades	2026.10.22 01:01:18   deal #92 sell 29.3 JPN225 at 64258.31 done (based on order #156)
+CS	0	15:54:21.927	Trade	2026.10.22 01:01:18   deal performed [#92 sell 29.3 JPN225 at 64258.31]
+CS	0	15:54:21.927	Trade	2026.10.22 01:01:18   order performed sell 29.3 at 64258.31 [#156 sell stop 29.3 JPN225 at 64259.27]
+CS	0	15:54:21.927	Trade	2026.10.22 01:01:18   order canceled [#155 buy stop 29.3 JPN225 at 64863.13]
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:01:18   CTrade::OrderSend: cancel #155 [done]
+CS	0	15:54:21.927	CycleORB (JPN225,M5)	2026.10.22 01:01:18   [CycleORB] DELETE order #155 magic=26110503 (TKY OCO)
+CS	0	15:54:22.041	Trade	2026.10.22 04:30:17   take profit triggered #156 sell 29.3 JPN225 64258.31 sl: 64835.68 tp: 63250.55 [#157 buy 29.3 JPN225 at 63250.55]
+CS	0	15:54:22.041	Trades	2026.10.22 04:30:17   deal #93 buy 29.3 JPN225 at 63249.30 done (based on order #157)
+CS	0	15:54:22.041	Trade	2026.10.22 04:30:17   deal performed [#93 buy 29.3 JPN225 at 63249.30]
+CS	0	15:54:22.041	Trade	2026.10.22 04:30:17   order performed buy 29.3 at 63249.30 [#157 buy 29.3 JPN225 at 63250.55]
+CS	0	15:54:22.290	CycleORB (JPN225,M5)	2026.10.23 01:00:00   [CycleORB] RANGE TKY 2026.10.23 00:00 hi=62309.62 lo=61463.35 range=84627pt atr%=51.5 spread=1021.7pt (live 1000pt) cost%=1.2 buffer=4231pt risk=106.82 trend=0
+CS	0	15:54:22.290	Trade	2026.10.23 01:00:00   buy stop 18.8 JPN225 at 62351.93 sl: 61463.35 tp: 63906.95 (62207.02 / 62217.02)
+CS	0	15:54:22.290	CycleORB (JPN225,M5)	2026.10.23 01:00:00   CTrade::OrderSend: buy stop 18.80 JPN225 at 62351.93 sl: 61463.35 tp: 63906.95 [done]
+CS	0	15:54:22.290	CycleORB (JPN225,M5)	2026.10.23 01:00:00   [CycleORB] PLACE BUY_STOP lots=18.80 @62351.93 sl=61463.35 tp=63906.95 magic=26110503 retcode=10009
+CS	0	15:54:22.290	Trade	2026.10.23 01:00:00   sell stop 18.8 JPN225 at 61421.04 sl: 62309.62 tp: 59866.02 (62207.02 / 62217.02)
+CS	0	15:54:22.290	CycleORB (JPN225,M5)	2026.10.23 01:00:00   CTrade::OrderSend: sell stop 18.80 JPN225 at 61421.04 sl: 62309.62 tp: 59866.02 [done]
+CS	0	15:54:22.290	CycleORB (JPN225,M5)	2026.10.23 01:00:00   [CycleORB] PLACE SELL_STOP lots=18.80 @61421.04 sl=62309.62 tp=59866.02 magic=26110503 retcode=10009
+CS	0	15:54:22.330	Trade	2026.10.23 02:30:00   order canceled [#159 sell stop 18.8 JPN225 at 61421.04]
+CS	0	15:54:22.330	CycleORB (JPN225,M5)	2026.10.23 02:30:00   CTrade::OrderSend: cancel #159 [done]
+CS	0	15:54:22.330	CycleORB (JPN225,M5)	2026.10.23 02:30:00   [CycleORB] DELETE order #159 magic=26110503 (TKY entry window closed)
+CS	0	15:54:22.330	Trade	2026.10.23 02:30:00   order canceled [#158 buy stop 18.8 JPN225 at 62351.93]
+CS	0	15:54:22.330	CycleORB (JPN225,M5)	2026.10.23 02:30:00   CTrade::OrderSend: cancel #158 [done]
+CS	0	15:54:22.330	CycleORB (JPN225,M5)	2026.10.23 02:30:00   [CycleORB] DELETE order #158 magic=26110503 (TKY entry window closed)
+CS	0	15:54:22.601	CycleORB (JPN225,M5)	2026.10.26 01:00:00   [CycleORB] RANGE TKY 2026.10.26 00:00 hi=62906.96 lo=62106.77 range=80019pt atr%=52.8 spread=1021.7pt (live 1000pt) cost%=1.3 buffer=4001pt risk=106.82 trend=0
+CS	0	15:54:22.601	Trade	2026.10.26 01:00:00   buy stop 19.9 JPN225 at 62946.97 sl: 62106.77 tp: 64417.32 (62668.29 / 62678.29)
+CS	0	15:54:22.601	CycleORB (JPN225,M5)	2026.10.26 01:00:00   CTrade::OrderSend: buy stop 19.90 JPN225 at 62946.97 sl: 62106.77 tp: 64417.32 [done]
+CS	0	15:54:22.601	CycleORB (JPN225,M5)	2026.10.26 01:00:00   [CycleORB] PLACE BUY_STOP lots=19.90 @62946.97 sl=62106.77 tp=64417.32 magic=26110503 retcode=10009
+CS	0	15:54:22.601	Trade	2026.10.26 01:00:00   sell stop 19.9 JPN225 at 62066.76 sl: 62906.96 tp: 60596.41 (62668.29 / 62678.29)
+CS	0	15:54:22.601	CycleORB (JPN225,M5)	2026.10.26 01:00:00   CTrade::OrderSend: sell stop 19.90 JPN225 at 62066.76 sl: 62906.96 tp: 60596.41 [done]
+CS	0	15:54:22.601	CycleORB (JPN225,M5)	2026.10.26 01:00:00   [CycleORB] PLACE SELL_STOP lots=19.90 @62066.76 sl=62906.96 tp=60596.41 magic=26110503 retcode=10009
+CS	0	15:54:22.636	Trade	2026.10.26 02:30:00   order canceled [#161 sell stop 19.9 JPN225 at 62066.76]
+CS	0	15:54:22.636	CycleORB (JPN225,M5)	2026.10.26 02:30:00   CTrade::OrderSend: cancel #161 [done]
+CS	0	15:54:22.636	CycleORB (JPN225,M5)	2026.10.26 02:30:00   [CycleORB] DELETE order #161 magic=26110503 (TKY entry window closed)
+CS	0	15:54:22.636	Trade	2026.10.26 02:30:00   order canceled [#160 buy stop 19.9 JPN225 at 62946.97]
+CS	0	15:54:22.636	CycleORB (JPN225,M5)	2026.10.26 02:30:00   CTrade::OrderSend: cancel #160 [done]
+CS	0	15:54:22.636	CycleORB (JPN225,M5)	2026.10.26 02:30:00   [CycleORB] DELETE order #160 magic=26110503 (TKY entry window closed)
+CS	0	15:54:22.851	CycleORB (JPN225,M5)	2026.10.27 01:00:00   [CycleORB] RANGE TKY 2026.10.27 00:00 hi=63530.88 lo=63062.76 range=46812pt atr%=30.8 spread=1021.7pt (live 1000pt) cost%=2.2 buffer=2341pt risk=106.82 trend=0
+CS	0	15:54:22.851	Trade	2026.10.27 01:00:00   buy stop 34.2 JPN225 at 63554.29 sl: 63062.76 tp: 64414.47 (63495.10 / 63505.10)
+CS	0	15:54:22.851	CycleORB (JPN225,M5)	2026.10.27 01:00:00   CTrade::OrderSend: buy stop 34.20 JPN225 at 63554.29 sl: 63062.76 tp: 64414.47 [done]
+CS	0	15:54:22.851	CycleORB (JPN225,M5)	2026.10.27 01:00:00   [CycleORB] PLACE BUY_STOP lots=34.20 @63554.29 sl=63062.76 tp=64414.47 magic=26110503 retcode=10009
+CS	0	15:54:22.851	Trade	2026.10.27 01:00:00   sell stop 34.2 JPN225 at 63039.35 sl: 63530.88 tp: 62179.17 (63495.10 / 63505.10)
+CS	0	15:54:22.851	CycleORB (JPN225,M5)	2026.10.27 01:00:00   CTrade::OrderSend: sell stop 34.20 JPN225 at 63039.35 sl: 63530.88 tp: 62179.17 [done]
+CS	0	15:54:22.851	CycleORB (JPN225,M5)	2026.10.27 01:00:00   [CycleORB] PLACE SELL_STOP lots=34.20 @63039.35 sl=63530.88 tp=62179.17 magic=26110503 retcode=10009
+CS	0	15:54:22.852	Trade	2026.10.27 01:01:41   order [#162 buy stop 34.2 JPN225 at 63554.29] triggered
+CS	0	15:54:22.852	Trades	2026.10.27 01:01:41   deal #94 buy 34.2 JPN225 at 63554.88 done (based on order #162)
+CS	0	15:54:22.852	Trade	2026.10.27 01:01:41   deal performed [#94 buy 34.2 JPN225 at 63554.88]
+CS	0	15:54:22.852	Trade	2026.10.27 01:01:41   order performed buy 34.2 at 63554.88 [#162 buy stop 34.2 JPN225 at 63554.29]
+CS	0	15:54:22.852	Trade	2026.10.27 01:01:41   order canceled [#163 sell stop 34.2 JPN225 at 63039.35]
+CS	0	15:54:22.852	CycleORB (JPN225,M5)	2026.10.27 01:01:41   CTrade::OrderSend: cancel #163 [done]
+CS	0	15:54:22.852	CycleORB (JPN225,M5)	2026.10.27 01:01:41   [CycleORB] DELETE order #163 magic=26110503 (TKY OCO)
+CS	0	15:54:22.968	Trade	2026.10.27 05:41:19   stop loss triggered #162 buy 34.2 JPN225 63554.88 sl: 63062.76 tp: 64414.47 [#164 sell 34.2 JPN225 at 63062.76]
+CS	0	15:54:22.968	Trades	2026.10.27 05:41:19   deal #95 sell 34.2 JPN225 at 63062.70 done (based on order #164)
+CS	0	15:54:22.968	Trade	2026.10.27 05:41:19   deal performed [#95 sell 34.2 JPN225 at 63062.70]
+CS	0	15:54:22.968	Trade	2026.10.27 05:41:19   order performed sell 34.2 at 63062.70 [#164 sell 34.2 JPN225 at 63062.76]
+CS	0	15:54:23.152	CycleORB (JPN225,M5)	2026.10.28 01:00:00   [CycleORB] SKIP TKY 2026.10.28 00:00 hi=64430.95 lo=63905.03 range=52592pt atr%=32.8 spread=1021.7pt (live 1000pt) cost%=1.9 volpct=29.0 (H1 vol below regime floor)
+CS	0	15:54:23.432	CycleORB (JPN225,M5)	2026.10.29 01:00:00   [CycleORB] RANGE TKY 2026.10.29 00:00 hi=64779.57 lo=64136.74 range=64283pt atr%=39.8 spread=1021.7pt (live 1000pt) cost%=1.6 buffer=3214pt risk=106.82 trend=0
+CS	0	15:54:23.432	Trade	2026.10.29 01:00:00   buy stop 25 JPN225 at 64811.71 sl: 64136.74 tp: 65992.91 (64575.55 / 64585.55)
+CS	0	15:54:23.432	CycleORB (JPN225,M5)	2026.10.29 01:00:00   CTrade::OrderSend: buy stop 25.00 JPN225 at 64811.71 sl: 64136.74 tp: 65992.91 [done]
+CS	0	15:54:23.432	CycleORB (JPN225,M5)	2026.10.29 01:00:00   [CycleORB] PLACE BUY_STOP lots=25.00 @64811.71 sl=64136.74 tp=65992.91 magic=26110503 retcode=10009
+CS	0	15:54:23.432	Trade	2026.10.29 01:00:00   sell stop 25 JPN225 at 64104.60 sl: 64779.57 tp: 62923.40 (64575.55 / 64585.55)
+CS	0	15:54:23.432	CycleORB (JPN225,M5)	2026.10.29 01:00:00   CTrade::OrderSend: sell stop 25.00 JPN225 at 64104.60 sl: 64779.57 tp: 62923.40 [done]
+CS	0	15:54:23.432	CycleORB (JPN225,M5)	2026.10.29 01:00:00   [CycleORB] PLACE SELL_STOP lots=25.00 @64104.60 sl=64779.57 tp=62923.40 magic=26110503 retcode=10009
+CS	0	15:54:23.433	Trade	2026.10.29 01:03:56   order [#165 buy stop 25 JPN225 at 64811.71] triggered
+CS	0	15:54:23.433	Trades	2026.10.29 01:03:56   deal #96 buy 25 JPN225 at 64816.37 done (based on order #165)
+CS	0	15:54:23.433	Trade	2026.10.29 01:03:56   deal performed [#96 buy 25 JPN225 at 64816.37]
+CS	0	15:54:23.433	Trade	2026.10.29 01:03:56   order performed buy 25 at 64816.37 [#165 buy stop 25 JPN225 at 64811.71]
+CS	0	15:54:23.433	Trade	2026.10.29 01:03:56   order canceled [#166 sell stop 25 JPN225 at 64104.60]
+CS	0	15:54:23.433	CycleORB (JPN225,M5)	2026.10.29 01:03:56   CTrade::OrderSend: cancel #166 [done]
+CS	0	15:54:23.433	CycleORB (JPN225,M5)	2026.10.29 01:03:56   [CycleORB] DELETE order #166 magic=26110503 (TKY OCO)
+CS	0	15:54:23.453	Trade	2026.10.29 01:44:52   stop loss triggered #165 buy 25 JPN225 64816.37 sl: 64136.74 tp: 65992.91 [#167 sell 25 JPN225 at 64136.74]
+CS	0	15:54:23.453	Trades	2026.10.29 01:44:52   deal #97 sell 25 JPN225 at 64127.53 done (based on order #167)
+CS	0	15:54:23.453	Trade	2026.10.29 01:44:52   deal performed [#97 sell 25 JPN225 at 64127.53]
+CS	0	15:54:23.453	Trade	2026.10.29 01:44:52   order performed sell 25 at 64127.53 [#167 sell 25 JPN225 at 64136.74]
+CS	0	15:54:23.708	CycleORB (JPN225,M5)	2026.10.30 01:00:00   [CycleORB] SKIP TKY: last trading day of month
+CS	0	15:54:23.950	Tester	final balance 10861.52 USD
+CS	0	15:54:23.951	CycleORB (JPN225,M5)	2026.10.30 20:59:59   [CycleORB] CYCLE_PARTIAL 202610 capital=10682.47 realized=179.05 floating=0.00 pnl=1.68% peak=3.96% state=ACTIVE 
+CS	0	15:54:24.010	Tester	JPN225,M5: 51175261 ticks, 35893 bars generated. Test passed in 0:00:49.127 (including ticks preprocessing 0:00:09.875).
+CS	0	15:54:24.010	Tester	68362772 total ticks for all symbols
+CS	0	15:54:24.010	Tester	JPN225: generate 51175261 ticks in 0:00:07.640, passed to tester 51175262 ticks
+CS	0	15:54:24.010	Tester	USDJPY: generate 17197778 ticks in 0:00:02.235, passed to tester 17187512 ticks
+CS	0	15:54:24.010	Tester	1594 Mb memory used including 47 Mb of history data, 1408 Mb of tick data
+CS	0	15:54:24.010	Tester	log file "C:\Users\emili\AppData\Roaming\MetaQuotes\Tester\D0E8209F77C8CF37AD8BF550E51FF075\Agent-127.0.0.1-3000\logs\20261103.log" written
+CS	0	15:54:24.011	Tester	test Experts\CycleORB\CycleORB.ex5 on JPN225,M5 thread finished

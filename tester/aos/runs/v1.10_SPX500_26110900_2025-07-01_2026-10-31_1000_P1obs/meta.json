@@ -1,0 +1,213 @@
+{
+ "run_id": "v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs",
+ "symbol": "SPX500",
+ "version": "1.10",
+ "magic_base": 26110900,
+ "window": [
+  "2025-07-01",
+  "2026-10-31"
+ ],
+ "deposit": 1000.0,
+ "final": 1186.64,
+ "point": 0.01,
+ "usd_per_price_lot": 0.9851987922552228,
+ "n_events": 71,
+ "armed_days": 171,
+ "sides_armed": 171,
+ "sides_lot_min": 0,
+ "counters": {
+  "skip_atr_band_high": 151,
+  "skip_last_day": 16,
+  "skip_missing_bars": 1,
+  "skip_skip_date": 6
+ },
+ "closefail_dates": {},
+ "cycles": [
+  {
+   "kind": "END",
+   "month": "202507",
+   "capital": 1000.0,
+   "realized": 25.16,
+   "pnl_pct": 2.52,
+   "peak_pct": 2.98
+  },
+  {
+   "kind": "END",
+   "month": "202508",
+   "capital": 1025.16,
+   "realized": -5.38,
+   "pnl_pct": -0.52,
+   "peak_pct": 0.31
+  },
+  {
+   "kind": "END",
+   "month": "202509",
+   "capital": 1019.78,
+   "realized": -15.16,
+   "pnl_pct": -1.49,
+   "peak_pct": 0.0
+  },
+  {
+   "kind": "END",
+   "month": "202510",
+   "capital": 1004.62,
+   "realized": 29.16,
+   "pnl_pct": 2.9,
+   "peak_pct": 3.03
+  },
+  {
+   "kind": "END",
+   "month": "202511",
+   "capital": 1033.78,
+   "realized": 47.33,
+   "pnl_pct": 4.58,
+   "peak_pct": 4.83
+  },
+  {
+   "kind": "END",
+   "month": "202512",
+   "capital": 1081.11,
+   "realized": 6.78,
+   "pnl_pct": 0.63,
+   "peak_pct": 1.78
+  },
+  {
+   "kind": "END",
+   "month": "202601",
+   "capital": 1087.89,
+   "realized": 13.61,
+   "pnl_pct": 1.25,
+   "peak_pct": 1.5
+  },
+  {
+   "kind": "END",
+   "month": "202602",
+   "capital": 1101.5,
+   "realized": 13.85,
+   "pnl_pct": 1.26,
+   "peak_pct": 1.4
+  },
+  {
+   "kind": "END",
+   "month": "202603",
+   "capital": 1115.35,
+   "realized": -16.26,
+   "pnl_pct": -1.46,
+   "peak_pct": 0.17
+  },
+  {
+   "kind": "END",
+   "month": "202604",
+   "capital": 1099.09,
+   "realized": 24.84,
+   "pnl_pct": 2.26,
+   "peak_pct": 3.52
+  },
+  {
+   "kind": "END",
+   "month": "202605",
+   "capital": 1123.93,
+   "realized": 12.36,
+   "pnl_pct": 1.1,
+   "peak_pct": 1.1
+  },
+  {
+   "kind": "END",
+   "month": "202606",
+   "capital": 1136.29,
+   "realized": 47.76,
+   "pnl_pct": 4.2,
+   "peak_pct": 4.39
+  },
+  {
+   "kind": "END",
+   "month": "202607",
+   "capital": 1184.05,
+   "realized": 0.2,
+   "pnl_pct": 0.02,
+   "peak_pct": 0.98
+  },
+  {
+   "kind": "END",
+   "month": "202608",
+   "capital": 1184.25,
+   "realized": -15.08,
+   "pnl_pct": -1.27,
+   "peak_pct": 2.47
+  },
+  {
+   "kind": "END",
+   "month": "202609",
+   "capital": 1169.17,
+   "realized": -14.73,
+   "pnl_pct": -1.26,
+   "peak_pct": 0.14
+  },
+  {
+   "kind": "PARTIAL",
+   "month": "202610",
+   "capital": 1154.44,
+   "realized": 32.2,
+   "pnl_pct": 2.79,
+   "peak_pct": 2.79
+  }
+ ],
+ "inputs": {
+  "InpServerTZ": "1",
+  "InpServerFixedOffsetH": "0",
+  "InpLonEnable": "false",
+  "InpLonRangeStart": "08:00",
+  "InpLonRangeMinutes": "30",
+  "InpLonEntryEnd": "11:00",
+  "InpLonExit": "16:00",
+  "InpNYEnable": "true",
+  "InpNYRangeStart": "10:00",
+  "InpNYRangeMinutes": "60",
+  "InpNYEntryEnd": "12:00",
+  "InpNYExit": "15:00",
+  "InpTkyEnable": "false",
+  "InpTkyRangeStart": "09:00",
+  "InpTkyRangeMinutes": "60",
+  "InpTkyEntryEnd": "11:30",
+  "InpTkyExit": "15:25",
+  "InpStopMode": "0",
+  "InpTargetR": "2.0",
+  "InpBufferSpreadMult": "2.0",
+  "InpBufferRangePct": "5.0",
+  "InpATRPeriod": "14",
+  "InpMinRangeATRPct": "10.0",
+  "InpMaxRangeATRPct": "40.0",
+  "InpMaxCostRangePct": "15.0",
+  "InpCommissionPoints": "0",
+  "InpMinVolPct": "0.0",
+  "InpVolATRPeriod": "20",
+  "InpVolLookback": "500",
+  "InpTrendSideOnly": "true",
+  "InpTrendMAPeriod": "20",
+  "InpSkipDates": "20260101,20260119,20260216,20260403,20260525,20260619,20260703,20260907,20261126,20261127,20261224,20270101,20270118,20270215,20270326,20270531,20270618,20270705,20270906,20271125,20271126,20271224",
+  "InpCycleCapital": "0.0",
+  "InpSoftHaltPct": "30.0",
+  "InpHardFlattenPct": "38.0",
+  "InpRatchetArmPct": "20.0",
+  "InpRatchetFloorPct": "10.0",
+  "InpRatchetTrail": "0.5",
+  "InpRiskDivisor": "8.0",
+  "InpMaxRiskPct": "1.0",
+  "InpNoEntryLastDay": "true",
+  "InpAosLedger": "true",
+  "InpAosRunTag": "P1obs",
+  "InpAosEventCcy": "USD",
+  "InpAosCtxSymbols": "DE30,UK100",
+  "InpAosCtxHours": "8",
+  "InpMagicBase": "26110900",
+  "InpSlippagePoints": "50",
+  "InpMaxLot": "100.0"
+ },
+ "setups": [
+  "NY"
+ ],
+ "source": {
+  "journal": "C:\\Users\\emili\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\Tester\\logs\\20261106.log",
+  "journal_sha256_16": "c77c52e9d9f2113c"
+ }
+}
