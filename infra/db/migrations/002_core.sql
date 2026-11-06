@@ -1,0 +1,158 @@
+-- INF-P1-T02: core / features tables, GENERATED from infra/contract/datapackage.json by contract.ddl().
+-- Never edit by hand: change the contract, then add a new migration (tests/test_infra_p1.py checks the match).
+
+-- migrate:up
+CREATE TABLE core.run (
+  run_key text NOT NULL CHECK (run_key ~ '^[0-9a-f]{16}$'),
+  run_id text NOT NULL,
+  ea_name text NOT NULL CHECK (ea_name IN ('CycleORB')),
+  ea_version text NOT NULL,
+  symbol text NOT NULL,
+  magic_base bigint NOT NULL,
+  setups text NOT NULL,
+  window_from date NOT NULL,
+  window_to date NOT NULL,
+  deposit double precision NOT NULL CHECK (deposit >= 0),
+  final_balance double precision,
+  run_tag text,
+  kind text NOT NULL CHECK (kind IN ('baseline', 'variant', 'reference')),
+  designed_rr double precision NOT NULL CHECK (designed_rr >= 1),
+  risk_definition text NOT NULL CHECK (risk_definition IN ('hard_stop')),
+  regime_filtered boolean NOT NULL,
+  baseline_frequency double precision,
+  costs_defaulted text NOT NULL,
+  server_utc_offset_h bigint NOT NULL,
+  preset_sha256 text NOT NULL,
+  events_sha256 text NOT NULL,
+  journal_sha16 text,
+  n_events bigint NOT NULL CHECK (n_events >= 0),
+  armed_days bigint,
+  sides_armed bigint,
+  sides_lot_min bigint,
+  has_ledger boolean NOT NULL,
+  PRIMARY KEY (run_key)
+);
+
+CREATE TABLE core.decision (
+  run_key text NOT NULL,
+  event_id text NOT NULL CHECK (event_id ~ '^[0-9]+-[0-9]{8}$'),
+  local_day date NOT NULL,
+  setup text NOT NULL CHECK (setup IN ('LON', 'NY', 'TKY')),
+  magic bigint NOT NULL,
+  decision text NOT NULL CHECK (decision IN ('ARMED', 'SKIP')),
+  reason text CHECK (reason IN ('atr_band_low', 'atr_band_high', 'vol_floor', 'cost_cap', 'last_day', 'warmup', 'missing_bars', 'price_through', 'already_traded', 'skip_date', 'other')),
+  atr_pct double precision,
+  spread_pt double precision,
+  cost_pct double precision,
+  range_pt double precision,
+  risk_money double precision,
+  trend bigint CHECK (trend IN (-1, 0, 1)),
+  sides_placed bigint CHECK (sides_placed >= 0 AND sides_placed <= 2),
+  sides_lot_min bigint CHECK (sides_lot_min >= 0 AND sides_lot_min <= 2),
+  PRIMARY KEY (run_key, event_id),
+  FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE
+);
+
+CREATE TABLE core.event (
+  run_key text NOT NULL,
+  event_id text NOT NULL CHECK (event_id ~ '^[0-9]+-[0-9]{8}$'),
+  signal_tag text NOT NULL CHECK (signal_tag IN ('LON', 'NY', 'TKY')),
+  magic bigint NOT NULL,
+  local_day date NOT NULL,
+  n_legs bigint NOT NULL CHECK (n_legs >= 1 AND n_legs <= 2),
+  risk_px double precision NOT NULL CHECK (risk_px > 0),
+  risk_ccy double precision,
+  equity_at_open double precision,
+  risk_pct double precision,
+  "pnl_R" double precision NOT NULL,
+  exit_type text NOT NULL CHECK (exit_type IN ('SL', 'TP', 'TIME')),
+  close_reason text,
+  "c_spread_R" double precision,
+  "c_slip_prior_R" double precision,
+  "slip_entry_R" double precision,
+  hold_min double precision,
+  atr_pct double precision,
+  trend bigint CHECK (trend IN (-1, 0, 1)),
+  calendar_leak boolean NOT NULL,
+  PRIMARY KEY (run_key, event_id),
+  FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE
+);
+
+CREATE TABLE core.leg (
+  run_key text NOT NULL,
+  leg_id text NOT NULL,
+  event_id text NOT NULL,
+  symbol text NOT NULL,
+  direction text NOT NULL CHECK (direction IN ('long', 'short')),
+  place_time timestamptz,
+  entry_time timestamptz NOT NULL,
+  entry_price double precision NOT NULL,
+  entry_requested double precision,
+  exit_time timestamptz NOT NULL,
+  exit_price double precision NOT NULL,
+  exit_requested double precision,
+  initial_stop double precision NOT NULL,
+  take_profit double precision,
+  volume double precision NOT NULL CHECK (volume > 0),
+  pnl_gross_ccy double precision,
+  cost_spread_ccy double precision,
+  cost_commission_ccy double precision,
+  cost_swap_ccy double precision,
+  cost_slippage_ccy double precision,
+  pnl_net_ccy double precision,
+  cost_flags text NOT NULL,
+  PRIMARY KEY (run_key, leg_id),
+  FOREIGN KEY (run_key, event_id) REFERENCES core.event (run_key, event_id) ON DELETE CASCADE,
+  CHECK (exit_time >= entry_time)
+);
+
+CREATE TABLE core.shadow (
+  run_key text NOT NULL,
+  event_id text NOT NULL,
+  setup text NOT NULL CHECK (setup IN ('LON', 'NY', 'TKY')),
+  arm_buy boolean,
+  arm_sell boolean,
+  withheld_buy text,
+  withheld_sell text,
+  status text NOT NULL CHECK (status IN ('FILLED', 'NO_FILL')),
+  side text,
+  fill_time timestamptz,
+  fill_price double precision,
+  exit_time timestamptz,
+  exit_price double precision,
+  exit_type text CHECK (exit_type IN ('SL', 'TP', 'TIME')),
+  "shadow_R" double precision,
+  PRIMARY KEY (run_key, event_id),
+  FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE
+);
+
+CREATE TABLE features.feature_value (
+  run_key text NOT NULL,
+  event_id text NOT NULL,
+  feature text NOT NULL,
+  value_num double precision,
+  value_text text,
+  as_of_ts timestamptz NOT NULL,
+  decision_ts timestamptz NOT NULL,
+  source text NOT NULL CHECK (source IN ('ea', 'offline')),
+  PRIMARY KEY (run_key, event_id, feature),
+  FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE,
+  CHECK (as_of_ts <= decision_ts)
+);
+
+CREATE TABLE core.funnel (
+  run_key text NOT NULL,
+  counter text NOT NULL,
+  value bigint NOT NULL CHECK (value >= 0),
+  PRIMARY KEY (run_key, counter),
+  FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE
+);
+
+-- migrate:down
+DROP TABLE core.funnel;
+DROP TABLE features.feature_value;
+DROP TABLE core.shadow;
+DROP TABLE core.leg;
+DROP TABLE core.event;
+DROP TABLE core.decision;
+DROP TABLE core.run;

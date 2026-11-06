@@ -175,7 +175,7 @@ flowchart LR
 
 | Plane | Component | Choice (pinned) | Removes | Rejected (and why) |
 | --- | --- | --- | --- | --- |
-| P-DATA | Contract | Frictionless Table Schema YAML in `infra/contract/`, validated with `frictionless` | L-06, L-10 | Pydantic-only (not language-neutral; the EA side can't read it) |
+| P-DATA | Contract | Frictionless Data Package JSON in `infra/contract/`, validated by `tools/corb/contract.py` (stdlib), which also generates the SQL | L-06, L-10 | Pydantic-only (not language-neutral; the EA side can't read it) |
 | P-DATA | Landing | Write-once directories with a sha256 manifest; parquet via `pyarrow` | L-07 | Loading straight into the DB (loses the raw evidence) |
 | P-STORE | System of record | PostgreSQL 16 (image pinned by digest) | L-08, L-09, L-20, L-24 | SQLite (no concurrent box jobs or roles), files only (status quo) |
 | P-STORE | Migrations | `dbmate`: plain numbered SQL files, up/down | L-09 | Alembic (an ORM is not needed for ~25 tables) |
@@ -263,8 +263,9 @@ Named schemas, created by migrations only. Every row has a `source_file_id` or a
 ```
 Experts/CycleORB/
   infra/
-    contract/           Frictionless schemas: leg, event, metadata, decision, shadow, feature
-    db/migrations/      dbmate SQL (NNN_name.sql)
+    contract/           datapackage.json: run, decision, event, leg, shadow, feature, funnel
+    db/migrations/      dbmate SQL (NNN_name.sql); 002 is generated from the contract
+    db/schema.sql       schema snapshot checked by `db migrate-check`
     docker/             Dockerfiles (base, jobs, tester: MT5 portable + Wine + Xvfb)
     compose.yaml        profiles: core (postgres, minio), train, obs (grafana), tester
     policy_low_bar.yaml pre-registered skip thresholds (§8.2)
@@ -420,17 +421,45 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
-| INF-P1-T01 | P-DATA | L-06, L-10 | `infra/contract/*.yaml` for leg, event, metadata, decision, shadow and feature. Maps every EA ledger column and every generic §8 field, with derivation rules for the missing ones (`pnl_gross_ccy`, `cost_*_ccy`, `leg_id`) | Every ledger-on run validates. Every failure is listed with its column |
-| INF-P1-T02 | P-STORE | L-09 | `infra/db/migrations/001…` for the six schemas and the §6 tables, with check constraints (PIT `as_of_ts`, `risk_px > 0`, exit after entry) | `dbmate up / down / up` is clean on an empty DB. The schema snapshot matches |
-| INF-P1-T03 | P-STORE | L-08, L-24 | Deterministic `run_key`, `leg_id`, `dataset_id`, `eval_id` | Re-ingesting gives identical keys. v1.10 / v1.11 duplicates collapse to one content hash. The compare refuses cross-deposit pairs |
-| INF-P1-T04 | P-STORE | L-10 | Views `core.v_event_R` (rebuild `pnl_R` from legs over planned risk; whipsaw = one event, both legs) and `core.v_health_input` | `pnl_R` equals `events.csv` to 1e-6 on every run. CO-FX-01…04 reproduce from SQL |
-| INF-P1-T05 | P-DATA | L-07 | Landing layout `var/landing/<origin>/<yyyy-mm-dd>/<sha256>/…` with a manifest. Files are never modified after landing | A re-landed file is detected as a duplicate. A modified file is rejected |
+| INF-P1-T01 ✅ | P-DATA | L-06, L-10 | `infra/contract/datapackage.json` for run (metadata), decision, event, leg, shadow, feature and funnel. Maps every EA ledger column and every generic §8 field, with derivation rules for the missing ones (`pnl_gross_ccy`, `cost_*_ccy`, `leg_id`) | Every ledger-on run validates. Every failure is listed with its column |
+| INF-P1-T02 ✅ | P-STORE | L-09 | `infra/db/migrations/001…` for the six schemas and the §6 tables, with check constraints (PIT `as_of_ts`, `risk_px > 0`, exit after entry) | `dbmate up / down / up` is clean on an empty DB. The schema snapshot matches |
+| INF-P1-T03 ✅ | P-STORE | L-08, L-24 | Deterministic `run_key`, `leg_id` (`dataset_id`, `eval_id` arrive with INF-P4) | Re-ingesting gives identical keys. v1.10 / v1.11 duplicates collapse to one content hash. The compare refuses cross-deposit pairs |
+| INF-P1-T04 ✅ | P-STORE | L-10 | Views `core.v_event_r` (rebuild `pnl_R` from legs over planned risk; whipsaw = one event, both legs) and `core.v_health` | `pnl_R` equals `events.csv` to 1e-6 on every run. CO-FX-01…04 reproduce from SQL |
+| INF-P1-T05 ✅ | P-DATA | L-07 | Landing layout `var/landing/<origin>/<yyyy-mm-dd>/<sha256>/…` with a manifest. Files are never modified after landing | A re-landed file is detected as a duplicate. A modified file is rejected |
 
 **Recipes:**
 
-- `INF-P1-T04_store_rebuildEvents_allRuns` — in: every run folder · run: `make migrate && make ingest && python -m corb check rebuild` · out: diff report · accept: 0 `pnl_R` diffs, CO-FX pass · reject: any diff.
+- `INF-P1-T01_data_contractValidate_allRuns` — run: `python -m corb contract build` · out: `var/contract/*.csv`, scorecard · accept: 0 violations.
+- `INF-P1-T02_store_migrationUpDownUp` — run: `python -m corb db up && python -m corb db migrate && python -m corb db migrate-check` · accept: down leaves no schema, up / down / up identical, equal to `infra/db/schema.sql`.
+- `INF-P1-T04_store_rebuildEvents_allRuns` — in: every run folder · run: `python -m corb land runs && python -m corb db load && python -m corb db check --reload` · out: scorecard · accept: 0 `pnl_R` diffs above 1e-6, row counts = contract CSVs, CO-FX pass, every run's events file landed, reload fingerprint unchanged · reject: any failure.
+- `INF-P1-T05_data_landingVerify` — run: `python -m corb land runs` (twice) / `land verify` · accept: second landing adds 0 files; verify reports 0 problems.
 
 **Exit:** the DB rebuilds every event and its 1R for every run on disk.
+
+**Status 2026-11-07: INF-P1 closed.** T01–T05 met.
+
+#### INF-P1 results (2026-11-07)
+
+**Built:** `infra/contract/datapackage.json` (Frictionless Data Package, 7 resources, with `x-table`, `foreignKeys` and `x-checks`); `tools/corb/contract.py` (adapter, stdlib validator, DDL generator); `infra/db/migrations/001_schemas.sql`, `002_core.sql` (**generated** from the contract; a test fails if they diverge), `003_views.sql`; `infra/db/schema.sql` (snapshot); `infra/compose.yaml` + `.env.example`; `tools/corb/db.py`; `tools/corb/landing.py`; `aos_compare.py` now rejects cross-symbol and cross-deposit pairs. `tools/tests/test_infra_p1.py`: 9 tests (47 pass in total).
+
+| Task | Result |
+| --- | --- |
+| T01 | **0 violations** over 77 runs: 77 runs, 24,234 decisions, 7,658 events, 7,658 legs (no whipsaw: every event has one leg), 7,047 shadows, 436,832 feature values (49 ledger runs), 509 funnel counters |
+| T02 | Postgres 16.15 (pinned by digest) + dbmate 2.28.0. 3 migrations apply in ~170 ms. Down leaves no schema; up / down / up is identical and matches the snapshot |
+| T03 | `run_key` = sha256 of {version, symbol, inputs hash, window, deposit, model}: 77 distinct keys. Content identity is `events_sha256`: **15 groups of runs share identical events** (same as the P0 inventory). Reload keeps every key (fingerprint `19e4ca3b…`) |
+| T04 | **31 / 31 checks pass.** Every event's R rebuilt from its leg matches the contract within 1e-6 (max 5.0e-7, the 6-decimal rounding of `pnl_R`). CO-FX-01…04 reproduce from SQL, including the UK100 82 lot-minimum sides and the DE40 500 = 1000 event vector |
+| T05 | 379 run files land as **229 unique contents** (150 byte-identical copies). Landing again adds 0. Verify catches modified and missing files (tested) |
+
+**Cross-check that came for free:** the derived `calendar_leak` flag marks 29 events, and they are exactly the documented ones: the AAPL Friday weekend holds and early-close holds, and the US500 2025 holiday holds in runs before v1.11. No US500 run from v1.11 on is flagged.
+
+**Deviations from the plan, and why:**
+
+- **Contract in JSON, validated by our own stdlib code**, not YAML + the `frictionless` library. It is still the Frictionless Data Package format, but the host tools stay dependency-free. The same file generates the SQL, so the contract and the DB can't drift.
+- **`docker compose` hangs on this workstation** (even `docker-compose.exe version`), while the plain `docker` CLI works. `tools/corb/db.py` runs the same pinned images with the names compose would use (`cycleorb-db-1`, volume `cycleorb_corb_pg`), reading the image references from `compose.yaml`. **Fix Docker Desktop's Compose before INF-P5**; the infra host will use `compose.yaml` directly.
+- **No `make`.** `python -m corb …` is the entry point (Windows has no `make` by default).
+- **Tables arrive with the phase that writes them.** P1 creates all six schemas, `raw.source_file`, the 6 core tables and `features.feature_value`. `train` / `score` / `ops` tables come in INF-P2 … P4.
+- **Swap is 0 (defaulted) for journal runs.** `cost_flags` says so per leg; INF-P2-T02 measures it from the ledgers.
+- **`load` is a full reload** (truncate + copy in one transaction). Incremental upserts are INF-P2-T01.
 
 ### INF-P2 — Ingest pipeline
 
@@ -568,7 +597,7 @@ Only after the infra is stable **and** an INF-P7 plan exists.
 | --- | --- | --- |
 | 1 | INF-P0-T01 ✅ | Nothing is reproducible without version control (done 2026-11-06) |
 | 2 | INF-P0-T02 … T04 ✅ | The numbers to protect and the frozen evidence sources (done 2026-11-06) |
-| 3 | INF-P1-T01 … T04 | The contract and DB that every later task writes to |
+| 3 | INF-P1-T01 … T05 ✅ | The contract and DB that every later task writes to (done 2026-11-07) |
 | 4 | INF-P2-T04 | Tester containers: parallel runs, independent of any live terminal |
 | 5 | INF-P4-T01 | The harness regression proves the new stack reproduces every past verdict |
 | 6 | INF-P3-T07 | The only task that can add independent evidence (L-05) |

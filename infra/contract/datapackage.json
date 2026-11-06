@@ -1,0 +1,949 @@
+{
+ "name": "cycleorb-contract",
+ "version": "1.0.0",
+ "title": "CycleORB adapter contract (INF-P1-T01)",
+ "description": "Generic EA adapter contract (unified_edge_framework.md §8) bound to CycleORB (edge_framework.md §2-§3). One event = one setup-day (CO-06). Times are ISO-8601 UTC (every run uses InpServerTZ=1, offset 0, so server time = UTC). Produced from run folders by tools/corb/contract.py; validated by the same module; loaded into the core schema with the same column names. x-table = database table; x-checks = row-level checks enforced by the validator and as SQL CHECK constraints.",
+ "resources": [
+  {
+   "name": "run",
+   "description": "EA metadata (generic §8.3), one row per tester run",
+   "schema": {
+    "primaryKey": [
+     "run_key"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "pattern": "^[0-9a-f]{16}$"
+      },
+      "description": "sha256 of canonical {ea_version, symbol, preset_sha256, window, deposit, model}, first 16 hex"
+     },
+     {
+      "name": "run_id",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "ea_name",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "CycleORB"
+       ]
+      }
+     },
+     {
+      "name": "ea_version",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "symbol",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "magic_base",
+      "type": "integer",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "setups",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "Enabled setups, |-separated (LON, NY, TKY)"
+     },
+     {
+      "name": "window_from",
+      "type": "date",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "window_to",
+      "type": "date",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "deposit",
+      "type": "number",
+      "constraints": {
+       "required": true,
+       "minimum": 0
+      }
+     },
+     {
+      "name": "final_balance",
+      "type": "number"
+     },
+     {
+      "name": "run_tag",
+      "type": "string",
+      "description": "InpAosRunTag suffix of run_id, empty for untagged runs"
+     },
+     {
+      "name": "kind",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "baseline",
+        "variant",
+        "reference"
+       ]
+      },
+      "description": "baseline = listed in tools/aos_assets.json; variant = tagged run; reference = older or untagged run"
+     },
+     {
+      "name": "designed_rr",
+      "type": "number",
+      "constraints": {
+       "required": true,
+       "minimum": 1
+      },
+      "description": "InpTargetR"
+     },
+     {
+      "name": "risk_definition",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "hard_stop"
+       ]
+      }
+     },
+     {
+      "name": "regime_filtered",
+      "type": "boolean",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "baseline_frequency",
+      "type": "number",
+      "description": "Events per 90 days over the first-to-last event span"
+     },
+     {
+      "name": "costs_defaulted",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "Cost components not measured: swap (journal runs), and the slippage prior used for Leak"
+     },
+     {
+      "name": "server_utc_offset_h",
+      "type": "integer",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "preset_sha256",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "sha256 of the canonical inputs JSON"
+     },
+     {
+      "name": "events_sha256",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "sha256 of the run folder's events.csv (content identity)"
+     },
+     {
+      "name": "journal_sha16",
+      "type": "string"
+     },
+     {
+      "name": "n_events",
+      "type": "integer",
+      "constraints": {
+       "required": true,
+       "minimum": 0
+      }
+     },
+     {
+      "name": "armed_days",
+      "type": "integer"
+     },
+     {
+      "name": "sides_armed",
+      "type": "integer"
+     },
+     {
+      "name": "sides_lot_min",
+      "type": "integer"
+     },
+     {
+      "name": "has_ledger",
+      "type": "boolean",
+      "constraints": {
+       "required": true
+      }
+     }
+    ]
+   },
+   "x-table": "core.run"
+  },
+  {
+   "name": "decision",
+   "description": "One row per evaluated setup-day (journal RANGE / SKIP lines)",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "event_id"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "event_id",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "pattern": "^[0-9]+-[0-9]{8}$"
+      },
+      "description": "<magic>-<YYYYMMDD> of the exchange-local setup day"
+     },
+     {
+      "name": "local_day",
+      "type": "date",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "setup",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "LON",
+        "NY",
+        "TKY"
+       ]
+      }
+     },
+     {
+      "name": "magic",
+      "type": "integer",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "decision",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "ARMED",
+        "SKIP"
+       ]
+      }
+     },
+     {
+      "name": "reason",
+      "type": "string",
+      "constraints": {
+       "enum": [
+        "",
+        "atr_band_low",
+        "atr_band_high",
+        "vol_floor",
+        "cost_cap",
+        "last_day",
+        "warmup",
+        "missing_bars",
+        "price_through",
+        "already_traded",
+        "skip_date",
+        "other"
+       ]
+      }
+     },
+     {
+      "name": "atr_pct",
+      "type": "number"
+     },
+     {
+      "name": "spread_pt",
+      "type": "number"
+     },
+     {
+      "name": "cost_pct",
+      "type": "number"
+     },
+     {
+      "name": "range_pt",
+      "type": "number"
+     },
+     {
+      "name": "risk_money",
+      "type": "number"
+     },
+     {
+      "name": "trend",
+      "type": "integer",
+      "constraints": {
+       "enum": [
+        -1,
+        0,
+        1
+       ]
+      }
+     },
+     {
+      "name": "sides_placed",
+      "type": "integer",
+      "constraints": {
+       "minimum": 0,
+       "maximum": 2
+      }
+     },
+     {
+      "name": "sides_lot_min",
+      "type": "integer",
+      "constraints": {
+       "minimum": 0,
+       "maximum": 2
+      }
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key"
+      ],
+      "reference": {
+       "resource": "run",
+       "fields": [
+        "run_key"
+       ]
+      }
+     }
+    ]
+   },
+   "x-table": "core.decision"
+  },
+  {
+   "name": "event",
+   "description": "Event manifest (generic §8.2) with the CycleORB per-event fields",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "event_id"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "event_id",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "pattern": "^[0-9]+-[0-9]{8}$"
+      }
+     },
+     {
+      "name": "signal_tag",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "LON",
+        "NY",
+        "TKY"
+       ]
+      },
+      "description": "Setup"
+     },
+     {
+      "name": "magic",
+      "type": "integer",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "local_day",
+      "type": "date",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "n_legs",
+      "type": "integer",
+      "constraints": {
+       "required": true,
+       "minimum": 1,
+       "maximum": 2
+      },
+      "description": "2 only on an OCO whipsaw (none observed)"
+     },
+     {
+      "name": "risk_px",
+      "type": "number",
+      "constraints": {
+       "required": true,
+       "exclusiveMinimum": 0
+      },
+      "description": "|planned entry - initial stop| in price units: the declared 1R (CO-07)"
+     },
+     {
+      "name": "risk_ccy",
+      "type": "number",
+      "description": "Declared 1R in account currency at open: volume x risk_px x value (estimated for journal runs)"
+     },
+     {
+      "name": "equity_at_open",
+      "type": "number"
+     },
+     {
+      "name": "risk_pct",
+      "type": "number",
+      "description": "risk_ccy / equity_at_open, in %"
+     },
+     {
+      "name": "pnl_R",
+      "type": "number",
+      "constraints": {
+       "required": true
+      },
+      "description": "Signed fill-to-fill move over risk_px; spread and entry slippage are inside it (CO-04)"
+     },
+     {
+      "name": "exit_type",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "SL",
+        "TP",
+        "TIME"
+       ]
+      }
+     },
+     {
+      "name": "close_reason",
+      "type": "string"
+     },
+     {
+      "name": "c_spread_R",
+      "type": "number",
+      "description": "Range-window spread / 1R: measured, already inside pnl_R (reported, not subtracted)"
+     },
+     {
+      "name": "c_slip_prior_R",
+      "type": "number",
+      "description": "Framework slippage prior (0.5 x spread per market leg / 1R) used for Leak (edge_framework.md §3)"
+     },
+     {
+      "name": "slip_entry_R",
+      "type": "number",
+      "description": "Measured entry slippage (fill - requested, adverse > 0) / 1R"
+     },
+     {
+      "name": "hold_min",
+      "type": "number"
+     },
+     {
+      "name": "atr_pct",
+      "type": "number"
+     },
+     {
+      "name": "trend",
+      "type": "integer",
+      "constraints": {
+       "enum": [
+        -1,
+        0,
+        1
+       ]
+      }
+     },
+     {
+      "name": "calendar_leak",
+      "type": "boolean",
+      "constraints": {
+       "required": true
+      },
+      "description": "Exit on a later UTC day than entry, or a refused close that day (CO-17)"
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key"
+      ],
+      "reference": {
+       "resource": "run",
+       "fields": [
+        "run_key"
+       ]
+      }
+     }
+    ]
+   },
+   "x-table": "core.event"
+  },
+  {
+   "name": "leg",
+   "description": "Blotter record (generic §8.1), one row per filled ticket",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "leg_id"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "leg_id",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "<run_key>:<event_id>:<direction>"
+     },
+     {
+      "name": "event_id",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "symbol",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "direction",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "long",
+        "short"
+       ]
+      }
+     },
+     {
+      "name": "place_time",
+      "type": "datetime"
+     },
+     {
+      "name": "entry_time",
+      "type": "datetime",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "entry_price",
+      "type": "number",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "entry_requested",
+      "type": "number"
+     },
+     {
+      "name": "exit_time",
+      "type": "datetime",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "exit_price",
+      "type": "number",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "exit_requested",
+      "type": "number",
+      "description": "Not emitted by the EA (null)"
+     },
+     {
+      "name": "initial_stop",
+      "type": "number",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "take_profit",
+      "type": "number"
+     },
+     {
+      "name": "volume",
+      "type": "number",
+      "constraints": {
+       "required": true,
+       "exclusiveMinimum": 0
+      }
+     },
+     {
+      "name": "pnl_gross_ccy",
+      "type": "number",
+      "description": "pnl_net_ccy + all cost components"
+     },
+     {
+      "name": "cost_spread_ccy",
+      "type": "number",
+      "description": "c_spread_R x risk_ccy (measured, inside the fills)"
+     },
+     {
+      "name": "cost_commission_ccy",
+      "type": "number",
+      "description": "0: commission-free account (declared)"
+     },
+     {
+      "name": "cost_swap_ccy",
+      "type": "number",
+      "description": "0 for journal runs (defaulted); measured from the ledger in INF-P2-T02"
+     },
+     {
+      "name": "cost_slippage_ccy",
+      "type": "number",
+      "description": "slip_entry_R x risk_ccy (measured entry slippage, inside the fills)"
+     },
+     {
+      "name": "pnl_net_ccy",
+      "type": "number",
+      "description": "Fill-to-fill P&L in account currency (pnl_ccy_est for journal runs)"
+     },
+     {
+      "name": "cost_flags",
+      "type": "string",
+      "constraints": {
+       "required": true
+      },
+      "description": "component=source;… (measured_in_fills / declared_zero / defaulted_zero)"
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key",
+       "event_id"
+      ],
+      "reference": {
+       "resource": "event",
+       "fields": [
+        "run_key",
+        "event_id"
+       ]
+      }
+     }
+    ],
+    "x-checks": [
+     [
+      "exit_time",
+      ">=",
+      "entry_time"
+     ]
+    ]
+   },
+   "x-table": "core.leg"
+  },
+  {
+   "name": "shadow",
+   "description": "Shadow tracker outcome per armed setup-day (ledger runs, CycleORB >= v1.10)",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "event_id"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "event_id",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "setup",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "LON",
+        "NY",
+        "TKY"
+       ]
+      }
+     },
+     {
+      "name": "arm_buy",
+      "type": "boolean"
+     },
+     {
+      "name": "arm_sell",
+      "type": "boolean"
+     },
+     {
+      "name": "withheld_buy",
+      "type": "string"
+     },
+     {
+      "name": "withheld_sell",
+      "type": "string"
+     },
+     {
+      "name": "status",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "FILLED",
+        "NO_FILL"
+       ]
+      }
+     },
+     {
+      "name": "side",
+      "type": "string"
+     },
+     {
+      "name": "fill_time",
+      "type": "datetime"
+     },
+     {
+      "name": "fill_price",
+      "type": "number"
+     },
+     {
+      "name": "exit_time",
+      "type": "datetime"
+     },
+     {
+      "name": "exit_price",
+      "type": "number"
+     },
+     {
+      "name": "exit_type",
+      "type": "string",
+      "constraints": {
+       "enum": [
+        "",
+        "SL",
+        "TP",
+        "TIME"
+       ]
+      }
+     },
+     {
+      "name": "shadow_R",
+      "type": "number"
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key"
+      ],
+      "reference": {
+       "resource": "run",
+       "fields": [
+        "run_key"
+       ]
+      }
+     }
+    ]
+   },
+   "x-table": "core.shadow"
+  },
+  {
+   "name": "feature",
+   "description": "L1 features at decision time, long format (ledger runs). as_of_ts = range end: every value comes from bars completed by then",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "event_id",
+     "feature"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "event_id",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "feature",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "value_num",
+      "type": "number"
+     },
+     {
+      "name": "value_text",
+      "type": "string"
+     },
+     {
+      "name": "as_of_ts",
+      "type": "datetime",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "decision_ts",
+      "type": "datetime",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "source",
+      "type": "string",
+      "constraints": {
+       "required": true,
+       "enum": [
+        "ea",
+        "offline"
+       ]
+      }
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key"
+      ],
+      "reference": {
+       "resource": "run",
+       "fields": [
+        "run_key"
+       ]
+      }
+     }
+    ],
+    "x-checks": [
+     [
+      "as_of_ts",
+      "<=",
+      "decision_ts"
+     ]
+    ]
+   },
+   "x-table": "features.feature_value"
+  },
+  {
+   "name": "funnel",
+   "description": "Filter funnel counters per run (meta.json counters + lot-minimum sides)",
+   "schema": {
+    "primaryKey": [
+     "run_key",
+     "counter"
+    ],
+    "fields": [
+     {
+      "name": "run_key",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "counter",
+      "type": "string",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "value",
+      "type": "integer",
+      "constraints": {
+       "required": true,
+       "minimum": 0
+      }
+     }
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "run_key"
+      ],
+      "reference": {
+       "resource": "run",
+       "fields": [
+        "run_key"
+       ]
+      }
+     }
+    ]
+   },
+   "x-table": "core.funnel"
+  }
+ ]
+}

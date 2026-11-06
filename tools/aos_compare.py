@@ -99,6 +99,10 @@ def compare(base_meta, base_events, var_meta, var_events, var_mult=None):
         checks["health_EF"] = hv["EF"] >= hb["EF"] - EF_SLACK
         checks["health_MaxDD"] = hv["maxdd_pct"] <= hb["maxdd_pct"] + DD_SLACK
     rejects = []
+    for k in ("symbol", "deposit"):
+        if base_meta.get(k) != var_meta.get(k):
+            rejects.append(f"not comparable: {k} {base_meta.get(k)} vs {var_meta.get(k)} "
+                           f"(lot minimum changes which days trade, CO-FX-03)")
     if hv["WR"] is not None and hb["WR"] is not None and hv["WR"] > hb["WR"] and \
             ((d("E_N") or 0) < 0 or (d("EF") or 0) < 0):
         rejects.append("payoff trap: WR up, E_N or EF down")

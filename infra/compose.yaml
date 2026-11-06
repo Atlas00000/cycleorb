@@ -1,0 +1,41 @@
+# CycleORB infra stack (doc/infrascaleup.md §5). INF-P1: Postgres + dbmate. Later phases add MinIO, Grafana,
+# job and tester images under their own profiles.
+# Usage from tools/:  python -m corb db up | migrate | migrate-check | load | check
+# tools/corb/db.py runs these same images with the plain docker CLI under compose's names (cycleorb-db-1,
+# cycleorb_corb_pg, cycleorb_default): the compose plugin hangs on the workstation. Keep both in step.
+name: cycleorb
+
+services:
+  db:
+    image: postgres:16.15-alpine@sha256:aa6cb33cf4c19c765cefcf48d96176258800870a9a1e930ad126200f9d825139
+    environment:
+      POSTGRES_USER: ${CORB_DB_USER:-corb}
+      POSTGRES_PASSWORD: ${CORB_DB_PASSWORD:-corb_local_only}
+      POSTGRES_DB: ${CORB_DB_NAME:-corb}
+    ports:
+      - "127.0.0.1:${CORB_DB_PORT:-5433}:5432"
+    volumes:
+      - corb_pg:/var/lib/postgresql/data
+      - ../var:/corb/var:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${CORB_DB_USER:-corb} -d ${CORB_DB_NAME:-corb}"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  dbmate:
+    image: ghcr.io/amacneil/dbmate:2.28.0
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: postgres://${CORB_DB_USER:-corb}:${CORB_DB_PASSWORD:-corb_local_only}@db:5432/${CORB_DB_NAME:-corb}?sslmode=disable
+      DBMATE_MIGRATIONS_DIR: /db/migrations
+      DBMATE_NO_DUMP_SCHEMA: "true"
+      DBMATE_WAIT: "true"
+    volumes:
+      - ./db:/db:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  corb_pg:

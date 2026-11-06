@@ -6,6 +6,12 @@
   sources check [--freeze]    INF-P0-T04  check infra/sources.json, measure broker history depth;
                                           --freeze records the sha256 of the located Ouroboros slices
 
+  contract build | ddl        INF-P1-T01  adapt + validate every run folder -> var/contract/*.csv | print DDL
+  land runs | verify          INF-P1-T05  land run folders + tape (write-once, by sha256) | re-hash landed files
+  db up | migrate             INF-P1-T02  start Postgres (docker compose) | apply migrations (dbmate)
+  db migrate-check            INF-P1-T02  up / down / up on a scratch DB, compare with infra/db/schema.sql
+  db load | check [--reload]  INF-P1-T04  full reload of core | rebuild R from legs, CO-FX from SQL, fingerprint
+
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
 import argparse
@@ -99,6 +105,76 @@ def cmd_sources(a):
     print("verdict", res["verdict"], "| scorecard", portable(card))
 
 
+def cmd_contract(a):
+    from corb import contract
+    from corb.paths import RUNS, VAR
+    if a.action == "ddl":
+        print(contract.ddl())
+        return 0
+    counts, violations = contract.build_all(RUNS, os.path.join(VAR, "contract"))
+    total = sum(len(v) for v in violations.values())
+    print("rows: " + ", ".join(f"{k} {v}" for k, v in counts.items()))
+    for name, v in violations.items():
+        for i, field, problem in v[:10]:
+            print(f"  {name}[{i}] {field}: {problem}")
+    verdict = "ACCEPT" if total == 0 else "REJECT"
+    print(f"{total} contract violations -> {verdict}")
+    scorecard.write("INF-P1-T01_data_contractValidate_allRuns", verdict, dict(
+        rows=counts, violations=total, first=[dict(resource=k, row=i, field=f, problem=p)
+                                              for k, v in violations.items() for i, f, p in v[:20]]))
+    return 0 if total == 0 else 1
+
+
+def cmd_land(a):
+    from corb import landing
+    from corb.paths import RUNS, REPO
+    if a.action == "runs":
+        files = [os.path.join(d, f) for d, _, fs in os.walk(RUNS) for f in sorted(fs)]
+        files.append(os.path.join(REPO, "tester", "aos", "tape", "tape_P1obs.csv"))
+        res = landing.land(files, "repo")
+        print(f"landed {res['landed']} new files, {res['duplicates']} duplicates (already landed by content)")
+    bad = landing.verify()
+    for b in bad:
+        print(f"  {b['problem'].upper()} {b['path']}")
+    verdict = "REJECT" if bad else "ACCEPT"
+    print(f"landing verify: {len(bad)} problems -> {verdict}")
+    scorecard.write("INF-P1-T05_data_landingVerify", verdict, dict(problems=bad))
+    return 1 if bad else 0
+
+
+def cmd_db(a):
+    from corb import contract, db, landing
+    from corb.paths import RUNS, VAR
+    if a.action == "up":
+        db.up()
+        print("db up (healthy)")
+    elif a.action == "migrate":
+        print(db.migrate().strip() or "migrations applied")
+    elif a.action == "migrate-check":
+        res = db.migrate_check(write_snapshot=a.write_snapshot)
+        print(res)
+        verdict = "ACCEPT" if all(res.values()) else "REJECT"
+        scorecard.write("INF-P1-T02_store_migrationUpDownUp", verdict, res)
+        return 0 if verdict == "ACCEPT" else 1
+    elif a.action == "load":
+        counts, violations = contract.build_all(RUNS, os.path.join(VAR, "contract"))
+        if any(violations.values()):
+            print("contract violations: run `python -m corb contract build` and fix them first")
+            return 1
+        landing.export_source_files()
+        db.load()
+        print("loaded: " + ", ".join(f"{k} {v}" for k, v in db.table_counts().items()))
+    elif a.action == "check":
+        checks, fp = db.check(reload=a.reload)
+        bad = _print_checks(checks)
+        verdict = "REJECT" if bad else "ACCEPT"
+        print(f"event fingerprint {fp} -> {verdict}")
+        scorecard.write("INF-P1-T04_store_rebuildEvents_allRuns", verdict, dict(
+            checks_total=len(checks), failures=bad, fingerprint=fp))
+        return 1 if bad else 0
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -112,6 +188,17 @@ def main():
     p.add_argument("action", choices=["check"])
     p.add_argument("--freeze", action="store_true", help="record the sha256 of every located Ouroboros slice")
     p.set_defaults(fn=cmd_sources)
+    p = sub.add_parser("contract")
+    p.add_argument("action", choices=["build", "ddl"])
+    p.set_defaults(fn=cmd_contract)
+    p = sub.add_parser("land")
+    p.add_argument("action", choices=["runs", "verify"])
+    p.set_defaults(fn=cmd_land)
+    p = sub.add_parser("db")
+    p.add_argument("action", choices=["up", "migrate", "migrate-check", "load", "check"])
+    p.add_argument("--write-snapshot", action="store_true", help="migrate-check: rewrite infra/db/schema.sql")
+    p.add_argument("--reload", action="store_true", help="check: reload and compare the event fingerprint")
+    p.set_defaults(fn=cmd_db)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
 
