@@ -23,7 +23,8 @@ def _manifest(root):
         return [json.loads(line) for line in f if line.strip()]
 
 
-def land(paths, origin, root=ROOT):
+def land(paths, origin, root=ROOT, extra=None):
+    """extra: fields added to each manifest record (e.g. source_commit for imported Ouroboros slices)."""
     os.makedirs(root, exist_ok=True)
     known = {m["sha256"] for m in _manifest(root)}
     today = datetime.now().strftime("%Y-%m-%d")
@@ -41,7 +42,7 @@ def land(paths, origin, root=ROOT):
             os.chmod(dest, stat.S_IREAD)
             rec = dict(sha256=digest, origin=origin, kind=classify(portable(src)) or "other", src_path=portable(src),
                        landed_path=os.path.relpath(dest, root).replace("\\", "/"), bytes=os.path.getsize(dest),
-                       landed_at=datetime.now().astimezone().isoformat(timespec="seconds"))
+                       landed_at=datetime.now().astimezone().isoformat(timespec="seconds"), **(extra or {}))
             man.write(json.dumps(rec) + "\n")
             known.add(digest)
             landed.append(rec)
@@ -64,7 +65,8 @@ def export_source_files(root=ROOT):
     out = os.path.join(root, "source_file.csv")
     with open(out, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["file_sha256", "origin", "kind", "src_path", "landed_path", "bytes", "landed_at"])
+        w.writerow(["file_sha256", "origin", "kind", "src_path", "landed_path", "bytes", "landed_at", "source_commit"])
         for m in _manifest(root):
-            w.writerow([m["sha256"], m["origin"], m["kind"], m["src_path"], m["landed_path"], m["bytes"], m["landed_at"]])
+            w.writerow([m["sha256"], m["origin"], m["kind"], m["src_path"], m["landed_path"], m["bytes"], m["landed_at"],
+                        m.get("source_commit", "")])
     return out

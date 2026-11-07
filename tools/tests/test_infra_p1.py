@@ -33,10 +33,10 @@ class ValidatorTests(unittest.TestCase):
 
 
 class MigrationMatchesContract(unittest.TestCase):
-    def test_002_is_the_generated_ddl(self):
-        with open(os.path.join(paths.INFRA, "db", "migrations", "002_core.sql"), encoding="utf-8") as f:
-            up = f.read().split("-- migrate:up\n", 1)[1].split("\n\n-- migrate:down", 1)[0]
-        self.assertEqual(up, contract.ddl())
+    def test_contract_ddl_snapshot_is_current(self):
+        """A contract change must regenerate infra/db/contract_ddl.sql (and come with a migration)."""
+        with open(os.path.join(paths.INFRA, "db", "contract_ddl.sql"), encoding="utf-8") as f:
+            self.assertEqual(f.read().rstrip("\n"), contract.ddl())
 
 
 class KeyTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 {
  "name": "cycleorb-contract",
- "version": "1.0.0",
+ "version": "1.1.0",
  "title": "CycleORB adapter contract (INF-P1-T01)",
  "description": "Generic EA adapter contract (unified_edge_framework.md §8) bound to CycleORB (edge_framework.md §2-§3). One event = one setup-day (CO-06). Times are ISO-8601 UTC (every run uses InpServerTZ=1, offset 0, so server time = UTC). Produced from run folders by tools/corb/contract.py; validated by the same module; loaded into the core schema with the same column names. x-table = database table; x-checks = row-level checks enforced by the validator and as SQL CHECK constraints.",
  "resources": [
@@ -106,10 +106,11 @@
        "enum": [
         "baseline",
         "variant",
-        "reference"
+        "reference",
+        "live"
        ]
       },
-      "description": "baseline = listed in tools/aos_assets.json; variant = tagged run; reference = older or untagged run"
+      "description": "baseline = listed in tools/aos_assets.json; variant = tagged run; reference = older or untagged run; live = forward-test ledgers pushed from the VPS (never a baseline); live = forward-test ledgers pushed from the VPS (never a baseline)"
      },
      {
       "name": "designed_rr",
@@ -286,9 +287,11 @@
         "price_through",
         "already_traded",
         "skip_date",
-        "other"
+        "other",
+        "guard"
        ]
-      }
+      },
+      "description": "Skip reason. guard = an L3 guard blocked the day (ledger only; the journal logs it as other)"
      },
      {
       "name": "atr_pct",

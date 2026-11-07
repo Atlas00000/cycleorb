@@ -46,12 +46,25 @@ def tagged_dir(root, base_run_id, tag):
     return hits[-1] if hits else os.path.join(root, f"{base_run_id}_{tag}")
 
 
+def _version_key(v):
+    return tuple(int(x) for x in v.lstrip("<=").split("."))
+
+
 def collect(runs_root, tag):
+    """The Common ledger file for a tag holds only the LAST tester run with that tag. When a tag was reused across EA
+    versions, copy it into the newest version's folder only (older folders would get another build's ledger)."""
     n = 0
+    newest = {}
     for meta_path in glob.glob(os.path.join(runs_root, f"*_{tag}", "meta.json")):
         with open(meta_path, encoding="utf-8") as f:
             meta = json.load(f)
         prefix = f"CORB_{meta['magic_base']}_{meta['symbol']}_tester_{int(meta['deposit'])}_{tag}_"
+        if prefix not in newest or _version_key(meta["version"]) > _version_key(newest[prefix][1]["version"]):
+            newest[prefix] = (meta_path, meta)
+    for meta_path in glob.glob(os.path.join(runs_root, f"*_{tag}", "meta.json")):
+        if all(meta_path != mp for mp, _ in newest.values()):
+            print(f"skip {os.path.basename(os.path.dirname(meta_path))}: a newer version reuses tag {tag}")
+    for prefix, (meta_path, meta) in newest.items():
         for kind in ("decisions", "events", "shadow"):
             src = os.path.join(COMMON, prefix + kind + ".csv")
             if os.path.exists(src):

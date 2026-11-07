@@ -133,6 +133,50 @@ def load():
     psql("\n".join(lines) + "\n")
 
 
+def load_incremental(run_keys):
+    """INF-P2-T01: replace only the given runs (delete cascades, then copy var/stage/*.csv), upsert their ingest
+    state, and add new landed files. One transaction. Returns the number of new raw.source_file rows."""
+    lines = ["BEGIN;"]
+    if run_keys:
+        keys = ", ".join(f"'{k}'" for k in run_keys)
+        lines.append(f"DELETE FROM core.run WHERE run_key IN ({keys});")
+        for name, r in contract.resources().items():
+            cols = ", ".join(_col(f["name"]) for f in r["schema"]["fields"])
+            lines.append(f"\\copy {r['x-table']} ({cols}) FROM '{CONTAINER_VAR}/stage/{name}.csv' "
+                         f"WITH (FORMAT csv, HEADER true)")
+        lines += ["CREATE TEMP TABLE st (run_key text, content_sha256 text);",
+                  f"\\copy st FROM '{CONTAINER_VAR}/stage/ingest_state.csv' WITH (FORMAT csv, HEADER true)",
+                  "INSERT INTO ops.ingest_state SELECT run_key, content_sha256, now() FROM st ON CONFLICT (run_key) "
+                  "DO UPDATE SET content_sha256 = EXCLUDED.content_sha256, ingested_at = EXCLUDED.ingested_at;"]
+    lines += ["CREATE TEMP TABLE sf (LIKE raw.source_file);",
+              f"\\copy sf FROM '{CONTAINER_VAR}/landing/source_file.csv' WITH (FORMAT csv, HEADER true)",
+              "WITH ins AS (INSERT INTO raw.source_file SELECT * FROM sf ON CONFLICT (file_sha256) DO NOTHING "
+              "RETURNING 1) SELECT count(*) FROM ins;",
+              "COMMIT;"]
+    return int(psql("\n".join(lines) + "\n").splitlines()[-1])
+
+
+def columns_match_contract():
+    """Live table columns (name, type, NOT NULL) vs the contract: [] when they agree."""
+    rows = psql("SELECT table_schema || '.' || table_name, column_name, data_type, is_nullable "
+                "FROM information_schema.columns WHERE table_schema IN ('core', 'features');")
+    live = {}
+    for ln in rows.splitlines():
+        t, c, typ, nullable = ln.split("\t")
+        live.setdefault(t, {})[c] = (typ, nullable == "NO")
+    want_type = {"string": "text", "integer": "bigint", "number": "double precision", "boolean": "boolean",
+                 "datetime": "timestamp with time zone", "date": "date"}
+    diffs = []
+    for r in contract.resources().values():
+        cols = live.get(r["x-table"], {})
+        for f in r["schema"]["fields"]:
+            want = (want_type[f["type"]], bool(f.get("constraints", {}).get("required")))
+            if cols.get(f["name"]) != want:
+                diffs.append(f"{r['x-table']}.{f['name']}: db {cols.get(f['name'])} vs contract {want}")
+        diffs += [f"{r['x-table']}.{c}: not in contract" for c in set(cols) - {f["name"] for f in r["schema"]["fields"]}]
+    return diffs
+
+
 def table_counts():
     res = contract.resources()
     q = " UNION ALL ".join(f"SELECT '{n}', count(*) FROM {r['x-table']}" for n, r in res.items())
@@ -191,11 +235,14 @@ COFX_FUNNEL = [
 
 def check(reload=False):
     from corb.baseline import check as chk
+    from corb.paths import RUNS
+    contract.build_all(RUNS, os.path.join(VAR, "contract"), live_root=os.path.join(VAR, "live"))  # fresh reference
     out = []
     n, bad, worst = psql("SELECT count(*), count(*) FILTER (WHERE abs(pnl_r_rebuilt - pnl_r_contract) > 1e-6), "
                          "coalesce(max(abs(pnl_r_rebuilt - pnl_r_contract)), 0) FROM core.v_event_r;").split("\t")
     out.append(chk("rebuild.events_with_pnl_R_diff_gt_1e-6", 0, int(bad), 0))
     out.append(chk("rebuild.max_abs_diff_R", 0.0, float(worst), 1e-6))
+    out.append(chk("schema.columns_match_contract", 0, len(columns_match_contract()), 0))
     db_n, csv_n = table_counts(), csv_counts()
     out += [chk(f"rows.{k}", csv_n[k], db_n[k], 0) for k in csv_n]
     out.append(chk("rebuild.events_covered", db_n["event"], int(n), 0))

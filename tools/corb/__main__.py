@@ -12,6 +12,11 @@
   db migrate-check            INF-P1-T02  up / down / up on a scratch DB, compare with infra/db/schema.sql
   db load | check [--reload]  INF-P1-T04  full reload of core | rebuild R from legs, CO-FX from SQL, fingerprint
 
+  ingest                      INF-P2-T01  land everything new, load only new / changed runs (incl. live VPS months)
+  dq                          INF-P2-T03/T06  ledger vs journal + data-quality checks -> ops.dq_result; cost sources
+  replay <journal> --version  INF-P2-T05  re-parse a raw journal; baselines must be byte- and number-identical
+  import ouroboros            INF-P2-T08  land the frozen Ouroboros slices (refused if a hash moved)
+
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
 import argparse
@@ -175,6 +180,65 @@ def cmd_db(a):
     return 0
 
 
+def cmd_ingest(a):
+    from corb import ingest
+    res = ingest.ingest()
+    print(f"runs seen {res['runs_seen']} (live {res['live_runs']}): loaded {res['runs_loaded']}, "
+          f"unchanged {res['runs_unchanged']}, rejected {len(res['rejected'])}")
+    print("landed: " + ", ".join(f"{o} {r['landed']} new / {r['duplicates']} dup" for o, r in res["landed"].items()))
+    print(f"rows written: {sum(res['rows_staged'].values())} | new source files: {res['source_files_inserted']}")
+    for r in res["rejected"]:
+        print(f"  REJECTED {r['run']}: {r['problem']}")
+    verdict = "REJECT" if res["rejected"] else "ACCEPT"
+    scorecard.write("INF-P2-T01_data_ingest", verdict, res)
+    return 1 if res["rejected"] else 0
+
+
+def cmd_dq(a):
+    from corb import dq
+    summary, failures = dq.run_checks()
+    checks = sorted({c for c, _ in summary})
+    for c in checks:
+        print(f"  {c:32} pass {summary[(c, 'pass')]:3}  warn {summary[(c, 'warn')]:3}  fail {summary[(c, 'fail')]:3}")
+    for f in failures:
+        print(f"  FAIL {f['check']} {f['run']}: {f['value']} {f['detail'][:160]}")
+    costs = dq.cost_sources()
+    print("cost sources (baseline runs): " + "; ".join(
+        f"{k} ledger {v['money_from_ledger']:.0%} Leak {100 * v['leak_db']:.2f}pp "
+        f"{'=' if v['leak_match'] else '!='} frozen" for k, v in costs.items()))
+    bad = failures or [k for k, v in costs.items() if not v["leak_match"]]
+    verdict = "REJECT" if bad else "ACCEPT"
+    print("verdict", verdict)
+    scorecard.write("INF-P2-T06_data_qualityChecks", verdict, dict(
+        summary={f"{c}|{s}": n for (c, s), n in summary.items()}, failures=failures, cost_sources=costs))
+    return 1 if bad else 0
+
+
+def cmd_replay(a):
+    from corb import replay
+    info, checks = replay.replay(a.journal, a.version)
+    print(f"parsed {info['runs_parsed']} runs into {portable(info['out'])}; baselines found: {info['baselines_found']}")
+    bad = _print_checks(checks)
+    verdict = "REJECT" if bad or not info["baselines_found"] else "ACCEPT"
+    print("verdict", verdict)
+    name = os.path.splitext(os.path.basename(a.journal))[0]
+    scorecard.write(f"INF-P2-T05_data_replayJournal_{name}", verdict, dict(info, checks_total=len(checks), failures=bad))
+    return 1 if verdict == "REJECT" else 0
+
+
+def cmd_import(a):
+    from corb import ingest
+    res = ingest.import_ouroboros()
+    for r in res:
+        print(f"  {r['id']:24} {r['status']}")
+    refused = [r for r in res if r["status"].startswith("refused")]
+    verdict = "REJECT" if refused else "ACCEPT"
+    print(f"{sum(r['status'] == 'landed' for r in res)} landed, "
+          f"{sum(r['status'] == 'duplicate' for r in res)} duplicates, {len(refused)} refused -> {verdict}")
+    scorecard.write("INF-P2-T08_data_importOuroboros", verdict, dict(slices=res))
+    return 1 if refused else 0
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -199,6 +263,17 @@ def main():
     p.add_argument("--write-snapshot", action="store_true", help="migrate-check: rewrite infra/db/schema.sql")
     p.add_argument("--reload", action="store_true", help="check: reload and compare the event fingerprint")
     p.set_defaults(fn=cmd_db)
+    p = sub.add_parser("ingest")
+    p.set_defaults(fn=cmd_ingest)
+    p = sub.add_parser("dq")
+    p.set_defaults(fn=cmd_dq)
+    p = sub.add_parser("replay")
+    p.add_argument("journal")
+    p.add_argument("--version", required=True, help="EA version of the runs to replay (e.g. 1.11)")
+    p.set_defaults(fn=cmd_replay)
+    p = sub.add_parser("import")
+    p.add_argument("source", choices=["ouroboros"])
+    p.set_defaults(fn=cmd_import)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
 

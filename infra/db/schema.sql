@@ -83,7 +83,7 @@ CREATE TABLE core.decision (
     sides_lot_min bigint,
     CONSTRAINT decision_decision_check CHECK ((decision = ANY (ARRAY['ARMED'::text, 'SKIP'::text]))),
     CONSTRAINT decision_event_id_check CHECK ((event_id ~ '^[0-9]+-[0-9]{8}$'::text)),
-    CONSTRAINT decision_reason_check CHECK ((reason = ANY (ARRAY['atr_band_low'::text, 'atr_band_high'::text, 'vol_floor'::text, 'cost_cap'::text, 'last_day'::text, 'warmup'::text, 'missing_bars'::text, 'price_through'::text, 'already_traded'::text, 'skip_date'::text, 'other'::text]))),
+    CONSTRAINT decision_reason_check CHECK ((reason = ANY (ARRAY['atr_band_low'::text, 'atr_band_high'::text, 'vol_floor'::text, 'cost_cap'::text, 'last_day'::text, 'warmup'::text, 'missing_bars'::text, 'price_through'::text, 'already_traded'::text, 'skip_date'::text, 'other'::text, 'guard'::text]))),
     CONSTRAINT decision_setup_check CHECK ((setup = ANY (ARRAY['LON'::text, 'NY'::text, 'TKY'::text]))),
     CONSTRAINT decision_sides_lot_min_check CHECK (((sides_lot_min >= 0) AND (sides_lot_min <= 2))),
     CONSTRAINT decision_sides_placed_check CHECK (((sides_placed >= 0) AND (sides_placed <= 2))),
@@ -205,7 +205,7 @@ CREATE TABLE core.run (
     CONSTRAINT run_deposit_check CHECK ((deposit >= (0)::double precision)),
     CONSTRAINT run_designed_rr_check CHECK ((designed_rr >= (1)::double precision)),
     CONSTRAINT run_ea_name_check CHECK ((ea_name = 'CycleORB'::text)),
-    CONSTRAINT run_kind_check CHECK ((kind = ANY (ARRAY['baseline'::text, 'variant'::text, 'reference'::text]))),
+    CONSTRAINT run_kind_check CHECK ((kind = ANY (ARRAY['baseline'::text, 'variant'::text, 'reference'::text, 'live'::text]))),
     CONSTRAINT run_n_events_check CHECK ((n_events >= 0)),
     CONSTRAINT run_risk_definition_check CHECK ((risk_definition = 'hard_stop'::text)),
     CONSTRAINT run_run_key_check CHECK ((run_key ~ '^[0-9a-f]{16}$'::text))
@@ -324,6 +324,32 @@ CREATE TABLE features.feature_value (
 
 
 --
+-- Name: dq_result; Type: TABLE; Schema: ops; Owner: -
+--
+
+CREATE TABLE ops.dq_result (
+    check_id text NOT NULL,
+    run_key text NOT NULL,
+    status text NOT NULL,
+    value double precision,
+    detail text,
+    checked_at timestamp with time zone NOT NULL,
+    CONSTRAINT dq_result_status_check CHECK ((status = ANY (ARRAY['pass'::text, 'warn'::text, 'fail'::text])))
+);
+
+
+--
+-- Name: ingest_state; Type: TABLE; Schema: ops; Owner: -
+--
+
+CREATE TABLE ops.ingest_state (
+    run_key text NOT NULL,
+    content_sha256 text NOT NULL,
+    ingested_at timestamp with time zone NOT NULL
+);
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -344,6 +370,7 @@ CREATE TABLE raw.source_file (
     landed_path text NOT NULL,
     bytes bigint NOT NULL,
     landed_at timestamp with time zone NOT NULL,
+    source_commit text,
     CONSTRAINT source_file_bytes_check CHECK ((bytes >= 0)),
     CONSTRAINT source_file_file_sha256_check CHECK ((file_sha256 ~ '^[0-9a-f]{64}$'::text))
 );
@@ -403,6 +430,22 @@ ALTER TABLE ONLY core.shadow
 
 ALTER TABLE ONLY features.feature_value
     ADD CONSTRAINT feature_value_pkey PRIMARY KEY (run_key, event_id, feature);
+
+
+--
+-- Name: dq_result dq_result_pkey; Type: CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.dq_result
+    ADD CONSTRAINT dq_result_pkey PRIMARY KEY (check_id, run_key);
+
+
+--
+-- Name: ingest_state ingest_state_pkey; Type: CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.ingest_state
+    ADD CONSTRAINT ingest_state_pkey PRIMARY KEY (run_key);
 
 
 --
@@ -467,6 +510,14 @@ ALTER TABLE ONLY core.shadow
 
 ALTER TABLE ONLY features.feature_value
     ADD CONSTRAINT feature_value_run_key_fkey FOREIGN KEY (run_key) REFERENCES core.run(run_key) ON DELETE CASCADE;
+
+
+--
+-- Name: ingest_state ingest_state_run_key_fkey; Type: FK CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.ingest_state
+    ADD CONSTRAINT ingest_state_run_key_fkey FOREIGN KEY (run_key) REFERENCES core.run(run_key) ON DELETE CASCADE;
 
 
 --

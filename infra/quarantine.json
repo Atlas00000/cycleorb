@@ -1,0 +1,166 @@
+{
+ "comment": "INF-P2-T03: misfiled ledger copies removed from run folders (bytes kept in git history, var/landing and the owner folder). The adapter treats these runs as journal-only.",
+ "created": "2026-11-07",
+ "removed": [
+  {
+   "run_id": "v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "d4db407c895e9085feec69cb93235e76f9ed0e5086667d07ef0d9631421649f4",
+    "ledger_events.csv": "6dda5ca6a9eacffea84ee27b3141efbe5f7d872e8c31630446522e8d82b31a72",
+    "ledger_shadow.csv": "64c6ace9471f91a8924d15493e5666f84d4fb6b2cdad8d6395a544f71544f162"
+   }
+  },
+  {
+   "run_id": "v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "5eb9840992d3b2f5a78dabae8dae8a9379dcf7fd1b7152e753da37f3fb61ec54",
+    "ledger_events.csv": "9c9eee02648a7072c1044a6e00d4912b7ffc727c8730ebf30de9b42dbf72789a",
+    "ledger_shadow.csv": "6c4e07b204401d8de1d4e0df2eda6a75b4ec5f4d7da8fb4dded1ee499794d9ab"
+   }
+  },
+  {
+   "run_id": "v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "49fb3e098e49ac7012ff86b8985d215b5e38663fdf75f13d981106d3f674319d",
+    "ledger_events.csv": "8b166d46c8e3a5616e3be1bec11880d2ca22efb2e6d55f0e334c3a8c630ba9e4",
+    "ledger_shadow.csv": "8b215bf036b65c02643122959237c7c81a39a16305f7d0b584c96abcd3140867"
+   }
+  },
+  {
+   "run_id": "v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "2c080b7a5b568cc80ce01ef0ba970bd3fda5cb1ce24c1744fc606743613363e6",
+    "ledger_events.csv": "33e28fde81ed261f14c02b9461dda6fbbd2898d0ba63e328daa38ddf0fb516cc",
+    "ledger_shadow.csv": "66d0d583adf0a3bc416b220ccd1e525743e2f639b9dc5e5b201514947d110873"
+   }
+  },
+  {
+   "run_id": "v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "5ae4ae315e59d1e598197d222d8f0432d3f8445e92e75ec52c6c0cc210ff552c",
+    "ledger_events.csv": "c6e8a79bb112727ad259de6bdcbdb71881b25d1a17acb956a08c4c004a9dc7da",
+    "ledger_shadow.csv": "4412e0ac4ff5efc24807210baa46f74dcb1e71b0729506d2b407990c615e9f12"
+   }
+  },
+  {
+   "run_id": "v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "0b7b85816654e6668b44d8df8d400c55c6b3be860a1c6d9776816f19e2f92236",
+    "ledger_events.csv": "515ccba4db2a938344f1dd51df6c2fcdcdf9d334014c525b9e5827089a8cb486",
+    "ledger_shadow.csv": "a865c64bf1900313aac904ba58d761602a027e55c31b68850f53bae7a71d2caf"
+   }
+  },
+  {
+   "run_id": "v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "c0e29a0332cb85524e3b7032a84e1bc32b330f6784712381edf03ee93e24e1f7",
+    "ledger_events.csv": "ceaff7e5d8e235881f3a27ab532c7d76816393a1d936e9fe45fe39eadf36b65e",
+    "ledger_shadow.csv": "acc29fae0a57918d42d76b6d08ca9b789e2ddb6708139ee3c612a96771865f64"
+   }
+  },
+  {
+   "run_id": "v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs",
+   "owner": "v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "50f7ad4e59b50161fb31de646d8c3e5d3c5369057ebb567f6dfa35dd1a77f587",
+    "ledger_events.csv": "f44daa6ce06f47bdb31ab79b1b7eee38fb9b09c0be99a233580571285fa4b8d6",
+    "ledger_shadow.csv": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e"
+   }
+  },
+  {
+   "run_id": "v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs",
+   "owner": "v1.11_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "a4343f9c4ab503fb3f8b5d035371f1246cfb16291e9fd81e4e600e49b553bdb8",
+    "ledger_events.csv": "227108d385796c09609448c78553afd26e0c83c6790e79b60d8881fa5916c40a",
+    "ledger_shadow.csv": "27fb8f914fecde6d592f1ccaa684c3db22710d115f98ae20bbe5fe3ad6f65c79"
+   }
+  },
+  {
+   "run_id": "v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1",
+   "owner": "v1.13_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "aad46b8ba28d8d41e89025dc330abfd5abe09bf405563af237f65bc9bb9a22fa",
+    "ledger_events.csv": "9bf21189c0b18e4fd9ee515f216a8d1ad4477966de739c02a7907ef3eb498381",
+    "ledger_shadow.csv": "d2cecc75387155caf34b385a106e5d2fd3fa7695651ef616bbda89cdc7d22c7d"
+   }
+  },
+  {
+   "run_id": "v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G",
+   "owner": "v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "8937c211e30d9273126539965863708aa717053edfdce2925809f9936eb75b6b",
+    "ledger_events.csv": "9c9eee02648a7072c1044a6e00d4912b7ffc727c8730ebf30de9b42dbf72789a",
+    "ledger_shadow.csv": "6c4e07b204401d8de1d4e0df2eda6a75b4ec5f4d7da8fb4dded1ee499794d9ab"
+   }
+  },
+  {
+   "run_id": "v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G",
+   "owner": "v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "ad92e14c6e48a44002f7db358182e7839808441666e5205b84b0c2f5d4fd456b",
+    "ledger_events.csv": "25f7400a4916ba0e60323abbaa3428a25702171ec24abc5b4aef51ce275a6903",
+    "ledger_shadow.csv": "8b215bf036b65c02643122959237c7c81a39a16305f7d0b584c96abcd3140867"
+   }
+  },
+  {
+   "run_id": "v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G",
+   "owner": "v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "4e03839a334d5ee0e65f2d5e864e2856edfc353d2fc1f8439378690bab414a59",
+    "ledger_events.csv": "33e28fde81ed261f14c02b9461dda6fbbd2898d0ba63e328daa38ddf0fb516cc",
+    "ledger_shadow.csv": "66d0d583adf0a3bc416b220ccd1e525743e2f639b9dc5e5b201514947d110873"
+   }
+  },
+  {
+   "run_id": "v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G",
+   "owner": "v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "d3bae0ad29597ce65f8359de1075a10202a89ce1c2187bb0675ee67173a2b787",
+    "ledger_events.csv": "091c181f0b26c97cd8117fcc4829370f64398bc54595fad1f99f749f74062cd8",
+    "ledger_shadow.csv": "a865c64bf1900313aac904ba58d761602a027e55c31b68850f53bae7a71d2caf"
+   }
+  },
+  {
+   "run_id": "v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G",
+   "owner": "v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "2f09def3eef655491719333ca43c1dc6d20f8d7ff80880ae14669e5587ae1056",
+    "ledger_events.csv": "f44daa6ce06f47bdb31ab79b1b7eee38fb9b09c0be99a233580571285fa4b8d6",
+    "ledger_shadow.csv": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e"
+   }
+  },
+  {
+   "run_id": "v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G",
+   "owner": "v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G",
+   "reason": "aos_tape collect copied the Common ledger of the newest run with this tag into every folder with the tag; byte-identical to the owner",
+   "files": {
+    "ledger_decisions.csv": "fb53ed8ed504779656ca251fa18f8abf94d2fa1e9bd293dd1713c80715d5d0da",
+    "ledger_events.csv": "227108d385796c09609448c78553afd26e0c83c6790e79b60d8881fa5916c40a",
+    "ledger_shadow.csv": "27fb8f914fecde6d592f1ccaa684c3db22710d115f98ae20bbe5fe3ad6f65c79"
+   }
+  }
+ ]
+}

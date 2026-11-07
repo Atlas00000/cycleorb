@@ -467,21 +467,50 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
-| INF-P2-T01 | P-DATA | L-07, L-09 | `corb ingest`: discover (Common ledgers, `Tester/logs`, run folders) → land → validate → `raw` → `core` (upsert by keys) | A second run inserts 0 rows. All ~60 existing folders load |
-| INF-P2-T02 | P-DATA | L-10 | Cost flags per leg: spread measured (fill vs mid), slippage = prior or measured (`entry_requested` vs fill), commission declared 0, swap = ledger `pnl_ccy` minus price P&L | Share of defaulted components per asset reported. `Leak` from the DB equals `edge_framework.md` §5.2 |
-| INF-P2-T03 | P-DATA | L-06 | Ledger is primary and the journal is the fallback. Generalise the P1 check: ledger = journal event for event, with a diff report | 0 diffs on every ledger-on run |
-| INF-P2-T04 | P-BOX | L-03, L-04 | **Tester containers:** image with portable MT5 + Wine + Xvfb (pinned), `terminal64.exe /portable /config:<ini>`, the compiled `.ex5` and presets mounted from the repo, broker history cache and `Common\Files` as volumes, tester login from `.env`. `corb tester run <EXP-ini> [--parallel N]` writes the ini, starts one container per run, collects the journal slice and tagged ledgers, and lands them. `EXP-` presets = production inputs + observe ledger only (the `P1obs` settings); EA logic unchanged. **Parity gate:** container runs must equal native Windows runs | All nine `EXP-` baselines reproduce their final balance and events sha (DE40: 2021.69) in containers, run in parallel. If an asset fails parity, it stays on the native portable terminal until fixed |
-| INF-P2-T05 | P-DATA | — | End-to-end replay of one historical dump: `Tester/logs/20261106.log` → DB → scorecard | Every baseline health vector equals the lock |
-| INF-P2-T06 | P-DATA | L-16 | Data-quality checks (`ops.dq_result`): monotone times, no event without 1R, no position across days unless flagged `CALENDAR_LEAK`, warm-up days flagged, funnel counters = `meta.json`, L6 lot-minimum share | 0 failures on the baselines. Known AAPL weekend holds detected as `CALENDAR_LEAK` |
-| INF-P2-T07 | P-DATA | IB-05 | `kind=live` ingest path for the **VPS** forward ledgers: a scheduled one-way push from the VPS `Common\Files\CycleORB\` to the landing zone (read-only; never a baseline; separate `run_key` per month) | Synthetic live ledger fixture ingested and excluded from baseline queries. The VPS has no inbound ports |
-| INF-P2-T08 | P-DATA | L-05, L-26 | `corb import ouroboros <slice>`: copy each slice listed in `sources.json` into the landing zone with its Ouroboros path, commit and sha256. Imported data is **kept here**; the run never reads Ouroboros directly | Every listed slice is landed with provenance. A re-import of the same commit is a no-op |
+| INF-P2-T01 ✅ | P-DATA | L-07, L-09 | `corb ingest`: discover (Common ledgers, `Tester/logs`, run folders) → land → validate → `raw` → `core` (upsert by keys) | A second run inserts 0 rows. All ~60 existing folders load |
+| INF-P2-T02 ✅ | P-DATA | L-10 | Cost flags per leg: spread measured (fill vs mid), slippage = prior or measured (`entry_requested` vs fill), commission declared 0, swap = ledger `pnl_ccy` minus price P&L | Share of defaulted components per asset reported. `Leak` from the DB equals `edge_framework.md` §5.2 |
+| INF-P2-T03 ✅ | P-DATA | L-06 | Ledger is primary and the journal is the fallback. Generalise the P1 check: ledger = journal event for event, with a diff report | 0 diffs on every ledger-on run |
+| INF-P2-T04 ⏸ | P-BOX | L-03, L-04 | **Tester containers:** image with portable MT5 + Wine + Xvfb (pinned), `terminal64.exe /portable /config:<ini>`, the compiled `.ex5` and presets mounted from the repo, broker history cache and `Common\Files` as volumes, tester login from `.env`. `corb tester run <EXP-ini> [--parallel N]` writes the ini, starts one container per run, collects the journal slice and tagged ledgers, and lands them. `EXP-` presets = production inputs + observe ledger only (the `P1obs` settings); EA logic unchanged. **Parity gate:** container runs must equal native Windows runs | All nine `EXP-` baselines reproduce their final balance and events sha (DE40: 2021.69) in containers, run in parallel. If an asset fails parity, it stays on the native portable terminal until fixed |
+| INF-P2-T05 ✅ | P-DATA | — | End-to-end replay of one historical dump: `Tester/logs/20261106.log` → DB → scorecard | Every baseline health vector equals the lock |
+| INF-P2-T06 ✅ | P-DATA | L-16 | Data-quality checks (`ops.dq_result`): monotone times, no event without 1R, no position across days unless flagged `CALENDAR_LEAK`, warm-up days flagged, funnel counters = `meta.json`, L6 lot-minimum share | 0 failures on the baselines. Known AAPL weekend holds detected as `CALENDAR_LEAK` |
+| INF-P2-T07 ✅ | P-DATA | IB-05 | `kind=live` ingest path for the **VPS** forward ledgers: a scheduled one-way push from the VPS `Common\Files\CycleORB\` to the landing zone (read-only; never a baseline; separate `run_key` per month) | Synthetic live ledger fixture ingested and excluded from baseline queries. The VPS has no inbound ports |
+| INF-P2-T08 ✅ | P-DATA | L-05, L-26 | `corb import ouroboros <slice>`: copy each slice listed in `sources.json` into the landing zone with its Ouroboros path, commit and sha256. Imported data is **kept here**; the run never reads Ouroboros directly | Every listed slice is landed with provenance. A re-import of the same commit is a no-op |
 
 **Recipes:**
 
 - `INF-P2-T04_box_testerContainerParity_allAssets` — in: `tester/exp/EXP-P2-T04_baseline_<asset>.ini` × 9 · run: `python -m corb tester run tester/exp --parallel 4` (infra host) · out: landed journals + ledgers, `core.run` rows, parity scorecard · accept: balance and events sha equal the native baselines on all nine · reject: any diff (CO-20 check before anything else; that asset stays native).
-- `INF-P2-T05_data_replayJournal_20261106` — in: the journal and the lock · run: `make ingest SRC=… && make eval RECIPE=baseline-check` · out: scorecard · accept: 0 differences.
+- `INF-P2-T01_data_ingest` — run: `python -m corb ingest` (twice) · accept: the second run loads 0 runs and writes 0 rows.
+- `INF-P2-T05_data_replayJournal_20261106` — in: `Tester/logs/20261106.log` · run: `python -m corb replay <journal> --version 1.11` (parses into `var/replay/`, never into `tester/aos/runs`) · accept: every baseline's `events.csv` / `decisions.csv` byte-identical, health vector = `aos_baseline.json`, 0 contract violations.
+- `INF-P2-T06_data_qualityChecks` — run: `python -m corb dq` · accept: 0 `fail` rows in `ops.dq_result`, Leak from SQL = frozen on every baseline.
+- `INF-P2-T08_data_importOuroboros` — run: `python -m corb import ouroboros` (twice) · accept: every frozen slice lands with its commit; the second run lands 0; a moved hash is refused.
 
 **Exit:** any tester output becomes a validated, queryable run with one command. Running it twice changes nothing.
+
+**Status 2026-11-07:** T01–T03 and T05–T08 met. **T04 (tester containers) on hold**: it needs a broker login for the container's MT5 (see the open decision below).
+
+#### INF-P2 results (2026-11-07)
+
+**Built:** `tools/corb/ingest.py` (discover, land, incremental load, live months, Ouroboros import), `dq.py` (reconciliation, quality checks, cost sources), `replay.py`; `ledger_as_journal()` in `contract.py` (one adapter path for journal and ledger); migration `004_ingest.sql` (contract 1.1.0: `kind` + `live`, `reason` + `guard`; `ops.ingest_state`, `ops.dq_result`; `raw.source_file.source_commit`); `infra/live.json` (the six VPS deployments); `infra/db/contract_ddl.sql` (current contract DDL, test-checked; `db check` now also compares the live columns with the contract). `tools/tests/test_infra_p2.py`: 7 tests (54 pass in total).
+
+| Task | Result |
+| --- | --- |
+| T01 | First ingest: 77 runs, 484,015 rows, 30 new source files (incl. the third terminal journal). **Second ingest: 0 runs, 0 rows, 0 files.** A later change reloaded exactly the 16 changed runs and left 61 untouched |
+| T02 | Every leg says where its money and costs come from. 3,439 legs use the **ledger's actual money**; 4,219 the journal estimate. Swap: on intraday ledger legs the residual `pnl_ccy − pnl_R × risk_ccy` is FX-conversion noise (median 0.0001R, p95 0.003R), so swap = 0 by construction; on the **4 overnight ledger legs (AAPL weekend holds) swap is measured** (0.02–0.06R). 24 overnight journal-only legs keep swap `defaulted_zero` and are flagged. **Leak from SQL = `aos_baseline.json` on all 9 baselines** |
+| T03 | All 33 runs that own their ledger reconcile with their journal on every trade fact (side, times, prices, stop, target, volume, R, slippage, spread): **0 differences** |
+| T05 | `20261106.log` re-parsed from scratch: 26 runs, all 9 baselines found, **events and decisions byte-identical** to the committed folders, health vectors equal, 0 contract violations (189 / 189) |
+| T06 | 9 checks × 77 runs in `ops.dq_result`: **0 fail**. Warnings are the known cases: calendar leaks (11 runs: AAPL holds, pre-v1.11 US500 holidays), lot-minimum share > 10 % (15: 500 USD runs and controls), overnight swap defaulted (9), warm-up > 10 days (10, incl. UK100 whose broker history starts 2025-12-17) |
+| T07 | The VPS path: `CORB_<base>_<symbol>_live_*.csv` in `var/inbox/vps/` (or `Common\Files`) → one `kind=live` run per deployment and month under `var/live/`, adapted by the ledger-only path. Fixture (a DE40 tester ledger renamed as live): 16 monthly runs, 120 events, distinct keys, 0 violations. Baseline selection is by `aos_assets.json` run ids and `kind = 'baseline'`, so live months can't enter it |
+| T08 | 19 frozen Ouroboros slices (206 MB) landed with commit `6e0ef34`; re-import lands 0; a moved hash is refused |
+
+**Finding: misfiled ledgers (L-07 in action).** The reconciliation failed on 4 runs. Cause: `aos_tape collect --tag X` copied the `Common\Files` ledger, which holds only the **last** run with that tag, into **every** folder with the tag. When a tag was reused across EA versions (P1obs on v1.10 and v1.11; P3G and P3F1 on v1.12 and v1.13), the older folders got the newer build's ledger. 16 folders were affected (identical timestamps and bytes prove it); in 12 the trades happened to agree, in 4 they didn't (the 2025 holiday trades and the lot sizes after them; the v1.12 AAPL calendar-kill run, whose ledger was v1.13's).
+
+- **Root cause fixed:** `aos_tape collect` now copies a reused tag's ledger into the newest version's folder only (test-covered).
+- **Data corrected:** the 16 misfiled copies were removed; `infra/quarantine.json` lists each file, its sha256 and its owner. The bytes remain in git history, `var/landing` and the owner folder. The original v1.10 / v1.12 ledgers were overwritten in `Common\Files` and can't be recovered; those runs are journal-only now.
+- **Impact:** none on any verdict. Trades are unchanged (event fingerprint identical), the baseline lock reproduces 434 / 434, and the P3-REC portfolio streams (v1.13, v1.12 P3T06) own their ledgers. Feature rows fell from 436,832 to 296,114 because the misattributed features are gone.
+
+**Deviations:** loads are replace-per-`run_key` (delete + copy in one transaction) rather than row upserts: simpler, and a run is the unit that changes. Journal parsing stays an explicit step (`corb_parse.py`); `ingest` consumes run folders and lands the raw journals for provenance, so committed evidence is never rewritten by a re-parse.
+
+**Open decision (T04):** the container MT5 must log in to YWO-Trade to download history and run the tester. It needs a demo or investor login in `infra/.env` (never committed, never the live account). Until then the native terminal stays the tester.
 
 ### INF-P3 — Feature store and regime tape (offline L1)
 

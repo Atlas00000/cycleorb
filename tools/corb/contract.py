@@ -25,7 +25,12 @@ FEATURES = ["atr_pct", "cost_pct", "spread_avg_pt", "spread_live_pt", "vol_pct",
             "ctx2_prevday_atr", "ctx2_lookback_atr", "ctx3_sym", "ctx3_prevday_atr", "ctx3_lookback_atr"]
 SQL_TYPE = {"string": "text", "integer": "bigint", "number": "double precision", "boolean": "boolean",
             "datetime": "timestamptz", "date": "date"}
-COST_FLAGS = "spread=measured_in_fills;commission=declared_zero;swap=defaulted_zero;slippage=entry_measured_in_fills"
+ADAPTER_VERSION = "2"   # bump when a derivation changes: incremental ingest re-loads every run
+
+
+def _cost_flags(swap, money):
+    return (f"spread=measured_in_fills;commission=declared_zero;swap={swap};slippage=entry_measured_in_fills;"
+            f"money={money}")
 
 
 def package():
@@ -85,7 +90,53 @@ def baseline_run_ids():
         return {a["run_id"] for a in json.load(f)["assets"].values()}
 
 
-def adapt(run_dir, baselines=frozenset()):
+def _ledger_time(s):
+    return s.replace(".", "-", 2) if s else ""
+
+
+def ledger_as_journal(led_dec, led_evt, point):
+    """Ledger rows in the journal parser's row format, with corb_parse.finish's derivations (risk_px, c_spread_R,
+    c_slip_R, slip_entry_R, hold_min). One adapter path then serves both sources, and they reconcile field by field."""
+    by_id, decisions = {}, []
+    for d in led_dec or []:
+        if d["event_id"] in by_id:
+            continue
+        by_id[d["event_id"]] = d
+        armed = d["decision"] == "ARMED"
+        hi, lo = _num(d["hi"]), _num(d["lo"])
+        decisions.append(dict(
+            date=d["local_day"].replace(".", "-"), setup=d["setup"], decision=d["decision"], reason=d["reason"],
+            atr_pct=d["atr_pct"], spread_pt=d["spread_avg_pt"] if armed else "", cost_pct=d["cost_pct"] if armed else "",
+            range_pt=str(round((hi - lo) / point)) if armed and hi is not None and lo is not None else "",
+            risk_money=d["risk_money"] if armed else "", trend=d["trend_side"] if armed else "",
+            sides_placed=str(int(d["placed_buy"] or 0) + int(d["placed_sell"] or 0)),
+            sides_lot_min=str((d["skip_buy"] == "lot_min") + (d["skip_sell"] == "lot_min"))))
+    events = []
+    for e in led_evt or []:
+        d = by_id.get(e["event_id"], {})
+        sign = 1 if e["side"] == "buy" else -1
+        req, fill, stop = float(e["entry_requested"]), float(e["entry_price"]), float(e["initial_stop"])
+        risk_px = abs(req - stop)
+        spread_px = (_num(d.get("spread_avg_pt")) or 0.0) * point
+        t_in, t_out = _ledger_time(e["entry_time"]), _ledger_time(e["exit_time"])
+        hold = (datetime.fromisoformat(t_out) - datetime.fromisoformat(t_in)).total_seconds() / 60
+        risk, eq = _num(e["risk_ccy"]), _num(e["equity_at_open"])
+        events.append(dict(
+            event_id=e["event_id"], magic=e["magic"], setup=e["setup"], side=e["side"],
+            day=(d.get("local_day") or e["entry_time"][:10]).replace(".", "-"), place_time="", entry_time=t_in,
+            entry_requested=e["entry_requested"], entry_price=e["entry_price"], exit_time=t_out,
+            exit_price=e["exit_price"], exit_type=e["exit_type"], close_reason="", initial_stop=e["initial_stop"],
+            take_profit=e["take_profit"], volume=e["volume"], risk_px=str(risk_px), pnl_R=e["pnl_R"],
+            pnl_ccy_est=e["pnl_ccy"], risk_ccy_est=e["risk_ccy"], equity_at_open_est=e["equity_at_open"],
+            risk_pct_est="" if not (risk and eq) else str(100 * risk / eq), atr_pct=d.get("atr_pct", ""),
+            trend=d.get("trend_side", ""), spread_pt=d.get("spread_avg_pt", ""),
+            c_spread_R=str(spread_px / risk_px), c_slip_R=str(0.5 * spread_px * (1 + (e["exit_type"] != "TP")) / risk_px),
+            slip_entry_R=str(sign * (fill - req) / risk_px), hold_min=str(round(hold, 1))))
+    return events, decisions
+
+
+def adapt(run_dir, baselines=frozenset(), kind=None):
+    """kind overrides the derived run kind (the live path passes 'live')."""
     with open(os.path.join(run_dir, "meta.json"), encoding="utf-8") as f:
         meta = json.load(f)
     inputs = meta["inputs"]
@@ -94,10 +145,19 @@ def adapt(run_dir, baselines=frozenset()):
     off = int(inputs.get("InpServerFixedOffsetH", "0"))
     key = run_key(meta)
     rid = parse_run_id(meta["run_id"])
-    events = _read(os.path.join(run_dir, "events.csv")) or []
-    decisions = _read(os.path.join(run_dir, "decisions.csv")) or []
     led_dec = _read(os.path.join(run_dir, "ledger_decisions.csv"))
+    led_evt = _read(os.path.join(run_dir, "ledger_events.csv"))
     led_shadow = _read(os.path.join(run_dir, "ledger_shadow.csv"))
+    events = _read(os.path.join(run_dir, "events.csv"))
+    decisions = _read(os.path.join(run_dir, "decisions.csv"))
+    events_file = os.path.join(run_dir, "events.csv")
+    if events is None:
+        if led_evt is None:
+            raise ValueError(f"{meta['run_id']}: neither events.csv nor ledger_events.csv")
+        events, decisions = ledger_as_journal(led_dec, led_evt, float(meta["point"]))
+        events_file = os.path.join(run_dir, "ledger_events.csv")
+    decisions = decisions or []
+    money = {e["event_id"]: e for e in led_evt or []}
     closefail = set(meta.get("closefail_dates") or {})
     n = len(events)
     span = ((date.fromisoformat(events[-1]["day"]) - date.fromisoformat(events[0]["day"])).days + 1) if n else 0
@@ -106,12 +166,12 @@ def adapt(run_dir, baselines=frozenset()):
         run_key=key, run_id=meta["run_id"], ea_name="CycleORB", ea_version=meta["version"], symbol=meta["symbol"],
         magic_base=int(meta["magic_base"]), setups="|".join(meta.get("setups", [])),
         window_from=meta["window"][0], window_to=meta["window"][1], deposit=float(meta["deposit"]),
-        final_balance=meta.get("final"), run_tag=rid["tag"] or "", kind=_kind(meta["run_id"], rid["tag"], baselines),
+        final_balance=meta.get("final"), run_tag=rid["tag"] or "",
+        kind=kind or _kind(meta["run_id"], rid["tag"], baselines),
         designed_rr=float(inputs["InpTargetR"]), risk_definition="hard_stop", regime_filtered=True,
         baseline_frequency=(n / (span / 30.44) * 90 / 30.44) if span else None,
-        costs_defaulted="swap,slippage_prior" if not led_dec else "slippage_prior",
-        server_utc_offset_h=off, preset_sha256=canonical_sha(inputs),
-        events_sha256=sha256(os.path.join(run_dir, "events.csv")),
+        costs_defaulted="slippage_prior", server_utc_offset_h=off, preset_sha256=canonical_sha(inputs),
+        events_sha256=sha256(events_file),
         journal_sha16=(meta.get("source") or {}).get("journal_sha256_16"), n_events=n,
         armed_days=meta.get("armed_days"), sides_armed=meta.get("sides_armed"), sides_lot_min=meta.get("sides_lot_min"),
         has_ledger=led_dec is not None)])
@@ -130,18 +190,30 @@ def adapt(run_dir, baselines=frozenset()):
             sides_placed=_int(d["sides_placed"]), sides_lot_min=_int(d["sides_lot_min"])))
 
     out["event"], out["leg"] = [], []
+    defaulted_swap = False
     for e in events:
         entry, exit_ = _utc(e["entry_time"], off), _utc(e["exit_time"], off)
-        risk_ccy = _num(e["risk_ccy_est"])
-        leak = entry[:10] != exit_[:10] or e["day"] in closefail or entry[:10] in closefail
+        overnight = entry[:10] != exit_[:10]
+        leak = overnight or e["day"] in closefail or entry[:10] in closefail
+        m = money.get(e["event_id"])
+        if m and m["risk_ccy"] and m["pnl_ccy"]:
+            # ledger money is the account's actual record: deal profit + swap + commission (Ledger.mqh)
+            risk_ccy, equity, net = float(m["risk_ccy"]), _num(m["equity_at_open"]), float(m["pnl_ccy"])
+            residual = net - float(e["pnl_R"]) * risk_ccy
+            swap_cost, swap_flag, src = (-residual, "measured_ledger_residual", "ledger") if overnight \
+                else (0.0, "zero_intraday", "ledger")
+        else:
+            risk_ccy, equity, net = _num(e["risk_ccy_est"]), _num(e["equity_at_open_est"]), _num(e["pnl_ccy_est"])
+            swap_cost, swap_flag, src = 0.0, ("defaulted_zero" if overnight else "zero_intraday"), "journal_estimate"
+        defaulted_swap |= swap_flag == "defaulted_zero"
         out["event"].append(dict(
             run_key=key, event_id=e["event_id"], signal_tag=e["setup"], magic=int(e["magic"]), local_day=e["day"],
-            n_legs=1, risk_px=float(e["risk_px"]), risk_ccy=risk_ccy, equity_at_open=_num(e["equity_at_open_est"]),
-            risk_pct=_num(e["risk_pct_est"]), pnl_R=float(e["pnl_R"]), exit_type=e["exit_type"],
+            n_legs=1, risk_px=float(e["risk_px"]), risk_ccy=risk_ccy, equity_at_open=equity,
+            risk_pct=100 * risk_ccy / equity if risk_ccy and equity else None, pnl_R=float(e["pnl_R"]),
+            exit_type=e["exit_type"],
             close_reason=e["close_reason"], c_spread_R=_num(e["c_spread_R"]), c_slip_prior_R=_num(e["c_slip_R"]),
             slip_entry_R=_num(e["slip_entry_R"]), hold_min=_num(e["hold_min"]), atr_pct=_num(e["atr_pct"]),
             trend=_int(e["trend"]), calendar_leak=leak))
-        net = _num(e["pnl_ccy_est"])
         spread = None if risk_ccy is None or e["c_spread_R"] == "" else float(e["c_spread_R"]) * risk_ccy
         slip = None if risk_ccy is None or e["slip_entry_R"] == "" else float(e["slip_entry_R"]) * risk_ccy
         direction = "long" if e["side"] == "buy" else "short"
@@ -151,9 +223,11 @@ def adapt(run_dir, baselines=frozenset()):
             entry_price=float(e["entry_price"]), entry_requested=_num(e["entry_requested"]), exit_time=exit_,
             exit_price=float(e["exit_price"]), exit_requested=None, initial_stop=float(e["initial_stop"]),
             take_profit=_num(e["take_profit"]), volume=float(e["volume"]),
-            pnl_gross_ccy=None if None in (net, spread, slip) else net + spread + slip,
-            cost_spread_ccy=spread, cost_commission_ccy=0.0, cost_swap_ccy=0.0, cost_slippage_ccy=slip,
-            pnl_net_ccy=net, cost_flags=COST_FLAGS))
+            pnl_gross_ccy=None if None in (net, spread, slip) else net + spread + slip + swap_cost,
+            cost_spread_ccy=spread, cost_commission_ccy=0.0, cost_swap_ccy=swap_cost, cost_slippage_ccy=slip,
+            pnl_net_ccy=net, cost_flags=_cost_flags(swap_flag, src)))
+    if defaulted_swap:
+        out["run"][0]["costs_defaulted"] = "slippage_prior,swap_overnight"
 
     out["shadow"], seen = [], set()
     for s in led_shadow or []:
@@ -191,15 +265,18 @@ def adapt(run_dir, baselines=frozenset()):
     return out
 
 
-def build_all(runs_root, out_dir):
-    """Adapt + validate every run folder; write one CSV per resource (columns in contract order)."""
+def build_all(runs_root, out_dir, live_root=None):
+    """Adapt + validate every run folder (and the live months under live_root); write one CSV per resource."""
     res, baselines = resources(), baseline_run_ids()
     tables = {name: [] for name in res}
-    for run_id in sorted(os.listdir(runs_root)):
-        run_dir = os.path.join(runs_root, run_id)
-        if os.path.exists(os.path.join(run_dir, "meta.json")):
-            for name, rows in adapt(run_dir, baselines).items():
-                tables[name] += rows
+    for root, kind in ((runs_root, None), (live_root, "live")):
+        if not root or not os.path.isdir(root):
+            continue
+        for run_id in sorted(os.listdir(root)):
+            run_dir = os.path.join(root, run_id)
+            if os.path.exists(os.path.join(run_dir, "meta.json")):
+                for name, rows in adapt(run_dir, baselines, kind=kind).items():
+                    tables[name] += rows
     violations = {name: validate(name, rows) for name, rows in tables.items()}
     os.makedirs(out_dir, exist_ok=True)
     for name, rows in tables.items():

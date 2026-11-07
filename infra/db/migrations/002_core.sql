@@ -1,5 +1,6 @@
 -- INF-P1-T02: core / features tables, GENERATED from infra/contract/datapackage.json by contract.ddl().
--- Never edit by hand: change the contract, then add a new migration (tests/test_infra_p1.py checks the match).
+-- Never edit by hand: change the contract, then add a new migration. infra/db/contract_ddl.sql is the current
+-- contract DDL (test-checked); `corb db check` compares the migrated columns with the contract.
 
 -- migrate:up
 CREATE TABLE core.run (

@@ -1,27 +1,27 @@
 {
  "task": "INF-P0-T02",
- "generated_at": "2026-11-06T23:08:40",
+ "generated_at": "2026-11-07T09:21:32",
  "git": {
-  "head": "bd9405e2f7c6a39c56657cc108daa46c8e270e86",
+  "head": "ab8f265819297aa9d31b89b94185e5175e55bbc2",
   "tag_infra_p0": "de8d1a3359e395e25be168d941040f6624471509",
-  "dirty": false
+  "dirty": true
  },
  "summary": {
-  "files": 648,
-  "bytes": 95001183,
+  "files": 607,
+  "bytes": 93159729,
   "runs": 77,
   "kinds": {
    "calendar": 1,
-   "journal": 17,
-   "ledger_decisions": 35,
-   "ledger_events": 35,
-   "ledger_shadow": 35,
+   "journal": 18,
+   "ledger_decisions": 37,
+   "ledger_events": 37,
+   "ledger_shadow": 37,
    "preset": 51,
    "run_decisions": 77,
    "run_events": 77,
-   "run_ledger_decisions": 49,
-   "run_ledger_events": 49,
-   "run_ledger_shadow": 49,
+   "run_ledger_decisions": 33,
+   "run_ledger_events": 33,
+   "run_ledger_shadow": 33,
    "run_meta": 77,
    "scorecard": 8,
    "spec": 3,
@@ -251,7 +251,7 @@
    "armed_days": 269,
    "final": 960.28,
    "events_sha256": "e649b88805a9c1b80910b66907515752ccf83b5799edac7f8b3810b29459d232",
-   "folder_sha256": "c4f933b02110b911e20f15d6d80a43fcbf35b7afad3ca762118328343edce7b2"
+   "folder_sha256": "0412dc1c06ab87e175113b42738423ea8ef137265c244536b0b1fdb3006197df"
   },
   {
    "run_id": "v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs",
@@ -268,7 +268,7 @@
    "armed_days": 123,
    "final": 2021.69,
    "events_sha256": "b41ec959a453e58a2c7dfd123bd3a212e87b54346ce20da27996a6b5583b01a4",
-   "folder_sha256": "221906f62fddb51bea9a9b86c284c41fe5f5986f5e1b226bda6fb2de6f173d41"
+   "folder_sha256": "07f903fed2a911ef13ebb81f3ef3adda01791d41b5449f568143a16b290ecf10"
   },
   {
    "run_id": "v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs",
@@ -285,7 +285,7 @@
    "armed_days": 146,
    "final": 1439.96,
    "events_sha256": "482a6a89bef47a72ab3ef07df704ed3e0d11b509809f18ec731cef9f99dec216",
-   "folder_sha256": "e6082a7ce55dacaec57e15f22770a9264b43fd6ef33011655f0f34012dd47890"
+   "folder_sha256": "6ede70b07c54e70a47d14cbd4af72842c6148b7144115c164a336baef6de21fe"
   },
   {
    "run_id": "v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs",
@@ -302,7 +302,7 @@
    "armed_days": 199,
    "final": 1116.11,
    "events_sha256": "716dee16e475b31395cb44a08cdbce43f95554c7db114f884b2fccab3a6195e8",
-   "folder_sha256": "1f61b8f661e8822e964fee4300bbab2ebdf2616d2d4ccfc540a7f79e167faa38"
+   "folder_sha256": "64f22ae0548a8fa3939134ecddbb4d1888b22e9b1c2fbdf81f54b9e566199522"
   },
   {
    "run_id": "v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs",
@@ -319,7 +319,7 @@
    "armed_days": 234,
    "final": 977.94,
    "events_sha256": "ca0ab5a1af4b21d2d3aec1be33d8f32ff1f2fd48a29772c59517eca5f2b5e023",
-   "folder_sha256": "a2cc3fc85782c87999d88518bb5528c25d8a0f356ef6884f685d63ff4b2daf3b"
+   "folder_sha256": "72ed75ca08eab6957fc2131073a82c3524a818cd4cce237835d2d331c16aaf81"
   },
   {
    "run_id": "v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs",
@@ -336,7 +336,7 @@
    "armed_days": 126,
    "final": 1222.24,
    "events_sha256": "c2d25cca534bd401c8b3b8007dca86aefcf2abd4093f658f3028fd3c7a1e53c3",
-   "folder_sha256": "82514d5ee3ae843bc24e961c1e8e4e202fe29420be4032514581f4b4bca45f1a"
+   "folder_sha256": "40df140dd338d5bede75d63069d2d05d065a81d14fe4c32a477804be0f6dfe69"
   },
   {
    "run_id": "v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs",
@@ -353,7 +353,7 @@
    "armed_days": 65,
    "final": 1002.94,
    "events_sha256": "f825e1804a6bc4066177320f6475d627218532d367f4032f8b0f8d284e95f575",
-   "folder_sha256": "d31b71736030248df194a5ad67d78093e366cbcb52de6e5f3e8ab855e946a763"
+   "folder_sha256": "fec018691ac3a128a15b2cb7850e4ad6227b77e01c054e2925a7b912186ce83d"
   },
   {
    "run_id": "v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000",
@@ -387,7 +387,7 @@
    "armed_days": 171,
    "final": 1186.64,
    "events_sha256": "73fb6383a4796d7729bb5b997a2dc5e47dc021cc3fdff1e150c39c1bf475adf2",
-   "folder_sha256": "79e32a18f970a9fe031e996992fa647c5e605a255b9ca1749dd284849c07f0b4"
+   "folder_sha256": "400d605379fc3c1f35717b1f26f835772ec9b235ef8c8bb781508b23a7b2ef14"
   },
   {
    "run_id": "v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs",
@@ -404,7 +404,7 @@
    "armed_days": 98,
    "final": 1285.61,
    "events_sha256": "1dc5fd54d2c397566e59cd11a431da3632d90076634f685448fae47f381de50d",
-   "folder_sha256": "deb76972f7ce7acd6d014211d0a1ea06e288d982487d12198ac183b12fa9ee4e"
+   "folder_sha256": "b9f2c8729f0c1d0652ef55e2eec44cf55d527cbc6d5550a837434b7cd7971a6a"
   },
   {
    "run_id": "v1.11_Apple_26110600_2025-07-01_2026-10-31_1000",
@@ -863,7 +863,7 @@
    "armed_days": 268,
    "final": 965.31,
    "events_sha256": "be77a365a3423963f9fb8888c08fbaba113ee06b1efe0bb8d14dca3c838f4e0f",
-   "folder_sha256": "6be16e3193e025ead0152f1ec058159f23e6c5a3d07b7637c115433a7af6901b"
+   "folder_sha256": "e5c1d508273edd878c87f84ee6672a26ddfd2f491212f59f1cbe9eb62d52e15a"
   },
   {
    "run_id": "v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3F3",
@@ -897,7 +897,7 @@
    "armed_days": 123,
    "final": 2021.69,
    "events_sha256": "b41ec959a453e58a2c7dfd123bd3a212e87b54346ce20da27996a6b5583b01a4",
-   "folder_sha256": "d6dd50fd7ba1416102d6be0bf6920e23cd1f2a62704ffcccfbd153e146784f41"
+   "folder_sha256": "4a0a6b164b393d760eaae7e3155816c2579fb9bd319df76464c5b2aeffdbe964"
   },
   {
    "run_id": "v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3T05",
@@ -948,7 +948,7 @@
    "armed_days": 146,
    "final": 1455.82,
    "events_sha256": "fa256d99f3b4b0e822e1471526afe23c9a793ab7c3c93f54a53e435625f299c6",
-   "folder_sha256": "0daca001903afcf206d74f5a75748a2f3b968443941a8a742056879de8057908"
+   "folder_sha256": "1aa914818358952501da41739823f3bfa9307831ce3f550a0b365c1b5d942fb9"
   },
   {
    "run_id": "v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3T05",
@@ -982,7 +982,7 @@
    "armed_days": 199,
    "final": 1116.11,
    "events_sha256": "716dee16e475b31395cb44a08cdbce43f95554c7db114f884b2fccab3a6195e8",
-   "folder_sha256": "933f7751eeff44cf59492f867498397eb15f2c4a3ee8a8b0d91bd6befa6a8ccc"
+   "folder_sha256": "527c7edbc24820baa1aaa01dfcc6e4641314fb2be2a4fcd68597370768daf55b"
   },
   {
    "run_id": "v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3T05",
@@ -1016,7 +1016,7 @@
    "armed_days": 126,
    "final": 1206.71,
    "events_sha256": "52009b94a0e40a7d356aa8ea331a762b9c752838161b75dc3897fdad92975dee",
-   "folder_sha256": "e6e514c7d0860a7bf481c0718de8681a3e469cd184647c88581d4115cc58f0b1"
+   "folder_sha256": "c3a63dde9f6c0185fb423dd837899a2296a94916d7d360b17a4e89803000a10f"
   },
   {
    "run_id": "v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3T05",
@@ -1050,7 +1050,7 @@
    "armed_days": 168,
    "final": 1189.95,
    "events_sha256": "ac95b859006347f40a5ed7030f2e89494a95638eb4566f14c5257e9a115203b8",
-   "folder_sha256": "b061da6488c4861660e88de91d67bb0b7ff8933969886d1d5b7786d32cff7a41"
+   "folder_sha256": "cbd751185480436a6dcefcb3b4cc675721d706210ff4ef9805c7af364e124b36"
   },
   {
    "run_id": "v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3T05",
@@ -1084,7 +1084,7 @@
    "armed_days": 98,
    "final": 1285.61,
    "events_sha256": "1dc5fd54d2c397566e59cd11a431da3632d90076634f685448fae47f381de50d",
-   "folder_sha256": "bd3070fe4be8f2b24f7b3c6938be99324342697b84e3670efe82d7a5b7135d1c"
+   "folder_sha256": "252d071f383f96667829c9fd8626bdca9d1440bbaccd3438c1bc393e14cf01d3"
   },
   {
    "run_id": "v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3T05",
@@ -1375,7 +1375,6 @@
    {
     "sha256": "091c181f0b26c97cd8117fcc4829370f64398bc54595fad1f99f749f74062cd8",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110500_JPN225_tester_1000_P3G_events.csv"
     ]
@@ -1383,7 +1382,6 @@
    {
     "sha256": "0b7b85816654e6668b44d8df8d400c55c6b3be860a1c6d9776816f19e2f92236",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110500_JPN225_tester_1000_P1obs_decisions.csv"
     ]
@@ -1424,9 +1422,7 @@
    {
     "sha256": "227108d385796c09609448c78553afd26e0c83c6790e79b60d8881fa5916c40a",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_events.csv",
-     "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3T05/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110800_UK100_tester_1000_P1obs_events.csv",
@@ -1437,7 +1433,6 @@
    {
     "sha256": "25f7400a4916ba0e60323abbaa3428a25702171ec24abc5b4aef51ce275a6903",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110200_EURUSD_tester_1000_P3G_events.csv"
     ]
@@ -1445,9 +1440,7 @@
    {
     "sha256": "27fb8f914fecde6d592f1ccaa684c3db22710d115f98ae20bbe5fe3ad6f65c79",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3T05/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110800_UK100_tester_1000_P1obs_shadow.csv",
@@ -1468,7 +1461,6 @@
    {
     "sha256": "2c080b7a5b568cc80ce01ef0ba970bd3fda5cb1ce24c1744fc606743613363e6",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P1obs_decisions.csv"
     ]
@@ -1490,7 +1482,6 @@
    {
     "sha256": "2f09def3eef655491719333ca43c1dc6d20f8d7ff80880ae14669e5587ae1056",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_1000_P3G_decisions.csv"
     ]
@@ -1516,9 +1507,7 @@
    {
     "sha256": "33e28fde81ed261f14c02b9461dda6fbbd2898d0ba63e328daa38ddf0fb516cc",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P1obs_events.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P3G_events.csv"
@@ -1534,7 +1523,6 @@
    {
     "sha256": "4412e0ac4ff5efc24807210baa46f74dcb1e71b0729506d2b407990c615e9f12",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26111000_Exxon_tester_1000_P1obs_shadow.csv"
     ]
@@ -1559,7 +1547,6 @@
    {
     "sha256": "49fb3e098e49ac7012ff86b8985d215b5e38663fdf75f13d981106d3f674319d",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110200_EURUSD_tester_1000_P1obs_decisions.csv"
     ]
@@ -1567,7 +1554,6 @@
    {
     "sha256": "4e03839a334d5ee0e65f2d5e864e2856edfc353d2fc1f8439378690bab414a59",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P3G_decisions.csv"
     ]
@@ -1575,7 +1561,6 @@
    {
     "sha256": "50f7ad4e59b50161fb31de646d8c3e5d3c5369057ebb567f6dfa35dd1a77f587",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_1000_P1obs_decisions.csv"
     ]
@@ -1583,7 +1568,6 @@
    {
     "sha256": "515ccba4db2a938344f1dd51df6c2fcdcdf9d334014c525b9e5827089a8cb486",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3T05/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110500_JPN225_tester_1000_P1obs_events.csv",
@@ -1621,7 +1605,6 @@
    {
     "sha256": "5ae4ae315e59d1e598197d222d8f0432d3f8445e92e75ec52c6c0cc210ff552c",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26111000_Exxon_tester_1000_P1obs_decisions.csv"
     ]
@@ -1629,7 +1612,6 @@
    {
     "sha256": "5eb9840992d3b2f5a78dabae8dae8a9379dcf7fd1b7152e753da37f3fb61ec54",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110310_DE30_tester_1000_P1obs_decisions.csv"
     ]
@@ -1644,7 +1626,6 @@
    {
     "sha256": "64c6ace9471f91a8924d15493e5666f84d4fb6b2cdad8d6395a544f71544f162",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P1obs_shadow.csv"
     ]
@@ -1659,10 +1640,8 @@
    {
     "sha256": "66d0d583adf0a3bc416b220ccd1e525743e2f639b9dc5e5b201514947d110873",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110210_2025-07-01_2026-10-31_1000_P2T07b/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P1obs_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110210_EURUSD_tester_1000_P2T07b_shadow.csv",
@@ -1672,10 +1651,8 @@
    {
     "sha256": "6c4e07b204401d8de1d4e0df2eda6a75b4ec5f4d7da8fb4dded1ee499794d9ab",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3F3/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3T05/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3T06/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
@@ -1696,7 +1673,6 @@
    {
     "sha256": "6dda5ca6a9eacffea84ee27b3141efbe5f7d872e8c31630446522e8d82b31a72",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P1obs_events.csv"
     ]
@@ -1755,7 +1731,6 @@
    {
     "sha256": "8937c211e30d9273126539965863708aa717053edfdce2925809f9936eb75b6b",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110310_DE30_tester_1000_P3G_decisions.csv"
     ]
@@ -1770,7 +1745,6 @@
    {
     "sha256": "8b166d46c8e3a5616e3be1bec11880d2ca22efb2e6d55f0e334c3a8c630ba9e4",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3T05/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110200_EURUSD_tester_1000_P1obs_events.csv",
@@ -1780,11 +1754,9 @@
    {
     "sha256": "8b215bf036b65c02643122959237c7c81a39a16305f7d0b584c96abcd3140867",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P2T03/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_EURUSD_26110200_2025-07-01_2026-10-31_1000_P2T07a/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3T05/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110200_EURUSD_tester_1000_P1obs_shadow.csv",
@@ -1832,7 +1804,6 @@
    {
     "sha256": "9bf21189c0b18e4fd9ee515f216a8d1ad4477966de739c02a7907ef3eb498381",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P3F1_events.csv"
     ]
@@ -1840,9 +1811,7 @@
    {
     "sha256": "9c9eee02648a7072c1044a6e00d4912b7ffc727c8730ebf30de9b42dbf72789a",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-     "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110310_DE30_tester_1000_P1obs_events.csv",
      "%COMMON%/CycleORB/CORB_26110310_DE30_tester_1000_P3G_events.csv"
@@ -1868,7 +1837,6 @@
    {
     "sha256": "a4343f9c4ab503fb3f8b5d035371f1246cfb16291e9fd81e4e600e49b553bdb8",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110800_UK100_tester_1000_P1obs_decisions.csv"
     ]
@@ -1883,9 +1851,7 @@
    {
     "sha256": "a865c64bf1900313aac904ba58d761602a027e55c31b68850f53bae7a71d2caf",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3T05/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110500_JPN225_tester_1000_P1obs_shadow.csv",
@@ -1906,7 +1872,6 @@
    {
     "sha256": "aad46b8ba28d8d41e89025dc330abfd5abe09bf405563af237f65bc9bb9a22fa",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P3F1_decisions.csv"
     ]
@@ -1931,7 +1896,6 @@
    {
     "sha256": "acc29fae0a57918d42d76b6d08ca9b789e2ddb6708139ee3c612a96771865f64",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26111100_Microsoft_tester_1000_P1obs_shadow.csv"
     ]
@@ -1939,7 +1903,6 @@
    {
     "sha256": "ad92e14c6e48a44002f7db358182e7839808441666e5205b84b0c2f5d4fd456b",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110200_EURUSD_tester_1000_P3G_decisions.csv"
     ]
@@ -1987,7 +1950,6 @@
    {
     "sha256": "c0e29a0332cb85524e3b7032a84e1bc32b330f6784712381edf03ee93e24e1f7",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26111100_Microsoft_tester_1000_P1obs_decisions.csv"
     ]
@@ -2026,7 +1988,6 @@
    {
     "sha256": "c6e8a79bb112727ad259de6bdcbdb71881b25d1a17acb956a08c4c004a9dc7da",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26111000_Exxon_tester_1000_P1obs_events.csv"
     ]
@@ -2072,7 +2033,6 @@
    {
     "sha256": "ceaff7e5d8e235881f3a27ab532c7d76816393a1d936e9fe45fe39eadf36b65e",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26111100_Microsoft_tester_1000_P1obs_events.csv"
     ]
@@ -2094,7 +2054,6 @@
    {
     "sha256": "d2cecc75387155caf34b385a106e5d2fd3fa7695651ef616bbda89cdc7d22c7d",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P3F1_shadow.csv"
     ]
@@ -2102,7 +2061,6 @@
    {
     "sha256": "d3bae0ad29597ce65f8359de1075a10202a89ce1c2187bb0675ee67173a2b787",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110500_JPN225_tester_1000_P3G_decisions.csv"
     ]
@@ -2110,7 +2068,6 @@
    {
     "sha256": "d4db407c895e9085feec69cb93235e76f9ed0e5086667d07ef0d9631421649f4",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110600_Apple_tester_1000_P1obs_decisions.csv"
     ]
@@ -2153,9 +2110,7 @@
    {
     "sha256": "f44daa6ce06f47bdb31ab79b1b7eee38fb9b09c0be99a233580571285fa4b8d6",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-     "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3T05/ledger_events.csv",
      "%REPO%/tester/aos/runs/v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
      "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_1000_P1obs_events.csv",
@@ -2180,10 +2135,8 @@
    {
     "sha256": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.11_SPX500_26110900_2025-07-01_2026-10-31_1000_P2T04A/ledger_shadow.csv",
-     "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3T05/ledger_shadow.csv",
      "%REPO%/tester/aos/runs/v1.13_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
      "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_1000_P1obs_shadow.csv",
@@ -2218,7 +2171,6 @@
    {
     "sha256": "fb53ed8ed504779656ca251fa18f8abf94d2fa1e9bd293dd1713c80715d5d0da",
     "paths": [
-     "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%REPO%/tester/aos/runs/v1.13_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_decisions.csv",
      "%COMMON%/CycleORB/CORB_26110800_UK100_tester_1000_P3G_decisions.csv"
     ]
@@ -2951,6 +2903,42 @@
    "kind": "ledger_shadow",
    "bytes": 11905,
    "sha256": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_500_decisions.csv",
+   "kind": "ledger_decisions",
+   "bytes": 16787,
+   "sha256": "db5ae2e8949bc18ef5ad788f6cc272cb10b584ca6437427b3e376927823cd632"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_500_events.csv",
+   "kind": "ledger_events",
+   "bytes": 1259,
+   "sha256": "4a5fe5208f7e5b210120e9d224b62ab835b39479a062323d7093d0a1641b5ce8"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_SPX500_tester_500_shadow.csv",
+   "kind": "ledger_shadow",
+   "bytes": 1412,
+   "sha256": "5a00117808b1003a50befd13b2baf43f7f7b40f8a8ff089e8b7835b60685baa7"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_UK100_tester_500_decisions.csv",
+   "kind": "ledger_decisions",
+   "bytes": 50546,
+   "sha256": "9ff64dc28543b5a87427f8095759106034662b8f445942a91eb1abb18c87e618"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_UK100_tester_500_events.csv",
+   "kind": "ledger_events",
+   "bytes": 497,
+   "sha256": "5afa45f11f1e41d48fd854edd87736a1c6fb72d14c74de7d288b9e7e90eb8c60"
+  },
+  {
+   "path": "%COMMON%/CycleORB/CORB_26110900_UK100_tester_500_shadow.csv",
+   "kind": "ledger_shadow",
+   "bytes": 399,
+   "sha256": "7d388bbc4e1188800754b669485d27e01bc3c575af31006bcc983749aa77710b"
   },
   {
    "path": "%COMMON%/CycleORB/CORB_26111000_Exxon_tester_1000_P1obs_decisions.csv",
@@ -3877,24 +3865,6 @@
    "sha256": "e649b88805a9c1b80910b66907515752ccf83b5799edac7f8b3810b29459d232"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 127093,
-   "sha256": "d4db407c895e9085feec69cb93235e76f9ed0e5086667d07ef0d9631421649f4"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 12377,
-   "sha256": "6dda5ca6a9eacffea84ee27b3141efbe5f7d872e8c31630446522e8d82b31a72"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 16324,
-   "sha256": "64c6ace9471f91a8924d15493e5666f84d4fb6b2cdad8d6395a544f71544f162"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.10_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs/meta.json",
    "kind": "run_meta",
    "bytes": 4804,
@@ -3911,24 +3881,6 @@
    "kind": "run_events",
    "bytes": 31385,
    "sha256": "b41ec959a453e58a2c7dfd123bd3a212e87b54346ce20da27996a6b5583b01a4"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 131637,
-   "sha256": "5eb9840992d3b2f5a78dabae8dae8a9379dcf7fd1b7152e753da37f3fb61ec54"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 19866,
-   "sha256": "9c9eee02648a7072c1044a6e00d4912b7ffc727c8730ebf30de9b42dbf72789a"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 13693,
-   "sha256": "6c4e07b204401d8de1d4e0df2eda6a75b4ec5f4d7da8fb4dded1ee499794d9ab"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.10_DE30_26110310_2025-07-01_2026-10-31_1000_P1obs/meta.json",
@@ -3949,24 +3901,6 @@
    "sha256": "482a6a89bef47a72ab3ef07df704ed3e0d11b509809f18ec731cef9f99dec216"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 132043,
-   "sha256": "49fb3e098e49ac7012ff86b8985d215b5e38663fdf75f13d981106d3f674319d"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 23156,
-   "sha256": "8b166d46c8e3a5616e3be1bec11880d2ca22efb2e6d55f0e334c3a8c630ba9e4"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 15975,
-   "sha256": "8b215bf036b65c02643122959237c7c81a39a16305f7d0b584c96abcd3140867"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110200_2025-07-01_2026-10-31_1000_P1obs/meta.json",
    "kind": "run_meta",
    "bytes": 4493,
@@ -3983,24 +3917,6 @@
    "kind": "run_events",
    "bytes": 48491,
    "sha256": "716dee16e475b31395cb44a08cdbce43f95554c7db114f884b2fccab3a6195e8"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 132939,
-   "sha256": "2c080b7a5b568cc80ce01ef0ba970bd3fda5cb1ce24c1744fc606743613363e6"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 30160,
-   "sha256": "33e28fde81ed261f14c02b9461dda6fbbd2898d0ba63e328daa38ddf0fb516cc"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 21514,
-   "sha256": "66d0d583adf0a3bc416b220ccd1e525743e2f639b9dc5e5b201514947d110873"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.10_EURUSD_26110210_2025-07-01_2026-10-31_1000_P1obs/meta.json",
@@ -4021,24 +3937,6 @@
    "sha256": "ca0ab5a1af4b21d2d3aec1be33d8f32ff1f2fd48a29772c59517eca5f2b5e023"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 112935,
-   "sha256": "5ae4ae315e59d1e598197d222d8f0432d3f8445e92e75ec52c6c0cc210ff552c"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 8044,
-   "sha256": "c6e8a79bb112727ad259de6bdcbdb71881b25d1a17acb956a08c4c004a9dc7da"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 18555,
-   "sha256": "4412e0ac4ff5efc24807210baa46f74dcb1e71b0729506d2b407990c615e9f12"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.10_Exxon_26111000_2025-07-01_2026-10-31_1000_P1obs/meta.json",
    "kind": "run_meta",
    "bytes": 4616,
@@ -4057,24 +3955,6 @@
    "sha256": "c2d25cca534bd401c8b3b8007dca86aefcf2abd4093f658f3028fd3c7a1e53c3"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 129204,
-   "sha256": "0b7b85816654e6668b44d8df8d400c55c6b3be860a1c6d9776816f19e2f92236"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 16883,
-   "sha256": "515ccba4db2a938344f1dd51df6c2fcdcdf9d334014c525b9e5827089a8cb486"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 12647,
-   "sha256": "a865c64bf1900313aac904ba58d761602a027e55c31b68850f53bae7a71d2caf"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.10_JPN225_26110500_2025-07-01_2026-10-31_1000_P1obs/meta.json",
    "kind": "run_meta",
    "bytes": 4496,
@@ -4091,24 +3971,6 @@
    "kind": "run_events",
    "bytes": 8038,
    "sha256": "f825e1804a6bc4066177320f6475d627218532d367f4032f8b0f8d284e95f575"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 109036,
-   "sha256": "c0e29a0332cb85524e3b7032a84e1bc32b330f6784712381edf03ee93e24e1f7"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 4829,
-   "sha256": "ceaff7e5d8e235881f3a27ab532c7d76816393a1d936e9fe45fe39eadf36b65e"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 6352,
-   "sha256": "acc29fae0a57918d42d76b6d08ca9b789e2ddb6708139ee3c612a96771865f64"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.10_Microsoft_26111100_2025-07-01_2026-10-31_1000_P1obs/meta.json",
@@ -4147,24 +4009,6 @@
    "sha256": "73fb6383a4796d7729bb5b997a2dc5e47dc021cc3fdff1e150c39c1bf475adf2"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 124838,
-   "sha256": "50f7ad4e59b50161fb31de646d8c3e5d3c5369057ebb567f6dfa35dd1a77f587"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 10982,
-   "sha256": "f44daa6ce06f47bdb31ab79b1b7eee38fb9b09c0be99a233580571285fa4b8d6"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 11905,
-   "sha256": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.10_SPX500_26110900_2025-07-01_2026-10-31_1000_P1obs/meta.json",
    "kind": "run_meta",
    "bytes": 4680,
@@ -4181,24 +4025,6 @@
    "kind": "run_events",
    "bytes": 23005,
    "sha256": "1dc5fd54d2c397566e59cd11a431da3632d90076634f685448fae47f381de50d"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 84925,
-   "sha256": "a4343f9c4ab503fb3f8b5d035371f1246cfb16291e9fd81e4e600e49b553bdb8"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 14488,
-   "sha256": "227108d385796c09609448c78553afd26e0c83c6790e79b60d8881fa5916c40a"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 10418,
-   "sha256": "27fb8f914fecde6d592f1ccaa684c3db22710d115f98ae20bbe5fe3ad6f65c79"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.10_UK100_26110800_2025-12-17_2026-10-31_1000_P1obs/meta.json",
@@ -4993,24 +4819,6 @@
    "sha256": "be77a365a3423963f9fb8888c08fbaba113ee06b1efe0bb8d14dca3c838f4e0f"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 91958,
-   "sha256": "aad46b8ba28d8d41e89025dc330abfd5abe09bf405563af237f65bc9bb9a22fa"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 4081,
-   "sha256": "9bf21189c0b18e4fd9ee515f216a8d1ad4477966de739c02a7907ef3eb498381"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 4734,
-   "sha256": "d2cecc75387155caf34b385a106e5d2fd3fa7695651ef616bbda89cdc7d22c7d"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.12_Apple_26110600_2025-07-01_2026-10-31_1000_P3F1/meta.json",
    "kind": "run_meta",
    "bytes": 5384,
@@ -5063,24 +4871,6 @@
    "kind": "run_events",
    "bytes": 31385,
    "sha256": "b41ec959a453e58a2c7dfd123bd3a212e87b54346ce20da27996a6b5583b01a4"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 132926,
-   "sha256": "8937c211e30d9273126539965863708aa717053edfdce2925809f9936eb75b6b"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 19866,
-   "sha256": "9c9eee02648a7072c1044a6e00d4912b7ffc727c8730ebf30de9b42dbf72789a"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 13693,
-   "sha256": "6c4e07b204401d8de1d4e0df2eda6a75b4ec5f4d7da8fb4dded1ee499794d9ab"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.12_DE30_26110310_2025-07-01_2026-10-31_1000_P3G/meta.json",
@@ -5173,24 +4963,6 @@
    "sha256": "fa256d99f3b4b0e822e1471526afe23c9a793ab7c3c93f54a53e435625f299c6"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 133411,
-   "sha256": "ad92e14c6e48a44002f7db358182e7839808441666e5205b84b0c2f5d4fd456b"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 23165,
-   "sha256": "25f7400a4916ba0e60323abbaa3428a25702171ec24abc5b4aef51ce275a6903"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 15975,
-   "sha256": "8b215bf036b65c02643122959237c7c81a39a16305f7d0b584c96abcd3140867"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110200_2025-07-01_2026-10-31_1000_P3G/meta.json",
    "kind": "run_meta",
    "bytes": 5065,
@@ -5243,24 +5015,6 @@
    "kind": "run_events",
    "bytes": 48491,
    "sha256": "716dee16e475b31395cb44a08cdbce43f95554c7db114f884b2fccab3a6195e8"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 135064,
-   "sha256": "4e03839a334d5ee0e65f2d5e864e2856edfc353d2fc1f8439378690bab414a59"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 30160,
-   "sha256": "33e28fde81ed261f14c02b9461dda6fbbd2898d0ba63e328daa38ddf0fb516cc"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 21514,
-   "sha256": "66d0d583adf0a3bc416b220ccd1e525743e2f639b9dc5e5b201514947d110873"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.12_EURUSD_26110210_2025-07-01_2026-10-31_1000_P3G/meta.json",
@@ -5317,24 +5071,6 @@
    "sha256": "52009b94a0e40a7d356aa8ea331a762b9c752838161b75dc3897fdad92975dee"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 130425,
-   "sha256": "d3bae0ad29597ce65f8359de1075a10202a89ce1c2187bb0675ee67173a2b787"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 16883,
-   "sha256": "091c181f0b26c97cd8117fcc4829370f64398bc54595fad1f99f749f74062cd8"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 12647,
-   "sha256": "a865c64bf1900313aac904ba58d761602a027e55c31b68850f53bae7a71d2caf"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.12_JPN225_26110500_2025-07-01_2026-10-31_1000_P3G/meta.json",
    "kind": "run_meta",
    "bytes": 5074,
@@ -5389,24 +5125,6 @@
    "sha256": "ac95b859006347f40a5ed7030f2e89494a95638eb4566f14c5257e9a115203b8"
   },
   {
-   "path": "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 126144,
-   "sha256": "2f09def3eef655491719333ca43c1dc6d20f8d7ff80880ae14669e5587ae1056"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 10982,
-   "sha256": "f44daa6ce06f47bdb31ab79b1b7eee38fb9b09c0be99a233580571285fa4b8d6"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 11905,
-   "sha256": "f7c89aba2e14f10b9dfb455913e42270f5bb64ef2df99a754c43d3b8d713dc7e"
-  },
-  {
    "path": "%REPO%/tester/aos/runs/v1.12_SPX500_26110900_2025-07-01_2026-10-31_1000_P3G/meta.json",
    "kind": "run_meta",
    "bytes": 5234,
@@ -5459,24 +5177,6 @@
    "kind": "run_events",
    "bytes": 23005,
    "sha256": "1dc5fd54d2c397566e59cd11a431da3632d90076634f685448fae47f381de50d"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_decisions.csv",
-   "kind": "run_ledger_decisions",
-   "bytes": 85733,
-   "sha256": "fb53ed8ed504779656ca251fa18f8abf94d2fa1e9bd293dd1713c80715d5d0da"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_events.csv",
-   "kind": "run_ledger_events",
-   "bytes": 14488,
-   "sha256": "227108d385796c09609448c78553afd26e0c83c6790e79b60d8881fa5916c40a"
-  },
-  {
-   "path": "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/ledger_shadow.csv",
-   "kind": "run_ledger_shadow",
-   "bytes": 10418,
-   "sha256": "27fb8f914fecde6d592f1ccaa684c3db22710d115f98ae20bbe5fe3ad6f65c79"
   },
   {
    "path": "%REPO%/tester/aos/runs/v1.12_UK100_26110800_2025-12-17_2026-10-31_1000_P3G/meta.json",
@@ -6243,8 +5943,14 @@
   {
    "path": "%TERMINAL%/Tester/logs/20261106.log",
    "kind": "journal",
-   "bytes": 50004904,
-   "sha256": "292c05e2197fb23250e0e37f4ff918f17d14e33c7df039f4f3399bac0f81e14e"
+   "bytes": 50005126,
+   "sha256": "50b441e4266b0665619e002ad656e2f66748bb96df5781ed67c8d6534e402164"
+  },
+  {
+   "path": "%TERMINAL%/Tester/logs/20261107.log",
+   "kind": "journal",
+   "bytes": 486414,
+   "sha256": "96d4cd129d65a757deddf8b84cbfcbefbfa805014941c6a3345abb1a78129c68"
   }
  ]
 }
