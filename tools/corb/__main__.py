@@ -18,6 +18,9 @@
   import ouroboros            INF-P2-T08  land the frozen Ouroboros slices (refused if a hash moved)
   tester exp | build          INF-P2-T04  EXP presets + inis | build the Wine + MT5 tester image
   tester run [inis] | parity  INF-P2-T04  run tester containers (login from infra/.env) | compare with native runs
+  features registry | audit   INF-P3-T01 / T04  feature registry -> DB | point-in-time audit of the EA features
+  features tape | cells       INF-P3-T05 / T06  regime tape per evaluated day | BM per regime cell (actual + shadow)
+  bars prepare | export | lake  INF-P3-T02  portable MT5 copy | headless offline bar export | parquet lake + index
 
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
@@ -265,6 +268,60 @@ def cmd_tester(a):
     return 1 if bad else 0
 
 
+def cmd_features(a):
+    from corb import regime
+    if a.action == "registry":
+        res = regime.registry()
+        bad = res["not_in_adapter"] + res["adapter_not_registered"] + res["tape_features_not_registered"] + \
+            res["stored_not_registered"]
+        print(res)
+        verdict = "REJECT" if bad else "ACCEPT"
+        scorecard.write("INF-P3-T01_feat_registry", verdict, res)
+    elif a.action == "audit":
+        res = regime.audit()
+        print(res)
+        bad = res["as_of_after_decision"] or res["decided_after_fill"] or res["label_columns_in_features"]
+        verdict = "REJECT" if bad else "HOLD"   # HOLD until the bar-based future-shift test exists (T03)
+        scorecard.write("INF-P3-T04_feat_pitAudit", verdict, res)
+    elif a.action == "tape":
+        res = regime.build_tape()
+        for k, v in res.items():
+            print(f"  {k:15} days {v['days']:4}  with EA features {v['with_features']:4}  "
+                  f"range/ATR cuts {v['cuts'][0]:.1f} / {v['cuts'][1]:.1f}")
+        verdict = "ACCEPT"
+        scorecard.write("INF-P3-T05_feat_regimeTape", verdict, dict(assets=res))
+    else:
+        res = regime.build_cells()
+        bad = [c for c in res["checks"] if not c["ok"]]
+        print(f"{res['cells']} cells; frozen-cell checks {len(res['checks']) - len(bad)} / {len(res['checks'])} pass")
+        for c in bad:
+            print(f"  FAIL {c['name']}: expected {c['expected']} got {c['got']}")
+        for f in res["flagged"]:
+            print(f"  BM <= 0: {f['asset']:15} ({f['role']}) {f['dim']}={f['value']:8} n={f['n']:3} "
+                  f"actual {100 * f['bm_actual']:+.1f}pp shadow "
+                  f"{'-' if f['bm_shadow'] is None else f'{100 * f['bm_shadow']:+.1f}pp'} both={f['both_streams']}")
+        verdict = "REJECT" if bad else "ACCEPT"
+        scorecard.write("INF-P3-T06_feat_cellBM", verdict, res)
+    print("verdict", verdict)
+    return 1 if verdict == "REJECT" else 0
+
+
+def cmd_bars(a):
+    from corb import bars
+    res = getattr(bars, a.action)()
+    shown = {k: v for k, v in res.items() if k != "manifest"}
+    print(shown)
+    if a.action == "export":
+        for r in res["manifest"]:
+            if r["tf"] == "M1":
+                print(f"  {r['symbol']:10} M1 {r['year']}: {int(r['rows']):7} bars {r['first']} .. {r['last']}")
+    verdict = "ACCEPT" if (a.action != "export" or res["bars"] > 0) and (a.action != "prepare" or res["compiled"]) \
+        else "REJECT"
+    scorecard.write(f"INF-P3-T02_feat_bars{a.action.capitalize()}", verdict, shown)
+    print("verdict", verdict)
+    return 0 if verdict == "ACCEPT" else 1
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -306,6 +363,12 @@ def main():
     p.add_argument("--parallel", type=int, default=1)
     p.add_argument("--timeout", type=int, default=5400, help="seconds per job")
     p.set_defaults(fn=cmd_tester)
+    p = sub.add_parser("features")
+    p.add_argument("action", choices=["registry", "audit", "tape", "cells"])
+    p.set_defaults(fn=cmd_features)
+    p = sub.add_parser("bars")
+    p.add_argument("action", choices=["prepare", "export", "lake"])
+    p.set_defaults(fn=cmd_bars)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
 

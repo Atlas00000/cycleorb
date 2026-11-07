@@ -73,7 +73,7 @@ def up(timeout=90):
 
 def psql(sql, db=NAME):
     return _docker(["exec", "-i", CONTAINER, "psql", "-U", USER, "-d", db, "-v", "ON_ERROR_STOP=1", "-qAt",
-                    "-F", "\t", "-f", "-"], stdin=sql).strip()
+                    "-F", "\t", "-f", "-"], stdin=sql).strip("\r\n")   # keep tabs: they delimit empty columns
 
 
 def dbmate(*args, db=NAME):
