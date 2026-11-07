@@ -283,6 +283,25 @@ def cmd_features(a):
         bad = res["as_of_after_decision"] or res["decided_after_fill"] or res["label_columns_in_features"]
         verdict = "REJECT" if bad else "HOLD"   # HOLD until the bar-based future-shift test exists (T03)
         scorecard.write("INF-P3-T04_feat_pitAudit", verdict, res)
+    elif a.action == "build":
+        from corb import featbuild
+        per_asset, pooled = featbuild.run_all()
+        for f, p in sorted(pooled.items(), key=lambda kv: kv[1]["share"]):
+            print(f"  {f:18} {p['ok']:5}/{p['n']:5} ({100 * p['share']:5.1f}%) {p['status']}")
+        fs = {k: v["future_shift"] for k, v in per_asset.items()}
+        changed = sum(v["days_changed"] for v in fs.values())
+        print(f"future-shift: {sum(v['days_checked'] for v in fs.values())} days rebuilt with every bar after the "
+              f"range end deleted, {changed} changed")
+        rejected = [f for f, p in pooled.items() if p["status"] == "reject"]
+        verdict = "REJECT" if rejected or changed else "ACCEPT"
+        scorecard.write("INF-P3-T03_feat_offlineParity_P1obs", "REJECT" if rejected else "ACCEPT",
+                        dict(pooled=pooled, per_asset={k: {kk: vv for kk, vv in v.items() if kk != "parity"}
+                                                       for k, v in per_asset.items()},
+                             catalogued=[f for f, p in pooled.items() if p["status"] == "catalogued"]))
+        audit = regime.audit()
+        audit["future_shift_test"] = fs
+        scorecard.write("INF-P3-T04_feat_pitAudit", "REJECT" if changed or audit["as_of_after_decision"]
+                        or audit["decided_after_fill"] else "ACCEPT", audit)
     elif a.action == "tape":
         res = regime.build_tape()
         for k, v in res.items():
@@ -364,7 +383,7 @@ def main():
     p.add_argument("--timeout", type=int, default=5400, help="seconds per job")
     p.set_defaults(fn=cmd_tester)
     p = sub.add_parser("features")
-    p.add_argument("action", choices=["registry", "audit", "tape", "cells"])
+    p.add_argument("action", choices=["registry", "audit", "build", "tape", "cells"])
     p.set_defaults(fn=cmd_features)
     p = sub.add_parser("bars")
     p.add_argument("action", choices=["prepare", "export", "lake"])

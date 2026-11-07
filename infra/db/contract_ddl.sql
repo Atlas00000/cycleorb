@@ -131,7 +131,7 @@ CREATE TABLE features.feature_value (
   as_of_ts timestamptz NOT NULL,
   decision_ts timestamptz NOT NULL,
   source text NOT NULL CHECK (source IN ('ea', 'offline')),
-  PRIMARY KEY (run_key, event_id, feature),
+  PRIMARY KEY (run_key, event_id, feature, source),
   FOREIGN KEY (run_key) REFERENCES core.run (run_key) ON DELETE CASCADE,
   CHECK (as_of_ts <= decision_ts)
 );

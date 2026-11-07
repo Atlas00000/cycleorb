@@ -528,13 +528,13 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
-| INF-P3-T01 | P-FEAT | L-11 | Feature registry seeded with the 34 EA ledger features (definition, as-of rule, source) | Every tape column has a registry row |
-| INF-P3-T02 | P-FEAT | L-12, L-13 | `Scripts/CycleORB/CycleORB_ExportBars.mq5` (M1, H1, D1, per symbol, with spread) run headless like the calendar export. Lake partitions + `bar_index`. Calendar exports kept as versioned snapshots | Bars cover every run window for the nine symbols. Calendar snapshot ids recorded |
-| INF-P3-T03 | P-FEAT | L-11 | Offline feature builder in Python from bars + calendar. **Parity** against the EA ledger values | Each of the 34 features: ≥ 99 % of rows within its tolerance. Every mismatch is catalogued (e.g. context-symbol history) |
-| INF-P3-T04 | P-FEAT | PIT | Leakage tests: timestamp audit (generalised `aos_tape check`), a future-shift test (features recomputed with bars after `range_end` must change nothing), and no label columns in `features` | 0 violations |
-| INF-P3-T05 | P-FEAT | CO-09 | **Deterministic regime tagger** (generic roadmap #3) on **every evaluated day**, not only armed days: H1 vol tercile, ER50 trend / range, D1 side, range/ATR tercile, event-window and session-overlap tags → `features.regime_tape` | Reproduces the `edge_framework.md` §5.3 cell table from the DB |
-| INF-P3-T06 | P-FEAT | IB-03 | `score.cell_bm`: `BM_cell` with CIs for every qualifying cell, on actual and shadow streams. Cells with `BM_cell ≤ 0` flagged | Matches §5.3. Expected: **no** production cell ≤ 0 |
-| INF-P3-T07 | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.json`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
+| INF-P3-T01 ✅ | P-FEAT | L-11 | Feature registry seeded with the 34 EA ledger features (definition, as-of rule, source) | Every tape column has a registry row |
+| INF-P3-T02 ✅ | P-FEAT | L-12, L-13 | `Scripts/CycleORB/CycleORB_ExportBars.mq5` (M1, H1, D1, per symbol, with spread) run headless like the calendar export. Lake partitions + `bar_index`. Calendar exports kept as versioned snapshots | Bars cover every run window for the nine symbols. Calendar snapshot ids recorded |
+| INF-P3-T03 ✅ | P-FEAT | L-11 | Offline feature builder in Python from bars + calendar. **Parity** against the EA ledger values | Each of the 34 features: ≥ 99 % of rows within its tolerance. Every mismatch is catalogued (e.g. context-symbol history) |
+| INF-P3-T04 ✅ | P-FEAT | PIT | Leakage tests: timestamp audit (generalised `aos_tape check`), a future-shift test (features recomputed with bars after `range_end` must change nothing), and no label columns in `features` | 0 violations |
+| INF-P3-T05 ✅ | P-FEAT | CO-09 | **Deterministic regime tagger** (generic roadmap #3) on **every evaluated day**, not only armed days: H1 vol tercile, ER50 trend / range, D1 side, range/ATR tercile, event-window and session-overlap tags → `features.regime_tape` | Reproduces the `edge_framework.md` §5.3 cell table from the DB |
+| INF-P3-T06 ✅ | P-FEAT | IB-03 | `score.cell_bm`: `BM_cell` with CIs for every qualifying cell, on actual and shadow streams. Cells with `BM_cell ≤ 0` flagged | Matches §5.3. Expected: **no** production cell ≤ 0 |
+| INF-P3-T07 ⏳ | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.json`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
 
 **Recipes:**
 
@@ -542,6 +542,28 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 - `INF-P3-T07_feat_replicaParity_2025-07_2026-10` — in: lake bars, the nine production / control presets · run: `python -m corb replica run --all && python -m corb replica parity` · out: replica runs (`kind=replica`), parity scorecard · accept: the gate above on all six assets · reject: an asset that fails stays tester-only.
 
 **Exit:** the tape can be rebuilt from bars with no tester pass, is PIT-clean, and the regime tape covers every evaluated day. The replica is either validated per asset or explicitly limited to the assets that passed.
+
+**Status 2026-11-07:** T01–T06 met. **T07 (engine replica) not started**: a full Python port of the EA's trading logic with its own parity gate, planned as the next session.
+
+#### INF-P3 results (2026-11-07)
+
+**Built:** `infra/features.json` (registry v2), migrations `005_features`, `006_bars`, `007_feature_source_key` (contract 1.2.0: EA and offline values side by side), `tools/mql5/CycleORB_ExportBars.mq5`, `tools/corb/bars.py`, `featbuild.py`, `regime.py`; commands `corb features registry | audit | build | tape | cells` and `corb bars prepare | export | lake`. `tools/tests/test_infra_p3.py`: 5 tests (61 pass in total).
+
+| Task | Result |
+| --- | --- |
+| T01 | 34 features registered, exactly the adapter's and the tape's. v2 marks 31 offline-reproducible (not `spread_live_pt`, `spread_avg_pt`, `cost_pct`; see T03) |
+| T02 | **Bar export without touching the workstation terminal:** a portable MT5 copy in `var/mt5_export` reads a copy of the broker history cache offline (no login needed) via a `[StartUp]` script, minimised, and writes `Common\Files\CycleORB\bars`. 252 files, **15.4 M bars** (M1 12.6 M, M5 2.5 M, H1 0.22 M, D1 16 k), 12 symbols, 2020 → 2026-11-06 where the cache has them → parquet lake `var/lake/bars/` + `features.bar_index`. Calendar snapshot (1,677 events, sha256-frozen) in `features.calendar_snapshot` |
+| T03 | Offline builder = a Python port of `Features.mqh` + the range / ATR / spread logic of `Setup.mqh`. Parity with the EA ledger over 2,715 setup-days (9 assets): **28 of 30 compared features ≥ 99.7 %** (26 at 100 %). `vol_pct` 99.9 % with a 1.0-point functional tolerance (misses were 1–3 of 500 ranks). `spread_avg_pt` 95.0 % / `cost_pct` 93.4 %: not reproducible from stored bars (EURUSD-NY 77 %), so registry v2 marks them EA-only. 83,900 offline values stored as `source = offline` |
+| T04 | Stored EA values: 296,114 checked, 0 after their decision, 0 decided after the fill, no label column in `features`. **Future-shift: 360 days (40 per asset) rebuilt with every bar after the range end deleted on all symbols: 0 changed** |
+| T05 | `features.regime_tape`: every evaluated day of the 9 assets (2,881 days): range/ATR tercile (the traded set's cuts), vol tercile, D1 trend side, calendar tags, US cash open inside the hold. ER50 stays null (bar-based, added with T07) |
+| T06 | `score.cell_bm`: 210 cells × 2 streams; **the frozen cells reproduce 90 / 90** (n and BM). BM ≤ 0 on both streams: the controls (as expected) and **one production cell: EURUSD-LON0700 high-vol tercile, −6.6 pp, n 59** (LON0700 has no vol filter) |
+
+**What the numbers say:**
+
+- **The tester's ledger and the broker's stored bars agree** on every structure, ATR, context and calendar feature. The only systematic difference is the spread field. That matters for INF-P3-T07: the replica must use real ticks (or the tester's spread) for spread-dependent logic (cost cap, entry buffer), not stored M1 spreads.
+- **The LON0700 high-vol cell is a hypothesis, not a rule.** It comes from a new dimension tested in-sample across about 80 cells, so one negative cell is about what chance produces. It is the first candidate for the INF-P4-T03 low-bar cell rule, which refits per fold and must survive out of sample.
+
+**Lessons that went into the code:** a script with `script_show_inputs` blocks a headless run on its input dialog; a `[StartUp]` chart with no data never starts its script; a login without a password pops the login dialog; the workstation terminal holds its current-year `.hcc` files exclusively; a backward month scan avoids waiting on history that doesn't exist; `pandas` parquet times may be microseconds, not nanoseconds.
 
 ### INF-P4 — Offline train and eval harness (L2 in shadow, not wired)
 

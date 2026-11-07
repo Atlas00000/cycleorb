@@ -1,6 +1,6 @@
 {
  "name": "cycleorb-contract",
- "version": "1.1.0",
+ "version": "1.2.0",
  "title": "CycleORB adapter contract (INF-P1-T01)",
  "description": "Generic EA adapter contract (unified_edge_framework.md §8) bound to CycleORB (edge_framework.md §2-§3). One event = one setup-day (CO-06). Times are ISO-8601 UTC (every run uses InpServerTZ=1, offset 0, so server time = UTC). Produced from run folders by tools/corb/contract.py; validated by the same module; loaded into the core schema with the same column names. x-table = database table; x-checks = row-level checks enforced by the validator and as SQL CHECK constraints.",
  "resources": [
@@ -814,12 +814,13 @@
   },
   {
    "name": "feature",
-   "description": "L1 features at decision time, long format (ledger runs). as_of_ts = range end: every value comes from bars completed by then",
+   "description": "L1 features at decision time, long format (ledger runs). as_of_ts = range end: every value comes from bars completed by then. One row per source: ea = the EA ledger, offline = the INF-P3-T03 bar builder. One row per source: ea = the EA ledger, offline = the INF-P3-T03 bar builder",
    "schema": {
     "primaryKey": [
      "run_key",
      "event_id",
-     "feature"
+     "feature",
+     "source"
     ],
     "fields": [
      {
