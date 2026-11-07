@@ -17,6 +17,7 @@ import re
 from corb import contract, db, landing
 from corb.inventory import sha256
 from corb.paths import COMMON, INFRA, REPO, RUNS, TERMINAL, VAR, resolve
+from corb.textio import read_text
 
 STAGE = os.path.join(VAR, "stage")
 LIVE = os.path.join(VAR, "live")
@@ -34,12 +35,11 @@ def content_sha(run_dir):
 
 def parse_set(path):
     inputs = {}
-    with open(path, encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith(";") and "=" in line:
-                k, v = line.split("=", 1)
-                inputs[k.strip()] = v.split("||", 1)[0].strip()
+    for line in read_text(path).splitlines():
+        line = line.strip()
+        if line and not line.startswith(";") and "=" in line:
+            k, v = line.split("=", 1)
+            inputs[k.strip()] = v.split("||", 1)[0].strip()
     return inputs
 
 

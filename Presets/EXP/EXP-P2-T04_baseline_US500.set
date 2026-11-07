@@ -1,0 +1,93 @@
+; EXP-P2-T04_baseline_US500: export preset for the tester-container parity test (INF-P2-T04). Copy of AOS-P1-T06_L6L1_observeAll_US500.set with InpAosRunTag=EXP. EA logic unchanged.
+; AOS-P1 observe-all preset for US500 (AOS-P1-T01..T06: ledger, shadow, L1 features, events, context)
+; Base: CycleORB-M5-US500-6M-NY.set (frozen production). Changed inputs: InpAosLedger=true, InpAosRunTag=EXP, InpAosEventCcy=USD, InpAosCtxSymbols=DE30,UK100
+; Hypothesis: zero behaviour change. Expected skip/fire change: 0 %. Must equal the AOS-P0 baseline event by event (aos_compare: withheld 0, added 0, changed 0)
+; CycleORB v1.06 - US500 (YWO index CFD `SPX500`) M5 chart preset, New York first-hour-after-open ORB (range 10:00-11:00 NY), regime-filtered (6-month review 2026-05 -> 2026-10)
+; Research: Ouroboros research/assets/US500/CycleORB_M5_chart_preset.md
+; Broker clock YWO-Trade = UTC+0 -> fixed offset 0 (broker history before 2025-06-18 is stamped UTC+2/+3: tester runs valid from 2025-06-18 only)
+; Contract: 1 lot = 1 USD per index point, min 0.1 lot, max 100; spread 0.74 before 10:00 NY, 0.54 after; no commission
+; Session: range 10:00-11:00 New York (skips the 09:30 opening whipsaw), entries until 12:00, flat 15:00
+; Geometry: stop = opposite range edge, TP = 2.0 x stop distance (never TP < SL; EA refuses TargetR < 1 and skips any side whose TP distance < SL distance)
+; Regime filters: trade only the side of the previous D1 close vs its D1 SMA(20) (InpTrendSideOnly) AND 60-min range 10-40% of previous daily ATR(14) AND spread <= 15% of range
+; Risk: 1% of month-start balance per trade (MC-2 P95 MaxDD 8.8% over 45 months); cycle guards never engage at this risk
+;
+; === Server time ===
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup - OFF (US500 London-open ranges negative after costs) ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup (New York local time) ===
+InpNYEnable=true
+InpNYRangeStart=10:00
+InpNYRangeMinutes=60
+InpNYEntryEnd=12:00
+InpNYExit=15:00
+; === Tokyo setup - OFF ===
+InpTkyEnable=false
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=2.0
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=10.0
+InpMaxRangeATRPct=40.0
+InpMaxCostRangePct=15.0
+InpCommissionPoints=0
+InpMinVolPct=0.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=true
+InpTrendMAPeriod=20
+; === Calendar - NYSE holidays + 13:00 early closes 2025-07 -> 2027 (exit is after the early close) ===
+InpSkipDates=250703,250704,250901,251127,251128,251224,251225,260101,260119,260216,260403,260525,260619,260703,260907,261126,261127,261224,270101,270118,270215,270326,270531,270618,270705,270906,271125,271126,271224
+; === Monthly cycle (guards only at 1% risk) ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=EXP
+InpAosEventCcy=USD
+InpAosCtxSymbols=DE30,UK100
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=false
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110900
+InpSlippagePoints=50
+InpMaxLot=100.0

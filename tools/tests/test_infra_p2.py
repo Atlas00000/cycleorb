@@ -12,6 +12,7 @@ from unittest import mock
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import aos_tape  # noqa: E402
 from corb import contract, dq, ingest, paths  # noqa: E402
+from corb.textio import read_text  # noqa: E402
 
 OWNER = "v1.13_DE30_26110310_2025-07-01_2026-10-31_1000_P3G"
 APPLE_V111 = "v1.11_Apple_26110600_2025-07-01_2026-10-31_1000_P1obs"
@@ -100,6 +101,29 @@ class CollectNewestOnly(unittest.TestCase):
             has = {v: os.path.exists(os.path.join(runs, f"v{v}_DE30_26110310_2025-07-01_2026-10-31_1000_P3G",
                                                   "ledger_events.csv")) for v in ("1.12", "1.13")}
             self.assertEqual(has, {"1.12": False, "1.13": True})
+
+
+class TesterExport(unittest.TestCase):
+    def test_exp_presets_differ_from_p1obs_only_by_run_tag(self):
+        from corb import tester
+        for asset in tester.ASSETS:
+            exp = os.path.join(tester.EXP_PRESETS, f"EXP-P2-T04_baseline_{asset}.set")
+            src = os.path.join(paths.REPO, "Presets", "AOS", "archive", f"AOS-P1-T06_L6L1_observeAll_{asset}.set")
+            if not os.path.exists(exp):
+                self.skipTest("run `python -m corb tester exp`")
+            read = lambda p: {ln.split("=", 1)[0]: ln.split("=", 1)[1] for ln in read_text(p).splitlines()
+                              if ln.startswith("Inp")}
+            a, b = read(src), read(exp)
+            self.assertEqual({k for k in a if a[k] != b.get(k)}, {"InpAosRunTag"}, asset)
+            self.assertEqual(b["InpAosRunTag"], "EXP")
+
+    def test_missing_login_is_refused(self):
+        from corb import tester
+        with mock.patch.object(tester, "INFRA", tempfile.gettempdir()), mock.patch.dict(os.environ, {}, clear=False):
+            for k in ("CORB_MT5_LOGIN", "CORB_MT5_PASSWORD"):
+                os.environ.pop(k, None)
+            with self.assertRaisesRegex(RuntimeError, "CORB_MT5_LOGIN"):
+                tester._credentials()
 
 
 class Helpers(unittest.TestCase):

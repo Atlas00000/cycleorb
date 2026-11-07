@@ -1,0 +1,90 @@
+; EXP-P2-T04_baseline_EURUSD-NY: export preset for the tester-container parity test (INF-P2-T04). Copy of AOS-P1-T06_L6L1_observeAll_EURUSD-NY.set with InpAosRunTag=EXP. EA logic unchanged.
+; AOS-P1 observe-all preset for EURUSD-NY (AOS-P1-T01..T06: ledger, shadow, L1 features, events, context)
+; Base: CycleORB-M5-EURUSD-6M-NY.set (frozen production). Changed inputs: InpAosLedger=true, InpAosRunTag=EXP, InpAosEventCcy=USD,EUR, InpAosCtxSymbols=DE30,SPX500
+; Hypothesis: zero behaviour change. Expected skip/fire change: 0 %. Must equal the AOS-P0 baseline event by event (aos_compare: withheld 0, added 0, changed 0)
+; CycleORB v1.03 (needs v1.03+: range-window spread, TP>=SL guard) — EURUSD M5 chart preset, New York ORB only (6-month review 2026-05 -> 2026-10)
+; Research: Ouroboros research/assets/EURUSD/CycleORB_M5_chart_preset.md
+; Broker clock YWO-Trade = UTC+0 -> fixed offset 0 (v1 default GMT+2/+3 traded 2-3h late)
+; Geometry: stop = opposite range edge, TP = 2.0 x stop distance (never TP < SL; EA refuses TargetR < 1)
+; Regime filter: NY 08:00-08:30 range must be 17.5-35% of previous daily ATR(14)
+;
+; === Server time ===
+InpServerTZ=1
+InpServerFixedOffsetH=0
+; === London setup (London local time) — OFF: no stable edge in either window ===
+InpLonEnable=false
+InpLonRangeStart=08:00
+InpLonRangeMinutes=30
+InpLonEntryEnd=11:00
+InpLonExit=16:00
+; === New York setup (New York local time) ===
+InpNYEnable=true
+InpNYRangeStart=08:00
+InpNYRangeMinutes=30
+InpNYEntryEnd=11:30
+InpNYExit=15:00
+; === Tokyo setup - OFF (explicit: a chart or the tester keeps the previous value of any input a .set omits) ===
+InpTkyEnable=false
+InpTkyRangeStart=09:00
+InpTkyRangeMinutes=60
+InpTkyEntryEnd=11:30
+InpTkyExit=15:25
+; === Entry / exit ===
+InpStopMode=0
+InpTargetR=2.0
+InpBufferSpreadMult=2.0
+InpBufferRangePct=5.0
+; === Filters (regime) ===
+InpATRPeriod=14
+InpMinRangeATRPct=17.5
+InpMaxRangeATRPct=35.0
+InpMaxCostRangePct=10.0
+InpCommissionPoints=0
+InpMinVolPct=0.0
+InpVolATRPeriod=20
+InpVolLookback=500
+InpTrendSideOnly=false
+InpTrendMAPeriod=20
+; === Calendar - none: market trades through local holidays (no failed exits in the 2026 tester run) ===
+InpSkipDates=
+; === Monthly cycle ===
+InpCycleCapital=0.0
+InpSoftHaltPct=30.0
+InpHardFlattenPct=38.0
+InpRatchetArmPct=20.0
+InpRatchetFloorPct=10.0
+InpRatchetTrail=0.5
+InpRiskDivisor=8.0
+InpMaxRiskPct=1.0
+InpNoEntryLastDay=true
+; === AI OS observe (ledger, shadow, features; never changes trading) ===
+InpAosLedger=true
+InpAosRunTag=EXP
+InpAosEventCcy=USD,EUR
+InpAosCtxSymbols=DE30,SPX500
+InpAosCtxHours=8
+; === AI OS policy L2 (permit / withhold / resize; defaults = engine unchanged) ===
+InpAosLongGate=0
+InpAosShortGate=0
+InpAosCtxGateATR=0.5
+InpAosEventNames=
+InpAosEventWindow=0
+InpAosEventSizeMult=1.0
+InpAosCancelBeforeMin=0
+InpAosCellAtrMin=0.0
+InpAosCellAtrMax=0.0
+InpAosCellMult=1.0
+; === AI OS guardrails L3 / health L4 (defaults off) ===
+InpAosCalendarKill=false
+InpAosSlipAbortR=0.0
+InpAosLotGuardPct=0.0
+InpAosDdLimitPct=0.0
+InpAosClockRefuse=false
+InpAosHealthSizing=false
+InpAosHealthBaseE=0.0
+InpAosHealthLeakPP=1.0
+InpAosCompressRiskPct=0.0
+; === Execution ===
+InpMagicBase=26110200
+InpSlippagePoints=10
+InpMaxLot=50.0

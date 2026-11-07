@@ -510,7 +510,16 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Deviations:** loads are replace-per-`run_key` (delete + copy in one transaction) rather than row upserts: simpler, and a run is the unit that changes. Journal parsing stays an explicit step (`corb_parse.py`); `ingest` consumes run folders and lands the raw journals for provenance, so committed evidence is never rewritten by a re-parse.
 
-**Open decision (T04):** the container MT5 must log in to YWO-Trade to download history and run the tester. It needs a demo or investor login in `infra/.env` (never committed, never the live account). Until then the native terminal stays the tester.
+**T04 progress (decision 2026-11-07: demo login):**
+
+- **Image built:** `cycleorb-tester:6230` = Debian bookworm + WineHQ 11.0 + Xvfb + a copy of the workstation's MT5 (build 6230, so container and native run the same build). `python -m corb tester build`.
+- **Smoke test passed without a login:** MT5 starts headless from `run.ini`, logs `MetaTrader 5 x64 build 6230 started … on Wine 11.0 Linux … WSL2`, and the tester module comes up.
+- **Two environment findings, both handled:**
+  - Wine 11 makes a socket call that Docker's default seccomp profile rejects (`wine: socket : Function not implemented`), and the first `wineboot` waits on an invisible Mono/Gecko prompt. The prefix is now initialised in a one-off container with `--security-opt seccomp=unconfined` and committed; tester containers use the same option; `WINEDLLOVERRIDES="mscoree,mshtml="` skips the prompt. The relaxed seccomp applies to these local, single-purpose MT5 containers only.
+  - Docker's `buildx` plugin, like `compose`, doesn't work on this workstation; the legacy builder is used (it caches layers, so rebuilds take minutes).
+- **Export presets:** `Presets/EXP/EXP-P2-T04_baseline_<asset>.set` (the P1obs observe presets with run tag `EXP`; a test proves no other input differs) and `tester/exp/*.ini`. Two source presets are UTF-16; all preset readers now detect the encoding (`tools/corb/textio.py`).
+- **Per job:** its own folder under `var/tester/jobs/` (run.ini with the login, the `.ex5`, the preset, `servers.dat`; outputs: tester journal, terminal log, report, Common ledgers), a shared history volume `cycleorb_mt5_bases` that never touches the live terminal's cache, then `corb_parse.py` into `var/tester/parsed/`.
+- **Remaining:** put the demo login in `infra/.env` (`CORB_MT5_LOGIN`, `CORB_MT5_PASSWORD`, `CORB_MT5_SERVER`; see `.env.example`), then `python -m corb tester run --parallel 2` and `python -m corb tester parity`. The first run downloads real-tick history for nine symbols plus the context symbols, so expect it to be slow.
 
 ### INF-P3 — Feature store and regime tape (offline L1)
 

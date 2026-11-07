@@ -37,6 +37,9 @@ Python 3.10+, standard library only. Run everything from this folder.
 | `python -m corb replay <journal> --version X` | INF-P2-T05 | Re-parse a raw journal into `../var/replay/`; baselines must be byte- and number-identical |
 | `python -m corb import ouroboros` | INF-P2-T08 | Land the frozen Ouroboros slices (refused if a hash moved since `sources check --freeze`) |
 
+| `python -m corb tester exp` / `tester build` | INF-P2-T04 | EXP presets + inis / build the Wine + MT5 image `cycleorb-tester:<mt5 build>` |
+| `python -m corb tester run [inis] --parallel N` / `tester parity` | INF-P2-T04 | Tester containers (login from `../infra/.env`) / container runs vs the committed native runs (balance, events bytes) |
+
 **Ledger collection:** a tag's `Common\Files` ledger holds only the last tester run with that tag. Never reuse a run tag across EA versions; `aos_tape collect` copies a reused tag into the newest version's folder only. `../infra/quarantine.json` lists the misfiled copies removed on 2026-11-07.
 
 **Database:** Postgres runs in Docker as `cycleorb-db-1` (data volume `cycleorb_corb_pg`). Connect with any client at `127.0.0.1:5433`, database / user `corb`, password from `../infra/.env` (local default `corb_local_only`). Changing the contract means a new migration: regenerate with `python -m corb contract ddl` (the test suite fails if `002_core.sql` and the contract diverge).

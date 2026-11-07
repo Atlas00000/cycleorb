@@ -16,10 +16,13 @@
   dq                          INF-P2-T03/T06  ledger vs journal + data-quality checks -> ops.dq_result; cost sources
   replay <journal> --version  INF-P2-T05  re-parse a raw journal; baselines must be byte- and number-identical
   import ouroboros            INF-P2-T08  land the frozen Ouroboros slices (refused if a hash moved)
+  tester exp | build          INF-P2-T04  EXP presets + inis | build the Wine + MT5 tester image
+  tester run [inis] | parity  INF-P2-T04  run tester containers (login from infra/.env) | compare with native runs
 
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
 import argparse
+import glob
 import json
 import os
 import sys
@@ -239,6 +242,29 @@ def cmd_import(a):
     return 1 if refused else 0
 
 
+def cmd_tester(a):
+    from corb import tester
+    if a.action == "exp":
+        print("wrote: " + ", ".join(tester.make_exp()))
+        return 0
+    if a.action == "build":
+        info = tester.build()
+        print(info)
+        scorecard.write("INF-P2-T04_box_testerImageBuild", "ACCEPT", info)
+        return 0
+    if a.action == "run":
+        inis = a.inis or sorted(glob.glob(os.path.join(tester.EXP_INIS, "*.ini")))
+        for r in tester.run(inis, parallel=a.parallel, timeout=a.timeout):
+            print(f"  {r['name']}: exit {r['exit']}, journals {r['journals']}, parsed runs {r['runs']}")
+    checks = tester.parity()
+    bad = _print_checks(checks)
+    verdict = "REJECT" if bad else "ACCEPT"
+    print("parity", verdict)
+    scorecard.write("INF-P2-T04_box_testerContainerParity_allAssets", verdict,
+                    dict(checks_total=len(checks), failures=bad))
+    return 1 if bad else 0
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -274,6 +300,12 @@ def main():
     p = sub.add_parser("import")
     p.add_argument("source", choices=["ouroboros"])
     p.set_defaults(fn=cmd_import)
+    p = sub.add_parser("tester")
+    p.add_argument("action", choices=["exp", "build", "run", "parity"])
+    p.add_argument("inis", nargs="*", help="run: tester inis (default: every tester/exp/*.ini)")
+    p.add_argument("--parallel", type=int, default=1)
+    p.add_argument("--timeout", type=int, default=5400, help="seconds per job")
+    p.set_defaults(fn=cmd_tester)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
 
