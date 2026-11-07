@@ -1,5 +1,4 @@
-# CycleORB infra stack (doc/infrascaleup.md §5). INF-P1: Postgres + dbmate. Later phases add MinIO, Grafana,
-# job and tester images under their own profiles.
+# CycleORB infra stack (doc/infrascaleup.md §5). Profiles: (none) Postgres, tools dbmate, train jobs, obs Grafana.
 # Usage from tools/:  python -m corb db up | migrate | migrate-check | load | check
 # tools/corb/db.py runs these same images with the plain docker CLI under compose's names (cycleorb-db-1,
 # cycleorb_corb_pg, cycleorb_default): the compose plugin hangs on the workstation. Keep both in step.
@@ -7,6 +6,7 @@ name: cycleorb
 
 services:
   db:
+    restart: unless-stopped
     image: postgres:16.15-alpine@sha256:aa6cb33cf4c19c765cefcf48d96176258800870a9a1e930ad126200f9d825139
     environment:
       POSTGRES_USER: ${CORB_DB_USER:-corb}
@@ -37,5 +37,42 @@ services:
       db:
         condition: service_healthy
 
+  # INF-P5-T04: any corb command, e.g. `docker compose run --rm jobs train run --family gbt`
+  # (tools/corb/infratest.py runs the same image as cycleorb-jobs:latest)
+  jobs:
+    build: ./docker/jobs
+    image: cycleorb-jobs:latest
+    profiles: ["train"]
+    environment:
+      CORB_DB_HOST: db
+      CORB_DB_USER: ${CORB_DB_USER:-corb}
+      CORB_DB_PASSWORD: ${CORB_DB_PASSWORD:-corb_local_only}
+      CORB_DB_NAME: ${CORB_DB_NAME:-corb}
+    volumes:
+      - ..:/repo
+      - ../var:/corb/var
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # INF-P5-T02 (tools/corb/ops.py grafana_up runs the same container as cycleorb-grafana)
+  grafana:   # 13.0.2
+    image: grafana/grafana-oss@sha256:5dad0df181cb644a14e13617b913b261a54f7d4fd4510721dba420929f35bea2
+    profiles: ["obs"]
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${CORB_GRAFANA_ADMIN_PASSWORD:?set in infra/.env}
+      CORB_DB_AGENT_RO_PASSWORD: ${CORB_DB_AGENT_RO_PASSWORD:?run python -m corb ops roles first}
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana:/var/lib/grafana
+    depends_on:
+      db:
+        condition: service_healthy
+
 volumes:
   corb_pg:
+  grafana:

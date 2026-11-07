@@ -520,7 +520,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 - **Export presets:** `Presets/EXP/EXP-P2-T04_baseline_<asset>.set` (the P1obs observe presets with run tag `EXP`; a test proves no other input differs) and `tester/exp/*.ini`. Two source presets are UTF-16; all preset readers now detect the encoding (`tools/corb/textio.py`).
 - **Per job:** its own folder under `var/tester/jobs/` (run.ini with the login, the `.ex5`, the preset, `servers.dat`; outputs: tester journal, terminal log, report, Common ledgers), a shared history volume `cycleorb_mt5_bases` that never touches the live terminal's cache, then `corb_parse.py` into `var/tester/parsed/`.
 - **Remaining:** put the demo login in `infra/.env` (`CORB_MT5_LOGIN`, `CORB_MT5_PASSWORD`, `CORB_MT5_SERVER`; see `.env.example`), then `python -m corb tester run --parallel 2` and `python -m corb tester parity`. The first run downloads real-tick history for nine symbols plus the context symbols, so expect it to be slow.
-- **Blocked 2026-11-07 by a broker login outage.** The demo login is in `infra/.env`, and the container reaches YWO-Trade, but every login fails with `Invalid account`. It isn't the container: the workstation terminal was disconnected from YWO-Trade at 10:50 local time and since then every account it tries fails the same way (three YWO accounts, and a Deriv-Demo account), although demo 28435 had authorised hundreds of times from 2026-09-28 until that morning. Likely a broker-side weekend maintenance window or a temporary IP block after failed attempts. **Resume when the workstation terminal logs in again:** `python -m corb tester run ..\tester\exp\EXP-P2-T04_baseline_DE40.ini`, then all nine and `tester parity`. The MetaTrader5 Python API also refuses to read history while unauthorised, which affects INF-P3-T02 (bar export).
+- **Blocked 2026-11-07 by a broker login outage.** The demo login is in `infra/.env`, and the container reaches YWO-Trade, but every login fails with `Invalid account`. It isn't the container: the workstation terminal was disconnected from YWO-Trade at 10:50 local time and since then every account it tries fails the same way (three YWO accounts and a Deriv-Demo account), although the demo account had authorised hundreds of times from 2026-09-28 until that morning. Likely a broker-side weekend maintenance window or a temporary IP block after failed attempts. **Resume when the workstation terminal logs in again:** `python -m corb tester run ..\tester\exp\EXP-P2-T04_baseline_DE40.ini`, then all nine and `tester parity`. The MetaTrader5 Python API also refuses to read history while unauthorised, which affects INF-P3-T02 (bar export).
 
 ### INF-P3 — Feature store and regime tape (offline L1)
 
@@ -614,14 +614,14 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
-| INF-P5-T01 | P-OBS | L-21 | JSONL logs for every job (`ts, level, job, run_key, event_id, model_semver, eval_id, msg, metrics`). Journal slices parsed to `raw.journal_line` (EA untouched) | "Why was day X skipped?" answered by one query or `grep event_id`, with no journal reading |
-| INF-P5-T02 | P-OBS | L-21, L-25 | Metrics in `ops.metric`: fires / would-skips per asset, fire retention, `FREQUENCY_STALL` (CO-15), feature null rate, cost drift (`c_spread` W40 vs base), ingest lag, DQ failures, **skip-date coverage horizon** (days until the lists end) | Grafana board with one panel per §6.2 trigger. Coverage alarm at < 90 days |
-| INF-P5-T03 | P-OBS | — | Reason-code catalogue `ops.reason_code` (`SKIP_CELL_BM_NEG`, `SKIP_MODEL_LOSER`, `ALLOW_DEFAULT`, `ALLOW_UNSURE`, `ALLOW_BUDGET_CAP`, `GUARD_SIM_*`) | Every shadow decision has a catalogued code |
-| INF-P5-T04 | P-PACK | L-23 | Images (base, jobs) by digest, `uv.lock`, compose profiles `core` / `train` / `obs` | `docker compose run --rm eval make replay RECIPE=INF-P4-T03…` gives the same scorecard hash on this PC and on the box |
-| INF-P5-T05 | P-BOX | L-04, L-18 | **Infra host:** Linux, 16–32 vCPU, 64 GB RAM, 1 TB NVMe (+ nightly off-host backup of Postgres and MinIO). Runs **every** container: services, jobs and tester containers. `ops.job` queue + systemd timers; tester jobs share the queue with a concurrency limit. The VPS pushes over Tailscale | MC / walk-forward wall time measured before and after (target ≥ 5× faster). Nine-asset tester batch wall time vs serial native runs |
-| INF-P5-T06 | P-BOX | security | Secrets in `.env` (not git): DB roles `ingest_rw`, `train_rw`, `agent_ro`, and the tester login (a demo / investor login, never the live account). No inbound ports on the VPS | Permission tests pass (`agent_ro` can't write; the VPS exposes nothing; no credential in git history) |
-| INF-P5-T07 | P-TEST | L-14, L-15, L-17 | Test suite: contract tests, FX-01…16 + CO-FX-01…04 (existing), golden replay (frozen blotter slice → stable health-vector hash), replica parity, migration up / down / up, compose smoke, **preset lint** (all 68 inputs present, string inputs < 250 chars, skip dates cover the window), tolerance classes for tester artifacts | `make test-all` green on both machines |
-| INF-P5-T08 | P-ACCESS | L-22 | `var/scorecards/latest.json` + `index.json`; `make` targets; "Infra" section in `tools/README.md` | The agent answers "current verdict for DE40?" by reading one file |
+| INF-P5-T01 ✅ | P-OBS | L-21 | JSONL logs for every job (`ts, level, job, run_key, event_id, model_semver, eval_id, msg, metrics`). Journal slices parsed to `raw.journal_line` (EA untouched) | "Why was day X skipped?" answered by one query or `grep event_id`, with no journal reading |
+| INF-P5-T02 ✅ | P-OBS | L-21, L-25 | Metrics in `ops.metric`: fires / would-skips per asset, fire retention, `FREQUENCY_STALL` (CO-15), feature null rate, cost drift (`c_spread` W40 vs base), ingest lag, DQ failures, **skip-date coverage horizon** (days until the lists end) | Grafana board with one panel per §6.2 trigger. Coverage alarm at < 90 days |
+| INF-P5-T03 ✅ | P-OBS | — | Reason-code catalogue `ops.reason_code` (`SKIP_CELL_BM_NEG`, `SKIP_MODEL_LOSER`, `ALLOW_DEFAULT`, `ALLOW_UNSURE`, `ALLOW_BUDGET_CAP`, `GUARD_SIM_*`) | Every shadow decision has a catalogued code |
+| INF-P5-T04 ✅ | P-PACK | L-23 | Images (base, jobs) by digest, `uv.lock`, compose profiles `core` / `train` / `obs` | `docker compose run --rm eval make replay RECIPE=INF-P4-T03…` gives the same scorecard hash on this PC and on the box |
+| INF-P5-T05 ⏳ | P-BOX | L-04, L-18 | **Infra host:** Linux, 16–32 vCPU, 64 GB RAM, 1 TB NVMe (+ nightly off-host backup of Postgres and MinIO). Runs **every** container: services, jobs and tester containers. `ops.job` queue + systemd timers; tester jobs share the queue with a concurrency limit. The VPS pushes over Tailscale | MC / walk-forward wall time measured before and after (target ≥ 5× faster). Nine-asset tester batch wall time vs serial native runs |
+| INF-P5-T06 ✅ | P-BOX | security | Secrets in `.env` (not git): DB roles `ingest_rw`, `train_rw`, `agent_ro`, and the tester login (a demo / investor login, never the live account). No inbound ports on the VPS | Permission tests pass (`agent_ro` can't write; the VPS exposes nothing; no credential in git history) |
+| INF-P5-T07 ✅ | P-TEST | L-14, L-15, L-17 | Test suite: contract tests, FX-01…16 + CO-FX-01…04 (existing), golden replay (frozen blotter slice → stable health-vector hash), replica parity, migration up / down / up, compose smoke, **preset lint** (all 68 inputs present, string inputs < 250 chars, skip dates cover the window), tolerance classes for tester artifacts | `make test-all` green on both machines |
+| INF-P5-T08 ✅ | P-ACCESS | L-22 | `var/scorecards/latest.json` + `index.json`; `make` targets; "Infra" section in `tools/README.md` | The agent answers "current verdict for DE40?" by reading one file |
 
 **Recipes:**
 
@@ -629,6 +629,31 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 - `INF-P5-T07_test_presetLint_allPresets` — in: `Presets/**/*.set` · run: `make test-all` · out: lint report · accept: 0 errors on production and `AOS-P3-REC` presets.
 
 **Exit:** one command replays any phase on either machine with the same result. Heavy jobs run on the box. The agent reads one scorecard.
+
+**Status 2026-11-07:** T01–T04 and T06–T08 met on this workstation. **T05 is half done:** the job queue works, but the dedicated infra host is a hardware / provisioning decision for the user (spec below), so the "≥ 5× faster" proof and the box side of T04 / T07 wait for it.
+
+#### INF-P5 results (2026-11-07)
+
+**Built:** migration `009_ops` (`raw.journal_line`, `ops.reason_code`, `ops.metric`, `ops.job`), `tools/corb/ops.py` (logs, journals, `why`, reason codes, metrics, Grafana, roles, secret scan, job queue), `tools/corb/infratest.py` (preset lint, golden hash, job image, host-vs-container replay), `infra/docker/jobs/` (pinned job image), `infra/grafana/provisioning/` (data source + board), `infra/golden/health_vectors.json`; `compose.yaml` profiles `train` (jobs) and `obs` (Grafana); commands `corb ops …`, `corb jobs …`, `corb test …` (see `tools/README.md`). `tools/tests/test_infra_p5.py`: 11 tests.
+
+| Task | Result |
+| --- | --- |
+| T01 | Every `corb` command writes JSON lines to `var/log/<command>/<date>.jsonl` (start / end, exit code, seconds; scorecards add `recipe`, `verdict`, `eval_id`, `model_semver`). 18 landed journals → **349,876 lines in `raw.journal_line`**, each setup-day line tagged with its `event_id`. `corb ops why 26110311-20250708` lists that DE40 London day across every run, with no journal reading |
+| T02 | **72 metrics** in `ops.metric` (per asset: fires in the last 90 days vs baseline = `FREQUENCY_STALL`, shadow skip rate per family, feature-null share, W40 cost drift; plus ingest lag, DQ failures, skip-date horizon per live / EXP preset, calendar horizon): 72 ok, 0 warn, 0 alarm. **Grafana 13.0.2** (digest-pinned) at `127.0.0.1:3000`, reading through `agent_ro`: 7 panels, every query verified through Grafana's API |
+| T03 | 10 reason codes (`ALLOW_*`, `SKIP_*`, `GUARD_*`); every code used in `score.shadow_decision` is catalogued (0 uncatalogued) |
+| T04 | Job image `cycleorb-jobs` = `python:3.12-slim` by digest + `requirements.lock` (numpy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, scipy 1.18.1, pyarrow 25.0.1). **Host vs container, same verdict and same numbers on `baseline check`, `train regression` (36 / 36) and `db check` (31 / 31)**, on Python 3.12.10 vs 3.12.16 |
+| T05 | `ops.job` queue with `FOR UPDATE SKIP LOCKED` (several workers can share it): a real job and a bad command both processed, status, exit code and log path stored. Host spec unchanged (above); not provisioned |
+| T06 | Roles `ingest_rw`, `train_rw`, `agent_ro` with generated passwords in `infra/.env`: **8 / 8 permission checks** (e.g. `agent_ro` can read `core.run` but not delete or insert). Secret scan: no password from `.env` anywhere in git history, `.env` untracked. The DB password was rotated off the `.env.example` placeholder, and the demo account number was removed from this roadmap |
+| T07 | **Preset lint: 60 presets, 68 EA inputs, 0 problems** (missing / unknown inputs, string inputs ≥ 250 chars, unparseable skip dates, live / EXP skip dates < 90 days ahead). Golden health-vector hash for DE40, EURUSD-NY and US500 v1.11 stable. Migrations up / down / up clean. **`corb test all`: ACCEPT** (unit tests of every suite, preset lint, golden hash, host-vs-container replay, migrations up / down / up matching `schema.sql`) |
+| T08 | `var/scorecards/latest.json` + `index.json` (written by every scorecard), Infra section of `tools/README.md` lists every command with its task id |
+
+**Deviations from the plan, and why:**
+
+- **Still no `docker compose` on this workstation.** The stack runs through the plain `docker` CLI under compose's names (`cycleorb-db-1`, `cycleorb-grafana`, network `cycleorb_default`), with images read from `compose.yaml`, so the infra host can use `compose.yaml` as is. The compose smoke test belongs to the host.
+- **`requirements.lock` (pip), not `uv.lock`.** One pinned file, no extra tool in the image.
+- **Replica parity is not in the suite yet**: the replica (INF-P3-T07) doesn't exist.
+
+**Lessons that went into the code:** a replay comparison must delete the old scorecard first, or a command that crashes compares a stale card and passes; Postgres and Grafana now restart with Docker (`--restart unless-stopped`) after Postgres stayed down once when Docker restarted; `db check` compares only EA-sourced features with the contract, now that offline features share the table; `infra/db/schema.sql` had not been rewritten since P1 (migrations 005–009 missing). `test all` now catches that, and the snapshot is current.
 
 ### INF-P6 — Phase-prove gate (still offline)
 
@@ -683,7 +708,7 @@ Only after the infra is stable **and** an INF-P7 plan exists.
 | 4 | INF-P2-T04 | Tester containers: parallel runs, independent of any live terminal |
 | 5 | INF-P4-T01 | The harness regression proves the new stack reproduces every past verdict |
 | 6 | INF-P3-T07 | The only task that can add independent evidence (L-05) |
-| 7 | INF-P5-T04 / T07 | Pin and test before scaling onto the box |
+| 7 | INF-P5-T04 / T07 ✅ | Pin and test before scaling onto the box (done 2026-11-07 on the workstation) |
 
 ---
 

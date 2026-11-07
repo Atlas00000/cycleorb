@@ -24,6 +24,11 @@
   train regression            INF-P4-T01  the harness reproduces the recorded AOS-P4 / AOS-P2 results
   train folds [--embargo N]   INF-P4-T02  walk-forward folds + decay guard
   train run [--family X]      INF-P4-T03..T06  shadow L2 (engine | cell_rule | ridge_logit | gbt | all) -> verdict
+  ops journals | why <event>  INF-P5-T01  journal lines -> raw.journal_line | every journal line of one setup-day
+  ops reasons | metrics       INF-P5-T03 / T02  reason-code catalogue | operational metrics -> ops.metric
+  ops roles                   INF-P5-T06  DB roles + permission checks + git-history secret scan
+  jobs enqueue <cmd> | work   INF-P5-T05  Postgres job queue (SKIP LOCKED) and a worker
+  test lint | golden | image | replay | all   INF-P5-T04 / T07  presets, golden hash, job image, host = container
 
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
@@ -398,6 +403,104 @@ def cmd_train(a):
     return worst
 
 
+def cmd_ops(a):
+    from corb import ops
+    if a.action == "why":
+        for t, sym, ver, kind, msg in ops.why(a.arg):
+            print(f"  {t}  {sym} v{ver}  {kind or '':8} {msg}")
+        return 0
+    if a.action == "journals":
+        res = ops.load_journals()
+        print(res)
+        scorecard.write("INF-P5-T01_obs_journalLines", "ACCEPT", res)
+    elif a.action == "reasons":
+        res = ops.reason_codes()
+        print(res)
+        scorecard.write("INF-P5-T03_obs_reasonCodes", "REJECT" if res["uncatalogued"] else "ACCEPT", res)
+    elif a.action == "metrics":
+        rows = ops.collect()
+        for r in rows:
+            if r["status"] != "ok":
+                print(f"  {r['status'].upper():5} {r['name']:26} {r['subject']:15} {r['value']}  {r['detail']}")
+        n = {s: sum(r["status"] == s for r in rows) for s in ("ok", "warn", "alarm")}
+        print(f"{len(rows)} metrics: {n}")
+        scorecard.write("INF-P5-T02_obs_metrics", "ACCEPT", dict(counts=n, metrics=rows))
+    elif a.action == "roles":
+        checks = ops.roles()
+        bad = [c for c in checks if not c["ok"]]
+        for c in checks:
+            print(f"  {'ok ' if c['ok'] else 'FAIL'} {c['name']}: allowed={c['got']} (expected {c['expected']})")
+        scan = ops.secret_scan()
+        print(scan)
+        ok = not bad and not scan["found_in_history"] and not scan["env_tracked"]
+        scorecard.write("INF-P5-T06_box_rolesAndSecrets", "ACCEPT" if ok else "REJECT", dict(checks=checks, scan=scan))
+        return 0 if ok else 1
+    elif a.action == "grafana":
+        res = ops.grafana_up()
+        print(f"grafana {res['url']}  datasource {res['datasource']} ({res['datasource_message']})")
+        for p in res["panels"]:
+            print(f"  {'ok ' if not p['error'] else 'ERR'} {p['rows']:4} rows  {p['title'][:70]}  {p['error'] or ''}")
+        ok = res["datasource"] == "OK" and not any(p["error"] for p in res["panels"])
+        scorecard.write("INF-P5-T02_obs_grafanaBoard", "ACCEPT" if ok else "REJECT", res)
+        return 0 if ok else 1
+    elif a.action == "grafana-down":
+        ops.grafana_down()
+    return 0
+
+
+def cmd_test(a):
+    import subprocess
+    from corb import infratest as it
+    results = {}
+    if a.action in ("lint", "all"):
+        r = it.preset_lint()
+        for p in r["problems"]:
+            print("  LINT", p)
+        print(f"preset lint: {r['presets']} presets vs {r['ea_inputs']} EA inputs: {len(r['problems'])} problems, "
+              f"{len(r['warnings'])} warnings")
+        results["preset_lint"] = not r["problems"]
+        scorecard.write("INF-P5-T07_test_presetLint_allPresets", "ACCEPT" if not r["problems"] else "REJECT", r)
+    if a.action in ("golden", "all"):
+        r = it.golden(update=a.update)
+        print("golden health vectors:", r)
+        results["golden"] = r["ok"]
+    if a.action in ("image", "replay", "all"):
+        image_id = it.build_image()
+        print("job image", image_id[:19])
+    if a.action in ("replay", "all"):
+        rows = it.replay()
+        for r in rows:
+            print(f"  {r['command']:18} host {r['host_verdict']:12} container {r['container_verdict']:12} "
+                  f"same={r['same']} {r['stderr']}")
+        results["container_replay"] = all(r["same"] and r["host_exit"] == r["container_exit"] == 0 for r in rows)
+        scorecard.write("INF-P5-T04_pack_crossMachineReplay", "ACCEPT" if results["container_replay"] else "REJECT",
+                        dict(image=image_id, replays=rows))
+    if a.action == "all":
+        u = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests"], capture_output=True,
+                           text=True)
+        results["unit_tests"] = u.returncode == 0
+        print("unit tests:", (u.stderr.strip().splitlines() or ["?"])[-1])
+        from corb import db
+        mc = db.migrate_check()
+        results["migrations_up_down_up"] = all(mc.values())
+        print("migrations:", mc)
+        verdict = "ACCEPT" if all(results.values()) else "REJECT"
+        print("test all:", results, "->", verdict)
+        scorecard.write("INF-P5-T07_test_all", verdict, results)
+        return 0 if verdict == "ACCEPT" else 1
+    return 0 if all(results.values()) else 1
+
+
+def cmd_jobs(a):
+    from corb import ops
+    if a.action == "enqueue":
+        print("job", ops.enqueue(" ".join(a.command)))
+        return 0
+    for d in ops.work(once=a.once):
+        print(f"  job {d['job_id']} {d['status']} in {d['seconds']} s: {d['command']}")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -450,8 +553,32 @@ def main():
     p.add_argument("--family", default="all", choices=["all", "engine", "cell_rule", "ridge_logit", "gbt"])
     p.add_argument("--embargo", type=int, default=0, help="days between training end and the test month")
     p.set_defaults(fn=cmd_train)
+    p = sub.add_parser("ops")
+    p.add_argument("action", choices=["journals", "reasons", "metrics", "roles", "why", "grafana", "grafana-down"])
+    p.add_argument("arg", nargs="?", help="why: an event_id, e.g. 26110311-20250708")
+    p.set_defaults(fn=cmd_ops)
+    p = sub.add_parser("test")
+    p.add_argument("action", choices=["lint", "golden", "image", "replay", "all"])
+    p.add_argument("--update", action="store_true", help="golden: re-record the health-vector hash on purpose")
+    p.set_defaults(fn=cmd_test)
+    p = sub.add_parser("jobs")
+    p.add_argument("action", choices=["enqueue", "work"])
+    p.add_argument("command", nargs="*", help="enqueue: a corb command, e.g. ingest")
+    p.add_argument("--once", action="store_true", help="work: stop when the queue is empty")
+    p.set_defaults(fn=cmd_jobs)
     a = ap.parse_args()
-    sys.exit(a.fn(a) or 0)
+    import time
+    from corb.ops import log
+    job = a.cmd + ("." + a.action if getattr(a, "action", None) else "")
+    t0 = time.time()
+    log(job, msg="start", argv=sys.argv[1:])
+    try:
+        code = a.fn(a) or 0
+    except Exception as e:
+        log(job, level="error", msg="exception", error=f"{type(e).__name__}: {e}", seconds=round(time.time() - t0, 1))
+        raise
+    log(job, level="info" if code == 0 else "warn", msg="end", exit_code=code, seconds=round(time.time() - t0, 1))
+    sys.exit(code)
 
 
 if __name__ == "__main__":

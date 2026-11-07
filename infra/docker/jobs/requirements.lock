@@ -1,0 +1,11 @@
+# INF-P5-T04: exact versions of the workstation environment (python -m pip freeze subset). Update deliberately.
+numpy==2.5.3
+pandas==3.0.5
+scikit-learn==1.9.1
+scipy==1.18.1
+pyarrow==25.0.1
+joblib==1.6.0
+threadpoolctl==3.6.0
+python-dateutil==2.9.0.post0
+tzdata==2026.3
+six==1.17.0

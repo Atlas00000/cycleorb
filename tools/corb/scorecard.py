@@ -24,4 +24,8 @@ def write(recipe, verdict, payload):
     index[recipe] = dict(file=recipe + ".json", verdict=verdict, created_at=card["created_at"])
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(index.items())), f, indent=1)
+    from corb.ops import log
+    log("scorecards", level="info" if verdict in ("ACCEPT", "HOLD") else "warn", msg="scorecard", recipe=recipe,
+        verdict=verdict, eval_id=(payload.get("registry") or {}).get("eval_id"),
+        model_semver=(payload.get("registry") or {}).get("model_semver"))
     return path

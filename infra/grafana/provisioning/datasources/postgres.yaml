@@ -1,0 +1,15 @@
+# INF-P5-T02: read-only Postgres data source (role agent_ro; password from infra/.env via the container env).
+apiVersion: 1
+datasources:
+  - name: cycleorb
+    uid: cycleorb
+    type: grafana-postgresql-datasource
+    url: db:5432
+    user: agent_ro
+    isDefault: true
+    jsonData:
+      database: corb
+      sslmode: disable
+      postgresVersion: 1600
+    secureJsonData:
+      password: $CORB_DB_AGENT_RO_PASSWORD

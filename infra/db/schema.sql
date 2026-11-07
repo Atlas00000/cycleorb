@@ -306,6 +306,55 @@ CREATE VIEW core.v_health AS
 
 
 --
+-- Name: bar_index; Type: TABLE; Schema: features; Owner: -
+--
+
+CREATE TABLE features.bar_index (
+    symbol text NOT NULL,
+    tf text NOT NULL,
+    year integer NOT NULL,
+    rows integer NOT NULL,
+    first_bar timestamp with time zone NOT NULL,
+    last_bar timestamp with time zone NOT NULL,
+    lake_path text NOT NULL,
+    sha256 text NOT NULL,
+    source text NOT NULL,
+    exported_at timestamp with time zone NOT NULL,
+    CONSTRAINT bar_index_rows_check CHECK ((rows >= 0)),
+    CONSTRAINT bar_index_tf_check CHECK ((tf = ANY (ARRAY['M1'::text, 'M5'::text, 'H1'::text, 'D1'::text])))
+);
+
+
+--
+-- Name: calendar_snapshot; Type: TABLE; Schema: features; Owner: -
+--
+
+CREATE TABLE features.calendar_snapshot (
+    snapshot_sha256 text NOT NULL,
+    events integer NOT NULL,
+    first_event timestamp with time zone,
+    last_event timestamp with time zone,
+    taken_at timestamp with time zone NOT NULL
+);
+
+
+--
+-- Name: feature_def; Type: TABLE; Schema: features; Owner: -
+--
+
+CREATE TABLE features.feature_def (
+    feature text NOT NULL,
+    version integer NOT NULL,
+    dtype text NOT NULL,
+    unit text,
+    as_of text NOT NULL,
+    offline boolean NOT NULL,
+    definition text NOT NULL,
+    CONSTRAINT feature_def_dtype_check CHECK ((dtype = ANY (ARRAY['number'::text, 'integer'::text, 'boolean'::text, 'string'::text])))
+);
+
+
+--
 -- Name: feature_value; Type: TABLE; Schema: features; Owner: -
 --
 
@@ -320,6 +369,38 @@ CREATE TABLE features.feature_value (
     source text NOT NULL,
     CONSTRAINT feature_value_check CHECK ((as_of_ts <= decision_ts)),
     CONSTRAINT feature_value_source_check CHECK ((source = ANY (ARRAY['ea'::text, 'offline'::text])))
+);
+
+
+--
+-- Name: regime_tape; Type: TABLE; Schema: features; Owner: -
+--
+
+CREATE TABLE features.regime_tape (
+    asset text NOT NULL,
+    local_day date NOT NULL,
+    setup text NOT NULL,
+    tagger_version integer NOT NULL,
+    source_run_key text NOT NULL,
+    feature_run_key text,
+    decision text NOT NULL,
+    reason text,
+    range_atr_pct double precision,
+    range_atr_tercile text,
+    vol_pct double precision,
+    vol_tercile text,
+    trend_side integer,
+    er50 double precision,
+    ev_tier1_entry integer,
+    ev_tier1_hold integer,
+    opex boolean,
+    quad_witching boolean,
+    us_open_in_hold boolean,
+    CONSTRAINT regime_tape_decision_check CHECK ((decision = ANY (ARRAY['ARMED'::text, 'SKIP'::text]))),
+    CONSTRAINT regime_tape_range_atr_tercile_check CHECK ((range_atr_tercile = ANY (ARRAY['narrow'::text, 'mid'::text, 'wide'::text]))),
+    CONSTRAINT regime_tape_setup_check CHECK ((setup = ANY (ARRAY['LON'::text, 'NY'::text, 'TKY'::text]))),
+    CONSTRAINT regime_tape_trend_side_check CHECK ((trend_side = ANY (ARRAY['-1'::integer, 0, 1]))),
+    CONSTRAINT regime_tape_vol_tercile_check CHECK ((vol_tercile = ANY (ARRAY['low'::text, 'mid'::text, 'high'::text])))
 );
 
 
@@ -350,11 +431,93 @@ CREATE TABLE ops.ingest_state (
 
 
 --
+-- Name: job; Type: TABLE; Schema: ops; Owner: -
+--
+
+CREATE TABLE ops.job (
+    job_id bigint NOT NULL,
+    command text NOT NULL,
+    status text DEFAULT 'queued'::text NOT NULL,
+    enqueued_at timestamp with time zone DEFAULT now() NOT NULL,
+    started_at timestamp with time zone,
+    finished_at timestamp with time zone,
+    worker text,
+    exit_code integer,
+    log_path text,
+    CONSTRAINT job_status_check CHECK ((status = ANY (ARRAY['queued'::text, 'running'::text, 'done'::text, 'failed'::text])))
+);
+
+
+--
+-- Name: job_job_id_seq; Type: SEQUENCE; Schema: ops; Owner: -
+--
+
+CREATE SEQUENCE ops.job_job_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: job_job_id_seq; Type: SEQUENCE OWNED BY; Schema: ops; Owner: -
+--
+
+ALTER SEQUENCE ops.job_job_id_seq OWNED BY ops.job.job_id;
+
+
+--
+-- Name: metric; Type: TABLE; Schema: ops; Owner: -
+--
+
+CREATE TABLE ops.metric (
+    ts timestamp with time zone NOT NULL,
+    name text NOT NULL,
+    subject text NOT NULL,
+    value double precision,
+    status text,
+    detail text,
+    CONSTRAINT metric_status_check CHECK ((status = ANY (ARRAY['ok'::text, 'warn'::text, 'alarm'::text])))
+);
+
+
+--
+-- Name: reason_code; Type: TABLE; Schema: ops; Owner: -
+--
+
+CREATE TABLE ops.reason_code (
+    code text NOT NULL,
+    layer text NOT NULL,
+    verdict text NOT NULL,
+    meaning text NOT NULL,
+    CONSTRAINT reason_code_verdict_check CHECK ((verdict = ANY (ARRAY['fire'::text, 'skip'::text, 'block'::text])))
+);
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.schema_migrations (
     version character varying NOT NULL
+);
+
+
+--
+-- Name: journal_line; Type: TABLE; Schema: raw; Owner: -
+--
+
+CREATE TABLE raw.journal_line (
+    file_sha256 text NOT NULL,
+    line_no integer NOT NULL,
+    run_seq integer,
+    symbol text,
+    ea_version text,
+    sim_time timestamp without time zone,
+    event_id text,
+    kind text,
+    message text NOT NULL
 );
 
 
@@ -374,6 +537,111 @@ CREATE TABLE raw.source_file (
     CONSTRAINT source_file_bytes_check CHECK ((bytes >= 0)),
     CONSTRAINT source_file_file_sha256_check CHECK ((file_sha256 ~ '^[0-9a-f]{64}$'::text))
 );
+
+
+--
+-- Name: cell_bm; Type: TABLE; Schema: score; Owner: -
+--
+
+CREATE TABLE score.cell_bm (
+    dataset text NOT NULL,
+    asset text NOT NULL,
+    dim text NOT NULL,
+    value text NOT NULL,
+    stream text NOT NULL,
+    n integer NOT NULL,
+    wr double precision,
+    r_payoff double precision,
+    bm double precision,
+    mean_r double precision,
+    m double precision,
+    qualifying boolean NOT NULL,
+    bm_nonpos boolean,
+    computed_at timestamp with time zone NOT NULL,
+    CONSTRAINT cell_bm_stream_check CHECK ((stream = ANY (ARRAY['actual'::text, 'shadow'::text])))
+);
+
+
+--
+-- Name: eval_run; Type: TABLE; Schema: score; Owner: -
+--
+
+CREATE TABLE score.eval_run (
+    eval_id text NOT NULL,
+    recipe text NOT NULL,
+    model_semver text,
+    dataset_id text NOT NULL,
+    folds integer NOT NULL,
+    seed bigint NOT NULL,
+    code_git_sha text,
+    verdict text NOT NULL,
+    scorecard_path text,
+    created_at timestamp with time zone NOT NULL,
+    CONSTRAINT eval_run_verdict_check CHECK ((verdict = ANY (ARRAY['ACCEPT'::text, 'HOLD'::text, 'REJECT'::text, 'NOT ACCEPTED'::text])))
+);
+
+
+--
+-- Name: shadow_decision; Type: TABLE; Schema: score; Owner: -
+--
+
+CREATE TABLE score.shadow_decision (
+    eval_id text NOT NULL,
+    event_id text NOT NULL,
+    asset text NOT NULL,
+    role text NOT NULL,
+    month text NOT NULL,
+    verdict text NOT NULL,
+    reason_code text NOT NULL,
+    pred_e double precision,
+    p_loss double precision,
+    detail text,
+    y double precision,
+    CONSTRAINT shadow_decision_verdict_check CHECK ((verdict = ANY (ARRAY['fire'::text, 'skip'::text])))
+);
+
+
+--
+-- Name: dataset; Type: TABLE; Schema: train; Owner: -
+--
+
+CREATE TABLE train.dataset (
+    dataset_id text NOT NULL,
+    source text NOT NULL,
+    rows integer NOT NULL,
+    label text NOT NULL,
+    window_from date,
+    window_to date,
+    sha256 text NOT NULL,
+    created_at timestamp with time zone NOT NULL
+);
+
+
+--
+-- Name: model_version; Type: TABLE; Schema: train; Owner: -
+--
+
+CREATE TABLE train.model_version (
+    model_semver text NOT NULL,
+    family text NOT NULL,
+    params jsonb NOT NULL,
+    features jsonb NOT NULL,
+    dataset_id text NOT NULL,
+    policy_sha256 text NOT NULL,
+    artefact_path text,
+    artefact_sha256 text,
+    status text NOT NULL,
+    created_at timestamp with time zone NOT NULL,
+    approved_by text,
+    CONSTRAINT model_version_status_check CHECK ((status = ANY (ARRAY['candidate'::text, 'champion'::text, 'shelved'::text, 'retired'::text])))
+);
+
+
+--
+-- Name: job job_id; Type: DEFAULT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.job ALTER COLUMN job_id SET DEFAULT nextval('ops.job_job_id_seq'::regclass);
 
 
 --
@@ -425,11 +693,43 @@ ALTER TABLE ONLY core.shadow
 
 
 --
+-- Name: bar_index bar_index_pkey; Type: CONSTRAINT; Schema: features; Owner: -
+--
+
+ALTER TABLE ONLY features.bar_index
+    ADD CONSTRAINT bar_index_pkey PRIMARY KEY (symbol, tf, year, source);
+
+
+--
+-- Name: calendar_snapshot calendar_snapshot_pkey; Type: CONSTRAINT; Schema: features; Owner: -
+--
+
+ALTER TABLE ONLY features.calendar_snapshot
+    ADD CONSTRAINT calendar_snapshot_pkey PRIMARY KEY (snapshot_sha256);
+
+
+--
+-- Name: feature_def feature_def_pkey; Type: CONSTRAINT; Schema: features; Owner: -
+--
+
+ALTER TABLE ONLY features.feature_def
+    ADD CONSTRAINT feature_def_pkey PRIMARY KEY (feature, version);
+
+
+--
 -- Name: feature_value feature_value_pkey; Type: CONSTRAINT; Schema: features; Owner: -
 --
 
 ALTER TABLE ONLY features.feature_value
-    ADD CONSTRAINT feature_value_pkey PRIMARY KEY (run_key, event_id, feature);
+    ADD CONSTRAINT feature_value_pkey PRIMARY KEY (run_key, event_id, feature, source);
+
+
+--
+-- Name: regime_tape regime_tape_pkey; Type: CONSTRAINT; Schema: features; Owner: -
+--
+
+ALTER TABLE ONLY features.regime_tape
+    ADD CONSTRAINT regime_tape_pkey PRIMARY KEY (asset, local_day, setup, tagger_version);
 
 
 --
@@ -449,6 +749,30 @@ ALTER TABLE ONLY ops.ingest_state
 
 
 --
+-- Name: job job_pkey; Type: CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.job
+    ADD CONSTRAINT job_pkey PRIMARY KEY (job_id);
+
+
+--
+-- Name: metric metric_pkey; Type: CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.metric
+    ADD CONSTRAINT metric_pkey PRIMARY KEY (ts, name, subject);
+
+
+--
+-- Name: reason_code reason_code_pkey; Type: CONSTRAINT; Schema: ops; Owner: -
+--
+
+ALTER TABLE ONLY ops.reason_code
+    ADD CONSTRAINT reason_code_pkey PRIMARY KEY (code);
+
+
+--
 -- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -457,11 +781,80 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
+-- Name: journal_line journal_line_pkey; Type: CONSTRAINT; Schema: raw; Owner: -
+--
+
+ALTER TABLE ONLY raw.journal_line
+    ADD CONSTRAINT journal_line_pkey PRIMARY KEY (file_sha256, line_no);
+
+
+--
 -- Name: source_file source_file_pkey; Type: CONSTRAINT; Schema: raw; Owner: -
 --
 
 ALTER TABLE ONLY raw.source_file
     ADD CONSTRAINT source_file_pkey PRIMARY KEY (file_sha256);
+
+
+--
+-- Name: cell_bm cell_bm_pkey; Type: CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.cell_bm
+    ADD CONSTRAINT cell_bm_pkey PRIMARY KEY (dataset, asset, dim, value, stream);
+
+
+--
+-- Name: eval_run eval_run_pkey; Type: CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.eval_run
+    ADD CONSTRAINT eval_run_pkey PRIMARY KEY (eval_id);
+
+
+--
+-- Name: shadow_decision shadow_decision_pkey; Type: CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.shadow_decision
+    ADD CONSTRAINT shadow_decision_pkey PRIMARY KEY (eval_id, event_id);
+
+
+--
+-- Name: dataset dataset_pkey; Type: CONSTRAINT; Schema: train; Owner: -
+--
+
+ALTER TABLE ONLY train.dataset
+    ADD CONSTRAINT dataset_pkey PRIMARY KEY (dataset_id);
+
+
+--
+-- Name: model_version model_version_pkey; Type: CONSTRAINT; Schema: train; Owner: -
+--
+
+ALTER TABLE ONLY train.model_version
+    ADD CONSTRAINT model_version_pkey PRIMARY KEY (model_semver);
+
+
+--
+-- Name: job_queued; Type: INDEX; Schema: ops; Owner: -
+--
+
+CREATE INDEX job_queued ON ops.job USING btree (status, job_id);
+
+
+--
+-- Name: metric_name_subject; Type: INDEX; Schema: ops; Owner: -
+--
+
+CREATE INDEX metric_name_subject ON ops.metric USING btree (name, subject, ts DESC);
+
+
+--
+-- Name: journal_line_event; Type: INDEX; Schema: raw; Owner: -
+--
+
+CREATE INDEX journal_line_event ON raw.journal_line USING btree (event_id) WHERE (event_id IS NOT NULL);
 
 
 --
@@ -518,6 +911,38 @@ ALTER TABLE ONLY features.feature_value
 
 ALTER TABLE ONLY ops.ingest_state
     ADD CONSTRAINT ingest_state_run_key_fkey FOREIGN KEY (run_key) REFERENCES core.run(run_key) ON DELETE CASCADE;
+
+
+--
+-- Name: eval_run eval_run_dataset_id_fkey; Type: FK CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.eval_run
+    ADD CONSTRAINT eval_run_dataset_id_fkey FOREIGN KEY (dataset_id) REFERENCES train.dataset(dataset_id);
+
+
+--
+-- Name: eval_run eval_run_model_semver_fkey; Type: FK CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.eval_run
+    ADD CONSTRAINT eval_run_model_semver_fkey FOREIGN KEY (model_semver) REFERENCES train.model_version(model_semver);
+
+
+--
+-- Name: shadow_decision shadow_decision_eval_id_fkey; Type: FK CONSTRAINT; Schema: score; Owner: -
+--
+
+ALTER TABLE ONLY score.shadow_decision
+    ADD CONSTRAINT shadow_decision_eval_id_fkey FOREIGN KEY (eval_id) REFERENCES score.eval_run(eval_id) ON DELETE CASCADE;
+
+
+--
+-- Name: model_version model_version_dataset_id_fkey; Type: FK CONSTRAINT; Schema: train; Owner: -
+--
+
+ALTER TABLE ONLY train.model_version
+    ADD CONSTRAINT model_version_dataset_id_fkey FOREIGN KEY (dataset_id) REFERENCES train.dataset(dataset_id);
 
 
 --

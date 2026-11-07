@@ -39,7 +39,8 @@ USER, NAME = ENV["CORB_DB_USER"], ENV["CORB_DB_NAME"]
 def _images():
     with open(COMPOSE_FILE, encoding="utf-8") as f:
         refs = re.findall(r"^\s*image:\s*(\S+)", f.read(), re.M)
-    return dict(db=next(r for r in refs if r.startswith("postgres")), dbmate=next(r for r in refs if "dbmate" in r))
+    return dict(db=next(r for r in refs if r.startswith("postgres")), dbmate=next(r for r in refs if "dbmate" in r),
+                grafana=next(r for r in refs if "grafana" in r))
 
 
 def _docker(args, stdin=None, check=True):
@@ -55,13 +56,14 @@ def up(timeout=90):
     state = _docker(["ps", "-a", "-q", "-f", f"name=^{CONTAINER}$"]).strip()
     if not state:
         os.makedirs(VAR, exist_ok=True)
-        _docker(["run", "-d", "--name", CONTAINER, "--network", NETWORK, "--network-alias", "db",
+        _docker(["run", "-d", "--name", CONTAINER, "--network", NETWORK, "--network-alias", "db", "--restart", "unless-stopped",
                  "-e", f"POSTGRES_USER={USER}", "-e", f"POSTGRES_PASSWORD={ENV['CORB_DB_PASSWORD']}",
                  "-e", f"POSTGRES_DB={NAME}", "-p", f"127.0.0.1:{ENV.get('CORB_DB_PORT', '5433')}:5432",
                  "-v", f"{VOLUME}:/var/lib/postgresql/data", "-v", f"{VAR}:{CONTAINER_VAR}:ro",
                  "--health-cmd", f"pg_isready -U {USER} -d {NAME}", "--health-interval", "2s",
                  _images()["db"]])
     else:
+        _docker(["update", "--restart", "unless-stopped", CONTAINER])
         _docker(["start", CONTAINER])
     end = time.time() + timeout
     while time.time() < end:
@@ -71,9 +73,19 @@ def up(timeout=90):
     raise RuntimeError(f"{CONTAINER} not healthy after {timeout} s")
 
 
+DIRECT_HOST = os.environ.get("CORB_DB_HOST")   # set inside the job container: talk to Postgres over the network
+
+
 def psql(sql, db=NAME):
-    return _docker(["exec", "-i", CONTAINER, "psql", "-U", USER, "-d", db, "-v", "ON_ERROR_STOP=1", "-qAt",
-                    "-F", "\t", "-f", "-"], stdin=sql).strip("\r\n")   # keep tabs: they delimit empty columns
+    args = ["psql", "-U", USER, "-d", db, "-v", "ON_ERROR_STOP=1", "-qAt", "-F", "\t", "-f", "-"]
+    if DIRECT_HOST:
+        env = dict(os.environ, PGPASSWORD=ENV["CORB_DB_PASSWORD"])
+        p = subprocess.run(args[:1] + ["-h", DIRECT_HOST, "-p", os.environ.get("CORB_DB_PORT", "5432")] + args[1:],
+                           input=sql, capture_output=True, text=True, encoding="utf-8", env=env)
+        if p.returncode:
+            raise RuntimeError(f"psql failed:\n{p.stderr}")
+        return p.stdout.strip("\r\n")
+    return _docker(["exec", "-i", CONTAINER, *args], stdin=sql).strip("\r\n")   # keep tabs: they delimit empty columns
 
 
 def dbmate(*args, db=NAME):
@@ -179,7 +191,9 @@ def columns_match_contract():
 
 def table_counts():
     res = contract.resources()
-    q = " UNION ALL ".join(f"SELECT '{n}', count(*) FROM {r['x-table']}" for n, r in res.items())
+    # offline-builder features (P3) share features.feature_value but are not in the EA-derived contract CSVs
+    where = {"feature": " WHERE source <> 'offline'"}
+    q = " UNION ALL ".join(f"SELECT '{n}', count(*) FROM {r['x-table']}{where.get(n, '')}" for n, r in res.items())
     return {k: int(v) for k, v in (ln.split("\t") for ln in psql(q + ";").splitlines())}
 
 
