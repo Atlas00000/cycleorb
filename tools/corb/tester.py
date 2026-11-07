@@ -153,7 +153,7 @@ def _run_job(name, job, image, timeout):
             "-e", f"CORB_TESTER_TIMEOUT={timeout}"]
     args += m(os.path.join(job, "run.ini"), "/opt/mt5/run.ini", True)
     args += m(os.path.join(job, "ea"), "/opt/mt5/MQL5/Experts/CycleORB", True)
-    args += m(os.path.join(job, "presets"), "/opt/mt5/MQL5/Profiles/Tester", True)
+    args += m(os.path.join(job, "presets"), "/opt/mt5/MQL5/Profiles/Tester")   # writable: tester writes <EA>.set
     args += m(os.path.join(TERMINAL, "config", "servers.dat"), "/opt/mt5/config/servers.dat", True)
     args += m(BASES_VOLUME, "/opt/mt5/bases")
     args += m(os.path.join(job, "logs"), "/opt/mt5/Tester/logs")
