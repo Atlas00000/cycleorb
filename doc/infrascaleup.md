@@ -571,13 +571,13 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 | ID | Plane | Compensates | Change → artefact | Proof |
 | --- | --- | --- | --- | --- |
-| INF-P4-T01 | P-TRAIN | L-02, L-24 | **Eval harness** (`corb.evaluate`), generalising `aos_compare` + `aos_portfolio`: counterfactual blotter (baseline minus would-skips), health vectors per asset (full, W40, W80) and pooled (W250), skip ledger with reason codes, random-skip `p_rand`, payoff-trap detector, controls, portfolio replay, L3 guard **simulation** that outranks the model | **Regression:** reproduces the recorded verdicts of AOS-P2 T02 … T07 and AOS-P4 (e.g. ridge 70 %: withheld +0.321R, `p_rand` 0.81) |
-| INF-P4-T02 | P-TRAIN | L-18 | Fold engine: anchored monthly walk-forward (the P4 protocol), purge / embargo, **decay guard** (≥ 6 months before the decay start), seeds recorded, parallel on the box | A config fitted on DE40 2026-09 → 10 alone is refused (unit test). Re-runs with the same seed give the same hash |
-| INF-P4-T03 | P-TRAIN | IB-03 | **Cell-rule shadow** (§8.2) from `score.cell_bm`, refitted per fold | Skip rate and skip precision per asset. Expected today: 0 skips → ACCEPT as "no harm, nothing to remove" |
-| INF-P4-T04 | P-TRAIN | L-20 | Model registry: every candidate gets a `model_semver`, dataset, window, features, artefact sha. Nothing is overwritten | Every eval cites a registered model |
-| INF-P4-T05 | P-TRAIN | — | Model shadows: logistic, ridge, monotone LightGBM. Objective = predicted R per event, calibrated; skip only under the §8.2 model rule | `score.shadow_decision` covers 100 % of armed days, fires included |
-| INF-P4-T06 | P-TRAIN | — | Negative controls and the random-skip benchmark are automatic in every scorecard | Scorecard fails closed if a control is missing |
-| INF-P4-T07 | P-TRAIN | IB-04 | **Data-gain test:** the same protocol on (a) the tester tape, (b) tester + replica-extended history (tagged). Does any conditional leak become significant **out of sample** with more data? | Report either way. "Still nothing to skip" is a valid, documented result that keeps the engine ungated |
+| INF-P4-T01 ✅ | P-TRAIN | L-02, L-24 | **Eval harness** (`corb.evaluate`), generalising `aos_compare` + `aos_portfolio`: counterfactual blotter (baseline minus would-skips), health vectors per asset (full, W40, W80) and pooled (W250), skip ledger with reason codes, random-skip `p_rand`, payoff-trap detector, controls, portfolio replay, L3 guard **simulation** that outranks the model | **Regression:** reproduces the recorded verdicts of AOS-P2 T02 … T07 and AOS-P4 (e.g. ridge 70 %: withheld +0.321R, `p_rand` 0.81) |
+| INF-P4-T02 ✅ | P-TRAIN | L-18 | Fold engine: anchored monthly walk-forward (the P4 protocol), purge / embargo, **decay guard** (≥ 6 months before the decay start), seeds recorded, parallel on the box | A config fitted on DE40 2026-09 → 10 alone is refused (unit test). Re-runs with the same seed give the same hash |
+| INF-P4-T03 ✅ | P-TRAIN | IB-03 | **Cell-rule shadow** (§8.2) from `score.cell_bm`, refitted per fold | Skip rate and skip precision per asset. Expected today: 0 skips → ACCEPT as "no harm, nothing to remove" |
+| INF-P4-T04 ✅ | P-TRAIN | L-20 | Model registry: every candidate gets a `model_semver`, dataset, window, features, artefact sha. Nothing is overwritten | Every eval cites a registered model |
+| INF-P4-T05 ✅ | P-TRAIN | — | Model shadows: logistic, ridge, monotone LightGBM. Objective = predicted R per event, calibrated; skip only under the §8.2 model rule | `score.shadow_decision` covers 100 % of armed days, fires included |
+| INF-P4-T06 ✅ | P-TRAIN | — | Negative controls and the random-skip benchmark are automatic in every scorecard | Scorecard fails closed if a control is missing |
+| INF-P4-T07 ⏳ | P-TRAIN | IB-04 | **Data-gain test:** the same protocol on (a) the tester tape, (b) tester + replica-extended history (tagged). Does any conditional leak become significant **out of sample** with more data? | Report either way. "Still nothing to skip" is a valid, documented result that keeps the engine ungated |
 
 **Recipes:**
 
@@ -586,6 +586,27 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 - `INF-P4-T07_train_L2shadow_dataGain_replicaExt` — in: tester + replica datasets · run: `make train score eval RECIPE=…` · out: two scorecards side by side · accept: §8.1 bar on **tester-only** out-of-sample months; replica months are reported, never used alone to accept.
 
 **Exit:** every model is registered, shadowed over all history, and scored with framework numbers. Each is accepted under §8.1 or shelved with reasons. **No model is wired.**
+
+**Status 2026-11-07:** T01–T06 met; exit met for the tester data. **T07 (data-gain test) waits for the engine replica (INF-P3-T07)**, the only source of extra history.
+
+#### INF-P4 results (2026-11-07)
+
+**Built:** `tools/corb/evaluate.py` (dataset, folds + decay guard, cell rule, model rule, skip budget, counterfactual evaluation, registry, regression), `infra/policy_low_bar.json` (the pre-registered bar, cited by sha256 in every eval), migration `008_train_score` (`train.dataset`, `train.model_version`, `score.eval_run`, `score.shadow_decision`); commands `corb train regression | folds | run [--family]`. `tools/tests/test_infra_p4.py`: 7 tests (68 pass in total). Data: the P1obs tape (959 filled armed days; 462 asset days and 149 control days out of sample).
+
+| Task | Result |
+| --- | --- |
+| T01 | **36 / 36 recorded results reproduced**: AOS-P4 ridge and GBT at 70 % and 90 % retention (n, withheld, withheld mean R, kept E exactly; `p_rand` within Monte Carlo noise, e.g. ridge 70 %: +0.3211R, 0.81) and every AOS-P2 verdict and withheld mean |
+| T02 | 9 out-of-sample months (2026-02 → 10), training 254 → 662 days, controls never trained on; optional embargo; the decay guard refuses a DE40-decay-only window and accepts every anchored fold; fixed seed |
+| T03 | Cell rule (decision-time dims: range/ATR, vol tercile, trend side, event in hold), refitted per fold: 42 skips, **withheld +0.268R, `p_rand` 0.56 → NOT ACCEPTED**. The in-sample negative cells don't hold out of sample; LON0700's high-vol cell scored +0.04R out of sample (zero edge, not negative) |
+| T04 | Every evaluation registered: `train.model_version` (semver = hash of family, params, features, dataset, policy, code; artefact pickled with sha256; never overwritten), `score.eval_run`, `score.shadow_decision` (611 rows per eval, fires included, reason codes `ALLOW_DEFAULT` / `ALLOW_UNSURE` / `ALLOW_BUDGET_CAP` / `SKIP_CELL_BM_NEG` / `SKIP_MODEL_LOSER`) |
+| T05 | Ridge + logistic: 39 skips, withheld +0.066R → NOT ACCEPTED (UK100 skip of a +1.23R winner). **GBT: 32 skips, withheld −0.031R, `p_rand` 0.10, pooled E_N 0.315 → 0.347, EF +11.2 → +12.3 pp → NOT ACCEPTED** on breadth: one skipped US500 day (+2.0R) costs US500 0.051R per event (limit 0.05) on a 35-event sample |
+| T06 | Controls and the random-skip benchmark are in every scorecard; a missing control set fails closed (tested). The controls stay `EF ≤ 0` under every family |
+
+**Reading:**
+
+1. **The engine stays the champion and ungated.** Under the low bar, no family passes, which repeats AOS-P2 and AOS-P4 with a stricter, pre-registered protocol.
+2. **GBT is the closest call, and it is not evidence of an edge.** Three families were tried, its withheld mean is barely below zero, and `p_rand` 0.10 is not significant. It is shelved with its shadow log kept. It becomes interesting only if more independent data (T07 replica history, or forward ledgers) keeps the withheld days negative.
+3. **The cell rule's failure confirms IB-03:** decision-time cells with BM ≤ 0 in-sample do not predict losers out of sample.
 
 ### INF-P5 — Observability, Docker and the dedicated box
 

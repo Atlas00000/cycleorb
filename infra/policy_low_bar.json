@@ -1,0 +1,12 @@
+{
+ "comment": "Pre-registered low skip bar (doc/infrascaleup.md §8.2). Default = fire. Thresholds may be LOOSENED (fewer skips) at any time; tightening needs a new version and is out of scope before INF-P7. Every eval cites this file's sha256.",
+ "version": 1,
+ "cell_rule": {"qualifying_n": 15, "bm_max": 0.0, "streams": ["actual", "shadow"],
+               "dims": ["range_atr", "vol_tercile", "trend_side", "event_in_hold"],
+               "note": "decision-time cells only: the trade side is unknown when both OCO sides are armed"},
+ "model_rule": {"pred_e_max": -0.10, "p_loss_min": 0.60, "unsure_band": [-0.10, 0.0]},
+ "skip_budget": {"max_share_per_asset": 0.15, "drop_first": "least severe"},
+ "resize": "not used before INF-P6",
+ "accept": {"pooled_n_min": 100, "pooled_n_warn": 385, "ef_slack": 0.01, "e_hold": 0.02, "asset_e_loss_max": 0.05,
+            "maxdd_slack_pp": 2.0, "fire_warn": 0.70, "fire_stall": 0.50, "p_rand_max": 0.20}
+}

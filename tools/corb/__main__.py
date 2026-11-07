@@ -21,6 +21,9 @@
   features registry | audit   INF-P3-T01 / T04  feature registry -> DB | point-in-time audit of the EA features
   features tape | cells       INF-P3-T05 / T06  regime tape per evaluated day | BM per regime cell (actual + shadow)
   bars prepare | export | lake  INF-P3-T02  portable MT5 copy | headless offline bar export | parquet lake + index
+  train regression            INF-P4-T01  the harness reproduces the recorded AOS-P4 / AOS-P2 results
+  train folds [--embargo N]   INF-P4-T02  walk-forward folds + decay guard
+  train run [--family X]      INF-P4-T03..T06  shadow L2 (engine | cell_rule | ridge_logit | gbt | all) -> verdict
 
 Every command writes a scorecard to var/scorecards/ (also latest.json and index.json).
 """
@@ -341,6 +344,60 @@ def cmd_bars(a):
     return 0 if verdict == "ACCEPT" else 1
 
 
+def cmd_train(a):
+    from corb import evaluate as ev
+    if a.action == "regression":
+        res = ev.regression()
+        bad = [r for r in res if not r["ok"]]
+        print(f"{len(res) - len(bad)} / {len(res)} recorded results reproduced")
+        for r in bad:
+            print(f"  FAIL {r['name']}: expected {r['expected']} got {r['got']}")
+        verdict = "REJECT" if bad else "ACCEPT"
+        scorecard.write("INF-P4-T01_train_harnessRegression_AOS-P2-P4", verdict, dict(checks=res))
+        print("verdict", verdict)
+        return 1 if bad else 0
+    if a.action == "folds":
+        df = ev.load()
+        fl = ev.folds(df, embargo_days=a.embargo)
+        decay_only = df[(df.asset == "DE40") & (df.month >= "2026-09")]
+        res = dict(folds=len(fl), months=[f[0] for f in fl], train_sizes=[len(f[1]) for f in fl],
+                   test_sizes=[len(f[2]) for f in fl], embargo_days=a.embargo,
+                   guard_refuses_decay_only=not ev.decay_guard_ok(decay_only),
+                   guard_accepts_anchored=all(ev.decay_guard_ok(df.loc[f[1]]) for f in fl))
+        print(res)
+        ok = res["guard_refuses_decay_only"] and res["guard_accepts_anchored"] and res["folds"] > 0
+        scorecard.write("INF-P4-T02_train_folds", "ACCEPT" if ok else "REJECT", res)
+        return 0 if ok else 1
+    families = ev.FAMILIES if a.family == "all" else [a.family]
+    worst = 0
+    for fam in families:
+        res = ev.run(fam, embargo_days=a.embargo)
+        p = res["pooled"]
+        f3 = lambda x: "-" if x is None else f"{x:+.3f}"
+        print(f"== {fam}: {res['verdict']}  folds {res['folds']} ({res['oos_months'][0]}..{res['oos_months'][-1]})"
+              f"  skipped {p['withheld']} of {p['n_base']} asset days"
+              f"  withheld mean {f3(p['withheld_mean'])}R  p_rand {p['p_rand'] if p['p_rand'] is None else round(p['p_rand'], 2)}")
+        if p["kept"] and p["base"]:
+            print(f"   pooled E {f3(p['base']['E'])} -> {f3(p['kept']['E'])}  E_N {f3(p['base']['E_N'])} -> "
+                  f"{f3(p['kept']['E_N'])}  EF {100 * p['base']['EF']:+.1f} -> {100 * p['kept']['EF']:+.1f}pp  "
+                  f"W250 EF {100 * p['W250']['base']:+.1f} -> {100 * p['W250']['kept']:+.1f}pp")
+        for k, v in res["per_asset"].items():
+            if v["withheld"]:
+                print(f"   {k:15} skipped {v['withheld']:3}/{v['n_base']:3} (ret {v['retention']:.0%}) withheld mean "
+                      f"{f3(v['withheld_mean'])}R  E {f3(v['base']['E'])} -> {f3(v['kept'] and v['kept']['E'])}")
+        for c in res["checks"]:
+            if not c["ok"]:
+                print(f"   FAIL {c['name']} {c['detail']}")
+        for r in res["rejects"] + res["warnings"]:
+            print(f"   NOTE {r}")
+        if res.get("note"):
+            print(f"   {res['note']}")
+        print(f"   registry: {res['registry']['model_semver']} ({res['registry']['status']}), eval {res['registry']['eval_id']}")
+        scorecard.write(res["recipe"], res["verdict"], {k: v for k, v in res.items() if k not in ("recipe", "verdict")})
+        worst = max(worst, res["verdict"] == "REJECT")
+    return worst
+
+
 def main():
     ap = argparse.ArgumentParser(prog="corb", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -388,6 +445,11 @@ def main():
     p = sub.add_parser("bars")
     p.add_argument("action", choices=["prepare", "export", "lake"])
     p.set_defaults(fn=cmd_bars)
+    p = sub.add_parser("train")
+    p.add_argument("action", choices=["regression", "folds", "run"])
+    p.add_argument("--family", default="all", choices=["all", "engine", "cell_rule", "ridge_logit", "gbt"])
+    p.add_argument("--embargo", type=int, default=0, help="days between training end and the test month")
+    p.set_defaults(fn=cmd_train)
     a = ap.parse_args()
     sys.exit(a.fn(a) or 0)
 
