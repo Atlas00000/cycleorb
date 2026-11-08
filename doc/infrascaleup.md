@@ -536,7 +536,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | INF-P3-T04 ✅ | P-FEAT | PIT | Leakage tests: timestamp audit (generalised `aos_tape check`), a future-shift test (features recomputed with bars after `range_end` must change nothing), and no label columns in `features` | 0 violations |
 | INF-P3-T05 ✅ | P-FEAT | CO-09 | **Deterministic regime tagger** (generic roadmap #3) on **every evaluated day**, not only armed days: H1 vol tercile, ER50 trend / range, D1 side, range/ATR tercile, event-window and session-overlap tags → `features.regime_tape` | Reproduces the `edge_framework.md` §5.3 cell table from the DB |
 | INF-P3-T06 ✅ | P-FEAT | IB-03 | `score.cell_bm`: `BM_cell` with CIs for every qualifying cell, on actual and shadow streams. Cells with `BM_cell ≤ 0` flagged | Matches §5.3. Expected: **no** production cell ≤ 0 |
-| INF-P3-T07 ⏳ | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.json`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
+| INF-P3-T07 ✅ (training-only) | P-FEAT | L-05, L-18 | **Engine replica** (`corb.replica`): the EA's range, filters, OCO, stop / target / time exit, sizing and skip dates on M1 / tick data, producing decisions, events and shadows in the same contract. Strict parity gate against the tester. Extended history only from sources marked valid in `sources.json`, tagged `source=replica` | Parity on 2025-07 → 2026-10 per asset: same event set ≥ 98 %, \|Δ`pnl_R`\| ≤ 0.02R on ≥ 95 % of events, health vector within ±1 pp `EF`. Controls stay negative |
 
 **Recipes:**
 
@@ -545,7 +545,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Exit:** the tape can be rebuilt from bars with no tester pass, is PIT-clean, and the regime tape covers every evaluated day. The replica is either validated per asset or explicitly limited to the assets that passed.
 
-**Status 2026-11-07:** T01–T06 met. **T07 (engine replica) not started**: a full Python port of the EA's trading logic with its own parity gate, planned as the next session.
+**Status 2026-11-08:** T01–T07 done. The replica reproduces the tester's **decisions** but not its tick-level **fills**, so it fails the strict gate on per-event `pnl_R`; by decision 2026-11-08 its extended history is used as **training data only** (results below).
 
 #### INF-P3 results (2026-11-07)
 
@@ -567,6 +567,36 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Lessons that went into the code:** a script with `script_show_inputs` blocks a headless run on its input dialog; a `[StartUp]` chart with no data never starts its script; a login without a password pops the login dialog; the workstation terminal holds its current-year `.hcc` files exclusively; a backward month scan avoids waiting on history that doesn't exist; `pandas` parquet times may be microseconds, not nanoseconds.
 
+#### INF-P3-T07 results (2026-11-08)
+
+**Built:** `tools/corb/replica.py` (engine replica + history extension), commands `corb replica parity | extend`, `tools/tests/test_replica.py` (15 tests). Output: run folders in the tester's format under `var/replica/runs/` with `"source": "replica"` (regenerable; not loaded into `core`, which stays tester and live evidence only).
+
+**What it reproduces:** `SetupEvaluate` (range, ATR band, cost cap, vol floor, trend side, buffer, levels, price-through), OCO stop orders until entry end, stop / target / time exit, the monthly cycle (risk money, soft halt, hard flatten, ratchet, last-day rule), lot sizing with the minimum lot, skip dates, and the share CFDs' late trade session (14:30 server, read from the ledgers' decision times). Fills on M1 bars: at the level, or the open when a bar opens through it.
+
+**Parity vs the nine native baselines (2025-07 → 2026-10):**
+
+| Asset | Events native / replica | Event set | `pnl_R` within 0.02R | EF native / replica |
+| --- | --- | --- | --- | --- |
+| EURUSD-NY | 146 / 146 | 98.6 % | 81 % | +9.3 / +10.8 pp |
+| EURUSD-LON0700 | 191 / 190 | 99.5 % | 91 % | +5.3 / +5.7 pp |
+| DE40 | 120 / 119 | 99.2 % | 70 % | +9.7 / +10.5 pp |
+| JP225 | 102 / 102 | 100 % | 94 % | +14.5 / +15.2 pp |
+| UK100 | 88 / 87 | 98.9 % | 90 % | +15.7 / +15.9 pp |
+| US500 | 69 / 68 | 98.6 % | 84 % | +16.0 / +17.9 pp |
+| CTRL-AAPL | 81 / 80 | 98.8 % | 90 % | −11.5 / −10.9 pp |
+| CTRL-MSFT | 31 / 31 | 93.8 % | 70 % | −2.0 / −2.7 pp |
+| CTRL-XOM | 52 / 52 | 100 % | 92 % | −53.2 / −51.6 pp |
+
+Gate per criterion: event set ≥ 98 % on 8 / 9, EF ±1 pp on 6 / 9, controls negative 3 / 3, **`pnl_R` within 0.02R on ≥ 95 % of events: 0 / 9 → NOT ACCEPTED as a tester substitute.**
+
+**Why the `pnl_R` criterion fails:** on DE40 every matched event has the **same requested entry and the same exit type** as the tester; the residual is the tester's real-tick slippage (its own entry slippage has p95 0.045R, stops slip up to 0.4R on fast bars), which M1 bars cannot reproduce. For the same reason the replica is mostly slightly optimistic (production assets EF +0.2 … +1.9 pp above the tester).
+
+**Decision 2026-11-08 (user):** use the replica history as **training data only**. Models are still accepted or rejected only on tester months, so a replica error cannot make a model pass. Baselines, health and acceptance never use replica numbers.
+
+**History extension (`corb replica extend`):** the broker's stored bars are not stamped on one clock. Reading each month's offset from the data (peak-range minute vs the US cash open, the 08:30 New York data releases, or the Tokyo open): EURUSD and JPN225 were UTC+1 in summer until 2025-10 and UTC since; the US shares UTC+2 / +3 until 2025-05; SPX500 is often unreadable before 2025. The extension shifts M1 to UTC per month, rebuilds H1 / D1 from it, and keeps only months whose offset is known and equal to both neighbours: **810 events on the production assets** (EURUSD-LON0700 441, EURUSD-NY 266, US500 69, JP225 34; 2021-05 → 2025-06) plus 483 on the controls. DE40 and UK100 have no stored bars before 2025.
+
+**Finding for the baselines (L-05):** in 2025-07 → 2025-10 the EURUSD and JPN225 bars were stamped UTC+1 while the presets assume UTC, so the tester placed EURUSD-LON0700, EURUSD-NY and JP225 ranges **one hour earlier than intended** in those four months. The baselines stay as recorded (they are what the tester did); the forward ledgers are unaffected if the live server is UTC.
+
 ### INF-P4 — Offline train and eval harness (L2 in shadow, not wired)
 
 **Goal:** train skip / enter models and run them **in shadow** over historical events: log would-skip or would-fire for every day, score the counterfactual blotter against the baseline under the low bar (§8).
@@ -579,7 +609,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | INF-P4-T04 ✅ | P-TRAIN | L-20 | Model registry: every candidate gets a `model_semver`, dataset, window, features, artefact sha. Nothing is overwritten | Every eval cites a registered model |
 | INF-P4-T05 ✅ | P-TRAIN | — | Model shadows: logistic, ridge, monotone LightGBM. Objective = predicted R per event, calibrated; skip only under the §8.2 model rule | `score.shadow_decision` covers 100 % of armed days, fires included |
 | INF-P4-T06 ✅ | P-TRAIN | — | Negative controls and the random-skip benchmark are automatic in every scorecard | Scorecard fails closed if a control is missing |
-| INF-P4-T07 ⏳ | P-TRAIN | IB-04 | **Data-gain test:** the same protocol on (a) the tester tape, (b) tester + replica-extended history (tagged). Does any conditional leak become significant **out of sample** with more data? | Report either way. "Still nothing to skip" is a valid, documented result that keeps the engine ungated |
+| INF-P4-T07 ✅ | P-TRAIN | IB-04 | **Data-gain test:** the same protocol on (a) the tester tape, (b) tester + replica-extended history (tagged). Does any conditional leak become significant **out of sample** with more data? | Report either way. "Still nothing to skip" is a valid, documented result that keeps the engine ungated |
 
 **Recipes:**
 
@@ -589,7 +619,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Exit:** every model is registered, shadowed over all history, and scored with framework numbers. Each is accepted under §8.1 or shelved with reasons. **No model is wired.**
 
-**Status 2026-11-07:** T01–T06 met; exit met for the tester data. **T07 (data-gain test) waits for the engine replica (INF-P3-T07)**, the only source of extra history.
+**Status 2026-11-08:** T01–T07 met. T07: more history makes every family worse out of sample; the engine stays ungated (results below).
 
 #### INF-P4 results (2026-11-07)
 
@@ -609,6 +639,18 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 1. **The engine stays the champion and ungated.** Under the low bar, no family passes, which repeats AOS-P2 and AOS-P4 with a stricter, pre-registered protocol.
 2. **GBT is the closest call, and it is not evidence of an edge.** Three families were tried, its withheld mean is barely below zero, and `p_rand` 0.10 is not significant. It is shelved with its shadow log kept. It becomes interesting only if more independent data (T07 replica history, or forward ledgers) keeps the withheld days negative.
 3. **The cell rule's failure confirms IB-03:** decision-time cells with BM ≤ 0 in-sample do not predict losers out of sample.
+
+#### INF-P4-T07 results (2026-11-08): data-gain test
+
+`corb train gain`: the same families, policy and folds, scored on the same out-of-sample months (2026-02 → 10) and only on tester rows; training is (a) the tape, or (b) the tape + the 810 replica events of the production assets (first-fold training rows 254 → 1,064). The models are registered with their own dataset id (tape + replica hashes).
+
+| Family | Tape only: skips, withheld mean, `p_rand` | Tape + replica: skips, withheld mean, `p_rand` | Verdict |
+| --- | --- | --- | --- |
+| cell rule | 42, +0.268R, 0.56 | 44, **+0.625R**, 0.98 | NOT ACCEPTED |
+| ridge + logistic | 39, +0.066R, 0.17 | 41, **+0.581R**, 0.96 | NOT ACCEPTED |
+| GBT | 32, −0.031R, 0.10 | 24, **+0.122R**, 0.32 | NOT ACCEPTED |
+
+The tape-only rows reproduce the INF-P4 results exactly (harness consistency). **With four times the training history, every family skips better days than it keeps:** no conditional leak becomes significant out of sample, and GBT's near miss disappears. "Still nothing to skip" is the documented result: **the engine stays the champion, ungated.** Caveats: replica rows carry no context-symbol or live-spread features and no calendar features before 2025-01 (median-filled); the extra history covers four of the six assets.
 
 ### INF-P5 — Observability, Docker and the dedicated box
 
@@ -632,7 +674,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 
 **Exit:** one command replays any phase on either machine with the same result. Heavy jobs run on the box. The agent reads one scorecard.
 
-**Status 2026-11-07:** T01–T04 and T06–T08 met on this workstation. **T05 is half done:** the job queue works, but the dedicated infra host is a hardware / provisioning decision for the user (spec below), so the "≥ 5× faster" proof and the box side of T04 / T07 wait for it.
+**Status 2026-11-08:** T01–T04 and T06–T08 met on this workstation. **T05: everything except the hardware.** The job queue works and the host is provisioned by code (`infra/host/`), but the machine itself is the user's purchase / rental decision, so the "≥ 5× faster" proof and the box side of T04 / T07 wait for it.
 
 #### INF-P5 results (2026-11-07)
 
@@ -644,7 +686,7 @@ Each task row gives its plane, the limitation it compensates (§2), the artefact
 | T02 | **72 metrics** in `ops.metric` (per asset: fires in the last 90 days vs baseline = `FREQUENCY_STALL`, shadow skip rate per family, feature-null share, W40 cost drift; plus ingest lag, DQ failures, skip-date horizon per live / EXP preset, calendar horizon): 72 ok, 0 warn, 0 alarm. **Grafana 13.0.2** (digest-pinned) at `127.0.0.1:3000`, reading through `agent_ro`: 7 panels, every query verified through Grafana's API |
 | T03 | 10 reason codes (`ALLOW_*`, `SKIP_*`, `GUARD_*`); every code used in `score.shadow_decision` is catalogued (0 uncatalogued) |
 | T04 | Job image `cycleorb-jobs` = `python:3.12-slim` by digest + `requirements.lock` (numpy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, scipy 1.18.1, pyarrow 25.0.1). **Host vs container, same verdict and same numbers on `baseline check`, `train regression` (36 / 36) and `db check` (31 / 31)**, on Python 3.12.10 vs 3.12.16 |
-| T05 | `ops.job` queue with `FOR UPDATE SKIP LOCKED` (several workers can share it): a real job and a bad command both processed, status, exit code and log path stored. Host spec unchanged (above); not provisioned |
+| T05 | `ops.job` queue with `FOR UPDATE SKIP LOCKED` (several workers can share it): a real job and a bad command both processed, status, exit code and log path stored. **Host as code** (`infra/host/`): `bootstrap.sh` (Docker, `corb` user, repo, `.env` with a generated DB password, compose `db` + migrations + job image + roles + Grafana, no inbound ports), `corb-worker.service` (the queue worker in the job image), `corb-nightly.timer` / `.service` (02:30 UTC: enqueue `ingest`, `dq`, `ops metrics`, then `backup.sh`: `pg_dump` + landing zone, 14 days local, rsync off-host when `CORB_BACKUP_TARGET` is set). **Before numbers (this workstation):** 201-run baseline check with Monte Carlo median 51 s; harness regression 21 s; one warm tester job 3.7 min, a cold nine-asset batch about 38 min (DE40 alone 13 min, then the other eight three at a time in 25 min). Not yet provisioned |
 | T06 | Roles `ingest_rw`, `train_rw`, `agent_ro` with generated passwords in `infra/.env`: **8 / 8 permission checks** (e.g. `agent_ro` can read `core.run` but not delete or insert). Secret scan: no password from `.env` anywhere in git history, `.env` untracked. The DB password was rotated off the `.env.example` placeholder, and the demo account number was removed from this roadmap |
 | T07 | **Preset lint: 60 presets, 68 EA inputs, 0 problems** (missing / unknown inputs, string inputs ≥ 250 chars, unparseable skip dates, live / EXP skip dates < 90 days ahead). Golden health-vector hash for DE40, EURUSD-NY and US500 v1.11 stable. Migrations up / down / up clean. **`corb test all`: ACCEPT** (unit tests of every suite, preset lint, golden hash, host-vs-container replay, migrations up / down / up matching `schema.sql`) |
 | T08 | `var/scorecards/latest.json` + `index.json` (written by every scorecard), Infra section of `tools/README.md` lists every command with its task id |
@@ -709,7 +751,7 @@ Only after the infra is stable **and** an INF-P7 plan exists.
 | 3 | INF-P1-T01 … T05 ✅ | The contract and DB that every later task writes to (done 2026-11-07) |
 | 4 | INF-P2-T04 ✅ | Tester containers: parallel runs, independent of any live terminal (parity passed 2026-11-08) |
 | 5 | INF-P4-T01 | The harness regression proves the new stack reproduces every past verdict |
-| 6 | INF-P3-T07 | The only task that can add independent evidence (L-05) |
+| 6 | INF-P3-T07 ✅ | The only task that can add independent evidence (L-05); done 2026-11-08, training-only |
 | 7 | INF-P5-T04 / T07 ✅ | Pin and test before scaling onto the box (done 2026-11-07 on the workstation) |
 
 ---

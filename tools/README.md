@@ -43,6 +43,9 @@ Python 3.10+, standard library only. Run everything from this folder.
 | `python -m corb bars prepare` / `bars export` / `bars lake` | INF-P3-T02 | M1 bars from a headless export instance (`../var/mt5_export`, never the user's terminal) → `../var/lake/bars/` parquet |
 | `python -m corb features registry` / `audit` / `build` | INF-P3-T01 / T04 / T03 | Feature registry (`../infra/features.json`), PIT audit + future-shift test, offline builder vs EA ledger parity |
 | `python -m corb features tape` / `features cells` | INF-P3-T05 / T06 | Regime tape and decision-time cells into `features.*` |
+| `python -m corb replica parity` | INF-P3-T07 | Engine replica on M1 bars vs the nine native baselines (event set, pnl_R, EF) → `../var/replica/runs/*_REPLICA` |
+| `python -m corb replica extend` | INF-P3-T07 | The baseline presets on the history before the tester window, bars shifted to UTC per month (clean clock months only) → `../var/replica/runs/replica_*`. Training data only (decision 2026-11-08) |
+| `python -m corb train gain` | INF-P4-T07 | Data-gain test: the P4 families trained on tape vs tape + replica history, scored on the same tester-only months |
 | `python -m corb train regression` / `train folds` | INF-P4-T01 / T02 | Harness reproduces the AOS-P2…P4 verdicts / anchored monthly folds with the decay guard |
 | `python -m corb train run --family F` | INF-P4-T03…T06 | Walk-forward evaluation against `../infra/policy_low_bar.json` → registry, shadow decisions, scorecard |
 

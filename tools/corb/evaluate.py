@@ -290,8 +290,8 @@ def _code_sha():
     return sha256(os.path.abspath(__file__))[:16]
 
 
-def register(df, family, pol, sd, result, fold_list, recipe):
-    info = dataset_info(df)
+def register(df, family, pol, sd, result, fold_list, recipe, info=None):
+    info = info or dataset_info(df)
     params = dict(engine={}, cell_rule=pol["cell_rule"],
                   ridge_logit=dict(reg="Ridge(alpha=30)", clf="LogisticRegression(C=0.1)", rule=pol["model_rule"]),
                   gbt=dict(reg="HGBRegressor(depth2,150,lr.04,leaf30,l2=1)", clf="HGBClassifier(same)",
@@ -364,6 +364,86 @@ def run(family, embargo_days=0):
                   skipped=sd[sd.verdict == "skip"][["event_id", "asset", "month", "reason_code", "detail", "y"]]
                   .to_dict("records"))
     return result
+
+
+# ---------------------------------------------------------------- T07 data gain (replica history, training only)
+def replica_rows():
+    """The production assets' replica-extended events (INF-P3-T07 extend) as tape rows: y = the replica's pnl_R,
+    features from the offline builder on the same UTC bars. Context-symbol and spread_live features are missing
+    (median-filled by design()); calendar features are missing before the calendar snapshot starts (2025-01)."""
+    import glob as _glob
+    from datetime import date as _date
+    from corb import featbuild, replica
+    with open(os.path.join(TOOLS, "aos_assets.json"), encoding="utf-8") as f:
+        assets = json.load(f)["assets"]
+    rows, sources = [], []
+    for asset in replica.EXTEND:
+        a = assets[asset]
+        if a.get("role") == "control":
+            continue
+        for d in _glob.glob(os.path.join(replica.OUT, "runs", "replica_*")):
+            with open(os.path.join(d, "meta.json"), encoding="utf-8") as f:
+                meta = json.load(f)
+            if meta.get("native_run") != a["run_id"]:
+                continue
+            inputs, setup = meta["inputs"], meta["setups"][0]
+            ccys = {c.strip() for c in (inputs.get("InpAosEventCcy") or "").split(",") if c.strip()}
+            cal = featbuild.load_events(ccys) if ccys else []
+            cal_start = datetime.fromtimestamp(cal[0][0], timezone.utc).date() if cal else None
+            bars, cache = replica.utc_bars(meta["symbol"], meta["clock_offsets"]), {}
+            with open(os.path.join(d, "events.csv"), encoding="utf-8") as f:
+                events = list(csv.DictReader(f))
+            sources.append(sha256(os.path.join(d, "events.csv")))
+            for e in events:
+                day = _date.fromisoformat(e["day"])
+                feats = featbuild.build_day(bars, [], cal if cal_start and day >= cal_start else None, inputs, setup,
+                                            day, float(meta["point"]), cache)
+                rows.append(dict(asset=asset, role="asset", setup=setup, local_day=day.strftime("%Y.%m.%d"),
+                                 month=day.strftime("%Y-%m"), event_id=e["event_id"], y=float(e["pnl_R"]),
+                                 y_actual=float(e["pnl_R"]), c_slip=float(e["c_slip_R"]), f_op=a["f_op"],
+                                 source="replica", **{k: v for k, v in feats.items() if k in gw.NUM}))
+    df = pd.DataFrame(rows)
+    df["spread_ratio"] = np.nan
+    if "ev_next_min" in df:
+        df["ev_next_min"] = df["ev_next_min"].where(df["ev_next_min"] >= 0, 1440)
+    for c in gw.NUM:
+        df[c] = pd.to_numeric(df[c], errors="coerce") if c in df else np.nan
+    digest = hashlib.sha256(("".join(sorted(sources)) + sha256(TAPE)).encode()).hexdigest()
+    return df, digest
+
+
+def data_gain(families=("cell_rule", "ridge_logit", "gbt")):
+    """Same protocol, same out-of-sample months (the P4 folds), test rows = tester rows only; training either the
+    tester tape alone or tape + replica history. Acceptance stays the §8.1 bar on tester months."""
+    pol, base = policy(), load()
+    base["source"] = "tester"
+    rep, digest = replica_rows()
+    ext = pd.concat([base, rep], ignore_index=True).sort_values(["local_day", "event_id"]).reset_index(drop=True)
+    months = [f[0] for f in folds(base)]
+    info = dict(dataset_info(base), dataset_id=digest[:16], rows=len(ext),
+                source="tape_P1obs.csv + replica-extended production assets (INF-P3-T07, training only)",
+                label="tester: shadow_R; replica: replica pnl_R", window_from=ext.local_day.min().replace(".", "-"),
+                sha256=digest)
+    out = dict(replica_rows=len(rep), replica_by_asset=rep.groupby("asset").size().to_dict(), oos_months=months,
+               results={})
+    for name, df in (("tester", base), ("tester+replica", ext)):
+        fl = []
+        for m, tr, te in folds(df):
+            if m in months:
+                fl.append((m, tr, df.loc[te][df.loc[te].source == "tester"].index))
+        for fam in families:
+            sd, refusals = shadow(df, fam, pol, fl)
+            res = evaluate(sd, pol)
+            p = res["pooled"]
+            row = dict(verdict=res["verdict"], train_rows_first_fold=int(len(fl[0][1])) if fl else 0,
+                       withheld=p["withheld"], n_base=p["n_base"], withheld_mean=p["withheld_mean"],
+                       p_rand=p["p_rand"], E_N=[p["base"]["E_N"], p["kept"]["E_N"]],
+                       failed=[c["name"] for c in res["checks"] if not c["ok"]], rejects=res["rejects"])
+            if name == "tester+replica":
+                recipe = f"INF-P4-T07_train_L2shadow_dataGain_{fam}"
+                row["registry"] = register(df, fam, pol, sd, res, fl, recipe, info=info)
+            out["results"][f"{name}:{fam}"] = row
+    return out
 
 
 # ---------------------------------------------------------------- T01 regression

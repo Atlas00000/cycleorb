@@ -1,0 +1,17 @@
+# INF-P5-T05: the ops.job queue worker (python -m corb jobs work) in the pinned job image.
+# Scale out with more instances (corb-worker@N); SKIP LOCKED keeps them from taking the same job.
+[Unit]
+Description=CycleORB job worker
+After=docker.service
+Requires=docker.service
+
+[Service]
+User=corb
+WorkingDirectory=/opt/cycleorb/infra
+ExecStart=/usr/bin/docker compose --profile train run --rm --name corb-worker jobs jobs work
+ExecStop=/usr/bin/docker stop corb-worker
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

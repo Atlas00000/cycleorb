@@ -1,0 +1,13 @@
+# INF-P5-T05: nightly jobs onto the queue (the worker runs them), then the database backup.
+[Unit]
+Description=CycleORB nightly jobs and backup
+After=docker.service
+
+[Service]
+Type=oneshot
+User=corb
+WorkingDirectory=/opt/cycleorb/infra
+ExecStart=/usr/bin/docker compose --profile train run --rm jobs jobs enqueue ingest
+ExecStart=/usr/bin/docker compose --profile train run --rm jobs jobs enqueue dq
+ExecStart=/usr/bin/docker compose --profile train run --rm jobs jobs enqueue ops metrics
+ExecStart=/opt/cycleorb/infra/host/backup.sh

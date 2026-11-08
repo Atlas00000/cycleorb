@@ -374,6 +374,21 @@ def cmd_train(a):
         ok = res["guard_refuses_decay_only"] and res["guard_accepts_anchored"] and res["folds"] > 0
         scorecard.write("INF-P4-T02_train_folds", "ACCEPT" if ok else "REJECT", res)
         return 0 if ok else 1
+    if a.action == "gain":
+        res = ev.data_gain()
+        print(f"replica rows (training only): {res['replica_rows']} {res['replica_by_asset']}; "
+              f"OOS months {res['oos_months'][0]}..{res['oos_months'][-1]} (tester rows only)")
+        f3 = lambda x: "-" if x is None else f"{x:+.3f}"
+        for k, r in res["results"].items():
+            print(f"  {k:28} {r['verdict']:13} train rows (fold 1) {r['train_rows_first_fold']:4}  skipped {r['withheld']:3}"
+                  f"/{r['n_base']}  withheld mean {f3(r['withheld_mean'])}R  p_rand "
+                  f"{'-' if r['p_rand'] is None else round(r['p_rand'], 2)}  E_N {f3(r['E_N'][0])} -> {f3(r['E_N'][1])}"
+                  f"  {'; '.join(r['failed'] + r['rejects'])[:120]}")
+        gained = [k for k, r in res["results"].items() if k.startswith("tester+replica") and r["verdict"] == "ACCEPT"]
+        verdict = "ACCEPT" if gained else "NOT ACCEPTED"
+        print("data gain:", gained or "no family passes with the extra history: the engine stays ungated")
+        scorecard.write("INF-P4-T07_train_L2shadow_dataGain_replicaExt", verdict, res)
+        return 0
     families = ev.FAMILIES if a.family == "all" else [a.family]
     worst = 0
     for fam in families:
@@ -402,6 +417,38 @@ def cmd_train(a):
         scorecard.write(res["recipe"], res["verdict"], {k: v for k, v in res.items() if k not in ("recipe", "verdict")})
         worst = max(worst, res["verdict"] == "REJECT")
     return worst
+
+
+def cmd_replica(a):
+    from corb import replica
+    if a.action == "parity":
+        rows = replica.parity()
+        g = replica.GATE
+        for r in rows:
+            print(f"  {r['asset']:15} {r['role']:7} events {r['native_n']:3} / {r['replica_n']:3}  set {r['event_set']:.1%}  "
+                  f"pnl within {g['pnl_tol']}R {r['pnl_within']:.0%} (median diff {r['pnl_median_diff']:.4f}R)  "
+                  f"EF {100 * r['EF_native']:+.1f} / {100 * r['EF_replica']:+.1f}pp  {'PASS' if r['pass'] else 'fail'}")
+        crit = dict(event_set=sum(r["event_set"] >= g["event_set"] for r in rows),
+                    pnl=sum(r["pnl_within"] >= g["pnl_share"] for r in rows),
+                    EF=sum(r["EF_diff_pp"] is not None and r["EF_diff_pp"] <= g["ef_pp"] for r in rows),
+                    controls_negative=sum(r["EF_replica"] <= 0 for r in rows if r["role"] == "control"))
+        passed = [r["asset"] for r in rows if r["pass"]]
+        print(f"assets passing each criterion (of {len(rows)}): {crit}; all criteria: {passed or 'none'}")
+        verdict = "ACCEPT" if len(passed) == len(rows) else "NOT ACCEPTED"
+        scorecard.write("INF-P3-T07_feat_replicaParity_2025-07_2026-10", verdict,
+                        dict(gate=g, criteria_passed=crit, assets_passed=passed, assets=rows))
+        return 0
+    rows = []
+    for asset in replica.EXTEND:
+        r = replica.extend_asset(asset)
+        if r:
+            d, m = r
+            rows.append(dict(asset=asset, run_id=m["run_id"], window=m["window"], months=len(m["months_used"]),
+                             events=m["n_events"], armed_days=m["armed_days"]))
+            print(f"  {asset:15} {m['window'][0]} .. {m['window'][1]}  {len(m['months_used']):2} clean months  "
+                  f"{m['n_events']:4} events")
+    scorecard.write("INF-P3-T07_feat_replicaExtend_preTester", "ACCEPT", dict(runs=rows))
+    return 0
 
 
 def cmd_ops(a):
@@ -550,10 +597,13 @@ def main():
     p.add_argument("action", choices=["prepare", "export", "lake"])
     p.set_defaults(fn=cmd_bars)
     p = sub.add_parser("train")
-    p.add_argument("action", choices=["regression", "folds", "run"])
+    p.add_argument("action", choices=["regression", "folds", "run", "gain"])
     p.add_argument("--family", default="all", choices=["all", "engine", "cell_rule", "ridge_logit", "gbt"])
     p.add_argument("--embargo", type=int, default=0, help="days between training end and the test month")
     p.set_defaults(fn=cmd_train)
+    p = sub.add_parser("replica")
+    p.add_argument("action", choices=["parity", "extend"])
+    p.set_defaults(fn=cmd_replica)
     p = sub.add_parser("ops")
     p.add_argument("action", choices=["journals", "reasons", "metrics", "roles", "why", "grafana", "grafana-down"])
     p.add_argument("arg", nargs="?", help="why: an event_id, e.g. 26110311-20250708")
