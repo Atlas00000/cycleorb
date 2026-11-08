@@ -26,6 +26,9 @@ from corb.textio import read_text
 
 IMAGE = "cycleorb-tester"
 BASES_VOLUME = "cycleorb_mt5_bases"
+# a cold history cache stops a test with "no history data" after a partial tick download; the download is
+# cumulative on the volume, so a rerun gets further (AAPL needed 4 reruns on 2026-11-08)
+HISTORY_RETRIES = 12
 WINE_COMMON = "/wine/drive_c/users/root/AppData/Roaming/MetaQuotes/Terminal/Common/Files"
 TV = os.path.join(VAR, "tester")
 EXP_PRESETS = os.path.join(REPO, "Presets", "EXP")
@@ -160,10 +163,15 @@ def _run_job(name, job, image, timeout):
     args += m(os.path.join(job, "terminal_logs"), "/opt/mt5/logs")
     args += m(os.path.join(job, "reports"), "/opt/mt5/reports")
     args += m(os.path.join(job, "common"), WINE_COMMON)
-    p = subprocess.run(["docker", *args, image], capture_output=True, text=True, encoding="utf-8", errors="replace")
-    with open(os.path.join(job, "container.log"), "w", encoding="utf-8") as f:
-        f.write(p.stdout + "\n" + p.stderr)
-    journals = sorted(glob.glob(os.path.join(job, "logs", "*.log")))
+    for attempt in range(1, HISTORY_RETRIES + 1):
+        for old in glob.glob(os.path.join(job, "logs", "*.log")):
+            os.remove(old)
+        p = subprocess.run(["docker", *args, image], capture_output=True, text=True, encoding="utf-8", errors="replace")
+        with open(os.path.join(job, "container.log"), "w", encoding="utf-8") as f:
+            f.write(p.stdout + "\n" + p.stderr)
+        journals = sorted(glob.glob(os.path.join(job, "logs", "*.log")))
+        if not any("no history data, stop testing" in read_text(j) for j in journals):
+            break
     parsed = os.path.join(TV, "parsed", name)
     if os.path.isdir(parsed):
         shutil.rmtree(parsed)
@@ -177,7 +185,8 @@ def _run_job(name, job, image, timeout):
             src = glob.glob(os.path.join(job, "common", "CycleORB", f"*_EXP_{kind}.csv"))
             if src:
                 shutil.copyfile(src[0], os.path.join(d, f"ledger_{kind}.csv"))
-    return dict(name=name, exit=p.returncode, journals=len(journals), runs=[os.path.basename(d) for d in runs])
+    return dict(name=name, exit=p.returncode, journals=len(journals), attempts=attempt,
+                runs=[os.path.basename(d) for d in runs])
 
 
 def run(inis, parallel=1, timeout=5400):

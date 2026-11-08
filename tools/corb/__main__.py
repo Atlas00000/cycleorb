@@ -266,7 +266,8 @@ def cmd_tester(a):
     if a.action == "run":
         inis = a.inis or sorted(glob.glob(os.path.join(tester.EXP_INIS, "*.ini")))
         for r in tester.run(inis, parallel=a.parallel, timeout=a.timeout):
-            print(f"  {r['name']}: exit {r['exit']}, journals {r['journals']}, parsed runs {r['runs']}")
+            print(f"  {r['name']}: exit {r['exit']}, attempts {r['attempts']}, journals {r['journals']}, "
+                  f"parsed runs {r['runs']}")
     checks = tester.parity()
     bad = _print_checks(checks)
     verdict = "REJECT" if bad else "ACCEPT"
