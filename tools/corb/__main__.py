@@ -451,6 +451,38 @@ def cmd_replica(a):
     return 0
 
 
+def cmd_forward(a):
+    from corb import forward
+    if a.action in ("pull", "all"):
+        res = forward.pull()
+        print(f"pull from {res['source']}: {len(res['copied'])} file(s) copied {res.get('note', '')}")
+    if a.action == "all":
+        from corb import ingest
+        print("ingest:", {k: v for k, v in ingest.ingest().items() if k in ("live_runs", "landed", "runs_loaded")})
+    if a.action in ("report", "all"):
+        rows = forward.report()
+        f3 = lambda x: "-" if x is None else f"{x:+.3f}"
+        for r in rows:
+            fw = r.get("forward") or {}
+            r2 = r["r2"]
+            print(f"  {r['asset']:15} months {r['months']:2}  events {r['events']:3}  E {f3(fw.get('E'))} "
+                  f"(base {f3(r['baseline']['E'])})  EF {f3(fw.get('EF'))} (base {f3(r['baseline']['EF'])})  "
+                  f"R2 {'ELIGIBLE' if r2['eligible'] else 'not yet'}  stops: {'; '.join(r['stop_rules']) or 'none'}")
+        verdict = "REJECT" if any(r["stop_rules"] for r in rows) else "ACCEPT"
+        scorecard.write("INF-P7-T04_forward_report", verdict, dict(deployments=rows,
+                        r2_eligible=[r["asset"] for r in rows if r["r2"]["eligible"]],
+                        stop_rules={r["asset"]: r["stop_rules"] for r in rows if r["stop_rules"]}))
+    if a.action in ("shadow", "all"):
+        res = forward.shadow()
+        print(f"forward shadow: {res['rows']} armed days with a filled engine shadow")
+        for m in res["models"]:
+            print(f"  {m['family']:12} {m['dataset_id']}  skips {m['skips']:3}/{m['forward_days']}  withheld mean "
+                  f"{'-' if m['withheld_mean'] is None else f'{m['withheld_mean']:+.3f}R'}  v2 watch skips "
+                  f"{m['v2_watch_skips']}")
+        scorecard.write("INF-P7-T04_forward_shadow", "HOLD", res)
+    return 0
+
+
 def cmd_prove(a):
     from corb import prove
     tag = lambda fam, data: f"{fam}_{'tape' if data == 'tester' else 'tapeReplica'}"
@@ -637,6 +669,9 @@ def main():
     p.add_argument("--family", default="all", choices=["all", "engine", "cell_rule", "ridge_logit", "gbt"])
     p.add_argument("--embargo", type=int, default=0, help="days between training end and the test month")
     p.set_defaults(fn=cmd_train)
+    p = sub.add_parser("forward")
+    p.add_argument("action", choices=["pull", "report", "shadow", "all"])
+    p.set_defaults(fn=cmd_forward)
     p = sub.add_parser("prove")
     p.add_argument("action", choices=["report", "stability", "all"])
     p.set_defaults(fn=cmd_prove)

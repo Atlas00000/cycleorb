@@ -749,6 +749,27 @@ The tape-only rows reproduce the INF-P4 results exactly (harness consistency). *
 
 **Exit:** a reviewed design. No code is wired without explicit authorisation.
 
+**Status 2026-11-08:** design written (T01–T03, T05, below); **T04 built and running** (forward telemetry). Nothing is wired: INF-P6 shelved every L2 candidate, so no model and no `AOS-P7-…` preset exists, and the EA is unchanged. Per the owner (2026-11-08): the backtest edge cannot be improved further offline; the remaining bad trades must be found in the forward test, which is what T04 measures.
+
+#### INF-P7 design (2026-11-08)
+
+| ID | Decision |
+| --- | --- |
+| T01 attachment | **ONNX inside the EA** for any future gate: `Gate.mqh` loads the model as a `#resource` (`OnnxCreateFromBuffer`), inputs = the ledger feature row the EA already computes at range end, output = predicted E and P(R < 0), the §8.2 rule applied in MQL5. Runs identically in the tester and live. **A precomputed decision file is used only as the parity harness** (Python writes per-day decisions for a tester window; the EA in a test mode logs its own and the two are diffed); it cannot serve live because the features exist only at decision time. A sidecar HTTP service stays rejected (L-19: no tester) |
+| T02 champion / challenger | Champion = the registry row with `status = champion` (today: the engine, `l2-engine-…`). A challenger runs **only in forward shadow** (`corb forward shadow`) until it passes INF-P6 on forward months. Live allow-list: the EA prints the model's sha256 in `Init OK` and refuses (`INIT_FAILED`) a hash that is not the one in its preset input `InpAosGateModelHash`; the preset is generated from `train.model_version`. **Rollback:** forward shadow skip precision positive (withheld days winning) for 2 months in a row → revert to the previous champion (AOS-P5-T05); a `CALENDAR_LEAK` or an L3 guard override → gate off at once |
+| T03 parity spec | (1) EA ONNX output = Python scorer output on the same feature row, \|Δ\| ≤ 1e-6 (tester run with the gate in log-only mode vs `corb` on the ledger rows). (2) EA ledger features = offline builder within the INF-P3-T03 tolerances (≥ 99 % per feature), re-run on forward ledgers monthly. (3) Gate off = byte-identical events to the champion (zero-diff, as AOS-P4-T04 required). Tester parity runs in the INF-P2-T04 containers |
+| T05 authorisation | `AOS-P7-…` wiring presets are created **only** after a written authorisation naming the model hash, the assets and the risk; forward testing a gated preset is a separate decision. None exists |
+
+#### INF-P7-T04 results (2026-11-08): forward telemetry
+
+**Built:** `tools/corb/forward.py`, command `corb forward pull | report | shadow | all`, `infra/vps/push_ledgers.ps1` (VPS side), `infra/live.json` `pull_from`, `tools/tests/test_infra_p7.py` (5 tests). Scorecards `INF-P7-T04_forward_report` and `INF-P7-T04_forward_shadow`.
+
+**Flow (one-way, no inbound port, no cost):** on the VPS, `push_ledgers.ps1 -Target <synced folder> -Install` copies `Common\Files\CycleORB\CORB_<magic>_<symbol>_live_*.csv` every hour (shared read: the EA keeps them open) into a folder that syncs to this workstation (e.g. OneDrive). Here, set `pull_from` in `infra/live.json` to that folder; `corb forward all` = pull (changed files only) → `ingest` (monthly `kind=live` runs, never a baseline) → report → shadow. Without a synced folder, copying the files into `var/inbox/vps/` by hand works the same.
+
+**What the monthly report checks per deployment** (`doc/aos_promotion_queue.md` Candidate 1): forward health vector vs the `AOS-P3-REC` baseline; **R2**: ≥ 40 forward events, forward E > 0 and EF > 0, combined (tester + forward) EF > M, MC-3 median terminal ≥ C₀ = 1, 0 calendar leaks; **stop rules**: a calendar leak (position held past its exit day), live DD ≥ 0.8 × the asset's DD limit, `Below frontier` at two month-ends in a row; live vs tester spread cost and entry slippage. **Forward shadow:** every registered L2 model (shelved) scores the forward armed days with its reason codes, plus the INF-P6 watch item (`pred_e_max` −0.15); forward withheld means accumulate as the out-of-sample evidence INF-P6 lacked.
+
+**Dry run** (the tester's P1obs ledgers renamed as live ledgers, in a temporary folder): pull, ingest split (91 monthly runs), report and shadow all work; the report reproduces the tester's health numbers and flags **EURUSD-LON0700 as not R2-eligible (MC-3 median < 1)**, consistent with its Fragile edge in Candidate 1. **Real state today:** no forward ledger has arrived yet (`pull_from` not set, inbox empty): 0 events per deployment, no stop rule.
+
 ### INF-P8 — Retrain loop on the new stack
 
 Only after the infra is stable **and** an INF-P7 plan exists.

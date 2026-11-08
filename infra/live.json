@@ -1,6 +1,8 @@
 {
  "comment": "INF-P2-T07: forward-test deployments on the VPS (AOS-P7). The VPS pushes Common\\Files\\CycleORB\\CORB_<magicBase>_<symbol>_live_{decisions,events,shadow}.csv into var/inbox/vps/ (one-way). Ingest splits them per month into kind=live runs; they are never a baseline. Update ea_version / deposit when the VPS changes.",
  "inbox": "%REPO%/var/inbox/vps",
+ "pull_from": "",
+ "pull_comment": "INF-P7-T04: the folder this workstation sees the VPS ledgers in (e.g. a OneDrive folder the VPS's infra/vps/push_ledgers.ps1 writes to). Empty = copy the files into the inbox by hand.",
  "deployments": {
   "26110200": {"asset": "EURUSD-NY", "symbol": "EURUSD", "point": 0.00001, "preset": "%REPO%/Presets/AOS/AOS-P3-REC_EURUSD-NY.set", "ea_version": "1.13", "deposit": 1000},
   "26110210": {"asset": "EURUSD-LON0700", "symbol": "EURUSD", "point": 0.00001, "preset": "%REPO%/Presets/AOS/AOS-P3-REC_EURUSD-LON0700.set", "ea_version": "1.13", "deposit": 1000},
