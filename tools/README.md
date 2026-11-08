@@ -49,6 +49,8 @@ Python 3.10+, standard library only. Run everything from this folder.
 | `python -m corb train regression` / `train folds` | INF-P4-T01 / T02 | Harness reproduces the AOS-P2…P4 verdicts / anchored monthly folds with the decay guard |
 | `python -m corb train run --family F` | INF-P4-T03…T06 | Walk-forward evaluation against `../infra/policy_low_bar.json` → registry, shadow decisions, scorecard |
 
+| `python -m corb prove report` / `prove stability` / `prove all` | INF-P6-T01 / T02 | Phase-prove of every L2 candidate: primary + `AOS-P3-REC` baseline, portfolio replay, W250 / W500, threshold / seed / embargo perturbations, size-only sensitivity |
+
 | `python -m corb ops journals` / `ops why <event_id>` | INF-P5-T01 | Landed journals → `raw.journal_line` / every journal line for one setup-day, in time order |
 | `python -m corb ops metrics` / `ops reasons` | INF-P5-T02 / T03 | §6.2 trigger metrics → `ops.metric` (ok / warn / alarm) / reason-code catalogue → `ops.reason_code` |
 | `python -m corb ops roles` | INF-P5-T06 | DB roles `ingest_rw`, `train_rw`, `agent_ro` (passwords generated into `../infra/.env`), permission tests, secret scan of git history |

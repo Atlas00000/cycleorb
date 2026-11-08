@@ -451,6 +451,42 @@ def cmd_replica(a):
     return 0
 
 
+def cmd_prove(a):
+    from corb import prove
+    tag = lambda fam, data: f"{fam}_{'tape' if data == 'tester' else 'tapeReplica'}"
+    f3 = lambda x: "-" if x is None else f"{x:+.3f}"
+    decisions = []
+    for fam, data in prove.CANDIDATES:
+        r = s = None
+        if a.action in ("report", "all"):
+            r = prove.report(fam, data)
+            p = r["pooled"]
+            print(f"  T01 {tag(fam, data):24} primary {r['primary_verdict']:12} skips {r['skips']:3} "
+                  f"({p['skip_rate']:.0%})  W250 EF {100 * p['W250_EF'][0]:+.1f} -> {100 * p['W250_EF'][1]:+.1f}pp  "
+                  f"W500 EF {100 * (p['W500']['base_EF'] or 0):+.1f} -> {100 * (p['W500']['kept_EF'] or 0):+.1f}pp "
+                  f"(n {p['W500']['n_base']})  withheld {f3(p['withheld_mean'])}R  portfolio MaxDD "
+                  f"{100 * r['portfolio']['base']['maxdd']:.1f} -> {100 * r['portfolio']['kept']['maxdd']:.1f}%  "
+                  f"secondary/portfolio fails {len(r['extra_failed'])}")
+            scorecard.write(f"INF-P6-T01_L2shadow_{tag(fam, data)}", "ACCEPT" if r["gate_ok"] else "NOT ACCEPTED", r)
+        if a.action in ("stability", "all"):
+            s = prove.stability(fam, data)
+            print(f"  T02 {tag(fam, data):24} base {s['base_verdict']:12} same verdict on {s['same_share']:.0%} of "
+                  f"{len(s['variants'])} perturbations  accept anywhere: {s['any_accept'] or 'none'}  size-only E_N "
+                  f"{f3(s['size_only']['E_N'][0])} -> {f3(s['size_only']['E_N'][1])}")
+            scorecard.write(f"INF-P6-T02_L2shadow_{tag(fam, data)}", "ACCEPT" if s["stable"] else "REJECT", s)
+        if r and s:
+            ok = r["gate_ok"] and s["stable"] and s["base_verdict"] == "ACCEPT"
+            decisions.append(dict(candidate=tag(fam, data), decision="PASS: INF-P7 unlocked" if ok else "SHELVED",
+                                  primary=r["primary_verdict"], failed=r["primary_failed"] + r["extra_failed"],
+                                  rejects=r["rejects"], stable_share=s["same_share"], accept_anywhere=s["any_accept"]))
+    if decisions:
+        passed = [d["candidate"] for d in decisions if d["decision"].startswith("PASS")]
+        print("phase-prove:", passed or "no L2 candidate passes: the engine stays ungated, INF-P7 stays locked")
+        scorecard.write("INF-P6-T01_train_phaseProve_L2shadow_W250-W500", "ACCEPT" if passed else "NOT ACCEPTED",
+                        dict(decisions=decisions, passed=passed))
+    return 0
+
+
 def cmd_ops(a):
     from corb import ops
     if a.action == "why":
@@ -601,6 +637,9 @@ def main():
     p.add_argument("--family", default="all", choices=["all", "engine", "cell_rule", "ridge_logit", "gbt"])
     p.add_argument("--embargo", type=int, default=0, help="days between training end and the test month")
     p.set_defaults(fn=cmd_train)
+    p = sub.add_parser("prove")
+    p.add_argument("action", choices=["report", "stability", "all"])
+    p.set_defaults(fn=cmd_prove)
     p = sub.add_parser("replica")
     p.add_argument("action", choices=["parity", "extend"])
     p.set_defaults(fn=cmd_replica)

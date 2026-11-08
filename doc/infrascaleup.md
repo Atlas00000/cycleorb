@@ -662,7 +662,7 @@ The tape-only rows reproduce the INF-P4 results exactly (harness consistency). *
 | INF-P5-T02 ✅ | P-OBS | L-21, L-25 | Metrics in `ops.metric`: fires / would-skips per asset, fire retention, `FREQUENCY_STALL` (CO-15), feature null rate, cost drift (`c_spread` W40 vs base), ingest lag, DQ failures, **skip-date coverage horizon** (days until the lists end) | Grafana board with one panel per §6.2 trigger. Coverage alarm at < 90 days |
 | INF-P5-T03 ✅ | P-OBS | — | Reason-code catalogue `ops.reason_code` (`SKIP_CELL_BM_NEG`, `SKIP_MODEL_LOSER`, `ALLOW_DEFAULT`, `ALLOW_UNSURE`, `ALLOW_BUDGET_CAP`, `GUARD_SIM_*`) | Every shadow decision has a catalogued code |
 | INF-P5-T04 ✅ | P-PACK | L-23 | Images (base, jobs) by digest, `uv.lock`, compose profiles `core` / `train` / `obs` | `docker compose run --rm eval make replay RECIPE=INF-P4-T03…` gives the same scorecard hash on this PC and on the box |
-| INF-P5-T05 ⏳ | P-BOX | L-04, L-18 | **Infra host:** Linux, 16–32 vCPU, 64 GB RAM, 1 TB NVMe (+ nightly off-host backup of Postgres and MinIO). Runs **every** container: services, jobs and tester containers. `ops.job` queue + systemd timers; tester jobs share the queue with a concurrency limit. The VPS pushes over Tailscale | MC / walk-forward wall time measured before and after (target ≥ 5× faster). Nine-asset tester batch wall time vs serial native runs |
+| INF-P5-T05 ⏸ (hardware paused: cost) | P-BOX | L-04, L-18 | **Infra host:** Linux, 16–32 vCPU, 64 GB RAM, 1 TB NVMe (+ nightly off-host backup of Postgres and MinIO). Runs **every** container: services, jobs and tester containers. `ops.job` queue + systemd timers; tester jobs share the queue with a concurrency limit. The VPS pushes over Tailscale | MC / walk-forward wall time measured before and after (target ≥ 5× faster). Nine-asset tester batch wall time vs serial native runs |
 | INF-P5-T06 ✅ | P-BOX | security | Secrets in `.env` (not git): DB roles `ingest_rw`, `train_rw`, `agent_ro`, and the tester login (a demo / investor login, never the live account). No inbound ports on the VPS | Permission tests pass (`agent_ro` can't write; the VPS exposes nothing; no credential in git history) |
 | INF-P5-T07 ✅ | P-TEST | L-14, L-15, L-17 | Test suite: contract tests, FX-01…16 + CO-FX-01…04 (existing), golden replay (frozen blotter slice → stable health-vector hash), replica parity, migration up / down / up, compose smoke, **preset lint** (all 68 inputs present, string inputs < 250 chars, skip dates cover the window), tolerance classes for tester artifacts | `make test-all` green on both machines |
 | INF-P5-T08 ✅ | P-ACCESS | L-22 | `var/scorecards/latest.json` + `index.json`; `make` targets; "Infra" section in `tools/README.md` | The agent answers "current verdict for DE40?" by reading one file |
@@ -674,7 +674,7 @@ The tape-only rows reproduce the INF-P4 results exactly (harness consistency). *
 
 **Exit:** one command replays any phase on either machine with the same result. Heavy jobs run on the box. The agent reads one scorecard.
 
-**Status 2026-11-08:** T01–T04 and T06–T08 met on this workstation. **T05: everything except the hardware.** The job queue works and the host is provisioned by code (`infra/host/`), but the machine itself is the user's purchase / rental decision, so the "≥ 5× faster" proof and the box side of T04 / T07 wait for it.
+**Status 2026-11-08:** T01–T04 and T06–T08 met on this workstation. **T05: everything except the hardware.** The job queue works and the host is provisioned by code (`infra/host/`). **The hardware is paused (decision 2026-11-08: cost-bound).** Everything keeps running on this workstation with the same containers; the "≥ 5× faster" proof and the box side of T04 / T07 resume when a host is rented (`infra/host/bootstrap.sh` is the whole setup).
 
 #### INF-P5 results (2026-11-07)
 
@@ -714,6 +714,28 @@ The tape-only rows reproduce the INF-P4 results exactly (harness consistency). *
 - `INF-P6-T01_train_phaseProve_L2shadow_W250-W500` — in: accepted INF-P4 models · run: `make eval RECIPE=phase-prove` · out: per-layer scorecards · accept: §8.1 on pooled W250 **and** W500, plus INF-P6-T02 stability · reject: otherwise (the engine stays ungated, as it is today).
 
 **Exit:** a signed decision per layer. **No live preset until this gate passes.**
+
+**Status 2026-11-08:** T01 and T02 done; T03 written (`doc/aos_promotion_queue.md`, Candidate 2), **awaiting the account owner's signature**. Verdict proposed: every L2 candidate shelved, the engine stays ungated, INF-P7 stays locked. Scope note: L3 guards and the L4 health observer went through the AOS track and are already approved for the demo forward test (Candidate 1, 2026-11-06); this gate covers the L2 shadow models built in INF-P4.
+
+#### INF-P6 results (2026-11-08)
+
+**Built:** `tools/corb/prove.py` (report, secondary baseline, portfolio replay, stability, size-only), `evaluate.candidate()` (one family on the P4 out-of-sample months, tape or tape + replica), command `corb prove report | stability | all`, `tools/tests/test_infra_p6.py` (6 tests).
+
+| Candidate | Skips (rate) | Pooled W250 EF | Pooled W500 EF (n 462) | Withheld mean | Portfolio ×, MC-2 P95 DD | Stability | Decision |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| cell rule, tape | 42 (9 %) | +11.9 → +11.1 pp | +11.2 → +11.2 pp | +0.268R | 5.92 → 5.34, 23.9 → 24.2 % | 100 % | shelved |
+| ridge + logistic, tape | 39 (8 %) | +11.9 → +11.2 pp | +11.2 → +12.1 pp | +0.066R | 5.92 → 5.87, 23.9 → 23.0 % | 100 % | shelved |
+| GBT, tape | 32 (7 %) | +11.9 → +12.1 pp | +11.2 → +12.3 pp | −0.031R (`p_rand` 0.10) | 5.92 → 6.16, 23.9 → 22.0 % | 100 % | shelved (US500 breadth) |
+| cell rule, tape + replica | 44 (10 %) | +11.9 → +8.3 pp | +11.2 → +9.3 pp | +0.625R | MaxDD 14.2 → 14.2 % | 100 % | shelved |
+| ridge + logistic, tape + replica | 41 (9 %) | +11.9 → +10.3 pp | +11.2 → +9.9 pp | +0.581R | MaxDD 14.2 → 13.9 % | 100 % | shelved |
+| GBT, tape + replica | 24 (5 %) | +11.9 → +11.7 pp | +11.2 → +11.6 pp | +0.122R | MaxDD 14.2 → 14.2 % | 90 % (1 isolated accept) | shelved |
+
+**Reading:**
+
+1. **No L2 candidate passes §8.1 on W250 and W500, on either baseline, and every rejection is stable** (the verdict holds on ≥ 90 % of the perturbations, so it is not a threshold artefact).
+2. **GBT on the tape is the only candidate whose skips are losers on average**, and it improves the portfolio (×6.16, P95 DD 22.0 %), but it fails the per-asset bar on US500 against both baselines. The bar is per asset on purpose: a pooled gain that costs one asset > 0.05R per event is the overfiltering pattern §8.2 forbids.
+3. **The one accept in T02** (GBT + replica, `pred_e_max` −0.15) sits between neighbours that skip winners, which is a peak. It is a watch item: it could be pre-registered as policy v2 and judged on forward ledger months only.
+
 
 ### INF-P7 — Wiring plan (design only unless explicitly authorised)
 

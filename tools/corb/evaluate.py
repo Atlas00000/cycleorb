@@ -412,28 +412,50 @@ def replica_rows():
     return df, digest
 
 
+_DATA = {}
+
+
+def datasets(with_replica=False):
+    """The tape (and, on request, tape + replica history), loaded once per process."""
+    if "base" not in _DATA:
+        base = load()
+        base["source"] = "tester"
+        _DATA.update(base=base, months=[f[0] for f in folds(base)])
+    if with_replica and "ext" not in _DATA:
+        base = _DATA["base"]
+        rep, digest = replica_rows()
+        ext = pd.concat([base, rep], ignore_index=True).sort_values(["local_day", "event_id"]).reset_index(drop=True)
+        info = dict(dataset_info(base), dataset_id=digest[:16], rows=len(ext),
+                    source="tape_P1obs.csv + replica-extended production assets (INF-P3-T07, training only)",
+                    label="tester: shadow_R; replica: replica pnl_R", window_from=ext.local_day.min().replace(".", "-"),
+                    sha256=digest)
+        _DATA.update(ext=ext, rep=rep, info=info)
+    return _DATA
+
+
+def candidate(family, data="tester", pol=None, embargo_days=0):
+    """Shadow decisions + evaluation of one family on the P4 out-of-sample months, test rows = tester rows only.
+    data: 'tester' (the tape) or 'tester+replica' (tape + replica history in training)."""
+    c = datasets(with_replica=data != "tester")
+    pol = pol or policy()
+    df = c["base"] if data == "tester" else c["ext"]
+    fl = [(m, tr, df.loc[te][df.loc[te].source == "tester"].index)
+          for m, tr, te in folds(df, embargo_days=embargo_days) if m in c["months"]]
+    sd, _ = shadow(df, family, pol, fl)
+    return df, fl, sd, evaluate(sd, pol)
+
+
 def data_gain(families=("cell_rule", "ridge_logit", "gbt")):
     """Same protocol, same out-of-sample months (the P4 folds), test rows = tester rows only; training either the
     tester tape alone or tape + replica history. Acceptance stays the §8.1 bar on tester months."""
-    pol, base = policy(), load()
-    base["source"] = "tester"
-    rep, digest = replica_rows()
-    ext = pd.concat([base, rep], ignore_index=True).sort_values(["local_day", "event_id"]).reset_index(drop=True)
-    months = [f[0] for f in folds(base)]
-    info = dict(dataset_info(base), dataset_id=digest[:16], rows=len(ext),
-                source="tape_P1obs.csv + replica-extended production assets (INF-P3-T07, training only)",
-                label="tester: shadow_R; replica: replica pnl_R", window_from=ext.local_day.min().replace(".", "-"),
-                sha256=digest)
+    pol = policy()
+    c = datasets(with_replica=True)
+    info, rep, months = c["info"], c["rep"], c["months"]
     out = dict(replica_rows=len(rep), replica_by_asset=rep.groupby("asset").size().to_dict(), oos_months=months,
                results={})
-    for name, df in (("tester", base), ("tester+replica", ext)):
-        fl = []
-        for m, tr, te in folds(df):
-            if m in months:
-                fl.append((m, tr, df.loc[te][df.loc[te].source == "tester"].index))
+    for name in ("tester", "tester+replica"):
         for fam in families:
-            sd, refusals = shadow(df, fam, pol, fl)
-            res = evaluate(sd, pol)
+            df, fl, sd, res = candidate(fam, name, pol)
             p = res["pooled"]
             row = dict(verdict=res["verdict"], train_rows_first_fold=int(len(fl[0][1])) if fl else 0,
                        withheld=p["withheld"], n_base=p["n_base"], withheld_mean=p["withheld_mean"],
